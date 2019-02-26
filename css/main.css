@@ -1755,6 +1755,10 @@ pre .javascript .function {
   font-size: 13px;
   color: #999;
 }
+.site-author-image:hover {
+  -webkit-animation: bounceInDown 2s;
+  animation: bounceInDown 2s;
+}
 .site-state {
   overflow: hidden;
   line-height: 1.4;
@@ -1823,7 +1827,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #269c4b;
+  background: #0844f9;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2990,4 +2994,11 @@ pre .javascript .function {
   .post-body {
     text-align: justify;
   }
+}
+.post-footer .copyright {
+  padding-top: 1.5em;
+  padding-left: 1em;
+  font-size: 12px;
+  line-height: 1em;
+  border: 1px solid #ccc;
 }
