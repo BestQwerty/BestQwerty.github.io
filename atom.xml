@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-02-28T07:34:35.407Z</updated>
+  <updated>2019-02-28T07:36:37.050Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="ctguljj.github.io/2019/02/28/blog%E5%86%99%E4%BD%9C/"/>
     <id>ctguljj.github.io/2019/02/28/blog写作/</id>
     <published>2019-02-28T06:58:00.000Z</published>
-    <updated>2019-02-28T07:34:35.407Z</updated>
+    <updated>2019-02-28T07:36:37.050Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="hexo博客写作"><a href="#hexo博客写作" class="headerlink" title="hexo博客写作"></a>hexo博客写作</h1><ul><li>若layout为draft,那么静态页面不会渲染生成。</li><li>符号-、1.和文本之间要保留一个字符的空格.</li><li><h1 id="和「一级标题」之间建议保留一个字符的空格，这是最标准的-Markdown-写法。"><a href="#和「一级标题」之间建议保留一个字符的空格，这是最标准的-Markdown-写法。" class="headerlink" title="和「一级标题」之间建议保留一个字符的空格，这是最标准的 Markdown 写法。"></a>和「一级标题」之间建议保留一个字符的空格，这是最标准的 Markdown 写法。</h1></li><li>引用符号&gt; 和文本之间要保留一个字符的空格<blockquote><p>一盏灯， 一片昏黄； 一简书， 一杯淡茶。 守着那一份淡定， 品读属于自己的寂寞。 保持淡定， 才能欣赏到最美丽的风景！ 保持淡定， 人生从此不再寂寞。</p></blockquote></li></ul><ul><li><p>Markdown 的粗体和斜体也非常简单，用两个 <em> 包含一段文本就是粗体的语法，用一个 </em> 包含一段文本就是斜体的语法。例如：<br><em>一盏灯</em>， 一片昏黄；<strong>一简书</strong>， 一杯淡茶。 守着那一份淡定， 品读属于自己的寂寞。 保持淡定， 才能欣赏到最美丽的风景！ 保持淡定， 人生从此不再寂寞。</p></li><li><p>Markdwon 文档写完一段回车后务必<strong>再回车一次空一行！</strong></p></li><li>需要引用代码时，如果引用的语句只有一段，不分行，可以用 ` 将语句包起来。如果引用的语句为多行，可以将<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`include&lt;algorithm&gt;`</span><br></pre></td></tr></table></figure></li></ul><p>include<cstdio><br>include<iostream><br>using namespace std;<br><code>`</code></iostream></cstdio></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="hexo博客写作"><a href="#hexo博客写作" class="headerlink" title="hexo博客写作"></a>hexo博客写作</h1><ul><li>若layout为draft,那么静态页面不会渲染生成。</li><li>符号-、1.和文本之间要保留一个字符的空格.</li><li><h1 id="和「一级标题」之间建议保留一个字符的空格，这是最标准的-Markdown-写法。"><a href="#和「一级标题」之间建议保留一个字符的空格，这是最标准的-Markdown-写法。" class="headerlink" title="和「一级标题」之间建议保留一个字符的空格，这是最标准的 Markdown 写法。"></a>和「一级标题」之间建议保留一个字符的空格，这是最标准的 Markdown 写法。</h1></li><li>引用符号&gt; 和文本之间要保留一个字符的空格<blockquote><p>一盏灯， 一片昏黄； 一简书， 一杯淡茶。 守着那一份淡定， 品读属于自己的寂寞。 保持淡定， 才能欣赏到最美丽的风景！ 保持淡定， 人生从此不再寂寞。</p></blockquote></li></ul><ul><li><p>Markdown 的粗体和斜体也非常简单，用两个 <em> 包含一段文本就是粗体的语法，用一个 </em> 包含一段文本就是斜体的语法。例如：<br><em>一盏灯</em>， 一片昏黄；<strong>一简书</strong>， 一杯淡茶。 守着那一份淡定， 品读属于自己的寂寞。 保持淡定， 才能欣赏到最美丽的风景！ 保持淡定， 人生从此不再寂寞。</p></li><li><p>Markdwon 文档写完一段回车后务必<strong>再回车一次空一行！</strong></p></li><li>需要引用代码时，如果引用的语句只有一段，不分行，可以用 ` 将语句包起来。如果引用的语句为多行，可以将<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">`include&lt;algorithm&gt;`</span><br><span class="line"></span><br><span class="line">-</span><br></pre></td></tr></table></figure></li></ul><p>include<cstdio><br>include<iostream><br>using namespace std;<br><code>`</code></iostream></cstdio></p>]]></content>
     
     <summary type="html">
     
