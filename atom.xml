@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-03-01T04:55:05.962Z</updated>
+  <updated>2019-03-01T05:36:57.342Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -17,13 +17,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>blog写作22</title>
+    <title>blog写作2</title>
     <link href="ctguljj.github.io/2019/03/01/blog%E5%86%99%E4%BD%9C2/"/>
     <id>ctguljj.github.io/2019/03/01/blog写作2/</id>
     <published>2019-03-01T04:17:39.000Z</published>
-    <updated>2019-03-01T04:55:05.962Z</updated>
+    <updated>2019-03-01T05:36:57.342Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h1><ul><li>description是文章的描述,在每篇文章标题下方显示</li><li>有date,tags,categories,comments,password(要配置),keywords,updated</li><li>layout页面布局，默认为post,有draft(草稿)和page</li><li>符号 : 为英文符号,格式很重要,不管是主题配置文件还是站点配置文件中空格,不空格都有要求</li><li>permalink若站点配置文件下的 permalink 配置了 title 则可以替换文章 URL 里面的 title（文章标题）</li><li>还有photos,link,image,sticky(后面2个要配置)</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h1><ul><li>description是文章的描述,在每篇文章标题下方显示</li><li>有date,tags,categories,comments,password(要配置),keywords,updated</li><li>layout页面布局，默认为post,有draft(草稿)和page</li><li>符号 : 为英文符号,格式很重要,不管是主题配置文件还是站点配置文件中空格,不空格都有要求</li><li>permalink若站点配置文件下的 permalink 配置了 title 则可以替换文章 URL 里面的 title（文章标题）</li><li>还有photos,link,image,sticky(后面2个要配置)</li><li>若创建文章时标题错误,可在编辑md文件时通过titile修改,文件重命名没用</li></ul>]]></content>
     
     <summary type="html">
     
@@ -35,7 +35,9 @@
     
     </summary>
     
-      <category term="blog, 文章模板" scheme="ctguljj.github.io/categories/blog-%E6%96%87%E7%AB%A0%E6%A8%A1%E6%9D%BF/"/>
+      <category term="blog" scheme="ctguljj.github.io/categories/blog/"/>
+    
+      <category term="文章模板" scheme="ctguljj.github.io/categories/blog/%E6%96%87%E7%AB%A0%E6%A8%A1%E6%9D%BF/"/>
     
     
       <category term="blog" scheme="ctguljj.github.io/tags/blog/"/>

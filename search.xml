@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[blog写作22]]></title>
+    <title><![CDATA[blog写作2]]></title>
     <url>%2F2019%2F03%2F01%2Fblog%E5%86%99%E4%BD%9C2%2F</url>
-    <content type="text"><![CDATA[Front-matter description是文章的描述,在每篇文章标题下方显示 有date,tags,categories,comments,password(要配置),keywords,updated layout页面布局，默认为post,有draft(草稿)和page 符号 : 为英文符号,格式很重要,不管是主题配置文件还是站点配置文件中空格,不空格都有要求 permalink若站点配置文件下的 permalink 配置了 title 则可以替换文章 URL 里面的 title（文章标题） 还有photos,link,image,sticky(后面2个要配置)]]></content>
+    <content type="text"><![CDATA[Front-matter description是文章的描述,在每篇文章标题下方显示 有date,tags,categories,comments,password(要配置),keywords,updated layout页面布局，默认为post,有draft(草稿)和page 符号 : 为英文符号,格式很重要,不管是主题配置文件还是站点配置文件中空格,不空格都有要求 permalink若站点配置文件下的 permalink 配置了 title 则可以替换文章 URL 里面的 title（文章标题） 还有photos,link,image,sticky(后面2个要配置) 若创建文章时标题错误,可在编辑md文件时通过titile修改,文件重命名没用]]></content>
       <categories>
-        <category>blog, 文章模板</category>
+        <category>blog</category>
+        <category>文章模板</category>
       </categories>
       <tags>
         <tag>blog</tag>
