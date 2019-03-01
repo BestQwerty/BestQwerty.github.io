@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-03-01T09:08:04.190Z</updated>
+  <updated>2019-03-01T10:29:51.012Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>blog写作3</title>
+    <link href="ctguljj.github.io/2019/03/01/blog%E5%86%99%E4%BD%9C3/"/>
+    <id>ctguljj.github.io/2019/03/01/blog写作3/</id>
+    <published>2019-03-01T10:23:46.000Z</published>
+    <updated>2019-03-01T10:29:51.012Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="反斜杠"><a href="#反斜杠" class="headerlink" title="反斜杠"></a>反斜杠</h1><ul><li>Markdown 可以利用反斜杠来插入一些在语法中有其它意义的符号，例如：如果你想要用星号加在文字旁边的方式来做出强调效果，你可以在星号的前面加上反斜杠<br>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：<br>\   反斜线<br>`   反引号<br>*   星号<br>_   底线<br>{}  花括号<br>[]  方括号<br>()  括弧<br>#   井字号<br>+   加号<br>-   减号<br>.   英文句点<br>!   惊叹号</li></ul><h1 id="文字增加背景色块"><a href="#文字增加背景色块" class="headerlink" title="文字增加背景色块"></a>文字增加背景色块</h1><ul><li>在你需要编辑的文章地方。放置如下代码：<br><span id="inline-blue"> 站点配置文件 </span><br><span id="inline-purple"> 主题配置文件 </span><br><span id="inline-yellow"> 站点配置文件 </span><br><span id="inline-green"> 主题配置文件 </span></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;反斜杠&quot;&gt;&lt;a href=&quot;#反斜杠&quot; class=&quot;headerlink&quot; title=&quot;反斜杠&quot;&gt;&lt;/a&gt;反斜杠&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Markdown 可以利用反斜杠来插入一些在语法中有其它意义的符号，例如：如果你想要用星号加在文字旁边的方式来做出强调效
+      
+    
+    </summary>
+    
+      <category term="blog" scheme="ctguljj.github.io/categories/blog/"/>
+    
+    
+      <category term="blog" scheme="ctguljj.github.io/tags/blog/"/>
+    
+  </entry>
   
   <entry>
     <title>崴脚恢复</title>
