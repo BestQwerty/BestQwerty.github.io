@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[blog写作3]]></title>
     <url>%2F2019%2F03%2F01%2Fblog%E5%86%99%E4%BD%9C3%2F</url>
-    <content type="text"><![CDATA[反斜杠 Markdown 可以利用反斜杠来插入一些在语法中有其它意义的符号，例如：如果你想要用星号加在文字旁边的方式来做出强调效果，你可以在星号的前面加上反斜杠Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：\ 反斜线` 反引号* 星号_ 底线{} 花括号[] 方括号() 括弧# 井字号+ 加号- 减号. 英文句点! 惊叹号 文字增加背景色块 在你需要编辑的文章地方。放置如下代码： 站点配置文件 主题配置文件 站点配置文件 主题配置文件 主题自带样式FontAwesome battery-three-quarters &lt;i class=&quot;fa fa-circle-o-notch fa-spin&quot;&gt;&lt;/i&gt; &lt;i class=&quot;fa fa-refresh fa-spin&quot;&gt;&lt;/i&gt; &lt;i class=&quot;fa fa-cog fa-spin&quot;&gt;&lt;/i&gt; &lt;i class=&quot;fa fa-spinner fa-pulse&quot;&gt;&lt;/i&gt;]]></content>
+    <content type="text"><![CDATA[反斜杠 Markdown 可以利用反斜杠来插入一些在语法中有其它意义的符号，例如：如果你想要用星号加在文字旁边的方式来做出强调效果，你可以在星号的前面加上反斜杠Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：\ 反斜线` 反引号* 星号_ 底线{} 花括号[] 方括号() 括弧# 井字号+ 加号- 减号. 英文句点! 惊叹号 文字增加背景色块 在你需要编辑的文章地方。放置如下代码： 站点配置文件 主题配置文件 站点配置文件 主题配置文件 主题自带样式FontAwesome battery-three-quarters]]></content>
       <categories>
         <category>blog</category>
       </categories>
