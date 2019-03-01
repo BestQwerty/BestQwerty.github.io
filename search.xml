@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[崴脚恢复]]></title>
+    <url>%2F2019%2F03%2F01%2F%E5%B4%B4%E8%84%9A%E6%81%A2%E5%A4%8D%2F</url>
+    <content type="text"><![CDATA[崴脚恢复 脚踝的灵活性、稳定性、力量都难以通过养伤养好，你还需要进行康复训练。被动休息治疗结合主动康复训练才能最大程度恢复受损的功能。 脚踝康复应当按照恢复活动度—恢复力量—恢复平衡能力—恢复爆发力的顺序进行]]></content>
+      <categories>
+        <category>身体健康</category>
+        <category>崴脚</category>
+      </categories>
+      <tags>
+        <tag>身体健康</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[blog写作2]]></title>
     <url>%2F2019%2F03%2F01%2Fblog%E5%86%99%E4%BD%9C2%2F</url>
     <content type="text"><![CDATA[Front-matter description是文章的描述,在每篇文章标题下方显示 有date,tags,categories,comments,password(要配置),keywords,updated layout页面布局，默认为post,有draft(草稿)和page 符号 : 为英文符号,格式很重要,不管是主题配置文件还是站点配置文件中空格,不空格都有要求 permalink若站点配置文件下的 permalink 配置了 title 则可以替换文章 URL 里面的 title（文章标题） 还有photos,link,image,sticky(后面2个要配置) 若创建文章时标题错误,可在编辑md文件时通过titile修改,文件重命名没用]]></content>
@@ -30,6 +42,7 @@
     <content type="text"><![CDATA[日常不良习惯 当你的距离不能够清楚的看清屏幕是你就会头向前伸，此时颈椎压力变大；而当你的距离不能够把胳膊自然下垂放在桌上或者椅子上的时候，手肘就会悬空，此时肩膀压力变大去承担手臂的重量！ 使用过高或者过低的枕头，而和高枕头一样不好的就是不睡枕头，让脖子悬空。这两种情况都会让颈部肌肉紧张，无法放松，还会导致颈椎排列结构的改变 养护1.习惯侧睡的可以选择高一点的枕头，喜欢平躺仰卧的可以选择低一点，睡觉建议选择记忆棉枕头。不要窝着睡觉！！！脖子底下一定要有枕头！！！侧睡的枕头大概1.5倍拳头的高，仰睡的枕头大概一个拳头那么高！！！ 2.睡前如果身体僵硬难受，千万别直接入睡，一定要冲个热水澡或者扭动身体让身体放松，否则第二天早上起来容易落枕或者有其他疼痛。 3.必须要严格制定运动计划，并且保持至少一个小时就起来溜达溜达，伸腰踢腿. 4.我们眼睛看的屏幕一定要跟眼睛在同一水平线上，同时远近合适，这样可以避免低头和往前探后。 5.拉伸组合：上、右转、右上、右下、右歪、左歪、左下、左上、左、回正，记住，速度要慢，每次停留至少10秒]]></content>
       <categories>
         <category>身体健康</category>
+        <category>颈椎</category>
       </categories>
       <tags>
         <tag>身体健康</tag>
