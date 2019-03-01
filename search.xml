@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[blog写作4]]></title>
+    <url>%2F2019%2F03%2F01%2Fblog%E5%86%99%E4%BD%9C4%2F</url>
+    <content type="text"><![CDATA[图片插入]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[blog写作3]]></title>
     <url>%2F2019%2F03%2F01%2Fblog%E5%86%99%E4%BD%9C3%2F</url>
     <content type="text"><![CDATA[反斜杠 Markdown 可以利用反斜杠来插入一些在语法中有其它意义的符号，例如：如果你想要用星号加在文字旁边的方式来做出强调效果，你可以在星号的前面加上反斜杠Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：\ 反斜线` 反引号* 星号_ 底线{} 花括号[] 方括号() 括弧# 井字号+ 加号- 减号. 英文句点! 惊叹号 文字增加背景色块 在你需要编辑的文章地方。放置如下代码： 站点配置文件 主题配置文件 站点配置文件 主题配置文件 主题自带样式FontAwesome(以下图标必须在网页上方点击全部显示才能显示即受保护的内容) fa-lg fa-2x fa-3x fa-4x fa-5x note标签 在主题配置文件_config.yml里有一个关于这个的配置,需要提前设置. default primary success info warning danger danger no-icon]]></content>
