@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-03-01T10:48:31.150Z</updated>
+  <updated>2019-03-01T10:54:49.257Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="ctguljj.github.io/2019/03/01/blog%E5%86%99%E4%BD%9C3/"/>
     <id>ctguljj.github.io/2019/03/01/blog写作3/</id>
     <published>2019-03-01T10:23:46.000Z</published>
-    <updated>2019-03-01T10:48:31.150Z</updated>
+    <updated>2019-03-01T10:54:49.257Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="反斜杠"><a href="#反斜杠" class="headerlink" title="反斜杠"></a>反斜杠</h1><ul><li>Markdown 可以利用反斜杠来插入一些在语法中有其它意义的符号，例如：如果你想要用星号加在文字旁边的方式来做出强调效果，你可以在星号的前面加上反斜杠<br>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：<br>\   反斜线<br>`   反引号<br>*   星号<br>_   底线<br>{}  花括号<br>[]  方括号<br>()  括弧<br>#   井字号<br>+   加号<br>-   减号<br>.   英文句点<br>!   惊叹号</li></ul><h1 id="文字增加背景色块"><a href="#文字增加背景色块" class="headerlink" title="文字增加背景色块"></a>文字增加背景色块</h1><ul><li>在你需要编辑的文章地方。放置如下代码：<br><span id="inline-blue"> 站点配置文件 </span><br><span id="inline-purple"> 主题配置文件 </span><br><span id="inline-yellow"> 站点配置文件 </span><br><span id="inline-green"> 主题配置文件 </span></li></ul><h1 id="主题自带样式FontAwesome"><a href="#主题自带样式FontAwesome" class="headerlink" title="主题自带样式FontAwesome"></a>主题自带样式FontAwesome</h1><ul><li><i class="fa fa-camera-retro fa-lg"></i> fa-lg<br> <i class="fa fa-camera-retro fa-2x"></i> fa-2x<br> <i class="fa fa-camera-retro fa-3x"></i> fa-3x<br><i class="fa fa-camera-retro fa-4x"></i> fa-4x<br><i class="fa fa-camera-retro fa-5x"></i> fa-5x</li><li><i class="fa fa-spinner fa-spin"></i><br><i class="fa fa-circle-o-notch faspin"><i><br><i class="fa fa-refresh fa-spin"></i><br><i class="fa fa-cog fa-spin"></i><br> <i class="fa fa-spinner fa-pulse"></i></i></i></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="反斜杠"><a href="#反斜杠" class="headerlink" title="反斜杠"></a>反斜杠</h1><ul><li>Markdown 可以利用反斜杠来插入一些在语法中有其它意义的符号，例如：如果你想要用星号加在文字旁边的方式来做出强调效果，你可以在星号的前面加上反斜杠<br>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：<br>\   反斜线<br>`   反引号<br>*   星号<br>_   底线<br>{}  花括号<br>[]  方括号<br>()  括弧<br>#   井字号<br>+   加号<br>-   减号<br>.   英文句点<br>!   惊叹号</li></ul><h1 id="文字增加背景色块"><a href="#文字增加背景色块" class="headerlink" title="文字增加背景色块"></a>文字增加背景色块</h1><ul><li>在你需要编辑的文章地方。放置如下代码：<br><span id="inline-blue"> 站点配置文件 </span><br><span id="inline-purple"> 主题配置文件 </span><br><span id="inline-yellow"> 站点配置文件 </span><br><span id="inline-green"> 主题配置文件 </span></li></ul><h1 id="主题自带样式"><a href="#主题自带样式" class="headerlink" title="主题自带样式"></a>主题自带样式</h1><h2 id="FontAwesome"><a href="#FontAwesome" class="headerlink" title="FontAwesome"></a>FontAwesome</h2><p><strong>(以下图标必须在网页上方点击全部显示才能显示即受保护的内容)</strong></p><ul><li><i class="fa fa-camera-retro fa-lg"></i> fa-lg<br> <i class="fa fa-camera-retro fa-2x"></i> fa-2x<br> <i class="fa fa-camera-retro fa-3x"></i> fa-3x<br><i class="fa fa-camera-retro fa-4x"></i> fa-4x<br><i class="fa fa-camera-retro fa-5x"></i> fa-5x</li><li><i class="fa fa-spinner fa-spin"></i><br><i class="fa fa-circle-o-notch faspin"><i><br><i class="fa fa-refresh fa-spin"></i><br><i class="fa fa-cog fa-spin"></i><br> <i class="fa fa-spinner fa-pulse"></i></i></i></li></ul><h2 id="note标签"><a href="#note标签" class="headerlink" title="note标签"></a>note标签</h2><ul><li>在主题配置文件_config.yml里有一个关于这个的配置,需要提前设置.</li><li><div class="note default"><p>default</p></div></li><li><div class="note primary"><p>primary</p></div></li><li><div class="note success"><p>success</p></div></li><li><div class="note info"><p>info</p></div></li><li><div class="note warning"><p>warning</p></div></li><li><div class="note danger"><p>danger</p></div></li><li><div class="note danger no-icon"><p>danger no-icon</p></div></li></ul>]]></content>
     
     <summary type="html">
     
