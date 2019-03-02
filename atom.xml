@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-03-02T04:32:32.574Z</updated>
+  <updated>2019-03-02T04:34:44.826Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="ctguljj.github.io/2019/03/01/blog%E5%86%99%E4%BD%9C4/"/>
     <id>ctguljj.github.io/2019/03/01/blog写作4/</id>
     <published>2019-03-01T11:09:27.000Z</published>
-    <updated>2019-03-02T04:32:32.574Z</updated>
+    <updated>2019-03-02T04:34:44.826Z</updated>
     
     <content type="html"><![CDATA[<h1 id="图片插入"><a href="#图片插入" class="headerlink" title="图片插入"></a>图片插入</h1><ul><li>将markdown需要用的图片放到git仓库中，发布到github上</li><li><span id="inline-blue">  访问图片,点 download 按钮，页面打开后,在地址栏可以复制图片地址，或者在Download按钮上直接右键 “复制链接地址” </span></li></ul>]]></content>
     
@@ -36,7 +36,9 @@
     
     </summary>
     
-      <category term="blog markdown" scheme="ctguljj.github.io/categories/blog-markdown/"/>
+      <category term="blog" scheme="ctguljj.github.io/categories/blog/"/>
+    
+      <category term="markdown" scheme="ctguljj.github.io/categories/blog/markdown/"/>
     
     
       <category term="blog" scheme="ctguljj.github.io/tags/blog/"/>
@@ -74,7 +76,7 @@
     <link href="ctguljj.github.io/2019/03/01/%E5%B4%B4%E8%84%9A%E6%81%A2%E5%A4%8D/"/>
     <id>ctguljj.github.io/2019/03/01/崴脚恢复/</id>
     <published>2019-03-01T08:36:28.000Z</published>
-    <updated>2019-03-02T04:28:11.834Z</updated>
+    <updated>2019-03-02T04:33:47.884Z</updated>
     
     <content type="html"><![CDATA[<h1 id="崴脚恢复"><a href="#崴脚恢复" class="headerlink" title="崴脚恢复"></a>崴脚恢复</h1><ul><li>脚踝的灵活性、稳定性、力量都难以通过养伤养好，你还需要进行康复训练。被动休息治疗结合<strong>主动康复训练</strong>才能最大程度恢复受损的功能。</li><li>脚踝康复应当按照恢复活动度—恢复力量—恢复平衡能力—恢复爆发力的顺序进行</li><li><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/ctgu1.jpg" alt=""></li></ul>]]></content>
     
@@ -88,7 +90,9 @@
     
     </summary>
     
-      <category term="身体健康 崴脚" scheme="ctguljj.github.io/categories/%E8%BA%AB%E4%BD%93%E5%81%A5%E5%BA%B7-%E5%B4%B4%E8%84%9A/"/>
+      <category term="身体健康" scheme="ctguljj.github.io/categories/%E8%BA%AB%E4%BD%93%E5%81%A5%E5%BA%B7/"/>
+    
+      <category term="崴脚" scheme="ctguljj.github.io/categories/%E8%BA%AB%E4%BD%93%E5%81%A5%E5%BA%B7/%E5%B4%B4%E8%84%9A/"/>
     
     
       <category term="身体健康" scheme="ctguljj.github.io/tags/%E8%BA%AB%E4%BD%93%E5%81%A5%E5%BA%B7/"/>
@@ -128,7 +132,7 @@
     <link href="ctguljj.github.io/2019/02/28/blog%E5%86%99%E4%BD%9C/"/>
     <id>ctguljj.github.io/2019/02/28/blog写作/</id>
     <published>2019-02-28T06:58:00.000Z</published>
-    <updated>2019-03-02T04:28:27.306Z</updated>
+    <updated>2019-03-02T04:34:20.750Z</updated>
     
     <content type="html"><![CDATA[<h1 id="hexo博客写作"><a href="#hexo博客写作" class="headerlink" title="hexo博客写作"></a>hexo博客写作</h1><ul><li>若layout为draft,那么静态页面不会渲染生成。</li><li>符号-、1.和文本之间要保留一个字符的空格.</li><li><h1 id="和「一级标题」之间建议保留一个字符的空格，这是最标准的-Markdown-写法。如果不空格-标题无法显示。"><a href="#和「一级标题」之间建议保留一个字符的空格，这是最标准的-Markdown-写法。如果不空格-标题无法显示。" class="headerlink" title="和「一级标题」之间建议保留一个字符的空格，这是最标准的 Markdown 写法。如果不空格,标题无法显示。"></a>和「一级标题」之间建议保留一个字符的空格，这是最标准的 Markdown 写法。如果不空格,标题无法显示。</h1></li><li>引用符号&gt; 和文本之间要保留一个字符的空格<blockquote><p>一盏灯， 一片昏黄； 一简书， 一杯淡茶。 守着那一份淡定， 品读属于自己的寂寞。 保持淡定， 才能欣赏到最美丽的风景！ 保持淡定， 人生从此不再寂寞。</p></blockquote></li></ul><ul><li><p>Markdown 的粗体和斜体也非常简单，用两个 <em> 包含一段文本就是粗体的语法，用一个 </em> 包含一段文本就是斜体的语法。例如：<br><em>一盏灯</em>， 一片昏黄；<strong>一简书</strong>， 一杯淡茶。 守着那一份淡定， 品读属于自己的寂寞。 保持淡定， 才能欣赏到最美丽的风景！ 保持淡定， 人生从此不再寂寞。</p></li><li><p>Markdwon 文档写完一段回车后务必<strong>再回车一次空一行！</strong></p></li><li>需要引用代码时，如果引用的语句只有一段，不分行，可以用符号` 将语句包起来。</li><li>如果引用的语句为多行，可以将<code>`</code>置于这段代码的首行和末行，</li></ul><h1 id="markdown快速键入"><a href="#markdown快速键入" class="headerlink" title="markdown快速键入"></a>markdown快速键入</h1><blockquote></blockquote><p>mdi + tab键：插入图片<br>mdl + tab键: 插入链接<br>mdc + tab键：插入代码<br>mdh1 + tab键：插入一级标题，2就是二级标题……</p>]]></content>
     
@@ -138,7 +142,9 @@
     
     </summary>
     
-      <category term="blog markdown" scheme="ctguljj.github.io/categories/blog-markdown/"/>
+      <category term="blog" scheme="ctguljj.github.io/categories/blog/"/>
+    
+      <category term="markdown" scheme="ctguljj.github.io/categories/blog/markdown/"/>
     
     
       <category term="blog" scheme="ctguljj.github.io/tags/blog/"/>
@@ -150,7 +156,7 @@
     <link href="ctguljj.github.io/2019/02/28/%E9%A2%88%E6%A4%8E%E5%85%BB%E6%8A%A4%E6%89%8B%E5%86%8C/"/>
     <id>ctguljj.github.io/2019/02/28/颈椎养护手册/</id>
     <published>2019-02-28T05:21:06.000Z</published>
-    <updated>2019-03-02T04:28:18.007Z</updated>
+    <updated>2019-03-02T04:34:44.830Z</updated>
     
     <content type="html"><![CDATA[<h1 id="日常不良习惯"><a href="#日常不良习惯" class="headerlink" title="日常不良习惯"></a>日常不良习惯</h1><ul><li>当你的距离不能够清楚的看清屏幕是你就会头向前伸，此时颈椎压力变大；而当你的距离不能够把胳膊自然下垂放在桌上或者椅子上的时候，手肘就会悬空，此时肩膀压力变大去承担手臂的重量！</li><li>使用过高或者过低的枕头，而和高枕头一样不好的就是不睡枕头，让脖子悬空。这两种情况都会让颈部肌肉紧张，无法放松，还会导致颈椎排列结构的改变</li></ul><h1 id="养护"><a href="#养护" class="headerlink" title="养护"></a>养护</h1><p>1.习惯侧睡的可以选择高一点的枕头，喜欢平躺仰卧的可以选择低一点，睡觉建议选择记忆棉枕头。不要窝着睡觉！！！脖子底下一定要有枕头！！！侧睡的枕头大概1.5倍拳头的高，仰睡的枕头大概一个拳头那么高！！！</p><p>2.睡前如果身体僵硬难受，千万别直接入睡，一定要冲个热水澡或者扭动身体让身体放松，否则第二天早上起来容易落枕或者有其他疼痛。 </p><p>3.必须要严格制定运动计划，并且保持至少一个小时就起来溜达溜达，伸腰踢腿.</p><p>4.我们眼睛看的屏幕一定要跟眼睛在同一水平线上，同时远近合适，这样可以避免低头和往前探后。</p><p>5.拉伸组合：上、右转、右上、右下、右歪、左歪、左下、左上、左、回正，记住，速度要慢，每次停留至少10秒</p>]]></content>
     
@@ -164,7 +170,9 @@
     
     </summary>
     
-      <category term="身体健康 颈椎" scheme="ctguljj.github.io/categories/%E8%BA%AB%E4%BD%93%E5%81%A5%E5%BA%B7-%E9%A2%88%E6%A4%8E/"/>
+      <category term="身体健康" scheme="ctguljj.github.io/categories/%E8%BA%AB%E4%BD%93%E5%81%A5%E5%BA%B7/"/>
+    
+      <category term="颈椎" scheme="ctguljj.github.io/categories/%E8%BA%AB%E4%BD%93%E5%81%A5%E5%BA%B7/%E9%A2%88%E6%A4%8E/"/>
     
     
       <category term="身体健康" scheme="ctguljj.github.io/tags/%E8%BA%AB%E4%BD%93%E5%81%A5%E5%BA%B7/"/>
