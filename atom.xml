@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-03-04T15:59:25.436Z</updated>
+  <updated>2019-03-04T15:59:55.886Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="ctguljj.github.io/2019/03/04/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
     <id>ctguljj.github.io/2019/03/04/二分法/</id>
     <published>2019-03-04T15:28:49.000Z</published>
-    <updated>2019-03-04T15:59:25.436Z</updated>
+    <updated>2019-03-04T15:59:55.886Z</updated>
     
     <content type="html"><![CDATA[<h1 id="二分法-折半查找"><a href="#二分法-折半查找" class="headerlink" title="二分法(折半查找)"></a>二分法(折半查找)</h1><ul><li>将所给关键词和指定有序集合中间数进行比较,如果比较相等则返回结果,如果不相等,则按照所给出的结果,将集合减半后继续查找</li><li>二分法是减治法的思想</li><li>二分法：<code>(low+high)/2</code>,如果故意卡数据即low与high很大的话,会越界.所以可以为<code>(high - low)/2+low;</code></li></ul><h2 id="优化-先确定范围"><a href="#优化-先确定范围" class="headerlink" title="优化(先确定范围)"></a>优化(先确定范围)</h2><ul><li>插值查找</li><li>这里的插值查找法,是对二分法的一种改进.<strong>此法和二分法一样对数据要求有序且尽量分布均匀</strong></li><li>对于二分法有:    <code>mid = (low + high)/2;</code><br>不难得到  <code>mid = low + 1/2*(high-low);</code><br>试想,对于在字典中进行查找时,对于’you’或’and’<br>来说,我们通常的处理方法肯定不是从中间开始进行查找,而是根据所给出的值,大致确定范围后再来进行查找.<br>这里的大致范围是通过,所查找的value值在所查集合中所大概处于的位置,定位到后进行比较<br>故有如下公式:<br><code>key = low + ((value - a[low])/(a[high]-a[low]))*（high-low);</code></li></ul><p>伪代码:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">int insertseek(int value,int map[])</span><br><span class="line"></span><br><span class="line">   int low,high,key;</span><br><span class="line"></span><br><span class="line"> low = 0; </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">high = n -1 ;</span><br><span class="line"></span><br><span class="line">while(low&lt;=high)</span><br><span class="line"></span><br><span class="line">key = low + ((value - low)/(high-low))*（high -low);</span><br><span class="line"></span><br><span class="line">if(key = value) return key;</span><br><span class="line"></span><br><span class="line">else if(key &lt; value) low = key;</span><br><span class="line"></span><br><span class="line">else  high = key;</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -34,6 +34,10 @@
       
     
     </summary>
+    
+      <category term="算法" scheme="ctguljj.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="二分法" scheme="ctguljj.github.io/categories/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
     
     
       <category term="算法" scheme="ctguljj.github.io/tags/%E7%AE%97%E6%B3%95/"/>
