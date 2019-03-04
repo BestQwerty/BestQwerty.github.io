@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-03-02T04:34:44.826Z</updated>
+  <updated>2019-03-04T15:32:02.472Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -15,6 +15,77 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>c与c++常用函数</title>
+    <link href="ctguljj.github.io/2019/03/04/c%E4%B8%8Ec-%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/"/>
+    <id>ctguljj.github.io/2019/03/04/c与c-常用函数/</id>
+    <published>2019-03-04T04:51:49.000Z</published>
+    <updated>2019-03-04T15:32:02.472Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><ul><li>max, min, fill, memset, sort, swap</li></ul><h1 id="字符串函数"><a href="#字符串函数" class="headerlink" title="字符串函数"></a>字符串函数</h1><ul><li>字符串比较函数strcmp因为原理是两个字符串一个个比较，所以可以比较字符是否相同！！！！！<div class="note success"><p>如果把序号按字符串存储，则会可以通过strcmp比较序号是否相同。</p></div>(有用)</li><li>Strlen函数如果没有遇到’\0’，会一直计算下去，字符串二维数组不可以用strlen，因为二维数组每一行相当于一个字符串一维数组，每一行都有’\0’！</li></ul><h2 id="memset函数"><a href="#memset函数" class="headerlink" title="memset函数"></a>memset函数</h2><ul><li>Memset函数:可以本身就是为字符数组设计的源代码：unsigned int 有一个特性就是如果将其赋值或者当作字节来使用的话，编译器将会截取低八位作为一个字节使用。</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">void *(memset)(void *s, int c, size_t n)</span><br><span class="line"></span><br><span class="line"> &#123;</span><br><span class="line"></span><br><span class="line">const unsigned char uc = c;</span><br><span class="line">unsigned char *su;</span><br><span class="line">for (su = s; 0 &lt; n; ++su, --n)</span><br><span class="line">    *su = uc;</span><br><span class="line">return (s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>源码说明对于数组参数是按照字符数组的形式进行赋值的。<br>也就是c的值每次赋值给一个字节，而不是4个字节，c的类型是int类型，4个字节，<br>但只会赋值最低位的一个字节的内容。</p><ul><li><p>对于非单字节数据类型只能初始化为0，而不能初始化成别的初值，因为对所有字节按任意顺序赋值0的结果都是0，而如果初始化为其他的值，就会一个字节一个字节的进行赋值，从而出现奇怪的结果。</p></li><li><p>对于变量：当结构体类型中包含指针时，在使用memset初始化时需要小心。<br>struct sample_strcut stTest;用memset就非常方便：memset(&amp;stTest,0,sizeof(struct sample_struct));<br>原因是memset初始化的时候是按字节一个一个填充的，int有四个字节，于是填充成0000 0001 0000 0001 0000 00001 0000 0001，这样得出数组中的每个元素的值就是16843009了。<br>赋值时0与’\0’效果一样。</p></li><li>可以用于清空数组内元素与赋,memset函数一般用来填充char型数组,也经常用于填充int型的全0或全-1.不可用其它值，除非高低字节相同.</li></ul><p>-<br>    <code>`</code></p><pre><code>#define INF 0x3f3f3f3fint num[N];memset(num, INF, sizeof(num));</code></pre><p>这样得到的数组里面的每一个元素数值都是INF<br>看一下INF的二进制表示：<br>00111111001111110011111100111111<br>可以看出低8位是00111111，<strong><em>也就是实际赋值时是用<br>00111111来填充一个int类型</em></strong>，结果正好也是<br>00111111001111110011111100111111<br>于是就成功用memset进行了赋值。</p><h3 id="INF小知识"><a href="#INF小知识" class="headerlink" title="INF小知识"></a>INF小知识</h3><ul><li>0x3f3f3f3f的十进制是1061109567，也就是10^9级别的（和0x7fffffff一个数量级），而一般场合下的数据都是小于10^9的，所以它可以作为无穷大使用而不致出现数据大于无穷大的情形。</li><li><p>另一方面，由于一般的数据都不会大于10^9，所以当我们把无穷大加上一个数据时，它并不会溢出（这就满足了“无穷大加一个有穷的数依然是无穷大”），事实上0x3f3f3f3f+0x3f3f3f3f=2122219134，这非常大但却没有超过32-bit int的表示范围，所以0x3f3f3f3f还满足了我们“无穷大加无穷大还是无穷大”的需求。</p></li><li><p>最后，0x3f3f3f3f还能给我们带来一个意想不到的额外好处：如果我们想要将某个数组清零，我们通常会使用memset(a,0,sizeof(a))这样的代码来实现（方便而高效），但是当我们想将某个数组全部赋值为无穷大时（例如解决图论问题时邻接矩阵的初始化），就不能使用memset函数而得自己写循环了（写这些不重要的代码真的很痛苦），我们知道这是因为memset是按字节操作的，它能够对数组清零是因为0的每个字节都是0，现在好了，如果我们将无穷大设为0x3f3f3f3f，那么奇迹就发生了，0x3f3f3f3f的每个字节都是0x3f！<strong><em>所以要把一段内存全部置为无穷大，我们只需要memset(a,0x3f,sizeof(a))</em></strong>。<br>所以在通常的场合下，const int INF = 0x3f3f3f3f;真的是一个非常棒的选择。</p></li><li><div class="note warning"><p>因为在某些编译器分配空间时,内存中默认值并不为0,所以先用memset函数赋初值0.</p></div></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;常用函数&quot;&gt;&lt;a href=&quot;#常用函数&quot; class=&quot;headerlink&quot; title=&quot;常用函数&quot;&gt;&lt;/a&gt;常用函数&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;max, min, fill, memset, sort, swap&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;字符
+      
+    
+    </summary>
+    
+      <category term="c++" scheme="ctguljj.github.io/categories/c/"/>
+    
+      <category term="常用函数" scheme="ctguljj.github.io/categories/c/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/"/>
+    
+    
+      <category term="c++" scheme="ctguljj.github.io/tags/c/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>算法核心思想：倍增</title>
+    <link href="ctguljj.github.io/2019/03/03/%E7%AE%97%E6%B3%95%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3%EF%BC%9A%E5%80%8D%E5%A2%9E/"/>
+    <id>ctguljj.github.io/2019/03/03/算法核心思想：倍增/</id>
+    <published>2019-03-03T09:23:16.000Z</published>
+    <updated>2019-03-03T09:23:16.382Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>数据类型问题</title>
+    <link href="ctguljj.github.io/2019/03/03/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E9%97%AE%E9%A2%98/"/>
+    <id>ctguljj.github.io/2019/03/03/数据类型问题/</id>
+    <published>2019-03-03T09:11:09.000Z</published>
+    <updated>2019-03-04T04:58:59.588Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h1><ul><li>二进制不能表示所有的小数，他只是选一个离需表示值的最近的一个数进行储存而已。</li><li>输出有e时,可能是输出变量类型float,double的问题，可改为int其它类型试试</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;数据&quot;&gt;&lt;a href=&quot;#数据&quot; class=&quot;headerlink&quot; title=&quot;数据&quot;&gt;&lt;/a&gt;数据&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;二进制不能表示所有的小数，他只是选一个离需表示值的最近的一个数进行储存而已。&lt;/li&gt;
+&lt;li&gt;输出有e时,可能是输出变量类型f
+      
+    
+    </summary>
+    
+      <category term="数据类型" scheme="ctguljj.github.io/categories/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    
+    
+      <category term="数据类型" scheme="ctguljj.github.io/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>blog写作4</title>
@@ -176,27 +247,6 @@
     
     
       <category term="身体健康" scheme="ctguljj.github.io/tags/%E8%BA%AB%E4%BD%93%E5%81%A5%E5%BA%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="ctguljj.github.io/2018/11/12/hello-world/"/>
-    <id>ctguljj.github.io/2018/11/12/hello-world/</id>
-    <published>2018-11-12T13:57:00.376Z</published>
-    <updated>2018-11-12T13:57:00.376Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
-    
-    </summary>
-    
     
   </entry>
   
