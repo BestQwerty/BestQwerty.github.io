@@ -88,7 +88,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="输入输出 gets()函数并不读取换行符’\n’,它会吧换行符替换成空字符’\0’,作为c语言字符串结束的标志.此时换行符已经没了！！ gets在C99标准中，已经不再建议使用gets()函数，而在C11中更是直接抛弃了这个函数,gets函数没有限制读入的个数，这很可能会导致程序向未知的内存空间写入数据，而导致程序出错。 fgets函数中第二个参数限制了读取的个数，这也解决了gets函数存在的问题">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-05T10:34:55.949Z">
+<meta property="og:updated_time" content="2019-03-05T10:36:16.658Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="输入输出">
 <meta name="twitter:description" content="输入输出 gets()函数并不读取换行符’\n’,它会吧换行符替换成空字符’\0’,作为c语言字符串结束的标志.此时换行符已经没了！！ gets在C99标准中，已经不再建议使用gets()函数，而在C11中更是直接抛弃了这个函数,gets函数没有限制读入的个数，这很可能会导致程序向未知的内存空间写入数据，而导致程序出错。 fgets函数中第二个参数限制了读取的个数，这也解决了gets函数存在的问题">
@@ -345,7 +345,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-05T18:34:55+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-05T18:36:16+08:00">
                 2019-03-05
               </time>
             
@@ -358,7 +358,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">821(字)</span> 
+					<span class="post-count">871(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -420,6 +420,7 @@
 <li>gets()函数并不读取换行符’\n’,它会吧换行符替换成空字符’\0’,作为c语言字符串结束的标志.此时换行符已经没了！！</li>
 <li>gets在C99标准中，已经不再建议使用gets()函数，而在C11中更是直接抛弃了这个函数,gets函数没有限制读入的个数，这很可能会导致程序向未知的内存空间写入数据，而导致程序出错。</li>
 <li>fgets函数中第二个参数限制了读取的个数，这也解决了gets函数存在的问题，但要注意fgets函数只会读取n-1个字符（如果遇到换行符会更少），并在最后添加字符串结束标志，而且，fgets也会将换行符读入。<br><code>char *fgets(char *buf, int bufsize, FILE *stream)；</code>注意一下第二个参数bufsize，这个参数就限制了读取的字符的个数，这就可以解决gets()函数的缺陷。我们知道fgets() 函数主要用于读取文件，如果要读取键盘，则stream参数应该为stdin，需要注意的是，如果bufsize设置为n，那么fgets()函数最多读取n-1个字符，之所以用“最多”这个词是因为，如果在之前遇到了换行符，fgets函数也会返回。还有一点就是，fgets()函数会读取换行符（这一点和gets函数不同），当读取结束后，fgets函数会为buf在末尾添加一个空字符作为字符串的结束.</li>
+<li>scanf函数要实现修改变量值的功能，传地址就相当于传指针（指向一个内存位置）！<br>printf只是对变量值执行输出功能，不涉及改变！</li>
 </ul>
 <h1 id="输入输出返回值"><a href="#输入输出返回值" class="headerlink" title="输入输出返回值"></a>输入输出返回值</h1><ul>
 <li><p>scanf为函数，printf为函数(输入与输出函数)：返回值：scanf 函数的返回值反映的是按照指定的格式符正确读入的数据的个数。<br>如果输入数据与指定格式不符，则会产生输入错误。遇到输入错误，scanf函数会立即终止，返回已经成功读取的数据的个数。所以通过scanf函数的返回值和指定输入数据的个数（由格式符决定）的比较，可以判断数据输入是否成功。</p>
@@ -702,7 +703,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">3.7k</span>
+    <span title="Site words total count">3.8k</span>
   
 </div>
 
