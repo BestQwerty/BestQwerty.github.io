@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[素数筛选法]]></title>
+    <url>%2F2019%2F03%2F05%2F%E7%B4%A0%E6%95%B0%E7%AD%9B%E9%80%89%E6%B3%95%2F</url>
+    <content type="text"></content>
+      <tags>
+        <tag>sfsdfsdf</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[分治法]]></title>
     <url>%2F2019%2F03%2F05%2F%E5%88%86%E6%B2%BB%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[分治法可使用分治法求解的一些经典问题 （1）二分搜索（2）大整数乘法（3）Strassen矩阵乘法（4）棋盘覆盖（5）合并排序（6）快速排序（7）线性时间选择（8）最接近点对问题（9）循环赛日程表（10）汉诺塔]]></content>
+    <content type="text"><![CDATA[分治法可使用分治法求解的一些经典问题 （1）二分搜索（2）大整数乘法（3）Strassen矩阵乘法（4）棋盘覆盖（5）合并排序（6）快速排序（7）线性时间选择（8）最接近点对问题（9）循环赛日程表（10）汉诺塔 -]]></content>
       <categories>
         <category>算法</category>
         <category>分治法</category>

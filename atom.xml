@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-03-05T13:39:31.795Z</updated>
+  <updated>2019-03-05T14:45:27.539Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -17,13 +17,29 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>素数筛选法</title>
+    <link href="ctguljj.github.io/2019/03/05/%E7%B4%A0%E6%95%B0%E7%AD%9B%E9%80%89%E6%B3%95/"/>
+    <id>ctguljj.github.io/2019/03/05/素数筛选法/</id>
+    <published>2019-03-05T14:44:50.000Z</published>
+    <updated>2019-03-05T14:45:27.539Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="sfsdfsdf" scheme="ctguljj.github.io/tags/sfsdfsdf/"/>
+    
+  </entry>
+  
+  <entry>
     <title>分治法</title>
     <link href="ctguljj.github.io/2019/03/05/%E5%88%86%E6%B2%BB%E6%B3%95/"/>
     <id>ctguljj.github.io/2019/03/05/分治法/</id>
     <published>2019-03-05T13:33:34.000Z</published>
-    <updated>2019-03-05T13:39:31.795Z</updated>
+    <updated>2019-03-05T13:54:12.201Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="分治法"><a href="#分治法" class="headerlink" title="分治法"></a>分治法</h1><h2 id="可使用分治法求解的一些经典问题"><a href="#可使用分治法求解的一些经典问题" class="headerlink" title="可使用分治法求解的一些经典问题"></a>可使用分治法求解的一些经典问题</h2><ul><li><p>（1）二分搜索<br>（2）大整数乘法<br>（3）Strassen矩阵乘法<br>（4）棋盘覆盖<br>（5）合并排序<br>（6）快速排序<br>（7）线性时间选择<br>（8）最接近点对问题<br>（9）循环赛日程表<br>（10）汉诺塔</p></li><li></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="分治法"><a href="#分治法" class="headerlink" title="分治法"></a>分治法</h1><h2 id="可使用分治法求解的一些经典问题"><a href="#可使用分治法求解的一些经典问题" class="headerlink" title="可使用分治法求解的一些经典问题"></a>可使用分治法求解的一些经典问题</h2><ul><li>（1）二分搜索<br>（2）大整数乘法<br>（3）Strassen矩阵乘法<br>（4）棋盘覆盖<br>（5）合并排序<br>（6）快速排序<br>（7）线性时间选择<br>（8）最接近点对问题<br>（9）循环赛日程表<br>（10）汉诺塔</li></ul><p>-</p>]]></content>
     
     <summary type="html">
     
