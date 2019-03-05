@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[输入输出]]></title>
+    <url>%2F2019%2F03%2F05%2Fc-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%2F</url>
+    <content type="text"><![CDATA[输入输出 gets()函数并不读取换行符’\n’,它会吧换行符替换成空字符’\0’,作为c语言字符串结束的标志.此时换行符已经没了！！ gets在C99标准中，已经不再建议使用gets()函数，而在C11中更是直接抛弃了这个函数,gets函数没有限制读入的个数，这很可能会导致程序向未知的内存空间写入数据，而导致程序出错。 fgets函数中第二个参数限制了读取的个数，这也解决了gets函数存在的问题，但要注意fgets函数只会读取n-1个字符（如果遇到换行符会更少），并在最后添加字符串结束标志，而且，fgets也会将换行符读入。char *fgets(char *buf, int bufsize, FILE *stream)；注意一下第二个参数bufsize，这个参数就限制了读取的字符的个数，这就可以解决gets()函数的缺陷。我们知道fgets() 函数主要用于读取文件，如果要读取键盘，则stream参数应该为stdin，需要注意的是，如果bufsize设置为n，那么fgets()函数最多读取n-1个字符，之所以用“最多”这个词是因为，如果在之前遇到了换行符，fgets函数也会返回。还有一点就是，fgets()函数会读取换行符（这一点和gets函数不同），当读取结束后，fgets函数会为buf在末尾添加一个空字符作为字符串的结束. 输入输出返回值 scanf为函数，printf为函数(输入与输出函数)：返回值：scanf 函数的返回值反映的是按照指定的格式符正确读入的数据的个数。如果输入数据与指定格式不符，则会产生输入错误。遇到输入错误，scanf函数会立即终止，返回已经成功读取的数据的个数。所以通过scanf函数的返回值和指定输入数据的个数（由格式符决定）的比较，可以判断数据输入是否成功。 scanf 函数是有返回值的，它的返回值可以分成三种情况 正整数，表示正确输入参数的个数。例如执行 scanf(“%d %d”, &amp;a, &amp;b); 如果用户输入&quot;3 4&quot;，可以正确输入，返回2（正确输入了两个变量）； 如果用户输入&quot;3,4&quot;，可以正确输入a，无法输入b，返回1（正确输入了一个变量）。 0，表示用户的输入不匹配，无法正确输入任何值。如上例，用户如果输入”,3 4”，返回0。 EOF，这是在stdio.h里面定义的常量（通常值为-1），表示输入流已经结束(scanf遇到格式不对返回EOF或结束时)(EOF == end of file) printf的返回值是输出的字符数，例如，printf(&quot;1234&quot;)的返回值是4，而printf(&quot;1234\n&quot;)的返回值是5。不知道有木有这样写的习惯while (~scanf(&quot;....&quot;))。这里出现了~这个符号，这个是位运算取反的意思。因为~(n)=-(n+1)。所以这里scanf的返回值为-1时~(-1)=0才退出循环。这就是这样写的意思。]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[二分法]]></title>
     <url>%2F2019%2F03%2F04%2F%E4%BA%8C%E5%88%86%E6%B3%95%2F</url>
     <content type="text"><![CDATA[二分法(折半查找) 将所给关键词和指定有序集合中间数进行比较,如果比较相等则返回结果,如果不相等,则按照所给出的结果,将集合减半后继续查找 二分法是减治法的思想 二分法：(low+high)/2,如果故意卡数据即low与high很大的话,会越界.所以可以为(high - low)/2+low; 优化(先确定范围) 插值查找 这里的插值查找法,是对二分法的一种改进.此法和二分法一样对数据要求有序且尽量分布均匀 对于二分法有: mid = (low + high)/2;不难得到 mid = low + 1/2*(high-low);试想,对于在字典中进行查找时,对于’you’或’and’来说,我们通常的处理方法肯定不是从中间开始进行查找,而是根据所给出的值,大致确定范围后再来进行查找.这里的大致范围是通过,所查找的value值在所查集合中所大概处于的位置,定位到后进行比较故有如下公式:key = low + ((value - a[low])/(a[high]-a[low]))*（high-low); 伪代码: 12345678910111213141516171819int insertseek(int value,int map[]) int low,high,key; low = 0; high = n -1 ;while(low&lt;=high)key = low + ((value - low)/(high-low))*（high -low);if(key = value) return key;else if(key &lt; value) low = key;else high = key;]]></content>
@@ -32,7 +37,7 @@
   <entry>
     <title><![CDATA[数据类型问题]]></title>
     <url>%2F2019%2F03%2F03%2F%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E9%97%AE%E9%A2%98%2F</url>
-    <content type="text"><![CDATA[数据 二进制不能表示所有的小数，他只是选一个离需表示值的最近的一个数进行储存而已。 输出有e时,可能是输出变量类型float,double的问题，可改为int其它类型试试]]></content>
+    <content type="text"><![CDATA[数据 二进制不能表示所有的小数，他只是选一个离需表示值的最近的一个数进行储存而已。 输出有e时,可能是输出变量类型float,double的问题，可改为int其它类型试试 int类型不会出现浮点数,不要用int型存计算结果的浮点数]]></content>
       <categories>
         <category>数据类型</category>
       </categories>
@@ -78,7 +83,7 @@
   <entry>
     <title><![CDATA[blog写作2]]></title>
     <url>%2F2019%2F03%2F01%2Fblog%E5%86%99%E4%BD%9C2%2F</url>
-    <content type="text"><![CDATA[Front-matter description是文章的描述,在每篇文章标题下方显示 有date,tags,categories,comments,password(要配置),keywords,updated layout页面布局，默认为post,有draft(草稿)和page 符号 : 为英文符号,格式很重要,不管是主题配置文件还是站点配置文件中空格,不空格都有要求 permalink若站点配置文件下的 permalink 配置了 title 则可以替换文章 URL 里面的 title（文章标题） 还有photos,link,image,sticky(后面2个要配置) 若创建文章时标题错误,可在编辑md文件时通过titile修改,文件重命名没用]]></content>
+    <content type="text"><![CDATA[Front-matter description是文章的描述,在每篇文章标题下方显示 有date,tags,categories,comments,password(要配置),keywords,updated layout页面布局，默认为post,有draft(草稿)和page 符号 : 为英文符号,格式很重要,不管是主题配置文件还是站点配置文件中空格,不空格都有要求 permalink若站点配置文件下的 permalink 配置了 title 则可以替换文章 URL 里面的 title（文章标题） 还有photos,link,image,sticky(后面2个要配置) 若创建文章时标题错误,可在编辑md文件时通过titile修改,文件重命名没用 格式一定要正确,有时可能没识别出来,要重新输入]]></content>
       <categories>
         <category>blog</category>
         <category>文章模板</category>

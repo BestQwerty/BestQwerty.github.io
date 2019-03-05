@@ -81,16 +81,17 @@
 
 
 
-<meta name="description" content="静静地Coding &amp;&amp; Thinking">
-<meta property="og:type" content="website">
-<meta property="og:title" content="LjJiaJun&#39; Home">
-<meta property="og:url" content="ctguljj.github.io/categories/blog/文章模板/index.html">
+<meta name="description" content="输入输出 gets()函数并不读取换行符’\n’,它会吧换行符替换成空字符’\0’,作为c语言字符串结束的标志.此时换行符已经没了！！ gets在C99标准中，已经不再建议使用gets()函数，而在C11中更是直接抛弃了这个函数,gets函数没有限制读入的个数，这很可能会导致程序向未知的内存空间写入数据，而导致程序出错。 fgets函数中第二个参数限制了读取的个数，这也解决了gets函数存在的问题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="输入输出">
+<meta property="og:url" content="ctguljj.github.io/2019/03/05/c-输入输出/index.html">
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
-<meta property="og:description" content="静静地Coding &amp;&amp; Thinking">
+<meta property="og:description" content="输入输出 gets()函数并不读取换行符’\n’,它会吧换行符替换成空字符’\0’,作为c语言字符串结束的标志.此时换行符已经没了！！ gets在C99标准中，已经不再建议使用gets()函数，而在C11中更是直接抛弃了这个函数,gets函数没有限制读入的个数，这很可能会导致程序向未知的内存空间写入数据，而导致程序出错。 fgets函数中第二个参数限制了读取的个数，这也解决了gets函数存在的问题">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-05T10:34:55.949Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LjJiaJun&#39; Home">
-<meta name="twitter:description" content="静静地Coding &amp;&amp; Thinking">
+<meta name="twitter:title" content="输入输出">
+<meta name="twitter:description" content="输入输出 gets()函数并不读取换行符’\n’,它会吧换行符替换成空字符’\0’,作为c语言字符串结束的标志.此时换行符已经没了！！ gets在C99标准中，已经不再建议使用gets()函数，而在C11中更是直接抛弃了这个函数,gets函数没有限制读入的个数，这很可能会导致程序向未知的内存空间写入数据，而导致程序出错。 fgets函数中第二个参数限制了读取的个数，这也解决了gets函数存在的问题">
 
 
 
@@ -120,14 +121,14 @@
 
 
 
-  <link rel="canonical" href="ctguljj.github.io/categories/blog/文章模板/">
+  <link rel="canonical" href="ctguljj.github.io/2019/03/05/c-输入输出/">
 
 
 
 
 
 <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
-  <title>分类: 文章模板 | LjJiaJun' Home</title>
+  <title>输入输出 | LjJiaJun' Home</title>
   
 
 
@@ -146,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -285,68 +286,258 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>文章模板<small>分类</small>
-        </h1>
-      </div>
-
-     
-  
-  
-  
-  
+  <div id="posts" class="posts-expand">
     
-    <div class="collection-title">
-      <h2 class="archive-year motion-element" id="archive-year-2019">2019</h2>
-    </div>
+
+  
+
   
   
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/01/blog写作2/" itemprop="url">
-              
-                <span itemprop="name">blog写作2</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-01T12:17:39+08:00" content="2019-03-01">
-          03-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-
-
   
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="ctguljj.github.io/2019/03/05/c-输入输出/">
 
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LjJiaJun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/ctgu226.jpg">
+    </span>
 
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LjJiaJun' Home">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">输入输出</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-05T18:17:49+08:00">
+                2019-03-05
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-05T18:34:55+08:00">
+                2019-03-05
+              </time>
+            
+          </span>
+
+          
+		  <span class="post-time">
+					&nbsp; | &nbsp;
+					<span class="post-meta-item-icon">
+						<i class="fa fa-calendar-o"></i>
+					</span>
+					<span class="post-meta-item-text">字数统计:</span>
+					<span class="post-count">821(字)</span> 
+					</span>
+			<span id="busuanzi_container_page_pv">
+			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
+			</span>
+			
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/03/05/c-输入输出/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/05/c-输入输出/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/03/05/c-输入输出/" class="leancloud_visitors" data-flag-title="输入输出">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h1><ul>
+<li>gets()函数并不读取换行符’\n’,它会吧换行符替换成空字符’\0’,作为c语言字符串结束的标志.此时换行符已经没了！！</li>
+<li>gets在C99标准中，已经不再建议使用gets()函数，而在C11中更是直接抛弃了这个函数,gets函数没有限制读入的个数，这很可能会导致程序向未知的内存空间写入数据，而导致程序出错。</li>
+<li>fgets函数中第二个参数限制了读取的个数，这也解决了gets函数存在的问题，但要注意fgets函数只会读取n-1个字符（如果遇到换行符会更少），并在最后添加字符串结束标志，而且，fgets也会将换行符读入。<br><code>char *fgets(char *buf, int bufsize, FILE *stream)；</code>注意一下第二个参数bufsize，这个参数就限制了读取的字符的个数，这就可以解决gets()函数的缺陷。我们知道fgets() 函数主要用于读取文件，如果要读取键盘，则stream参数应该为stdin，需要注意的是，如果bufsize设置为n，那么fgets()函数最多读取n-1个字符，之所以用“最多”这个词是因为，如果在之前遇到了换行符，fgets函数也会返回。还有一点就是，fgets()函数会读取换行符（这一点和gets函数不同），当读取结束后，fgets函数会为buf在末尾添加一个空字符作为字符串的结束.</li>
+</ul>
+<h1 id="输入输出返回值"><a href="#输入输出返回值" class="headerlink" title="输入输出返回值"></a>输入输出返回值</h1><ul>
+<li><p>scanf为函数，printf为函数(输入与输出函数)：返回值：scanf 函数的返回值反映的是按照指定的格式符正确读入的数据的个数。<br>如果输入数据与指定格式不符，则会产生输入错误。遇到输入错误，scanf函数会立即终止，返回已经成功读取的数据的个数。所以通过scanf函数的返回值和指定输入数据的个数（由格式符决定）的比较，可以判断数据输入是否成功。</p>
+</li>
+<li><p>scanf 函数是有返回值的，它的返回值可以分成三种情况</p>
+</li>
+</ul>
+<ul>
+<li><p>正整数，表示正确输入参数的个数。例如执行 scanf(“%d %d”, &amp;a, &amp;b); </p>
+<pre><code>如果用户输入&quot;3 4&quot;，可以正确输入，返回2（正确输入了两个变量）；
+如果用户输入&quot;3,4&quot;，可以正确输入a，无法输入b，返回1（正确输入了一个变量）。 
+</code></pre></li>
+<li><p><span id="inline-blue"> 0，表示用户的输入不匹配，无法正确输入任何值。如上例，用户如果输入”,3 4”，返回0。</span></p>
+</li>
+<li><p>EOF，这是在stdio.h里面定义的常量（通常值为-1），表示输入流已经结束(scanf遇到格式不对返回EOF或结束时)(EOF == end of file)</p>
+</li>
+</ul>
+<ul>
+<li>printf的返回值是输出的字符数，例如，<code>printf(&quot;1234&quot;)</code>的返回值是4，而<code>printf(&quot;1234\n&quot;)</code>的返回值是5。不知道有木有这样写的习惯<code>while (~scanf(&quot;....&quot;))</code>。这里出现了~这个符号，这个是位运算取反的意思。因为<code>~(n)=-(n+1)</code>。所以这里scanf的返回值为-1时~(-1)=0才退出循环。这就是这样写的意思。</li>
+</ul>
+
+      
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+	  <div>
+	
+    
+<div style="text-align:center;color: #ccc;font-size:14px;">
+------ The Happy Ending ------</div>
+
+	
+	  </div>
+    <footer class="post-footer">
+      
+	  
+		  <footer class="post-footer">
+    
+        <div class="copyright" style="clear:both;">
+           <p><span>本文标题:</span><a href="/2019/03/05/c-输入输出/">输入输出</a></p>
+           <p><span>文章作者:</span><a href="/" title="访问 LjJiaJun 的个人博客">LjJiaJun</a></p>
+           <p><span>原始链接:</span><a href="/2019/03/05/c-输入输出/" title="输入输出">ctguljj.github.io/2019/03/05/c-输入输出/</a></p>
+           <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" title="Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)">Attribution-NonCommercial 4.0</a></p>
+           <p><span>若转载，请留以上信息，谢谢合作</span></p>
+        </div>
+      
+	</footer>
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/04/二分法/" rel="next" title="二分法">
+                <i class="fa fa-chevron-left"></i> 二分法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
 
           </div>
@@ -354,6 +545,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -374,8 +572,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -444,6 +651,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#输入输出"><span class="nav-number">1.</span> <span class="nav-text">输入输出</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#输入输出返回值"><span class="nav-number">2.</span> <span class="nav-text">输入输出返回值</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -637,6 +860,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
