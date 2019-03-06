@@ -81,19 +81,19 @@
 
 
 
-<meta name="description" content="欧拉筛法-时间复杂度（n)  最简单的素数筛法是这样的：10000000内的素数，用这个筛选法可以大大的降低时间复杂度  1.开一个大的bool型数组prime[]，大小就是n+1就可以了.先把所有的下标为奇数的标为true,下标为偶数的标为false. 2.然后：1234567for( i=3; i&amp;lt;=sqrt(n); i+=2 )&amp;#123;  	if(prime)	for( j=i+i">
+<meta name="description" content="数学原理 一个数 n 如果是合数，那么它的所有的因子不超过sqrt(n)–n的开方   素数筛选法 素数是数学中一个很重要的数，很多算法中都需要用到素数相关的性质，因此传统的暴力循环求素数的效率显得十分低效，这里我们有两种高效求1~n以内的素数的方法。需要大家掌握，特别是欧拉筛法里面用到一点数学性质，大家可自行百度欧拉筛法掌握具体的原理，以后的出现的算法中还会出现。  欧拉筛法-时间复杂度（n)">
 <meta name="keywords" content="算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="素数筛选法">
 <meta property="og:url" content="ctguljj.github.io/2019/03/05/素数筛选法/index.html">
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
-<meta property="og:description" content="欧拉筛法-时间复杂度（n)  最简单的素数筛法是这样的：10000000内的素数，用这个筛选法可以大大的降低时间复杂度  1.开一个大的bool型数组prime[]，大小就是n+1就可以了.先把所有的下标为奇数的标为true,下标为偶数的标为false. 2.然后：1234567for( i=3; i&amp;lt;=sqrt(n); i+=2 )&amp;#123;  	if(prime)	for( j=i+i">
+<meta property="og:description" content="数学原理 一个数 n 如果是合数，那么它的所有的因子不超过sqrt(n)–n的开方   素数筛选法 素数是数学中一个很重要的数，很多算法中都需要用到素数相关的性质，因此传统的暴力循环求素数的效率显得十分低效，这里我们有两种高效求1~n以内的素数的方法。需要大家掌握，特别是欧拉筛法里面用到一点数学性质，大家可自行百度欧拉筛法掌握具体的原理，以后的出现的算法中还会出现。  欧拉筛法-时间复杂度（n)">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/欧拉筛选法.png">
-<meta property="og:updated_time" content="2019-03-05T15:21:08.243Z">
+<meta property="og:updated_time" content="2019-03-06T04:26:38.245Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="素数筛选法">
-<meta name="twitter:description" content="欧拉筛法-时间复杂度（n)  最简单的素数筛法是这样的：10000000内的素数，用这个筛选法可以大大的降低时间复杂度  1.开一个大的bool型数组prime[]，大小就是n+1就可以了.先把所有的下标为奇数的标为true,下标为偶数的标为false. 2.然后：1234567for( i=3; i&amp;lt;=sqrt(n); i+=2 )&amp;#123;  	if(prime)	for( j=i+i">
+<meta name="twitter:description" content="数学原理 一个数 n 如果是合数，那么它的所有的因子不超过sqrt(n)–n的开方   素数筛选法 素数是数学中一个很重要的数，很多算法中都需要用到素数相关的性质，因此传统的暴力循环求素数的效率显得十分低效，这里我们有两种高效求1~n以内的素数的方法。需要大家掌握，特别是欧拉筛法里面用到一点数学性质，大家可自行百度欧拉筛法掌握具体的原理，以后的出现的算法中还会出现。  欧拉筛法-时间复杂度（n)">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/欧拉筛选法.png">
 
 
@@ -348,8 +348,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-05T23:21:08+08:00">
-                2019-03-05
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-06T12:26:38+08:00">
+                2019-03-06
               </time>
             
           </span>
@@ -361,7 +361,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">913(字)</span> 
+					<span class="post-count">1.1k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -419,7 +419,14 @@
       
 
       
-        <h1 id="欧拉筛法-时间复杂度（n"><a href="#欧拉筛法-时间复杂度（n" class="headerlink" title="欧拉筛法-时间复杂度（n)"></a>欧拉筛法-时间复杂度（n)</h1><ul>
+        <h1 id="数学原理"><a href="#数学原理" class="headerlink" title="数学原理"></a>数学原理</h1><ul>
+<li>一个数 n 如果是合数，那么它的所有的因子不超过sqrt(n)–n的开方</li>
+<li></li>
+</ul>
+<h1 id="素数筛选法"><a href="#素数筛选法" class="headerlink" title="素数筛选法"></a>素数筛选法</h1><ul>
+<li>素数是数学中一个很重要的数，很多算法中都需要用到素数相关的性质，因此传统的暴力循环求素数的效率显得十分低效，这里我们有两种高效求1~n以内的素数的方法。需要大家掌握，特别是欧拉筛法里面用到一点数学性质，大家可自行百度欧拉筛法掌握具体的原理，以后的出现的算法中还会出现。</li>
+</ul>
+<h1 id="欧拉筛法-时间复杂度（n"><a href="#欧拉筛法-时间复杂度（n" class="headerlink" title="欧拉筛法-时间复杂度（n)"></a>欧拉筛法-时间复杂度（n)</h1><ul>
 <li><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/欧拉筛选法.png" alt=""></li>
 <li>最简单的素数筛法是这样的：10000000内的素数，用这个筛选法可以大大的降低时间复杂度</li>
 </ul>
@@ -438,11 +445,11 @@
 </ul>
 <p>1.两层循环的顺序不同（一般筛是第一维prime[i] 第二维j，欧拉筛是第一维i 第二位prime[j]）</p>
 <p>2.一行神奇的代码：<br>           <code>if(i%prime[j]==0)break;</code></p>
-<p>prime[]数组中的素数是递增的,当i能整除prime[j]，那么i<em>prime[j+1]这个合数肯定被prime[j]乘以某个数筛掉。<br>   因为i中含有prime[j],prime[j]比prime[j+1]小，即i=k</em>prime[j]，那么i<em>prime[j+1]=(k</em>prime[j])<em>prime<br>   [j+1]=k’</em>prime[j]，接下去的素数同理。所以不用筛下去了。因此，在满足i%prime[j]==0这个条件之前以及第一次<br>   满足改条件时,prime[j]必定是prime[j]*i的最小因子。</p>
+<p>prime[]数组中的素数是递增的,当i能整除prime[j]，那么i<em>prime[j+1]这个合数肯定被prime[j]乘以某个数筛掉。<br>   因为i中含有prime[j],prime[j]比prime[j+1]小，即    `i=k</em>prime[j]<code>，那么</code>i<em>prime[j+1]=(k</em>prime[j])<em>prime<code></code> [j+1]=k’</em>prime[j]<code>，接下去的素数同理。所以不用筛下去了。因此，在满足</code>i%prime[j]==0`这个条件之前以及第一次<br>   满足改条件时,prime[j]必定是prime[j]*i的最小因子。</p>
 <p>No.4 证明分两部分。首先证每个合数都会被筛到（正确性），其次证每个合数只会被筛到一次（复杂度）。<br>每个合数都会被筛到<br>设有一合数 （为质数）<br>则一定会在  时被筛去（此时 ），因为对于小于 的质数，一定不会被  整除<br>每个合数都只会被筛到一次<br>与上面一样，还是设有一合数 （ 为质数）<br>倘若存在一个质因子  也筛去了，那么此时 。<br>o，此时在内层循环中已经早早地break掉了，因为 。<br>o，此时还没加进质数表QwQ（顺便一提：这种情况只有可能在  时发生）</p>
 <p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">void euler_sieve(int n) &#123; </span><br><span class="line">totPrimes = 0;</span><br><span class="line">	memset(flag, 0, sizeof(flag)); </span><br><span class="line">for (int i = 2; i &lt;= n; i++) &#123; </span><br><span class="line">if (!flag[i]) </span><br><span class="line">primes[totPrimes++] = i;</span><br><span class="line">	for (int j = 0; i * primes[j] &lt;= n; j++) &#123; </span><br><span class="line">	flag[i*primes[j]] = true;</span><br><span class="line">	if (i % primes[j] == 0) break; </span><br><span class="line">									&#125; </span><br><span class="line">							&#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <ul>
-<li>j &lt; totPrimes为何不加？</li>
+<li><code>j &lt; totPrimes</code>为何不加？</li>
 </ul>
 <div class="note warning"><br>o当  为质数时，内层循环会在最后一个质数（也就是  自己）终止。<br><br><br>o当  为合数时，内层循环会在它的第一个质因数终止。<br>当然加了也没有问题<p></p></div>
       
@@ -671,7 +678,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#欧拉筛法-时间复杂度（n"><span class="nav-number">1.</span> <span class="nav-text">欧拉筛法-时间复杂度（n)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#原理"><span class="nav-number">1.1.</span> <span class="nav-text">原理</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数学原理"><span class="nav-number">1.</span> <span class="nav-text">数学原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#素数筛选法"><span class="nav-number">2.</span> <span class="nav-text">素数筛选法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#欧拉筛法-时间复杂度（n"><span class="nav-number">3.</span> <span class="nav-text">欧拉筛法-时间复杂度（n)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#原理"><span class="nav-number">3.1.</span> <span class="nav-text">原理</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -712,7 +719,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">4.8k</span>
+    <span title="Site words total count">4.9k</span>
   
 </div>
 
