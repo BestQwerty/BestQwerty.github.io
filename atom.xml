@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-03-06T04:32:16.089Z</updated>
+  <updated>2019-03-06T04:36:01.950Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>代码块高亮</title>
+    <link href="ctguljj.github.io/2019/03/06/%E4%BB%A3%E7%A0%81%E5%9D%97%E9%AB%98%E4%BA%AE/"/>
+    <id>ctguljj.github.io/2019/03/06/代码块高亮/</id>
+    <published>2019-03-06T04:33:23.000Z</published>
+    <updated>2019-03-06T04:36:01.950Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="主题自带样式-代码块高亮"><a href="#主题自带样式-代码块高亮" class="headerlink" title="主题自带样式 代码块高亮"></a>主题自带样式 代码块高亮</h1><ul><li><p>这里指的是<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```[language] [title] [url] [link-text]</span><br><span class="line"></span><br><span class="line">代码</span><br></pre></td></tr></table></figure></p></li><li><p>[language] 是代码语言的名称，用来设置代码块颜色高亮，非必须；</p></li><li>[title] 是顶部左边的说明，非必须；</li><li>[url] 是顶部右边的超链接地址，非必须；</li><li>[link text] 如它的字面意思，超链接的名称，非必须。</li><li>亲测这 4 项应该是根据空格来分隔，而不是[]，故请不要加[]。除非如果你想写后面两个，但不想写前面两个，那么就必须加[]了，要这样写：[] [] [url] [link text]</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;主题自带样式-代码块高亮&quot;&gt;&lt;a href=&quot;#主题自带样式-代码块高亮&quot; class=&quot;headerlink&quot; title=&quot;主题自带样式 代码块高亮&quot;&gt;&lt;/a&gt;主题自带样式 代码块高亮&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;这里指的是&lt;figure class=&quot;h
+      
+    
+    </summary>
+    
+      <category term="blog" scheme="ctguljj.github.io/categories/blog/"/>
+    
+      <category term="markdown" scheme="ctguljj.github.io/categories/blog/markdown/"/>
+    
+    
+      <category term="blog" scheme="ctguljj.github.io/tags/blog/"/>
+    
+  </entry>
   
   <entry>
     <title>素数筛选法</title>
