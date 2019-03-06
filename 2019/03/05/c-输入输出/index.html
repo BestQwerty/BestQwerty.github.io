@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="输入输出 gets()函数并不读取换行符’\n’,它会吧换行符替换成空字符’\0’,作为c语言字符串结束的标志.此时换行符已经没了！！ gets在C99标准中，已经不再建议使用gets()函数，而在C11中更是直接抛弃了这个函数,gets函数没有限制读入的个数，这很可能会导致程序向未知的内存空间写入数据，而导致程序出错。 fgets函数中第二个参数限制了读取的个数，这也解决了gets函数存在的问题">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-05T13:30:33.899Z">
+<meta property="og:updated_time" content="2019-03-06T14:30:15.473Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="输入输出">
 <meta name="twitter:description" content="输入输出 gets()函数并不读取换行符’\n’,它会吧换行符替换成空字符’\0’,作为c语言字符串结束的标志.此时换行符已经没了！！ gets在C99标准中，已经不再建议使用gets()函数，而在C11中更是直接抛弃了这个函数,gets函数没有限制读入的个数，这很可能会导致程序向未知的内存空间写入数据，而导致程序出错。 fgets函数中第二个参数限制了读取的个数，这也解决了gets函数存在的问题">
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-05T21:30:33+08:00">
-                2019-03-05
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-06T22:30:15+08:00">
+                2019-03-06
               </time>
             
           </span>
@@ -359,7 +359,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">871(字)</span> 
+					<span class="post-count">1k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -441,6 +441,14 @@
 </ul>
 <ul>
 <li>printf的返回值是输出的字符数，例如，<code>printf(&quot;1234&quot;)</code>的返回值是4，而<code>printf(&quot;1234\n&quot;)</code>的返回值是5。不知道有木有这样写的习惯<code>while (~scanf(&quot;....&quot;))</code>。这里出现了~这个符号，这个是位运算取反的意思。因为<code>~(n)=-(n+1)</code>。所以这里scanf的返回值为-1时~(-1)=0才退出循环。这就是这样写的意思。</li>
+</ul>
+<h1 id="c-输入输出"><a href="#c-输入输出" class="headerlink" title="c++输入输出"></a>c++输入输出</h1><ul>
+<li>cout在输出很大的数时,会用科学计数法输出,若不想如此输出，可将原来输出数double类型与float类型改为int类型，或者如下.</li>
+<li><code>cout&lt;&lt;std::fixed&lt;&lt; a &lt;&lt;endl;</code></li>
+<li><code>printf(&quot;%.0lf&quot;, a);</code></li>
+<li>当数字过大时可能数字有变化或丢失(自测)</li>
+<li>fixed后面还可以加格式控制符控制位数，setprecision(n)——设置输出浮点数的精度，配合fixed设定，指的是小数位数，设置setprecision(0)即指输出不带小数位的int值。</li>
+<li>还有其它方法！！！1</li>
 </ul>
 
       
@@ -622,7 +630,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -673,7 +681,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#输入输出"><span class="nav-number">1.</span> <span class="nav-text">输入输出</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#输入输出返回值"><span class="nav-number">2.</span> <span class="nav-text">输入输出返回值</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#输入输出"><span class="nav-number">1.</span> <span class="nav-text">输入输出</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#输入输出返回值"><span class="nav-number">2.</span> <span class="nav-text">输入输出返回值</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#c-输入输出"><span class="nav-number">3.</span> <span class="nav-text">c++输入输出</span></a></li></ol></div>
             
 
           </div>
@@ -714,7 +722,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">5.1k</span>
+    <span title="Site words total count">5.4k</span>
   
 </div>
 

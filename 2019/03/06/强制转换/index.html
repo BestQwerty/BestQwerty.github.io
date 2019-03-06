@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="数据类型,">
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="静静地Coding &amp;&amp; Thinking">
+<meta name="description" content="类型转换 进行不同数据的强制转换其实就是数据占用字节扩充或者截断。  将数据由值域较宽类型强制转换到值域较窄类型时，有可能出现数据信息丢失。 char 型数据在机器里通过 ASCII 码存储，也就是用一个整数存储的。 当执行一个运算时（如这里的a&amp;gt;b），如果它的一个运算数是有符号的而另一个数是无符号的，那么C语言会隐式地将有符号 参数强制类型为无符号数，并假设这两个数都是非负的，来执行这个运">
+<meta name="keywords" content="数据类型">
 <meta property="og:type" content="article">
-<meta property="og:title" content="强制转换">
+<meta property="og:title" content="类型转换">
 <meta property="og:url" content="ctguljj.github.io/2019/03/06/强制转换/index.html">
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
-<meta property="og:description" content="静静地Coding &amp;&amp; Thinking">
+<meta property="og:description" content="类型转换 进行不同数据的强制转换其实就是数据占用字节扩充或者截断。  将数据由值域较宽类型强制转换到值域较窄类型时，有可能出现数据信息丢失。 char 型数据在机器里通过 ASCII 码存储，也就是用一个整数存储的。 当执行一个运算时（如这里的a&amp;gt;b），如果它的一个运算数是有符号的而另一个数是无符号的，那么C语言会隐式地将有符号 参数强制类型为无符号数，并假设这两个数都是非负的，来执行这个运">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-06T05:32:14.504Z">
+<meta property="og:updated_time" content="2019-03-06T13:31:39.021Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="强制转换">
-<meta name="twitter:description" content="静静地Coding &amp;&amp; Thinking">
+<meta name="twitter:title" content="类型转换">
+<meta name="twitter:description" content="类型转换 进行不同数据的强制转换其实就是数据占用字节扩充或者截断。  将数据由值域较宽类型强制转换到值域较窄类型时，有可能出现数据信息丢失。 char 型数据在机器里通过 ASCII 码存储，也就是用一个整数存储的。 当执行一个运算时（如这里的a&amp;gt;b），如果它的一个运算数是有符号的而另一个数是无符号的，那么C语言会隐式地将有符号 参数强制类型为无符号数，并假设这两个数都是非负的，来执行这个运">
 
 
 
@@ -128,7 +129,7 @@
 
 
 <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
-  <title>强制转换 | LjJiaJun' Home</title>
+  <title>类型转换 | LjJiaJun' Home</title>
   
 
 
@@ -317,7 +318,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">强制转换</h1>
+          <h1 class="post-title" itemprop="name headline">类型转换</h1>
         
 
         <div class="post-meta">
@@ -345,12 +346,45 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-06T13:32:14+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-06T21:31:39+08:00">
                 2019-03-06
               </time>
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据类型/" itemprop="url" rel="index">
+                    <span itemprop="name">数据类型</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据类型/类型转换/" itemprop="url" rel="index">
+                    <span itemprop="name">类型转换</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 		  <span class="post-time">
 					&nbsp; | &nbsp;
@@ -358,7 +392,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">0(字)</span> 
+					<span class="post-count">171(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -380,7 +414,7 @@
 
           
           
-             <span id="/2019/03/06/强制转换/" class="leancloud_visitors" data-flag-title="强制转换">
+             <span id="/2019/03/06/强制转换/" class="leancloud_visitors" data-flag-title="类型转换">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -416,7 +450,13 @@
       
 
       
-        
+        <h1 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h1><ul>
+<li>进行不同数据的强制转换其实就是数据占用字节扩充或者截断。 </li>
+<li>将数据由值域较宽类型强制转换到值域较窄类型时，有可能出现数据信息丢失。</li>
+<li>char 型数据在机器里通过 ASCII 码存储，也就是用一个整数存储的。</li>
+<li>当执行一个运算时（如这里的a&gt;b），如果它的一个运算数是有符号的而另一个数是无符号的，那么C语言会隐式地将有符号 参数强制类型为无符号数，并假设这两个数都是非负的，来执行这个运算</li>
+</ul>
+
       
     </div>
     
@@ -438,13 +478,19 @@
 	  </div>
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/数据类型/" rel="tag"># 数据类型</a>
+          
+        </div>
+      
 	  
 		  <footer class="post-footer">
     
         <div class="copyright" style="clear:both;">
-           <p><span>本文标题:</span><a href="/2019/03/06/强制转换/">强制转换</a></p>
+           <p><span>本文标题:</span><a href="/2019/03/06/强制转换/">类型转换</a></p>
            <p><span>文章作者:</span><a href="/" title="访问 LjJiaJun 的个人博客">LjJiaJun</a></p>
-           <p><span>原始链接:</span><a href="/2019/03/06/强制转换/" title="强制转换">ctguljj.github.io/2019/03/06/强制转换/</a></p>
+           <p><span>原始链接:</span><a href="/2019/03/06/强制转换/" title="类型转换">ctguljj.github.io/2019/03/06/强制转换/</a></p>
            <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" title="Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)">Attribution-NonCommercial 4.0</a></p>
            <p><span>若转载，请留以上信息，谢谢合作</span></p>
         </div>
@@ -548,8 +594,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -577,7 +632,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -619,6 +674,22 @@ var jiathis_config={
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#类型转换"><span class="nav-number">1.</span> <span class="nav-text">类型转换</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -653,7 +724,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">5.1k</span>
+    <span title="Site words total count">5.4k</span>
   
 </div>
 
