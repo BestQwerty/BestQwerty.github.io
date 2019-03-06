@@ -239,9 +239,9 @@
     <link href="ctguljj.github.io/2019/03/01/blog%E5%86%99%E4%BD%9C4/"/>
     <id>ctguljj.github.io/2019/03/01/blog写作4/</id>
     <published>2019-03-01T11:09:27.000Z</published>
-    <updated>2019-03-06T10:21:41.453Z</updated>
+    <updated>2019-03-06T10:25:53.659Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="图片插入"><a href="#图片插入" class="headerlink" title="图片插入"></a>图片插入</h1><ul><li>将markdown需要用的图片放到git仓库中，发布到github上</li><li><span id="inline-blue">  访问图片,点 download 按钮，页面打开后,在地址栏可以复制图片地址，或者在Download按钮上直接右键 “复制链接地址” </span></li></ul><h1 id="TOC数字块"><a href="#TOC数字块" class="headerlink" title="TOC数字块"></a>TOC数字块</h1><p><span class="section-number-2">1.</span> 左边为效果<br><span id="inline-toc">2.</span> 左边为效果</p><h1 id="引用边框变色"><a href="#引用边框变色" class="headerlink" title="引用边框变色"></a>引用边框变色</h1><p>👇</p><ul><li><p id="div-border-left-red">blog写作</p></li><li><p id="div-border-left-yellow">blog写作</p></li><li><p id="div-border-left-blue">blog写作</p></li><li><p id="div-border-right-blue">blog写作</p></li><li><p id="div-border-right-green">blog写作</p></li><li><p id="div-border-bottom-blue">blog写作</p></li><li><p id="div-border-bottom-yellow">blog写作</p></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="图片插入"><a href="#图片插入" class="headerlink" title="图片插入"></a>图片插入</h1><ul><li>将markdown需要用的图片放到git仓库中，发布到github上</li><li><span id="inline-blue">  访问图片,点 download 按钮，页面打开后,在地址栏可以复制图片地址，或者在Download按钮上直接右键 “复制链接地址” </span></li></ul><h1 id="TOC数字块"><a href="#TOC数字块" class="headerlink" title="TOC数字块"></a>TOC数字块</h1><p><span id="inline-toc">1.</span> 左边为效果<br><span id="inline-toc">2.</span> 左边为效果</p><h1 id="引用边框变色"><a href="#引用边框变色" class="headerlink" title="引用边框变色"></a>引用边框变色</h1><p>👇</p><ul><li><p id="div-border-left-red">blog写作 </p></li><li><p id="div-border-left-yellow">blog写作 </p></li><li><p id="div-border-left-blue">blog写作 </p></li><li><p id="div-border-right-blue">blog写作 </p></li><li><p id="div-border-right-green">blog写作 </p></li><li><p id="div-border-bottom-blue">blog写作 </p></li><li><p id="div-border-bottom-yellow">blog写作 </p></li></ul>]]></content>
     
     <summary type="html">
     
