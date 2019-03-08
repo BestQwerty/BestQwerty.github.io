@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="STL是一个统一的整体，map的很多用法都和STL中其它的东西结合在一起 map中由于它内部有序，由红黑树保证，因此很多函数执行的时间复杂度都是log2N的，如果用map函数可以实现的功能，而STL  Algorithm也可以完成该功能，建议用map自带函数，效率高一些。 sort算法有个限制，利用sort算法只能对序列容器进行排序，就是线性的（如vector，list，deque）。map是一">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-08T09:35:07.364Z">
+<meta property="og:updated_time" content="2019-03-08T10:04:37.110Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="c++map容器">
 <meta name="twitter:description" content="STL是一个统一的整体，map的很多用法都和STL中其它的东西结合在一起 map中由于它内部有序，由红黑树保证，因此很多函数执行的时间复杂度都是log2N的，如果用map函数可以实现的功能，而STL  Algorithm也可以完成该功能，建议用map自带函数，效率高一些。 sort算法有个限制，利用sort算法只能对序列容器进行排序，就是线性的（如vector，list，deque）。map是一">
@@ -346,7 +346,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-08T17:35:07+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-08T18:04:37+08:00">
                 2019-03-08
               </time>
             
@@ -392,7 +392,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">953(字)</span> 
+					<span class="post-count">949(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -491,10 +491,12 @@
 </ul>
 <pre><code>-`map&lt;string, int, CmpByKeyLength&gt; name_score_map;`
 </code></pre><h2 id="按照value排序"><a href="#按照value排序" class="headerlink" title="按照value排序"></a>按照value排序</h2><ul>
-<li>思路1：可以考虑将value作为key值进行自动排序。</li>
-<li>思路2：可以把map中的key值和value值分别转存到一个pair类型的vector中，在对vector按照一定的规则排序即可。这样的方法对值一样的情况也能够使用。</li>
+<li><p>思路1：可以考虑将value作为key值进行自动排序。</p>
+</li>
+<li><p>思路2：可以把map中的key值和value值分别转存到一个pair类型的vector中，在对vector按照一定的规则排序即可。这样的方法对值一样的情况也能够使用。</p>
+</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">	typedef pair&lt;string, int&gt; PAIR;</span><br><span class="line"></span><br><span class="line">		map&lt;string, int&gt; name_score_map;</span><br><span class="line">	name_score_map.insert(make_pair(&quot;Bing&quot;, 99));</span><br><span class="line"></span><br><span class="line">	name_score_map.insert(make_pair(&quot;Albert&quot;, 86));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">vector&lt;PAIR&gt; name_score_vec(name_score_map.begin(), name_score_map.end());</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sort(name_score_vec.begin(), name_score_vec.end(), cmp);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">	<span class="keyword">typedef</span> pair&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt; PAIR;</span><br><span class="line"></span><br><span class="line">		<span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt; name_score_map;</span><br><span class="line">	name_score_map.insert(make_pair(<span class="string">"Bing"</span>, <span class="number">99</span>));</span><br><span class="line"></span><br><span class="line">	name_score_map.insert(make_pair(<span class="string">"Albert"</span>, <span class="number">86</span>));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">vector</span>&lt;PAIR&gt; name_score_vec(name_score_map.begin(), name_score_map.end());</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sort(name_score_vec.begin(), name_score_vec.end(), cmp);</span><br></pre></td></tr></table></figure>
 <h1 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h1><ul>
 <li>对key 排序的话，直接使用<code>greater&lt;string&gt;</code>在map定义的时候就。而要对value排序，则是使用函数对象，先将map转换为vector，调用sort函数中传入一个函数对象，则可以实现对value 的排序。还有一点是pair 只重载了<code>&amp;lt;</code>，则stl 则不能使用 == 运算符。</li>
 </ul>
