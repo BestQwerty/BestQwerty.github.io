@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[stl代码练习]]></title>
+    <url>%2F2019%2F03%2F08%2Fstl%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0%2F</url>
+    <content type="text"><![CDATA[learn_stl123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163164165166167168169170171172173174175176177#include&lt;algorithm&gt;#include&lt;iostream&gt;#include&lt;vector&gt;#include&lt;queue&gt;#include&lt;stack&gt;#include&lt;list&gt;#include&lt;set&gt;#include&lt;map&gt;#define MAX_SIZE 10000using namespace std;int n;typedef struct node&#123; string name; //string暂时可以当成一种结构体变量,专门用来定义字符串,name的长度可以由name.length()获得 int grade;&#125;Student;vector&lt;int&gt; vec;list&lt;int&gt; link_list;deque&lt;int&gt; dq;stack&lt;int&gt; Stack;queue&lt;int&gt; que;priority_queue&lt;int&gt; q;set&lt;int&gt; s;map&lt;string,int&gt; stu;void fun_1(int a[]);void fun_2(int a[]);void fun_3(int a[]);void fun_4(int a[]);void fun_5(int a[]);void fun_6(int a[]);void fun_7(Student a[]);int main()&#123; int a[MAX_SIZE]; Student student[MAX_SIZE]; cin &gt;&gt; n; for(int i = 0; i &lt; n; i++) cin &gt;&gt; a[i]; for(int i = 0; i &lt; n; i++) cin &gt;&gt; student[i].name &gt;&gt; student[i].grade;//只用于map /*1.用vector存入数组中所有的数据并升序排序,然后删去最大元素 */for(int i = 0; i &lt; n; i++) vec.push_back(a[i]);sort(vec.begin(), vec.end());vec.pop_back();for(int i = 0; i &lt; vec.size(); i++) cout &lt;&lt; vec[i] &lt;&lt; endl;/*2. 用list存入数组中所有的元素并升序排序。删除其中最小的节点并再插入一个最大的节点 */ for(int i = 0; i &lt; n; i++) link_list.push_back(a[i]);link_list.sort();link_list.erase(link_list.begin());link_list.insert(link_list.begin(), *(--link_list.end())); for(list&lt;int&gt;::iterator itt = link_list.begin(); itt != link_list.end(); itt++) cout &lt;&lt; *itt &lt;&lt; endl; /*3.用deque存入数组中所有的数据，在头尾端插入一个和队头队尾相同的元素。 将deque中的数据用另一个vector存储起来排序后再放回deque中 */ for(int i = 0; i &lt; n; i++) dq.push_back(a[i]);dq.push_back(a[n-1]), dq.push_front(a[0]);vector&lt;int&gt; haha;for(int i = 0; i &lt; n; i++) haha.push_back(a[i]);sort(haha.begin(), haha.end());dq.clear();deque&lt;int&gt; dq(haha.begin(), haha.end());for(deque&lt;int&gt;:: iterator ittt = dq.begin(); ittt != dq.end(); ittt++) cout &lt;&lt; *ittt &lt;&lt; endl;/*4.将数组中的元素依次存入stack中，然后依次存入queue中实现数组元素的reverse */ for(int i = 0; i &lt; n; i++) Stack.push(a[i]);for(int i = n-1; i &gt;= 0; i--)&#123; que.push(Stack.top()); Stack.pop(); &#125; for(int i = n - 1; i &gt;= 0; i--) cout &lt;&lt; que.front() &lt;&lt; endl; /*5.不借助其他的函数和变量，利用priority_queue实现数组的升序排序 */ priority_queue&lt;int, vector&lt;int&gt;, less&lt;int&gt; &gt; q; for(int i = 0; i &lt; n; i++) q.push(a[i]);for(int i = 0; i &lt; n; i++) cout &lt;&lt; q.top() &lt;&lt; endl;/*6.将数组中的元素全部存入set中，并输入一个元素，在set中查找它，找到则删除它 */for(int i = 0; i &lt; n; i++) s.insert(a[i]);int j;scanf("%d", &amp;j);set&lt;int&gt;::iterator itt;itt = s.find(j);if(itt != s.end()) s.erase(itt);for(itt = s.begin(); itt != s.end(); itt++) cout &lt;&lt; *itt &lt;&lt; endl;/*7.将学生的姓名和成绩全部存入map中，并根据学生成绩降序排序。(不能修改给定map的两个参数的顺序) */ //第一种 int cmp(pair &lt;string, int&gt; a, pair&lt;string, int&gt; b);pair&lt;string, int&gt; pa;for(int i = 0; i &lt; n; i++) pa = make_pair(student[i].name, student[i].grade);for(int i = 0; i &lt; n; i++) stu.insert(pair&lt;string, int&gt;(student[i].name, student[i].grade));vector&lt;pair&lt;string, int&gt; &gt; baba(stu.begin(), stu.end() );sort(baba.begin(), baba.end(), cmp);for(int i = 0; i &lt; baba.size(); i++) cout &lt;&lt; baba[i].first &lt;&lt; " " &lt;&lt; baba[i].second &lt;&lt; endl;//第二种(就是直接用make_pair插入以及sort函数直接用greater逆序排列) for(int i = 0; i &lt; n; i++) stu.insert(make_pair(student[i].name, student[i].grade)); vector&lt;pair&lt;string, int&gt; &gt; yeye(stu.begin(), stu.end() );sort(yeye.begin(), yeye.end(), greater&lt;pair&lt;string, int&gt; &gt;());for(int i = 0; i &lt; n; i++) cout &lt;&lt; yeye[i].first &lt;&lt; " " &lt;&lt; yeye[i].second &lt;&lt; endl;//分割线 return 0;&#125; bool cmp(pair &lt;string, int&gt; a, pair&lt;string, int&gt; b) &#123; return a.second &gt; b.second; &#125;]]></content>
+      <categories>
+        <category>stl</category>
+        <category>代码练习</category>
+      </categories>
+      <tags>
+        <tag>stl</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[stl介绍]]></title>
+    <url>%2F2019%2F03%2F08%2Fstl%2F</url>
+    <content type="text"><![CDATA[序列式容器 向量(vector) 连续存储的元素&lt;vector&gt; 列表(list) 由节点组成的双向链表，每个结点包含着一个元素&lt;list&gt; 双端队列(deque) 连续存储的指向不同元素的指针所组成的数组&lt;deque&gt; 适配器容器 栈(stack) 后进先出的值的排列 &lt;stack&gt; 队列(queue) 先进先出的值的排列&lt;queue&gt; 优先队列(priority_queue) 元素的次序是由作用于所存储的值对上的某种谓词决定的的一种队列 &lt;queue&gt; 关联式容器 集合(set) 由节点组成的红黑树，每个节点都包含着一个元素，节点之间以某种作用于元素对的谓词排列，没有两个不同的元素能够拥有相同的次序&lt;set&gt; 多重集合(multiset) 允许存在两个次序相等的元素的集合&lt;set&gt; 映射(map) 由{键，值}对组成的集合，以某种作用于键对上的谓词排列 &lt;map&gt; 多重映射(multimap) 允许键对有相等的次序的映射&lt;map&gt;]]></content>
+      <categories>
+        <category>stl</category>
+      </categories>
+      <tags>
+        <tag>stl</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[c++map容器]]></title>
+    <url>%2F2019%2F03%2F08%2Fc-map%E5%AE%B9%E5%99%A8%2F</url>
+    <content type="text"><![CDATA[#]]></content>
+      <categories>
+        <category>stl</category>
+        <category>map</category>
+      </categories>
+      <tags>
+        <tag>stl</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[bool类型]]></title>
     <url>%2F2019%2F03%2F08%2Fbool%E7%B1%BB%E5%9E%8B%2F</url>
     <content type="text"><![CDATA[千万不要让编译器决定你的默认值，永远初始化 变量未初始化的默认值要看变量的存储类型，也可能与编译器有关，跟其它因素 bool类型 c++中有bool类型 bool可用于定义函数类型为布尔型，函数里可以有 return TRUE; return FALSE 之类的语句。 初始化 为了安全起见， 最好初始化为false. bool值一定要初始化 在GCC编译器下各个类型的全局变量的默认值： 表示数字的变量类型默认值都为0 bool型默认值为false string型默认值为空字符串 char 型比较特殊。char类型默认值为’\0’， 即字符串结束标志，其整数值为0。如果用printf(“%d”)输出时值为 0， 但用printf(“%c”),或cout 输出时显示为”a”， char型数组默认值为空字符串，其中的每个元素与单个char类型相同，所以用puts() 和printf(“%s”)输出都是空字符串。]]></content>
