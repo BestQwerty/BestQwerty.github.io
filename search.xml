@@ -18,6 +18,18 @@
     <content type="text"><![CDATA[pair pair类型的使用相当的繁琐，如果定义多个相同的pair类型对象，可以使用typedef简化声明：typedef pair&lt;string,string&gt; Author; 除了构造函数，标准库还定义了一个make_pair函数，由传递给它的两个实参生成一个新的pair对象 123456789101112 pair&lt;string, string&gt; next_auth; string first,last; while(cin&gt;&gt;first&gt;&gt;last) &#123; next_auth=make_pair(first,last); ...&#125; 等价的更复杂的操作:next_auth=pair&lt;string,string&gt;(first,last);]]></content>
   </entry>
   <entry>
+    <title><![CDATA[sort函数]]></title>
+    <url>%2F2019%2F03%2F08%2Fsort%E5%87%BD%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[sort函数 默认的为升序 第三参数——比较函数。比较函数是一个自己定义的函数，返回值是bool型(一般)，它规定了什么样的关系 排序的数据类型不局限于整数，只要是定义了小于运算的类型都可以，比如字符串类string。 如果是没有定义小于运算的数据类型，或者想改变排序的顺序，就要用到第三参数——比较函数。 vector&lt;int&gt; v; sort(v.begin(), v.end(), greater&lt;int&gt;()); sort(a, a+n, cmp); 对数组进行排序,其头文件为algorithm.h，形式为sort（数组名，数组名+数组长度），默认为升序，复杂度为nlog（n）； 加#include&lt;functional&gt;因为用了greater&lt;int&gt;() sort(begin, end, less&lt;数据类型&gt;（）)，升序； sort(begin, end, greater&lt;数据类型&gt;（）)，降序； sort（数组名，数组名+数组长度，less&lt;数组数据类型&gt;()）,升序； sort(数组名，数组名+数组长度，greater&lt;数组数据类型&gt;（）)，降序。]]></content>
+      <categories>
+        <category>c++</category>
+        <category>常用函数</category>
+      </categories>
+      <tags>
+        <tag>常用函数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[字符串]]></title>
     <url>%2F2019%2F03%2F08%2F%E5%AD%97%E7%AC%A6%E4%B8%B2%2F</url>
     <content type="text"><![CDATA[计算机领域中，这个字典序就不仅仅用来比较英文单词了，而是比较任意字符串。对于两个字符串，大小关系取决于两个字符串从左到右第一个不同字符的 ASCII 值的大小关系。如strcmp函数的原理]]></content>

@@ -69,6 +69,35 @@
   </entry>
   
   <entry>
+    <title>sort函数</title>
+    <link href="ctguljj.github.io/2019/03/08/sort%E5%87%BD%E6%95%B0/"/>
+    <id>ctguljj.github.io/2019/03/08/sort函数/</id>
+    <published>2019-03-08T09:06:25.000Z</published>
+    <updated>2019-03-08T11:54:18.843Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="sort函数"><a href="#sort函数" class="headerlink" title="sort函数"></a>sort函数</h1><ul><li>默认的为升序</li><li>第三参数——比较函数。比较函数是一个自己定义的函数，返回值是bool型(一般)，它规定了什么样的关系</li><li>排序的数据类型不局限于整数，只要是定义了小于运算的类型都可以，比如字符串类string。</li><li>如果是没有定义小于运算的数据类型，或者想改变排序的顺序，就要用到第三参数——比较函数。</li><li><p><code>vector&lt;int&gt; v;</code></p><p>  <code>sort(v.begin(), v.end(), greater&lt;int&gt;());</code></p></li></ul><ul><li><code>sort(a, a+n, cmp);</code></li></ul><ul><li>对数组进行排序,其头文件为algorithm.h，形式为<code>sort（数组名，数组名+数组长度）</code>，默认为升序，复杂度为nlog（n）；</li><li>加<code>#include&lt;functional&gt;</code>因为用了<code>greater&lt;int&gt;()</code></li><li><code>sort(begin, end, less&lt;数据类型&gt;（）)，升序；</code></li><li><code>sort(begin, end, greater&lt;数据类型&gt;（）)，降序；</code></li><li><code>sort（数组名，数组名+数组长度，less&lt;数组数据类型&gt;()）,升序；</code></li><li><code>sort(数组名，数组名+数组长度，greater&lt;数组数据类型&gt;（）)，降序。</code></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;sort函数&quot;&gt;&lt;a href=&quot;#sort函数&quot; class=&quot;headerlink&quot; title=&quot;sort函数&quot;&gt;&lt;/a&gt;sort函数&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;默认的为升序&lt;/li&gt;
+&lt;li&gt;第三参数——比较函数。比较函数是一个自己定义的函数，返回值是bo
+      
+    
+    </summary>
+    
+      <category term="c++" scheme="ctguljj.github.io/categories/c/"/>
+    
+      <category term="常用函数" scheme="ctguljj.github.io/categories/c/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/"/>
+    
+    
+      <category term="常用函数" scheme="ctguljj.github.io/tags/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>字符串</title>
     <link href="ctguljj.github.io/2019/03/08/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     <id>ctguljj.github.io/2019/03/08/字符串/</id>
@@ -522,34 +551,6 @@
     
     
       <category term="身体健康" scheme="ctguljj.github.io/tags/%E8%BA%AB%E4%BD%93%E5%81%A5%E5%BA%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>blog写作2</title>
-    <link href="ctguljj.github.io/2019/03/01/blog%E5%86%99%E4%BD%9C2/"/>
-    <id>ctguljj.github.io/2019/03/01/blog写作2/</id>
-    <published>2019-03-01T04:17:39.000Z</published>
-    <updated>2019-03-04T16:01:50.796Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h1><ul><li>description是文章的描述,在每篇文章标题下方显示</li><li>有date,tags,categories,comments,password(要配置),keywords,updated</li><li>layout页面布局，默认为post,有draft(草稿)和page</li><li>符号 : 为英文符号,格式很重要,不管是主题配置文件还是站点配置文件中空格,不空格都有要求</li><li>permalink若站点配置文件下的 permalink 配置了 title 则可以替换文章 URL 里面的 title（文章标题）</li><li>还有photos,link,image,sticky(后面2个要配置)</li><li>若创建文章时标题错误,可在编辑md文件时通过titile修改,文件重命名没用</li><li>格式一定要正确,有时可能没识别出来,要重新输入</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Front-matter&quot;&gt;&lt;a href=&quot;#Front-matter&quot; class=&quot;headerlink&quot; title=&quot;Front-matter&quot;&gt;&lt;/a&gt;Front-matter&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;description是文章的描述,在每篇文章标
-      
-    
-    </summary>
-    
-      <category term="blog" scheme="ctguljj.github.io/categories/blog/"/>
-    
-      <category term="文章模板" scheme="ctguljj.github.io/categories/blog/%E6%96%87%E7%AB%A0%E6%A8%A1%E6%9D%BF/"/>
-    
-    
-      <category term="blog" scheme="ctguljj.github.io/tags/blog/"/>
     
   </entry>
   
