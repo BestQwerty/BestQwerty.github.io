@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-03-08T12:00:25.130Z</updated>
+  <updated>2019-03-08T12:51:29.755Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>list列表</title>
+    <link href="ctguljj.github.io/2019/03/08/list%E5%88%97%E8%A1%A8/"/>
+    <id>ctguljj.github.io/2019/03/08/list列表/</id>
+    <published>2019-03-08T12:48:34.000Z</published>
+    <updated>2019-03-08T12:51:29.755Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="list"><a href="#list" class="headerlink" title="list"></a>list</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;list&quot;&gt;&lt;a href=&quot;#list&quot; class=&quot;headerlink&quot; title=&quot;list&quot;&gt;&lt;/a&gt;list&lt;/h1&gt;
+      
+    
+    </summary>
+    
+      <category term="stl" scheme="ctguljj.github.io/categories/stl/"/>
+    
+      <category term="list" scheme="ctguljj.github.io/categories/stl/list/"/>
+    
+    
+      <category term="stl" scheme="ctguljj.github.io/tags/stl/"/>
+    
+  </entry>
   
   <entry>
     <title>reverse反转函数</title>
@@ -211,9 +238,9 @@
     <link href="ctguljj.github.io/2019/03/08/stl/"/>
     <id>ctguljj.github.io/2019/03/08/stl/</id>
     <published>2019-03-08T05:38:37.000Z</published>
-    <updated>2019-03-08T10:28:00.770Z</updated>
+    <updated>2019-03-08T12:52:55.662Z</updated>
     
-    <content type="html"><![CDATA[<ul><li>注意，STL头文件没有扩展名.h</li><li><p>STL中默认是采用小于号来排序的</p><h1 id="序列式容器"><a href="#序列式容器" class="headerlink" title="序列式容器"></a>序列式容器</h1></li><li><p>向量(vector) 连续存储的元素<code>&lt;vector&gt;</code></p></li><li><p>列表(list) 由节点组成的双向链表，每个结点包含着一个元素<code>&lt;list&gt;</code></p></li><li><p>双端队列(deque) 连续存储的指向不同元素的指针所组成的数组<code>&lt;deque&gt;</code></p></li></ul><h1 id="适配器容器"><a href="#适配器容器" class="headerlink" title="适配器容器"></a>适配器容器</h1><ul><li><p>栈(stack) 后进先出的值的排列 <code>&lt;stack&gt;</code></p></li><li><p>队列(queue) 先进先出的值的排列<code>&lt;queue&gt;</code></p></li><li><p>优先队列(priority_queue) 元素的次序是由作用于所存储的值对上的某种谓词决定的的一种队列 <code>&lt;queue&gt;</code></p></li></ul><h1 id="关联式容器"><a href="#关联式容器" class="headerlink" title="关联式容器"></a>关联式容器</h1><ul><li><p>集合(set) 由节点组成的红黑树，每个节点都包含着一个元素，节点之间以某种作用于元素对的谓词排列，没有两个不同的元素能够拥有相同的次序<code>&lt;set&gt;</code></p></li><li><p>多重集合(multiset) 允许存在两个次序相等的元素的集合<code>&lt;set&gt;</code></p></li><li><p>映射(map) 由{键，值}对组成的集合，以某种作用于键对上的谓词排列 <code>&lt;map&gt;</code></p></li><li><p>多重映射(multimap) 允许键对有相等的次序的映射<code>&lt;map&gt;</code></p></li></ul>]]></content>
+    <content type="html"><![CDATA[<ul><li>注意，STL头文件没有扩展名.h</li><li>STL中默认是采用小于号来排序的</li><li><p><a href="http://www.cnblogs.com/QG-whz/p/5152963.html#_label2" target="_blank" rel="noopener">stl很好的介绍</a></p><h1 id="序列式容器"><a href="#序列式容器" class="headerlink" title="序列式容器"></a>序列式容器</h1></li><li><p>向量(vector) 连续存储的元素<code>&lt;vector&gt;</code></p></li><li><p>列表(list) 由节点组成的双向链表，每个结点包含着一个元素<code>&lt;list&gt;</code></p></li><li><p>双端队列(deque) 连续存储的指向不同元素的指针所组成的数组<code>&lt;deque&gt;</code></p></li></ul><h1 id="适配器容器"><a href="#适配器容器" class="headerlink" title="适配器容器"></a>适配器容器</h1><ul><li><p>栈(stack) 后进先出的值的排列 <code>&lt;stack&gt;</code></p></li><li><p>队列(queue) 先进先出的值的排列<code>&lt;queue&gt;</code></p></li><li><p>优先队列(priority_queue) 元素的次序是由作用于所存储的值对上的某种谓词决定的的一种队列 <code>&lt;queue&gt;</code></p></li></ul><h1 id="关联式容器"><a href="#关联式容器" class="headerlink" title="关联式容器"></a>关联式容器</h1><ul><li><p>集合(set) 由节点组成的红黑树，每个节点都包含着一个元素，节点之间以某种作用于元素对的谓词排列，没有两个不同的元素能够拥有相同的次序<code>&lt;set&gt;</code></p></li><li><p>多重集合(multiset) 允许存在两个次序相等的元素的集合<code>&lt;set&gt;</code></p></li><li><p>映射(map) 由{键，值}对组成的集合，以某种作用于键对上的谓词排列 <code>&lt;map&gt;</code></p></li><li><p>多重映射(multimap) 允许键对有相等的次序的映射<code>&lt;map&gt;</code></p></li></ul>]]></content>
     
     <summary type="html">
     
@@ -221,8 +248,8 @@
       
         &lt;ul&gt;
 &lt;li&gt;注意，STL头文件没有扩展名.h&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;STL中默认是采用小于号来排序的&lt;/p&gt;
-&lt;h1 id=&quot;序列式容器&quot;&gt;&lt;a href=&quot;#序列式容器&quot; class=&quot;headerlink&quot; title=&quot;序列式容器&quot;&gt;&lt;/a&gt;序列式容器&lt;/h1&gt;&lt;/
+&lt;li&gt;STL中默认是采用小于号来排序的&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/QG-whz/p/5152963.html#_label2&quot; target=&quot;_blan
       
     
     </summary>
@@ -524,35 +551,6 @@
     
     
       <category term="数据类型" scheme="ctguljj.github.io/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>blog写作4</title>
-    <link href="ctguljj.github.io/2019/03/01/blog%E5%86%99%E4%BD%9C4/"/>
-    <id>ctguljj.github.io/2019/03/01/blog写作4/</id>
-    <published>2019-03-01T11:09:27.000Z</published>
-    <updated>2019-03-06T10:34:49.686Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="图片插入"><a href="#图片插入" class="headerlink" title="图片插入"></a>图片插入</h1><ul><li>将markdown需要用的图片放到git仓库中，发布到github上</li><li><span id="inline-blue">  访问图片,点 download 按钮，页面打开后,在地址栏可以复制图片地址，或者在Download按钮上直接右键 “复制链接地址” </span></li></ul><h1 id="TOC数字块"><a href="#TOC数字块" class="headerlink" title="TOC数字块"></a>TOC数字块</h1><p>👇<br><span id="inline-toc">1.</span> 左边为效果<br><span id="inline-toc">2.</span> 左边为效果</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;图片插入&quot;&gt;&lt;a href=&quot;#图片插入&quot; class=&quot;headerlink&quot; title=&quot;图片插入&quot;&gt;&lt;/a&gt;图片插入&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;将markdown需要用的图片放到git仓库中，发布到github上&lt;/li&gt;
-&lt;li&gt;&lt;span id=&quot;in
-      
-    
-    </summary>
-    
-      <category term="blog" scheme="ctguljj.github.io/categories/blog/"/>
-    
-      <category term="markdown" scheme="ctguljj.github.io/categories/blog/markdown/"/>
-    
-    
-      <category term="blog" scheme="ctguljj.github.io/tags/blog/"/>
     
   </entry>
   

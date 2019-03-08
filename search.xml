@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[list列表]]></title>
+    <url>%2F2019%2F03%2F08%2Flist%E5%88%97%E8%A1%A8%2F</url>
+    <content type="text"><![CDATA[list]]></content>
+      <categories>
+        <category>stl</category>
+        <category>list</category>
+      </categories>
+      <tags>
+        <tag>stl</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[reverse反转函数]]></title>
     <url>%2F2019%2F03%2F08%2Freverse%E5%8F%8D%E8%BD%AC%E5%87%BD%E6%95%B0%2F</url>
     <content type="text"><![CDATA[reverse函数 reverse函数可以反转一个容器中的内容，包含在&lt;algorithm&gt;库中。 参数：first、last first和last是双向迭代器类型，reverse函数反转的范围是[first,last)，所以包括first指向的元素，不包括last指向的元素。 reverse(v.begin(),v.end());反向排列从头到尾部的元素 reverse函数没有返回值。 复杂度 循环交换首尾元素。因此复杂度是线性的，并且循环半个数组长度。]]></content>
@@ -76,7 +88,7 @@
   <entry>
     <title><![CDATA[stl介绍]]></title>
     <url>%2F2019%2F03%2F08%2Fstl%2F</url>
-    <content type="text"><![CDATA[注意，STL头文件没有扩展名.h STL中默认是采用小于号来排序的 序列式容器 向量(vector) 连续存储的元素&lt;vector&gt; 列表(list) 由节点组成的双向链表，每个结点包含着一个元素&lt;list&gt; 双端队列(deque) 连续存储的指向不同元素的指针所组成的数组&lt;deque&gt; 适配器容器 栈(stack) 后进先出的值的排列 &lt;stack&gt; 队列(queue) 先进先出的值的排列&lt;queue&gt; 优先队列(priority_queue) 元素的次序是由作用于所存储的值对上的某种谓词决定的的一种队列 &lt;queue&gt; 关联式容器 集合(set) 由节点组成的红黑树，每个节点都包含着一个元素，节点之间以某种作用于元素对的谓词排列，没有两个不同的元素能够拥有相同的次序&lt;set&gt; 多重集合(multiset) 允许存在两个次序相等的元素的集合&lt;set&gt; 映射(map) 由{键，值}对组成的集合，以某种作用于键对上的谓词排列 &lt;map&gt; 多重映射(multimap) 允许键对有相等的次序的映射&lt;map&gt;]]></content>
+    <content type="text"><![CDATA[注意，STL头文件没有扩展名.h STL中默认是采用小于号来排序的 stl很好的介绍 序列式容器 向量(vector) 连续存储的元素&lt;vector&gt; 列表(list) 由节点组成的双向链表，每个结点包含着一个元素&lt;list&gt; 双端队列(deque) 连续存储的指向不同元素的指针所组成的数组&lt;deque&gt; 适配器容器 栈(stack) 后进先出的值的排列 &lt;stack&gt; 队列(queue) 先进先出的值的排列&lt;queue&gt; 优先队列(priority_queue) 元素的次序是由作用于所存储的值对上的某种谓词决定的的一种队列 &lt;queue&gt; 关联式容器 集合(set) 由节点组成的红黑树，每个节点都包含着一个元素，节点之间以某种作用于元素对的谓词排列，没有两个不同的元素能够拥有相同的次序&lt;set&gt; 多重集合(multiset) 允许存在两个次序相等的元素的集合&lt;set&gt; 映射(map) 由{键，值}对组成的集合，以某种作用于键对上的谓词排列 &lt;map&gt; 多重映射(multimap) 允许键对有相等的次序的映射&lt;map&gt;]]></content>
       <categories>
         <category>stl</category>
       </categories>
