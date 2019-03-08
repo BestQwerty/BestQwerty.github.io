@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-03-08T08:38:51.453Z</updated>
+  <updated>2019-03-08T09:33:49.214Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pair容器</title>
+    <link href="ctguljj.github.io/2019/03/08/pair%E5%AE%B9%E5%99%A8/"/>
+    <id>ctguljj.github.io/2019/03/08/pair容器/</id>
+    <published>2019-03-08T09:33:49.000Z</published>
+    <updated>2019-03-08T09:33:49.214Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>sort函数</title>
+    <link href="ctguljj.github.io/2019/03/08/sort%E5%87%BD%E6%95%B0/"/>
+    <id>ctguljj.github.io/2019/03/08/sort函数/</id>
+    <published>2019-03-08T09:06:25.000Z</published>
+    <updated>2019-03-08T09:06:25.254Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>字符串</title>
+    <link href="ctguljj.github.io/2019/03/08/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <id>ctguljj.github.io/2019/03/08/字符串/</id>
+    <published>2019-03-08T08:57:42.000Z</published>
+    <updated>2019-03-08T08:58:53.584Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>计算机领域中，这个字典序就不仅仅用来比较英文单词了，而是比较任意字符串。对于两个字符串，大小关系取决于两个字符串从左到右第一个不同字符的 ASCII 值的大小关系。如strcmp函数的原理</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;计算机领域中，这个字典序就不仅仅用来比较英文单词了，而是比较任意字符串。对于两个字符串，大小关系取决于两个字符串从左到右第一个不同字符的 ASCII 值的大小关系。如strcmp函数的原理&lt;/li&gt;
+&lt;/ul&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="字符串" scheme="ctguljj.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>stl代码练习</title>
@@ -74,16 +128,17 @@
     <link href="ctguljj.github.io/2019/03/08/c-map%E5%AE%B9%E5%99%A8/"/>
     <id>ctguljj.github.io/2019/03/08/c-map容器/</id>
     <published>2019-03-08T05:37:02.000Z</published>
-    <updated>2019-03-08T08:24:02.063Z</updated>
+    <updated>2019-03-08T09:35:07.364Z</updated>
     
-    <content type="html"><![CDATA[<p># </p>]]></content>
+    <content type="html"><![CDATA[<ul><li>STL是一个统一的整体，map的很多用法都和STL中其它的东西结合在一起</li><li>map中由于它内部有序，由红黑树保证，因此很多函数执行的时间复杂度都是log2N的，如果用map函数可以实现的功能，而STL  Algorithm也可以完成该功能，建议用map自带函数，效率高一些。</li><li><p>sort算法有个限制，利用sort算法只能对序列容器进行排序，就是线性的（如vector，list，deque）。map是一个集合容器，它里面存储的元素是pair，但是它不是线性存储的（像红黑树），所以利用sort不能直接和map结合进行排序。</p></li><li><p>operator()重载必须是常成员函数，因为常对象只能调用常成员函数</p></li></ul><h1 id="对map的排序"><a href="#对map的排序" class="headerlink" title="对map的排序"></a>对map的排序</h1><h2 id="key值排序"><a href="#key值排序" class="headerlink" title="key值排序"></a>key值排序</h2><ul><li>按照Key值自动进行了排序</li><li>上面的按key值排序有个缺点：即当插入的有多个相等的值时，由于key的唯一性，会只保留一个。</li></ul><h3 id="map的定义"><a href="#map的定义" class="headerlink" title="map的定义"></a>map的定义</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt; <span class="class"><span class="keyword">class</span> <span class="title">Key</span>, <span class="title">class</span> <span class="title">T</span>, <span class="title">class</span> <span class="title">Compare</span> = <span class="title">less</span>&lt;Key&gt;,</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">          <span class="title">class</span> <span class="title">Allocator</span> = <span class="title">allocator</span>&lt;pair&lt;const Key,T&gt; &gt; &gt; <span class="title">class</span> <span class="title">map</span>;</span></span><br></pre></td></tr></table></figure><ul><li>它有四个参数，其中我们比较熟悉的有两个: Key 和 Value。第四个是 Allocator，用来定义存储分配模型的</li><li>现在重点看下第三个参数： <code>class Compare = less&lt;Key&gt;</code><br>这也是一个class类型的，而且提供了默认值 <code>less&lt;Key&gt;</code>。 less是stl里面的一个函数对象，那么什么是函数对象呢？<br>所谓的函数对象：即调用操作符的类，其对象常称为函数对象（function object），它们是行为类似函数的对象。表现出一个函数的特征，就是通过“对象名+(参数列表)”的方式使用一个 类，其实质是对operator()操作符的重载。<ul><li>less的实现：</li></ul></li></ul><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt; <span class="title">struct</span> <span class="title">less</span> :</span> binary_function &lt;T,T,<span class="keyword">bool</span>&gt; &#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">bool</span> <span class="title">operator</span><span class="params">()</span> <span class="params">(<span class="keyword">const</span> T&amp; x, <span class="keyword">const</span> T&amp; y)</span> <span class="keyword">const</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">    </span>&#123;<span class="keyword">return</span> x&lt;y;&#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><ul><li><p>是一个带模板的struct，里面仅仅对()运算符进行了重载，实现很简单，但用起来很方便，这就是函数对象的优点所在。stl中还为四则运算等常见运算定义了这样的函数对象，与less相对的还有greater</p></li><li><p>map这里指定less作为其默认比较函数(对象)，所以我们通常如果不自己指定Compare，map中键值对就会按照Key的less顺序进行组织存储</p></li><li><p>可以在定义map的时候，指定它的第三个参数Compare，比如我们把默认的less指定为greater：要加<strong><code>#include &lt;functional&gt;</code></strong></p><ul><li><code>map&lt;string, int, greater&lt;string&gt; &gt; name_score_map;</code></li></ul></li></ul><ul><li>只要我们自己写一个函数对象，实现想要的逻辑，定义map的时候把Compare指定为我们自己编写的这个就ok啦。<ul><li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">struct CmpByKeyLength &#123;</span><br><span class="line"></span><br><span class="line">bool operator()(const string&amp; k1, const string&amp; k2) const &#123;</span><br><span class="line"></span><br><span class="line">return k1.length() &lt; k2.length();</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li></ul></li></ul><pre><code>-`map&lt;string, int, CmpByKeyLength&gt; name_score_map;`</code></pre><h2 id="按照value排序"><a href="#按照value排序" class="headerlink" title="按照value排序"></a>按照value排序</h2><ul><li>思路1：可以考虑将value作为key值进行自动排序。</li><li>思路2：可以把map中的key值和value值分别转存到一个pair类型的vector中，在对vector按照一定的规则排序即可。这样的方法对值一样的情况也能够使用。</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">typedef pair&lt;string, int&gt; PAIR;</span><br><span class="line"></span><br><span class="line">map&lt;string, int&gt; name_score_map;</span><br><span class="line">name_score_map.insert(make_pair(&quot;Bing&quot;, 99));</span><br><span class="line"></span><br><span class="line">name_score_map.insert(make_pair(&quot;Albert&quot;, 86));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">vector&lt;PAIR&gt; name_score_vec(name_score_map.begin(), name_score_map.end());</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sort(name_score_vec.begin(), name_score_vec.end(), cmp);</span><br></pre></td></tr></table></figure><h1 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h1><ul><li>对key 排序的话，直接使用<code>greater&lt;string&gt;</code>在map定义的时候就。而要对value排序，则是使用函数对象，先将map转换为vector，调用sort函数中传入一个函数对象，则可以实现对value 的排序。还有一点是pair 只重载了<code>&amp;lt;</code>，则stl 则不能使用 == 运算符。</li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;# &lt;/p&gt;
-
+        &lt;ul&gt;
+&lt;li&gt;STL是一个统一的整体，map的很多用法都和STL中其它的东西结合在一起&lt;/li&gt;
+&lt;li&gt;map中由于它内部有序，由红黑树保证，因此很多函数执行的时间复杂度都是log2N的，如果用map函数可以实现的功能，而STL  Algorithm也可以完成该功能，建议用
       
     
     </summary>
@@ -469,58 +524,6 @@
     
     
       <category term="blog" scheme="ctguljj.github.io/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>blog写作</title>
-    <link href="ctguljj.github.io/2019/02/28/blog%E5%86%99%E4%BD%9C/"/>
-    <id>ctguljj.github.io/2019/02/28/blog写作/</id>
-    <published>2019-02-28T06:58:00.000Z</published>
-    <updated>2019-03-02T04:34:20.750Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="hexo博客写作"><a href="#hexo博客写作" class="headerlink" title="hexo博客写作"></a>hexo博客写作</h1><ul><li>若layout为draft,那么静态页面不会渲染生成。</li><li>符号-、1.和文本之间要保留一个字符的空格.</li><li><h1 id="和「一级标题」之间建议保留一个字符的空格，这是最标准的-Markdown-写法。如果不空格-标题无法显示。"><a href="#和「一级标题」之间建议保留一个字符的空格，这是最标准的-Markdown-写法。如果不空格-标题无法显示。" class="headerlink" title="和「一级标题」之间建议保留一个字符的空格，这是最标准的 Markdown 写法。如果不空格,标题无法显示。"></a>和「一级标题」之间建议保留一个字符的空格，这是最标准的 Markdown 写法。如果不空格,标题无法显示。</h1></li><li>引用符号&gt; 和文本之间要保留一个字符的空格<blockquote><p>一盏灯， 一片昏黄； 一简书， 一杯淡茶。 守着那一份淡定， 品读属于自己的寂寞。 保持淡定， 才能欣赏到最美丽的风景！ 保持淡定， 人生从此不再寂寞。</p></blockquote></li></ul><ul><li><p>Markdown 的粗体和斜体也非常简单，用两个 <em> 包含一段文本就是粗体的语法，用一个 </em> 包含一段文本就是斜体的语法。例如：<br><em>一盏灯</em>， 一片昏黄；<strong>一简书</strong>， 一杯淡茶。 守着那一份淡定， 品读属于自己的寂寞。 保持淡定， 才能欣赏到最美丽的风景！ 保持淡定， 人生从此不再寂寞。</p></li><li><p>Markdwon 文档写完一段回车后务必<strong>再回车一次空一行！</strong></p></li><li>需要引用代码时，如果引用的语句只有一段，不分行，可以用符号` 将语句包起来。</li><li>如果引用的语句为多行，可以将<code>`</code>置于这段代码的首行和末行，</li></ul><h1 id="markdown快速键入"><a href="#markdown快速键入" class="headerlink" title="markdown快速键入"></a>markdown快速键入</h1><blockquote></blockquote><p>mdi + tab键：插入图片<br>mdl + tab键: 插入链接<br>mdc + tab键：插入代码<br>mdh1 + tab键：插入一级标题，2就是二级标题……</p>]]></content>
-    
-    <summary type="html">
-    
-      关于博客写作即markdown语法相关知识
-    
-    </summary>
-    
-      <category term="blog" scheme="ctguljj.github.io/categories/blog/"/>
-    
-      <category term="markdown" scheme="ctguljj.github.io/categories/blog/markdown/"/>
-    
-    
-      <category term="blog" scheme="ctguljj.github.io/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>颈椎养护手册</title>
-    <link href="ctguljj.github.io/2019/02/28/%E9%A2%88%E6%A4%8E%E5%85%BB%E6%8A%A4%E6%89%8B%E5%86%8C/"/>
-    <id>ctguljj.github.io/2019/02/28/颈椎养护手册/</id>
-    <published>2019-02-28T05:21:06.000Z</published>
-    <updated>2019-03-02T04:34:44.830Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="日常不良习惯"><a href="#日常不良习惯" class="headerlink" title="日常不良习惯"></a>日常不良习惯</h1><ul><li>当你的距离不能够清楚的看清屏幕是你就会头向前伸，此时颈椎压力变大；而当你的距离不能够把胳膊自然下垂放在桌上或者椅子上的时候，手肘就会悬空，此时肩膀压力变大去承担手臂的重量！</li><li>使用过高或者过低的枕头，而和高枕头一样不好的就是不睡枕头，让脖子悬空。这两种情况都会让颈部肌肉紧张，无法放松，还会导致颈椎排列结构的改变</li></ul><h1 id="养护"><a href="#养护" class="headerlink" title="养护"></a>养护</h1><p>1.习惯侧睡的可以选择高一点的枕头，喜欢平躺仰卧的可以选择低一点，睡觉建议选择记忆棉枕头。不要窝着睡觉！！！脖子底下一定要有枕头！！！侧睡的枕头大概1.5倍拳头的高，仰睡的枕头大概一个拳头那么高！！！</p><p>2.睡前如果身体僵硬难受，千万别直接入睡，一定要冲个热水澡或者扭动身体让身体放松，否则第二天早上起来容易落枕或者有其他疼痛。 </p><p>3.必须要严格制定运动计划，并且保持至少一个小时就起来溜达溜达，伸腰踢腿.</p><p>4.我们眼睛看的屏幕一定要跟眼睛在同一水平线上，同时远近合适，这样可以避免低头和往前探后。</p><p>5.拉伸组合：上、右转、右上、右下、右歪、左歪、左下、左上、左、回正，记住，速度要慢，每次停留至少10秒</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;日常不良习惯&quot;&gt;&lt;a href=&quot;#日常不良习惯&quot; class=&quot;headerlink&quot; title=&quot;日常不良习惯&quot;&gt;&lt;/a&gt;日常不良习惯&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;当你的距离不能够清楚的看清屏幕是你就会头向前伸，此时颈椎压力变大；而当你的距离不能够把胳膊自然下
-      
-    
-    </summary>
-    
-      <category term="身体健康" scheme="ctguljj.github.io/categories/%E8%BA%AB%E4%BD%93%E5%81%A5%E5%BA%B7/"/>
-    
-      <category term="颈椎" scheme="ctguljj.github.io/categories/%E8%BA%AB%E4%BD%93%E5%81%A5%E5%BA%B7/%E9%A2%88%E6%A4%8E/"/>
-    
-    
-      <category term="身体健康" scheme="ctguljj.github.io/tags/%E8%BA%AB%E4%BD%93%E5%81%A5%E5%BA%B7/"/>
     
   </entry>
   
