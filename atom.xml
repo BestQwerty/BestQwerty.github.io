@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-03-08T11:51:03.774Z</updated>
+  <updated>2019-03-08T12:00:25.130Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>reverse反转函数</title>
+    <link href="ctguljj.github.io/2019/03/08/reverse%E5%8F%8D%E8%BD%AC%E5%87%BD%E6%95%B0/"/>
+    <id>ctguljj.github.io/2019/03/08/reverse反转函数/</id>
+    <published>2019-03-08T11:56:15.000Z</published>
+    <updated>2019-03-08T12:00:25.130Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="reverse函数"><a href="#reverse函数" class="headerlink" title="reverse函数"></a>reverse函数</h1><ul><li>reverse函数可以反转一个容器中的内容，包含在<code>&lt;algorithm&gt;</code>库中。</li><li><p>参数：first、last</p><ul><li>first和last是双向迭代器类型，reverse函数反转的范围是[first,last)，所以包括first指向的元素，不包括last指向的元素。</li></ul></li><li><p><code>reverse(v.begin(),v.end());</code><strong>反向排列</strong>从头到尾部的元素</p></li><li>reverse函数没有返回值。</li><li>复杂度<ul><li>循环交换首尾元素。因此复杂度是线性的，并且循环半个数组长度。</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;reverse函数&quot;&gt;&lt;a href=&quot;#reverse函数&quot; class=&quot;headerlink&quot; title=&quot;reverse函数&quot;&gt;&lt;/a&gt;reverse函数&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;reverse函数可以反转一个容器中的内容，包含在&lt;code&gt;&amp;lt;a
+      
+    
+    </summary>
+    
+      <category term="c++" scheme="ctguljj.github.io/categories/c/"/>
+    
+      <category term="常用函数" scheme="ctguljj.github.io/categories/c/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/"/>
+    
+    
+      <category term="常用函数" scheme="ctguljj.github.io/tags/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>关于vector大小（size）和容量（capacity）</title>
@@ -522,32 +550,6 @@
       <category term="blog" scheme="ctguljj.github.io/categories/blog/"/>
     
       <category term="markdown" scheme="ctguljj.github.io/categories/blog/markdown/"/>
-    
-    
-      <category term="blog" scheme="ctguljj.github.io/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>blog写作3</title>
-    <link href="ctguljj.github.io/2019/03/01/blog%E5%86%99%E4%BD%9C3/"/>
-    <id>ctguljj.github.io/2019/03/01/blog写作3/</id>
-    <published>2019-03-01T10:23:46.000Z</published>
-    <updated>2019-03-02T04:28:06.748Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="反斜杠"><a href="#反斜杠" class="headerlink" title="反斜杠"></a>反斜杠</h1><ul><li>Markdown 可以利用反斜杠来插入一些在语法中有其它意义的符号，例如：如果你想要用星号加在文字旁边的方式来做出强调效果，你可以在星号的前面加上反斜杠<br>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：<br>\   反斜线<br>`   反引号<br>*   星号<br>_   底线<br>{}  花括号<br>[]  方括号<br>()  括弧<br>#   井字号<br>+   加号<br>-   减号<br>.   英文句点<br>!   惊叹号</li></ul><h1 id="文字增加背景色块"><a href="#文字增加背景色块" class="headerlink" title="文字增加背景色块"></a>文字增加背景色块</h1><ul><li>在你需要编辑的文章地方。放置如下代码：<br><span id="inline-blue"> 站点配置文件 </span><br><span id="inline-purple"> 主题配置文件 </span><br><span id="inline-yellow"> 站点配置文件 </span><br><span id="inline-green"> 主题配置文件 </span></li></ul><h1 id="主题自带样式"><a href="#主题自带样式" class="headerlink" title="主题自带样式"></a>主题自带样式</h1><h2 id="FontAwesome"><a href="#FontAwesome" class="headerlink" title="FontAwesome"></a>FontAwesome</h2><p><strong>(以下图标必须在网页上方点击全部显示才能显示即受保护的内容)</strong></p><ul><li><i class="fa fa-camera-retro fa-lg"></i> fa-lg<br> <i class="fa fa-camera-retro fa-2x"></i> fa-2x<br> <i class="fa fa-camera-retro fa-3x"></i> fa-3x<br><i class="fa fa-camera-retro fa-4x"></i> fa-4x<br><i class="fa fa-camera-retro fa-5x"></i> fa-5x</li><li><i class="fa fa-spinner fa-spin"></i><br><i class="fa fa-circle-o-notch faspin"><i><br><i class="fa fa-refresh fa-spin"></i><br><i class="fa fa-cog fa-spin"></i><br> <i class="fa fa-spinner fa-pulse"></i></i></i></li></ul><h2 id="note标签"><a href="#note标签" class="headerlink" title="note标签"></a>note标签</h2><ul><li>在主题配置文件_config.yml里有一个关于这个的配置,需要提前设置.</li><li><div class="note default"><p>default</p></div></li><li><div class="note primary"><p>primary</p></div></li><li><div class="note success"><p>success</p></div></li><li><div class="note info"><p>info</p></div></li><li><div class="note warning"><p>warning</p></div></li><li><div class="note danger"><p>danger</p></div></li><li><div class="note danger no-icon"><p>danger no-icon</p></div></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;反斜杠&quot;&gt;&lt;a href=&quot;#反斜杠&quot; class=&quot;headerlink&quot; title=&quot;反斜杠&quot;&gt;&lt;/a&gt;反斜杠&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;Markdown 可以利用反斜杠来插入一些在语法中有其它意义的符号，例如：如果你想要用星号加在文字旁边的方式来做出强调效
-      
-    
-    </summary>
-    
-      <category term="blog" scheme="ctguljj.github.io/categories/blog/"/>
     
     
       <category term="blog" scheme="ctguljj.github.io/tags/blog/"/>

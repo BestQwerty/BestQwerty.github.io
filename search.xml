@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[reverse反转函数]]></title>
+    <url>%2F2019%2F03%2F08%2Freverse%E5%8F%8D%E8%BD%AC%E5%87%BD%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[reverse函数 reverse函数可以反转一个容器中的内容，包含在&lt;algorithm&gt;库中。 参数：first、last first和last是双向迭代器类型，reverse函数反转的范围是[first,last)，所以包括first指向的元素，不包括last指向的元素。 reverse(v.begin(),v.end());反向排列从头到尾部的元素 reverse函数没有返回值。 复杂度 循环交换首尾元素。因此复杂度是线性的，并且循环半个数组长度。]]></content>
+      <categories>
+        <category>c++</category>
+        <category>常用函数</category>
+      </categories>
+      <tags>
+        <tag>常用函数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于vector大小（size）和容量（capacity）]]></title>
     <url>%2F2019%2F03%2F08%2F%E5%85%B3%E4%BA%8Evector%E5%A4%A7%E5%B0%8F%EF%BC%88size%EF%BC%89%E5%92%8C%E5%AE%B9%E9%87%8F%EF%BC%88capacity%EF%BC%89%2F</url>
     <content type="text"><![CDATA[vector 在Vector容器中有以下几个关于大小的函数 - size() 返回容器的大小 - empty() 判断容器是否为空 - max_size() 返回容器最大的可以存储的元素 - capacity() 返回容器当前能够容纳的元素数量 Vector的容量之所以重要，有以下两个原因： 容器的大小一旦超过capacity的大小，vector会重新配置内部的存储器，导致和vector元素相关的所有reference、pointers、iterator都会失效。 2.内存的重新配置会很耗时间。 避免内存重新配置的方法 方法一：Reserve()保留适当容量在创建容器后，第一时间为容器分配足够大的空间，避免重新分配内存。 vec.reverse(n); 方法二：利用构造函数创建出足够空间 该方法是创建容器时，利用构造函数初始化的出足够的空间， vector&lt;int&gt; v(n); 但是要注意，如果容器中reserve的容量太大，而实际中根本不需要那么多，或者元素插入完成后，以后就不会再进行插入操作了，那么多出来的这部分空间就是过剩空间，而对于过剩空间，我们可以通过“交换技术”成功缩小空间，交换技巧的变体可以用于清除容器和减少它的容量到你的实现提供的最小值。 Vector内存扩展方式 vector内存成长方式可归结以下三步曲:（1）另觅更大空间；（2）将原数据复制过去；（3）释放原空间三部曲。 对于vector和string来说，当它们的需要更多空间时，就会自动增加空间，而每次增加空间的容量会导致很大的开销，首先必须分配新的内存块，它有容器目前容量的几倍（在大部分实现中，vector和string的容量每次变为2倍），然后把所有元素从容器的旧内存拷贝到它的新内存，接着销毁旧内存中的对象，最后回收旧内存。 每次重新分配空间，所有指向vector或string中的迭代器、指针和引用都会失效，这意味着简单地把一个元素插入vector或string的动作也可能需要更新其他使用了指向vector或string中的迭代器、指针或引用的数据结构而膨胀。]]></content>
