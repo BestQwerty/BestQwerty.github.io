@@ -47,6 +47,34 @@
   </entry>
   
   <entry>
+    <title>头文件</title>
+    <link href="ctguljj.github.io/2019/03/08/%E5%A4%B4%E6%96%87%E4%BB%B6/"/>
+    <id>ctguljj.github.io/2019/03/08/头文件/</id>
+    <published>2019-03-08T10:57:31.000Z</published>
+    <updated>2019-03-08T11:54:40.479Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="include"><a href="#include" class="headerlink" title="#include"></a>#include<functional></functional></h1><ul><li>STL定义运算函数（代替运算符）</li></ul><h1 id="include-lt-bits-stdc-h-gt"><a href="#include-lt-bits-stdc-h-gt" class="headerlink" title="#include&lt;bits/stdc++.h&gt;"></a>#include&lt;bits/stdc++.h&gt;</h1><ul><li>编译器GCC 4.8支持的万能头文件，基本包含所有头文件</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;include&quot;&gt;&lt;a href=&quot;#include&quot; class=&quot;headerlink&quot; title=&quot;#include&quot;&gt;&lt;/a&gt;#include&lt;functional&gt;&lt;/functional&gt;&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;STL定义运算函数（代替运算符）&lt;
+      
+    
+    </summary>
+    
+      <category term="头文件" scheme="ctguljj.github.io/categories/%E5%A4%B4%E6%96%87%E4%BB%B6/"/>
+    
+      <category term="functioinal" scheme="ctguljj.github.io/categories/%E5%A4%B4%E6%96%87%E4%BB%B6/functioinal/"/>
+    
+    
+      <category term="头文件" scheme="ctguljj.github.io/tags/%E5%A4%B4%E6%96%87%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>pair容器</title>
     <link href="ctguljj.github.io/2019/03/08/pair%E5%AE%B9%E5%99%A8/"/>
     <id>ctguljj.github.io/2019/03/08/pair容器/</id>
@@ -523,34 +551,6 @@
     
     
       <category term="blog" scheme="ctguljj.github.io/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>崴脚恢复</title>
-    <link href="ctguljj.github.io/2019/03/01/%E5%B4%B4%E8%84%9A%E6%81%A2%E5%A4%8D/"/>
-    <id>ctguljj.github.io/2019/03/01/崴脚恢复/</id>
-    <published>2019-03-01T08:36:28.000Z</published>
-    <updated>2019-03-02T04:33:47.884Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="崴脚恢复"><a href="#崴脚恢复" class="headerlink" title="崴脚恢复"></a>崴脚恢复</h1><ul><li>脚踝的灵活性、稳定性、力量都难以通过养伤养好，你还需要进行康复训练。被动休息治疗结合<strong>主动康复训练</strong>才能最大程度恢复受损的功能。</li><li>脚踝康复应当按照恢复活动度—恢复力量—恢复平衡能力—恢复爆发力的顺序进行</li><li><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/ctgu1.jpg" alt=""></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;崴脚恢复&quot;&gt;&lt;a href=&quot;#崴脚恢复&quot; class=&quot;headerlink&quot; title=&quot;崴脚恢复&quot;&gt;&lt;/a&gt;崴脚恢复&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;脚踝的灵活性、稳定性、力量都难以通过养伤养好，你还需要进行康复训练。被动休息治疗结合&lt;strong&gt;主动康复训练
-      
-    
-    </summary>
-    
-      <category term="身体健康" scheme="ctguljj.github.io/categories/%E8%BA%AB%E4%BD%93%E5%81%A5%E5%BA%B7/"/>
-    
-      <category term="崴脚" scheme="ctguljj.github.io/categories/%E8%BA%AB%E4%BD%93%E5%81%A5%E5%BA%B7/%E5%B4%B4%E8%84%9A/"/>
-    
-    
-      <category term="身体健康" scheme="ctguljj.github.io/tags/%E8%BA%AB%E4%BD%93%E5%81%A5%E5%BA%B7/"/>
     
   </entry>
   

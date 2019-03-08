@@ -13,6 +13,18 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[头文件]]></title>
+    <url>%2F2019%2F03%2F08%2F%E5%A4%B4%E6%96%87%E4%BB%B6%2F</url>
+    <content type="text"><![CDATA[#include STL定义运算函数（代替运算符） #include&lt;bits/stdc++.h&gt; 编译器GCC 4.8支持的万能头文件，基本包含所有头文件]]></content>
+      <categories>
+        <category>头文件</category>
+        <category>functioinal</category>
+      </categories>
+      <tags>
+        <tag>头文件</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[pair容器]]></title>
     <url>%2F2019%2F03%2F08%2Fpair%E5%AE%B9%E5%99%A8%2F</url>
     <content type="text"><![CDATA[pair pair类型的使用相当的繁琐，如果定义多个相同的pair类型对象，可以使用typedef简化声明：typedef pair&lt;string,string&gt; Author; 除了构造函数，标准库还定义了一个make_pair函数，由传递给它的两个实参生成一个新的pair对象 123456789101112 pair&lt;string, string&gt; next_auth; string first,last; while(cin&gt;&gt;first&gt;&gt;last) &#123; next_auth=make_pair(first,last); ...&#125; 等价的更复杂的操作:next_auth=pair&lt;string,string&gt;(first,last);]]></content>
