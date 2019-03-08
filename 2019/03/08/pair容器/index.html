@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="静静地Coding &amp;&amp; Thinking">
+<meta name="description" content="pair pair类型的使用相当的繁琐，如果定义多个相同的pair类型对象，可以使用typedef简化声明：typedef pair&amp;lt;string,string&amp;gt; Author;   除了构造函数，标准库还定义了一个make_pair函数，由传递给它的两个实参生成一个新的pair对象  123456789101112 pair&amp;lt;string, string&amp;gt; next_au">
 <meta property="og:type" content="article">
 <meta property="og:title" content="pair容器">
 <meta property="og:url" content="ctguljj.github.io/2019/03/08/pair容器/index.html">
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
-<meta property="og:description" content="静静地Coding &amp;&amp; Thinking">
+<meta property="og:description" content="pair pair类型的使用相当的繁琐，如果定义多个相同的pair类型对象，可以使用typedef简化声明：typedef pair&amp;lt;string,string&amp;gt; Author;   除了构造函数，标准库还定义了一个make_pair函数，由传递给它的两个实参生成一个新的pair对象  123456789101112 pair&amp;lt;string, string&amp;gt; next_au">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-08T09:33:49.214Z">
+<meta property="og:updated_time" content="2019-03-08T11:28:47.590Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pair容器">
-<meta name="twitter:description" content="静静地Coding &amp;&amp; Thinking">
+<meta name="twitter:description" content="pair pair类型的使用相当的繁琐，如果定义多个相同的pair类型对象，可以使用typedef简化声明：typedef pair&amp;lt;string,string&amp;gt; Author;   除了构造函数，标准库还定义了一个make_pair函数，由传递给它的两个实参生成一个新的pair对象  123456789101112 pair&amp;lt;string, string&amp;gt; next_au">
 
 
 
@@ -345,7 +345,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-08T17:33:49+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-08T19:28:47+08:00">
                 2019-03-08
               </time>
             
@@ -358,7 +358,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">0(字)</span> 
+					<span class="post-count">120(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -416,7 +416,17 @@
       
 
       
-        
+        <h1 id="pair"><a href="#pair" class="headerlink" title="pair"></a>pair</h1><ul>
+<li>pair类型的使用相当的繁琐，如果定义多个相同的pair类型对象，可以使用typedef简化声明：<br><code>typedef pair&lt;string,string&gt; Author;</code></li>
+</ul>
+<ul>
+<li>除了构造函数，标准库还定义了一个<code>make_pair</code>函数，由传递给它的两个实参生成一个新的pair对象</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> pair&lt;<span class="built_in">string</span>, <span class="built_in">string</span>&gt; next_auth;</span><br><span class="line"></span><br><span class="line"> <span class="built_in">string</span> first,last;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;first&gt;&gt;last) &#123;</span><br><span class="line"></span><br><span class="line">   next_auth=make_pair(first,last);</span><br><span class="line"></span><br><span class="line"> 	  ...</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>等价的更复杂的操作:<code>next_auth=pair&lt;string,string&gt;(first,last);</code></li>
+</ul>
+
       
     </div>
     
@@ -459,8 +469,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/08/sort函数/" rel="next" title="sort函数">
-                <i class="fa fa-chevron-left"></i> sort函数
+              <a href="/2019/03/08/字符串/" rel="next" title="字符串">
+                <i class="fa fa-chevron-left"></i> 字符串
               </a>
             
           </div>
@@ -468,6 +478,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/08/关于vector大小（size）和容量（capacity）/" rel="prev" title="关于vector大小（size）和容量（capacity）">
+                关于vector大小（size）和容量（capacity） <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -548,8 +562,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -577,7 +600,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -619,6 +642,22 @@ var jiathis_config={
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#pair"><span class="nav-number">1.</span> <span class="nav-text">pair</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -653,7 +692,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">8.8k</span>
+    <span title="Site words total count">9k</span>
   
 </div>
 
