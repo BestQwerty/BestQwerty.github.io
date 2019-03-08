@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="常用函数 max, min, fill, memset, sort, swap  字符串函数 字符串比较函数strcmp因为原理是两个字符串一个个比较，所以可以比较字符是否相同！！！！！如果把序号按字符串存储，则会可以通过strcmp比较序号是否相同。(有用) Strlen函数如果没有遇到’\0’，会一直计算下去，字符串二维数组不可以用strlen，因为二维数组每一行相当于一个字符串一维数组，每一">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-04T15:32:02.472Z">
+<meta property="og:updated_time" content="2019-03-08T04:29:57.370Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="c与c++常用函数">
 <meta name="twitter:description" content="常用函数 max, min, fill, memset, sort, swap  字符串函数 字符串比较函数strcmp因为原理是两个字符串一个个比较，所以可以比较字符是否相同！！！！！如果把序号按字符串存储，则会可以通过strcmp比较序号是否相同。(有用) Strlen函数如果没有遇到’\0’，会一直计算下去，字符串二维数组不可以用strlen，因为二维数组每一行相当于一个字符串一维数组，每一">
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-04T23:32:02+08:00">
-                2019-03-04
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-08T12:29:57+08:00">
+                2019-03-08
               </time>
             
           </span>
@@ -392,7 +392,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">1.1k(字)</span> 
+					<span class="post-count">1.6k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -457,7 +457,31 @@
 <li>字符串比较函数strcmp因为原理是两个字符串一个个比较，所以可以比较字符是否相同！！！！！<div class="note success"><p>如果把序号按字符串存储，则会可以通过strcmp比较序号是否相同。</p></div>(有用)</li>
 <li>Strlen函数如果没有遇到’\0’，会一直计算下去，字符串二维数组不可以用strlen，因为二维数组每一行相当于一个字符串一维数组，每一行都有’\0’！</li>
 </ul>
-<h2 id="memset函数"><a href="#memset函数" class="headerlink" title="memset函数"></a>memset函数</h2><ul>
+<h1 id="tolower函数"><a href="#tolower函数" class="headerlink" title="tolower函数"></a>tolower函数</h1><ul>
+<li>定义函数：int tolower(int c);</li>
+</ul>
+<p>函数说明：若参数 c 为大写字母则将该对应的小写字母返回。</p>
+<p>返回值：返回转换后的小写字母，若不须转换则将参数c 值返回。<br>tolower(s[i]);</p>
+<ul>
+<li><code>#include &lt;cctype&gt;</code></li>
+</ul>
+<h1 id="fill函数"><a href="#fill函数" class="headerlink" title="fill函数"></a>fill函数</h1><ul>
+<li>在头文件<code>&lt;algorithm&gt;</code>里面</li>
+<li>按照单元赋值，将一个区间的元素都赋同一个值<br><code>fill(arr, arr + n, 要填入的内容);</code><br>vector也可以：<code>fill(v.begin(), v.end(), 要填入的内容);</code></li>
+<li>fill 和fill_n函数是C++ Primer第十二章泛型算法部分内容，并把它们称为生成和变异算法，也就是说<strong>这两个函数只能对输入范围内已存在的元素进行操作</strong>。如果试图对空容器进行fill_n操作，会导致严重的运行错误，所以在对元素进行写入操作时要检查目标的大小是否足以存储要写入的元素。</li>
+</ul>
+<h2 id="与memset-函数的区别："><a href="#与memset-函数的区别：" class="headerlink" title="与memset()函数的区别："></a>与memset()函数的区别：</h2><ul>
+<li><p>两者都可以用来对数组填充，memset是对按照字节来填充的，所以一般用来填充char型数组，也经常用于填充int型的全0或全-1操作。</p>
+</li>
+<li><p>fill是按照单元来填充的，所以可以填充一个区间的任意值。</p>
+</li>
+</ul>
+<h1 id="fill-n函数"><a href="#fill-n函数" class="headerlink" title="fill_n函数"></a>fill_n函数</h1><ul>
+<li>在头文件<code>&lt;algorithm&gt;</code>里。</li>
+<li><code>fill_n(vec.begin, cnt, val);</code>从当前起始点开始，将之后的cnt个元素赋值为val。<br>  注意：不能在没有元素的空容器上调用fill_n()函数</li>
+</ul>
+<h1 id="memset函数"><a href="#memset函数" class="headerlink" title="memset函数"></a>memset函数</h1><ul>
+<li>在头文件<code>&lt;cstring&gt;</code>里面</li>
 <li>Memset函数:可以本身就是为字符数组设计的源代码：unsigned int 有一个特性就是如果将其赋值或者当作字节来使用的话，编译器将会截取低八位作为一个字节使用。</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">void *(memset)(void *s, int c, size_t n)</span><br><span class="line"></span><br><span class="line"> &#123;</span><br><span class="line"></span><br><span class="line">const unsigned char uc = c;</span><br><span class="line">unsigned char *su;</span><br><span class="line">for (su = s; 0 &lt; n; ++su, --n)</span><br><span class="line">    *su = uc;</span><br><span class="line">return (s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -484,7 +508,15 @@ memset(num, INF, sizeof(num));
 </li>
 <li><div class="note warning"><p>因为在某些编译器分配空间时,内存中默认值并不为0,所以先用memset函数赋初值0.</p></div>
 
+
 </li>
+</ul>
+<h1 id="转换函数"><a href="#转换函数" class="headerlink" title="转换函数"></a>转换函数</h1><h2 id="atoi-函数"><a href="#atoi-函数" class="headerlink" title="atoi()函数"></a>atoi()函数</h2><ul>
+<li>用来将字符串转换成整数(int)：<code>int atoi (const char * str);</code></li>
+<li>【返回值】返回转换后的整型数；如果 str 不能转换成 int 或者 str 为空字符串，那么将返回 0。</li>
+<li>atoi() 函数会扫描参数 str 字符串，跳过前面的空白字符（例如空格，tab缩进等，可以通过 isspace() 函数来检测），直到遇上数字或正负符号才开始做转换，而再遇到非数字或字符串结束时(‘\0’)才结束转换，并将结果返回。</li>
+<li>Enter a number: 233cyuyan</li>
+<li>The value entered is 233.</li>
 </ul>
 
       
@@ -655,7 +687,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -666,7 +698,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -717,7 +749,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常用函数"><span class="nav-number">1.</span> <span class="nav-text">常用函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串函数"><span class="nav-number">2.</span> <span class="nav-text">字符串函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#memset函数"><span class="nav-number">2.1.</span> <span class="nav-text">memset函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#INF小知识"><span class="nav-number">2.1.1.</span> <span class="nav-text">INF小知识</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常用函数"><span class="nav-number">1.</span> <span class="nav-text">常用函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串函数"><span class="nav-number">2.</span> <span class="nav-text">字符串函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tolower函数"><span class="nav-number">3.</span> <span class="nav-text">tolower函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fill函数"><span class="nav-number">4.</span> <span class="nav-text">fill函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#与memset-函数的区别："><span class="nav-number">4.1.</span> <span class="nav-text">与memset()函数的区别：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fill-n函数"><span class="nav-number">5.</span> <span class="nav-text">fill_n函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#memset函数"><span class="nav-number">6.</span> <span class="nav-text">memset函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#INF小知识"><span class="nav-number">6.0.1.</span> <span class="nav-text">INF小知识</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#转换函数"><span class="nav-number">7.</span> <span class="nav-text">转换函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#atoi-函数"><span class="nav-number">7.1.</span> <span class="nav-text">atoi()函数</span></a></li></ol></li></div>
             
 
           </div>
@@ -758,7 +790,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">5.7k</span>
+    <span title="Site words total count">6.5k</span>
   
 </div>
 
