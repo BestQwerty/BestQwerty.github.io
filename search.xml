@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[c++find函数]]></title>
+    <url>%2F2019%2F03%2F09%2Fc-find%E5%87%BD%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[find函数 find用在容器中更加普遍，而algorithm中其实find函数只是一种 C++find函数原型： 123456789101112template&lt;class InputIterator, class T&gt; InputIterator find (InputIterator first, InputIterator last, const T&amp; val)&#123; while (first!=last) &#123; if (*first==val) return first; ++first; &#125; return last;&#125;如果没找到对应的关键元素，会返回end(),最后一个元素的后一位。 其中，find()算法的前两个参数都是某个容器的迭代器，用于指定查找的起始位置和终止位置；第三个参数就是要查找的内容，它的数据类型跟容器中数据的类型相同。这里需要注意的是，find()算法会利用“==”操作符将这里的目标内容跟容器中的数据元素进行相等比较，以确定某个元素是否符合条件，所以，这里的数据类型必须支持“==”操作符进行相等比较。对于基本数据类型而言，它们已经天然支持无需我们操心，如果是自定义的数据类型，则需要重载“==”操作符以支持相等比较。 各个容器自己实现的成员函数 vector没有实现find函数，除此之外，常见容器都实现了自己的find函数，如set，map，string String是这一种顺序存储结构，其find函数返回的是下标索引。set,map,multiset,multimap都不是顺序索引的数据结构，所以返回的是迭代器。 为什么返回的不是索引下标？这是因为索引下标是在数组这种连续存储的数据结构里面常见的，是一种顺序索引；而很多数据结构的存储并非连续的，不能实现顺序索引，为了兼顾所有的数据结构，所以返回的仅仅是指针或是迭代器。如果元素不在对于返回迭代器的查找，通过判断find（a.begin(),a.end(),value）==a.end()，来判断元素是否存在对于string，通过a.find(val)==string::npos判断]]></content>
+      <categories>
+        <category>c++</category>
+        <category>常用函数</category>
+      </categories>
+      <tags>
+        <tag>常用函数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[blog表格]]></title>
     <url>%2F2019%2F03%2F09%2Fblog%E8%A1%A8%E6%A0%BC%2F</url>
     <content type="text"><![CDATA[表格 a b c d |、-、:之间的多余空格会被忽略，不影响布局。默认标题栏居中对齐，内容居左对齐。 -:表示内容和标题栏居右对齐 :-表示内容和标题栏居左对齐 :-:表示内容和标题栏居中对齐。 内容和|之间的多余空格会被忽略，每行第一个|和最后一个|可以省略，-的数量至少有一个。]]></content>
@@ -51,7 +63,7 @@
   <entry>
     <title><![CDATA[关于vector大小（size）和容量（capacity）]]></title>
     <url>%2F2019%2F03%2F08%2F%E5%85%B3%E4%BA%8Evector%E5%A4%A7%E5%B0%8F%EF%BC%88size%EF%BC%89%E5%92%8C%E5%AE%B9%E9%87%8F%EF%BC%88capacity%EF%BC%89%2F</url>
-    <content type="text"><![CDATA[vector 在Vector容器中有以下几个关于大小的函数 - size() 返回容器的大小 - empty() 判断容器是否为空 - max_size() 返回容器最大的可以存储的元素 - capacity() 返回容器当前能够容纳的元素数量 Vector的容量之所以重要，有以下两个原因： 容器的大小一旦超过capacity的大小，vector会重新配置内部的存储器，导致和vector元素相关的所有reference、pointers、iterator都会失效。 2.内存的重新配置会很耗时间。 避免内存重新配置的方法 方法一：Reserve()保留适当容量在创建容器后，第一时间为容器分配足够大的空间，避免重新分配内存。 vec.reverse(n); 方法二：利用构造函数创建出足够空间 该方法是创建容器时，利用构造函数初始化的出足够的空间， vector&lt;int&gt; v(n); 但是要注意，如果容器中reserve的容量太大，而实际中根本不需要那么多，或者元素插入完成后，以后就不会再进行插入操作了，那么多出来的这部分空间就是过剩空间，而对于过剩空间，我们可以通过“交换技术”成功缩小空间，交换技巧的变体可以用于清除容器和减少它的容量到你的实现提供的最小值。 Vector内存扩展方式 vector内存成长方式可归结以下三步曲:（1）另觅更大空间；（2）将原数据复制过去；（3）释放原空间三部曲。 对于vector和string来说，当它们的需要更多空间时，就会自动增加空间，而每次增加空间的容量会导致很大的开销，首先必须分配新的内存块，它有容器目前容量的几倍（在大部分实现中，vector和string的容量每次变为2倍），然后把所有元素从容器的旧内存拷贝到它的新内存，接着销毁旧内存中的对象，最后回收旧内存。 每次重新分配空间，所有指向vector或string中的迭代器、指针和引用都会失效，这意味着简单地把一个元素插入vector或string的动作也可能需要更新其他使用了指向vector或string中的迭代器、指针或引用的数据结构而膨胀。]]></content>
+    <content type="text"><![CDATA[vector 在Vector容器中有以下几个关于大小的函数 - size() 返回容器的大小，目前存在的元素数 - empty() 判断容器是否为空 - max_size() 返回容器最大的可以存储的元素 - capacity() 返回容器当前能够容纳的元素数量 capacity 一般大于size的原因是为了避免 每次增加数据时都要重新分配内存，所以一般会 生成一个较大的空间，以便随后的数据插入。 Vector的容量之所以重要，有以下两个原因：- 1. 容器的大小一旦超过capacity的大小，vector会重新配置内部的存储器，导致和vector元素相关的所有reference、pointers、iterator都会失效。 - 2.内存的重新配置会很耗时间。 避免内存重新配置的方法 方法一：Reserve()保留适当容量在创建容器后，第一时间为容器分配足够大的空间，避免重新分配内存。 vec.reverse(n); 方法二：利用构造函数创建出足够空间 该方法是创建容器时，利用构造函数初始化的出足够的空间， vector&lt;int&gt; v(n); 但是要注意，如果容器中reserve的容量太大，而实际中根本不需要那么多，或者元素插入完成后，以后就不会再进行插入操作了，那么多出来的这部分空间就是过剩空间，而对于过剩空间，我们可以通过“交换技术”成功缩小空间，交换技巧的变体可以用于清除容器和减少它的容量到你的实现提供的最小值。 Vector内存扩展方式 更多可去 stl介绍 vector内存成长方式可归结以下三步曲:（1）另觅更大空间；（2）将原数据复制过去；（3）释放原空间三部曲。 对于vector和string来说，当它们的需要更多空间时，就会自动增加空间，而每次增加空间的容量会导致很大的开销，首先必须分配新的内存块，它有容器目前容量的几倍（在大部分实现中，vector和string的容量每次变为2倍），然后把所有元素从容器的旧内存拷贝到它的新内存，接着销毁旧内存中的对象，最后回收旧内存。 每次重新分配空间，所有指向vector或string中的迭代器、指针和引用都会失效，这意味着简单地把一个元素插入vector或string的动作也可能需要更新其他使用了指向vector或string中的迭代器、指针或引用的数据结构而膨胀。]]></content>
       <categories>
         <category>stl</category>
         <category>vector</category>

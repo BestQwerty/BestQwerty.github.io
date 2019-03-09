@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-03-09T06:17:18.806Z</updated>
+  <updated>2019-03-09T13:58:47.966Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>c++find函数</title>
+    <link href="ctguljj.github.io/2019/03/09/c-find%E5%87%BD%E6%95%B0/"/>
+    <id>ctguljj.github.io/2019/03/09/c-find函数/</id>
+    <published>2019-03-09T13:22:53.000Z</published>
+    <updated>2019-03-09T13:58:47.966Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="find函数"><a href="#find函数" class="headerlink" title="find函数"></a>find函数</h1><ul><li><p>find用在容器中更加普遍，而algorithm中其实find函数只是一种</p></li><li><p>C++find函数原型：</p></li></ul><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">InputIterator</span>, <span class="title">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="class"> <span class="title">InputIterator</span> <span class="title">find</span> (<span class="title">InputIterator</span> <span class="title">first</span>, <span class="title">InputIterator</span> <span class="title">last</span>, <span class="title">const</span> <span class="title">T</span>&amp; <span class="title">val</span>)</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">while</span> (first!=last) </span><br><span class="line">  &#123;</span><br><span class="line">     <span class="keyword">if</span> (*first==val) <span class="keyword">return</span> first;</span><br><span class="line">     ++first;</span><br><span class="line">   &#125;</span><br><span class="line">    <span class="keyword">return</span> last;</span><br><span class="line">&#125;</span><br><span class="line">如果没找到对应的关键元素，会返回end(),最后一个元素的后一位。</span><br></pre></td></tr></table></figure><ul><li>其中，find()算法的前两个参数都是某个容器的迭代器，用于指定查找的起始位置和终止位置；第三个参数就是要查找的内容，它的数据类型跟容器中数据的类型相同。这里需要注意的是，find()算法会利用“==”操作符将这里的目标内容跟容器中的数据元素进行相等比较，以确定某个元素是否符合条件，所以，这里的数据类型必须支持“==”操作符进行相等比较。对于基本数据类型而言，它们已经天然支持无需我们操心，如果是自定义的数据类型，则需要重载“==”操作符以支持相等比较。</li></ul><h2 id="各个容器自己实现的成员函数"><a href="#各个容器自己实现的成员函数" class="headerlink" title="各个容器自己实现的成员函数"></a>各个容器自己实现的成员函数</h2><ul><li>vector没有实现find函数，除此之外，常见容器都实现了自己的find函数，如set，map，string</li><li>String是这一种顺序存储结构，其find函数返回的是下标索引。set,map,multiset,multimap都不是顺序索引的数据结构，所以返回的是迭代器。</li><li>为什么返回的不是索引下标？这是因为索引下标是在数组这种连续存储的数据结构里面常见的，是一种顺序索引；而很多数据结构的存储并非连续的，不能实现顺序索引，为了兼顾所有的数据结构，所以返回的仅仅是指针或是迭代器。<h2 id="如果元素不在"><a href="#如果元素不在" class="headerlink" title="如果元素不在"></a>如果元素不在</h2>对于返回迭代器的查找，通过判断find（a.begin(),a.end(),value）==a.end()，来判断元素是否存在<br>对于string，通过a.find(val)==string::npos判断</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;find函数&quot;&gt;&lt;a href=&quot;#find函数&quot; class=&quot;headerlink&quot; title=&quot;find函数&quot;&gt;&lt;/a&gt;find函数&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;find用在容器中更加普遍，而algorithm中其实find函数只是一种&lt;/p&gt;
+&lt;/l
+      
+    
+    </summary>
+    
+      <category term="c++" scheme="ctguljj.github.io/categories/c/"/>
+    
+      <category term="常用函数" scheme="ctguljj.github.io/categories/c/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/"/>
+    
+    
+      <category term="常用函数" scheme="ctguljj.github.io/tags/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>blog表格</title>
@@ -138,9 +167,9 @@
     <link href="ctguljj.github.io/2019/03/08/%E5%85%B3%E4%BA%8Evector%E5%A4%A7%E5%B0%8F%EF%BC%88size%EF%BC%89%E5%92%8C%E5%AE%B9%E9%87%8F%EF%BC%88capacity%EF%BC%89/"/>
     <id>ctguljj.github.io/2019/03/08/关于vector大小（size）和容量（capacity）/</id>
     <published>2019-03-08T11:33:26.000Z</published>
-    <updated>2019-03-08T11:51:03.774Z</updated>
+    <updated>2019-03-09T13:21:49.676Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h1><ul><li>在Vector容器中有以下几个关于大小的函数</li></ul><pre><code>- size()返回容器的大小- empty()判断容器是否为空- max_size()返回容器最大的可以存储的元素- capacity()返回容器当前能够容纳的元素数量</code></pre><ul><li>Vector的容量之所以重要，有以下两个原因：<ul><li><ol><li>容器的大小一旦超过capacity的大小，vector会重新配置内部的存储器，导致和vector元素相关的所有reference、pointers、iterator都会失效。</li></ol></li><li>2.内存的重新配置会很耗时间。</li></ul></li></ul><h2 id="避免内存重新配置的方法"><a href="#避免内存重新配置的方法" class="headerlink" title="避免内存重新配置的方法"></a>避免内存重新配置的方法</h2><ul><li>方法一：Reserve()保留适当容量<pre><code>在创建容器后，第一时间为容器分配足够大的空间，避免重新分配内存。</code></pre><ul><li><code>vec.reverse(n);</code></li></ul></li></ul><ul><li><p>方法二：利用构造函数创建出足够空间</p><pre><code>该方法是创建容器时，利用构造函数初始化的出足够的空间，      </code></pre><ul><li><code>vector&lt;int&gt; v(n);</code></li></ul></li><li><p>但是要注意，如果容器中reserve的容量太大，而实际中根本不需要那么多，或者元素插入完成后，以后就不会再进行插入操作了，那么多出来的这部分空间就是过剩空间，而对于过剩空间，我们可以通过“交换技术”成功缩小空间，交换技巧的变体可以用于清除容器和减少它的容量到你的实现提供的最小值。</p></li></ul><h2 id="Vector内存扩展方式"><a href="#Vector内存扩展方式" class="headerlink" title="Vector内存扩展方式"></a>Vector内存扩展方式</h2><ul><li>vector内存成长方式可归结以下三步曲:<br><span id="inline-toc">（1）</span>另觅更大空间；<br><span id="inline-toc">（2）</span>将原数据复制过去；<br><span id="inline-toc">（3）</span>释放原空间三部曲。</li></ul><ul><li><div class="note warning"><p>对于vector和string来说，当它们的需要更多空间时，就会自动增加空间，而每次增加空间的容量会导致很大的开销，首先必须分配新的内存块，它有容器目前容量的几倍（在大部分实现中，vector和string的容量每次变为2倍），然后把所有元素从容器的旧内存拷贝到它的新内存，接着销毁旧内存中的对象，最后回收旧内存。</p></div></li><li><p>每次重新分配空间，所有指向vector或string中的迭代器、指针和引用都会失效，这意味着简单地把一个元素插入vector或string的动作也可能需要更新其他使用了指向vector或string中的迭代器、指针或引用的数据结构而膨胀。</p></li><li><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/vector.jpg" alt=""></p></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h1><ul><li>在Vector容器中有以下几个关于大小的函数</li></ul><pre><code>- size()返回容器的大小，目前存在的元素数- empty()判断容器是否为空- max_size()返回容器最大的可以存储的元素- capacity()返回容器当前能够容纳的元素数量</code></pre><ul><li><div class="note success"><p>capacity 一般大于size的原因是为了避免 每次增加数据时都要重新分配内存，所以一般会 生成一个较大的空间，以便随后的数据插入。</p></div></li><li>Vector的容量之所以重要，有以下两个原因：<pre><code>-  1. 容器的大小一旦超过capacity的大小，vector会重新配置内部的存储器，导致和vector元素相关的所有reference、pointers、iterator都会失效。- 2.内存的重新配置会很耗时间。</code></pre></li></ul><h2 id="避免内存重新配置的方法"><a href="#避免内存重新配置的方法" class="headerlink" title="避免内存重新配置的方法"></a>避免内存重新配置的方法</h2><ul><li>方法一：Reserve()保留适当容量<pre><code>在创建容器后，第一时间为容器分配足够大的空间，避免重新分配内存。</code></pre><ul><li><code>vec.reverse(n);</code></li></ul></li></ul><ul><li><p>方法二：利用构造函数创建出足够空间</p><pre><code>该方法是创建容器时，利用构造函数初始化的出足够的空间，      </code></pre><ul><li><code>vector&lt;int&gt; v(n);</code></li></ul></li><li><p>但是要注意，如果容器中reserve的容量太大，而实际中根本不需要那么多，或者元素插入完成后，以后就不会再进行插入操作了，那么多出来的这部分空间就是过剩空间，而对于过剩空间，我们可以通过“交换技术”成功缩小空间，交换技巧的变体可以用于清除容器和减少它的容量到你的实现提供的最小值。</p></li></ul><h2 id="Vector内存扩展方式"><a href="#Vector内存扩展方式" class="headerlink" title="Vector内存扩展方式"></a>Vector内存扩展方式</h2><p> <span id="inline-blue">更多可去 stl介绍 </span></p><ul><li>vector内存成长方式可归结以下三步曲:<br><span id="inline-toc">（1）</span>另觅更大空间；<br><span id="inline-toc">（2）</span>将原数据复制过去；<br><span id="inline-toc">（3）</span>释放原空间三部曲。</li></ul><ul><li><div class="note warning"><p>对于vector和string来说，当它们的需要更多空间时，就会自动增加空间，而每次增加空间的容量会导致很大的开销，首先必须分配新的内存块，它有容器目前容量的几倍（在大部分实现中，vector和string的容量每次变为2倍），然后把所有元素从容器的旧内存拷贝到它的新内存，接着销毁旧内存中的对象，最后回收旧内存。</p></div></li><li><p>每次重新分配空间，所有指向vector或string中的迭代器、指针和引用都会失效，这意味着简单地把一个元素插入vector或string的动作也可能需要更新其他使用了指向vector或string中的迭代器、指针或引用的数据结构而膨胀。</p></li><li><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/vector.jpg" alt=""></p></li></ul>]]></content>
     
     <summary type="html">
     
@@ -542,36 +571,6 @@
     
     
       <category term="算法" scheme="ctguljj.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>c与c++常用函数</title>
-    <link href="ctguljj.github.io/2019/03/04/c%E4%B8%8Ec-%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/"/>
-    <id>ctguljj.github.io/2019/03/04/c与c-常用函数/</id>
-    <published>2019-03-04T04:51:49.000Z</published>
-    <updated>2019-03-08T04:29:57.370Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><ul><li>max, min, fill, memset, sort, swap</li></ul><h1 id="字符串函数"><a href="#字符串函数" class="headerlink" title="字符串函数"></a>字符串函数</h1><ul><li>字符串比较函数strcmp因为原理是两个字符串一个个比较，所以可以比较字符是否相同！！！！！<div class="note success"><p>如果把序号按字符串存储，则会可以通过strcmp比较序号是否相同。</p></div>(有用)</li><li>Strlen函数如果没有遇到’\0’，会一直计算下去，字符串二维数组不可以用strlen，因为二维数组每一行相当于一个字符串一维数组，每一行都有’\0’！</li></ul><h1 id="tolower函数"><a href="#tolower函数" class="headerlink" title="tolower函数"></a>tolower函数</h1><ul><li>定义函数：int tolower(int c);</li></ul><p>函数说明：若参数 c 为大写字母则将该对应的小写字母返回。</p><p>返回值：返回转换后的小写字母，若不须转换则将参数c 值返回。<br>tolower(s[i]);</p><ul><li><code>#include &lt;cctype&gt;</code></li></ul><h1 id="fill函数"><a href="#fill函数" class="headerlink" title="fill函数"></a>fill函数</h1><ul><li>在头文件<code>&lt;algorithm&gt;</code>里面</li><li>按照单元赋值，将一个区间的元素都赋同一个值<br><code>fill(arr, arr + n, 要填入的内容);</code><br>vector也可以：<code>fill(v.begin(), v.end(), 要填入的内容);</code></li><li>fill 和fill_n函数是C++ Primer第十二章泛型算法部分内容，并把它们称为生成和变异算法，也就是说<strong>这两个函数只能对输入范围内已存在的元素进行操作</strong>。如果试图对空容器进行fill_n操作，会导致严重的运行错误，所以在对元素进行写入操作时要检查目标的大小是否足以存储要写入的元素。</li></ul><h2 id="与memset-函数的区别："><a href="#与memset-函数的区别：" class="headerlink" title="与memset()函数的区别："></a>与memset()函数的区别：</h2><ul><li><p>两者都可以用来对数组填充，memset是对按照字节来填充的，所以一般用来填充char型数组，也经常用于填充int型的全0或全-1操作。</p></li><li><p>fill是按照单元来填充的，所以可以填充一个区间的任意值。</p></li></ul><h1 id="fill-n函数"><a href="#fill-n函数" class="headerlink" title="fill_n函数"></a>fill_n函数</h1><ul><li>在头文件<code>&lt;algorithm&gt;</code>里。</li><li><code>fill_n(vec.begin, cnt, val);</code>从当前起始点开始，将之后的cnt个元素赋值为val。<br>  注意：不能在没有元素的空容器上调用fill_n()函数</li></ul><h1 id="memset函数"><a href="#memset函数" class="headerlink" title="memset函数"></a>memset函数</h1><ul><li>在头文件<code>&lt;cstring&gt;</code>里面</li><li>Memset函数:可以本身就是为字符数组设计的源代码：unsigned int 有一个特性就是如果将其赋值或者当作字节来使用的话，编译器将会截取低八位作为一个字节使用。</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">void *(memset)(void *s, int c, size_t n)</span><br><span class="line"></span><br><span class="line"> &#123;</span><br><span class="line"></span><br><span class="line">const unsigned char uc = c;</span><br><span class="line">unsigned char *su;</span><br><span class="line">for (su = s; 0 &lt; n; ++su, --n)</span><br><span class="line">    *su = uc;</span><br><span class="line">return (s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>源码说明对于数组参数是按照字符数组的形式进行赋值的。<br>也就是c的值每次赋值给一个字节，而不是4个字节，c的类型是int类型，4个字节，<br>但只会赋值最低位的一个字节的内容。</p><ul><li><p>对于非单字节数据类型只能初始化为0，而不能初始化成别的初值，因为对所有字节按任意顺序赋值0的结果都是0，而如果初始化为其他的值，就会一个字节一个字节的进行赋值，从而出现奇怪的结果。</p></li><li><p>对于变量：当结构体类型中包含指针时，在使用memset初始化时需要小心。<br>struct sample_strcut stTest;用memset就非常方便：memset(&amp;stTest,0,sizeof(struct sample_struct));<br>原因是memset初始化的时候是按字节一个一个填充的，int有四个字节，于是填充成0000 0001 0000 0001 0000 00001 0000 0001，这样得出数组中的每个元素的值就是16843009了。<br>赋值时0与’\0’效果一样。</p></li><li>可以用于清空数组内元素与赋,memset函数一般用来填充char型数组,也经常用于填充int型的全0或全-1.不可用其它值，除非高低字节相同.</li></ul><p>-<br>    <code>`</code></p><pre><code>#define INF 0x3f3f3f3fint num[N];memset(num, INF, sizeof(num));</code></pre><p>这样得到的数组里面的每一个元素数值都是INF<br>看一下INF的二进制表示：<br>00111111001111110011111100111111<br>可以看出低8位是00111111，<strong><em>也就是实际赋值时是用<br>00111111来填充一个int类型</em></strong>，结果正好也是<br>00111111001111110011111100111111<br>于是就成功用memset进行了赋值。</p><h3 id="INF小知识"><a href="#INF小知识" class="headerlink" title="INF小知识"></a>INF小知识</h3><ul><li>0x3f3f3f3f的十进制是1061109567，也就是10^9级别的（和0x7fffffff一个数量级），而一般场合下的数据都是小于10^9的，所以它可以作为无穷大使用而不致出现数据大于无穷大的情形。</li><li><p>另一方面，由于一般的数据都不会大于10^9，所以当我们把无穷大加上一个数据时，它并不会溢出（这就满足了“无穷大加一个有穷的数依然是无穷大”），事实上0x3f3f3f3f+0x3f3f3f3f=2122219134，这非常大但却没有超过32-bit int的表示范围，所以0x3f3f3f3f还满足了我们“无穷大加无穷大还是无穷大”的需求。</p></li><li><p>最后，0x3f3f3f3f还能给我们带来一个意想不到的额外好处：如果我们想要将某个数组清零，我们通常会使用memset(a,0,sizeof(a))这样的代码来实现（方便而高效），但是当我们想将某个数组全部赋值为无穷大时（例如解决图论问题时邻接矩阵的初始化），就不能使用memset函数而得自己写循环了（写这些不重要的代码真的很痛苦），我们知道这是因为memset是按字节操作的，它能够对数组清零是因为0的每个字节都是0，现在好了，如果我们将无穷大设为0x3f3f3f3f，那么奇迹就发生了，0x3f3f3f3f的每个字节都是0x3f！<strong><em>所以要把一段内存全部置为无穷大，我们只需要memset(a,0x3f,sizeof(a))</em></strong>。<br>所以在通常的场合下，const int INF = 0x3f3f3f3f;真的是一个非常棒的选择。</p></li><li><div class="note warning"><p>因为在某些编译器分配空间时,内存中默认值并不为0,所以先用memset函数赋初值0.</p></div></li></ul><h1 id="转换函数"><a href="#转换函数" class="headerlink" title="转换函数"></a>转换函数</h1><h2 id="atoi-函数"><a href="#atoi-函数" class="headerlink" title="atoi()函数"></a>atoi()函数</h2><ul><li>用来将字符串转换成整数(int)：<code>int atoi (const char * str);</code></li><li>【返回值】返回转换后的整型数；如果 str 不能转换成 int 或者 str 为空字符串，那么将返回 0。</li><li>atoi() 函数会扫描参数 str 字符串，跳过前面的空白字符（例如空格，tab缩进等，可以通过 isspace() 函数来检测），直到遇上数字或正负符号才开始做转换，而再遇到非数字或字符串结束时(‘\0’)才结束转换，并将结果返回。</li><li>Enter a number: 233cyuyan</li><li>The value entered is 233.</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;常用函数&quot;&gt;&lt;a href=&quot;#常用函数&quot; class=&quot;headerlink&quot; title=&quot;常用函数&quot;&gt;&lt;/a&gt;常用函数&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;max, min, fill, memset, sort, swap&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;字符
-      
-    
-    </summary>
-    
-      <category term="c++" scheme="ctguljj.github.io/categories/c/"/>
-    
-      <category term="常用函数" scheme="ctguljj.github.io/categories/c/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/"/>
-    
-    
-      <category term="c++" scheme="ctguljj.github.io/tags/c/"/>
     
   </entry>
   
