@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="注意，STL头文件没有扩展名.h STL中默认是采用小于号来排序的 stl很好的介绍（原链接）  1.容器概论 容器，置物之所也。像桶可装水，碗可盛汤，C++的容器，可以存储对象。容器有多种，用来处理不同的元素操作诉求。按照元素存储到容器中以及访问方式的差异，容器分为顺序容器与关联容器。 顺序容器也称为序列式容器。序列式容器按元素插入的顺序存储元素，这些元素可以进行排序，但未必是有序的。C++本">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-09T06:27:08.915Z">
+<meta property="og:updated_time" content="2019-03-09T06:30:39.767Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="stl介绍">
 <meta name="twitter:description" content="注意，STL头文件没有扩展名.h STL中默认是采用小于号来排序的 stl很好的介绍（原链接）  1.容器概论 容器，置物之所也。像桶可装水，碗可盛汤，C++的容器，可以存储对象。容器有多种，用来处理不同的元素操作诉求。按照元素存储到容器中以及访问方式的差异，容器分为顺序容器与关联容器。 顺序容器也称为序列式容器。序列式容器按元素插入的顺序存储元素，这些元素可以进行排序，但未必是有序的。C++本">
@@ -346,7 +346,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-09T14:27:08+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-09T14:30:39+08:00">
                 2019-03-09
               </time>
             
@@ -381,7 +381,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">816(字)</span> 
+					<span class="post-count">901(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -480,7 +480,16 @@
 <li>queue，也称为队列，是一种先进先出的数据结构，它同样也是一种容器适配器。它的底部容器默认为deque。同样，queue也没有提供迭代器，通过push向队尾压入元素，pop从队首弹出元素。</li>
 <li>priority-queue，优先队列，是一种拥有权值观念的队列，例如在以整数大小作为衡量的权值定义下，priority-queue总是弹出最大的数。priority-queue的底部数据结构默认是max-heap，大顶堆。</li>
 </ul>
-<h1 id="6-基础总结"><a href="#6-基础总结" class="headerlink" title="6.基础总结"></a>6.基础总结</h1>
+<h1 id="6-基础总结"><a href="#6-基础总结" class="headerlink" title="6.基础总结"></a>6.基础总结</h1><p>！<a href="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/stl总结.png" target="_blank" rel="noopener"></a></p>
+<ul>
+<li>注意：<ul>
+<li>“尾部可高效插入/删除元素”，意味着在除了尾部之外的其他位置插入/删除元素是较低效的。</li>
+<li>“顺序访问”意味着要访问某一个元素，必须遍历其他元素。</li>
+<li>迭代器失效意味着指针、引用在同样的情况下也会失效。</li>
+</ul>
+</li>
+</ul>
+
       
     </div>
     
@@ -752,7 +761,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">11.1k</span>
+    <span title="Site words total count">11.2k</span>
   
 </div>
 
