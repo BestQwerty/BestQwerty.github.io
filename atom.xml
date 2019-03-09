@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-03-08T12:51:29.755Z</updated>
+  <updated>2019-03-09T06:12:39.854Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -17,19 +17,61 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>list列表</title>
-    <link href="ctguljj.github.io/2019/03/08/list%E5%88%97%E8%A1%A8/"/>
-    <id>ctguljj.github.io/2019/03/08/list列表/</id>
-    <published>2019-03-08T12:48:34.000Z</published>
-    <updated>2019-03-08T12:51:29.755Z</updated>
+    <title>blog表格</title>
+    <link href="ctguljj.github.io/2019/03/09/blog%E8%A1%A8%E6%A0%BC/"/>
+    <id>ctguljj.github.io/2019/03/09/blog表格/</id>
+    <published>2019-03-09T06:02:45.000Z</published>
+    <updated>2019-03-09T06:12:39.854Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="list"><a href="#list" class="headerlink" title="list"></a>list</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><p>| Tables        | Are           | Cool  |</p><p>| ————- |:————-:| —–:|</p><p>| col 3 is      | right-aligned | $1600 |</p><p>| col 2 is      | centered      |   $12 |</p><p>| zebra stripes | are neat      |    $1 |</p><table><thead><tr><th style="text-align:center">a</th><th style="text-align:center">b</th></tr></thead><tbody><tr><td style="text-align:center">c</td><td style="text-align:center">d</td></tr></tbody></table>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;list&quot;&gt;&lt;a href=&quot;#list&quot; class=&quot;headerlink&quot; title=&quot;list&quot;&gt;&lt;/a&gt;list&lt;/h1&gt;
+        &lt;h1 id=&quot;表格&quot;&gt;&lt;a href=&quot;#表格&quot; class=&quot;headerlink&quot; title=&quot;表格&quot;&gt;&lt;/a&gt;表格&lt;/h1&gt;&lt;p&gt;| Tables        | Are           | Cool  |&lt;/p&gt;
+&lt;p&gt;| ————- |:————-:| —–:
+      
+    
+    </summary>
+    
+      <category term="blog" scheme="ctguljj.github.io/categories/blog/"/>
+    
+      <category term="表格" scheme="ctguljj.github.io/categories/blog/%E8%A1%A8%E6%A0%BC/"/>
+    
+    
+      <category term="blog" scheme="ctguljj.github.io/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vector简介</title>
+    <link href="ctguljj.github.io/2019/03/09/vector%E7%AE%80%E4%BB%8B/"/>
+    <id>ctguljj.github.io/2019/03/09/vector简介/</id>
+    <published>2019-03-09T06:00:32.000Z</published>
+    <updated>2019-03-09T06:00:32.162Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>list列表</title>
+    <link href="ctguljj.github.io/2019/03/08/list%E5%88%97%E8%A1%A8/"/>
+    <id>ctguljj.github.io/2019/03/08/list列表/</id>
+    <published>2019-03-08T12:48:34.000Z</published>
+    <updated>2019-03-09T05:59:54.466Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="list"><a href="#list" class="headerlink" title="list"></a>list</h1><h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><ul><li>#include ＜list＞</li></ul><h2 id="底层数据结构"><a href="#底层数据结构" class="headerlink" title="底层数据结构"></a>底层数据结构</h2><ul><li>list同样是一个模板类，它底层数据结构为双向循环链表。因此，它支持任意位置常数时间的插入/删除操作，不支持快速随机访问。</li></ul><h2 id="内存分配策略"><a href="#内存分配策略" class="headerlink" title="内存分配策略"></a>内存分配策略</h2><ul><li>list的空间配置策略，自然是像我们普通双向链表那样，有多少元素申请多少内存。它不像vactor那样需要预留空间供新元素的分配，也不会因找不到连续的空间而引起整个容器的内存迁移。</li></ul><h2 id="迭代器失效问题"><a href="#迭代器失效问题" class="headerlink" title="迭代器失效问题"></a>迭代器失效问题</h2><ul><li>list 有一个重要性质：插入操作（insert）与接合操作（splice）都不会造成原有的list迭代器失效。这在vector是不成立的，因为vactor的插入可能引起空间的重新配置，导致原来的迭代器全部失效。list的迭代器失效，只会出现在删除的时候，指向删除元素的那个迭代器在删除后失效。<br>通常来说，<code>forward_list</code>在使用灵活度上比不上list，因为它只能单向迭代元素，且提供的接口没有list多。然而，在内存的使用上，它是比list占优势的。当对内存的要求占首要位置时，应该选择<code>forward_list</code>。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;list&quot;&gt;&lt;a href=&quot;#list&quot; class=&quot;headerlink&quot; title=&quot;list&quot;&gt;&lt;/a&gt;list&lt;/h1&gt;&lt;h2 id=&quot;头文件&quot;&gt;&lt;a href=&quot;#头文件&quot; class=&quot;headerlink&quot; title=&quot;头文件&quot;&gt;&lt;/a&gt;头文
       
     
     </summary>
@@ -238,9 +280,9 @@
     <link href="ctguljj.github.io/2019/03/08/stl/"/>
     <id>ctguljj.github.io/2019/03/08/stl/</id>
     <published>2019-03-08T05:38:37.000Z</published>
-    <updated>2019-03-08T12:52:55.662Z</updated>
+    <updated>2019-03-09T06:02:25.193Z</updated>
     
-    <content type="html"><![CDATA[<ul><li>注意，STL头文件没有扩展名.h</li><li>STL中默认是采用小于号来排序的</li><li><p><a href="http://www.cnblogs.com/QG-whz/p/5152963.html#_label2" target="_blank" rel="noopener">stl很好的介绍</a></p><h1 id="序列式容器"><a href="#序列式容器" class="headerlink" title="序列式容器"></a>序列式容器</h1></li><li><p>向量(vector) 连续存储的元素<code>&lt;vector&gt;</code></p></li><li><p>列表(list) 由节点组成的双向链表，每个结点包含着一个元素<code>&lt;list&gt;</code></p></li><li><p>双端队列(deque) 连续存储的指向不同元素的指针所组成的数组<code>&lt;deque&gt;</code></p></li></ul><h1 id="适配器容器"><a href="#适配器容器" class="headerlink" title="适配器容器"></a>适配器容器</h1><ul><li><p>栈(stack) 后进先出的值的排列 <code>&lt;stack&gt;</code></p></li><li><p>队列(queue) 先进先出的值的排列<code>&lt;queue&gt;</code></p></li><li><p>优先队列(priority_queue) 元素的次序是由作用于所存储的值对上的某种谓词决定的的一种队列 <code>&lt;queue&gt;</code></p></li></ul><h1 id="关联式容器"><a href="#关联式容器" class="headerlink" title="关联式容器"></a>关联式容器</h1><ul><li><p>集合(set) 由节点组成的红黑树，每个节点都包含着一个元素，节点之间以某种作用于元素对的谓词排列，没有两个不同的元素能够拥有相同的次序<code>&lt;set&gt;</code></p></li><li><p>多重集合(multiset) 允许存在两个次序相等的元素的集合<code>&lt;set&gt;</code></p></li><li><p>映射(map) 由{键，值}对组成的集合，以某种作用于键对上的谓词排列 <code>&lt;map&gt;</code></p></li><li><p>多重映射(multimap) 允许键对有相等的次序的映射<code>&lt;map&gt;</code></p></li></ul>]]></content>
+    <content type="html"><![CDATA[<ul><li>注意，STL头文件没有扩展名.h</li><li>STL中默认是采用小于号来排序的</li><li><p><a href="http://www.cnblogs.com/QG-whz/p/5152963.html#_label2" target="_blank" rel="noopener">stl很好的介绍</a></p><h1 id="序列式容器"><a href="#序列式容器" class="headerlink" title="序列式容器"></a>序列式容器</h1></li><li><p>向量(vector) 连续存储的元素<code>&lt;vector&gt;</code></p></li><li><p>列表(list) 由节点组成的双向链表，每个结点包含着一个元素<code>&lt;list&gt;</code></p></li><li><p>双端队列(deque) 连续存储的指向不同元素的指针所组成的数组<code>&lt;deque&gt;</code></p></li></ul><h1 id="适配器容器"><a href="#适配器容器" class="headerlink" title="适配器容器"></a>适配器容器</h1><ul><li><p>栈(stack) 后进先出的值的排列 <code>&lt;stack&gt;</code></p></li><li><p>队列(queue) 先进先出的值的排列<code>&lt;queue&gt;</code></p></li><li><p>优先队列(priority_queue) 元素的次序是由作用于所存储的值对上的某种谓词决定的的一种队列 <code>&lt;queue&gt;</code></p></li></ul><h1 id="关联式容器"><a href="#关联式容器" class="headerlink" title="关联式容器"></a>关联式容器</h1><ul><li><p>集合(set) 由节点组成的红黑树，每个节点都包含着一个元素，节点之间以某种作用于元素对的谓词排列，没有两个不同的元素能够拥有相同的次序<code>&lt;set&gt;</code></p></li><li><p>多重集合(multiset) 允许存在两个次序相等的元素的集合<code>&lt;set&gt;</code></p></li><li><p>映射(map) 由{键，值}对组成的集合，以某种作用于键对上的谓词排列 <code>&lt;map&gt;</code></p></li><li><p>多重映射(multimap) 允许键对有相等的次序的映射<code>&lt;map&gt;</code></p></li></ul><h1 id="基础总结"><a href="#基础总结" class="headerlink" title="基础总结"></a>基础总结</h1>]]></content>
     
     <summary type="html">
     
@@ -510,47 +552,6 @@
     
     
       <category term="c++" scheme="ctguljj.github.io/tags/c/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>算法核心思想：倍增</title>
-    <link href="ctguljj.github.io/2019/03/03/%E7%AE%97%E6%B3%95%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3%EF%BC%9A%E5%80%8D%E5%A2%9E/"/>
-    <id>ctguljj.github.io/2019/03/03/算法核心思想：倍增/</id>
-    <published>2019-03-03T09:23:16.000Z</published>
-    <updated>2019-03-03T09:23:16.382Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数据类型问题</title>
-    <link href="ctguljj.github.io/2019/03/03/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E9%97%AE%E9%A2%98/"/>
-    <id>ctguljj.github.io/2019/03/03/数据类型问题/</id>
-    <published>2019-03-03T09:11:09.000Z</published>
-    <updated>2019-03-05T09:08:48.098Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h1><ul><li>二进制不能表示所有的小数，他只是选一个离需表示值的最近的一个数进行储存而已。</li><li>输出有e时,可能是输出变量类型float,double的问题，可改为int其它类型试试</li><li>int类型不会出现浮点数,不要用int型存计算结果的浮点数</li><li></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;数据&quot;&gt;&lt;a href=&quot;#数据&quot; class=&quot;headerlink&quot; title=&quot;数据&quot;&gt;&lt;/a&gt;数据&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;二进制不能表示所有的小数，他只是选一个离需表示值的最近的一个数进行储存而已。&lt;/li&gt;
-&lt;li&gt;输出有e时,可能是输出变量类型f
-      
-    
-    </summary>
-    
-      <category term="数据类型" scheme="ctguljj.github.io/categories/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    
-    
-      <category term="数据类型" scheme="ctguljj.github.io/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
     
   </entry>
   
