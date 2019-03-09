@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="list头文件 #include ＜list＞  底层数据结构 list同样是一个模板类，它底层数据结构为双向循环链表。因此，它支持任意位置常数时间的插入/删除操作，不支持快速随机访问。  内存分配策略 list的空间配置策略，自然是像我们普通双向链表那样，有多少元素申请多少内存。它不像vactor那样需要预留空间供新元素的分配，也不会因找不到连续的空间而引起整个容器的内存迁移。  迭代器失效问题">
+<meta name="description" content="cppreference  list头文件 #include ＜list＞  底层数据结构 list同样是一个模板类，它底层数据结构为双向循环链表。因此，它支持任意位置常数时间的插入/删除操作，不支持快速随机访问。  内存分配策略 list的空间配置策略，自然是像我们普通双向链表那样，有多少元素申请多少内存。它不像vactor那样需要预留空间供新元素的分配，也不会因找不到连续的空间而引起整个容器">
 <meta name="keywords" content="stl">
 <meta property="og:type" content="article">
 <meta property="og:title" content="list列表">
 <meta property="og:url" content="ctguljj.github.io/2019/03/08/list列表/index.html">
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
-<meta property="og:description" content="list头文件 #include ＜list＞  底层数据结构 list同样是一个模板类，它底层数据结构为双向循环链表。因此，它支持任意位置常数时间的插入/删除操作，不支持快速随机访问。  内存分配策略 list的空间配置策略，自然是像我们普通双向链表那样，有多少元素申请多少内存。它不像vactor那样需要预留空间供新元素的分配，也不会因找不到连续的空间而引起整个容器的内存迁移。  迭代器失效问题">
+<meta property="og:description" content="cppreference  list头文件 #include ＜list＞  底层数据结构 list同样是一个模板类，它底层数据结构为双向循环链表。因此，它支持任意位置常数时间的插入/删除操作，不支持快速随机访问。  内存分配策略 list的空间配置策略，自然是像我们普通双向链表那样，有多少元素申请多少内存。它不像vactor那样需要预留空间供新元素的分配，也不会因找不到连续的空间而引起整个容器">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-09T05:59:54.466Z">
+<meta property="og:updated_time" content="2019-03-09T07:12:35.504Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="list列表">
-<meta name="twitter:description" content="list头文件 #include ＜list＞  底层数据结构 list同样是一个模板类，它底层数据结构为双向循环链表。因此，它支持任意位置常数时间的插入/删除操作，不支持快速随机访问。  内存分配策略 list的空间配置策略，自然是像我们普通双向链表那样，有多少元素申请多少内存。它不像vactor那样需要预留空间供新元素的分配，也不会因找不到连续的空间而引起整个容器的内存迁移。  迭代器失效问题">
+<meta name="twitter:description" content="cppreference  list头文件 #include ＜list＞  底层数据结构 list同样是一个模板类，它底层数据结构为双向循环链表。因此，它支持任意位置常数时间的插入/删除操作，不支持快速随机访问。  内存分配策略 list的空间配置策略，自然是像我们普通双向链表那样，有多少元素申请多少内存。它不像vactor那样需要预留空间供新元素的分配，也不会因找不到连续的空间而引起整个容器">
 
 
 
@@ -346,7 +346,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-09T13:59:54+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-09T15:12:35+08:00">
                 2019-03-09
               </time>
             
@@ -392,7 +392,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">329(字)</span> 
+					<span class="post-count">518(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -450,7 +450,10 @@
       
 
       
-        <h1 id="list"><a href="#list" class="headerlink" title="list"></a>list</h1><h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><ul>
+        <ul>
+<li><a href="https://zh.cppreference.com/w/cpp/container/list" target="_blank" rel="noopener">cppreference</a></li>
+</ul>
+<h1 id="list"><a href="#list" class="headerlink" title="list"></a>list</h1><h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><ul>
 <li>#include ＜list＞</li>
 </ul>
 <h2 id="底层数据结构"><a href="#底层数据结构" class="headerlink" title="底层数据结构"></a>底层数据结构</h2><ul>
@@ -461,6 +464,27 @@
 </ul>
 <h2 id="迭代器失效问题"><a href="#迭代器失效问题" class="headerlink" title="迭代器失效问题"></a>迭代器失效问题</h2><ul>
 <li>list 有一个重要性质：插入操作（insert）与接合操作（splice）都不会造成原有的list迭代器失效。这在vector是不成立的，因为vactor的插入可能引起空间的重新配置，导致原来的迭代器全部失效。list的迭代器失效，只会出现在删除的时候，指向删除元素的那个迭代器在删除后失效。<br>通常来说，<code>forward_list</code>在使用灵活度上比不上list，因为它只能单向迭代元素，且提供的接口没有list多。然而，在内存的使用上，它是比list占优势的。当对内存的要求占首要位置时，应该选择<code>forward_list</code>。</li>
+</ul>
+<h1 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h1><ul>
+<li><p><code>list&lt;int&gt; c;</code>空链表</p>
+</li>
+<li><p><code>list&lt;int&gt; c1(3);</code> 建一个含三个默认值是0的元素的链表
+　</p>
+</li>
+</ul>
+<ul>
+<li><code>list&lt;int&gt; c2(5,2);</code> 建一个含五个元素的链表，值都是2
+　</li>
+<li><code>list&lt;int&gt; c4(c2);</code> 建一个c2的copy链表</li>
+</ul>
+<ul>
+<li><code>list&lt;int&gt; c5(c1.begin(),c1.end());</code> c5含c1一个区域的元素[_First, _Last)。</li>
+</ul>
+<h1 id="List常用操作函数"><a href="#List常用操作函数" class="headerlink" title="List常用操作函数"></a>List常用操作函数</h1><h1 id="list-的特点"><a href="#list-的特点" class="headerlink" title="list 的特点"></a>list 的特点</h1><ul>
+<li>(1) 不使用连续的内存空间这样可以随意地进行动态操作；</li>
+<li>(2) 可以在内部任何位置快速地插入或删除，当然也可以在两端进push 和pop 。</li>
+<li>(3) 不能进行内部的随机访问，即不支持[ ] 操作符和<code>vector.at() ；</code></li>
+<li>(4) 相对于verctor 占用更多的内存。</li>
 </ul>
 
       
@@ -693,7 +717,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#list"><span class="nav-number">1.</span> <span class="nav-text">list</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#头文件"><span class="nav-number">1.1.</span> <span class="nav-text">头文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#底层数据结构"><span class="nav-number">1.2.</span> <span class="nav-text">底层数据结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内存分配策略"><span class="nav-number">1.3.</span> <span class="nav-text">内存分配策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#迭代器失效问题"><span class="nav-number">1.4.</span> <span class="nav-text">迭代器失效问题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#list"><span class="nav-number">1.</span> <span class="nav-text">list</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#头文件"><span class="nav-number">1.1.</span> <span class="nav-text">头文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#底层数据结构"><span class="nav-number">1.2.</span> <span class="nav-text">底层数据结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内存分配策略"><span class="nav-number">1.3.</span> <span class="nav-text">内存分配策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#迭代器失效问题"><span class="nav-number">1.4.</span> <span class="nav-text">迭代器失效问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#构造函数"><span class="nav-number">2.</span> <span class="nav-text">构造函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#List常用操作函数"><span class="nav-number">3.</span> <span class="nav-text">List常用操作函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#list-的特点"><span class="nav-number">4.</span> <span class="nav-text">list 的特点</span></a></li></ol></div>
             
 
           </div>
@@ -734,7 +758,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">11.2k</span>
+    <span title="Site words total count">11.9k</span>
   
 </div>
 

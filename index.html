@@ -563,12 +563,45 @@ d
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-09T14:00:32+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-09T15:17:56+08:00">
                 2019-03-09
               </time>
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/stl/" itemprop="url" rel="index">
+                    <span itemprop="name">stl</span>
+                  </a>
+                </span>
+
+                
+                
+                  >
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/stl/vector/" itemprop="url" rel="index">
+                    <span itemprop="name">vector</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -620,8 +653,10 @@ d
       
         
           
-          
-          
+          vector
+vector的底层数据结构是动态数组内存分配
+标准库的实现者使用了这样的内存分配策略：以最小的代价连续存储元素。为了使vector容器实现快速的内存分配，其实际分配的容量要比当前所需的空间多一些(预留空间)，vector容器预留了这些额外的存储区用于存放添加的新元素，于是不必为每个新元
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/03/09/vector简介/#more" rel="contents">
@@ -724,7 +759,7 @@ d
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-09T13:59:54+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-09T15:12:35+08:00">
                 2019-03-09
               </time>
             
@@ -814,14 +849,17 @@ d
       
         
           
-          list头文件
+          
+cppreference
+
+list头文件
 #include ＜list＞
 
 底层数据结构
 list同样是一个模板类，它底层数据结构为双向循环链表。因此，它支持任意位置常数时间的插入/删除操作，不支持快速随机访问。
 
 内存分配策略
-list的空间配置策略，自然是像我们普通双向链表那样，有多少元素申请多少内存。它不像vactor
+list的空间配置策略，自然是像我们普通双向链表那样，有多少元素申
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -2336,7 +2374,7 @@ pair类型的使用相当的繁琐，如果定义多个相同的pair类型对象
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">11.2k</span>
+    <span title="Site words total count">11.9k</span>
   
 </div>
 

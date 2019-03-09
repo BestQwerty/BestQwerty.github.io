@@ -52,12 +52,26 @@
     <link href="ctguljj.github.io/2019/03/09/vector%E7%AE%80%E4%BB%8B/"/>
     <id>ctguljj.github.io/2019/03/09/vector简介/</id>
     <published>2019-03-09T06:00:32.000Z</published>
-    <updated>2019-03-09T06:00:32.162Z</updated>
+    <updated>2019-03-09T07:17:56.008Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h1><ul><li>vector的底层数据结构是动态数组<h2 id="内存分配"><a href="#内存分配" class="headerlink" title="内存分配"></a>内存分配</h2></li><li>标准库的实现者使用了这样的内存分配策略：以最小的代价连续存储元素。为了使vector容器实现快速的内存分配，其实际分配的容量要比当前所需的空间多一些(预留空间)，vector容器预留了这些额外的存储区用于存放添加的新元素，于是不必为每个新元素进行一次内存分配。当继续向容器中加入元素导致备用空间被用光（超过了容量 capacity），此时再加入元素时vector的内存管理机制便会扩充容量至两倍，如果两倍容量仍不足，就扩张至足够大的容量。容量扩张必须经历“重新配置、元素移动、释放原空间”这个浩大的工程。</li><li>按照《STL源码剖析》中提供的vector源码，vector的内存配置原则为：<ul><li>如果vector原大小为0，则配置1，也即一个元素的大小。</li><li>如果原大小不为0，则配置原大小的两倍。</li></ul></li><li>当然，vector的每种实现都可以自由地选择自己的内存分配策略，分配多少内存取决于其实现方式，不同的库采用不同的分配策略。</li></ul><h2 id="迭代器失效问题"><a href="#迭代器失效问题" class="headerlink" title="迭代器失效问题"></a>迭代器失效问题</h2><ul><li>vector管理的是连续的内存空间，在容器中插入（或删除）元素时，插入（或删除）点后面的所有元素都需要向后（或向前）移动一个位置，指向发生移动的元素的迭代器都失效。</li><li>随着元素的插入，原来分配的连续内存空间已经不够且无法在原地拓展新的内存空间，整个容器会被copy到另外一块内存上，此时指向原来容器元素的所有迭代器通通失效。</li><li>删除元素后，指向被删除元素的迭代器失效，这是显而易见的。</li></ul>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;h1 id=&quot;vector&quot;&gt;&lt;a href=&quot;#vector&quot; class=&quot;headerlink&quot; title=&quot;vector&quot;&gt;&lt;/a&gt;vector&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;vector的底层数据结构是动态数组&lt;h2 id=&quot;内存分配&quot;&gt;&lt;a href=&quot;#内存分配&quot; 
+      
+    
     </summary>
     
+      <category term="stl" scheme="ctguljj.github.io/categories/stl/"/>
+    
+      <category term="vector" scheme="ctguljj.github.io/categories/stl/vector/"/>
+    
+    
+      <category term="stl" scheme="ctguljj.github.io/tags/stl/"/>
     
   </entry>
   
@@ -66,15 +80,18 @@
     <link href="ctguljj.github.io/2019/03/08/list%E5%88%97%E8%A1%A8/"/>
     <id>ctguljj.github.io/2019/03/08/list列表/</id>
     <published>2019-03-08T12:48:34.000Z</published>
-    <updated>2019-03-09T05:59:54.466Z</updated>
+    <updated>2019-03-09T07:12:35.504Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="list"><a href="#list" class="headerlink" title="list"></a>list</h1><h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><ul><li>#include ＜list＞</li></ul><h2 id="底层数据结构"><a href="#底层数据结构" class="headerlink" title="底层数据结构"></a>底层数据结构</h2><ul><li>list同样是一个模板类，它底层数据结构为双向循环链表。因此，它支持任意位置常数时间的插入/删除操作，不支持快速随机访问。</li></ul><h2 id="内存分配策略"><a href="#内存分配策略" class="headerlink" title="内存分配策略"></a>内存分配策略</h2><ul><li>list的空间配置策略，自然是像我们普通双向链表那样，有多少元素申请多少内存。它不像vactor那样需要预留空间供新元素的分配，也不会因找不到连续的空间而引起整个容器的内存迁移。</li></ul><h2 id="迭代器失效问题"><a href="#迭代器失效问题" class="headerlink" title="迭代器失效问题"></a>迭代器失效问题</h2><ul><li>list 有一个重要性质：插入操作（insert）与接合操作（splice）都不会造成原有的list迭代器失效。这在vector是不成立的，因为vactor的插入可能引起空间的重新配置，导致原来的迭代器全部失效。list的迭代器失效，只会出现在删除的时候，指向删除元素的那个迭代器在删除后失效。<br>通常来说，<code>forward_list</code>在使用灵活度上比不上list，因为它只能单向迭代元素，且提供的接口没有list多。然而，在内存的使用上，它是比list占优势的。当对内存的要求占首要位置时，应该选择<code>forward_list</code>。</li></ul>]]></content>
+    <content type="html"><![CDATA[<ul><li><a href="https://zh.cppreference.com/w/cpp/container/list" target="_blank" rel="noopener">cppreference</a></li></ul><h1 id="list"><a href="#list" class="headerlink" title="list"></a>list</h1><h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><ul><li>#include ＜list＞</li></ul><h2 id="底层数据结构"><a href="#底层数据结构" class="headerlink" title="底层数据结构"></a>底层数据结构</h2><ul><li>list同样是一个模板类，它底层数据结构为双向循环链表。因此，它支持任意位置常数时间的插入/删除操作，不支持快速随机访问。</li></ul><h2 id="内存分配策略"><a href="#内存分配策略" class="headerlink" title="内存分配策略"></a>内存分配策略</h2><ul><li>list的空间配置策略，自然是像我们普通双向链表那样，有多少元素申请多少内存。它不像vactor那样需要预留空间供新元素的分配，也不会因找不到连续的空间而引起整个容器的内存迁移。</li></ul><h2 id="迭代器失效问题"><a href="#迭代器失效问题" class="headerlink" title="迭代器失效问题"></a>迭代器失效问题</h2><ul><li>list 有一个重要性质：插入操作（insert）与接合操作（splice）都不会造成原有的list迭代器失效。这在vector是不成立的，因为vactor的插入可能引起空间的重新配置，导致原来的迭代器全部失效。list的迭代器失效，只会出现在删除的时候，指向删除元素的那个迭代器在删除后失效。<br>通常来说，<code>forward_list</code>在使用灵活度上比不上list，因为它只能单向迭代元素，且提供的接口没有list多。然而，在内存的使用上，它是比list占优势的。当对内存的要求占首要位置时，应该选择<code>forward_list</code>。</li></ul><h1 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h1><ul><li><p><code>list&lt;int&gt; c;</code>空链表</p></li><li><p><code>list&lt;int&gt; c1(3);</code> 建一个含三个默认值是0的元素的链表　</p></li></ul><ul><li><code>list&lt;int&gt; c2(5,2);</code> 建一个含五个元素的链表，值都是2　</li><li><code>list&lt;int&gt; c4(c2);</code> 建一个c2的copy链表</li></ul><ul><li><code>list&lt;int&gt; c5(c1.begin(),c1.end());</code> c5含c1一个区域的元素[_First, _Last)。</li></ul><h1 id="List常用操作函数"><a href="#List常用操作函数" class="headerlink" title="List常用操作函数"></a>List常用操作函数</h1><h1 id="list-的特点"><a href="#list-的特点" class="headerlink" title="list 的特点"></a>list 的特点</h1><ul><li>(1) 不使用连续的内存空间这样可以随意地进行动态操作；</li><li>(2) 可以在内部任何位置快速地插入或删除，当然也可以在两端进push 和pop 。</li><li>(3) 不能进行内部的随机访问，即不支持[ ] 操作符和<code>vector.at() ；</code></li><li>(4) 相对于verctor 占用更多的内存。</li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;list&quot;&gt;&lt;a href=&quot;#list&quot; class=&quot;headerlink&quot; title=&quot;list&quot;&gt;&lt;/a&gt;list&lt;/h1&gt;&lt;h2 id=&quot;头文件&quot;&gt;&lt;a href=&quot;#头文件&quot; class=&quot;headerlink&quot; title=&quot;头文件&quot;&gt;&lt;/a&gt;头文
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://zh.cppreference.com/w/cpp/container/list&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;cppreference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;list&quot;
       
     
     </summary>
@@ -283,9 +300,9 @@
     <link href="ctguljj.github.io/2019/03/08/stl/"/>
     <id>ctguljj.github.io/2019/03/08/stl/</id>
     <published>2019-03-08T05:38:37.000Z</published>
-    <updated>2019-03-09T06:31:54.662Z</updated>
+    <updated>2019-03-09T06:56:01.845Z</updated>
     
-    <content type="html"><![CDATA[<ul><li>注意，STL头文件没有扩展名.h</li><li>STL中默认是采用小于号来排序的</li><li><a href="http://www.cnblogs.com/QG-whz/p/5152963.html#_label2" target="_blank" rel="noopener">stl很好的介绍（原链接）</a></li></ul><h1 id="1-容器概论"><a href="#1-容器概论" class="headerlink" title="1.容器概论"></a>1.容器概论</h1><ul><li>容器，置物之所也。像桶可装水，碗可盛汤，C++的容器，可以存储对象。容器有多种，用来处理不同的元素操作诉求。按照元素存储到容器中以及访问方式的差异，容器分为顺序容器与关联容器。</li><li>顺序容器也称为序列式容器。序列式容器按元素插入的顺序存储元素，这些元素可以进行排序，但未必是有序的。C++本身内置了一个序列式容器array（数组），STL另外提供了vector,list,forward_list,deque,stack,queue,priority-queue，string等等序列式容器。</li><li>所有的容器都是基于模板实现的，因为容器必须保证能装得下各种各样的类型。其中，stack，queue都是基于deque来实现的，priority-queue基于heap来实现，从技术上来说它们属于容器适配器（adapter）。其中array与forward_list是C++11添加的新容器类型。</li></ul><h1 id="2-序列式容器"><a href="#2-序列式容器" class="headerlink" title="2.序列式容器"></a>2.序列式容器</h1><ul><li><p>向量(vector) 连续存储的元素<code>&lt;vector&gt;</code></p></li><li><p>列表(list) 由节点组成的双向链表，每个结点包含着一个元素<code>&lt;list&gt;</code></p></li><li><p>双端队列(deque) 连续存储的指向不同元素的指针所组成的数组<code>&lt;deque&gt;</code></p></li></ul><h1 id="3-适配器容器"><a href="#3-适配器容器" class="headerlink" title="3.适配器容器"></a>3.适配器容器</h1><ul><li><p>栈(stack) 后进先出的值的排列 <code>&lt;stack&gt;</code></p></li><li><p>队列(queue) 先进先出的值的排列<code>&lt;queue&gt;</code></p></li><li><p>优先队列(priority_queue) 元素的次序是由作用于所存储的值对上的某种谓词决定的的一种队列 <code>&lt;queue&gt;</code></p></li></ul><h1 id="4-关联式容器"><a href="#4-关联式容器" class="headerlink" title="4.关联式容器"></a>4.关联式容器</h1><ul><li><p>集合(set) 由节点组成的红黑树，每个节点都包含着一个元素，节点之间以某种作用于元素对的谓词排列，没有两个不同的元素能够拥有相同的次序<code>&lt;set&gt;</code></p></li><li><p>多重集合(multiset) 允许存在两个次序相等的元素的集合<code>&lt;set&gt;</code></p></li><li><p>映射(map) 由{键，值}对组成的集合，以某种作用于键对上的谓词排列 <code>&lt;map&gt;</code></p></li><li><p>多重映射(multimap) 允许键对有相等的次序的映射<code>&lt;map&gt;</code></p></li></ul><h1 id="5-容器适配器"><a href="#5-容器适配器" class="headerlink" title="5.容器适配器"></a>5.容器适配器</h1><ul><li>stack，也称为栈，是一种先进后出的数据结构。STL中的statck是一种容器适配器。所谓的容器适配器，是以某种容器作为底部容器，在底部容器之上修改接口，形成另一种风貌。stack默认以双端队列deque作为底部容器。stack没有提供迭代器，通过push/pop接口对栈顶元素进行操作。</li><li>queue，也称为队列，是一种先进先出的数据结构，它同样也是一种容器适配器。它的底部容器默认为deque。同样，queue也没有提供迭代器，通过push向队尾压入元素，pop从队首弹出元素。</li><li>priority-queue，优先队列，是一种拥有权值观念的队列，例如在以整数大小作为衡量的权值定义下，priority-queue总是弹出最大的数。priority-queue的底部数据结构默认是max-heap，大顶堆。</li></ul><h1 id="6-基础总结"><a href="#6-基础总结" class="headerlink" title="6.基础总结"></a>6.基础总结</h1><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/stl总结.png" alt=""></p><ul><li>注意：<ul><li>“尾部可高效插入/删除元素”，意味着在除了尾部之外的其他位置插入/删除元素是较低效的。</li><li>“顺序访问”意味着要访问某一个元素，必须遍历其他元素。</li><li>迭代器失效意味着指针、引用在同样的情况下也会失效。</li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<ul><li>注意，STL头文件没有扩展名.h</li><li>STL中默认是采用小于号来排序的</li><li><p><a href="http://www.cnblogs.com/QG-whz/p/5152963.html#_label2" target="_blank" rel="noopener">stl很好的介绍（原链接）</a></p></li><li><p><a href="https://zh.cppreference.com/w/cpp/container" target="_blank" rel="noopener">c++手册</a></p></li></ul><h1 id="1-容器概论"><a href="#1-容器概论" class="headerlink" title="1.容器概论"></a>1.容器概论</h1><ul><li>容器，置物之所也。像桶可装水，碗可盛汤，C++的容器，可以存储对象。容器有多种，用来处理不同的元素操作诉求。按照元素存储到容器中以及访问方式的差异，容器分为顺序容器与关联容器。</li><li>顺序容器也称为序列式容器。序列式容器按元素插入的顺序存储元素，这些元素可以进行排序，但未必是有序的。C++本身内置了一个序列式容器array（数组），STL另外提供了vector,list,forward_list,deque,stack,queue,priority-queue，string等等序列式容器。</li><li>所有的容器都是基于模板实现的，因为容器必须保证能装得下各种各样的类型。其中，stack，queue都是基于deque来实现的，priority-queue基于heap来实现，从技术上来说它们属于容器适配器（adapter）。其中array与forward_list是C++11添加的新容器类型。</li></ul><h1 id="2-序列式容器"><a href="#2-序列式容器" class="headerlink" title="2.序列式容器"></a>2.序列式容器</h1><ul><li><p>向量(vector) 连续存储的元素<code>&lt;vector&gt;</code></p></li><li><p>列表(list) 由节点组成的双向链表，每个结点包含着一个元素<code>&lt;list&gt;</code></p></li><li><p>双端队列(deque) 连续存储的指向不同元素的指针所组成的数组<code>&lt;deque&gt;</code></p></li></ul><h1 id="3-适配器容器"><a href="#3-适配器容器" class="headerlink" title="3.适配器容器"></a>3.适配器容器</h1><ul><li><p>栈(stack) 后进先出的值的排列 <code>&lt;stack&gt;</code></p></li><li><p>队列(queue) 先进先出的值的排列<code>&lt;queue&gt;</code></p></li><li><p>优先队列(priority_queue) 元素的次序是由作用于所存储的值对上的某种谓词决定的的一种队列 <code>&lt;queue&gt;</code></p></li></ul><h1 id="4-关联式容器"><a href="#4-关联式容器" class="headerlink" title="4.关联式容器"></a>4.关联式容器</h1><ul><li><p>集合(set) 由节点组成的红黑树，每个节点都包含着一个元素，节点之间以某种作用于元素对的谓词排列，没有两个不同的元素能够拥有相同的次序<code>&lt;set&gt;</code></p></li><li><p>多重集合(multiset) 允许存在两个次序相等的元素的集合<code>&lt;set&gt;</code></p></li><li><p>映射(map) 由{键，值}对组成的集合，以某种作用于键对上的谓词排列 <code>&lt;map&gt;</code></p></li><li><p>多重映射(multimap) 允许键对有相等的次序的映射<code>&lt;map&gt;</code></p></li></ul><h1 id="5-容器适配器"><a href="#5-容器适配器" class="headerlink" title="5.容器适配器"></a>5.容器适配器</h1><ul><li>stack，也称为栈，是一种先进后出的数据结构。STL中的statck是一种容器适配器。所谓的容器适配器，是以某种容器作为底部容器，在底部容器之上修改接口，形成另一种风貌。stack默认以双端队列deque作为底部容器。stack没有提供迭代器，通过push/pop接口对栈顶元素进行操作。</li><li>queue，也称为队列，是一种先进先出的数据结构，它同样也是一种容器适配器。它的底部容器默认为deque。同样，queue也没有提供迭代器，通过push向队尾压入元素，pop从队首弹出元素。</li><li>priority-queue，优先队列，是一种拥有权值观念的队列，例如在以整数大小作为衡量的权值定义下，priority-queue总是弹出最大的数。priority-queue的底部数据结构默认是max-heap，大顶堆。</li></ul><h1 id="6-基础总结"><a href="#6-基础总结" class="headerlink" title="6.基础总结"></a>6.基础总结</h1><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/stl总结.png" alt=""></p><ul><li>注意：<ul><li>“尾部可高效插入/删除元素”，意味着在除了尾部之外的其他位置插入/删除元素是较低效的。</li><li>“顺序访问”意味着要访问某一个元素，必须遍历其他元素。</li><li>迭代器失效意味着指针、引用在同样的情况下也会失效。</li></ul></li></ul>]]></content>
     
     <summary type="html">
     
@@ -294,7 +311,7 @@
         &lt;ul&gt;
 &lt;li&gt;注意，STL头文件没有扩展名.h&lt;/li&gt;
 &lt;li&gt;STL中默认是采用小于号来排序的&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/QG-whz/p/5152963.html#_label2&quot; target=&quot;_blank&quot; 
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/QG-whz/p/5152963.html#_label2&quot; target=&quot;_blan
       
     
     </summary>
