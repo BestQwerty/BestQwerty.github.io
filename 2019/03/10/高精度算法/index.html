@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="前言:由于计算机运算是有模运算,数据范围的表示有一定限制,如整型int(C++中int 与long相同)表达范围是(-2^31~2^31-1),unsigned long(无符号整数)是(0~2^32-1),都约为几十亿.如果采用实数型,则能保存最大的double只能提供15~16位的有效数字,即只能精确表达数百万亿的数.因此,在计算位数超过十几位的数时,不能采用现有类型,只能自己编程计算.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-10T14:52:32.352Z">
+<meta property="og:updated_time" content="2019-03-10T15:35:54.329Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="高精度算法">
 <meta name="twitter:description" content="前言:由于计算机运算是有模运算,数据范围的表示有一定限制,如整型int(C++中int 与long相同)表达范围是(-2^31~2^31-1),unsigned long(无符号整数)是(0~2^32-1),都约为几十亿.如果采用实数型,则能保存最大的double只能提供15~16位的有效数字,即只能精确表达数百万亿的数.因此,在计算位数超过十几位的数时,不能采用现有类型,只能自己编程计算.">
@@ -346,7 +346,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-10T22:52:32+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-10T23:35:54+08:00">
                 2019-03-10
               </time>
             
@@ -392,7 +392,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">2k(字)</span> 
+					<span class="post-count">2.2k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -499,6 +499,13 @@
 <h1 id="高精度乘法1-高精度乘单精度数，单精度数是指通常的整型数"><a href="#高精度乘法1-高精度乘单精度数，单精度数是指通常的整型数" class="headerlink" title="高精度乘法1(高精度乘单精度数，单精度数是指通常的整型数)"></a>高精度乘法1(高精度乘单精度数，单精度数是指通常的整型数)</h1><p><span id="inline-toc">1.</span><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">multi1</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">long</span>  key)</span> <span class="comment">//a=a*key,key是单精度数  </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i,k;</span><br><span class="line">	<span class="keyword">if</span> (key==<span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">memset</span>(a,<span class="number">0</span>,<span class="keyword">sizeof</span>(a));</span><br><span class="line">		a[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125; <span class="comment">//单独处理key=0</span></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=a[<span class="number">0</span>];i++)</span><br><span class="line">		a[i]=a[i]*key;<span class="comment">//先每位乘起来</span></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=a[<span class="number">0</span>];i++)</span><br><span class="line">	&#123;</span><br><span class="line">		a[i+<span class="number">1</span>]+=a[i]/<span class="number">10</span>;</span><br><span class="line">		a[i]%=<span class="number">10</span>;</span><br><span class="line">	&#125; <span class="comment">//进位</span></span><br><span class="line">	<span class="comment">//注意上一语句退出时i=a[0]+1</span></span><br><span class="line">	<span class="keyword">while</span>(a[i]&gt;<span class="number">0</span>)</span><br><span class="line">	 &#123;</span><br><span class="line">		a[i+<span class="number">1</span>]=a[i]/<span class="number">10</span>;</span><br><span class="line">		a[i]=a[i]%<span class="number">10</span>;</span><br><span class="line">		i++;</span><br><span class="line">		a[<span class="number">0</span>]++;</span><br><span class="line">	&#125;  <span class="comment">//继续处理超过原a[0]位数的进位,修正a的位数</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p><span id="inline-toc">2.</span></p>
 <p>待续</p>
+<h1 id="高精度除以低精度"><a href="#高精度除以低精度" class="headerlink" title="高精度除以低精度"></a>高精度除以低精度</h1><ul>
+<li>算法：按照从高位到低位的顺序，逐位相除。在除到第j位时，该位在接受了来自第j+1位的余数后与除数相除，如果最高位为零，则商的长度减一</li>
+</ul>
+<p><span id="inline-toc">1.</span><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span>  <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span>   N  500</span></span><br><span class="line">main()</span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">int</span>  a[N] = &#123;<span class="number">0</span>&#125;, c[N] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">  <span class="keyword">int</span>  i, k, d, b;</span><br><span class="line">  <span class="keyword">char</span>  a1[N];  </span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Input 除数:"</span>);</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;b);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Input 被除数:"</span>);</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%s"</span>, a1);</span><br><span class="line">  k = <span class="built_in">strlen</span>(a1);</span><br><span class="line">  <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; k; i++)  a[i] = a1[k - i - <span class="number">1</span>] - <span class="string">'0'</span>;</span><br><span class="line">  d = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(i = k - <span class="number">1</span>; i &gt;= <span class="number">0</span> ; i--)</span><br><span class="line">  &#123;</span><br><span class="line">     d = d * <span class="number">10</span> + a[i];</span><br><span class="line">     c[i] = d / b;</span><br><span class="line">     d = d % b;      </span><br><span class="line">  &#125;   </span><br><span class="line">  <span class="keyword">while</span>(c[k - <span class="number">1</span>] == <span class="number">0</span> &amp;&amp; k &gt; <span class="number">1</span>)  k--;  </span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"商="</span>);</span><br><span class="line">  <span class="keyword">for</span>(i = k - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)  <span class="built_in">printf</span>(<span class="string">"%d"</span>, c[i]);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"\n余数=%d"</span>, d);   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><span id="inline-toc">2.</span></p>
+<p>待续</p>
+<p># </p>
 
       
     </div>
@@ -730,7 +737,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#高精度数的存储"><span class="nav-number">1.</span> <span class="nav-text">高精度数的存储</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高精度数的比较"><span class="nav-number">2.</span> <span class="nav-text">高精度数的比较</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高精度数的加法"><span class="nav-number">3.</span> <span class="nav-text">高精度数的加法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高精度数的减法"><span class="nav-number">4.</span> <span class="nav-text">高精度数的减法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高精度乘法1-高精度乘单精度数，单精度数是指通常的整型数"><span class="nav-number">5.</span> <span class="nav-text">高精度乘法1(高精度乘单精度数，单精度数是指通常的整型数)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#高精度数的存储"><span class="nav-number">1.</span> <span class="nav-text">高精度数的存储</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高精度数的比较"><span class="nav-number">2.</span> <span class="nav-text">高精度数的比较</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高精度数的加法"><span class="nav-number">3.</span> <span class="nav-text">高精度数的加法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高精度数的减法"><span class="nav-number">4.</span> <span class="nav-text">高精度数的减法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高精度乘法1-高精度乘单精度数，单精度数是指通常的整型数"><span class="nav-number">5.</span> <span class="nav-text">高精度乘法1(高精度乘单精度数，单精度数是指通常的整型数)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高精度除以低精度"><span class="nav-number">6.</span> <span class="nav-text">高精度除以低精度</span></a></li></ol></div>
             
 
           </div>
@@ -771,7 +778,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">15.1k</span>
+    <span title="Site words total count">15.3k</span>
   
 </div>
 
