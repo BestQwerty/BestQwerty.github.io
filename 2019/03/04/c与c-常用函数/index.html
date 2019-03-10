@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="常用函数 max, min, fill, memset, sort, swap  字符串函数 字符串比较函数strcmp因为原理是两个字符串一个个比较，所以可以比较字符是否相同！！！！！如果把序号按字符串存储，则会可以通过strcmp比较序号是否相同。(有用) Strlen函数如果没有遇到’\0’，会一直计算下去，字符串二维数组不可以用strlen，因为二维数组每一行相当于一个字符串一维数组，每一">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-10T02:27:22.830Z">
+<meta property="og:updated_time" content="2019-03-10T02:58:23.166Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="c与c++常用函数">
 <meta name="twitter:description" content="常用函数 max, min, fill, memset, sort, swap  字符串函数 字符串比较函数strcmp因为原理是两个字符串一个个比较，所以可以比较字符是否相同！！！！！如果把序号按字符串存储，则会可以通过strcmp比较序号是否相同。(有用) Strlen函数如果没有遇到’\0’，会一直计算下去，字符串二维数组不可以用strlen，因为二维数组每一行相当于一个字符串一维数组，每一">
@@ -346,7 +346,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-10T10:27:22+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-10T10:58:23+08:00">
                 2019-03-10
               </time>
             
@@ -392,7 +392,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">1.9k(字)</span> 
+					<span class="post-count">2.1k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -456,6 +456,13 @@
 <h1 id="字符串函数"><a href="#字符串函数" class="headerlink" title="字符串函数"></a>字符串函数</h1><ul>
 <li>字符串比较函数strcmp因为原理是两个字符串一个个比较，所以可以比较字符是否相同！！！！！<div class="note success"><p>如果把序号按字符串存储，则会可以通过strcmp比较序号是否相同。</p></div>(有用)</li>
 <li>Strlen函数如果没有遇到’\0’，会一直计算下去，字符串二维数组不可以用strlen，因为二维数组每一行相当于一个字符串一维数组，每一行都有’\0’！</li>
+<li>c++标准库里字符串相关函数的声明，凡是不修改内容的地方一律声明为<code>const char *</code>, <code>strlen(const char *)</code>,<code>strcmp(const char *, const char *)</code>,<code>strcpy(char *, const char *)</code>第一个参数会被修改  </li>
+</ul>
+<h2 id="strcpy函数"><a href="#strcpy函数" class="headerlink" title="strcpy函数"></a>strcpy函数</h2><ul>
+<li>原型声明：<code>char *strcpy(char* dest, const char *src);</code></li>
+<li>功能：把从src地址开始且含有NULL结束符的字符串复制到以dest开始的地址空间</li>
+<li>说明：src和dest所指内存区域不可以重叠且dest必须有足够的空间来容纳src的字符串。</li>
+<li><strong>返回指向dest的指针。</strong>对于出现异常的情况ANSI-C99标准并未定义，故由实现者决定返回值，通常为NULL。</li>
 </ul>
 <h1 id="tolower函数"><a href="#tolower函数" class="headerlink" title="tolower函数"></a>tolower函数</h1><ul>
 <li>定义函数：int tolower(int c);</li>
@@ -755,7 +762,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常用函数"><span class="nav-number">1.</span> <span class="nav-text">常用函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串函数"><span class="nav-number">2.</span> <span class="nav-text">字符串函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tolower函数"><span class="nav-number">3.</span> <span class="nav-text">tolower函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fill函数"><span class="nav-number">4.</span> <span class="nav-text">fill函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#与memset-函数的区别："><span class="nav-number">4.1.</span> <span class="nav-text">与memset()函数的区别：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fill-n函数"><span class="nav-number">5.</span> <span class="nav-text">fill_n函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#memset函数"><span class="nav-number">6.</span> <span class="nav-text">memset函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#INF小知识"><span class="nav-number">6.0.1.</span> <span class="nav-text">INF小知识</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#转换函数"><span class="nav-number">7.</span> <span class="nav-text">转换函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#atoi-函数"><span class="nav-number">7.1.</span> <span class="nav-text">atoi()函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#atol函数"><span class="nav-number">7.2.</span> <span class="nav-text">atol函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#atof函数"><span class="nav-number">7.3.</span> <span class="nav-text">atof函数</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常用函数"><span class="nav-number">1.</span> <span class="nav-text">常用函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串函数"><span class="nav-number">2.</span> <span class="nav-text">字符串函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#strcpy函数"><span class="nav-number">2.1.</span> <span class="nav-text">strcpy函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tolower函数"><span class="nav-number">3.</span> <span class="nav-text">tolower函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fill函数"><span class="nav-number">4.</span> <span class="nav-text">fill函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#与memset-函数的区别："><span class="nav-number">4.1.</span> <span class="nav-text">与memset()函数的区别：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fill-n函数"><span class="nav-number">5.</span> <span class="nav-text">fill_n函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#memset函数"><span class="nav-number">6.</span> <span class="nav-text">memset函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#INF小知识"><span class="nav-number">6.0.1.</span> <span class="nav-text">INF小知识</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#转换函数"><span class="nav-number">7.</span> <span class="nav-text">转换函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#atoi-函数"><span class="nav-number">7.1.</span> <span class="nav-text">atoi()函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#atol函数"><span class="nav-number">7.2.</span> <span class="nav-text">atol函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#atof函数"><span class="nav-number">7.3.</span> <span class="nav-text">atof函数</span></a></li></ol></li></div>
             
 
           </div>
@@ -796,7 +803,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">12.8k</span>
+    <span title="Site words total count">12.9k</span>
   
 </div>
 
