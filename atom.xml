@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-03-10T14:52:32.352Z</updated>
+  <updated>2019-03-10T14:56:58.355Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>string</title>
+    <link href="ctguljj.github.io/2019/03/10/string/"/>
+    <id>ctguljj.github.io/2019/03/10/string/</id>
+    <published>2019-03-10T14:53:23.000Z</published>
+    <updated>2019-03-10T14:56:58.355Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="string"><a href="#string" class="headerlink" title="string"></a>string</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">string</span> a, b;</span><br><span class="line">.....</span><br><span class="line">a = a + b;<span class="comment">//将a+b前后连接，对于string来说有些符号重载定义</span></span><br><span class="line"><span class="comment">// ‘ + ’暂且理解为前后连接，所以前后不同，结果不同</span></span><br><span class="line"><span class="comment">//string作为容器，可以和字符串、字符相加，也可以和string相加</span></span><br><span class="line"><span class="comment">//具体原因不知道</span></span><br><span class="line"><span class="comment">//待续</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;string&quot;&gt;&lt;a href=&quot;#string&quot; class=&quot;headerlink&quot; title=&quot;string&quot;&gt;&lt;/a&gt;string&lt;/h1&gt;&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutte
+      
+    
+    </summary>
+    
+      <category term="stl" scheme="ctguljj.github.io/categories/stl/"/>
+    
+      <category term="string" scheme="ctguljj.github.io/categories/stl/string/"/>
+    
+    
+      <category term="stl" scheme="ctguljj.github.io/tags/stl/"/>
+    
+  </entry>
   
   <entry>
     <title>高精度算法</title>
@@ -544,34 +571,6 @@
       
     
     </summary>
-    
-    
-      <category term="算法" scheme="ctguljj.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>分治法</title>
-    <link href="ctguljj.github.io/2019/03/05/%E5%88%86%E6%B2%BB%E6%B3%95/"/>
-    <id>ctguljj.github.io/2019/03/05/分治法/</id>
-    <published>2019-03-05T13:33:34.000Z</published>
-    <updated>2019-03-10T06:33:41.354Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="分治法"><a href="#分治法" class="headerlink" title="分治法"></a>分治法</h1><ul><li>这个技巧是很多高效算法的基础，如排序算法(快速排序，归并排序)，傅立叶变换(快速傅立叶变换)……<h2 id="可使用分治法求解的一些经典问题"><a href="#可使用分治法求解的一些经典问题" class="headerlink" title="可使用分治法求解的一些经典问题"></a>可使用分治法求解的一些经典问题</h2></li><li>（1）二分搜索<br>（2）大整数乘法<br>（3）Strassen矩阵乘法<br>（4）棋盘覆盖<br>（5）合并排序<br>（6）快速排序<br>（7）线性时间选择<br>（8）最接近点对问题<br>（9）循环赛日程表<br>（10）汉诺塔</li></ul><p>-</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;分治法&quot;&gt;&lt;a href=&quot;#分治法&quot; class=&quot;headerlink&quot; title=&quot;分治法&quot;&gt;&lt;/a&gt;分治法&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;这个技巧是很多高效算法的基础，如排序算法(快速排序，归并排序)，傅立叶变换(快速傅立叶变换)……&lt;h2 id=&quot;可使用分
-      
-    
-    </summary>
-    
-      <category term="算法" scheme="ctguljj.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-      <category term="分治法" scheme="ctguljj.github.io/categories/%E7%AE%97%E6%B3%95/%E5%88%86%E6%B2%BB%E6%B3%95/"/>
     
     
       <category term="算法" scheme="ctguljj.github.io/tags/%E7%AE%97%E6%B3%95/"/>
