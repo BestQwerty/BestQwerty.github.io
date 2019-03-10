@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[高精度算法]]></title>
+    <url>%2F2019%2F03%2F10%2F%E9%AB%98%E7%B2%BE%E5%BA%A6%E7%AE%97%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[前言:由于计算机运算是有模运算,数据范围的表示有一定限制,如整型int(C++中int 与long相同)表达范围是(-2^31~2^31-1),unsigned long(无符号整数)是(0~2^32-1),都约为几十亿.如果采用实数型,则能保存最大的double只能提供15~16位的有效数字,即只能精确表达数百万亿的数.因此,在计算位数超过十几位的数时,不能采用现有类型,只能自己编程计算. 由于数计算时可能要进位,因此为了方便,将数由低位到高位依次存在数组下标对应由低到高位置上,另外,我们申请数组大小时,一般考虑了最大的情况,在很多情况下,表示有富余,即高位有很多0,可能造成无效的运算和判断,因此,我们一般将数组的第0个下标对应位置来存储该数的位数.如数:3485(三千四百八十五)，表达在数组a[10]上情况是: 下标 0 1 2 3 4 5 6 7 8 9内容 4 5 8 4 3 0 0 0 0 0 说明：位数 个位 十位 百位 千位 面对高精度类型的题我们只需要像竖式一样从低位到高位计算，最后进行处理 注：高精度计算时一般用正数，对于负数，通过处理符号位的修正 memset可用fill代替 高精度数的存储 １．如对数采用的字符串输入 123456789101112131415#include &lt;iostream&gt;#include &lt;cstring&gt;using namespace std;const int N=100;//最多100位int main()&#123; int a[N+1],i; string s1; cin&gt;&gt;s1;//数s1 memset(a,0,sizeof(a)); //数组清0 a[0]=s1.length(); //位数 for(i=1;i&lt;=a[0];i++) a[i]=s1[a[0]-i]-'0';//将字符转为数字并倒序存储． return 0;&#125; 2.直接读入 12345678910111213141516171819#include &lt;iostream&gt;using namespace std;const int N=100;//最多100位int main()&#123; int a[N+1],i,s,key; cin&gt;&gt;key;//数key memset(a,0,sizeof(a)); //数组清0 i=0;//第0位 while(key) //当key大于0 &#123; a[++i]=key%10;//取第i位的数 key=key/10; &#125; a[0]=i; //共i位数 return 0;&#125; 3.直接初始化(用a[]存储) 初始化为0: memset(a,0,sizeof(a)); 初始化为1: memset(a,0,sizeof(a));a[0]=1;a[1]=1; 以下程序都只写函数，不写完整程序，所有高精度数存储都满足上述约定。 高精度数的比较123456789101112131415161718int compare(int a[],int b[]) //比较a和b的大小关系，若a&gt;b则为1，a&lt;b则为-1,a=b则为0&#123; int i; if (a[0]&gt;b[0]) return 1;//a的位数大于b则a比b大 if (a[0]&lt;b[0]) return -1;//a的位数小于b则a比b小 for(i=a[0];i&gt;0;i--) //从高位到低位比较 &#123; if (a[i]&gt;b[i]) return 1; if (a[i]&lt;b[i]) return -1; &#125; return 0;//各位都相等则两数相等。&#125; 高精度数的加法12345678910111213141516int plus(int a[],int b[]) //计算a=a+b&#123; int i,k; k=a[0]&gt;b[0]?a[0]:b[0]; //k是a和b中位数最大的一个的位数 for(i=1;i&lt;=k;i++) &#123; a[i+1]+=(a[i]+b[i])/10; //若有进位，则先进位 a[i]=(a[i]+b[i])%10; &#125; //计算当前位数字,注意：这条语句与上一条不能交换。 if(a[k+1]&gt;0) a[0]=k+1; //修正新的a的位数（a+b最多只能的一个进位） else a[0]=k; return 0;&#125; 高精度数的减法12345678910111213141516171819202122232425262728293031323334353637383940414243int gminus(int a[],int b[]);//计算a=a-b，返加符号位0:正数 1:负数&#123; int flag,i flag=compare(a,b); //调用比较函数判断大小 if (falg==0)//相等 &#123; memset(a,0,sizeof(a)); return 0; &#125; //若a=b，则a=0,也可在return前加一句a[0]=1,表示是 1位数0 if(flag==1) //大于 &#123; for(i=1;i&lt;=a[0];i++) &#123; if(a[i]&lt;b[i]) &#123; a[i+1]--; a[i]+=10; &#125; //若不够减则向上借一位 a[i]=a[i]-b[i]; &#125; while(a[a[0]]==0) a[0]--; //修正a的位数 return 0; &#125; if (flag==-1)//小于 则用a=b-a,返回-1 &#123; for(i=1;i&lt;=b[0];i++) &#123; if(b[i]&lt;a[i]) &#123; b[i+1]--; b[i]+=10; &#125; //若不够减则向上借一位 a[i]=b[i]-a[i]; &#125; a[0]=b[0]; while(a[a[0]]==0) a[0]--; //修正a的位数 return -1; &#125;&#125; 高精度乘法1(高精度乘单精度数，单精度数是指通常的整型数)12345678910111213141516171819202122232425262728int multi1(int a[],long key) //a=a*key,key是单精度数 &#123; int i,k; if (key==0) &#123; memset(a,0,sizeof(a)); a[0]=1; return 0; &#125; //单独处理key=0 for(i=1;i&lt;=a[0];i++) a[i]=a[i]*key;//先每位乘起来 for(i=1;i&lt;=a[0];i++) &#123; a[i+1]+=a[i]/10; a[i]%=10; &#125; //进位 //注意上一语句退出时i=a[0]+1 while(a[i]&gt;0) &#123; a[i+1]=a[i]/10; a[i]=a[i]%10; i++; a[0]++; &#125; //继续处理超过原a[0]位数的进位,修正a的位数 return 0;&#125;]]></content>
+      <categories>
+        <category>算法</category>
+        <category>高精度算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[char与string转换]]></title>
+    <url>%2F2019%2F03%2F10%2Fchar%E4%B8%8Estring%E8%BD%AC%E6%8D%A2%2F</url>
+    <content type="text"><![CDATA[#]]></content>
+      <categories>
+        <category>c++</category>
+        <category>string</category>
+      </categories>
+      <tags>
+        <tag>c++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[c++find函数]]></title>
     <url>%2F2019%2F03%2F09%2Fc-find%E5%87%BD%E6%95%B0%2F</url>
     <content type="text"><![CDATA[find函数 find用在容器中更加普遍，而algorithm中其实find函数只是一种 C++find函数原型： 123456789101112template&lt;class InputIterator, class T&gt; InputIterator find (InputIterator first, InputIterator last, const T&amp; val)&#123; while (first!=last) &#123; if (*first==val) return first; ++first; &#125; return last;&#125;如果没找到对应的关键元素，会返回end(),最后一个元素的后一位。 其中，find()算法的前两个参数都是某个容器的迭代器，用于指定查找的起始位置和终止位置；第三个参数就是要查找的内容，它的数据类型跟容器中数据的类型相同。这里需要注意的是，find()算法会利用“==”操作符将这里的目标内容跟容器中的数据元素进行相等比较，以确定某个元素是否符合条件，所以，这里的数据类型必须支持“==”操作符进行相等比较。对于基本数据类型而言，它们已经天然支持无需我们操心，如果是自定义的数据类型，则需要重载“==”操作符以支持相等比较。 各个容器自己实现的成员函数 vector没有实现find函数，除此之外，常见容器都实现了自己的find函数，如set，map，string String是这一种顺序存储结构，其find函数返回的是下标索引。set,map,multiset,multimap都不是顺序索引的数据结构，所以返回的是迭代器。 为什么返回的不是索引下标？这是因为索引下标是在数组这种连续存储的数据结构里面常见的，是一种顺序索引；而很多数据结构的存储并非连续的，不能实现顺序索引，为了兼顾所有的数据结构，所以返回的仅仅是指针或是迭代器。如果元素不在对于返回迭代器的查找，通过判断find（a.begin(),a.end(),value）==a.end()，来判断元素是否存在对于string，通过a.find(val)==string::npos判断]]></content>
@@ -191,7 +215,7 @@
   <entry>
     <title><![CDATA[分治法]]></title>
     <url>%2F2019%2F03%2F05%2F%E5%88%86%E6%B2%BB%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[分治法可使用分治法求解的一些经典问题 （1）二分搜索（2）大整数乘法（3）Strassen矩阵乘法（4）棋盘覆盖（5）合并排序（6）快速排序（7）线性时间选择（8）最接近点对问题（9）循环赛日程表（10）汉诺塔 -]]></content>
+    <content type="text"><![CDATA[分治法 这个技巧是很多高效算法的基础，如排序算法(快速排序，归并排序)，傅立叶变换(快速傅立叶变换)……可使用分治法求解的一些经典问题 （1）二分搜索（2）大整数乘法（3）Strassen矩阵乘法（4）棋盘覆盖（5）合并排序（6）快速排序（7）线性时间选择（8）最接近点对问题（9）循环赛日程表（10）汉诺塔 -]]></content>
       <categories>
         <category>算法</category>
         <category>分治法</category>
