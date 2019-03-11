@@ -90,7 +90,7 @@
 <meta property="og:description" content="注意，STL头文件没有扩展名.h STL中默认是采用小于号来排序的 stl很好的介绍（原链接）  c++手册   1.容器概论 容器，置物之所也。像桶可装水，碗可盛汤，C++的容器，可以存储对象。容器有多种，用来处理不同的元素操作诉求。按照元素存储到容器中以及访问方式的差异，容器分为顺序容器与关联容器。 顺序容器也称为序列式容器。序列式容器按元素插入的顺序存储元素，这些元素可以进行排序，但未必是">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/stl总结.png">
-<meta property="og:updated_time" content="2019-03-09T06:56:01.845Z">
+<meta property="og:updated_time" content="2019-03-11T10:38:47.267Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="stl介绍">
 <meta name="twitter:description" content="注意，STL头文件没有扩展名.h STL中默认是采用小于号来排序的 stl很好的介绍（原链接）  c++手册   1.容器概论 容器，置物之所也。像桶可装水，碗可盛汤，C++的容器，可以存储对象。容器有多种，用来处理不同的元素操作诉求。按照元素存储到容器中以及访问方式的差异，容器分为顺序容器与关联容器。 顺序容器也称为序列式容器。序列式容器按元素插入的顺序存储元素，这些元素可以进行排序，但未必是">
@@ -348,8 +348,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-09T14:56:01+08:00">
-                2019-03-09
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-11T18:38:47+08:00">
+                2019-03-11
               </time>
             
           </span>
@@ -383,7 +383,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">904(字)</span> 
+					<span class="post-count">1.3k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -454,7 +454,7 @@
 <li>顺序容器也称为序列式容器。序列式容器按元素插入的顺序存储元素，这些元素可以进行排序，但未必是有序的。C++本身内置了一个序列式容器array（数组），STL另外提供了vector,list,forward_list,deque,stack,queue,priority-queue，string等等序列式容器。</li>
 <li>所有的容器都是基于模板实现的，因为容器必须保证能装得下各种各样的类型。其中，stack，queue都是基于deque来实现的，priority-queue基于heap来实现，从技术上来说它们属于容器适配器（adapter）。其中array与forward_list是C++11添加的新容器类型。</li>
 </ul>
-<h1 id="2-序列式容器"><a href="#2-序列式容器" class="headerlink" title="2.序列式容器"></a>2.序列式容器</h1><ul>
+<h1 id="2-序列式容器（顺序容器）"><a href="#2-序列式容器（顺序容器）" class="headerlink" title="2.序列式容器（顺序容器）"></a>2.序列式容器（顺序容器）</h1><ul>
 <li><p>向量(vector) 连续存储的元素<code>&lt;vector&gt;</code></p>
 </li>
 <li><p>列表(list) 由节点组成的双向链表，每个结点包含着一个元素<code>&lt;list&gt;</code></p>
@@ -471,6 +471,7 @@
 </li>
 </ul>
 <h1 id="4-关联式容器"><a href="#4-关联式容器" class="headerlink" title="4.关联式容器"></a>4.关联式容器</h1><ul>
+<li>关联容器内的元素是排序的。插入元素时，容器会按一定的排序规则将元素放到适当的位置上，因此插入元素时不能指定位置。</li>
 <li><p>集合(set) 由节点组成的红黑树，每个节点都包含着一个元素，节点之间以某种作用于元素对的谓词排列，没有两个不同的元素能够拥有相同的次序<code>&lt;set&gt;</code></p>
 </li>
 <li><p>多重集合(multiset) 允许存在两个次序相等的元素的集合<code>&lt;set&gt;</code></p>
@@ -487,10 +488,38 @@
 </ul>
 <h1 id="6-基础总结"><a href="#6-基础总结" class="headerlink" title="6.基础总结"></a>6.基础总结</h1><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/stl总结.png" alt=""></p>
 <ul>
-<li>注意：<ul>
+<li><p>注意：</p>
+<ul>
 <li>“尾部可高效插入/删除元素”，意味着在除了尾部之外的其他位置插入/删除元素是较低效的。</li>
 <li>“顺序访问”意味着要访问某一个元素，必须遍历其他元素。</li>
 <li>迭代器失效意味着指针、引用在同样的情况下也会失效。</li>
+</ul>
+</li>
+<li><p>所有容器都有以下两个成员函数： </p>
+<ul>
+<li>int size()：返回容器对象中元素的个数。</li>
+<li>bool empty()：判断容器对象是否为空。</li>
+</ul>
+</li>
+<li><p>顺序容器和关联容器还有以下成员函数： </p>
+<ul>
+<li>begin()：返回指向容器中第一个元素的迭代器。</li>
+<li>end()：返回指向容器中最后一个元素后面的位置的迭代器。</li>
+<li>rbegin()：返回指向容器中最后一个元素的反向迭代器。</li>
+<li>rend()：返回指向容器中第一个元素前面的位置的反向迭代器。</li>
+<li>erase(…)：从容器中删除一个或几个元素。该函数参数较复杂，此处省略。</li>
+<li>clear()：从容器中删除所有元素。</li>
+</ul>
+</li>
+<li><p>如果一个容器是空的，则 begin() 和 end() 的返回值相等，rbegin() 和 rend() 的返回值也相等。</p>
+</li>
+<li><p>顺序容器还有以下常用成员函数： </p>
+<ul>
+<li>front()：返回容器中第一个元素的引用。</li>
+<li>back()：返回容器中最后一个元素的引用。</li>
+<li>push_back()：在容器末尾增加新元素。</li>
+<li>pop_back()：删除容器末尾的元素。</li>
+<li>insert(…)：插入一个或多个元素。该函数参数较复杂，此处省略。</li>
 </ul>
 </li>
 </ul>
@@ -725,7 +754,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-容器概论"><span class="nav-number">1.</span> <span class="nav-text">1.容器概论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-序列式容器"><span class="nav-number">2.</span> <span class="nav-text">2.序列式容器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-适配器容器"><span class="nav-number">3.</span> <span class="nav-text">3.适配器容器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-关联式容器"><span class="nav-number">4.</span> <span class="nav-text">4.关联式容器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-容器适配器"><span class="nav-number">5.</span> <span class="nav-text">5.容器适配器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-基础总结"><span class="nav-number">6.</span> <span class="nav-text">6.基础总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-容器概论"><span class="nav-number">1.</span> <span class="nav-text">1.容器概论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-序列式容器（顺序容器）"><span class="nav-number">2.</span> <span class="nav-text">2.序列式容器（顺序容器）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-适配器容器"><span class="nav-number">3.</span> <span class="nav-text">3.适配器容器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-关联式容器"><span class="nav-number">4.</span> <span class="nav-text">4.关联式容器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-容器适配器"><span class="nav-number">5.</span> <span class="nav-text">5.容器适配器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-基础总结"><span class="nav-number">6.</span> <span class="nav-text">6.基础总结</span></a></li></ol></div>
             
 
           </div>
@@ -766,7 +795,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">16.1k</span>
+    <span title="Site words total count">16.5k</span>
   
 </div>
 
