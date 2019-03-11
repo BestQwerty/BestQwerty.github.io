@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="sort函数 默认的为升序 第三参数——比较函数。比较函数是一个自己定义的函数，返回值是bool型(一般)，它规定了什么样的关系 排序的数据类型不局限于整数，只要是定义了小于运算的类型都可以，比如字符串类string。 如果是没有定义小于运算的数据类型，或者想改变排序的顺序，就要用到第三参数——比较函数。 vector&amp;lt;int&amp;gt; v;   sort(v.begin(), v.end()">
+<meta name="description" content="前言 排序算法需要通过随机访问迭代器来访问容器中的元素，因此有的容器就不支持排序算法。 STL容器的排序，支持随机访问的容器vector,deque,string没有sort成员，可调用std::sort排序；list排序调用自带的list::sort。 注意std::sort 要求随机访问迭代器且不能用于 list 。此函数与 std::sort 的区别在于，它不要求 list 的元素类型可交换">
 <meta name="keywords" content="常用函数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sort函数">
 <meta property="og:url" content="ctguljj.github.io/2019/03/08/sort函数/index.html">
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
-<meta property="og:description" content="sort函数 默认的为升序 第三参数——比较函数。比较函数是一个自己定义的函数，返回值是bool型(一般)，它规定了什么样的关系 排序的数据类型不局限于整数，只要是定义了小于运算的类型都可以，比如字符串类string。 如果是没有定义小于运算的数据类型，或者想改变排序的顺序，就要用到第三参数——比较函数。 vector&amp;lt;int&amp;gt; v;   sort(v.begin(), v.end()">
+<meta property="og:description" content="前言 排序算法需要通过随机访问迭代器来访问容器中的元素，因此有的容器就不支持排序算法。 STL容器的排序，支持随机访问的容器vector,deque,string没有sort成员，可调用std::sort排序；list排序调用自带的list::sort。 注意std::sort 要求随机访问迭代器且不能用于 list 。此函数与 std::sort 的区别在于，它不要求 list 的元素类型可交换">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-08T11:54:18.843Z">
+<meta property="og:updated_time" content="2019-03-11T10:17:47.609Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sort函数">
-<meta name="twitter:description" content="sort函数 默认的为升序 第三参数——比较函数。比较函数是一个自己定义的函数，返回值是bool型(一般)，它规定了什么样的关系 排序的数据类型不局限于整数，只要是定义了小于运算的类型都可以，比如字符串类string。 如果是没有定义小于运算的数据类型，或者想改变排序的顺序，就要用到第三参数——比较函数。 vector&amp;lt;int&amp;gt; v;   sort(v.begin(), v.end()">
+<meta name="twitter:description" content="前言 排序算法需要通过随机访问迭代器来访问容器中的元素，因此有的容器就不支持排序算法。 STL容器的排序，支持随机访问的容器vector,deque,string没有sort成员，可调用std::sort排序；list排序调用自带的list::sort。 注意std::sort 要求随机访问迭代器且不能用于 list 。此函数与 std::sort 的区别在于，它不要求 list 的元素类型可交换">
 
 
 
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-08T19:54:18+08:00">
-                2019-03-08
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-11T18:17:47+08:00">
+                2019-03-11
               </time>
             
           </span>
@@ -392,7 +392,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">262(字)</span> 
+					<span class="post-count">534(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -450,7 +450,20 @@
       
 
       
-        <h1 id="sort函数"><a href="#sort函数" class="headerlink" title="sort函数"></a>sort函数</h1><ul>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><ul>
+<li>排序算法需要通过随机访问迭代器来访问容器中的元素，因此有的容器就不支持排序算法。</li>
+<li>STL容器的排序，支持随机访问的容器vector,deque,string没有sort成员，可调用std::sort排序；list排序调用自带的list::sort。<ul>
+<li>注意<br>std::sort 要求随机访问迭代器且不能用于 list 。此函数与 std::sort 的区别在于，它不要求 list 的元素类型可交换，保留所有迭代器的值，并进行稳定排序。 </li>
+</ul>
+</li>
+<li>sort函数有以下特征：<ol>
+<li>要求输入一个范围[first, last)</li>
+<li>随机迭代器，能用此算法的容器是支持随机访问的容器：vector, deque, string。</li>
+</ol>
+</li>
+<li>对于list容器，list自带一个sort成员函数list::sort()。它和算法函数中的sort差不多，但是list::sort是基于指针的方式排序，也就是说，所有的数据移动和比较都是此用指针的方式实现，因此排序后的迭代器一直保持有效（vector中sort后的迭代器会失效)。</li>
+</ul>
+<h1 id="sort函数"><a href="#sort函数" class="headerlink" title="sort函数"></a>sort函数</h1><ul>
 <li>默认的为升序</li>
 <li>第三参数——比较函数。比较函数是一个自己定义的函数，返回值是bool型(一般)，它规定了什么样的关系</li>
 <li>排序的数据类型不局限于整数，只要是定义了小于运算的类型都可以，比如字符串类string。</li>
@@ -639,7 +652,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -650,7 +663,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -701,7 +714,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#sort函数"><span class="nav-number">1.</span> <span class="nav-text">sort函数</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sort函数"><span class="nav-number">2.</span> <span class="nav-text">sort函数</span></a></li></ol></div>
             
 
           </div>
@@ -742,7 +755,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">15.3k</span>
+    <span title="Site words total count">16.1k</span>
   
 </div>
 

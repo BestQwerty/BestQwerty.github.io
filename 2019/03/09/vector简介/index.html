@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="vector vector的底层数据结构是动态数组内存分配 标准库的实现者使用了这样的内存分配策略：以最小的代价连续存储元素。为了使vector容器实现快速的内存分配，其实际分配的容量要比当前所需的空间多一些(预留空间)，vector容器预留了这些额外的存储区用于存放添加的新元素，于是不必为每个新元素进行一次内存分配。当继续向容器中加入元素导致备用空间被用光（超过了容量 capacity），此时再">
+<meta name="description" content="cpp vector vector的底层数据结构是动态数组内存分配 标准库的实现者使用了这样的内存分配策略：以最小的代价连续存储元素。为了使vector容器实现快速的内存分配，其实际分配的容量要比当前所需的空间多一些(预留空间)，vector容器预留了这些额外的存储区用于存放添加的新元素，于是不必为每个新元素进行一次内存分配。当继续向容器中加入元素导致备用空间被用光（超过了容量 capacity）">
 <meta name="keywords" content="stl">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vector简介">
 <meta property="og:url" content="ctguljj.github.io/2019/03/09/vector简介/index.html">
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
-<meta property="og:description" content="vector vector的底层数据结构是动态数组内存分配 标准库的实现者使用了这样的内存分配策略：以最小的代价连续存储元素。为了使vector容器实现快速的内存分配，其实际分配的容量要比当前所需的空间多一些(预留空间)，vector容器预留了这些额外的存储区用于存放添加的新元素，于是不必为每个新元素进行一次内存分配。当继续向容器中加入元素导致备用空间被用光（超过了容量 capacity），此时再">
+<meta property="og:description" content="cpp vector vector的底层数据结构是动态数组内存分配 标准库的实现者使用了这样的内存分配策略：以最小的代价连续存储元素。为了使vector容器实现快速的内存分配，其实际分配的容量要比当前所需的空间多一些(预留空间)，vector容器预留了这些额外的存储区用于存放添加的新元素，于是不必为每个新元素进行一次内存分配。当继续向容器中加入元素导致备用空间被用光（超过了容量 capacity）">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-09T07:17:56.008Z">
+<meta property="og:updated_time" content="2019-03-11T05:17:09.699Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vector简介">
-<meta name="twitter:description" content="vector vector的底层数据结构是动态数组内存分配 标准库的实现者使用了这样的内存分配策略：以最小的代价连续存储元素。为了使vector容器实现快速的内存分配，其实际分配的容量要比当前所需的空间多一些(预留空间)，vector容器预留了这些额外的存储区用于存放添加的新元素，于是不必为每个新元素进行一次内存分配。当继续向容器中加入元素导致备用空间被用光（超过了容量 capacity），此时再">
+<meta name="twitter:description" content="cpp vector vector的底层数据结构是动态数组内存分配 标准库的实现者使用了这样的内存分配策略：以最小的代价连续存储元素。为了使vector容器实现快速的内存分配，其实际分配的容量要比当前所需的空间多一些(预留空间)，vector容器预留了这些额外的存储区用于存放添加的新元素，于是不必为每个新元素进行一次内存分配。当继续向容器中加入元素导致备用空间被用光（超过了容量 capacity）">
 
 
 
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-09T15:17:56+08:00">
-                2019-03-09
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-11T13:17:09+08:00">
+                2019-03-11
               </time>
             
           </span>
@@ -392,7 +392,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">510(字)</span> 
+					<span class="post-count">511(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -450,7 +450,8 @@
       
 
       
-        <h1 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h1><ul>
+        <p><a href="https://zh.cppreference.com/w/cpp/container/vector" target="_blank" rel="noopener">cpp</a></p>
+<h1 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h1><ul>
 <li>vector的底层数据结构是动态数组<h2 id="内存分配"><a href="#内存分配" class="headerlink" title="内存分配"></a>内存分配</h2></li>
 <li>标准库的实现者使用了这样的内存分配策略：以最小的代价连续存储元素。为了使vector容器实现快速的内存分配，其实际分配的容量要比当前所需的空间多一些(预留空间)，vector容器预留了这些额外的存储区用于存放添加的新元素，于是不必为每个新元素进行一次内存分配。当继续向容器中加入元素导致备用空间被用光（超过了容量 capacity），此时再加入元素时vector的内存管理机制便会扩充容量至两倍，如果两倍容量仍不足，就扩张至足够大的容量。容量扩张必须经历“重新配置、元素移动、释放原空间”这个浩大的工程。</li>
 <li>按照《STL源码剖析》中提供的vector源码，vector的内存配置原则为：<ul>
@@ -634,7 +635,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -645,7 +646,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -737,7 +738,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">15.3k</span>
+    <span title="Site words total count">16.1k</span>
   
 </div>
 

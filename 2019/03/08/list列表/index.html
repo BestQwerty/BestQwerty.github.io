@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="cppreference  list头文件 #include ＜list＞  底层数据结构 list同样是一个模板类，它底层数据结构为双向循环链表。因此，它支持任意位置常数时间的插入/删除操作，不支持快速随机访问。  内存分配策略 list的空间配置策略，自然是像我们普通双向链表那样，有多少元素申请多少内存。它不像vactor那样需要预留空间供新元素的分配，也不会因找不到连续的空间而引起整个容器">
+<meta name="description" content="cppreference  list头文件 #include ＜list＞  底层数据结构 list同样是一个模板类，它底层数据结构为双向循环链表。因此，它支持任意位置常数时间的插入/删除操作，不支持快速随机访问。 双向链表的每个元素中都有一个指针指向后一个元素，也有一个指针指向前一个元素  内存分配策略 list的空间配置策略，自然是像我们普通双向链表那样，有多少元素申请多少内存。它不像vac">
 <meta name="keywords" content="stl">
 <meta property="og:type" content="article">
 <meta property="og:title" content="list列表">
 <meta property="og:url" content="ctguljj.github.io/2019/03/08/list列表/index.html">
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
-<meta property="og:description" content="cppreference  list头文件 #include ＜list＞  底层数据结构 list同样是一个模板类，它底层数据结构为双向循环链表。因此，它支持任意位置常数时间的插入/删除操作，不支持快速随机访问。  内存分配策略 list的空间配置策略，自然是像我们普通双向链表那样，有多少元素申请多少内存。它不像vactor那样需要预留空间供新元素的分配，也不会因找不到连续的空间而引起整个容器">
+<meta property="og:description" content="cppreference  list头文件 #include ＜list＞  底层数据结构 list同样是一个模板类，它底层数据结构为双向循环链表。因此，它支持任意位置常数时间的插入/删除操作，不支持快速随机访问。 双向链表的每个元素中都有一个指针指向后一个元素，也有一个指针指向前一个元素  内存分配策略 list的空间配置策略，自然是像我们普通双向链表那样，有多少元素申请多少内存。它不像vac">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-09T07:12:35.504Z">
+<meta property="og:updated_time" content="2019-03-11T10:25:42.519Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="list列表">
-<meta name="twitter:description" content="cppreference  list头文件 #include ＜list＞  底层数据结构 list同样是一个模板类，它底层数据结构为双向循环链表。因此，它支持任意位置常数时间的插入/删除操作，不支持快速随机访问。  内存分配策略 list的空间配置策略，自然是像我们普通双向链表那样，有多少元素申请多少内存。它不像vactor那样需要预留空间供新元素的分配，也不会因找不到连续的空间而引起整个容器">
+<meta name="twitter:description" content="cppreference  list头文件 #include ＜list＞  底层数据结构 list同样是一个模板类，它底层数据结构为双向循环链表。因此，它支持任意位置常数时间的插入/删除操作，不支持快速随机访问。 双向链表的每个元素中都有一个指针指向后一个元素，也有一个指针指向前一个元素  内存分配策略 list的空间配置策略，自然是像我们普通双向链表那样，有多少元素申请多少内存。它不像vac">
 
 
 
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-09T15:12:35+08:00">
-                2019-03-09
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-11T18:25:42+08:00">
+                2019-03-11
               </time>
             
           </span>
@@ -392,7 +392,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">518(字)</span> 
+					<span class="post-count">789(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -458,6 +458,7 @@
 </ul>
 <h2 id="底层数据结构"><a href="#底层数据结构" class="headerlink" title="底层数据结构"></a>底层数据结构</h2><ul>
 <li>list同样是一个模板类，它底层数据结构为双向循环链表。因此，它支持任意位置常数时间的插入/删除操作，不支持快速随机访问。</li>
+<li>双向链表的每个元素中都有一个指针指向后一个元素，也有一个指针指向前一个元素</li>
 </ul>
 <h2 id="内存分配策略"><a href="#内存分配策略" class="headerlink" title="内存分配策略"></a>内存分配策略</h2><ul>
 <li>list的空间配置策略，自然是像我们普通双向链表那样，有多少元素申请多少内存。它不像vactor那样需要预留空间供新元素的分配，也不会因找不到连续的空间而引起整个容器的内存迁移。</li>
@@ -478,13 +479,20 @@
 <li><code>list&lt;int&gt; c4(c2);</code> 建一个c2的copy链表</li>
 </ul>
 <ul>
-<li><code>list&lt;int&gt; c5(c1.begin(),c1.end());</code> c5含c1一个区域的元素[_First, _Last)。</li>
+<li><p><code>list&lt;int&gt; c5(c1.begin(),c1.end());</code> c5含c1一个区域的元素[_First, _Last)。</p>
+</li>
+<li><p>list 容器不支持根据下标随机存取元素</p>
+</li>
+<li>list 的成员函数 front() 和 back()，可以各自返回第一个和最后一个元素的引用。在空 list 中调用它们中的任意一个，结果是未知的，因此不要这样使用。可以通过迭代器的自增或自减来访问 list 的内部元素。</li>
 </ul>
 <h1 id="List常用操作函数"><a href="#List常用操作函数" class="headerlink" title="List常用操作函数"></a>List常用操作函数</h1><h1 id="list-的特点"><a href="#list-的特点" class="headerlink" title="list 的特点"></a>list 的特点</h1><ul>
 <li>(1) 不使用连续的内存空间这样可以随意地进行动态操作；</li>
 <li>(2) 可以在内部任何位置快速地插入或删除，当然也可以在两端进push 和pop 。</li>
 <li>(3) 不能进行内部的随机访问，即不支持[ ] 操作符和<code>vector.at() ；</code></li>
 <li>(4) 相对于verctor 占用更多的内存。</li>
+<li>有自身的sort函数</li>
+<li>STL 中的算法 sort 可以用来对 vector 和 deque ，string排序，它需要随机访问迭代器的支持。因为 list 不支持随机访问迭代器，所以不能用算法 sort 对 list 容器排序。因此，list 容器引入了 sort 成员函数以完成排序。</li>
+<li>注意<br>std::sort 要求随机访问迭代器且不能用于 list 。此函数与 std::sort 的区别在于，它不要求 list 的元素类型可交换，保留所有迭代器的值，并进行稳定排序。 </li>
 </ul>
 
       
@@ -655,7 +663,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -666,7 +674,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -758,7 +766,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">15.3k</span>
+    <span title="Site words total count">16.1k</span>
   
 </div>
 

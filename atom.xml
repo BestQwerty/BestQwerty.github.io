@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-03-10T14:56:58.355Z</updated>
+  <updated>2019-03-11T10:33:45.577Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>迭代器</title>
+    <link href="ctguljj.github.io/2019/03/11/%E8%BF%AD%E4%BB%A3%E5%99%A8/"/>
+    <id>ctguljj.github.io/2019/03/11/迭代器/</id>
+    <published>2019-03-11T05:19:55.000Z</published>
+    <updated>2019-03-11T10:33:45.577Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>在STL定义的容器中，string，vector与deque提供了随机访问迭代器，list、set、multiset、map、multimap提供了双向迭代器。 </li><li>能进行算术运算的迭代器只有随即访问迭代器，要求容器元素存储在连续内存空间里，vector，string，deque的迭代器是有加减法的，但是map，set，multimap,multiset的迭代器是没有加减法的，list也不可以,map等的迭代器不支持加减操作，仅有++itr，–itr这些操作来进行选择</li><li>Bidirectional迭代器：是在前向迭代器的基础上，多了单步向后遍历的能力。也就是–iter,iter–。</li><li>Random Access迭代器：在双向迭代器基础上，具有直接访问各数据元素的能力。随机迭代器增加了“迭代器算术运算”：</li><li>所有迭代器都应该实现自增算符：iter++,++iter</li><li>STL 中的容器适配器有 stack、queue、priority_queue 三种。它们都是在顺序容器的基础上实现的，屏蔽了顺序容器的一部分功能，突出或增加了另外一些功能。容器适配器是没有迭代器的，因此 STL 中的各种排序、查找、变序等算法都不适用于容器适配器。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;在STL定义的容器中，string，vector与deque提供了随机访问迭代器，list、set、multiset、map、multimap提供了双向迭代器。 &lt;/li&gt;
+&lt;li&gt;能进行算术运算的迭代器只有随即访问迭代器，要求容器元素存储在连续内存空间里，ve
+      
+    
+    </summary>
+    
+      <category term="stl" scheme="ctguljj.github.io/categories/stl/"/>
+    
+      <category term="迭代器" scheme="ctguljj.github.io/categories/stl/%E8%BF%AD%E4%BB%A3%E5%99%A8/"/>
+    
+    
+      <category term="stl" scheme="ctguljj.github.io/tags/stl/"/>
+    
+  </entry>
   
   <entry>
     <title>string</title>
@@ -164,16 +193,16 @@
     <link href="ctguljj.github.io/2019/03/09/vector%E7%AE%80%E4%BB%8B/"/>
     <id>ctguljj.github.io/2019/03/09/vector简介/</id>
     <published>2019-03-09T06:00:32.000Z</published>
-    <updated>2019-03-09T07:17:56.008Z</updated>
+    <updated>2019-03-11T05:17:09.699Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h1><ul><li>vector的底层数据结构是动态数组<h2 id="内存分配"><a href="#内存分配" class="headerlink" title="内存分配"></a>内存分配</h2></li><li>标准库的实现者使用了这样的内存分配策略：以最小的代价连续存储元素。为了使vector容器实现快速的内存分配，其实际分配的容量要比当前所需的空间多一些(预留空间)，vector容器预留了这些额外的存储区用于存放添加的新元素，于是不必为每个新元素进行一次内存分配。当继续向容器中加入元素导致备用空间被用光（超过了容量 capacity），此时再加入元素时vector的内存管理机制便会扩充容量至两倍，如果两倍容量仍不足，就扩张至足够大的容量。容量扩张必须经历“重新配置、元素移动、释放原空间”这个浩大的工程。</li><li>按照《STL源码剖析》中提供的vector源码，vector的内存配置原则为：<ul><li>如果vector原大小为0，则配置1，也即一个元素的大小。</li><li>如果原大小不为0，则配置原大小的两倍。</li></ul></li><li>当然，vector的每种实现都可以自由地选择自己的内存分配策略，分配多少内存取决于其实现方式，不同的库采用不同的分配策略。</li></ul><h2 id="迭代器失效问题"><a href="#迭代器失效问题" class="headerlink" title="迭代器失效问题"></a>迭代器失效问题</h2><ul><li>vector管理的是连续的内存空间，在容器中插入（或删除）元素时，插入（或删除）点后面的所有元素都需要向后（或向前）移动一个位置，指向发生移动的元素的迭代器都失效。</li><li>随着元素的插入，原来分配的连续内存空间已经不够且无法在原地拓展新的内存空间，整个容器会被copy到另外一块内存上，此时指向原来容器元素的所有迭代器通通失效。</li><li>删除元素后，指向被删除元素的迭代器失效，这是显而易见的。</li></ul>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://zh.cppreference.com/w/cpp/container/vector" target="_blank" rel="noopener">cpp</a></p><h1 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h1><ul><li>vector的底层数据结构是动态数组<h2 id="内存分配"><a href="#内存分配" class="headerlink" title="内存分配"></a>内存分配</h2></li><li>标准库的实现者使用了这样的内存分配策略：以最小的代价连续存储元素。为了使vector容器实现快速的内存分配，其实际分配的容量要比当前所需的空间多一些(预留空间)，vector容器预留了这些额外的存储区用于存放添加的新元素，于是不必为每个新元素进行一次内存分配。当继续向容器中加入元素导致备用空间被用光（超过了容量 capacity），此时再加入元素时vector的内存管理机制便会扩充容量至两倍，如果两倍容量仍不足，就扩张至足够大的容量。容量扩张必须经历“重新配置、元素移动、释放原空间”这个浩大的工程。</li><li>按照《STL源码剖析》中提供的vector源码，vector的内存配置原则为：<ul><li>如果vector原大小为0，则配置1，也即一个元素的大小。</li><li>如果原大小不为0，则配置原大小的两倍。</li></ul></li><li>当然，vector的每种实现都可以自由地选择自己的内存分配策略，分配多少内存取决于其实现方式，不同的库采用不同的分配策略。</li></ul><h2 id="迭代器失效问题"><a href="#迭代器失效问题" class="headerlink" title="迭代器失效问题"></a>迭代器失效问题</h2><ul><li>vector管理的是连续的内存空间，在容器中插入（或删除）元素时，插入（或删除）点后面的所有元素都需要向后（或向前）移动一个位置，指向发生移动的元素的迭代器都失效。</li><li>随着元素的插入，原来分配的连续内存空间已经不够且无法在原地拓展新的内存空间，整个容器会被copy到另外一块内存上，此时指向原来容器元素的所有迭代器通通失效。</li><li>删除元素后，指向被删除元素的迭代器失效，这是显而易见的。</li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;vector&quot;&gt;&lt;a href=&quot;#vector&quot; class=&quot;headerlink&quot; title=&quot;vector&quot;&gt;&lt;/a&gt;vector&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;vector的底层数据结构是动态数组&lt;h2 id=&quot;内存分配&quot;&gt;&lt;a href=&quot;#内存分配&quot; 
+        &lt;p&gt;&lt;a href=&quot;https://zh.cppreference.com/w/cpp/container/vector&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;cpp&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;vector&quot;&gt;&lt;a href=&quot;#vector&quot;
       
     
     </summary>
@@ -192,9 +221,9 @@
     <link href="ctguljj.github.io/2019/03/08/list%E5%88%97%E8%A1%A8/"/>
     <id>ctguljj.github.io/2019/03/08/list列表/</id>
     <published>2019-03-08T12:48:34.000Z</published>
-    <updated>2019-03-09T07:12:35.504Z</updated>
+    <updated>2019-03-11T10:25:42.519Z</updated>
     
-    <content type="html"><![CDATA[<ul><li><a href="https://zh.cppreference.com/w/cpp/container/list" target="_blank" rel="noopener">cppreference</a></li></ul><h1 id="list"><a href="#list" class="headerlink" title="list"></a>list</h1><h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><ul><li>#include ＜list＞</li></ul><h2 id="底层数据结构"><a href="#底层数据结构" class="headerlink" title="底层数据结构"></a>底层数据结构</h2><ul><li>list同样是一个模板类，它底层数据结构为双向循环链表。因此，它支持任意位置常数时间的插入/删除操作，不支持快速随机访问。</li></ul><h2 id="内存分配策略"><a href="#内存分配策略" class="headerlink" title="内存分配策略"></a>内存分配策略</h2><ul><li>list的空间配置策略，自然是像我们普通双向链表那样，有多少元素申请多少内存。它不像vactor那样需要预留空间供新元素的分配，也不会因找不到连续的空间而引起整个容器的内存迁移。</li></ul><h2 id="迭代器失效问题"><a href="#迭代器失效问题" class="headerlink" title="迭代器失效问题"></a>迭代器失效问题</h2><ul><li>list 有一个重要性质：插入操作（insert）与接合操作（splice）都不会造成原有的list迭代器失效。这在vector是不成立的，因为vactor的插入可能引起空间的重新配置，导致原来的迭代器全部失效。list的迭代器失效，只会出现在删除的时候，指向删除元素的那个迭代器在删除后失效。<br>通常来说，<code>forward_list</code>在使用灵活度上比不上list，因为它只能单向迭代元素，且提供的接口没有list多。然而，在内存的使用上，它是比list占优势的。当对内存的要求占首要位置时，应该选择<code>forward_list</code>。</li></ul><h1 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h1><ul><li><p><code>list&lt;int&gt; c;</code>空链表</p></li><li><p><code>list&lt;int&gt; c1(3);</code> 建一个含三个默认值是0的元素的链表　</p></li></ul><ul><li><code>list&lt;int&gt; c2(5,2);</code> 建一个含五个元素的链表，值都是2　</li><li><code>list&lt;int&gt; c4(c2);</code> 建一个c2的copy链表</li></ul><ul><li><code>list&lt;int&gt; c5(c1.begin(),c1.end());</code> c5含c1一个区域的元素[_First, _Last)。</li></ul><h1 id="List常用操作函数"><a href="#List常用操作函数" class="headerlink" title="List常用操作函数"></a>List常用操作函数</h1><h1 id="list-的特点"><a href="#list-的特点" class="headerlink" title="list 的特点"></a>list 的特点</h1><ul><li>(1) 不使用连续的内存空间这样可以随意地进行动态操作；</li><li>(2) 可以在内部任何位置快速地插入或删除，当然也可以在两端进push 和pop 。</li><li>(3) 不能进行内部的随机访问，即不支持[ ] 操作符和<code>vector.at() ；</code></li><li>(4) 相对于verctor 占用更多的内存。</li></ul>]]></content>
+    <content type="html"><![CDATA[<ul><li><a href="https://zh.cppreference.com/w/cpp/container/list" target="_blank" rel="noopener">cppreference</a></li></ul><h1 id="list"><a href="#list" class="headerlink" title="list"></a>list</h1><h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><ul><li>#include ＜list＞</li></ul><h2 id="底层数据结构"><a href="#底层数据结构" class="headerlink" title="底层数据结构"></a>底层数据结构</h2><ul><li>list同样是一个模板类，它底层数据结构为双向循环链表。因此，它支持任意位置常数时间的插入/删除操作，不支持快速随机访问。</li><li>双向链表的每个元素中都有一个指针指向后一个元素，也有一个指针指向前一个元素</li></ul><h2 id="内存分配策略"><a href="#内存分配策略" class="headerlink" title="内存分配策略"></a>内存分配策略</h2><ul><li>list的空间配置策略，自然是像我们普通双向链表那样，有多少元素申请多少内存。它不像vactor那样需要预留空间供新元素的分配，也不会因找不到连续的空间而引起整个容器的内存迁移。</li></ul><h2 id="迭代器失效问题"><a href="#迭代器失效问题" class="headerlink" title="迭代器失效问题"></a>迭代器失效问题</h2><ul><li>list 有一个重要性质：插入操作（insert）与接合操作（splice）都不会造成原有的list迭代器失效。这在vector是不成立的，因为vactor的插入可能引起空间的重新配置，导致原来的迭代器全部失效。list的迭代器失效，只会出现在删除的时候，指向删除元素的那个迭代器在删除后失效。<br>通常来说，<code>forward_list</code>在使用灵活度上比不上list，因为它只能单向迭代元素，且提供的接口没有list多。然而，在内存的使用上，它是比list占优势的。当对内存的要求占首要位置时，应该选择<code>forward_list</code>。</li></ul><h1 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h1><ul><li><p><code>list&lt;int&gt; c;</code>空链表</p></li><li><p><code>list&lt;int&gt; c1(3);</code> 建一个含三个默认值是0的元素的链表　</p></li></ul><ul><li><code>list&lt;int&gt; c2(5,2);</code> 建一个含五个元素的链表，值都是2　</li><li><code>list&lt;int&gt; c4(c2);</code> 建一个c2的copy链表</li></ul><ul><li><p><code>list&lt;int&gt; c5(c1.begin(),c1.end());</code> c5含c1一个区域的元素[_First, _Last)。</p></li><li><p>list 容器不支持根据下标随机存取元素</p></li><li>list 的成员函数 front() 和 back()，可以各自返回第一个和最后一个元素的引用。在空 list 中调用它们中的任意一个，结果是未知的，因此不要这样使用。可以通过迭代器的自增或自减来访问 list 的内部元素。</li></ul><h1 id="List常用操作函数"><a href="#List常用操作函数" class="headerlink" title="List常用操作函数"></a>List常用操作函数</h1><h1 id="list-的特点"><a href="#list-的特点" class="headerlink" title="list 的特点"></a>list 的特点</h1><ul><li>(1) 不使用连续的内存空间这样可以随意地进行动态操作；</li><li>(2) 可以在内部任何位置快速地插入或删除，当然也可以在两端进push 和pop 。</li><li>(3) 不能进行内部的随机访问，即不支持[ ] 操作符和<code>vector.at() ；</code></li><li>(4) 相对于verctor 占用更多的内存。</li><li>有自身的sort函数</li><li>STL 中的算法 sort 可以用来对 vector 和 deque ，string排序，它需要随机访问迭代器的支持。因为 list 不支持随机访问迭代器，所以不能用算法 sort 对 list 容器排序。因此，list 容器引入了 sort 成员函数以完成排序。</li><li>注意<br>std::sort 要求随机访问迭代器且不能用于 list 。此函数与 std::sort 的区别在于，它不要求 list 的元素类型可交换，保留所有迭代器的值，并进行稳定排序。 </li></ul>]]></content>
     
     <summary type="html">
     
@@ -330,17 +359,17 @@
     <link href="ctguljj.github.io/2019/03/08/sort%E5%87%BD%E6%95%B0/"/>
     <id>ctguljj.github.io/2019/03/08/sort函数/</id>
     <published>2019-03-08T09:06:25.000Z</published>
-    <updated>2019-03-08T11:54:18.843Z</updated>
+    <updated>2019-03-11T10:17:47.609Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="sort函数"><a href="#sort函数" class="headerlink" title="sort函数"></a>sort函数</h1><ul><li>默认的为升序</li><li>第三参数——比较函数。比较函数是一个自己定义的函数，返回值是bool型(一般)，它规定了什么样的关系</li><li>排序的数据类型不局限于整数，只要是定义了小于运算的类型都可以，比如字符串类string。</li><li>如果是没有定义小于运算的数据类型，或者想改变排序的顺序，就要用到第三参数——比较函数。</li><li><p><code>vector&lt;int&gt; v;</code></p><p>  <code>sort(v.begin(), v.end(), greater&lt;int&gt;());</code></p></li></ul><ul><li><code>sort(a, a+n, cmp);</code></li></ul><ul><li>对数组进行排序,其头文件为algorithm.h，形式为<code>sort（数组名，数组名+数组长度）</code>，默认为升序，复杂度为nlog（n）；</li><li>加<code>#include&lt;functional&gt;</code>因为用了<code>greater&lt;int&gt;()</code></li><li><code>sort(begin, end, less&lt;数据类型&gt;（）)，升序；</code></li><li><code>sort(begin, end, greater&lt;数据类型&gt;（）)，降序；</code></li><li><code>sort（数组名，数组名+数组长度，less&lt;数组数据类型&gt;()）,升序；</code></li><li><code>sort(数组名，数组名+数组长度，greater&lt;数组数据类型&gt;（）)，降序。</code></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><ul><li>排序算法需要通过随机访问迭代器来访问容器中的元素，因此有的容器就不支持排序算法。</li><li>STL容器的排序，支持随机访问的容器vector,deque,string没有sort成员，可调用std::sort排序；list排序调用自带的list::sort。<ul><li>注意<br>std::sort 要求随机访问迭代器且不能用于 list 。此函数与 std::sort 的区别在于，它不要求 list 的元素类型可交换，保留所有迭代器的值，并进行稳定排序。 </li></ul></li><li>sort函数有以下特征：<ol><li>要求输入一个范围[first, last)</li><li>随机迭代器，能用此算法的容器是支持随机访问的容器：vector, deque, string。</li></ol></li><li>对于list容器，list自带一个sort成员函数list::sort()。它和算法函数中的sort差不多，但是list::sort是基于指针的方式排序，也就是说，所有的数据移动和比较都是此用指针的方式实现，因此排序后的迭代器一直保持有效（vector中sort后的迭代器会失效)。</li></ul><h1 id="sort函数"><a href="#sort函数" class="headerlink" title="sort函数"></a>sort函数</h1><ul><li>默认的为升序</li><li>第三参数——比较函数。比较函数是一个自己定义的函数，返回值是bool型(一般)，它规定了什么样的关系</li><li>排序的数据类型不局限于整数，只要是定义了小于运算的类型都可以，比如字符串类string。</li><li>如果是没有定义小于运算的数据类型，或者想改变排序的顺序，就要用到第三参数——比较函数。</li><li><p><code>vector&lt;int&gt; v;</code></p><p>  <code>sort(v.begin(), v.end(), greater&lt;int&gt;());</code></p></li></ul><ul><li><code>sort(a, a+n, cmp);</code></li></ul><ul><li>对数组进行排序,其头文件为algorithm.h，形式为<code>sort（数组名，数组名+数组长度）</code>，默认为升序，复杂度为nlog（n）；</li><li>加<code>#include&lt;functional&gt;</code>因为用了<code>greater&lt;int&gt;()</code></li><li><code>sort(begin, end, less&lt;数据类型&gt;（）)，升序；</code></li><li><code>sort(begin, end, greater&lt;数据类型&gt;（）)，降序；</code></li><li><code>sort（数组名，数组名+数组长度，less&lt;数组数据类型&gt;()）,升序；</code></li><li><code>sort(数组名，数组名+数组长度，greater&lt;数组数据类型&gt;（）)，降序。</code></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;sort函数&quot;&gt;&lt;a href=&quot;#sort函数&quot; class=&quot;headerlink&quot; title=&quot;sort函数&quot;&gt;&lt;/a&gt;sort函数&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;默认的为升序&lt;/li&gt;
-&lt;li&gt;第三参数——比较函数。比较函数是一个自己定义的函数，返回值是bo
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;排序算法需要通过随机访问迭代器来访问容器中的元素，因此有的容器就不支持排序算法。&lt;/li&gt;
+&lt;li&gt;STL容器的排序，支持随机访
       
     
     </summary>
@@ -549,31 +578,6 @@
     
     
       <category term="blog" scheme="ctguljj.github.io/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>素数筛选法</title>
-    <link href="ctguljj.github.io/2019/03/05/%E7%B4%A0%E6%95%B0%E7%AD%9B%E9%80%89%E6%B3%95/"/>
-    <id>ctguljj.github.io/2019/03/05/素数筛选法/</id>
-    <published>2019-03-05T14:44:50.000Z</published>
-    <updated>2019-03-07T05:16:30.039Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="数学原理"><a href="#数学原理" class="headerlink" title="数学原理"></a>数学原理</h1><ul><li>一个数 n 如果是合数，那么它的所有的因子不超过sqrt(n)–n的开方</li><li>质数又称素数。一个大于1的自然数，除了1和它自身外，不能被其他自然数整除的数叫做质数；否则称为合数</li><li>质数大于等于2 不能被它本身和1以外的数整除</li></ul><h1 id="素数筛选法"><a href="#素数筛选法" class="headerlink" title="素数筛选法"></a>素数筛选法</h1><ul><li>素数是数学中一个很重要的数，很多算法中都需要用到素数相关的性质，因此传统的暴力循环求素数的效率显得十分低效，这里我们有两种高效求1~n以内的素数的方法。需要大家掌握，特别是欧拉筛法里面用到一点数学性质，大家可自行百度欧拉筛法掌握具体的原理，以后的出现的算法中还会出现。</li></ul><h1 id="欧拉筛法-时间复杂度（n"><a href="#欧拉筛法-时间复杂度（n" class="headerlink" title="欧拉筛法-时间复杂度（n)"></a>欧拉筛法-时间复杂度（n)</h1><ul><li><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/欧拉筛选法.png" alt=""></li><li>最简单的素数筛法是这样的：10000000内的素数，用这个筛选法可以大大的降低时间复杂度</li></ul><p>1.开一个大的bool型数组prime[]，大小就是n+1就可以了.先把所有的下标为奇数的标为true,下标为偶数的标为false.</p><p>2.然后：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>( i=<span class="number">3</span>; i&lt;=<span class="built_in">sqrt</span>(n); i+=<span class="number">2</span> )</span><br><span class="line">&#123;  </span><br><span class="line"><span class="keyword">if</span>(prime)</span><br><span class="line"><span class="keyword">for</span>( j=i+i; j&lt;=n; j+=i ) prime[j]=<span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>3.最后输出bool数组中的值为true的单元的下标，就是所求的n以内的素数了。</p><pre><code>原理很简单，就是当i是质(素)数的时候，i的所有的倍数必然是合数。如果i已经被判断不是质数了，那么再找到i后面的质数来把这个质数的倍数筛掉。</code></pre><h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><ul><li>No.1使用 合数=最大因数(除1和本身外)<em>最小质因数 的原理来筛，每个数只会被筛一次<br>对于每个数i，令它是某数的最大因数，然后从小到大地找&lt;=i的素数j，则i</em>j是合数<br>直到找到某个j使得i%j == 0,因为再往后的话，j’&gt; i的某个因子，我们能交换j’和i的这个因子，所以i不是i<em>j’的最大因数（或者说i</em>j’的最小质因数是刚才的那个j），再往后做没有意义</li></ul><ul><li><p>No.2回顾经典的Eratosthenes筛法，它可能对同一个质数筛去多次。那么如果用某种方法使得每个合数只被筛去一次就变成是线性的了。<br>不妨规定每个合数只用其最小的一个质因数去筛，这便是欧拉筛了。</p></li><li><p>No.3<br>线性筛有两个地方与一般筛不同:</p></li></ul><p>1.两层循环的顺序不同（一般筛是第一维prime[i] 第二维j，欧拉筛是第一维i 第二位prime[j]）</p><p>2.一行神奇的代码：<br>           <code>if(i%prime[j]==0)break;</code></p><p>prime[]数组中的素数是递增的,当i能整除prime[j]，那么i<em>prime[j+1]这个合数肯定被prime[j]乘以某个数筛掉。<br>   因为i中含有prime[j],prime[j]比prime[j+1]小，即    `i=k</em>prime[j]<code>，那么</code>i<em>prime[j+1]=(k</em>prime[j])<em>prime<code></code> [j+1]=k’</em>prime[j]<code>，接下去的素数同理。所以不用筛下去了。因此，在满足</code>i%prime[j]==0`这个条件之前以及第一次<br>   满足改条件时,prime[j]必定是prime[j]*i的最小因子。</p><p>No.4 证明分两部分。首先证每个合数都会被筛到（正确性），其次证每个合数只会被筛到一次（复杂度）。<br>每个合数都会被筛到<br>设有一合数 （为质数）<br>则一定会在  时被筛去（此时 ），因为对于小于 的质数，一定不会被  整除<br>每个合数都只会被筛到一次<br>与上面一样，还是设有一合数 （ 为质数）<br>倘若存在一个质因子  也筛去了，那么此时 。<br>o，此时在内层循环中已经早早地break掉了，因为 。<br>o，此时还没加进质数表QwQ（顺便一提：这种情况只有可能在  时发生）</p><p>代码：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">euler_sieve</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123; </span><br><span class="line">totPrimes = <span class="number">0</span>;</span><br><span class="line"><span class="built_in">memset</span>(flag, <span class="number">0</span>, <span class="keyword">sizeof</span>(flag)); </span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; i++) &#123; </span><br><span class="line"><span class="keyword">if</span> (!flag[i]) </span><br><span class="line">primes[totPrimes++] = i;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; i * primes[j] &lt;= n; j++) &#123; </span><br><span class="line">flag[i*primes[j]] = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">if</span> (i % primes[j] == <span class="number">0</span>) <span class="keyword">break</span>; </span><br><span class="line">&#125; </span><br><span class="line">&#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><ul><li><code>j &lt; totPrimes</code>为何不加？</li></ul><div class="note warning"><br>o当  为质数时，内层循环会在最后一个质数（也就是  自己）终止。<br><br><br>o当  为合数时，内层循环会在它的第一个质因数终止。<br>当然加了也没有问题<p></p></div><h2 id="埃拉特斯特尼筛法，时间复杂度（nlogn）"><a href="#埃拉特斯特尼筛法，时间复杂度（nlogn）" class="headerlink" title="埃拉特斯特尼筛法，时间复杂度（nlogn）"></a>埃拉特斯特尼筛法，时间复杂度（nlogn）</h2><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/埃拉特斯特尼筛法.png" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;数学原理&quot;&gt;&lt;a href=&quot;#数学原理&quot; class=&quot;headerlink&quot; title=&quot;数学原理&quot;&gt;&lt;/a&gt;数学原理&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;一个数 n 如果是合数，那么它的所有的因子不超过sqrt(n)–n的开方&lt;/li&gt;
-&lt;li&gt;质数又称素数。一个大
-      
-    
-    </summary>
-    
-    
-      <category term="算法" scheme="ctguljj.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
