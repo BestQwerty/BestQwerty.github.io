@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Dev的秘密]]></title>
+    <url>%2F2019%2F03%2F11%2FDev%E7%9A%84%E7%A7%98%E5%AF%86%2F</url>
+    <content type="text"><![CDATA[dev快捷键 按下Ctrl+Shift+A，会看到DEV帮你整理好了代码。 Ctrl + shift + 方向键上或下会选中光标当前所在的行，然后将这个行进行上移或下移，移动操作不会覆盖上下相邻的行，只是将位置进行对调。（eclipse则是在嵌套的方法之间做跳转，VS2013没有效果）]]></content>
+      <categories>
+        <category>Dev</category>
+      </categories>
+      <tags>
+        <tag>Dev</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[迭代器]]></title>
     <url>%2F2019%2F03%2F11%2F%E8%BF%AD%E4%BB%A3%E5%99%A8%2F</url>
     <content type="text"><![CDATA[在STL定义的容器中，string，vector与deque提供了随机访问迭代器，list、set、multiset、map、multimap提供了双向迭代器。 能进行算术运算的迭代器只有随即访问迭代器，要求容器元素存储在连续内存空间里，vector，string，deque的迭代器是有加减法的，但是map，set，multimap,multiset的迭代器是没有加减法的，list也不可以,map等的迭代器不支持加减操作，仅有++itr，–itr这些操作来进行选择 Bidirectional迭代器：是在前向迭代器的基础上，多了单步向后遍历的能力。也就是–iter,iter–。 Random Access迭代器：在双向迭代器基础上，具有直接访问各数据元素的能力。随机迭代器增加了“迭代器算术运算”： 所有迭代器都应该实现自增算符：iter++,++iter STL 中的容器适配器有 stack、queue、priority_queue 三种。它们都是在顺序容器的基础上实现的，屏蔽了顺序容器的一部分功能，突出或增加了另外一些功能。容器适配器是没有迭代器的，因此 STL 中的各种排序、查找、变序等算法都不适用于容器适配器。]]></content>

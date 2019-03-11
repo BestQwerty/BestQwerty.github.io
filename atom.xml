@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-03-11T10:33:45.577Z</updated>
+  <updated>2019-03-11T14:29:19.714Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Dev的秘密</title>
+    <link href="ctguljj.github.io/2019/03/11/Dev%E7%9A%84%E7%A7%98%E5%AF%86/"/>
+    <id>ctguljj.github.io/2019/03/11/Dev的秘密/</id>
+    <published>2019-03-11T14:25:50.000Z</published>
+    <updated>2019-03-11T14:29:19.714Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="dev快捷键"><a href="#dev快捷键" class="headerlink" title="dev快捷键"></a>dev快捷键</h1><ul><li>按下Ctrl+Shift+A，会看到DEV帮你整理好了代码。</li><li>Ctrl + shift + 方向键上或下<br>会选中光标当前所在的行，然后将这个行进行上移或下移，移动操作不会覆盖上下相邻的行，只是将位置进行对调。（eclipse则是在嵌套的方法之间做跳转，VS2013没有效果）</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;dev快捷键&quot;&gt;&lt;a href=&quot;#dev快捷键&quot; class=&quot;headerlink&quot; title=&quot;dev快捷键&quot;&gt;&lt;/a&gt;dev快捷键&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;按下Ctrl+Shift+A，会看到DEV帮你整理好了代码。&lt;/li&gt;
+&lt;li&gt;Ctrl + s
+      
+    
+    </summary>
+    
+      <category term="Dev" scheme="ctguljj.github.io/categories/Dev/"/>
+    
+    
+      <category term="Dev" scheme="ctguljj.github.io/tags/Dev/"/>
+    
+  </entry>
   
   <entry>
     <title>迭代器</title>
@@ -550,34 +577,6 @@
     
     
       <category term="数据类型" scheme="ctguljj.github.io/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>代码块高亮</title>
-    <link href="ctguljj.github.io/2019/03/06/%E4%BB%A3%E7%A0%81%E5%9D%97%E9%AB%98%E4%BA%AE/"/>
-    <id>ctguljj.github.io/2019/03/06/代码块高亮/</id>
-    <published>2019-03-06T04:33:23.000Z</published>
-    <updated>2019-03-06T04:36:01.950Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="主题自带样式-代码块高亮"><a href="#主题自带样式-代码块高亮" class="headerlink" title="主题自带样式 代码块高亮"></a>主题自带样式 代码块高亮</h1><ul><li><p>这里指的是<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```[language] [title] [url] [link-text]</span><br><span class="line"></span><br><span class="line">代码</span><br></pre></td></tr></table></figure></p></li><li><p>[language] 是代码语言的名称，用来设置代码块颜色高亮，非必须；</p></li><li>[title] 是顶部左边的说明，非必须；</li><li>[url] 是顶部右边的超链接地址，非必须；</li><li>[link text] 如它的字面意思，超链接的名称，非必须。</li><li>亲测这 4 项应该是根据空格来分隔，而不是[]，故请不要加[]。除非如果你想写后面两个，但不想写前面两个，那么就必须加[]了，要这样写：[] [] [url] [link text]</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;主题自带样式-代码块高亮&quot;&gt;&lt;a href=&quot;#主题自带样式-代码块高亮&quot; class=&quot;headerlink&quot; title=&quot;主题自带样式 代码块高亮&quot;&gt;&lt;/a&gt;主题自带样式 代码块高亮&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;这里指的是&lt;figure class=&quot;h
-      
-    
-    </summary>
-    
-      <category term="blog" scheme="ctguljj.github.io/categories/blog/"/>
-    
-      <category term="markdown" scheme="ctguljj.github.io/categories/blog/markdown/"/>
-    
-    
-      <category term="blog" scheme="ctguljj.github.io/tags/blog/"/>
     
   </entry>
   
