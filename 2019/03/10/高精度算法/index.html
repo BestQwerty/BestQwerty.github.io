@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="前言:由于计算机运算是有模运算,数据范围的表示有一定限制,如整型int(C++中int 与long相同)表达范围是(-2^31~2^31-1),unsigned long(无符号整数)是(0~2^32-1),都约为几十亿.如果采用实数型,则能保存最大的double只能提供15~16位的有效数字,即只能精确表达数百万亿的数.因此,在计算位数超过十几位的数时,不能采用现有类型,只能自己编程计算.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-10T15:35:54.329Z">
+<meta property="og:updated_time" content="2019-03-12T05:05:06.435Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="高精度算法">
 <meta name="twitter:description" content="前言:由于计算机运算是有模运算,数据范围的表示有一定限制,如整型int(C++中int 与long相同)表达范围是(-2^31~2^31-1),unsigned long(无符号整数)是(0~2^32-1),都约为几十亿.如果采用实数型,则能保存最大的double只能提供15~16位的有效数字,即只能精确表达数百万亿的数.因此,在计算位数超过十几位的数时,不能采用现有类型,只能自己编程计算.">
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-10T23:35:54+08:00">
-                2019-03-10
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-12T13:05:06+08:00">
+                2019-03-12
               </time>
             
           </span>
@@ -458,6 +458,8 @@
 <li><p>下标　　0  　 1　   2   　3   　　4 　  5    6    7    8    9<br>内容　　4   　5  　 8   　4   　　3  　 0    0    0    0    0</p>
 <pre><code>说明：位数   个位  十位  百位　千位
 </code></pre></li>
+<li><p><strong>倒序存储</strong></p>
+</li>
 <li><p>面对高精度类型的题我们只需要像竖式一样从低位到高位计算，最后进行处理</p>
 </li>
 <li><p>注：高精度计算时一般用正数，对于负数，通过处理符号位的修正，在程序实现上用一个变量来存储符号位，用另一个数组存差的绝对值，置符号位：判断被减数是否大于减数：大则将符号位置为空；小则将符号位置为“- ”，交换减数与被减数；</p>
@@ -675,7 +677,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-count">35</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -686,7 +688,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">29</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -778,7 +780,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">16.6k</span>
+    <span title="Site words total count">17.2k</span>
   
 </div>
 

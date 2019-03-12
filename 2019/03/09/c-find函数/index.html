@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="find函数 find用在容器中更加普遍，而algorithm中其实find函数只是一种  C++find函数原型：   123456789101112template&amp;lt;class InputIterator, class T&amp;gt; InputIterator find (InputIterator first, InputIterator last, const T&amp;amp; val)&amp;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-09T13:58:47.966Z">
+<meta property="og:updated_time" content="2019-03-12T10:08:07.971Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="c++find函数">
 <meta name="twitter:description" content="find函数 find用在容器中更加普遍，而algorithm中其实find函数只是一种  C++find函数原型：   123456789101112template&amp;lt;class InputIterator, class T&amp;gt; InputIterator find (InputIterator first, InputIterator last, const T&amp;amp; val)&amp;">
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-09T21:58:47+08:00">
-                2019-03-09
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-12T18:08:07+08:00">
+                2019-03-12
               </time>
             
           </span>
@@ -392,7 +392,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">515(字)</span> 
+					<span class="post-count">552(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -463,8 +463,11 @@
 <h2 id="各个容器自己实现的成员函数"><a href="#各个容器自己实现的成员函数" class="headerlink" title="各个容器自己实现的成员函数"></a>各个容器自己实现的成员函数</h2><ul>
 <li>vector没有实现find函数，除此之外，常见容器都实现了自己的find函数，如set，map，string</li>
 <li>String是这一种顺序存储结构，其find函数返回的是下标索引。set,map,multiset,multimap都不是顺序索引的数据结构，所以返回的是迭代器。</li>
-<li>为什么返回的不是索引下标？这是因为索引下标是在数组这种连续存储的数据结构里面常见的，是一种顺序索引；而很多数据结构的存储并非连续的，不能实现顺序索引，为了兼顾所有的数据结构，所以返回的仅仅是指针或是迭代器。<h2 id="如果元素不在"><a href="#如果元素不在" class="headerlink" title="如果元素不在"></a>如果元素不在</h2>对于返回迭代器的查找，通过判断find（a.begin(),a.end(),value）==a.end()，来判断元素是否存在<br>对于string，通过a.find(val)==string::npos判断</li>
+<li>为什么返回的不是索引下标？这是因为索引下标是在数组这种连续存储的数据结构里面常见的，是一种顺序索引；而很多数据结构的存储并非连续的，不能实现顺序索引，为了兼顾所有的数据结构，所以返回的仅仅是指针或是迭代器。<h2 id="如果元素不在"><a href="#如果元素不在" class="headerlink" title="如果元素不在"></a>如果元素不在</h2></li>
+<li>对于返回迭代器的查找，通过判断find（a.begin(),a.end(),value）==a.end()，来判断元素是否存在</li>
+<li>对于string，通过a.find(val)==string::npos判断</li>
 </ul>
+<h1 id="std-map-find"><a href="#std-map-find" class="headerlink" title="std::map::find"></a>std::map::find</h1><h2 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h2><p>指向键等于 key 的元素的迭代器。若找不到这种元素，则返回尾后（见 end() ）迭代器。 </p>
 
       
     </div>
@@ -634,7 +637,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-count">35</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -645,7 +648,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">29</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -696,7 +699,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#find函数"><span class="nav-number">1.</span> <span class="nav-text">find函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#各个容器自己实现的成员函数"><span class="nav-number">1.1.</span> <span class="nav-text">各个容器自己实现的成员函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如果元素不在"><span class="nav-number">1.2.</span> <span class="nav-text">如果元素不在</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#find函数"><span class="nav-number">1.</span> <span class="nav-text">find函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#各个容器自己实现的成员函数"><span class="nav-number">1.1.</span> <span class="nav-text">各个容器自己实现的成员函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如果元素不在"><span class="nav-number">1.2.</span> <span class="nav-text">如果元素不在</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#std-map-find"><span class="nav-number">2.</span> <span class="nav-text">std::map::find</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#返回值"><span class="nav-number">2.1.</span> <span class="nav-text">返回值</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -737,7 +740,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">16.6k</span>
+    <span title="Site words total count">17.2k</span>
   
 </div>
 
