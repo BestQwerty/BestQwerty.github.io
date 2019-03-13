@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-03-12T13:44:33.319Z</updated>
+  <updated>2019-03-13T10:42:29.400Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>merge函数</title>
+    <link href="ctguljj.github.io/2019/03/13/merge%E5%87%BD%E6%95%B0/"/>
+    <id>ctguljj.github.io/2019/03/13/merge函数/</id>
+    <published>2019-03-13T10:42:29.000Z</published>
+    <updated>2019-03-13T10:42:29.400Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>c++输入输出</title>
@@ -544,37 +558,6 @@
     
     
       <category term="stl" scheme="ctguljj.github.io/tags/stl/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>bool类型</title>
-    <link href="ctguljj.github.io/2019/03/08/bool%E7%B1%BB%E5%9E%8B/"/>
-    <id>ctguljj.github.io/2019/03/08/bool类型/</id>
-    <published>2019-03-08T05:03:30.000Z</published>
-    <updated>2019-03-08T05:31:34.204Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li>千万不要让编译器决定你的默认值，永远初始化 </li><li>变量未初始化的默认值要看变量的存储类型，也可能与编译器有关，跟其它因素</li></ul><h1 id="bool类型"><a href="#bool类型" class="headerlink" title="bool类型"></a>bool类型</h1><ul><li>c++中有bool类型</li><li>bool可用于定义函数类型为布尔型，函数里可以有 return TRUE; return FALSE 之类的语句。</li></ul><h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><ul><li>为了安全起见， 最好初始化为false.</li><li>bool值一定要初始化</li></ul><h1 id="在GCC编译器下各个类型的全局变量的默认值："><a href="#在GCC编译器下各个类型的全局变量的默认值：" class="headerlink" title="在GCC编译器下各个类型的全局变量的默认值："></a>在GCC编译器下各个类型的全局变量的默认值：</h1><ul><li>表示数字的变量类型默认值都为0<ul><li>bool型默认值为false</li><li>string型默认值为空字符串</li><li>char 型比较特殊。char类型默认值为’\0’， 即字符串结束标志，其整数值为0。如果用printf(“%d”)输出时值为 0， 但用printf(“%c”),或cout 输出时显示为”a”， char型数组默认值为空字符串，其中的每个元素与单个char类型相同，所以用puts() 和printf(“%s”)<br>输出都是空字符串。</li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ul&gt;
-&lt;li&gt;千万不要让编译器决定你的默认值，永远初始化 &lt;/li&gt;
-&lt;li&gt;变量未初始化的默认值要看变量的存储类型，也可能与编译器有关，跟其它因素&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;bool类型&quot;&gt;&lt;a href=&quot;#bool类型&quot; class=&quot;headerlink&quot;
-      
-    
-    </summary>
-    
-      <category term="c++" scheme="ctguljj.github.io/categories/c/"/>
-    
-      <category term="数据类型" scheme="ctguljj.github.io/categories/c/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    
-    
-      <category term="c++" scheme="ctguljj.github.io/tags/c/"/>
     
   </entry>
   

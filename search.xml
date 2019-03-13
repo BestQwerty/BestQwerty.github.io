@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[merge函数]]></title>
+    <url>%2F2019%2F03%2F13%2Fmerge%E5%87%BD%E6%95%B0%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[c++输入输出]]></title>
     <url>%2F2019%2F03%2F12%2Fc-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA-1%2F</url>
     <content type="text"><![CDATA[getline函数C++中有两个getline函数 1.一个是在string头文件中，定义的是一个全局的函数,函数声明是 istream&amp; getline ( istream &amp;is , string &amp;str , char delim );istream&amp; getline ( istream&amp; is, string&amp; str); is 进行读入操作的输入流 str 存储读入的内容 delim 终结符 对于第一个函数delim是可以由用户自己定义的终结符；对于第二个函数delim默认为 ‘\n’（换行符）。 在遇到终结符delim后，delim会被丢弃，不存入str中。在下次读入操作时，将在delim的下个字符开始读入。 这个getline是个全局函数，而不是istream/iostream的成员函数getline。 2. 另一个则是istream的成员函数，函数声明是 istream&amp; getline (char* s, streamsize n ) istream&amp; getline (char* s, streamsize n, char delim ); 注意这个getline是将读取的字符串存储在char数组中而不可以将该参数声明为string类型，因为C++编译器无法执行此默认转换。！ 输入过程中达到n个数或者提前遇到delim，或者文件结束，输入结束 下面看看就行，待续 1、getline读取换行符 并且将换行符替换成’\0’，并且会丢弃换行符，对于getline函数，在函数遇到和结束定界符相等的字符时函数结束，同时函数抽出定界符，此种情况下该定界符既不被放回输入流，也不被放入要生成的字符串 2、cin会把换行符留在输入队列中 3、cin.getline读取换行符并替换成’\0’，并且不会主动丢弃换行符，会把它留在输入队列中]]></content>
