@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="STL是一个统一的整体，map的很多用法都和STL中其它的东西结合在一起 map中由于它内部有序，由红黑树保证，因此很多函数执行的时间复杂度都是log2N的，如果用map函数可以实现的功能，而STL  Algorithm也可以完成该功能，建议用map自带函数，效率高一些。 sort算法有个限制，利用sort算法只能对序列容器进行排序，就是线性的（如vector，list，deque）。map是一">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-12T10:38:44.771Z">
+<meta property="og:updated_time" content="2019-03-14T00:41:15.542Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="c++map容器">
 <meta name="twitter:description" content="STL是一个统一的整体，map的很多用法都和STL中其它的东西结合在一起 map中由于它内部有序，由红黑树保证，因此很多函数执行的时间复杂度都是log2N的，如果用map函数可以实现的功能，而STL  Algorithm也可以完成该功能，建议用map自带函数，效率高一些。 sort算法有个限制，利用sort算法只能对序列容器进行排序，就是线性的（如vector，list，deque）。map是一">
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-12T18:38:44+08:00">
-                2019-03-12
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-14T08:41:15+08:00">
+                2019-03-14
               </time>
             
           </span>
@@ -392,7 +392,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">1k(字)</span> 
+					<span class="post-count">1.6k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -460,8 +460,9 @@
 <li>STL中默认是采用小于号来排序的</li>
 <li>键和值的数据类型是不相同的，这与set不同。set中的key和value是Key类型的，而map中的key和value是一个pair结构中的两个分量</li>
 <li><a href="https://baike.baidu.com/item/STL%20map#1" target="_blank" rel="noopener">stl-map</a></li>
+<li><code>greater &lt;int&gt; &gt;</code>最右边的两个&gt;之间要有空格，否则 Dev C++ 会将它们当作右移运算符，导致编译出错<h1 id="对map的排序"><a href="#对map的排序" class="headerlink" title="对map的排序"></a>对map的排序</h1></li>
 </ul>
-<h1 id="对map的排序"><a href="#对map的排序" class="headerlink" title="对map的排序"></a>对map的排序</h1><h2 id="key值排序"><a href="#key值排序" class="headerlink" title="key值排序"></a>key值排序</h2><ul>
+<h2 id="key值排序"><a href="#key值排序" class="headerlink" title="key值排序"></a>key值排序</h2><ul>
 <li>按照Key值自动进行了排序</li>
 <li>上面的按key值排序有个缺点：即当插入的有多个相等的值时，由于key的唯一性，会只保留一个。</li>
 </ul>
@@ -500,6 +501,49 @@
 </li>
 </ul>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">	<span class="keyword">typedef</span> pair&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt; PAIR;</span><br><span class="line"></span><br><span class="line">		<span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt; name_score_map;</span><br><span class="line">	name_score_map.insert(make_pair(<span class="string">"Bing"</span>, <span class="number">99</span>));</span><br><span class="line"></span><br><span class="line">	name_score_map.insert(make_pair(<span class="string">"Albert"</span>, <span class="number">86</span>));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">vector</span>&lt;PAIR&gt; name_score_vec(name_score_map.begin(), name_score_map.end());</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sort(name_score_vec.begin(), name_score_vec.end(), cmp);</span><br></pre></td></tr></table></figure>
+<h1 id="map的构造"><a href="#map的构造" class="headerlink" title="map的构造"></a>map的构造</h1><ul>
+<li><p>在 C++ 中通过 insert() 方法向集合中插入一个新的映射，参数是一个 pair 类型的结构。<code>pair&lt;int,char&gt;(1,’a’)</code>定义了一个整数 1 和字符 a 的 pair。我们向映射中加入新映射对的时候就是通过 pair 来实现的。如果插入的 key 之前已经有 value，不会用插入的新的 value 替代原来的 value，也就是插入无效，但并不会报错。</p>
+<ul>
+<li><p>如果插入语句没有生效，那么这就涉及到我们怎么知道 insert 语句是否插入成功的问题了，可以通过 pair 来获得是否插入成功，程序如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">pair&lt;<span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="built_in">string</span>&gt;::iterator, <span class="keyword">bool</span>&gt; insert_pair;</span><br><span class="line">insert_pair = mapStudent.insert(<span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="built_in">string</span>&gt;::value_type (<span class="number">1</span>, <span class="string">"student_one"</span>));</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>我们通过 pair 的第二个变量来知道是否插入成功，它的第一个变量返回的是一个 map 迭代器，如果插入成功的话，<code>insert_pair.second</code>应该是 true，否则为 false。</p>
+</li>
+</ul>
+</li>
+<li><p>用数组方式就不同了，它可以覆盖以前该关键字对应的值            </p>
+</li>
+<li><p>是否已经有映射了。需要用到 count() 函数进行判断或者find        </p>
+<ul>
+<li><p>std::map::count</p>
+<ul>
+<li><code>size_type count( const Key&amp; key ) const;</code></li>
+<li><code>template&lt; class K &gt; 
+size_type count( const K&amp; x ) const;</code></li>
+<li>返回拥有关键比较等价于指定参数的元素数，因为此容器不允许重复故为 1 或 0。 </li>
+<li>1) 返回拥有关键 key 的元素数。</li>
+<li>2) 返回拥有关键比较等价于值 x 的元素数。此重载仅若有限定 <code>id Compare::is_transparent</code>合法且指代一个类型才参与重载决议。这允许调用此函数而不构造 Key 的实例。</li>
+<li><p>参数</p>
+<ul>
+<li><p>key </p>
+<p>要计量元素数的关键值 </p>
+</li>
+<li><p>x </p>
+<p>要与关键比较的替用值 </p>
+</li>
+</ul>
+</li>
+<li>返回值<br>拥有比较等价于 key 或 x 的关键的元素数，对于 (1) 为 1 或 0。 </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><code>mapStudent.insert(pair&lt;int, string&gt;(2, &quot;student_two&quot;));</code></li>
+<li><code>mapStudent.insert(map&lt;int, string&gt;::value_type (1, &quot;student_one&quot;));</code></li>
+<li><code>mapStudent[1] =  &quot;student_one&quot;;</code></li>
+</ul>
 <h1 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h1><ul>
 <li>对key 排序的话，直接使用<code>greater&lt;string&gt;</code>在map定义的时候就。而要对value排序，则是使用函数对象，先将map转换为vector，调用sort函数中传入一个函数对象，则可以实现对value 的排序。还有一点是pair 只重载了<code>&amp;lt;</code>，则stl 则不能使用 == 运算符。</li>
 </ul>
@@ -734,7 +778,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#对map的排序"><span class="nav-number">1.</span> <span class="nav-text">对map的排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#key值排序"><span class="nav-number">1.1.</span> <span class="nav-text">key值排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#map的定义"><span class="nav-number">1.1.1.</span> <span class="nav-text">map的定义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#按照value排序"><span class="nav-number">1.2.</span> <span class="nav-text">按照value排序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结："><span class="nav-number">2.</span> <span class="nav-text">总结：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#对map的排序"><span class="nav-number">1.</span> <span class="nav-text">对map的排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#key值排序"><span class="nav-number">1.1.</span> <span class="nav-text">key值排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#map的定义"><span class="nav-number">1.1.1.</span> <span class="nav-text">map的定义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#按照value排序"><span class="nav-number">1.2.</span> <span class="nav-text">按照value排序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#map的构造"><span class="nav-number">2.</span> <span class="nav-text">map的构造</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结："><span class="nav-number">3.</span> <span class="nav-text">总结：</span></a></li></ol></div>
             
 
           </div>
@@ -775,7 +819,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">18.4k</span>
+    <span title="Site words total count">18.9k</span>
   
 </div>
 
