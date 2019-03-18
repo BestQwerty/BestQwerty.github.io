@@ -91,7 +91,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/欧拉筛选法.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/埃拉特斯特尼筛法.png">
-<meta property="og:updated_time" content="2019-03-07T05:16:30.039Z">
+<meta property="og:updated_time" content="2019-03-16T11:02:39.164Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="素数筛选法">
 <meta name="twitter:description" content="数学原理 一个数 n 如果是合数，那么它的所有的因子不超过sqrt(n)–n的开方 质数又称素数。一个大于1的自然数，除了1和它自身外，不能被其他自然数整除的数叫做质数；否则称为合数 质数大于等于2 不能被它本身和1以外的数整除  素数筛选法 素数是数学中一个很重要的数，很多算法中都需要用到素数相关的性质，因此传统的暴力循环求素数的效率显得十分低效，这里我们有两种高效求1~n以内的素数的方法。需要">
@@ -349,8 +349,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-07T13:16:30+08:00">
-                2019-03-07
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-16T19:02:39+08:00">
+                2019-03-16
               </time>
             
           </span>
@@ -430,6 +430,7 @@
 </ul>
 <h1 id="欧拉筛法-时间复杂度（n"><a href="#欧拉筛法-时间复杂度（n" class="headerlink" title="欧拉筛法-时间复杂度（n)"></a>欧拉筛法-时间复杂度（n)</h1><ul>
 <li><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/欧拉筛选法.png" alt=""></li>
+<li>回顾经典的Eratosthenes筛法，它可能对同一个质数筛去多次。那么如果用某种方法使得每个合数只被筛去一次就变成是线性的了。不妨规定每个合数只用其最小的一个质因数去筛，这便是欧拉筛了。</li>
 <li>最简单的素数筛法是这样的：10000000内的素数，用这个筛选法可以大大的降低时间复杂度</li>
 </ul>
 <p>1.开一个大的bool型数组prime[]，大小就是n+1就可以了.先把所有的下标为奇数的标为true,下标为偶数的标为false.</p>
@@ -627,7 +628,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-count">41</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -638,7 +639,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -649,7 +650,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -730,7 +731,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">19.3k</span>
+    <span title="Site words total count">21.4k</span>
   
 </div>
 
