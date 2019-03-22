@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="dfs模板 DFS的重要点在于状态回溯 判出口（终点、越界）-&amp;gt;剪枝-&amp;gt;扩展-&amp;gt;标记-&amp;gt;递归-&amp;gt;还原  12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152void dfs()//参数用来表示状态  &amp;#123;      if(到">
+<meta name="description" content="dfs模板 DFS的重要点在于状态回溯 判出口（终点、越界）-&amp;gt; 剪枝-&amp;gt;扩展-&amp;gt;标记-&amp;gt;递归-&amp;gt;还原  123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354void dfs()//参数用来表示状态  &amp;#123;">
 <meta name="keywords" content="算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="dfs的奥妙">
 <meta property="og:url" content="ctguljj.github.io/2019/03/20/dfss的奥妙/index.html">
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
-<meta property="og:description" content="dfs模板 DFS的重要点在于状态回溯 判出口（终点、越界）-&amp;gt;剪枝-&amp;gt;扩展-&amp;gt;标记-&amp;gt;递归-&amp;gt;还原  12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152void dfs()//参数用来表示状态  &amp;#123;      if(到">
+<meta property="og:description" content="dfs模板 DFS的重要点在于状态回溯 判出口（终点、越界）-&amp;gt; 剪枝-&amp;gt;扩展-&amp;gt;标记-&amp;gt;递归-&amp;gt;还原  123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354void dfs()//参数用来表示状态  &amp;#123;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-21T06:01:23.709Z">
+<meta property="og:updated_time" content="2019-03-22T13:05:07.015Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="dfs的奥妙">
-<meta name="twitter:description" content="dfs模板 DFS的重要点在于状态回溯 判出口（终点、越界）-&amp;gt;剪枝-&amp;gt;扩展-&amp;gt;标记-&amp;gt;递归-&amp;gt;还原  12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152void dfs()//参数用来表示状态  &amp;#123;      if(到">
+<meta name="twitter:description" content="dfs模板 DFS的重要点在于状态回溯 判出口（终点、越界）-&amp;gt; 剪枝-&amp;gt;扩展-&amp;gt;标记-&amp;gt;递归-&amp;gt;还原  123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354void dfs()//参数用来表示状态  &amp;#123;">
 
 
 
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-21T14:01:23+08:00">
-                2019-03-21
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-22T21:05:07+08:00">
+                2019-03-22
               </time>
             
           </span>
@@ -392,7 +392,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">146(字)</span> 
+					<span class="post-count">488(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -452,9 +452,22 @@
       
         <h1 id="dfs模板"><a href="#dfs模板" class="headerlink" title="dfs模板"></a>dfs模板</h1><ul>
 <li>DFS的重要点在于状态回溯</li>
-<li>判出口（终点、越界）-&gt;剪枝-&gt;扩展-&gt;标记-&gt;递归-&gt;还原</li>
+<li><code>判出口（终点、越界）-&gt; 剪枝-&gt;扩展-&gt;标记-&gt;递归-&gt;还原</code></li>
 </ul>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">()</span><span class="comment">//参数用来表示状态  </span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(到达终点状态)  </span><br><span class="line"></span><br><span class="line">    &#123;  </span><br><span class="line"></span><br><span class="line">        ...<span class="comment">//根据题意添加  </span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span>;  </span><br><span class="line"></span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(越界或者是不合法状态)  </span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span>;  </span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(特殊状态)<span class="comment">//剪枝</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(扩展方式)  </span><br><span class="line"></span><br><span class="line">    &#123;  </span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(扩展方式所达到状态合法)  </span><br><span class="line"></span><br><span class="line">        &#123;  </span><br><span class="line"></span><br><span class="line">            修改操作;<span class="comment">//根据题意来添加  </span></span><br><span class="line"></span><br><span class="line">            标记；  </span><br><span class="line"></span><br><span class="line">            dfs（）；  </span><br><span class="line"></span><br><span class="line">            (还原标记)；  </span><br><span class="line"></span><br><span class="line">            <span class="comment">//是否还原标记根据题意  </span></span><br><span class="line"></span><br><span class="line">            <span class="comment">//如果加上（还原标记）就是 回溯法  </span></span><br><span class="line"></span><br><span class="line">        &#125;  </span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">()</span><span class="comment">//参数用来表示状态  </span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(到达终点状态)  </span><br><span class="line"></span><br><span class="line">    &#123;  </span><br><span class="line"></span><br><span class="line">        ...<span class="comment">//根据题意添加  </span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span>;  </span><br><span class="line"></span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(越界或者是不合法状态)  </span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span>;  </span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(特殊状态)<span class="comment">//剪枝</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(扩展方式)  </span><br><span class="line"></span><br><span class="line">    &#123;  </span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(扩展方式所达到状态合法)  </span><br><span class="line"></span><br><span class="line">        &#123;  </span><br><span class="line"></span><br><span class="line">            修改操作;<span class="comment">//根据题意来添加  </span></span><br><span class="line"></span><br><span class="line">            标记； <span class="comment">//标记可以再开一个另外的数组进行标记 </span></span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">            dfs（）；  </span><br><span class="line"></span><br><span class="line">            (还原标记)；  </span><br><span class="line"></span><br><span class="line">            <span class="comment">//是否还原标记根据题意  </span></span><br><span class="line"></span><br><span class="line">            <span class="comment">//如果加上（还原标记）就是 回溯法  </span></span><br><span class="line"></span><br><span class="line">        &#125;  </span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h2><ul>
+<li>如何获得下一个方向的坐标（此处定义一个方向数组）。</li>
+</ul>
+<pre><code>    <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line"><span class="keyword">int</span> next[<span class="number">4</span>][<span class="number">2</span>]=&#123;</span><br><span class="line"></span><br><span class="line">    &#123;<span class="number">0</span>, <span class="number">1</span>&#125;<span class="comment">//向右走</span></span><br><span class="line">    &#123;<span class="number">1</span>, <span class="number">0</span>&#125;<span class="comment">//向下走</span></span><br><span class="line">    &#123;<span class="number">0</span>, <span class="number">-1</span>&#125;<span class="comment">//向左走</span></span><br><span class="line">    &#123;<span class="number">-1</span>, <span class="number">0</span>&#125;<span class="comment">//向上走 </span></span><br><span class="line"></span><br><span class="line">   &#125;;</span><br><span class="line">next[i][<span class="number">0</span>]; <span class="comment">//x方向</span></span><br><span class="line">next[i][<span class="number">1</span>]; <span class="comment">//y方向</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> dir[<span class="number">4</span>][<span class="number">2</span>]= &#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">-1</span>,<span class="number">-1</span>,<span class="number">0</span>&#125;;</span><br><span class="line">dir[i][<span class="number">0</span>]; <span class="comment">//x方向</span></span><br><span class="line">dir[i][<span class="number">1</span>]; <span class="comment">//y方向</span></span><br></pre></td></tr></table></figure>
+
+- 通过这个方向数组，使用循环就可以方便地得到下一步的坐标。
+
+
+
+     <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">		</span><br><span class="line">	<span class="keyword">int</span> <span class="built_in">map</span>[<span class="number">6</span>][<span class="number">6</span>];<span class="comment">//地图；</span></span><br><span class="line">	<span class="keyword">bool</span> temp[<span class="number">6</span>][<span class="number">6</span>];<span class="comment">//走过的标记；</span></span><br><span class="line">	<span class="keyword">int</span> dx[<span class="number">4</span>]=&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span>&#125;;<span class="comment">//打表；</span></span><br><span class="line">	<span class="keyword">int</span> dy[<span class="number">4</span>]=&#123;<span class="number">-1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>&#125;;<span class="comment">//打表；</span></span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">walk</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span><span class="comment">//定义walk；</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x==fx&amp;&amp;y==fy)<span class="comment">//fx表示结束x坐标，fy表示结束y坐标；</span></span><br><span class="line">    &#123;</span><br><span class="line">        total++;<span class="comment">//总数增加；</span></span><br><span class="line">        <span class="keyword">return</span>;<span class="comment">//返回，继续搜索；</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">3</span>;i++)<span class="comment">//0——3是左，右，下，上四个方向；</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(temp[x+dx[i]][y+dy[i]]==<span class="number">0</span>&amp;&amp;<span class="built_in">map</span>[x+dx[i]][y+dy[i]]==<span class="number">1</span>)<span class="comment">//判断没有走过和没有障碍；</span></span><br><span class="line">            &#123;</span><br><span class="line">                temp[x][y]=<span class="number">1</span>;<span class="comment">//走过的地方打上标记；</span></span><br><span class="line">                walk(x+dx[i],y+dy[i]);<span class="comment">//同i!!!!</span></span><br><span class="line">                temp[x][y]=<span class="number">0</span>;<span class="comment">//还原状态；</span></span><br><span class="line">            &#125;    </span><br><span class="line">        &#125; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+- 就在地图map数组上打标记（自己走过的路）比较简单，走过的路和障碍可能引起混淆
+</code></pre>
       
     </div>
     
@@ -503,8 +516,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/17/matlab基本操作/" rel="next" title="matlab基本操作">
-                <i class="fa fa-chevron-left"></i> matlab基本操作
+              <a href="/2019/03/15/快排及其优化/" rel="next" title="快排及其优化">
+                <i class="fa fa-chevron-left"></i> 快排及其优化
               </a>
             
           </div>
@@ -623,7 +636,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">43</span>
+                  <span class="site-state-item-count">41</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -634,7 +647,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">35</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -685,7 +698,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#dfs模板"><span class="nav-number">1.</span> <span class="nav-text">dfs模板</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#dfs模板"><span class="nav-number">1.</span> <span class="nav-text">dfs模板</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#小技巧"><span class="nav-number">1.1.</span> <span class="nav-text">小技巧</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -726,7 +739,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">21.7k</span>
+    <span title="Site words total count">17.9k</span>
   
 </div>
 
