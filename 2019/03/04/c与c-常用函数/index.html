@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="常用函数 max, min, fill, memset, sort, swap  字符串函数 字符串比较函数strcmp因为原理是两个字符串一个个比较，所以可以比较字符是否相同！！！！！如果把序号按字符串存储，则会可以通过strcmp比较序号是否相同。(有用) Strlen函数如果没有遇到’\0’，会一直计算下去，字符串二维数组不可以用strlen，因为二维数组每一行相当于一个字符串一维数组，每一">
+<meta name="description" content="常用函数 max, min, fill, memset, sort, swap  字符串函数 字符串比较函数strcmp因为原理是两个字符串一个个比较，所以可以比较字符是否相同！！！！！ 如果把序号按字符串存储，则会可以通过strcmp比较序号是否相同。(有用) Strlen函数如果没有遇到’\0’，会一直计算下去，字符串二维数组不可以用strlen，因为二维数组每一行相当于一个字符串一维数组，每">
 <meta name="keywords" content="c++">
 <meta property="og:type" content="article">
 <meta property="og:title" content="c与c++常用函数">
 <meta property="og:url" content="ctguljj.github.io/2019/03/04/c与c-常用函数/index.html">
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
-<meta property="og:description" content="常用函数 max, min, fill, memset, sort, swap  字符串函数 字符串比较函数strcmp因为原理是两个字符串一个个比较，所以可以比较字符是否相同！！！！！如果把序号按字符串存储，则会可以通过strcmp比较序号是否相同。(有用) Strlen函数如果没有遇到’\0’，会一直计算下去，字符串二维数组不可以用strlen，因为二维数组每一行相当于一个字符串一维数组，每一">
+<meta property="og:description" content="常用函数 max, min, fill, memset, sort, swap  字符串函数 字符串比较函数strcmp因为原理是两个字符串一个个比较，所以可以比较字符是否相同！！！！！ 如果把序号按字符串存储，则会可以通过strcmp比较序号是否相同。(有用) Strlen函数如果没有遇到’\0’，会一直计算下去，字符串二维数组不可以用strlen，因为二维数组每一行相当于一个字符串一维数组，每">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-10T02:58:23.166Z">
+<meta property="og:updated_time" content="2019-03-22T13:14:25.709Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="c与c++常用函数">
-<meta name="twitter:description" content="常用函数 max, min, fill, memset, sort, swap  字符串函数 字符串比较函数strcmp因为原理是两个字符串一个个比较，所以可以比较字符是否相同！！！！！如果把序号按字符串存储，则会可以通过strcmp比较序号是否相同。(有用) Strlen函数如果没有遇到’\0’，会一直计算下去，字符串二维数组不可以用strlen，因为二维数组每一行相当于一个字符串一维数组，每一">
+<meta name="twitter:description" content="常用函数 max, min, fill, memset, sort, swap  字符串函数 字符串比较函数strcmp因为原理是两个字符串一个个比较，所以可以比较字符是否相同！！！！！ 如果把序号按字符串存储，则会可以通过strcmp比较序号是否相同。(有用) Strlen函数如果没有遇到’\0’，会一直计算下去，字符串二维数组不可以用strlen，因为二维数组每一行相当于一个字符串一维数组，每">
 
 
 
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-10T10:58:23+08:00">
-                2019-03-10
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-22T21:14:25+08:00">
+                2019-03-22
               </time>
             
           </span>
@@ -454,7 +454,8 @@
 <li>max, min, fill, memset, sort, swap</li>
 </ul>
 <h1 id="字符串函数"><a href="#字符串函数" class="headerlink" title="字符串函数"></a>字符串函数</h1><ul>
-<li>字符串比较函数strcmp因为原理是两个字符串一个个比较，所以可以比较字符是否相同！！！！！<div class="note success"><p>如果把序号按字符串存储，则会可以通过strcmp比较序号是否相同。</p></div>(有用)</li>
+<li>字符串比较函数strcmp因为原理是两个字符串一个个比较，所以可以比较字符是否相同！！！！！</li>
+<li><div class="note success"><p>如果把序号按字符串存储，则会可以通过strcmp比较序号是否相同。</p></div>(有用)</li>
 <li>Strlen函数如果没有遇到’\0’，会一直计算下去，字符串二维数组不可以用strlen，因为二维数组每一行相当于一个字符串一维数组，每一行都有’\0’！</li>
 <li>c++标准库里字符串相关函数的声明，凡是不修改内容的地方一律声明为<code>const char *</code>, <code>strlen(const char *)</code>,<code>strcmp(const char *, const char *)</code>,<code>strcpy(char *, const char *)</code>第一个参数会被修改  </li>
 </ul>
@@ -465,10 +466,10 @@
 <li><strong>返回指向dest的指针。</strong>对于出现异常的情况ANSI-C99标准并未定义，故由实现者决定返回值，通常为NULL。</li>
 </ul>
 <h1 id="tolower函数"><a href="#tolower函数" class="headerlink" title="tolower函数"></a>tolower函数</h1><ul>
-<li>定义函数：int tolower(int c);</li>
+<li>定义函数：<code>int tolower(int c);</code></li>
 </ul>
 <p>函数说明：若参数 c 为大写字母则将该对应的小写字母返回。</p>
-<p>返回值：返回转换后的小写字母，若不须转换则将参数c 值返回。<br>tolower(s[i]);</p>
+<p>返回值：返回转换后的小写字母，若不须转换则将参数c 值返回。<br><code>tolower(s[i]);</code></p>
 <ul>
 <li><code>#include &lt;cctype&gt;</code></li>
 </ul>
@@ -476,6 +477,7 @@
 <li>在头文件<code>&lt;algorithm&gt;</code>里面</li>
 <li>按照单元赋值，将一个区间的元素都赋同一个值<br><code>fill(arr, arr + n, 要填入的内容);</code><br>vector也可以：<code>fill(v.begin(), v.end(), 要填入的内容);</code></li>
 <li>fill 和fill_n函数是C++ Primer第十二章泛型算法部分内容，并把它们称为生成和变异算法，也就是说<strong>这两个函数只能对输入范围内已存在的元素进行操作</strong>。如果试图对空容器进行fill_n操作，会导致严重的运行错误，所以在对元素进行写入操作时要检查目标的大小是否足以存储要写入的元素。</li>
+<li><h2 id="对二维数组"><a href="#对二维数组" class="headerlink" title="对二维数组"></a>对二维数组</h2></li>
 </ul>
 <h2 id="与memset-函数的区别："><a href="#与memset-函数的区别：" class="headerlink" title="与memset()函数的区别："></a>与memset()函数的区别：</h2><ul>
 <li><p>两者都可以用来对数组填充，memset是对按照字节来填充的，所以一般用来填充char型数组，也经常用于填充int型的全0或全-1操作。</p>
@@ -496,7 +498,7 @@
 <ul>
 <li><p>对于非单字节数据类型只能初始化为0，而不能初始化成别的初值，因为对所有字节按任意顺序赋值0的结果都是0，而如果初始化为其他的值，就会一个字节一个字节的进行赋值，从而出现奇怪的结果。</p>
 </li>
-<li><p>对于变量：当结构体类型中包含指针时，在使用memset初始化时需要小心。<br>struct sample_strcut stTest;用memset就非常方便：memset(&amp;stTest,0,sizeof(struct sample_struct));<br>原因是memset初始化的时候是按字节一个一个填充的，int有四个字节，于是填充成0000 0001 0000 0001 0000 00001 0000 0001，这样得出数组中的每个元素的值就是16843009了。<br>赋值时0与’\0’效果一样。</p>
+<li><p>对于变量：当结构体类型中包含指针时，在使用memset初始化时需要小心。<br><code>struct sample_strcut stTest;</code>用memset就非常方便：<code>memset(&amp;stTest,0,sizeof(struct sample_struct));</code><br>原因是memset初始化的时候是按字节一个一个填充的，int有四个字节，于是填充成0000 0001 0000 0001 0000 00001 0000 0001，这样得出数组中的每个元素的值就是16843009了。<br>赋值时0与\0效果一样。</p>
 </li>
 <li>可以用于清空数组内元素与赋,memset函数一般用来填充char型数组,也经常用于填充int型的全0或全-1.不可用其它值，除非高低字节相同.</li>
 </ul>
@@ -516,18 +518,18 @@
 <h1 id="转换函数"><a href="#转换函数" class="headerlink" title="转换函数"></a>转换函数</h1><h2 id="atoi-函数"><a href="#atoi-函数" class="headerlink" title="atoi()函数"></a>atoi()函数</h2><ul>
 <li>用来将字符串转换成整数(int)：<code>int atoi (const char * str);</code></li>
 <li>【返回值】返回转换后的整型数；如果 str 不能转换成 int 或者 str 为空字符串，那么将返回 0。</li>
-<li>atoi() 函数会扫描参数 str 字符串，跳过前面的空白字符（例如空格，tab缩进等，可以通过 isspace() 函数来检测），直到遇上数字或正负符号才开始做转换，而再遇到非数字或字符串结束时(‘\0’)才结束转换，并将结果返回。</li>
+<li>atoi() 函数会扫描参数 str 字符串，跳过前面的空白字符（例如空格，tab缩进等，可以通过<code>isspace()</code> 函数来检测），直到遇上数字或正负符号才开始做转换，而再遇到非数字或字符串结束时<code>(&#39;\0&#39;)</code>才结束转换，并将结果返回。</li>
 <li>Enter a number: 233cyuyan</li>
 <li>The value entered is 233.</li>
 </ul>
 <h2 id="atol函数"><a href="#atol函数" class="headerlink" title="atol函数"></a>atol函数</h2><ul>
 <li>定义函数：<code>long atol(const char *nptr);</code></li>
-<li>函数说明： atol()会扫描参数nptr字符串，跳过前面的空格字符(就是忽略掉字符串左空格的意思)，直到遇上数字或正负符号才开始做转换，而再遇到非数字或字符串结束时(‘\0’)才结束转换，并将结果返回。</li>
+<li>函数说明： <code>atol()</code>会扫描参数nptr字符串，跳过前面的空格字符(就是忽略掉字符串左空格的意思)，直到遇上数字或正负符号才开始做转换，而再遇到非数字或字符串结束时(‘\0’)才结束转换，并将结果返回。</li>
 <li>返回值：返回转换后的长整型数。如果传入的字符串为空，或者字符串包含的内容非阿拉伯数字序列，则函数返回默认值0。</li>
 </ul>
 <h2 id="atof函数"><a href="#atof函数" class="headerlink" title="atof函数"></a>atof函数</h2><ul>
-<li>定义函数 double atof(const char *nptr);</li>
-<li>函数说明 atof()会扫描参数nptr字符串，跳过前面的空格字符，直到遇上数字或正负符号才开始做转换，而再遇到非数字或字符串结束时(‘\0’)才结束转换，并将结果返回。参数nptr字符串可包含正负号、小数点或E(e)来表示指数部分，如123.456或123e-2。</li>
+<li>定义函数 <code>double atof(const char *nptr);</code></li>
+<li>函数说明 atof()会扫描参数nptr字符串，跳过前面的空格字符，直到遇上数字或正负符号才开始做转换，而再遇到非数字或字符串结束时<code>(&#39;\0&#39;)</code>才结束转换，并将结果返回。参数nptr字符串可包含正负号、小数点或E(e)来表示指数部分，如123.456或123e-2。</li>
 <li>返回值 返回转换后的浮点型数。</li>
 <li>范例：</li>
 </ul>
@@ -711,7 +713,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">35</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -762,7 +764,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常用函数"><span class="nav-number">1.</span> <span class="nav-text">常用函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串函数"><span class="nav-number">2.</span> <span class="nav-text">字符串函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#strcpy函数"><span class="nav-number">2.1.</span> <span class="nav-text">strcpy函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tolower函数"><span class="nav-number">3.</span> <span class="nav-text">tolower函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fill函数"><span class="nav-number">4.</span> <span class="nav-text">fill函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#与memset-函数的区别："><span class="nav-number">4.1.</span> <span class="nav-text">与memset()函数的区别：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fill-n函数"><span class="nav-number">5.</span> <span class="nav-text">fill_n函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#memset函数"><span class="nav-number">6.</span> <span class="nav-text">memset函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#INF小知识"><span class="nav-number">6.0.1.</span> <span class="nav-text">INF小知识</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#转换函数"><span class="nav-number">7.</span> <span class="nav-text">转换函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#atoi-函数"><span class="nav-number">7.1.</span> <span class="nav-text">atoi()函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#atol函数"><span class="nav-number">7.2.</span> <span class="nav-text">atol函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#atof函数"><span class="nav-number">7.3.</span> <span class="nav-text">atof函数</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常用函数"><span class="nav-number">1.</span> <span class="nav-text">常用函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串函数"><span class="nav-number">2.</span> <span class="nav-text">字符串函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#strcpy函数"><span class="nav-number">2.1.</span> <span class="nav-text">strcpy函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tolower函数"><span class="nav-number">3.</span> <span class="nav-text">tolower函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fill函数"><span class="nav-number">4.</span> <span class="nav-text">fill函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#对二维数组"><span class="nav-number">4.1.</span> <span class="nav-text">对二维数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#与memset-函数的区别："><span class="nav-number">4.2.</span> <span class="nav-text">与memset()函数的区别：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fill-n函数"><span class="nav-number">5.</span> <span class="nav-text">fill_n函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#memset函数"><span class="nav-number">6.</span> <span class="nav-text">memset函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#INF小知识"><span class="nav-number">6.0.1.</span> <span class="nav-text">INF小知识</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#转换函数"><span class="nav-number">7.</span> <span class="nav-text">转换函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#atoi-函数"><span class="nav-number">7.1.</span> <span class="nav-text">atoi()函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#atol函数"><span class="nav-number">7.2.</span> <span class="nav-text">atol函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#atof函数"><span class="nav-number">7.3.</span> <span class="nav-text">atof函数</span></a></li></ol></li></div>
             
 
           </div>
@@ -803,7 +805,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">21.7k</span>
+    <span title="Site words total count">22.1k</span>
   
 </div>
 
