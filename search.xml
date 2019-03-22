@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[数组]]></title>
+    <url>%2F2019%2F03%2F22%2F%E6%95%B0%E7%BB%84%2F</url>
+    <content type="text"><![CDATA[二维数组 二维数组的初始化分为两种，一种是顺序初始化，一种是按行初始化 所谓按顺序初始化就是先从左向右再由上而下地初始化，即第一行所有元素都初始化好以后再对第二行初始化。而按行初始化则是用一对大括号来表示每一行，跳过前一行没有初始化的元素，在行内从左向右地进行初始化。 int array1[3][2]={4,2,5,6}; 顺序初始化 int array2[3][2]={ {4,2},{5},{6} }; 按行初始化 对于没有初始化的元素，则都是一个不确定的值。 内存是依靠地址来确定内存中的唯一一个存储单元的，即只有一个参数。所以在内存中，所有的数据都是像一维数组那样顺序存储的。 在内存中，先将二维数组的第一行按顺序存储，接着就是第二行的数据，然后是第三行的数据……右图（图7.4）所示的就是一个二维数组在内存中的存储情况。]]></content>
+      <categories>
+        <category>c++</category>
+        <category>基础知识</category>
+        <category>数组</category>
+      </categories>
+      <tags>
+        <tag>c++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[bfs的神奇]]></title>
     <url>%2F2019%2F03%2F20%2Fbfs%E7%9A%84%E7%A5%9E%E5%A5%87%2F</url>
     <content type="text"></content>

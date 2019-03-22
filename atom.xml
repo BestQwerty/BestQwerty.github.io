@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-03-20T13:13:52.710Z</updated>
+  <updated>2019-03-22T13:16:10.361Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数组</title>
+    <link href="ctguljj.github.io/2019/03/22/%E6%95%B0%E7%BB%84/"/>
+    <id>ctguljj.github.io/2019/03/22/数组/</id>
+    <published>2019-03-22T12:10:44.000Z</published>
+    <updated>2019-03-22T13:16:10.361Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h1><ul><li>二维数组的初始化分为两种，一种是顺序初始化，一种是按行初始化<ul><li>所谓按顺序初始化就是先从左向右再由上而下地初始化，即第一行所有元素都初始化好以后再对第二行初始化。而按行初始化则是用一对大括号来表示每一行，跳过前一行没有初始化的元素，在行内从左向右地进行初始化。</li><li><code>int array1[3][2]={4,2,5,6}; 顺序初始化</code></li><li><code>int array2[3][2]={ {4,2},{5},{6} }; 按行初始化</code></li><li>对于没有初始化的元素，则都是一个不确定的值。</li></ul></li><li>内存是依靠地址来确定内存中的唯一一个存储单元的，即只有一个参数。所以在内存中，所有的数据都是像一维数组那样顺序存储的。<ul><li>在内存中，先将二维数组的第一行按顺序存储，接着就是第二行的数据，然后是第三行的数据……右图（图7.4）所示的就是一个二维数组在内存中的存储情况。</li><li><img src="/22/数组/" alt=""></li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;二维数组&quot;&gt;&lt;a href=&quot;#二维数组&quot; class=&quot;headerlink&quot; title=&quot;二维数组&quot;&gt;&lt;/a&gt;二维数组&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;二维数组的初始化分为两种，一种是顺序初始化，一种是按行初始化&lt;ul&gt;
+&lt;li&gt;所谓按顺序初始化就是先从左向右再由
+      
+    
+    </summary>
+    
+      <category term="c++" scheme="ctguljj.github.io/categories/c/"/>
+    
+      <category term="基础知识" scheme="ctguljj.github.io/categories/c/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+      <category term="数组" scheme="ctguljj.github.io/categories/c/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E6%95%B0%E7%BB%84/"/>
+    
+    
+      <category term="c++" scheme="ctguljj.github.io/tags/c/"/>
+    
+  </entry>
   
   <entry>
     <title>bfs的神奇</title>
@@ -511,36 +542,6 @@
     
     
       <category term="常用函数" scheme="ctguljj.github.io/tags/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于vector大小（size）和容量（capacity）</title>
-    <link href="ctguljj.github.io/2019/03/08/%E5%85%B3%E4%BA%8Evector%E5%A4%A7%E5%B0%8F%EF%BC%88size%EF%BC%89%E5%92%8C%E5%AE%B9%E9%87%8F%EF%BC%88capacity%EF%BC%89/"/>
-    <id>ctguljj.github.io/2019/03/08/关于vector大小（size）和容量（capacity）/</id>
-    <published>2019-03-08T11:33:26.000Z</published>
-    <updated>2019-03-12T09:04:41.985Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h1><ul><li>在Vector容器中有以下几个关于大小的函数</li></ul><pre><code>- size()返回容器的大小，目前存在的元素数- empty()判断容器是否为空- max_size()返回容器最大的可以存储的元素- capacity()返回容器当前能够容纳的元素数量</code></pre><ul><li><div class="note success"><p>capacity 一般大于size的原因是为了避免 每次增加数据时都要重新分配内存，所以一般会 生成一个较大的空间，以便随后的数据插入。</p></div></li><li>Vector的容量之所以重要，有以下两个原因：<pre><code>-  1. 容器的大小一旦超过capacity的大小，vector会重新配置内部的存储器，导致和vector元素相关的所有reference、pointers、iterator都会失效。- 2.内存的重新配置会很耗时间。</code></pre></li><li>size 是当前 vector 容器真实占用的大小，也就是容器当前拥有多少个容器。<br>capacity 是指在发生 realloc 前能允许的最大元素数，即预分配的内存空间。</li><li>在 STL 中，拥有 capacity 属性的容器只有 vector 和 string。      </li></ul><h2 id="避免内存重新配置的方法"><a href="#避免内存重新配置的方法" class="headerlink" title="避免内存重新配置的方法"></a>避免内存重新配置的方法</h2><ul><li>方法一：Reserve()保留适当容量<pre><code>在创建容器后，第一时间为容器分配足够大的空间，避免重新分配内存。</code></pre><ul><li><code>vec.reverse(n);</code></li></ul></li></ul><ul><li><p>方法二：利用构造函数创建出足够空间</p><pre><code>该方法是创建容器时，利用构造函数初始化的出足够的空间，      </code></pre><ul><li><code>vector&lt;int&gt; v(n);</code></li></ul></li><li><p>但是要注意，如果容器中reserve的容量太大，而实际中根本不需要那么多，或者元素插入完成后，以后就不会再进行插入操作了，那么多出来的这部分空间就是过剩空间，而对于过剩空间，我们可以通过“交换技术”成功缩小空间，交换技巧的变体可以用于清除容器和减少它的容量到你的实现提供的最小值。</p></li></ul><h2 id="Vector内存扩展方式"><a href="#Vector内存扩展方式" class="headerlink" title="Vector内存扩展方式"></a>Vector内存扩展方式</h2><p> <span id="inline-blue">更多可去 stl介绍 </span></p><ul><li>vector内存成长方式可归结以下三步曲:<br><span id="inline-toc">（1）</span>另觅更大空间；<br><span id="inline-toc">（2）</span>将原数据复制过去；<br><span id="inline-toc">（3）</span>释放原空间三部曲。</li></ul><ul><li><div class="note warning"><p>对于vector和string来说，当它们的需要更多空间时，就会自动增加空间，而每次增加空间的容量会导致很大的开销，首先必须分配新的内存块，它有容器目前容量的几倍（在大部分实现中，vector和string的容量每次变为2倍），然后把所有元素从容器的旧内存拷贝到它的新内存，接着销毁旧内存中的对象，最后回收旧内存。</p></div></li><li><p>每次重新分配空间，所有指向vector或string中的迭代器、指针和引用都会失效，这意味着简单地把一个元素插入vector或string的动作也可能需要更新其他使用了指向vector或string中的迭代器、指针或引用的数据结构而膨胀。</p></li><li><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/vector.jpg" alt=""></p></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;vector&quot;&gt;&lt;a href=&quot;#vector&quot; class=&quot;headerlink&quot; title=&quot;vector&quot;&gt;&lt;/a&gt;vector&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;在Vector容器中有以下几个关于大小的函数&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;- s
-      
-    
-    </summary>
-    
-      <category term="stl" scheme="ctguljj.github.io/categories/stl/"/>
-    
-      <category term="vector" scheme="ctguljj.github.io/categories/stl/vector/"/>
-    
-    
-      <category term="stl" scheme="ctguljj.github.io/tags/stl/"/>
     
   </entry>
   
