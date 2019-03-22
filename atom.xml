@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-03-22T13:16:10.361Z</updated>
+  <updated>2019-03-22T13:28:19.827Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo特殊字符</title>
+    <link href="ctguljj.github.io/2019/03/22/hexo%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/"/>
+    <id>ctguljj.github.io/2019/03/22/hexo特殊字符/</id>
+    <published>2019-03-22T13:20:37.000Z</published>
+    <updated>2019-03-22T13:28:19.827Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>因为特殊字符，报了一下错误<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">FATAL Something&apos;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</span><br><span class="line">Template render error: (unknown path) [Line 5, Column 29]</span><br></pre></td></tr></table></figure></li></ul><p>从宇宙大爆发开始找错误，不过还好没浪费多少时间.记忆深刻，写个blog冷静一下</p><h1 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h1><ul><li>hexo特殊字符尽量减少使用，可能在转义时发生错误！如： 2个大括号连在一起！！！！！！！！！！！！！或者中括号！！</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;因为特殊字符，报了一下错误&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2
+      
+    
+    </summary>
+    
+      <category term="blog" scheme="ctguljj.github.io/categories/blog/"/>
+    
+      <category term="特殊字符" scheme="ctguljj.github.io/categories/blog/%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/"/>
+    
+    
+      <category term="blog" scheme="ctguljj.github.io/tags/blog/"/>
+    
+  </entry>
   
   <entry>
     <title>数组</title>
@@ -514,34 +542,6 @@
     
     
       <category term="stl" scheme="ctguljj.github.io/tags/stl/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>reverse反转函数</title>
-    <link href="ctguljj.github.io/2019/03/08/reverse%E5%8F%8D%E8%BD%AC%E5%87%BD%E6%95%B0/"/>
-    <id>ctguljj.github.io/2019/03/08/reverse反转函数/</id>
-    <published>2019-03-08T11:56:15.000Z</published>
-    <updated>2019-03-08T12:00:25.130Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="reverse函数"><a href="#reverse函数" class="headerlink" title="reverse函数"></a>reverse函数</h1><ul><li>reverse函数可以反转一个容器中的内容，包含在<code>&lt;algorithm&gt;</code>库中。</li><li><p>参数：first、last</p><ul><li>first和last是双向迭代器类型，reverse函数反转的范围是[first,last)，所以包括first指向的元素，不包括last指向的元素。</li></ul></li><li><p><code>reverse(v.begin(),v.end());</code><strong>反向排列</strong>从头到尾部的元素</p></li><li>reverse函数没有返回值。</li><li>复杂度<ul><li>循环交换首尾元素。因此复杂度是线性的，并且循环半个数组长度。</li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;reverse函数&quot;&gt;&lt;a href=&quot;#reverse函数&quot; class=&quot;headerlink&quot; title=&quot;reverse函数&quot;&gt;&lt;/a&gt;reverse函数&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;reverse函数可以反转一个容器中的内容，包含在&lt;code&gt;&amp;lt;a
-      
-    
-    </summary>
-    
-      <category term="c++" scheme="ctguljj.github.io/categories/c/"/>
-    
-      <category term="常用函数" scheme="ctguljj.github.io/categories/c/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/"/>
-    
-    
-      <category term="常用函数" scheme="ctguljj.github.io/tags/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/"/>
     
   </entry>
   
