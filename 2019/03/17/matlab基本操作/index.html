@@ -90,7 +90,7 @@
 <meta property="og:description" content="matlabz中变量 MATLAB中变量的命名规则是： 变量名必须是不含空格的单个词； 变量名区分大小写； 变量名最多不超过19个字符； 变量名必须以字母打头，之后可以是 任意字母、数字或下划线，变量名中，不允许使用标点符号.    matalab中Π默认为3.1416（应该） 数据显示默认为四位，但只是matlab对数据的显示方式，其实不管显示的有效位数是多少，都不影响实际的计算结果，也不会有多">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="/17/matlab基本操作/">
-<meta property="og:updated_time" content="2019-03-23T06:19:34.782Z">
+<meta property="og:updated_time" content="2019-03-23T06:42:32.467Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab基本操作">
 <meta name="twitter:description" content="matlabz中变量 MATLAB中变量的命名规则是： 变量名必须是不含空格的单个词； 变量名区分大小写； 变量名最多不超过19个字符； 变量名必须以字母打头，之后可以是 任意字母、数字或下划线，变量名中，不允许使用标点符号.    matalab中Π默认为3.1416（应该） 数据显示默认为四位，但只是matlab对数据的显示方式，其实不管显示的有效位数是多少，都不影响实际的计算结果，也不会有多">
@@ -348,7 +348,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-23T14:19:34+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-23T14:42:32+08:00">
                 2019-03-23
               </time>
             
@@ -394,7 +394,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">2.2k(字)</span> 
+					<span class="post-count">2.3k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -506,10 +506,17 @@
 </ul>
 <h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><ul>
 <li>矩阵里面元素可以是符号与字符（‘a’,’,’）,输入的元素维度要一样<ul>
-<li>矩阵里面的元素也可以是矩阵，但是必须矩阵长度维度与其它元素相同</li>
-<li></li>
+<li>矩阵里面的元素也可以是矩阵，但是矩阵长度维度必须与其它元素相同</li>
 </ul>
 </li>
+</ul>
+<ul>
+<li>生成10*10的矩阵可以如下：<code>a = [1:10;11:20;21:....];</code></li>
+<li>对矩阵a第一行后面2个赋予其他值(灵活运用：)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">a = [1 2 3</span><br><span class="line">	4 7 8</span><br><span class="line">	1 2 5];</span><br><span class="line"> </span><br><span class="line">a(1,2:3) = x;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>对一个矩阵A赋值提取可以取出然后赋给一个小矩阵a    </li>
 </ul>
 <ul>
 <li>矩阵的下标也可以是向量。<ul>
