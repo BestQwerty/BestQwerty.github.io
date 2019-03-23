@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="string123456789string a, b;.....a = a + b;//将a+b前后连接，对于string来说有些符号重载定义// ‘ + ’暂且理解为前后连接，所以前后不同，结果不同//string作为容器，可以和字符串、字符相加，也可以和string相加//具体原因不知道//待续">
+<meta name="description" content="string123456789string a, b;.....a = a + b;//将a+b前后连接，对于string来说有些符号重载定义// ‘ + ’暂且理解为前后连接，所以前后不同，结果不同//string作为容器，可以和字符串、字符相加，也可以和string相加//具体原因不知道//待续  string 的末尾没有&amp;#39;\0&amp;#39;字符，所以length()返回的是字符串的真实长">
 <meta name="keywords" content="stl">
 <meta property="og:type" content="article">
 <meta property="og:title" content="string">
 <meta property="og:url" content="ctguljj.github.io/2019/03/10/string/index.html">
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
-<meta property="og:description" content="string123456789string a, b;.....a = a + b;//将a+b前后连接，对于string来说有些符号重载定义// ‘ + ’暂且理解为前后连接，所以前后不同，结果不同//string作为容器，可以和字符串、字符相加，也可以和string相加//具体原因不知道//待续">
+<meta property="og:description" content="string123456789string a, b;.....a = a + b;//将a+b前后连接，对于string来说有些符号重载定义// ‘ + ’暂且理解为前后连接，所以前后不同，结果不同//string作为容器，可以和字符串、字符相加，也可以和string相加//具体原因不知道//待续  string 的末尾没有&amp;#39;\0&amp;#39;字符，所以length()返回的是字符串的真实长">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-10T14:56:58.355Z">
+<meta property="og:updated_time" content="2019-03-23T13:06:41.045Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="string">
-<meta name="twitter:description" content="string123456789string a, b;.....a = a + b;//将a+b前后连接，对于string来说有些符号重载定义// ‘ + ’暂且理解为前后连接，所以前后不同，结果不同//string作为容器，可以和字符串、字符相加，也可以和string相加//具体原因不知道//待续">
+<meta name="twitter:description" content="string123456789string a, b;.....a = a + b;//将a+b前后连接，对于string来说有些符号重载定义// ‘ + ’暂且理解为前后连接，所以前后不同，结果不同//string作为容器，可以和字符串、字符相加，也可以和string相加//具体原因不知道//待续  string 的末尾没有&amp;#39;\0&amp;#39;字符，所以length()返回的是字符串的真实长">
 
 
 
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-10T22:56:58+08:00">
-                2019-03-10
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-23T21:06:41+08:00">
+                2019-03-23
               </time>
             
           </span>
@@ -392,7 +392,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">76(字)</span> 
+					<span class="post-count">264(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -451,6 +451,14 @@
 
       
         <h1 id="string"><a href="#string" class="headerlink" title="string"></a>string</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">string</span> a, b;</span><br><span class="line">.....</span><br><span class="line">a = a + b;<span class="comment">//将a+b前后连接，对于string来说有些符号重载定义</span></span><br><span class="line"><span class="comment">// ‘ + ’暂且理解为前后连接，所以前后不同，结果不同</span></span><br><span class="line"><span class="comment">//string作为容器，可以和字符串、字符相加，也可以和string相加</span></span><br><span class="line"><span class="comment">//具体原因不知道</span></span><br><span class="line"><span class="comment">//待续</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>string 的末尾没有<code>&#39;\0&#39;</code>字符，所以<code>length()</code>返回的是字符串的真实长度，而不是长度 +1。</li>
+<li>string 字符串的起始下标仍是从 0 开始。</li>
+<li>有了 string 类，我们可以使用+或+=运算符来直接拼接字符串，非常方便，再也不需要使用C语言中的 strcat()、strcpy()、malloc() 等函数来拼接字符串了，再也不用担心空间不够会溢出了。<ul>
+<li>用+来拼接字符串时，运算符的两边可以都是 string 字符串，也可以是一个 string 字符串和一个C风格的字符串，还可以是一个 string 字符串和一个字符数组，或者是一个 string 字符串和一个单独的字符。</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
@@ -723,7 +731,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">22.9k</span>
+    <span title="Site words total count">23.3k</span>
   
 </div>
 

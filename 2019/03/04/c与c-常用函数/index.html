@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="常用函数 max, min, fill, memset, sort, swap  字符串函数 字符串比较函数strcmp因为原理是两个字符串一个个比较，所以可以比较字符是否相同！！！！！ 如果把序号按字符串存储，则会可以通过strcmp比较序号是否相同。(有用) Strlen函数如果没有遇到’\0’，会一直计算下去，字符串二维数组不可以用strlen，因为二维数组每一行相当于一个字符串一维数组，每">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-23T05:40:27.157Z">
+<meta property="og:updated_time" content="2019-03-23T13:01:05.616Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="c与c++常用函数">
 <meta name="twitter:description" content="常用函数 max, min, fill, memset, sort, swap  字符串函数 字符串比较函数strcmp因为原理是两个字符串一个个比较，所以可以比较字符是否相同！！！！！ 如果把序号按字符串存储，则会可以通过strcmp比较序号是否相同。(有用) Strlen函数如果没有遇到’\0’，会一直计算下去，字符串二维数组不可以用strlen，因为二维数组每一行相当于一个字符串一维数组，每">
@@ -346,7 +346,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-23T13:40:27+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-23T21:01:05+08:00">
                 2019-03-23
               </time>
             
@@ -392,7 +392,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">2.3k(字)</span> 
+					<span class="post-count">2.4k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -477,16 +477,26 @@
 <li>在头文件<code>&lt;algorithm&gt;</code>里面</li>
 <li>按照单元赋值，将一个区间的元素都赋同一个值<br><code>fill(arr, arr + n, 要填入的内容);</code><br>vector也可以：<code>fill(v.begin(), v.end(), 要填入的内容);</code></li>
 <li>fill 和fill_n函数是C++ Primer第十二章泛型算法部分内容，并把它们称为生成和变异算法，也就是说<strong>这两个函数只能对输入范围内已存在的元素进行操作</strong>。如果试图对空容器进行fill_n操作，会导致严重的运行错误，所以在对元素进行写入操作时要检查目标的大小是否足以存储要写入的元素。</li>
-<li><h1 id="对二维数组"><a href="#对二维数组" class="headerlink" title="对二维数组"></a>对二维数组</h1><h2 id="memset函数"><a href="#memset函数" class="headerlink" title="memset函数"></a>memset函数</h2></li>
+<li>fill的内部实现就是一个for循环</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt; <span class="class"><span class="keyword">class</span> <span class="title">ForwardIt</span>, <span class="title">class</span> <span class="title">T</span> &gt;</span></span><br><span class="line"><span class="class"><span class="title">void</span> <span class="title">fill</span>(<span class="title">ForwardIt</span> <span class="title">first</span>, <span class="title">ForwardIt</span> <span class="title">last</span>, <span class="title">const</span> <span class="title">T</span>&amp; <span class="title">value</span>)</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">for</span> (; first != last; ++first) &#123;</span><br><span class="line">        *first = value;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="对二维数组"><a href="#对二维数组" class="headerlink" title="对二维数组"></a>对二维数组</h1><ul>
+<li>动态分配二维数组是指的new或者malloc申请内存<h2 id="memset函数"><a href="#memset函数" class="headerlink" title="memset函数"></a>memset函数</h2></li>
 <li>1.memeset函数只能对连续的内存空间初始化。两次用malloc函数或new在堆上分的内存可能会不连续，因此错误。</li>
 <li>2.如果是直接声明的多维数组如a[5][5]，其内存肯定是连续的，此时统一memset没问题(动态声明的二维数组不一定内存连续)</li>
-<li>memset函数的初始化只能对一维数组，对于每一行，是连续分配的； 然而对于各行之间，却不是连续非配的，容易出错 </li>
+<li>memset函数的初始化只能对一维数组或者直接定义的而巍峨数组，对于动态分配的二维数组，对于每一行，是连续分配的； 然而对于各行之间，却不一定是连续分配的，容易出错 </li>
 </ul>
 <h2 id="fill函数-1"><a href="#fill函数-1" class="headerlink" title="fill函数"></a>fill函数</h2><ul>
 <li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> mp[<span class="number">20</span>][<span class="number">20</span>];</span><br><span class="line"></span><br><span class="line">fill(mp[<span class="number">0</span>],mp[<span class="number">0</span>]+<span class="number">20</span>*<span class="number">20</span>,<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">20</span>;i++)</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;<span class="number">20</span>;j++)</span><br><span class="line"></span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;mp[i][j]&lt;&lt;<span class="string">" "</span>; </span><br><span class="line"></span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;	</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="与memset-函数的区别："><a href="#与memset-函数的区别：" class="headerlink" title="与memset()函数的区别："></a>与memset()函数的区别：</h2><ul>
+<li>memset的初始化速度比循环要快很多</li>
+<li><p>fill和for循环事件是一样的</p>
+<ul>
+<li>fill的源码就是for循环实现的</li>
+</ul>
+</li>
 <li><p>两者都可以用来对数组填充，memset是对按照字节来填充的，所以一般用来填充char型数组，也经常用于填充int型的全0或全-1操作。</p>
 </li>
 <li><p>fill是按照单元来填充的，所以可以填充一个区间的任意值。</p>
@@ -812,7 +822,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">22.9k</span>
+    <span title="Site words total count">23.3k</span>
   
 </div>
 
