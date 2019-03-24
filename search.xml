@@ -115,7 +115,7 @@
   <entry>
     <title><![CDATA[Dev的秘密]]></title>
     <url>%2F2019%2F03%2F11%2FDev%E7%9A%84%E7%A7%98%E5%AF%86%2F</url>
-    <content type="text"><![CDATA[dev快捷键 按下Ctrl+Shift+A，会看到DEV帮你整理好了代码。 Ctrl + shift + 方向键上或下会选中光标当前所在的行，然后将这个行进行上移或下移，移动操作不会覆盖上下相邻的行，只是将位置进行对调。（eclipse则是在嵌套的方法之间做跳转，VS2013没有效果）]]></content>
+    <content type="text"><![CDATA[dev快捷键 按下Ctrl+Shift+A，会看到DEV帮你整理好了代码。 Ctrl + shift + 方向键上或下会选中光标当前所在的行，然后将这个行进行上移或下移，移动操作不会覆盖上下相邻的行，只是将位置进行对调。（eclipse则是在嵌套的方法之间做跳转，VS2013没有效果） debug时添加查看不用输入，只要左键选中变量，然后点击添加即可（偶然发现，惊喜不已）]]></content>
       <categories>
         <category>Dev</category>
       </categories>
