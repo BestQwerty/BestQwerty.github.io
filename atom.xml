@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-03-22T13:28:19.827Z</updated>
+  <updated>2019-03-27T13:41:22.508Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>matlab代码练习17</title>
+    <link href="ctguljj.github.io/2019/03/27/matlab%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A017/"/>
+    <id>ctguljj.github.io/2019/03/27/matlab代码练习17/</id>
+    <published>2019-03-27T13:41:22.000Z</published>
+    <updated>2019-03-27T13:41:22.508Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>matlab代码练习2018</title>
+    <link href="ctguljj.github.io/2019/03/27/matlab%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A02018/"/>
+    <id>ctguljj.github.io/2019/03/27/matlab代码练习2018/</id>
+    <published>2019-03-27T13:41:01.000Z</published>
+    <updated>2019-03-27T13:41:01.399Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>栈代码练习</title>
+    <link href="ctguljj.github.io/2019/03/25/%E6%A0%88%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0/"/>
+    <id>ctguljj.github.io/2019/03/25/栈代码练习/</id>
+    <published>2019-03-25T14:25:01.000Z</published>
+    <updated>2019-03-25T14:25:01.161Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>链表c练习</title>
+    <link href="ctguljj.github.io/2019/03/25/%E9%93%BE%E8%A1%A8c%E7%BB%83%E4%B9%A0/"/>
+    <id>ctguljj.github.io/2019/03/25/链表c练习/</id>
+    <published>2019-03-25T14:24:43.000Z</published>
+    <updated>2019-03-25T14:24:43.234Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>hexo特殊字符</title>
@@ -425,124 +481,6 @@
     
     
       <category term="c++" scheme="ctguljj.github.io/tags/c/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>c++find函数</title>
-    <link href="ctguljj.github.io/2019/03/09/c-find%E5%87%BD%E6%95%B0/"/>
-    <id>ctguljj.github.io/2019/03/09/c-find函数/</id>
-    <published>2019-03-09T13:22:53.000Z</published>
-    <updated>2019-03-12T10:08:07.971Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="find函数"><a href="#find函数" class="headerlink" title="find函数"></a>find函数</h1><ul><li><p>find用在容器中更加普遍，而algorithm中其实find函数只是一种</p></li><li><p>C++find函数原型：</p></li></ul><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">InputIterator</span>, <span class="title">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="class"> <span class="title">InputIterator</span> <span class="title">find</span> (<span class="title">InputIterator</span> <span class="title">first</span>, <span class="title">InputIterator</span> <span class="title">last</span>, <span class="title">const</span> <span class="title">T</span>&amp; <span class="title">val</span>)</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">while</span> (first!=last) </span><br><span class="line">  &#123;</span><br><span class="line">     <span class="keyword">if</span> (*first==val) <span class="keyword">return</span> first;</span><br><span class="line">     ++first;</span><br><span class="line">   &#125;</span><br><span class="line">    <span class="keyword">return</span> last;</span><br><span class="line">&#125;</span><br><span class="line">如果没找到对应的关键元素，会返回end(),最后一个元素的后一位。</span><br></pre></td></tr></table></figure><ul><li>其中，find()算法的前两个参数都是某个容器的迭代器，用于指定查找的起始位置和终止位置；第三个参数就是要查找的内容，它的数据类型跟容器中数据的类型相同。这里需要注意的是，find()算法会利用“==”操作符将这里的目标内容跟容器中的数据元素进行相等比较，以确定某个元素是否符合条件，所以，这里的数据类型必须支持“==”操作符进行相等比较。对于基本数据类型而言，它们已经天然支持无需我们操心，如果是自定义的数据类型，则需要重载“==”操作符以支持相等比较。</li></ul><h2 id="各个容器自己实现的成员函数"><a href="#各个容器自己实现的成员函数" class="headerlink" title="各个容器自己实现的成员函数"></a>各个容器自己实现的成员函数</h2><ul><li>vector没有实现find函数，除此之外，常见容器都实现了自己的find函数，如set，map，string</li><li>String是这一种顺序存储结构，其find函数返回的是下标索引。set,map,multiset,multimap都不是顺序索引的数据结构，所以返回的是迭代器。</li><li>为什么返回的不是索引下标？这是因为索引下标是在数组这种连续存储的数据结构里面常见的，是一种顺序索引；而很多数据结构的存储并非连续的，不能实现顺序索引，为了兼顾所有的数据结构，所以返回的仅仅是指针或是迭代器。<h2 id="如果元素不在"><a href="#如果元素不在" class="headerlink" title="如果元素不在"></a>如果元素不在</h2></li><li>对于返回迭代器的查找，通过判断find（a.begin(),a.end(),value）==a.end()，来判断元素是否存在</li><li>对于string，通过a.find(val)==string::npos判断</li></ul><h1 id="std-map-find"><a href="#std-map-find" class="headerlink" title="std::map::find"></a>std::map::find</h1><h2 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h2><p>指向键等于 key 的元素的迭代器。若找不到这种元素，则返回尾后（见 end() ）迭代器。 </p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;find函数&quot;&gt;&lt;a href=&quot;#find函数&quot; class=&quot;headerlink&quot; title=&quot;find函数&quot;&gt;&lt;/a&gt;find函数&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;find用在容器中更加普遍，而algorithm中其实find函数只是一种&lt;/p&gt;
-&lt;/l
-      
-    
-    </summary>
-    
-      <category term="c++" scheme="ctguljj.github.io/categories/c/"/>
-    
-      <category term="常用函数" scheme="ctguljj.github.io/categories/c/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/"/>
-    
-    
-      <category term="常用函数" scheme="ctguljj.github.io/tags/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>blog表格</title>
-    <link href="ctguljj.github.io/2019/03/09/blog%E8%A1%A8%E6%A0%BC/"/>
-    <id>ctguljj.github.io/2019/03/09/blog表格/</id>
-    <published>2019-03-09T06:02:45.000Z</published>
-    <updated>2019-03-09T06:17:18.806Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><table><thead><tr><th style="text-align:center">a</th><th style="text-align:center">b</th></tr></thead><tbody><tr><td style="text-align:center">c</td><td style="text-align:center">d</td></tr></tbody></table><ul><li><p><strong>|、-、:</strong>之间的多余空格会被忽略，不影响布局。<br>默认标题栏居中对齐，内容居左对齐。</p><ul><li>-:表示内容和标题栏居右对齐</li><li>:-表示内容和标题栏居左对齐</li><li>:-:表示内容和标题栏居中对齐。</li></ul></li><li>内容和|之间的多余空格会被忽略，每行第一个|和最后一个|可以省略，-的数量至少有一个。</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;表格&quot;&gt;&lt;a href=&quot;#表格&quot; class=&quot;headerlink&quot; title=&quot;表格&quot;&gt;&lt;/a&gt;表格&lt;/h1&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;a&lt;/th&gt;
-&lt;th style=&quot;text
-      
-    
-    </summary>
-    
-      <category term="blog" scheme="ctguljj.github.io/categories/blog/"/>
-    
-      <category term="表格" scheme="ctguljj.github.io/categories/blog/%E8%A1%A8%E6%A0%BC/"/>
-    
-    
-      <category term="blog" scheme="ctguljj.github.io/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vector简介</title>
-    <link href="ctguljj.github.io/2019/03/09/vector%E7%AE%80%E4%BB%8B/"/>
-    <id>ctguljj.github.io/2019/03/09/vector简介/</id>
-    <published>2019-03-09T06:00:32.000Z</published>
-    <updated>2019-03-13T13:00:39.870Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://zh.cppreference.com/w/cpp/container/vector" target="_blank" rel="noopener">cpp</a></p><h1 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h1><ul><li>vector的底层数据结构是动态数组<h2 id="内存分配"><a href="#内存分配" class="headerlink" title="内存分配"></a>内存分配</h2></li><li>标准库的实现者使用了这样的内存分配策略：以最小的代价连续存储元素。为了使vector容器实现快速的内存分配，其实际分配的容量要比当前所需的空间多一些(预留空间)，vector容器预留了这些额外的存储区用于存放添加的新元素，于是不必为每个新元素进行一次内存分配。当继续向容器中加入元素导致备用空间被用光（超过了容量 capacity），此时再加入元素时vector的内存管理机制便会扩充容量至两倍，如果两倍容量仍不足，就扩张至足够大的容量。容量扩张必须经历“重新配置、元素移动、释放原空间”这个浩大的工程。</li><li>按照《STL源码剖析》中提供的vector源码，vector的内存配置原则为：<ul><li>如果vector原大小为0，则配置1，也即一个元素的大小。</li><li>如果原大小不为0，则配置原大小的两倍。</li></ul></li><li>当然，vector的每种实现都可以自由地选择自己的内存分配策略，分配多少内存取决于其实现方式，不同的库采用不同的分配策略。</li></ul><h2 id="迭代器失效问题"><a href="#迭代器失效问题" class="headerlink" title="迭代器失效问题"></a>迭代器失效问题</h2><ul><li>vector管理的是连续的内存空间，在容器中插入（或删除）元素时，插入（或删除）点后面的所有元素都需要向后（或向前）移动一个位置，指向发生移动的元素的迭代器都失效。</li><li>随着元素的插入，原来分配的连续内存空间已经不够且无法在原地拓展新的内存空间，整个容器会被copy到另外一块内存上，此时指向原来容器元素的所有迭代器通通失效。</li><li>删除元素后，指向被删除元素的迭代器失效，这是显而易见的。</li></ul><h2 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h2><ul><li>使用的vector下标必须小于vector.size();如果开始定义vector未指定大小，用数组下标输入不可以，因为vector中无相应元素，没相应内存空间</li></ul><h2 id="初始化大小"><a href="#初始化大小" class="headerlink" title="初始化大小"></a>初始化大小</h2><ul><li>vector<t> v(n,i)形式，v包含n 个值为 i 的元素</t></li><li>v(int n)将容器初始化为有 n 个元素</li><li>vector()无参构造函数，将容器初始化为空</li><li>如果想知道vector是否为空，可以使用empty（），空返回true，否则返回false。</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://zh.cppreference.com/w/cpp/container/vector&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;cpp&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;vector&quot;&gt;&lt;a href=&quot;#vector&quot;
-      
-    
-    </summary>
-    
-      <category term="stl" scheme="ctguljj.github.io/categories/stl/"/>
-    
-      <category term="vector" scheme="ctguljj.github.io/categories/stl/vector/"/>
-    
-    
-      <category term="stl" scheme="ctguljj.github.io/tags/stl/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>list列表</title>
-    <link href="ctguljj.github.io/2019/03/08/list%E5%88%97%E8%A1%A8/"/>
-    <id>ctguljj.github.io/2019/03/08/list列表/</id>
-    <published>2019-03-08T12:48:34.000Z</published>
-    <updated>2019-03-11T10:25:42.519Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li><a href="https://zh.cppreference.com/w/cpp/container/list" target="_blank" rel="noopener">cppreference</a></li></ul><h1 id="list"><a href="#list" class="headerlink" title="list"></a>list</h1><h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><ul><li>#include ＜list＞</li></ul><h2 id="底层数据结构"><a href="#底层数据结构" class="headerlink" title="底层数据结构"></a>底层数据结构</h2><ul><li>list同样是一个模板类，它底层数据结构为双向循环链表。因此，它支持任意位置常数时间的插入/删除操作，不支持快速随机访问。</li><li>双向链表的每个元素中都有一个指针指向后一个元素，也有一个指针指向前一个元素</li></ul><h2 id="内存分配策略"><a href="#内存分配策略" class="headerlink" title="内存分配策略"></a>内存分配策略</h2><ul><li>list的空间配置策略，自然是像我们普通双向链表那样，有多少元素申请多少内存。它不像vactor那样需要预留空间供新元素的分配，也不会因找不到连续的空间而引起整个容器的内存迁移。</li></ul><h2 id="迭代器失效问题"><a href="#迭代器失效问题" class="headerlink" title="迭代器失效问题"></a>迭代器失效问题</h2><ul><li>list 有一个重要性质：插入操作（insert）与接合操作（splice）都不会造成原有的list迭代器失效。这在vector是不成立的，因为vactor的插入可能引起空间的重新配置，导致原来的迭代器全部失效。list的迭代器失效，只会出现在删除的时候，指向删除元素的那个迭代器在删除后失效。<br>通常来说，<code>forward_list</code>在使用灵活度上比不上list，因为它只能单向迭代元素，且提供的接口没有list多。然而，在内存的使用上，它是比list占优势的。当对内存的要求占首要位置时，应该选择<code>forward_list</code>。</li></ul><h1 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h1><ul><li><p><code>list&lt;int&gt; c;</code>空链表</p></li><li><p><code>list&lt;int&gt; c1(3);</code> 建一个含三个默认值是0的元素的链表　</p></li></ul><ul><li><code>list&lt;int&gt; c2(5,2);</code> 建一个含五个元素的链表，值都是2　</li><li><code>list&lt;int&gt; c4(c2);</code> 建一个c2的copy链表</li></ul><ul><li><p><code>list&lt;int&gt; c5(c1.begin(),c1.end());</code> c5含c1一个区域的元素[_First, _Last)。</p></li><li><p>list 容器不支持根据下标随机存取元素</p></li><li>list 的成员函数 front() 和 back()，可以各自返回第一个和最后一个元素的引用。在空 list 中调用它们中的任意一个，结果是未知的，因此不要这样使用。可以通过迭代器的自增或自减来访问 list 的内部元素。</li></ul><h1 id="List常用操作函数"><a href="#List常用操作函数" class="headerlink" title="List常用操作函数"></a>List常用操作函数</h1><h1 id="list-的特点"><a href="#list-的特点" class="headerlink" title="list 的特点"></a>list 的特点</h1><ul><li>(1) 不使用连续的内存空间这样可以随意地进行动态操作；</li><li>(2) 可以在内部任何位置快速地插入或删除，当然也可以在两端进push 和pop 。</li><li>(3) 不能进行内部的随机访问，即不支持[ ] 操作符和<code>vector.at() ；</code></li><li>(4) 相对于verctor 占用更多的内存。</li><li>有自身的sort函数</li><li>STL 中的算法 sort 可以用来对 vector 和 deque ，string排序，它需要随机访问迭代器的支持。因为 list 不支持随机访问迭代器，所以不能用算法 sort 对 list 容器排序。因此，list 容器引入了 sort 成员函数以完成排序。</li><li>注意<br>std::sort 要求随机访问迭代器且不能用于 list 。此函数与 std::sort 的区别在于，它不要求 list 的元素类型可交换，保留所有迭代器的值，并进行稳定排序。 </li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://zh.cppreference.com/w/cpp/container/list&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;cppreference&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;list&quot;
-      
-    
-    </summary>
-    
-      <category term="stl" scheme="ctguljj.github.io/categories/stl/"/>
-    
-      <category term="list" scheme="ctguljj.github.io/categories/stl/list/"/>
-    
-    
-      <category term="stl" scheme="ctguljj.github.io/tags/stl/"/>
     
   </entry>
   

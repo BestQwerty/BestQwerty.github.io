@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[matlab代码练习17]]></title>
+    <url>%2F2019%2F03%2F27%2Fmatlab%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A017%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[matlab代码练习2018]]></title>
+    <url>%2F2019%2F03%2F27%2Fmatlab%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A02018%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[栈代码练习]]></title>
+    <url>%2F2019%2F03%2F25%2F%E6%A0%88%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[链表c练习]]></title>
+    <url>%2F2019%2F03%2F25%2F%E9%93%BE%E8%A1%A8c%E7%BB%83%E4%B9%A0%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[hexo特殊字符]]></title>
     <url>%2F2019%2F03%2F22%2Fhexo%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%2F</url>
     <content type="text"><![CDATA[因为特殊字符，报了一下错误1234FATAL Something&apos;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.htmlTemplate render error: (unknown path) [Line 5, Column 29] 从宇宙大爆发开始找错误，不过还好没浪费多少时间.记忆深刻，写个blog冷静一下 特殊字符 hexo特殊字符尽量减少使用，可能在转义时发生错误！如： 2个大括号连在一起！！！！！！！！！！！！！或者中括号！！]]></content>
