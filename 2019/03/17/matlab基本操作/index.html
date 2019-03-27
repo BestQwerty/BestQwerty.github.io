@@ -81,20 +81,18 @@
 
 
 
-<meta name="description" content="matlabz中变量 MATLAB中变量的命名规则是： 变量名必须是不含空格的单个词； 变量名区分大小写； 变量名最多不超过19个字符； 变量名必须以字母打头，之后可以是 任意字母、数字或下划线，变量名中，不允许使用标点符号.    matalab中Π默认为3.1416（应该） 数据显示默认为四位，但只是matlab对数据的显示方式，其实不管显示的有效位数是多少，都不影响实际的计算结果，也不会有多">
+<meta name="description" content="matlab语句 MATLAB语句的一般形式为：变量 = 表达式说明： 1.若变量和“=”省略，则名为ans的变量自动建立； 2.如果你输入了一个语句并以回车结束，则在工作区中显示计算的结果； 3.如果语句以分号“；”结束，MATLAB只进行计算，不显示计算的结果； 4.如果一个变大时太长，可以用续行号 … 将其延续到下一行。此外，一行中可以写几个语句，他们之间要用逗号或分号分开。    matl">
 <meta name="keywords" content="matlab">
 <meta property="og:type" content="article">
 <meta property="og:title" content="matlab基本操作">
 <meta property="og:url" content="ctguljj.github.io/2019/03/17/matlab基本操作/index.html">
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
-<meta property="og:description" content="matlabz中变量 MATLAB中变量的命名规则是： 变量名必须是不含空格的单个词； 变量名区分大小写； 变量名最多不超过19个字符； 变量名必须以字母打头，之后可以是 任意字母、数字或下划线，变量名中，不允许使用标点符号.    matalab中Π默认为3.1416（应该） 数据显示默认为四位，但只是matlab对数据的显示方式，其实不管显示的有效位数是多少，都不影响实际的计算结果，也不会有多">
+<meta property="og:description" content="matlab语句 MATLAB语句的一般形式为：变量 = 表达式说明： 1.若变量和“=”省略，则名为ans的变量自动建立； 2.如果你输入了一个语句并以回车结束，则在工作区中显示计算的结果； 3.如果语句以分号“；”结束，MATLAB只进行计算，不显示计算的结果； 4.如果一个变大时太长，可以用续行号 … 将其延续到下一行。此外，一行中可以写几个语句，他们之间要用逗号或分号分开。    matl">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="/17/matlab基本操作/">
-<meta property="og:updated_time" content="2019-03-23T07:33:55.768Z">
+<meta property="og:updated_time" content="2019-03-27T14:24:24.365Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab基本操作">
-<meta name="twitter:description" content="matlabz中变量 MATLAB中变量的命名规则是： 变量名必须是不含空格的单个词； 变量名区分大小写； 变量名最多不超过19个字符； 变量名必须以字母打头，之后可以是 任意字母、数字或下划线，变量名中，不允许使用标点符号.    matalab中Π默认为3.1416（应该） 数据显示默认为四位，但只是matlab对数据的显示方式，其实不管显示的有效位数是多少，都不影响实际的计算结果，也不会有多">
-<meta name="twitter:image" content="/17/matlab基本操作/">
+<meta name="twitter:description" content="matlab语句 MATLAB语句的一般形式为：变量 = 表达式说明： 1.若变量和“=”省略，则名为ans的变量自动建立； 2.如果你输入了一个语句并以回车结束，则在工作区中显示计算的结果； 3.如果语句以分号“；”结束，MATLAB只进行计算，不显示计算的结果； 4.如果一个变大时太长，可以用续行号 … 将其延续到下一行。此外，一行中可以写几个语句，他们之间要用逗号或分号分开。    matl">
 
 
 
@@ -348,8 +346,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-23T15:33:55+08:00">
-                2019-03-23
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-27T22:24:24+08:00">
+                2019-03-27
               </time>
             
           </span>
@@ -394,7 +392,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">2.4k(字)</span> 
+					<span class="post-count">2k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -452,8 +450,29 @@
       
 
       
-        <h1 id="matlabz中变量"><a href="#matlabz中变量" class="headerlink" title="matlabz中变量"></a>matlabz中变量</h1><ul>
-<li>MATLAB中变量的命名规则是：<ul>
+        <h1 id="matlab语句"><a href="#matlab语句" class="headerlink" title="matlab语句"></a>matlab语句</h1><ul>
+<li>MATLAB语句的一般形式为：变量 = 表达式<br>说明：<ul>
+<li>1.若变量和“=”省略，则名为ans的变量自动建立；</li>
+<li>2.如果你输入了一个语句并以回车结束，则在工作区中显示计算的结果；</li>
+<li>3.如果语句以分号“；”结束，MATLAB只进行计算，不显示计算的结果；</li>
+<li>4.如果一个变大时太长，可以用续行号 … 将其延续到下一行。此外，一行中可以写几个语句，他们之间要用逗号或分号分开。</li>
+</ul>
+</li>
+</ul>
+<h1 id="matlabz中变量"><a href="#matlabz中变量" class="headerlink" title="matlabz中变量"></a>matlabz中变量</h1><ul>
+<li><div class="note primary"><p>对于变量，MATLAB不需要任何类型的说明或维数语句。当输入一个新变量名时MATLAB自动建立面变量并为其分配内存空间。</p></div></li>
+<li><p>MATLAB有几个特殊的量</p>
+<ul>
+<li>1.Pi圆周率π</li>
+<li>2.Eps最小浮点数</li>
+<li>3.Inf正无穷大，特指1/0</li>
+<li>4.NaN不定值，特指0/0</li>
+<li>5.i，j虚数单位</li>
+<li>6.自然对数</li>
+</ul>
+</li>
+<li><p>MATLAB中变量的命名规则是：</p>
+<ul>
 <li>变量名必须是不含空格的单个词；</li>
 <li>变量名区分大小写；</li>
 <li>变量名最多不超过19个字符；</li>
@@ -471,6 +490,10 @@
 <li><code>c=input(‘请输入一个矩阵:’);</code></li>
 </ul>
 </li>
+<li>赋值：<code>a=3;A=4;(变量赋予数值)</code><pre><code> `  a=A;(变量赋予变量)`
+  ` a=‘a’;(变量赋予字符串)`
+`   a=zeros(m,n);a=ones(m,n);(变量赋予矩阵)`
+</code></pre></li>
 </ul>
 <h1 id="matlab输出"><a href="#matlab输出" class="headerlink" title="matlab输出"></a>matlab输出</h1><ul>
 <li>不加分号：a=3 a=b a=‘a’ a=zeros(m,n)</li>
@@ -503,51 +526,6 @@
 <li>mat文件是matlab的数据存储的标准格式。mat文件是标准的二进制文件,还可以ASCII码形式保存和加载，在MATLAB中打开显示类似于单行EXCEL表格。</li>
 <li>MATLAB是解释型语言，就是说MATLAB命令行中敲入的命令在当前MATLAB进程中被解释运行。但是，每次执行一个任务时敲入长长的命令序列是很烦人的。有两种方法可以使MATLAB的力量得到扩展——脚本和函数。这两种方法都用像emacs一样的文本编辑器中编写的m文件（因为扩展名是.m所以这样命名，m文件还称点m文件）。m文件的好处在于它可以保存命令，还可以轻易地修改命令而无需重新敲入整个命令行。</li>
 <li>所谓mat文件，就是由matlab语言编写的可在matlab语言环境下运行的程序源代码文件。Matlab语言的m文件可分为命令式和函数式两种形式。M文件可在matlab程序编辑器里编写，也可在其他文本编辑器中编写，并以”.m”为拓展名保存。</li>
-</ul>
-<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><ul>
-<li>矩阵里面元素可以是符号与字符（‘a’,’,’）,输入的元素维度要一样<ul>
-<li>矩阵里面的元素也可以是矩阵，但是矩阵长度维度必须与其它元素相同</li>
-</ul>
-</li>
-</ul>
-<pre><code>- 生成10*10的矩阵可以如下：`a = [1:10;11:20;21:....];`
-- 对矩阵a第一行后面2个赋予其他值(灵活运用：)
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">	</span><br><span class="line">a = [1 2 3</span><br><span class="line">	4 7 8</span><br><span class="line">	1 2 5];</span><br><span class="line"> </span><br><span class="line">a(1,2:3) = x;</span><br></pre></td></tr></table></figure>
-
-- 对一个矩阵A赋值提取可以取出然后赋给一个小矩阵a
-</code></pre><ul>
-<li>矩阵的下标也可以是向量。<ul>
-<li>例如 <code>b=a(x,y)；</code>可以得到一个矩阵 b。a 的行标来自向量 x，而列标来自向量 y。 例如，矩阵 a 有 n 列，那末 <code>b=a(:,n:-1:1)</code> 将得到矩阵 b，它等于矩阵 a 按列的逆序排列。 </li>
-</ul>
-</li>
-<li><p><code>a(end:-1:end-5, 3)</code>是最后一行到倒数第6行的所有第三个元素</p>
-</li>
-<li><p>删除矩阵某行某列<code>a(i,j)=[];</code></p>
-</li>
-</ul>
-<ul>
-<li>如果要将一个矩阵存储在计算机中，MATLAB 规定矩阵元素在存储器中的存放次序是 按列的先后顺序存放，即存完第 1 列后，再存第 2 列，依次类推<ul>
-<li>作为矩阵的特例，一维数组或者说向量元素是依其元素本身的先后次序进行存储的。 </li>
-<li>必须指出，不是所有高级语言都这样规定矩阵(或数组)元素的存储次序，例如 C 语言 就是按行的先后顺序来存放数组元素，即存完第 1 行后，再存第 2 行，依次类推。记住这 一点对正确使用高级语言的接口技术是十分有益的。 </li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">	clc;</span><br><span class="line">	clear;</span><br><span class="line">	a=[2 5 6 9 8 86 4 5 6 65 3 54];</span><br><span class="line">	m=a(1);</span><br><span class="line">	for i=1:12</span><br><span class="line">	    if a(i)&gt;m</span><br><span class="line">	        m=a(i);</span><br><span class="line">	    end</span><br><span class="line">	end</span><br><span class="line">	m</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	a=[1,2,3,4,5,6,7];</span><br><span class="line">	for i=1:7</span><br><span class="line">		a(i)=a(i)+1;</span><br><span class="line">	end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	clc,clear</span><br><span class="line">	A=[0.5,1.732,0.618,3.1415,1.6,0.9];</span><br><span class="line">	for i=1:6</span><br><span class="line">	       for j=i:6</span><br><span class="line">	             if a(j)&lt;a(i)</span><br><span class="line">	                 a(i)=a(i)+a(j);</span><br><span class="line">	                 a(j)=a(i)-a(j);</span><br><span class="line">	                 a(i)=a(i)-a(j);</span><br><span class="line">	              end</span><br><span class="line">	        end</span><br><span class="line">	end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">clc,clear</span><br><span class="line">for i=1:15</span><br><span class="line">       for j=1:15</span><br><span class="line">             if i+j==15&amp;&amp;4*i+2*j==40</span><br><span class="line">	fprintf(‘兔%d只,鸡%d只\n’,i,j);</span><br><span class="line">             end</span><br><span class="line">        end</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="reshape函数"><a href="#reshape函数" class="headerlink" title="reshape函数"></a>reshape函数</h2><h2 id="size函数"><a href="#size函数" class="headerlink" title="size函数"></a>size函数</h2><pre><code>- 
-</code></pre><h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="diag"><a href="#diag" class="headerlink" title="diag"></a>diag</h2><ul>
-<li><span id="inline-toc">1.</span> diag函数：<code>sum(diag(a)+diag(a&#39;))</code>可以求矩阵a对角线上的元素之和，不过中间的一个元素会提取2次，diag(a’)可以提取副对角线的元素(先将矩阵转置）<ul>
-<li>当Random是向量时，才构成对角矩阵，当Random是m×n矩阵时，得到的是个向量。比如diag([1 3;2 4])得到向量，diag([1 3])得到2×2矩阵。</li>
-<li>可以用来访问对角元素<h2 id="max"><a href="#max" class="headerlink" title="max"></a>max</h2><img src="/17/matlab基本操作/" alt=""><br>()</li>
-</ul>
-</li>
-</ul>
-<h2 id="matlab中的sort函数"><a href="#matlab中的sort函数" class="headerlink" title="matlab中的sort函数"></a>matlab中的sort函数</h2><ul>
-<li><code>sort(c)</code>从小到大</li>
-<li><code>sort(c, &#39;descend&#39;)</code>逆序排列(从大到小).</li>
 </ul>
 <h1 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h1><h2 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h2><ul>
 <li>for 循环允许一组命令以固定的和预定的次数重复。for 循环的一般形式是 </li>
@@ -756,7 +734,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -767,7 +745,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-count">41</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -818,7 +796,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#matlabz中变量"><span class="nav-number">1.</span> <span class="nav-text">matlabz中变量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#符号"><span class="nav-number">2.</span> <span class="nav-text">符号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#matlab输入"><span class="nav-number">3.</span> <span class="nav-text">matlab输入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#matlab输出"><span class="nav-number">4.</span> <span class="nav-text">matlab输出</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mat文件"><span class="nav-number">5.</span> <span class="nav-text">mat文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组"><span class="nav-number">6.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵"><span class="nav-number">7.</span> <span class="nav-text">矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#reshape函数"><span class="nav-number">7.1.</span> <span class="nav-text">reshape函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#size函数"><span class="nav-number">7.2.</span> <span class="nav-text">size函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">8.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#diag"><span class="nav-number">8.1.</span> <span class="nav-text">diag</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#max"><span class="nav-number">8.2.</span> <span class="nav-text">max</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#matlab中的sort函数"><span class="nav-number">8.3.</span> <span class="nav-text">matlab中的sort函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#循环"><span class="nav-number">9.</span> <span class="nav-text">循环</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#for循环"><span class="nav-number">9.1.</span> <span class="nav-text">for循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#while循环"><span class="nav-number">9.2.</span> <span class="nav-text">while循环</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#matlab语句"><span class="nav-number">1.</span> <span class="nav-text">matlab语句</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#matlabz中变量"><span class="nav-number">2.</span> <span class="nav-text">matlabz中变量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#符号"><span class="nav-number">3.</span> <span class="nav-text">符号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#matlab输入"><span class="nav-number">4.</span> <span class="nav-text">matlab输入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#matlab输出"><span class="nav-number">5.</span> <span class="nav-text">matlab输出</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mat文件"><span class="nav-number">6.</span> <span class="nav-text">mat文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#循环"><span class="nav-number">7.</span> <span class="nav-text">循环</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#for循环"><span class="nav-number">7.1.</span> <span class="nav-text">for循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#while循环"><span class="nav-number">7.2.</span> <span class="nav-text">while循环</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -859,7 +837,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">23.4k</span>
+    <span title="Site words total count">24.3k</span>
   
 </div>
 
