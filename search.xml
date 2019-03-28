@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[matlab绘图]]></title>
+    <url>%2F2019%2F03%2F28%2Fmatlab%E7%BB%98%E5%9B%BE%2F</url>
+    <content type="text"><![CDATA[绘图基础命令行 1.hold on: hold on retains plots in the current axes so that new plots added to the axes do not delete existing plots. New plots use the next colors and line styles based on the ColorOrder and LineStyleOrder properties of the axes. MATLAB® adjusts axes limits, tick marks, and tick labels to display the full range of data. hold on保留当前坐标轴中的绘图，这样添加到坐标轴中的新绘图就不会删除现有的绘图。新绘图使用基于坐标轴的ColorOrder和LineStyleOrder属性的下一种颜色和线条样式。MATLAB®调整坐标轴限制、刻度标记和刻度标签，以显示全部数据范围。 123456789 x = linspace(-pi,pi);y1 = sin(x);y2 = cos(x);plot(x,y1)hold onplot(x,y2) 2.close all;关闭所有图形窗口 plot函数 若用一个plot函数画多个图时，横坐标维度必须一致 plot(x,y,’s’) —— 开关格式，开关量字符串s设定曲线颜色和绘图方式，如: plot(x1,y1,’y*’,x2,y2,’rO’，…) S的标准设定值如下：]]></content>
+      <categories>
+        <category>matlab</category>
+        <category>绘图</category>
+      </categories>
+      <tags>
+        <tag>matlab</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[matlab字符串]]></title>
     <url>%2F2019%2F03%2F27%2Fmatlab%E5%AD%97%E7%AC%A6%E4%B8%B2%2F</url>
     <content type="text"><![CDATA[字符串 字符串是用单引号括起来的字符集合，可以像向量一样进行拼接和裁剪。 1234Eg：&gt;&gt;s1=&apos;Hello&apos;;s2=&apos;every&apos;;s3=&apos;body&apos;; s=[s1,&apos; &apos;,s2,&apos; &apos;,s3] ss=s(1:5)]]></content>

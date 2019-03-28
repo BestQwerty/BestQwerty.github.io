@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-03-27T14:27:38.711Z</updated>
+  <updated>2019-03-28T06:22:00.093Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>matlab绘图</title>
+    <link href="ctguljj.github.io/2019/03/28/matlab%E7%BB%98%E5%9B%BE/"/>
+    <id>ctguljj.github.io/2019/03/28/matlab绘图/</id>
+    <published>2019-03-28T06:00:45.000Z</published>
+    <updated>2019-03-28T06:22:00.093Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="绘图基础"><a href="#绘图基础" class="headerlink" title="绘图基础"></a>绘图基础</h1><h2 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h2><ul><li><p><span id="inline-toc">1.</span>hold on: hold on retains plots in the current axes so that new plots added to the axes do not delete existing plots. New plots use the next colors and line styles based on the ColorOrder and LineStyleOrder properties of the axes. MATLAB® adjusts axes limits, tick marks, and tick labels to display the full range of data.</p><ul><li>hold on保留当前坐标轴中的绘图，这样添加到坐标轴中的新绘图就不会删除现有的绘图。新绘图使用基于坐标轴的ColorOrder和LineStyleOrder属性的下一种颜色和线条样式。MATLAB®调整坐标轴限制、刻度标记和刻度标签，以显示全部数据范围。</li><li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">x = linspace(-pi,pi);</span><br><span class="line">y1 = sin(x);</span><br><span class="line">y2 = cos(x);</span><br><span class="line"></span><br><span class="line">plot(x,y1)</span><br><span class="line">hold on</span><br><span class="line">plot(x,y2)</span><br></pre></td></tr></table></figure></li></ul></li><li><p><span id="inline-toc">2.</span><code>close all;</code>关闭所有图形窗口</p></li></ul><h1 id="plot函数"><a href="#plot函数" class="headerlink" title="plot函数"></a>plot函数</h1><ul><li>若用一个plot函数画多个图时，横坐标维度必须一致</li><li><code>plot(x,y,’s’)</code> —— 开关格式，开关量字符串s设定曲线颜色和绘图方式，如:   <code>plot(x1,y1,’y*’,x2,y2,’rO’，…)</code><ul><li>S的标准设定值如下：</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;绘图基础&quot;&gt;&lt;a href=&quot;#绘图基础&quot; class=&quot;headerlink&quot; title=&quot;绘图基础&quot;&gt;&lt;/a&gt;绘图基础&lt;/h1&gt;&lt;h2 id=&quot;命令行&quot;&gt;&lt;a href=&quot;#命令行&quot; class=&quot;headerlink&quot; title=&quot;命令行&quot;&gt;&lt;/a&gt;命令
+      
+    
+    </summary>
+    
+      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+    
+      <category term="绘图" scheme="ctguljj.github.io/categories/matlab/%E7%BB%98%E5%9B%BE/"/>
+    
+    
+      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+    
+  </entry>
   
   <entry>
     <title>matlab字符串</title>
@@ -469,33 +496,6 @@
       <category term="stl" scheme="ctguljj.github.io/categories/stl/"/>
     
       <category term="迭代器" scheme="ctguljj.github.io/categories/stl/%E8%BF%AD%E4%BB%A3%E5%99%A8/"/>
-    
-    
-      <category term="stl" scheme="ctguljj.github.io/tags/stl/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>string</title>
-    <link href="ctguljj.github.io/2019/03/10/string/"/>
-    <id>ctguljj.github.io/2019/03/10/string/</id>
-    <published>2019-03-10T14:53:23.000Z</published>
-    <updated>2019-03-23T13:06:41.045Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="string"><a href="#string" class="headerlink" title="string"></a>string</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">string</span> a, b;</span><br><span class="line">.....</span><br><span class="line">a = a + b;<span class="comment">//将a+b前后连接，对于string来说有些符号重载定义</span></span><br><span class="line"><span class="comment">// ‘ + ’暂且理解为前后连接，所以前后不同，结果不同</span></span><br><span class="line"><span class="comment">//string作为容器，可以和字符串、字符相加，也可以和string相加</span></span><br><span class="line"><span class="comment">//具体原因不知道</span></span><br><span class="line"><span class="comment">//待续</span></span><br></pre></td></tr></table></figure><ul><li>string 的末尾没有<code>&#39;\0&#39;</code>字符，所以<code>length()</code>返回的是字符串的真实长度，而不是长度 +1。</li><li>string 字符串的起始下标仍是从 0 开始。</li><li>有了 string 类，我们可以使用+或+=运算符来直接拼接字符串，非常方便，再也不需要使用C语言中的 strcat()、strcpy()、malloc() 等函数来拼接字符串了，再也不用担心空间不够会溢出了。<ul><li>用+来拼接字符串时，运算符的两边可以都是 string 字符串，也可以是一个 string 字符串和一个C风格的字符串，还可以是一个 string 字符串和一个字符数组，或者是一个 string 字符串和一个单独的字符。</li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;string&quot;&gt;&lt;a href=&quot;#string&quot; class=&quot;headerlink&quot; title=&quot;string&quot;&gt;&lt;/a&gt;string&lt;/h1&gt;&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutte
-      
-    
-    </summary>
-    
-      <category term="stl" scheme="ctguljj.github.io/categories/stl/"/>
-    
-      <category term="string" scheme="ctguljj.github.io/categories/stl/string/"/>
     
     
       <category term="stl" scheme="ctguljj.github.io/tags/stl/"/>
