@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="绘图基础命令行 1.hold on: hold on retains plots in the current axes so that new plots added to the axes do not delete existing plots. New plots use the next colors and line styles based on the ColorOrder and">
+<meta name="description" content="绘图基础 可以直接在图形窗口上修改图形 如果当前不存在图形窗口，MATLAB 的绘图函数会自动 建立一个新的图形窗口；如果已存在一个图形窗口，MATLAB 的绘图函数就会在这个窗口 中进行绘图操作；如果已存在多个图形窗口，MATLAB 的绘图函数就会在当前窗口中进行 绘图操作(当前窗口通常是指后一个使用的图形窗口)。 matlab绘图是将图形每一个点标出后连接而成，因为横坐标间隔值不一定相同，所以">
 <meta name="keywords" content="matlab">
 <meta property="og:type" content="article">
 <meta property="og:title" content="matlab绘图">
 <meta property="og:url" content="ctguljj.github.io/2019/03/28/matlab绘图/index.html">
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
-<meta property="og:description" content="绘图基础命令行 1.hold on: hold on retains plots in the current axes so that new plots added to the axes do not delete existing plots. New plots use the next colors and line styles based on the ColorOrder and">
+<meta property="og:description" content="绘图基础 可以直接在图形窗口上修改图形 如果当前不存在图形窗口，MATLAB 的绘图函数会自动 建立一个新的图形窗口；如果已存在一个图形窗口，MATLAB 的绘图函数就会在这个窗口 中进行绘图操作；如果已存在多个图形窗口，MATLAB 的绘图函数就会在当前窗口中进行 绘图操作(当前窗口通常是指后一个使用的图形窗口)。 matlab绘图是将图形每一个点标出后连接而成，因为横坐标间隔值不一定相同，所以">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-28T06:22:00.093Z">
+<meta property="og:updated_time" content="2019-03-28T08:27:05.446Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab绘图">
-<meta name="twitter:description" content="绘图基础命令行 1.hold on: hold on retains plots in the current axes so that new plots added to the axes do not delete existing plots. New plots use the next colors and line styles based on the ColorOrder and">
+<meta name="twitter:description" content="绘图基础 可以直接在图形窗口上修改图形 如果当前不存在图形窗口，MATLAB 的绘图函数会自动 建立一个新的图形窗口；如果已存在一个图形窗口，MATLAB 的绘图函数就会在这个窗口 中进行绘图操作；如果已存在多个图形窗口，MATLAB 的绘图函数就会在当前窗口中进行 绘图操作(当前窗口通常是指后一个使用的图形窗口)。 matlab绘图是将图形每一个点标出后连接而成，因为横坐标间隔值不一定相同，所以">
 
 
 
@@ -346,7 +346,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-28T14:22:00+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-28T16:27:05+08:00">
                 2019-03-28
               </time>
             
@@ -392,7 +392,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">250(字)</span> 
+					<span class="post-count">720(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -450,7 +450,21 @@
       
 
       
-        <h1 id="绘图基础"><a href="#绘图基础" class="headerlink" title="绘图基础"></a>绘图基础</h1><h2 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h2><ul>
+        <h1 id="绘图基础"><a href="#绘图基础" class="headerlink" title="绘图基础"></a>绘图基础</h1><ul>
+<li>可以直接在图形窗口上修改图形</li>
+<li>如果当前不存在图形窗口，MATLAB 的绘图函数会自动 建立一个新的图形窗口；如果已存在一个图形窗口，MATLAB 的绘图函数就会在这个窗口 中进行绘图操作；如果已存在多个图形窗口，MATLAB 的绘图函数就会在当前窗口中进行 绘图操作(当前窗口通常是指后一个使用的图形窗口)。</li>
+<li>matlab绘图是将<strong>图形每一个点标出后连接而成</strong>，因为横坐标间隔值不一定相同，所以2个图形相交y值不一定相等，<strong>找交点</strong><code>s=find(abs(y1-y2)&lt;0.01))</code>其中0.01设置具体看横坐标间隔值大小，否侧可能找不到<ul>
+<li>plot函数维度必须相同，因为图形是将点连接起来，所以x与y个数维度必须相同</li>
+</ul>
+</li>
+<li>注意：<ul>
+<li>如果已经存在一个图形窗口，plot命令则清除当前图形，绘制新图形</li>
+<li>可任意设定曲线颜色和线型</li>
+<li>可给图形加坐标网线和图形加注功能</li>
+</ul>
+</li>
+</ul>
+<h2 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h2><ul>
 <li><p><span id="inline-toc">1.</span>hold on: hold on retains plots in the current axes so that new plots added to the axes do not delete existing plots. New plots use the next colors and line styles based on the ColorOrder and LineStyleOrder properties of the axes. MATLAB® adjusts axes limits, tick marks, and tick labels to display the full range of data.</p>
 <ul>
 <li>hold on保留当前坐标轴中的绘图，这样添加到坐标轴中的新绘图就不会删除现有的绘图。新绘图使用基于坐标轴的ColorOrder和LineStyleOrder属性的下一种颜色和线条样式。MATLAB®调整坐标轴限制、刻度标记和刻度标签，以显示全部数据范围。</li>
@@ -461,10 +475,11 @@
 <li><p><span id="inline-toc">2.</span><code>close all;</code>关闭所有图形窗口</p>
 </li>
 </ul>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>-将标题、坐标轴标记、网格线及文字注<br>释加注到图形上，这些函数为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">title —— 给图形加标题</span><br><span class="line">xlable —— 给x轴加标注</span><br><span class="line">ylable —— 给y轴加标注</span><br><span class="line">text —— 在图形指定位置加标注</span><br><span class="line">gtext —— 将标注加到图形任意位置</span><br><span class="line">grid on(off) —— 打开、关闭坐标网格线</span><br><span class="line">legend —— 添加图例</span><br><span class="line">axis —— 控制坐标轴的刻度</span><br></pre></td></tr></table></figure></p>
 <h1 id="plot函数"><a href="#plot函数" class="headerlink" title="plot函数"></a>plot函数</h1><ul>
 <li>若用一个plot函数画多个图时，横坐标维度必须一致</li>
 <li><code>plot(x,y,’s’)</code> —— 开关格式，开关量字符串s设定曲线颜色和绘图方式，如:   <code>plot(x1,y1,’y*’,x2,y2,’rO’，…)</code><ul>
-<li>S的标准设定值如下：</li>
+<li>S的标准设定值如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">		</span><br><span class="line">字母        颜色          标点           线型</span><br><span class="line">    y            黄色             ·              点线</span><br><span class="line">    m           粉红            ○             圈线</span><br><span class="line">    c            亮蓝            ×             ×线</span><br><span class="line">    r             大红           ＋             ＋字线  </span><br><span class="line">    g            绿色           －              实线</span><br><span class="line">    b            蓝色           *               星形线</span><br><span class="line">    w           白色            ：             虚线</span><br><span class="line">    k            黑色         －·  (--)        点划线</span><br><span class="line"></span><br><span class="line">    v                 下三角</span><br><span class="line">        ^                  上三角</span><br><span class="line">        &lt;                  左三角</span><br><span class="line">      &gt;                  右三角</span><br><span class="line">       square           正方形</span><br><span class="line">       diamond        菱形</span><br><span class="line">       pentagram     五角星</span><br><span class="line">       hexagram      六角星</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 </ul>
@@ -695,7 +710,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#绘图基础"><span class="nav-number">1.</span> <span class="nav-text">绘图基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令行"><span class="nav-number">1.1.</span> <span class="nav-text">命令行</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#plot函数"><span class="nav-number">2.</span> <span class="nav-text">plot函数</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#绘图基础"><span class="nav-number">1.</span> <span class="nav-text">绘图基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令行"><span class="nav-number">1.1.</span> <span class="nav-text">命令行</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">2.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#plot函数"><span class="nav-number">3.</span> <span class="nav-text">plot函数</span></a></li></ol></div>
             
 
           </div>
@@ -736,7 +751,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">24.6k</span>
+    <span title="Site words total count">25.1k</span>
   
 </div>
 
