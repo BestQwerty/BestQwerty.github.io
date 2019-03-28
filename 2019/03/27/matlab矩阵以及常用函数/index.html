@@ -90,9 +90,10 @@
 <meta property="og:description" content="矩阵 矩阵里面元素可以是符号与字符（‘a’,’,’）,输入的元素维度要一样 矩阵里面的元素也可以是矩阵，但是矩阵长度维度必须与其它元素相同    - 生成10*10的矩阵可以如下：`a = [1:10;11:20;21:....];` - 对矩阵a第一行后面2个赋予其他值(灵活运用：)  123456	a = [1 2 3	4 7 8	1 2 5]; a(1,2:3) = x;  - 对一个矩阵A">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab矩阵除法.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab矩阵旋转.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/reshape.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/size.png">
-<meta property="og:updated_time" content="2019-03-27T14:15:53.048Z">
+<meta property="og:updated_time" content="2019-03-28T00:26:17.618Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab矩阵以及常用函数">
 <meta name="twitter:description" content="矩阵 矩阵里面元素可以是符号与字符（‘a’,’,’）,输入的元素维度要一样 矩阵里面的元素也可以是矩阵，但是矩阵长度维度必须与其它元素相同    - 生成10*10的矩阵可以如下：`a = [1:10;11:20;21:....];` - 对矩阵a第一行后面2个赋予其他值(灵活运用：)  123456	a = [1 2 3	4 7 8	1 2 5]; a(1,2:3) = x;  - 对一个矩阵A">
@@ -350,8 +351,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-27T22:15:53+08:00">
-                2019-03-27
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-28T08:26:17+08:00">
+                2019-03-28
               </time>
             
           </span>
@@ -488,8 +489,9 @@
 </li>
 </ul>
 <h1 id="矩阵除法"><a href="#矩阵除法" class="headerlink" title="矩阵除法"></a>矩阵除法</h1><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab矩阵除法.png" alt=""></p>
-<h2 id="reshape函数"><a href="#reshape函数" class="headerlink" title="reshape函数"></a>reshape函数</h2><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/reshape.png" alt="">    </p>
-<h2 id="size函数"><a href="#size函数" class="headerlink" title="size函数"></a>size函数</h2><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/size.png" alt=""></p>
+<h1 id="矩阵旋转"><a href="#矩阵旋转" class="headerlink" title="矩阵旋转"></a>矩阵旋转</h1><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab矩阵旋转.png" alt=""></p>
+<h1 id="reshape函数"><a href="#reshape函数" class="headerlink" title="reshape函数"></a>reshape函数</h1><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/reshape.png" alt="">    </p>
+<h1 id="size函数"><a href="#size函数" class="headerlink" title="size函数"></a>size函数</h1><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/size.png" alt=""></p>
 <h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="diag"><a href="#diag" class="headerlink" title="diag"></a>diag</h2><ul>
 <li><span id="inline-toc">1.</span> diag函数：<code>sum(diag(a)+diag(a&#39;))</code>可以求矩阵a对角线上的元素之和，不过中间的一个元素会提取2次，diag(a’)可以提取副对角线的元素(先将矩阵转置）<ul>
 <li>当Random是向量时，才构成对角矩阵，当Random是m×n矩阵时，得到的是个向量。比如diag([1 3;2 4])得到向量，diag([1 3])得到2×2矩阵。</li>
@@ -516,7 +518,7 @@
 <li><code>sort(c)</code>从小到大</li>
 <li><code>sort(c, &#39;descend&#39;)</code>逆序排列(从大到小).</li>
 </ul>
-
+<h2 id="MATLAB判断一个数是否整数"><a href="#MATLAB判断一个数是否整数" class="headerlink" title="MATLAB判断一个数是否整数"></a>MATLAB判断一个数是否整数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">if x==fix(x)</span><br><span class="line">% x为整数</span><br><span class="line">%fix（x)为取整</span><br><span class="line"> end</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -747,7 +749,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵"><span class="nav-number">1.</span> <span class="nav-text">矩阵</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵除法"><span class="nav-number">2.</span> <span class="nav-text">矩阵除法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#reshape函数"><span class="nav-number">2.1.</span> <span class="nav-text">reshape函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#size函数"><span class="nav-number">2.2.</span> <span class="nav-text">size函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">3.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#diag"><span class="nav-number">3.1.</span> <span class="nav-text">diag</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#max"><span class="nav-number">3.2.</span> <span class="nav-text">max</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#matlab中的sort函数"><span class="nav-number">3.3.</span> <span class="nav-text">matlab中的sort函数</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵"><span class="nav-number">1.</span> <span class="nav-text">矩阵</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵除法"><span class="nav-number">2.</span> <span class="nav-text">矩阵除法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵旋转"><span class="nav-number">3.</span> <span class="nav-text">矩阵旋转</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#reshape函数"><span class="nav-number">4.</span> <span class="nav-text">reshape函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#size函数"><span class="nav-number">5.</span> <span class="nav-text">size函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">6.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#diag"><span class="nav-number">6.1.</span> <span class="nav-text">diag</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#max"><span class="nav-number">6.2.</span> <span class="nav-text">max</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#matlab中的sort函数"><span class="nav-number">6.3.</span> <span class="nav-text">matlab中的sort函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MATLAB判断一个数是否整数"><span class="nav-number">6.4.</span> <span class="nav-text">MATLAB判断一个数是否整数</span></a></li></ol></li></ol></div>
             
 
           </div>
