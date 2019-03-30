@@ -90,7 +90,7 @@
 <meta property="og:description" content="绘图基础 可以直接在图形窗口上修改图形 如果当前不存在图形窗口，MATLAB 的绘图函数会自动 建立一个新的图形窗口；如果已存在一个图形窗口，MATLAB 的绘图函数就会在这个窗口 中进行绘图操作；如果已存在多个图形窗口，MATLAB 的绘图函数就会在当前窗口中进行 绘图操作(当前窗口通常是指后一个使用的图形窗口)。 matlab绘图是将图形每一个点标出后连接而成，因为横坐标间隔值不一定相同，所以">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/plot绘图.png">
-<meta property="og:updated_time" content="2019-03-28T09:01:00.334Z">
+<meta property="og:updated_time" content="2019-03-30T08:10:50.023Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab绘图">
 <meta name="twitter:description" content="绘图基础 可以直接在图形窗口上修改图形 如果当前不存在图形窗口，MATLAB 的绘图函数会自动 建立一个新的图形窗口；如果已存在一个图形窗口，MATLAB 的绘图函数就会在这个窗口 中进行绘图操作；如果已存在多个图形窗口，MATLAB 的绘图函数就会在当前窗口中进行 绘图操作(当前窗口通常是指后一个使用的图形窗口)。 matlab绘图是将图形每一个点标出后连接而成，因为横坐标间隔值不一定相同，所以">
@@ -131,6 +131,19 @@
 
 
 <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
+
+
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('天道让我们在此相遇') !== ''){
+                alert('天机不可泄漏！');
+                history.back();
+            }
+        }
+    })();
+</script>
   <title>matlab绘图 | LjJiaJun' Home</title>
   
 
@@ -348,8 +361,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-28T17:01:00+08:00">
-                2019-03-28
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-30T16:10:50+08:00">
+                2019-03-30
               </time>
             
           </span>
@@ -457,6 +470,7 @@
 <li>如果当前不存在图形窗口，MATLAB 的绘图函数会自动 建立一个新的图形窗口；如果已存在一个图形窗口，MATLAB 的绘图函数就会在这个窗口 中进行绘图操作；如果已存在多个图形窗口，MATLAB 的绘图函数就会在当前窗口中进行 绘图操作(当前窗口通常是指后一个使用的图形窗口)。</li>
 <li>matlab绘图是将<strong>图形每一个点标出后连接而成</strong>，因为横坐标间隔值不一定相同，所以2个图形相交y值不一定相等，<strong>找交点</strong><code>s=find(abs(y1-y2)&lt;0.01))</code>其中0.01设置具体看横坐标间隔值大小，否侧可能找不到<ul>
 <li>plot函数维度必须相同，因为图形是将点连接起来，所以x与y个数维度必须相同</li>
+<li>plot函数可以标点！画点(因为画图是画点再连接起来)</li>
 </ul>
 </li>
 <li>注意：<ul>
@@ -484,7 +498,7 @@
 <li><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/plot绘图.png" alt=""></p>
 </li>
 </ul>
-<h1 id="plot函数"><a href="#plot函数" class="headerlink" title="plot函数"></a>plot函数</h1><ul>
+<h1 id="find函数"><a href="#find函数" class="headerlink" title="find函数"></a>find函数</h1><h1 id="plot函数"><a href="#plot函数" class="headerlink" title="plot函数"></a>plot函数</h1><ul>
 <li>若用一个plot函数画多个图时，横坐标维度必须一致</li>
 <li><code>plot(x,y,’s’)</code> —— 开关格式，开关量字符串s设定曲线颜色和绘图方式，如:   <code>plot(x1,y1,’y*’,x2,y2,’rO’，…)</code><ul>
 <li>S的标准设定值如下：</li>
@@ -576,6 +590,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/30/c-stackk/" rel="prev" title="c++stackk">
+                c++stackk <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -683,7 +701,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-count">56</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -694,7 +712,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">45</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -705,7 +723,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -745,7 +763,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#绘图基础"><span class="nav-number">1.</span> <span class="nav-text">绘图基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令行"><span class="nav-number">1.1.</span> <span class="nav-text">命令行</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">2.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#plot函数"><span class="nav-number">3.</span> <span class="nav-text">plot函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多窗口绘图"><span class="nav-number">4.</span> <span class="nav-text">多窗口绘图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#符号函数-显函数、隐函数和参数方程-画图"><span class="nav-number">5.</span> <span class="nav-text">符号函数(显函数、隐函数和参数方程)画图</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#绘图基础"><span class="nav-number">1.</span> <span class="nav-text">绘图基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令行"><span class="nav-number">1.1.</span> <span class="nav-text">命令行</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">2.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#find函数"><span class="nav-number">3.</span> <span class="nav-text">find函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#plot函数"><span class="nav-number">4.</span> <span class="nav-text">plot函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多窗口绘图"><span class="nav-number">5.</span> <span class="nav-text">多窗口绘图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#符号函数-显函数、隐函数和参数方程-画图"><span class="nav-number">6.</span> <span class="nav-text">符号函数(显函数、隐函数和参数方程)画图</span></a></li></ol></div>
             
 
           </div>
