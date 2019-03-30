@@ -90,7 +90,7 @@
 <meta property="og:description" content="绘图基础 可以直接在图形窗口上修改图形 如果当前不存在图形窗口，MATLAB 的绘图函数会自动 建立一个新的图形窗口；如果已存在一个图形窗口，MATLAB 的绘图函数就会在这个窗口 中进行绘图操作；如果已存在多个图形窗口，MATLAB 的绘图函数就会在当前窗口中进行 绘图操作(当前窗口通常是指后一个使用的图形窗口)。 matlab绘图是将图形每一个点标出后连接而成，因为横坐标间隔值不一定相同，所以">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/plot绘图.png">
-<meta property="og:updated_time" content="2019-03-30T08:10:50.023Z">
+<meta property="og:updated_time" content="2019-03-30T12:40:01.161Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab绘图">
 <meta name="twitter:description" content="绘图基础 可以直接在图形窗口上修改图形 如果当前不存在图形窗口，MATLAB 的绘图函数会自动 建立一个新的图形窗口；如果已存在一个图形窗口，MATLAB 的绘图函数就会在这个窗口 中进行绘图操作；如果已存在多个图形窗口，MATLAB 的绘图函数就会在当前窗口中进行 绘图操作(当前窗口通常是指后一个使用的图形窗口)。 matlab绘图是将图形每一个点标出后连接而成，因为横坐标间隔值不一定相同，所以">
@@ -361,7 +361,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-30T16:10:50+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-30T20:40:01+08:00">
                 2019-03-30
               </time>
             
@@ -407,7 +407,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">1.3k(字)</span> 
+					<span class="post-count">1.8k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -507,6 +507,21 @@
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">		</span><br><span class="line">字母        颜色          标点           线型</span><br><span class="line">    y            黄色             ·              点线</span><br><span class="line">    m           粉红            ○             圈线</span><br><span class="line">    c            亮蓝            ×             ×线</span><br><span class="line">    r             大红           ＋             ＋字线  </span><br><span class="line">    g            绿色           －              实线</span><br><span class="line">    b            蓝色           *               星形线</span><br><span class="line">    w           白色            ：             虚线</span><br><span class="line">    k            黑色         －·  (--)        点划线</span><br><span class="line"></span><br><span class="line">    v                 下三角</span><br><span class="line">        ^                  上三角</span><br><span class="line">        &lt;                  左三角</span><br><span class="line">      &gt;                  右三角</span><br><span class="line">       square           正方形</span><br><span class="line">       diamond        菱形</span><br><span class="line">       pentagram     五角星</span><br><span class="line">       hexagram      六角星</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">t=0:pi/100:2*pi;</span><br><span class="line">y=sin(t);</span><br><span class="line">y1=sin(t+0.25);</span><br><span class="line">y2=sin(t+0.5);</span><br><span class="line">y3=cos(t);</span><br><span class="line">y4=cos(t+0.25);</span><br><span class="line">y5=cos(t+0.5);</span><br><span class="line">plot(t,[y&apos;,y1&apos;,y2&apos;,y3&apos;,y4&apos;,y5&apos;])</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><code>plot(X,Y,’S’)</code>命令</p>
+<ul>
+<li><span id="inline-blue"> X,Y为同维向量时，绘制以X,Y元素为横、纵坐标的曲线；</span></li>
+<li>X是向量，Y是有一维与X等维的矩阵时，则绘制出多根不同色彩的曲线. 曲线数等于Y矩阵的另一维数，X被作为这些曲线的共同横坐标；</li>
+<li>X是矩阵，Y是向量时，情况与上面的相同，只是曲线都以Y为共同纵坐标；</li>
+<li>X,Y为同维矩阵时，则以X、Y对应列元素为横、纵坐标分别绘制曲线，曲线条数等于矩阵的列数. </li>
+</ul>
+</li>
+<li><p><code>plot(X1,Y1,S1,X2,Y2,S2,X3,Y3,S3,)</code>命令</p>
+<ul>
+<li>在这个格式中，每一个“三元组”(X,Y,’S’)的结构和作用与<code>plot(X,Y,’S’)</code>相同. 不同的三元组之间没有约束关系. </li>
+</ul>
+</li>
+</ul>
 <h1 id="多窗口绘图"><a href="#多窗口绘图" class="headerlink" title="多窗口绘图"></a>多窗口绘图</h1><ul>
 <li>figure(n) —— 创建窗口函数，n为窗口顺序号。</li>
 </ul>
@@ -529,6 +544,26 @@
 <li>3）<code>ezplot(f,[a,b])</code>命令，在指定的范围<code>[a&lt;x&lt;b,a&lt;y&lt;b]</code>内绘制表达式为f=f(x)的显式函数图形。</li>
 <li>4）<code>ezplot(f,[xmin,xmax,ymin,ymax])</code>命令，在平面矩形区域<code>[xmin&lt;x&lt;xmax,ymin&lt;y&lt;ymax]</code>上绘制隐函数f(x,y)=0的图形。</li>
 <li>5）<code>ezplot(x,y,[tmin,tmax])</code>命令，在指定的范围[tmin&lt;t&lt;tmax]内绘制参数形式的函数x=x(t)与y=y(t)的图形。 </li>
+</ul>
+</li>
+<li>画隐函数ezplot的调用格式：<ul>
+<li><code>ezplot(f)</code>—这里f为包含单个符号变量x的符号表达式，在x轴的默认范围[-2<em>pi 2</em>pi]内绘制f(x)的函数图</li>
+<li><code>ezplot(f,xmin,xmax)</code> — 给定区间</li>
+<li><code>ezplot(f,[xmin,xmax],figure(n))</code> — 指定绘图窗口绘图。</li>
+</ul>
+</li>
+</ul>
+<h1 id="axis"><a href="#axis" class="headerlink" title="axis"></a>axis</h1><ul>
+<li>axis的用法有：<ul>
+<li><code>axis([xmin  xmax  ymin  ymax])</code> —— 用行向量中给出的值设定坐标轴的最大和最小值。<ul>
+<li>如<code>axis ([-2  2  0  5])</code></li>
+</ul>
+</li>
+<li><code>axis(equal)</code> —— 将两坐标轴设为相等</li>
+<li><code>axis on(off)</code> —— 显示和关闭坐标轴的标记、标志</li>
+<li><code>axis auto</code> —— 将坐标轴设置返回自动缺省值</li>
+<li><code>axis SQUARE</code>设置当前图形为正方形（或立方体形),axis square刻度范围不一定一样，但是一定是方形的</li>
+<li><code>axis equal</code>将横轴纵轴的定标系数设成相同值,<code>axis equal</code>刻度是等长的，但也不一定是方形的。</li>
 </ul>
 </li>
 </ul>
@@ -763,7 +798,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#绘图基础"><span class="nav-number">1.</span> <span class="nav-text">绘图基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令行"><span class="nav-number">1.1.</span> <span class="nav-text">命令行</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">2.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#find函数"><span class="nav-number">3.</span> <span class="nav-text">find函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#plot函数"><span class="nav-number">4.</span> <span class="nav-text">plot函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多窗口绘图"><span class="nav-number">5.</span> <span class="nav-text">多窗口绘图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#符号函数-显函数、隐函数和参数方程-画图"><span class="nav-number">6.</span> <span class="nav-text">符号函数(显函数、隐函数和参数方程)画图</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#绘图基础"><span class="nav-number">1.</span> <span class="nav-text">绘图基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令行"><span class="nav-number">1.1.</span> <span class="nav-text">命令行</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">2.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#find函数"><span class="nav-number">3.</span> <span class="nav-text">find函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#plot函数"><span class="nav-number">4.</span> <span class="nav-text">plot函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多窗口绘图"><span class="nav-number">5.</span> <span class="nav-text">多窗口绘图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#符号函数-显函数、隐函数和参数方程-画图"><span class="nav-number">6.</span> <span class="nav-text">符号函数(显函数、隐函数和参数方程)画图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#axis"><span class="nav-number">7.</span> <span class="nav-text">axis</span></a></li></ol></div>
             
 
           </div>
@@ -804,7 +839,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">25.7k</span>
+    <span title="Site words total count">26.4k</span>
   
 </div>
 
