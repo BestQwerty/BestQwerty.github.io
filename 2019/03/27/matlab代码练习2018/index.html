@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="A题 编程将输入的一个n位整数按由小到大的顺序输出。如输入78945，则输出45789。 12345678910111213141516171819		clc,clear;a = input(&amp;apos;please input a number：&amp;apos;);aa = num2str(a);b = length(aa);c = zeros(1,b);result = 0;for i=1:b">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-27T14:00:39.622Z">
+<meta property="og:updated_time" content="2019-03-30T13:48:56.550Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab代码练习2018">
 <meta name="twitter:description" content="A题 编程将输入的一个n位整数按由小到大的顺序输出。如输入78945，则输出45789。 12345678910111213141516171819		clc,clear;a = input(&amp;apos;please input a number：&amp;apos;);aa = num2str(a);b = length(aa);c = zeros(1,b);result = 0;for i=1:b">
@@ -359,8 +359,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-27T22:00:39+08:00">
-                2019-03-27
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-30T21:48:56+08:00">
+                2019-03-30
               </time>
             
           </span>
@@ -405,7 +405,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">93(字)</span> 
+					<span class="post-count">241(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -467,9 +467,36 @@
 <li><p>编程将输入的一个n位整数按由小到大的顺序输出。如输入78945，则输出45789。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">	</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line">clc,clear;</span><br><span class="line">a = input(&apos;please input a number：&apos;);</span><br><span class="line">aa = num2str(a);</span><br><span class="line">b = length(aa);</span><br><span class="line">c = zeros(1,b);</span><br><span class="line">result = 0;</span><br><span class="line">for i=1:b</span><br><span class="line">    d = mod(a,10);</span><br><span class="line">    c(i) = d;</span><br><span class="line">    a = (a-mod(a,10))/10;</span><br><span class="line">end</span><br><span class="line">c = sort(c);</span><br><span class="line">for j=1:b</span><br><span class="line">    result = c(j) + result*10;</span><br><span class="line">end</span><br><span class="line">fprintf(&apos;The answer is :%d\n&apos;,result)</span><br></pre></td></tr></table></figure>
 </li>
-<li></li>
+<li><p>在同一坐标系中作出以下式子表示的图形x^2+y^2=1,y=x^2<br><code>`</code></p>
+</li>
 </ul>
+<pre><code>法一
+clc,clear;
+syms x
+f1 = &apos;x^2+y^2-1&apos;;
+f2 = &apos;y-x^2&apos;;
+ezplot(f1, [-1 1] , [-1 1]);
+hold on
+ezplot(f2, [-1 1] , [-1 1]);
 
+%法二
+clc,clear;
+x=-1:0.01:1;
+for i=1:length(x)
+    y1(i)=sqrt(1-x(i)^2);
+    y2(i)=-sqrt(1-x(i)^2);
+    y3(i)=x(i)^2;
+end
+plot(x,y1,&apos;b&apos;,x,y2,&apos;b&apos;,x,y3,&apos;b&apos;)
+
+%法三
+clc,clear;
+x=-1:0.01:1;
+y1=sqrt(1-x.^2);
+y2=-sqrt(1-x.^2);
+y3=x.^2;
+plot(x,y1,&apos;b&apos;,x,y2,&apos;b&apos;,x,y3,&apos;b&apos;)  
+</code></pre>
       
     </div>
     
@@ -741,7 +768,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">26.4k</span>
+    <span title="Site words total count">26.6k</span>
   
 </div>
 
