@@ -89,12 +89,10 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="绘图基础 可以直接在图形窗口上修改图形 如果当前不存在图形窗口，MATLAB 的绘图函数会自动 建立一个新的图形窗口；如果已存在一个图形窗口，MATLAB 的绘图函数就会在这个窗口 中进行绘图操作；如果已存在多个图形窗口，MATLAB 的绘图函数就会在当前窗口中进行 绘图操作(当前窗口通常是指后一个使用的图形窗口)。 matlab绘图是将图形每一个点标出后连接而成，因为横坐标间隔值不一定相同，所以">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/plot绘图.png">
-<meta property="og:updated_time" content="2019-03-31T07:05:19.444Z">
+<meta property="og:updated_time" content="2019-03-31T10:00:59.219Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab绘图">
 <meta name="twitter:description" content="绘图基础 可以直接在图形窗口上修改图形 如果当前不存在图形窗口，MATLAB 的绘图函数会自动 建立一个新的图形窗口；如果已存在一个图形窗口，MATLAB 的绘图函数就会在这个窗口 中进行绘图操作；如果已存在多个图形窗口，MATLAB 的绘图函数就会在当前窗口中进行 绘图操作(当前窗口通常是指后一个使用的图形窗口)。 matlab绘图是将图形每一个点标出后连接而成，因为横坐标间隔值不一定相同，所以">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/plot绘图.png">
 
 
 
@@ -361,7 +359,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-31T15:05:19+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-31T18:00:59+08:00">
                 2019-03-31
               </time>
             
@@ -407,7 +405,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">2k(字)</span> 
+					<span class="post-count">2.1k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -480,49 +478,60 @@
 </ul>
 </li>
 </ul>
-<h2 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h2><ul>
-<li><p><span id="inline-toc">1.</span>hold on: hold on retains plots in the current axes so that new plots added to the axes do not delete existing plots. New plots use the next colors and line styles based on the ColorOrder and LineStyleOrder properties of the axes. MATLAB® adjusts axes limits, tick marks, and tick labels to display the full range of data.</p>
-<ul>
-<li>hold on保留当前坐标轴中的绘图，这样添加到坐标轴中的新绘图就不会删除现有的绘图。新绘图使用基于坐标轴的ColorOrder和LineStyleOrder属性的下一种颜色和线条样式。MATLAB®调整坐标轴限制、刻度标记和刻度标签，以显示全部数据范围。</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">		</span><br><span class="line"></span><br><span class="line">x = linspace(-pi,pi);</span><br><span class="line">y1 = sin(x);</span><br><span class="line">y2 = cos(x);</span><br><span class="line"></span><br><span class="line">plot(x,y1)</span><br><span class="line">hold on</span><br><span class="line">plot(x,y2)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p><span id="inline-toc">2.</span><code>close all;</code>关闭所有图形窗口</p>
-</li>
-</ul>
-<h1 id="图形标注"><a href="#图形标注" class="headerlink" title="图形标注"></a>图形标注</h1><ul>
-<li>有关图形标注函数的调用格式为<ul>
-<li><code>title(‘图形名称’)</code> </li>
-<li><code>xlabel(‘x轴说明’)</code></li>
-<li><code>ylabel(‘y轴说明’)</code></li>
-<li><code>text(x, y, ‘图形说明’)</code> %在坐标位置(x,y)处添加文字“图形说明”</li>
-<li><code>legend(‘图例1’, ‘图例2’, …)</code><ul>
-<li>legend函数用于对绘制曲线所用线型、颜色或数据点标记作图例说明，放置在空白处，可以通过鼠标移动图例，将其拖放到其它位置。部分函数同样适用于三维图形，在三维图中z坐标轴说明用zlabel函数。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><ul>
-<li>将标题、坐标轴标记、网格线及文字注<br>释加注到图形上，这些函数为：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">title —— 给图形加标题</span><br><span class="line">xlable —— 给x轴加标注</span><br><span class="line">ylable —— 给y轴加标注</span><br><span class="line">text —— 在图形指定位置加标注</span><br><span class="line">gtext —— 将标注加到图形任意位置</span><br><span class="line">grid on(off) —— 打开、关闭坐标网格线</span><br><span class="line">legend —— 添加图例</span><br><span class="line">axis —— 控制坐标轴的刻度</span><br></pre></td></tr></table></figure>
-<ul>
-<li><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">		</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">clc;clear;</span><br><span class="line">t=0:0.1:10;</span><br><span class="line">y1=sin(t);</span><br><span class="line">y2=cos(t);</span><br><span class="line">plot(t,y1,&apos;r&apos;,t,y2,&apos;b--&apos;);</span><br><span class="line">x=[1.7*pi;1.6*pi];</span><br><span class="line">y=[-0.3;0.8];</span><br><span class="line">s=[&apos;sin(t)&apos;;&apos;cos(t)&apos;];</span><br><span class="line">text(x,y,s);</span><br><span class="line">title(&apos;正弦和余弦曲线&apos;);</span><br><span class="line">legend(&apos;正弦&apos;,&apos;余弦&apos;)</span><br><span class="line">xlabel(&apos;时间t&apos;)</span><br><span class="line">ylabel(&apos;正弦、余弦&apos;)</span><br><span class="line">grid</span><br><span class="line">axis square</span><br></pre></td></tr></table></figure>
-</code></pre></li>
-<li><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/plot绘图.png" alt=""></p>
-</li>
-</ul>
-<h1 id="find函数"><a href="#find函数" class="headerlink" title="find函数"></a>find函数</h1><h1 id="plot函数"><a href="#plot函数" class="headerlink" title="plot函数"></a>plot函数</h1><ul>
-<li>若用一个plot函数画多个图时，横坐标维度必须一致</li>
-<li><code>plot(x,y,’s’)</code> —— 开关格式，开关量字符串s设定曲线颜色和绘图方式，如:   <code>plot(x1,y1,’y*’,x2,y2,’rO’，…)</code><ul>
-<li>S的标准设定值如下：</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">		</span><br><span class="line">字母        颜色          标点           线型</span><br><span class="line">    y            黄色             ·              点线</span><br><span class="line">    m           粉红            ○             圈线</span><br><span class="line">    c            亮蓝            ×             ×线</span><br><span class="line">    r             大红           ＋             ＋字线  </span><br><span class="line">    g            绿色           －              实线</span><br><span class="line">    b            蓝色           *               星形线</span><br><span class="line">    w           白色            ：             虚线</span><br><span class="line">    k            黑色         －·  (--)        点划线</span><br><span class="line"></span><br><span class="line">    v                 下三角</span><br><span class="line">        ^                  上三角</span><br><span class="line">        &lt;                  左三角</span><br><span class="line">      &gt;                  右三角</span><br><span class="line">       square           正方形</span><br><span class="line">       diamond        菱形</span><br><span class="line">       pentagram     五角星</span><br><span class="line">       hexagram      六角星</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">t=0:pi/100:2*pi;</span><br><span class="line">y=sin(t);</span><br><span class="line">y1=sin(t+0.25);</span><br><span class="line">y2=sin(t+0.5);</span><br><span class="line">y3=cos(t);</span><br><span class="line">y4=cos(t+0.25);</span><br><span class="line">y5=cos(t+0.5);</span><br><span class="line">plot(t,[y&apos;,y1&apos;,y2&apos;,y3&apos;,y4&apos;,y5&apos;])</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">	clc,clear;</span><br><span class="line">	close all;</span><br><span class="line">	x1=[0:0.1:4];</span><br><span class="line">	y1 = sqrt(x1);</span><br><span class="line">	x2=[4:0.1:6]</span><br><span class="line">	y2 = 2*ones(1,21);   %注意这里如果是直接写2，因为plot画图是多个点连接，y2只有一个值，所以要创建与x2横坐标相同维度的y2</span><br><span class="line">	x3 = [6:0.1:8];</span><br><span class="line">	y3 = 5-x3/2;</span><br><span class="line">	y4 = 1;</span><br><span class="line">	plot(x1,y1);</span><br><span class="line">	hold on</span><br><span class="line">	plot(x2,y2);</span><br><span class="line">	hold on</span><br><span class="line">	plot(x3,y3);</span><br><span class="line">	hold on</span><br><span class="line">	plot([8:0.1:10],y4);</span><br><span class="line">```	</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">## 命令行</span><br><span class="line">- &lt;span id=&quot;inline-toc&quot;&gt;1.&lt;/span&gt;hold on: hold on retains plots in the current axes so that new plots added to the axes do not delete existing plots. New plots use the next colors and line styles based on the ColorOrder and LineStyleOrder properties of the axes. MATLAB® adjusts axes limits, tick marks, and tick labels to display the full range of data.</span><br><span class="line">	- hold on保留当前坐标轴中的绘图，这样添加到坐标轴中的新绘图就不会删除现有的绘图。新绘图使用基于坐标轴的ColorOrder和LineStyleOrder属性的下一种颜色和线条样式。MATLAB®调整坐标轴限制、刻度标记和刻度标签，以显示全部数据范围。</span><br><span class="line">	-</span><br></pre></td></tr></table></figure>
+<pre><code>        x = linspace(-pi,pi);
+        y1 = sin(x);
+        y2 = cos(x);
+
+        plot(x,y1)
+        hold on
+        plot(x,y2)
+    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- &lt;span id=&quot;inline-toc&quot;&gt;2.&lt;/span&gt;`close all;`关闭所有图形窗口</span><br><span class="line"></span><br><span class="line"># 图形标注</span><br><span class="line">- 有关图形标注函数的调用格式为</span><br><span class="line">	- `title(‘图形名称’)` </span><br><span class="line">	- `xlabel(‘x轴说明’)`</span><br><span class="line">	- `ylabel(‘y轴说明’)`</span><br><span class="line">	- `text(x, y, ‘图形说明’)` %在坐标位置(x,y)处添加文字“图形说明”</span><br><span class="line">	- `legend(‘图例1’, ‘图例2’, …)`</span><br><span class="line">		- legend函数用于对绘制曲线所用线型、颜色或数据点标记作图例说明，放置在空白处，可以通过鼠标移动图例，将其拖放到其它位置。部分函数同样适用于三维图形，在三维图中z坐标轴说明用zlabel函数。</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 函数</span><br><span class="line">- 将标题、坐标轴标记、网格线及文字注</span><br><span class="line">释加注到图形上，这些函数为：</span><br></pre></td></tr></table></figure>
+
+title —— 给图形加标题
+xlable —— 给x轴加标注
+ylable —— 给y轴加标注
+text —— 在图形指定位置加标注
+gtext —— 将标注加到图形任意位置
+grid on(off) —— 打开、关闭坐标网格线
+legend —— 添加图例
+axis —— 控制坐标轴的刻度
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-</span><br></pre></td></tr></table></figure>
+<pre><code>clc;clear;
+t=0:0.1:10;
+y1=sin(t);
+y2=cos(t);
+plot(t,y1,&apos;r&apos;,t,y2,&apos;b--&apos;);
+x=[1.7*pi;1.6*pi];
+y=[-0.3;0.8];
+s=[&apos;sin(t)&apos;;&apos;cos(t)&apos;];
+text(x,y,s);
+title(&apos;正弦和余弦曲线&apos;);
+legend(&apos;正弦&apos;,&apos;余弦&apos;)
+xlabel(&apos;时间t&apos;)
+ylabel(&apos;正弦、余弦&apos;)
+grid
+axis square
+</code></pre>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">- ![](https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/plot绘图.png)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># find函数</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># plot函数</span><br><span class="line">- 若用一个plot函数画多个图时，横坐标维度必须一致</span><br><span class="line">- `plot(x,y,’s’)` —— 开关格式，开关量字符串s设定曲线颜色和绘图方式，如:   `plot(x1,y1,’y*’,x2,y2,’rO’，…)`</span><br><span class="line">	- S的标准设定值如下：</span><br></pre></td></tr></table></figure>
+<pre><code>字母        颜色          标点           线型
+ y            黄色             ·              点线
+ m           粉红            ○             圈线
+ c            亮蓝            ×             ×线
+ r             大红           ＋             ＋字线  
+ g            绿色           －              实线
+ b            蓝色           *               星形线
+ w           白色            ：             虚线
+ k            黑色         －·  (--)        点划线
+
+    v                 下三角
+     ^                  上三角
+     &lt;                  左三角
+      &gt;                  右三角
+    square           正方形
+    diamond        菱形
+    pentagram     五角星
+    hexagram      六角星
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line">			t=0:pi/100:2*pi;</span><br><span class="line">			y=sin(t);</span><br><span class="line">			y1=sin(t+0.25);</span><br><span class="line">			y2=sin(t+0.5);</span><br><span class="line">			y3=cos(t);</span><br><span class="line">			y4=cos(t+0.25);</span><br><span class="line">			y5=cos(t+0.5);</span><br><span class="line">			plot(t,[y&apos;,y1&apos;,y2&apos;,y3&apos;,y4&apos;,y5&apos;])</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p><code>plot(X,Y,’S’)</code>命令</p>
 <ul>
@@ -819,7 +828,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#绘图基础"><span class="nav-number">1.</span> <span class="nav-text">绘图基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令行"><span class="nav-number">1.1.</span> <span class="nav-text">命令行</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图形标注"><span class="nav-number">2.</span> <span class="nav-text">图形标注</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">3.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#find函数"><span class="nav-number">4.</span> <span class="nav-text">find函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#plot函数"><span class="nav-number">5.</span> <span class="nav-text">plot函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多窗口绘图"><span class="nav-number">6.</span> <span class="nav-text">多窗口绘图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#符号函数-显函数、隐函数和参数方程-画图"><span class="nav-number">7.</span> <span class="nav-text">符号函数(显函数、隐函数和参数方程)画图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#坐标控制"><span class="nav-number">8.</span> <span class="nav-text">坐标控制</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#绘图基础"><span class="nav-number">1.</span> <span class="nav-text">绘图基础</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多窗口绘图"><span class="nav-number">2.</span> <span class="nav-text">多窗口绘图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#符号函数-显函数、隐函数和参数方程-画图"><span class="nav-number">3.</span> <span class="nav-text">符号函数(显函数、隐函数和参数方程)画图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#坐标控制"><span class="nav-number">4.</span> <span class="nav-text">坐标控制</span></a></li></ol></div>
             
 
           </div>
@@ -860,7 +869,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">27.8k</span>
+    <span title="Site words total count">27.9k</span>
   
 </div>
 
