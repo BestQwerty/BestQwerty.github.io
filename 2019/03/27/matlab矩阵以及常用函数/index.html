@@ -94,7 +94,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab矩阵旋转.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/reshape.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/size.png">
-<meta property="og:updated_time" content="2019-03-31T13:21:17.638Z">
+<meta property="og:updated_time" content="2019-03-31T13:28:16.228Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab矩阵以及常用函数">
 <meta name="twitter:description" content="函数调用` 调用函数文件的一般格式为 [输出参数表]=函数名(输入参数表)  调用函数时应注意： 当调用一个函数时，输入和输出参数的顺序应与函数定义时的一致，其数目可以 按少于函数文件中所规定的输入和输出参数调用函数，但不能使用多于函数文件所规定的 输入和输出参数数目。如果输入和输出参数数目多于或少于函数文件所允许的数目，则调 用时自动返回错误信息。 当函数有一个以上输出参数时，输出参数包含在方括">
@@ -365,7 +365,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-31T21:21:17+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-31T21:28:16+08:00">
                 2019-03-31
               </time>
             
@@ -411,7 +411,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">1.9k(字)</span> 
+					<span class="post-count">2k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -515,11 +515,17 @@
 <h1 id="reshape函数"><a href="#reshape函数" class="headerlink" title="reshape函数"></a>reshape函数</h1><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/reshape.png" alt="">    </p>
 <h1 id="size函数"><a href="#size函数" class="headerlink" title="size函数"></a>size函数</h1><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/size.png" alt=""></p>
 <h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="diag"><a href="#diag" class="headerlink" title="diag"></a>diag</h2><ul>
-<li><span id="inline-toc">1.</span> diag函数：<code>sum(diag(a)+diag(a&#39;))</code>可以求矩阵a对角线上的元素之和，不过中间的一个元素会提取2次，diag(a’)可以提取副对角线的元素(先将矩阵转置）<ul>
-<li>当Random是向量时，才构成对角矩阵，当Random是m×n矩阵时，得到的是个向量。比如diag([1 3;2 4])得到向量，diag([1 3])得到2×2矩阵。</li>
-<li>可以用来访问对角元素<h2 id="max"><a href="#max" class="headerlink" title="max"></a>max</h2></li>
+<li><p><span id="inline-toc">1.</span> diag函数：<code>sum(diag(a)+diag(a&#39;))</code>可以求矩阵a对角线上的元素之和，不过中间的一个元素会提取2次，<code>diag(a&#39;)</code>可以提取副对角线的元素(先将矩阵转置）</p>
+<ul>
+<li>当Random是向量时，才构成对角矩阵，当Random是m×n矩阵时，得到的是个向量。比如<code>diag([1 3;2 4])</code>得到向量，<code>diag([1 3])</code>得到2×2矩阵。</li>
+<li>可以用来访问对角元素</li>
 </ul>
 </li>
+<li><p>当 v 是向量时，<code>diag(v)</code>得到以 v 的元素为对角线上元素的对角矩阵； </p>
+</li>
+<li>当 v 是矩阵时，<code>diag(v)</code>得到一个列向量，其元素为矩阵 v 对角线上的元素， <code>diag(v,1)</code>得到矩阵 v 对角线上移一行的元素组成的列向量，<code>diag(v,-1)</code>得到矩阵 v 对 角线下移一行的元素组成的列向量。</li>
+</ul>
+<h2 id="max"><a href="#max" class="headerlink" title="max"></a>max</h2><ul>
 <li><p>MAX 函数的几种形式</p>
 <ul>
 <li>(1)max(a)</li>
@@ -845,7 +851,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">28.1k</span>
+    <span title="Site words total count">28.2k</span>
   
 </div>
 
