@@ -94,7 +94,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab矩阵旋转.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/reshape.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/size.png">
-<meta property="og:updated_time" content="2019-04-03T11:48:41.978Z">
+<meta property="og:updated_time" content="2019-04-03T11:51:45.691Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab矩阵以及常用函数">
 <meta name="twitter:description" content="函数调用 调用函数文件的一般格式为 [输出参数表]=函数名(输入参数表)  调用函数时应注意： 当调用一个函数时，输入和输出参数的顺序应与函数定义时的一致，其数目可以 按少于函数文件中所规定的输入和输出参数调用函数，但不能使用多于函数文件所规定的 输入和输出参数数目。如果输入和输出参数数目多于或少于函数文件所允许的数目，则调 用时自动返回错误信息。 当函数有一个以上输出参数时，输出参数包含在方括号">
@@ -365,7 +365,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-03T19:48:41+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-03T19:51:45+08:00">
                 2019-04-03
               </time>
             
@@ -477,15 +477,17 @@
 <h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><ul>
 <li>下标从1开始</li>
 <li>矩阵里面元素可以是符号与字符（‘a’,’,’）,输入的元素维度要一样<ul>
-<li>矩阵里面的元素也可以是矩阵，但是矩阵长度维度必须与其它元素相同</li>
+<li>矩阵里面的元素也可以是矩阵，但是矩阵长度维度必须与其它元素相同        </li>
 </ul>
 </li>
+<li>生成10*10的矩阵可以如下：<code>a = [1:10;11:20;21:....];</code>就是运用：</li>
+<li>对矩阵a第一行后面2个赋予其他值(灵活运用：)</li>
 </ul>
-<pre><code>- 生成10*10的矩阵可以如下：`a = [1:10;11:20;21:....];`就是运用：
-- 对矩阵a第一行后面2个赋予其他值(灵活运用：)
-</code></pre><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">a = [<span class="number">1</span> <span class="number">2</span> <span class="number">3</span></span><br><span class="line">	<span class="number">4</span> <span class="number">7</span> <span class="number">8</span></span><br><span class="line">	<span class="number">1</span> <span class="number">2</span> <span class="number">5</span>];</span><br><span class="line">	 </span><br><span class="line">a(<span class="number">1</span>,<span class="number">2</span>:<span class="number">3</span>) = x;</span><br></pre></td></tr></table></figure>
-<pre><code>- 对一个矩阵A赋值提取可以取出然后赋给一个小矩阵a
-</code></pre><ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">a = [<span class="number">1</span> <span class="number">2</span> <span class="number">3</span></span><br><span class="line">	<span class="number">4</span> <span class="number">7</span> <span class="number">8</span></span><br><span class="line">	<span class="number">1</span> <span class="number">2</span> <span class="number">5</span>];</span><br><span class="line">	 </span><br><span class="line">a(<span class="number">1</span>,<span class="number">2</span>:<span class="number">3</span>) = x;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>对一个矩阵A赋值提取可以取出然后赋给一个小矩阵a</li>
+</ul>
+<ul>
 <li>矩阵的下标也可以是向量。<ul>
 <li>例如 <code>b=a(x,y)；</code>可以得到一个矩阵 b。a 的行标来自向量 x，而列标来自向量 y。 例如，矩阵 a 有 n 列，那末 <code>b=a(:,n:-1:1)</code> 将得到矩阵 b，它等于矩阵 a 按列的逆序排列。 </li>
 </ul>
@@ -750,7 +752,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-count">61</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -761,7 +763,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">52</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -853,7 +855,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">29.1k</span>
+    <span title="Site words total count">29.3k</span>
   
 </div>
 
