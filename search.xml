@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[matlab函数之rand及其相关函数]]></title>
+    <url>%2F2019%2F04%2F03%2Fmatlab%E5%87%BD%E6%95%B0%E4%B9%8Brand%2F</url>
+    <content type="text"><![CDATA[rand matlab中通过rand函数产生的是介于0到1(不包括1)之间的伪随机数 X = rand范围(0,1). X = rand(n)表示产生一个n×n的随机矩阵，n必须是整数,否则会报错。 X = rand(sz1,...,szN) X = rand(sz) X = rand(___,typename) X = rand(___,&#39;like&#39;,p) 可以与取整函数搭配使用 为了使每次执行rand函数时产生和之前不相同的一组伪随机数，通常需要初始化随机数种子。方法很多， 常见的一种是在写m文件时，在程序的开头写：rand(&#39;state&#39;,sum(100*clock)) 定义一个随时间变化的初值。 randi randi函数产生均匀分布的伪随机整数(Uniformly distributed pseudorandom integers) X = randi(imax)返回一个介于1到imax的伪随机整数 X = randi(imax,n)返回一个在[1,imax]范围内的n*n的伪随机整数矩阵 X = randi(imax,sz1,...,szN) X = randi(imax,sz) X = randi(imax,classname) X = randi(imax,n,classname) X = randi(imax,sz1,...,szN,classname) X = randi(imax,sz,classname) X = randi(imax,&#39;like&#39;,p) X = randi(imax,n,&#39;like&#39;,p) X = randi(imax,sz1,...,szN,&#39;like&#39;,p) X = randi(imax,sz,&#39;like&#39;,p) X = randi([imin,imax],___)]]></content>
+      <categories>
+        <category>matlab</category>
+        <category>函数</category>
+        <category>rand及其相关函数</category>
+      </categories>
+      <tags>
+        <tag>matlab</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[matlab常用函数之num2str与str2num]]></title>
     <url>%2F2019%2F04%2F03%2Fmatlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bnum2str%E4%B8%8Estr2num%2F</url>
     <content type="text"><![CDATA[num2str 调用格式: s = num2str(A) s = num2str(A,precision)precision: Maximum number of significant digits.把数组A转换成字符串形式表示，precision表示精度， 比如precision为3表示保留最多3位有效数字 s = num2str(A,formatSpec) formatspec: Format of output fields.按format指定格式进行格式化转换，通常’%11.4g’是默认的。 str2num 调用格式: x = str2num(&#39;str&#39;)str是一个ASCII字符串表示的数值， 这种调用格式把字符串转换成数值。str也可以是一个字符串矩阵， 这种情况下， 字符串矩阵被转换成一个数值矩阵。 [x, status] = str2num(&#39;str&#39;)附加的返回值status用于获取转换状态， status等于逻辑1表示转换成功， 等于0表示转换失败。 例题：1234567891011121314151617181920212223 str2num(&apos;2 4 6 8&apos;) % Separate with spaces. ans = 2 4 6 8 str2num(&apos;2,4,6,8&apos;) % Separate with commas. ans = 2 4 6 8 str2num(&apos;[2 4 6 8]&apos;) % Enclose in brackets. ans = 2 4 6 8 str2num(&apos;2; 4; 6; 8&apos;)ans = 2 4 6 8And now a 2-by-2 matrix:str2num(&apos;2 4; 6 8&apos;)ans = 2 4 6 8]]></content>
@@ -14,24 +27,24 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[typora]]></title>
-    <url>%2F2019%2F04%2F03%2Ftypora%2F</url>
-    <content type="text"><![CDATA[typora简介 无论是Word中带有加粗等格式的文字，还是Excel中的表格，一旦黏贴到Typora中，都会被自动转化为对应的Markdown格式，所以你再也不用担心每次重新设置格式的麻烦了——Markdown最麻烦的表格也可以在Excel中做完再贴入生成了。 专注模式，也就是除了正在编辑的那行文字，文章上下其余的内容全部变成灰色，不吸引你的视线，不干扰你的思维。 与专注模式搭配的话，当然还是全屏模式(F11)最好啦 qwq 打字机模式（Typewriter Mode）:开启这种模式后，Typora 的光标所在行会始终保持在屏幕中间，这样你码字时眼睛可以一直正对着屏幕中间 打开/关闭源代码模式 typora默认界面是实时预览的模式,而这也是与其他Markdown软件较大的区别.切换成源代码模式可以更方便地修改内容 方法1:点击左下角的&lt;/&gt;(启用/关闭源代码模式) 方法2:Ctrl+/ 快捷键 无序列表：输入-之后输入空格 有序列表：输入数字+“.”之后输入空格 任务列表：-[空格]空格 文字 标题：ctrl+数字 表格：ctrl+t 生成目录：[TOC]按回车 选中一整行：ctrl+l 选中单词：ctrl+d 选中相同格式的文字：ctrl+e 跳转到文章开头：ctrl+home 跳转到文章结尾：ctrl+end 搜索：ctrl+f 替换：ctrl+h 引用：输入&gt;之后输入空格 代码块：ctrl+alt+f 加粗：ctrl+b 倾斜：ctrl+i 下划线：ctrl+u 删除线：alt+shift+5 插入图片：直接拖动到指定位置即可或者ctrl+shift+i 插入链接：ctrl+k ​ 参考文献：typora typora2 typora快捷键 typora界面入门]]></content>
-      <categories>
-        <category>markdown编辑器</category>
-        <category>typora</category>
-      </categories>
-      <tags>
-        <tag>markdown编辑器</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[markdownpad2使用技巧]]></title>
     <url>%2F2019%2F04%2F03%2Fmarkdownpad2%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%2F</url>
     <content type="text"><![CDATA[markdownpad2常用快捷键 Ctrl + I ： 斜体 Ctrl + B ： 粗体 Ctrl + G ： 图片 Ctrl + Q ： 引用 Ctrl + 1 ： 标题 1 Ctrl + 2 ： 标题 2 Ctrl + 3 ： 标题 3 Ctrl + K ： 代码块 Ctrl + L ： 超链接 Ctrl + T ： 时间戳 Ctrl + U ： 无序列表 Ctrl + R ： 水平标尺 F4 ： 启用水平布局 F5 ： 启用实时预览 F6 ： 在浏览器中预览 Ctrl + Shift + O ： 有序列表 ​]]></content>
       <categories>
         <category>markdown编辑器</category>
         <category>markdownpad2</category>
+      </categories>
+      <tags>
+        <tag>markdown编辑器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[typora]]></title>
+    <url>%2F2019%2F04%2F03%2Ftypora%2F</url>
+    <content type="text"><![CDATA[typora简介 无论是Word中带有加粗等格式的文字，还是Excel中的表格，一旦黏贴到Typora中，都会被自动转化为对应的Markdown格式，所以你再也不用担心每次重新设置格式的麻烦了——Markdown最麻烦的表格也可以在Excel中做完再贴入生成了。 专注模式，也就是除了正在编辑的那行文字，文章上下其余的内容全部变成灰色，不吸引你的视线，不干扰你的思维。 与专注模式搭配的话，当然还是全屏模式(F11)最好啦 qwq 打字机模式（Typewriter Mode）:开启这种模式后，Typora 的光标所在行会始终保持在屏幕中间，这样你码字时眼睛可以一直正对着屏幕中间 打开/关闭源代码模式 typora默认界面是实时预览的模式,而这也是与其他Markdown软件较大的区别.切换成源代码模式可以更方便地修改内容 方法1:点击左下角的&lt;/&gt;(启用/关闭源代码模式) 方法2:Ctrl+/ 快捷键 无序列表：输入-之后输入空格 有序列表：输入数字+“.”之后输入空格 任务列表：-[空格]空格 文字 标题：ctrl+数字 表格：ctrl+t 生成目录：[TOC]按回车 选中一整行：ctrl+l 选中单词：ctrl+d 选中相同格式的文字：ctrl+e 跳转到文章开头：ctrl+home 跳转到文章结尾：ctrl+end 搜索：ctrl+f 替换：ctrl+h 引用：输入&gt;之后输入空格 代码块：ctrl+alt+f 加粗：ctrl+b 倾斜：ctrl+i 下划线：ctrl+u 删除线：alt+shift+5 插入图片：直接拖动到指定位置即可或者ctrl+shift+i 插入链接：ctrl+k ​ 参考文献：typora typora2 typora快捷键 typora界面入门]]></content>
+      <categories>
+        <category>markdown编辑器</category>
+        <category>typora</category>
       </categories>
       <tags>
         <tag>markdown编辑器</tag>
