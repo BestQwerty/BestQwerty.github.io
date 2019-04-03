@@ -90,7 +90,7 @@
 <meta property="og:description" content="前言 在求线性规划题目时，可以将函数图像相交的点求出来，作为横坐标端点即先求后画.其它题目有时可以先求后解，算一个别样的技巧吧  绘图基础 可以直接在图形窗口上修改图形 如果当前不存在图形窗口，MATLAB 的绘图函数会自动 建立一个新的图形窗口；如果已存在一个图形窗口，MATLAB 的绘图函数就会在这个窗口 中进行绘图操作；如果已存在多个图形窗口，MATLAB 的绘图函数就会在当前窗口中进行 绘">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab绘图例题1.png">
-<meta property="og:updated_time" content="2019-04-02T08:16:59.064Z">
+<meta property="og:updated_time" content="2019-04-03T11:33:57.567Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab绘图">
 <meta name="twitter:description" content="前言 在求线性规划题目时，可以将函数图像相交的点求出来，作为横坐标端点即先求后画.其它题目有时可以先求后解，算一个别样的技巧吧  绘图基础 可以直接在图形窗口上修改图形 如果当前不存在图形窗口，MATLAB 的绘图函数会自动 建立一个新的图形窗口；如果已存在一个图形窗口，MATLAB 的绘图函数就会在这个窗口 中进行绘图操作；如果已存在多个图形窗口，MATLAB 的绘图函数就会在当前窗口中进行 绘">
@@ -361,8 +361,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-02T16:16:59+08:00">
-                2019-04-02
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-03T19:33:57+08:00">
+                2019-04-03
               </time>
             
           </span>
@@ -476,19 +476,17 @@
 <li>plot函数可以<strong>标点</strong>！<strong>画点</strong>(因为画图是画点再连接起来)</li>
 </ul>
 </li>
-<li><p>注意：</p>
-<ul>
+<li>注意：<ul>
 <li>如果已经存在一个图形窗口，plot命令则清除当前图形，绘制新图形</li>
 <li>可任意设定曲线颜色和线型</li>
 <li>可给图形加坐标网线和图形加注功能</li>
 </ul>
 </li>
-<li><p>例题:<img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab绘图例题1.png" alt=""></p>
+</ul>
+<h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab绘图例题1.png" alt=""></p>
 <ul>
 <li><p>解法一</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">		clc,clear;</span><br><span class="line">		close all;</span><br><span class="line">		x1=[0:0.1:4];</span><br><span class="line">		y1 = sqrt(x1);</span><br><span class="line">		x2=[4:0.1:6]</span><br><span class="line">		y2 = 2*ones(1,21);   %注意这里如果是直接写2，因为plot画图是多个点连接，y2只有一个值，所以要创建与x2横坐标相同维度的y2</span><br><span class="line">		x3 = [6:0.1:8];</span><br><span class="line">		y3 = 5-x3/2;</span><br><span class="line">		y4 = 1;</span><br><span class="line">		plot(x1,y1);</span><br><span class="line">		hold on</span><br><span class="line">		plot(x2,y2);</span><br><span class="line">		hold on</span><br><span class="line">		plot(x3,y3);</span><br><span class="line">		hold on</span><br><span class="line">		plot([8:0.1:10],y4);			</span><br><span class="line">```			</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">- 解法二</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">	</span><br><span class="line">			clc,clear;</span><br><span class="line">			close all;</span><br><span class="line">			x1=[0:0.1:4];</span><br><span class="line">			y1 = sqrt(x1);</span><br><span class="line">			x2=[4:0.1:6]</span><br><span class="line">			y2 = 2*ones(1,21);   %注意这里如果是直接写2，因为plot画图是多个点连接，y2只有一个值，所以要创建与x2横坐标相同维度的y2</span><br><span class="line">			x3 = [6:0.1:8];</span><br><span class="line">			y3 = 5-x3/2;</span><br><span class="line">			y4 = 1;</span><br><span class="line">			plot(x1,y1);</span><br><span class="line">			hold on</span><br><span class="line">			plot(x2,y2);</span><br><span class="line">			hold on</span><br><span class="line">			plot(x3,y3);</span><br><span class="line">			hold on</span><br><span class="line">			plot([8:0.1:10],y4);			</span><br><span class="line">	```			</span><br><span class="line">		</span><br><span class="line">	</span><br><span class="line">- 解法二</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <pre><code>        clc; clear all
@@ -850,7 +848,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#绘图基础"><span class="nav-number">2.</span> <span class="nav-text">绘图基础</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多窗口绘图"><span class="nav-number">3.</span> <span class="nav-text">多窗口绘图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#符号函数-显函数、隐函数和参数方程-画图"><span class="nav-number">4.</span> <span class="nav-text">符号函数(显函数、隐函数和参数方程)画图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#坐标控制"><span class="nav-number">5.</span> <span class="nav-text">坐标控制</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#绘图基础"><span class="nav-number">2.</span> <span class="nav-text">绘图基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#例题"><span class="nav-number">2.1.</span> <span class="nav-text">例题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多窗口绘图"><span class="nav-number">3.</span> <span class="nav-text">多窗口绘图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#符号函数-显函数、隐函数和参数方程-画图"><span class="nav-number">4.</span> <span class="nav-text">符号函数(显函数、隐函数和参数方程)画图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#坐标控制"><span class="nav-number">5.</span> <span class="nav-text">坐标控制</span></a></li></ol></div>
             
 
           </div>
