@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[typora]]></title>
+    <url>%2F2019%2F04%2F03%2Ftypora%2F</url>
+    <content type="text"><![CDATA[typora简介 无论是Word中带有加粗等格式的文字，还是Excel中的表格，一旦黏贴到Typora中，都会被自动转化为对应的Markdown格式，所以你再也不用担心每次重新设置格式的麻烦了——Markdown最麻烦的表格也可以在Excel中做完再贴入生成了。 专注模式，也就是除了正在编辑的那行文字，文章上下其余的内容全部变成灰色，不吸引你的视线，不干扰你的思维。 与专注模式搭配的话，当然还是全屏模式(F11)最好啦 qwq 打字机模式（Typewriter Mode）:开启这种模式后，Typora 的光标所在行会始终保持在屏幕中间，这样你码字时眼睛可以一直正对着屏幕中间 打开/关闭源代码模式 typora默认界面是实时预览的模式,而这也是与其他Markdown软件较大的区别.切换成源代码模式可以更方便地修改内容 方法1:点击左下角的&lt;/&gt;(启用/关闭源代码模式) 方法2:Ctrl+/ 快捷键 无序列表：输入-之后输入空格 有序列表：输入数字+“.”之后输入空格 任务列表：-[空格]空格 文字 标题：ctrl+数字 表格：ctrl+t 生成目录：[TOC]按回车 选中一整行：ctrl+l 选中单词：ctrl+d 选中相同格式的文字：ctrl+e 跳转到文章开头：ctrl+home 跳转到文章结尾：ctrl+end 搜索：ctrl+f 替换：ctrl+h 引用：输入&gt;之后输入空格 代码块：ctrl+alt+f 加粗：ctrl+b 倾斜：ctrl+i 下划线：ctrl+u 删除线：alt+shift+5 插入图片：直接拖动到指定位置即可或者ctrl+shift+i 插入链接：ctrl+k ​ 参考文献：typora typora2 typora快捷键 typora界面入门]]></content>
+      <categories>
+        <category>markdown编辑器</category>
+        <category>typora</category>
+      </categories>
+      <tags>
+        <tag>markdown编辑器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[markdownpad2使用技巧]]></title>
+    <url>%2F2019%2F04%2F03%2Fmarkdownpad2%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%2F</url>
+    <content type="text"><![CDATA[markdownpad2常用快捷键 Ctrl + I ： 斜体 Ctrl + B ： 粗体 Ctrl + G ： 图片 Ctrl + Q ： 引用 Ctrl + 1 ： 标题 1 Ctrl + 2 ： 标题 2 Ctrl + 3 ： 标题 3 Ctrl + K ： 代码块 Ctrl + L ： 超链接 Ctrl + T ： 时间戳 Ctrl + U ： 无序列表 Ctrl + R ： 水平标尺 F4 ： 启用水平布局 F5 ： 启用实时预览 F6 ： 在浏览器中预览 Ctrl + Shift + O ： 有序列表 ​]]></content>
+      <categories>
+        <category>markdown编辑器</category>
+        <category>markdownpad2</category>
+      </categories>
+      <tags>
+        <tag>markdown编辑器</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[对matlab中diag函数的补充]]></title>
     <url>%2F2019%2F03%2F31%2F%E5%AF%B9matlab%E4%B8%ADdiag%E5%87%BD%E6%95%B0%E7%9A%84%E8%A1%A5%E5%85%85%2F</url>
     <content type="text"><![CDATA[diag函数的补充 A是矩阵，那么diag(A)得到的是主对角线上的元素构成的列向量，如果A是行列向量，那么得到的是矩阵（A为对角线元素，其他是0） X = diag(v,k)其中v是一个含有n个元素的向量，该调用格式可以构造一个n+abs(k)阶的方阵X。并把v作为方阵X的第k条对角线（k大于0，表示主对角线上方的第k条对角线，k小于0表示主对角线下侧的第k条对角线，k等于0表示主对线）。 X = diag(v)等价于X = diag(v,0) v = diag(X,k)以向量形式返回矩阵X中第k条对角线上的元素。 v = diag(X)等价于v = diag(X, 0) D = diag(v) D = diag(v,k) 如果v为向量，那么当k&gt;0时，D就是v为主对角线以下第k条对角线构成的矩阵，其它元素均为0 x = diag(A) x = diag(A,k)如果A为矩阵，那么当k&gt;0时，x就是矩阵A主对角线上第k条对角线上的元素构成的列向量]]></content>
