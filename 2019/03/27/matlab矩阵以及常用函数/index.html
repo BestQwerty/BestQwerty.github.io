@@ -94,7 +94,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab矩阵旋转.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/reshape.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/size.png">
-<meta property="og:updated_time" content="2019-04-03T11:51:45.691Z">
+<meta property="og:updated_time" content="2019-04-04T01:37:20.208Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab矩阵以及常用函数">
 <meta name="twitter:description" content="函数调用 调用函数文件的一般格式为 [输出参数表]=函数名(输入参数表)  调用函数时应注意： 当调用一个函数时，输入和输出参数的顺序应与函数定义时的一致，其数目可以 按少于函数文件中所规定的输入和输出参数调用函数，但不能使用多于函数文件所规定的 输入和输出参数数目。如果输入和输出参数数目多于或少于函数文件所允许的数目，则调 用时自动返回错误信息。 当函数有一个以上输出参数时，输出参数包含在方括号">
@@ -365,8 +365,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-03T19:51:45+08:00">
-                2019-04-03
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-04T09:37:20+08:00">
+                2019-04-04
               </time>
             
           </span>
@@ -411,7 +411,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">2.1k(字)</span> 
+					<span class="post-count">2.2k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -515,6 +515,14 @@
 </ul>
 <h1 id="reshape函数"><a href="#reshape函数" class="headerlink" title="reshape函数"></a>reshape函数</h1><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/reshape.png" alt="">    </p>
 <h1 id="size函数"><a href="#size函数" class="headerlink" title="size函数"></a>size函数</h1><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/size.png" alt=""></p>
+<h1 id="矩阵元素的操作"><a href="#矩阵元素的操作" class="headerlink" title="矩阵元素的操作"></a>矩阵元素的操作</h1><ul>
+<li>取矩阵A的第i1~i2行、第j1~j2列构成新矩阵:<code>A(i1:i2, j1:j2)</code></li>
+<li>以逆序提取矩阵A的第i1~i2行，构成新矩阵:<code>A(i2:-1：i1，:）</code></li>
+<li>以逆序提取矩阵A的第j1~j2列，构成新矩阵:<code>A(:,   j2:-1：j1）</code></li>
+<li>删除A的第i1~i2行，构成新矩阵:<code>A(i1:i2，：)=[ ]</code></li>
+<li>删除A的第j1~j2列，构成新矩阵:<code>A(：， j1:j2)=[ ]</code></li>
+<li>将矩阵A和B拼接成新矩阵：<code>[A  B]；%行连接[A；B]%列连接</code></li>
+</ul>
 <h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="diag"><a href="#diag" class="headerlink" title="diag"></a>diag</h2><ul>
 <li><p><span id="inline-toc">1.</span> diag函数：<code>sum(diag(a)+diag(a&#39;))</code>可以求矩阵a对角线上的元素之和，不过中间的一个元素会提取2次，<code>diag(a&#39;)</code>可以提取副对角线的元素(先将矩阵转置）</p>
 <ul>
@@ -567,6 +575,7 @@
 <li>mod:不带符号</li>
 </ul>
 </li>
+<li>num2str,str2num,size,length</li>
 </ul>
 <h1 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h1><ul>
 <li>格式：函数句柄变量=@（匿名函数输入参数）匿名函数表达式<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">EG:</span><br><span class="line">f1=@(x,y)x^2+y^2;</span><br><span class="line">f1(3,4)</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">    25</span><br></pre></td></tr></table></figure>
@@ -752,7 +761,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">62</span>
+                  <span class="site-state-item-count">63</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -763,7 +772,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">53</span>
+                  <span class="site-state-item-count">54</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -814,7 +823,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#函数调用"><span class="nav-number">1.</span> <span class="nav-text">函数调用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵"><span class="nav-number">2.</span> <span class="nav-text">矩阵</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵除法"><span class="nav-number">3.</span> <span class="nav-text">矩阵除法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵旋转"><span class="nav-number">4.</span> <span class="nav-text">矩阵旋转</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#reshape函数"><span class="nav-number">5.</span> <span class="nav-text">reshape函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#size函数"><span class="nav-number">6.</span> <span class="nav-text">size函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">7.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#diag"><span class="nav-number">7.1.</span> <span class="nav-text">diag</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#max"><span class="nav-number">7.2.</span> <span class="nav-text">max</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#matlab中的sort函数"><span class="nav-number">7.3.</span> <span class="nav-text">matlab中的sort函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MATLAB判断一个数是否整数"><span class="nav-number">7.4.</span> <span class="nav-text">MATLAB判断一个数是否整数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mod函数"><span class="nav-number">7.5.</span> <span class="nav-text">mod函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常用函数"><span class="nav-number">8.</span> <span class="nav-text">常用函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#匿名函数"><span class="nav-number">9.</span> <span class="nav-text">匿名函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自定义函数"><span class="nav-number">10.</span> <span class="nav-text">自定义函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#squareform与pdist"><span class="nav-number">11.</span> <span class="nav-text">squareform与pdist</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#find函数"><span class="nav-number">12.</span> <span class="nav-text">find函数</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#函数调用"><span class="nav-number">1.</span> <span class="nav-text">函数调用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵"><span class="nav-number">2.</span> <span class="nav-text">矩阵</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵除法"><span class="nav-number">3.</span> <span class="nav-text">矩阵除法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵旋转"><span class="nav-number">4.</span> <span class="nav-text">矩阵旋转</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#reshape函数"><span class="nav-number">5.</span> <span class="nav-text">reshape函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#size函数"><span class="nav-number">6.</span> <span class="nav-text">size函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵元素的操作"><span class="nav-number">7.</span> <span class="nav-text">矩阵元素的操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">8.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#diag"><span class="nav-number">8.1.</span> <span class="nav-text">diag</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#max"><span class="nav-number">8.2.</span> <span class="nav-text">max</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#matlab中的sort函数"><span class="nav-number">8.3.</span> <span class="nav-text">matlab中的sort函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MATLAB判断一个数是否整数"><span class="nav-number">8.4.</span> <span class="nav-text">MATLAB判断一个数是否整数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mod函数"><span class="nav-number">8.5.</span> <span class="nav-text">mod函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常用函数"><span class="nav-number">9.</span> <span class="nav-text">常用函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#匿名函数"><span class="nav-number">10.</span> <span class="nav-text">匿名函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自定义函数"><span class="nav-number">11.</span> <span class="nav-text">自定义函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#squareform与pdist"><span class="nav-number">12.</span> <span class="nav-text">squareform与pdist</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#find函数"><span class="nav-number">13.</span> <span class="nav-text">find函数</span></a></li></ol></div>
             
 
           </div>
@@ -855,7 +864,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">29.6k</span>
+    <span title="Site words total count">30k</span>
   
 </div>
 
