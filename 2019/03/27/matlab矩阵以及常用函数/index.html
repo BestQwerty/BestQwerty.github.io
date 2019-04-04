@@ -94,7 +94,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab矩阵旋转.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/reshape.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/size.png">
-<meta property="og:updated_time" content="2019-04-04T01:37:20.208Z">
+<meta property="og:updated_time" content="2019-04-04T12:45:48.422Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab矩阵以及常用函数">
 <meta name="twitter:description" content="函数调用 调用函数文件的一般格式为 [输出参数表]=函数名(输入参数表)  调用函数时应注意： 当调用一个函数时，输入和输出参数的顺序应与函数定义时的一致，其数目可以 按少于函数文件中所规定的输入和输出参数调用函数，但不能使用多于函数文件所规定的 输入和输出参数数目。如果输入和输出参数数目多于或少于函数文件所允许的数目，则调 用时自动返回错误信息。 当函数有一个以上输出参数时，输出参数包含在方括号">
@@ -365,7 +365,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-04T09:37:20+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-04T20:45:48+08:00">
                 2019-04-04
               </time>
             
@@ -411,7 +411,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">2.2k(字)</span> 
+					<span class="post-count">2.8k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -512,6 +512,13 @@
 <h1 id="矩阵旋转"><a href="#矩阵旋转" class="headerlink" title="矩阵旋转"></a>矩阵旋转</h1><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab矩阵旋转.png" alt=""></p>
 <ul>
 <li>对于函数rot90顺时针旋转90度，可以<code>rot90(a,3);</code>或者<code>rot90(a,-1);</code></li>
+<li><code>fliplr(A)</code>左右旋转，就是最后2个字母l，r即left,right</li>
+<li><code>flipud(A)</code>上下旋转，就是最后2个字母u,d即up,down</li>
+<li><code>B = fliplr(A)</code> 返回 A，围绕垂直轴按左右方向翻转其各列。<ul>
+<li>如果 A 是一个行向量，则 <code>fliplr(A)</code> 返回一个相同长度的向量，其元素的顺序颠倒。如果 A 是一个列向量，则 <code>fliplr(A)</code> 只返回 A。对于多维数组，fliplr 作用于由第一个和第二个维度构成的平面。</li>
+<li><code>fliplr(A)</code> 等效于 <code>flip(A,2)</code>。</li>
+</ul>
+</li>
 </ul>
 <h1 id="reshape函数"><a href="#reshape函数" class="headerlink" title="reshape函数"></a>reshape函数</h1><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/reshape.png" alt="">    </p>
 <h1 id="size函数"><a href="#size函数" class="headerlink" title="size函数"></a>size函数</h1><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/size.png" alt=""></p>
@@ -540,23 +547,50 @@
 <h2 id="max"><a href="#max" class="headerlink" title="max"></a>max</h2><ul>
 <li><p>MAX 函数的几种形式</p>
 <ul>
-<li>(1)max(a)</li>
-<li>(2)max(a,b)</li>
-<li>(3)max(a,[],dim)</li>
-<li>(4)[C,I]=max(a)</li>
-<li>(5)[C,I]=max(a,[],dim)</li>
+<li>(1)<code>max(a)</code></li>
+<li>(2)<code>max(a,b)</code></li>
+<li>(3)<code>max(a,[],dim)</code></li>
+<li>(4)<code>[C,I]=max(a)</code></li>
+<li>(5)<code>[C,I]=max(a,[],dim)</code></li>
 </ul>
 </li>
-<li><p>(1)max(a)<br>如果 a 是一个矩阵，比如 <code>a=[1,2,3;4,5,6]</code> ，max(a)的意思就是找出矩阵每列的最大值， 本例中：<code>max(a)=[4,5,6]</code> </p>
+<li><p>(1)<code>max(a)</code><br>如果 a 是一个矩阵，比如 <code>a=[1,2,3;4,5,6]</code> ，max(a)的意思就是找出矩阵每列的最大值， 本例中：<code>max(a)=[4,5,6]</code> </p>
 </li>
-<li>(2)max(a,b)<br>如果 a 和 b 都是大于 1 维的矩阵，那么要求 a 和 b 的行列的维数都要相等，函数的结 果是比较 a 和 b 中每个元素的大小，比如：<br><code>a=[1,2,3;4,5,6] b=[4,5,6;7,8,3]</code><br><code>max(a,b)=[4,5,6;7,8,6]</code><br>另外，如果 a 和 b 中至少有一个是常数，也是可以的。比如：<br><code>a=[1,2,3;4,5,6] b=3 c=5</code>max(a,b)=[3,3,3;4,5,6]<code>相信大家看了例子都明白了函数的意思了吧</code>max(b,c)=5 `</li>
+<li>(2)<code>max(a,b)</code><br>如果 a 和 b 都是大于 1 维的矩阵，那么要求 a 和 b 的行列的维数都要相等，函数的结 果是比较 a 和 b 中每个元素的大小，比如：<br><code>a=[1,2,3;4,5,6] b=[4,5,6;7,8,3]</code><br><code>max(a,b)=[4,5,6;7,8,6]</code><br>另外，如果 a 和 b 中至少有一个是常数，也是可以的。比如：<br><code>a=[1,2,3;4,5,6] b=3 c=5</code>max(a,b)=[3,3,3;4,5,6]<code>相信大家看了例子都明白了函数的意思了吧</code>max(b,c)=5`</li>
 <li>(3)<code>max(a,[],dim)</code><br>这个函数的意思是针对于 2 维矩阵的，dim 是英文字母 dimension 的缩写，意思是维数。<br>当 dim=1 时，比较的 a 矩阵的列，也就是和 max（a）的效果是一样的；当 dim2 时，比较的 是 a 矩阵的行。下面举个例子：<br><code>a=[1,2,3;4,5,6] max(a)=max(a,[],1)=[4,5,6]</code> 比较的第一行和第二行的值<br>max(a,[],2)=[3,6] </li>
 <li>(4)[C,I]=max(a)<br>C表示的是矩阵 a 每列的最大值， I 表示的是每个最大值对应的下标：<br>下面举例说明：<br>还是刚才那个例子：<code>a=[1,2,3;4,5,6] [C,I]=max(a)</code><br>结果显示的是 <code>C=[4,5,6] I=[2,2,2]</code> 返回的是最大值对应的行号。</li>
 <li>(5)<code>[C,I]=max(a,[],dim)</code><br>同理：如果 dim=1 时，其结果和<code>[c,i]=max(a)</code> 是一样的。<br>当 dim=2 时，同样上面的矩阵 a，我们运行一下：<br><code>[c,i]=max(a,[],2)</code> 结果是：<code>c=[3,6] i=[3,3]</code> i 返回的是矩阵 a 的列号。</li>
 </ul>
 <h2 id="matlab中的sort函数"><a href="#matlab中的sort函数" class="headerlink" title="matlab中的sort函数"></a>matlab中的sort函数</h2><ul>
+<li>调用格式：<ul>
+<li><code>B = sort(A)</code><ul>
+<li>如果 A 是向量，则 <code>sort(A)</code> 对向量元素进行排序。</li>
+<li>如果 A 是矩阵，则 <code>sort(A)</code> 会将 A 的列视为向量并对每列进行排序。</li>
+<li>如果 A 是多维数组，则 <code>sort(A)</code> 会沿大小不等于 1 的第一个数组维度计算，并将这些元素视为向量。</li>
+</ul>
+</li>
+<li><code>B = sort(A,dim)</code>返回 A 沿维度 dim 的排序元素。例如，如果 A 是一个矩阵，则 <code>sort(A,2)</code> 对每行中的元素进行排序。</li>
+<li><code>B = sort(___,direction)</code>使用上述任何语法返回按 direction 指定的顺序显示的 A 的有序元素。’ascend’ 表示升序（默认值），’descend’ 表示降序。<ul>
+<li>排序方向必须为 ‘ascend’ 或 ‘descend’</li>
+</ul>
+</li>
+<li><code>B = sort(___,Name,Value)</code>指定用于排序的其他参数。例如，<code>sort(A,&#39;ComparisonMethod&#39;,&#39;abs&#39;)</code> 按模对 A 的元素进行排序。</li>
+<li><code>[B,I] = sort(___)</code>还会为上述任意语法返回一个索引向量的集合。I 的大小与 A 的大小相同，它描述了 A 的元素沿已排序的维度在 B 中的排列情况。例如，如果 A 是一个向量，则 B = A(I)。</li>
+</ul>
+</li>
 <li><code>sort(c)</code>从小到大</li>
 <li><code>sort(c, &#39;descend&#39;)</code>逆序排列(从大到小).</li>
+<li><p>例题:</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">A = [<span class="number">3</span> <span class="number">6</span> <span class="number">5</span>; <span class="number">7</span> <span class="number">-2</span> <span class="number">4</span>; <span class="number">1</span> <span class="number">0</span> <span class="number">-9</span>]</span><br><span class="line">B = <span class="built_in">sort</span>(A,<span class="number">2</span>)</span><br><span class="line">A = <span class="number">3</span>×<span class="number">3</span></span><br><span class="line"></span><br><span class="line">    <span class="number">3</span>     <span class="number">6</span>     <span class="number">5</span></span><br><span class="line">    <span class="number">7</span>    <span class="number">-2</span>     <span class="number">4</span></span><br><span class="line">    <span class="number">1</span>     <span class="number">0</span>    <span class="number">-9</span></span><br><span class="line">B = <span class="number">3</span>×<span class="number">3</span></span><br><span class="line"></span><br><span class="line">    <span class="number">3</span>     <span class="number">5</span>     <span class="number">6</span></span><br><span class="line">   <span class="number">-2</span>     <span class="number">4</span>     <span class="number">7</span></span><br><span class="line">   <span class="number">-9</span>     <span class="number">0</span>     <span class="number">1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>dim </strong>- 沿其运算的维度</p>
+<ul>
+<li>正整数标量</li>
+<li>沿其运算的维度，指定为正整数标量。如果未指定值，则默认值是大小不等于 1 的第一个数组维度。</li>
+<li>假定有矩阵 A。<code>sort(A,1)</code> 对 A 的<strong>列</strong>元素进行排序。</li>
+<li><code>sort(A,2)</code> 对 A 的<strong>行</strong>元素进行排序。</li>
+</ul>
+</li>
 </ul>
 <h2 id="MATLAB判断一个数是否整数"><a href="#MATLAB判断一个数是否整数" class="headerlink" title="MATLAB判断一个数是否整数"></a>MATLAB判断一个数是否整数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">if x==fix(x)</span><br><span class="line">% x为整数</span><br><span class="line">%fix（x)为取整</span><br><span class="line"> end</span><br></pre></td></tr></table></figure>
 <h2 id="mod函数"><a href="#mod函数" class="headerlink" title="mod函数"></a>mod函数</h2><ul>
@@ -575,7 +609,9 @@
 <li>mod:不带符号</li>
 </ul>
 </li>
-<li>num2str,str2num,size,length</li>
+<li><strong>num2str</strong>,<strong>str2num</strong>,size,<strong>length</strong></li>
+<li>max等函数的参数是矩阵时，是作用在矩阵各列上</li>
+<li></li>
 </ul>
 <h1 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h1><ul>
 <li>格式：函数句柄变量=@（匿名函数输入参数）匿名函数表达式<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">EG:</span><br><span class="line">f1=@(x,y)x^2+y^2;</span><br><span class="line">f1(3,4)</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">    25</span><br></pre></td></tr></table></figure>
@@ -864,7 +900,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">30.1k</span>
+    <span title="Site words total count">30.7k</span>
   
 </div>
 
