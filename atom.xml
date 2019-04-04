@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-04-04T01:36:52.708Z</updated>
+  <updated>2019-04-04T01:38:46.114Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="ctguljj.github.io/2019/04/04/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Brem/"/>
     <id>ctguljj.github.io/2019/04/04/matlab常用函数之rem/</id>
     <published>2019-04-04T01:12:04.000Z</published>
-    <updated>2019-04-04T01:36:52.708Z</updated>
+    <updated>2019-04-04T01:38:46.114Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="rem"><a href="#rem" class="headerlink" title="rem"></a>rem</h1><ul><li>调用格式:<code>r = rem(a,b)</code></li><li>r = rem(a,b)返回a除以b后的余数，其中a为被除数，b为除数。这个操作在概念上等于r = a - b.*fix(a./b)，它使用与mod函数不同的舍入。rem函数遵循rem(a,0)为NaN的约定。</li><li><p>例题:</p><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">1</span>:<span class="number">5</span>;</span><br><span class="line">b = <span class="number">3</span>;</span><br><span class="line">r = <span class="built_in">rem</span>(a,b)</span><br><span class="line">r =</span><br><span class="line"> <span class="number">1</span>     <span class="number">2</span>     <span class="number">0</span>     <span class="number">1</span>     <span class="number">2</span></span><br></pre></td></tr></table></figure></li><li><p><code>rem(a,b)</code>finds the remainder after division. If b &lt;&gt; 0, then <code>rem(a,b) = a - fix(a/b)*b</code>. If b = 0 or b = Inf or b = -Inf, then rem returns NaN.<br>The rem function does not support complex numbers: all values must be real numbers.<br>To find the remainder after division of polynomials, use quorem.</p></li><li>当正数与负数取余时，当得到的余数结果的符号希望跟除数(x)一样，用<code>rem()</code>函数；当得到的余数结果的符号希望跟被除数(y)一样，用<code>mod()</code>函数</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="rem"><a href="#rem" class="headerlink" title="rem"></a>rem</h1><ul><li>调用格式:<code>r = rem(a,b)</code></li><li><code>r = rem(a,b)</code>返回a除以b后的余数，其中a为被除数，b为除数。这个操作在概念上等于r = a - b.*fix(a./b)，它使用与mod函数不同的舍入。rem函数遵循<code>rem(a,0)</code>为NaN的约定。</li><li><p>例题:</p><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">1</span>:<span class="number">5</span>;</span><br><span class="line">b = <span class="number">3</span>;</span><br><span class="line">r = <span class="built_in">rem</span>(a,b)</span><br><span class="line">r =</span><br><span class="line"> <span class="number">1</span>     <span class="number">2</span>     <span class="number">0</span>     <span class="number">1</span>     <span class="number">2</span></span><br></pre></td></tr></table></figure></li><li><p><code>rem(a,b)</code>finds the remainder after division. If b &lt;&gt; 0, then <code>rem(a,b) = a - fix(a/b)*b</code>. If b = 0 or b = Inf or b = -Inf, then rem returns NaN.<br>The rem function does not support complex numbers: all values must be real numbers.<br>To find the remainder after division of polynomials, use quorem.</p></li><li>当正数与负数取余时，当得到的余数结果的符号希望跟除数(x)一样，用<code>rem()</code>函数；当得到的余数结果的符号希望跟被除数(y)一样，用<code>mod()</code>函数</li></ul>]]></content>
     
     <summary type="html">
     
@@ -31,7 +31,7 @@
       
         &lt;h1 id=&quot;rem&quot;&gt;&lt;a href=&quot;#rem&quot; class=&quot;headerlink&quot; title=&quot;rem&quot;&gt;&lt;/a&gt;rem&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;调用格式:&lt;code&gt;r = rem(a,b)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;r = rem(a,b)返回a除以b后的
+&lt;li&gt;&lt;code&gt;r = rem(a,b)&lt;/
       
     
     </summary>
