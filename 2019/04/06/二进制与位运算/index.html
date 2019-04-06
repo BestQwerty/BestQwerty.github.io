@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="位运算与乘除法的换算 说明：（1）位运算符中除 ~ 外，均为二目运算符，即要求出侧各有一个运算量。（2）运算早只能是整型或字符型的数据，不能为实型数据。 使用位移运算可以提高因乘除运算带来的效率的问题，它的缺点是存在精度损失且不直观。 使用移位运算来避免乘法运算是一种常用技巧，不过乘数必须都是正整数，而且必须至少有一个是 2 的 n 次方，例如：2，4，8，16，32……移位运算的特点是速度快，而">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-06T12:54:16.925Z">
+<meta property="og:updated_time" content="2019-04-06T13:11:19.789Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二进制与位运算">
 <meta name="twitter:description" content="位运算与乘除法的换算 说明：（1）位运算符中除 ~ 外，均为二目运算符，即要求出侧各有一个运算量。（2）运算早只能是整型或字符型的数据，不能为实型数据。 使用位移运算可以提高因乘除运算带来的效率的问题，它的缺点是存在精度损失且不直观。 使用移位运算来避免乘法运算是一种常用技巧，不过乘数必须都是正整数，而且必须至少有一个是 2 的 n 次方，例如：2，4，8，16，32……移位运算的特点是速度快，而">
@@ -359,7 +359,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-06T20:54:16+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-06T21:11:19+08:00">
                 2019-04-06
               </time>
             
@@ -405,7 +405,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">1.3k(字)</span> 
+					<span class="post-count">1.4k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -521,11 +521,12 @@
 <li><p><span id="inline-toc">2.</span>异或运算</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = a^b;</span><br><span class="line">b = a^b;</span><br><span class="line">a = a^b;</span><br><span class="line"><span class="comment">//可简写为如下</span></span><br><span class="line">b ^= a ^= b ^= a;</span><br></pre></td></tr></table></figure>
 </li>
+<li><p>这东西理论上能比正常的交换优一点，当然还是用 swap 吧，毕竟人家什么都能换，这个只能换整数。</p>
+<h2 id="找出2n-1个数中不成对的数"><a href="#找出2n-1个数中不成对的数" class="headerlink" title="找出2n+1个数中不成对的数"></a>找出2n+1个数中不成对的数</h2></li>
+<li>给出n个数，其中有且仅有一个出现了奇数次，其余的都出现了偶数次。用线性时间常数空间找出这个出现奇数次的数<a href="http://www.cnblogs.com/kaituorensheng/archive/2013/04/04/3000033.html" target="_blank" rel="noopener">原</a></li>
 </ul>
-<h2 id="找出2n-1个数中不成对的数"><a href="#找出2n-1个数中不成对的数" class="headerlink" title="找出2n+1个数中不成对的数"></a>找出2n+1个数中不成对的数</h2><ul>
-<li>给出n个数，其中有且仅有一个出现了奇数次，其余的都出现了偶数次。用线性时间常数空间找出这个出现奇数次的数</li>
-</ul>
-<h1 id="位运算的优先级"><a href="#位运算的优先级" class="headerlink" title="位运算的优先级"></a>位运算的优先级</h1><ul>
+<h2 id="lowbit运算"><a href="#lowbit运算" class="headerlink" title="lowbit运算"></a>lowbit运算</h2><h2 id="快速判断奇偶性"><a href="#快速判断奇偶性" class="headerlink" title="快速判断奇偶性"></a>快速判断奇偶性</h2><ul>
+<li>上面有<h2 id="在状压情况下的操作"><a href="#在状压情况下的操作" class="headerlink" title="在状压情况下的操作"></a>在状压情况下的操作</h2><h2 id="快速幂"><a href="#快速幂" class="headerlink" title="快速幂"></a>快速幂</h2><h1 id="位运算的优先级"><a href="#位运算的优先级" class="headerlink" title="位运算的优先级"></a>位运算的优先级</h1></li>
 <li>位运算的优先级，大致按下面排序<ul>
 <li>加减运算 &gt; 移位运算 &gt; 比较大小运算 &gt; 与运算 &gt; 异或运算 &gt; 或运算</li>
 </ul>
@@ -762,7 +763,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#位运算与乘除法的换算"><span class="nav-number">1.</span> <span class="nav-text">位运算与乘除法的换算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二进制"><span class="nav-number">2.</span> <span class="nav-text">二进制</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#位运算"><span class="nav-number">3.</span> <span class="nav-text">位运算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#“-”运算"><span class="nav-number">3.1.</span> <span class="nav-text">“~”运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#“-amp-”运算"><span class="nav-number">3.2.</span> <span class="nav-text">“&amp;”运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#“-”-运算"><span class="nav-number">3.3.</span> <span class="nav-text">“|” 运算</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#“-”运算-1"><span class="nav-number">4.</span> <span class="nav-text">“^”运算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#交换2个数"><span class="nav-number">4.1.</span> <span class="nav-text">交换2个数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#找出2n-1个数中不成对的数"><span class="nav-number">4.2.</span> <span class="nav-text">找出2n+1个数中不成对的数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#位运算的优先级"><span class="nav-number">5.</span> <span class="nav-text">位运算的优先级</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#位运算与乘除法的换算"><span class="nav-number">1.</span> <span class="nav-text">位运算与乘除法的换算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二进制"><span class="nav-number">2.</span> <span class="nav-text">二进制</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#位运算"><span class="nav-number">3.</span> <span class="nav-text">位运算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#“-”运算"><span class="nav-number">3.1.</span> <span class="nav-text">“~”运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#“-amp-”运算"><span class="nav-number">3.2.</span> <span class="nav-text">“&amp;”运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#“-”-运算"><span class="nav-number">3.3.</span> <span class="nav-text">“|” 运算</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#“-”运算-1"><span class="nav-number">4.</span> <span class="nav-text">“^”运算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#交换2个数"><span class="nav-number">4.1.</span> <span class="nav-text">交换2个数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#找出2n-1个数中不成对的数"><span class="nav-number">4.2.</span> <span class="nav-text">找出2n+1个数中不成对的数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lowbit运算"><span class="nav-number">4.3.</span> <span class="nav-text">lowbit运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速判断奇偶性"><span class="nav-number">4.4.</span> <span class="nav-text">快速判断奇偶性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在状压情况下的操作"><span class="nav-number">4.5.</span> <span class="nav-text">在状压情况下的操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速幂"><span class="nav-number">4.6.</span> <span class="nav-text">快速幂</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#位运算的优先级"><span class="nav-number">5.</span> <span class="nav-text">位运算的优先级</span></a></li></ol></div>
             
 
           </div>
