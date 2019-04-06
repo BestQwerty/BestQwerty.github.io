@@ -89,10 +89,12 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="位运算与乘除法的换算 说明：（1）位运算符中除 ~ 外，均为二目运算符，即要求出侧各有一个运算量。（2）运算早只能是整型或字符型的数据，不能为实型数据。 使用位移运算可以提高因乘除运算带来的效率的问题，它的缺点是存在精度损失且不直观。 使用移位运算来避免乘法运算是一种常用技巧，不过乘数必须都是正整数，而且必须至少有一个是 2 的 n 次方，例如：2，4，8，16，32……移位运算的特点是速度快，而">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-06T13:11:19.789Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/异或运算.png">
+<meta property="og:updated_time" content="2019-04-06T13:18:06.457Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二进制与位运算">
 <meta name="twitter:description" content="位运算与乘除法的换算 说明：（1）位运算符中除 ~ 外，均为二目运算符，即要求出侧各有一个运算量。（2）运算早只能是整型或字符型的数据，不能为实型数据。 使用位移运算可以提高因乘除运算带来的效率的问题，它的缺点是存在精度损失且不直观。 使用移位运算来避免乘法运算是一种常用技巧，不过乘数必须都是正整数，而且必须至少有一个是 2 的 n 次方，例如：2，4，8，16，32……移位运算的特点是速度快，而">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/异或运算.png">
 
 
 
@@ -359,7 +361,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-06T21:11:19+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-06T21:18:06+08:00">
                 2019-04-06
               </time>
             
@@ -475,7 +477,10 @@
 <li>反码：正数的反码与其原码相同；负数的反码是对其原码逐位取反，但符号位除外。</li>
 <li>补码：正数的补码与原码相同，负数的补码是其对应正数二进制所有位取反后加1。</li>
 <li><strong>在计算机中通常使用补码进行储存</strong>。</li>
-<li>二进制的最末位为0表示该数是偶数，最末位为1表示该数为奇数<h1 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h1><h2 id="“-”运算"><a href="#“-”运算" class="headerlink" title="“~”运算"></a>“~”运算</h2>又称取反运算，就是对一个二进制数按位取反。<br>对于 int 来说，<code>~x = −x−1</code><h2 id="“-amp-”运算"><a href="#“-amp-”运算" class="headerlink" title="“&amp;”运算"></a>“&amp;”运算</h2></li>
+<li>二进制的最末位为0表示该数是偶数，最末位为1表示该数为奇数</li>
+</ul>
+<h1 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h1><h2 id="“-”运算"><a href="#“-”运算" class="headerlink" title="“~”运算"></a>“~”运算</h2><p>又称取反运算，就是对一个二进制数按位取反。<br>对于 int 来说，<code>~x = −x−1</code></p>
+<h2 id="“-amp-”运算"><a href="#“-amp-”运算" class="headerlink" title="“&amp;”运算"></a>“&amp;”运算</h2><ul>
 <li>“&amp;”运算，即“and” 运算，也是一种逻辑运算符，对于二进制运算来说，“&amp;”运算的意义是对于两个二进制数的每一位，除了11得1，其他均为0</li>
 <li>可以用 &amp; 运算判断一个数是奇数还是偶数，当 x 为奇数时， x 二进制下的第 0 位一定是 1 ，否则为 0 。我们让<code>x &amp; 1</code>，就可以知道 x 的奇偶性了。<ul>
 <li>&amp;<strong>运算通常用于二进制取位操作</strong>，例如一个数 &amp;1的结果就是<strong>取</strong>二进制的<strong>最末位</strong>。所以可以用来判断奇偶性</li>
@@ -523,9 +528,7 @@
 </li>
 <li><p>这东西理论上能比正常的交换优一点，当然还是用 swap 吧，毕竟人家什么都能换，这个只能换整数。</p>
 <h2 id="找出2n-1个数中不成对的数"><a href="#找出2n-1个数中不成对的数" class="headerlink" title="找出2n+1个数中不成对的数"></a>找出2n+1个数中不成对的数</h2></li>
-<li>给出n个数，其中有且仅有一个出现了奇数次，其余的都出现了偶数次。用线性时间常数空间找出这个出现奇数次的数<a href="http://www.cnblogs.com/kaituorensheng/archive/2013/04/04/3000033.html" target="_blank" rel="noopener">原</a></li>
-</ul>
-<h2 id="lowbit运算"><a href="#lowbit运算" class="headerlink" title="lowbit运算"></a>lowbit运算</h2><h2 id="快速判断奇偶性"><a href="#快速判断奇偶性" class="headerlink" title="快速判断奇偶性"></a>快速判断奇偶性</h2><ul>
+<li>给出n个数，其中有且仅有一个出现了奇数次，其余的都出现了偶数次。用线性时间常数空间找出这个出现奇数次的数<a href="http://www.cnblogs.com/kaituorensheng/archive/2013/04/04/3000033.html" target="_blank" rel="noopener">原</a><br>-<br><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/异或运算.png" alt=""><h2 id="lowbit运算"><a href="#lowbit运算" class="headerlink" title="lowbit运算"></a>lowbit运算</h2><h2 id="快速判断奇偶性"><a href="#快速判断奇偶性" class="headerlink" title="快速判断奇偶性"></a>快速判断奇偶性</h2></li>
 <li>上面有<h2 id="在状压情况下的操作"><a href="#在状压情况下的操作" class="headerlink" title="在状压情况下的操作"></a>在状压情况下的操作</h2><h2 id="快速幂"><a href="#快速幂" class="headerlink" title="快速幂"></a>快速幂</h2><h1 id="位运算的优先级"><a href="#位运算的优先级" class="headerlink" title="位运算的优先级"></a>位运算的优先级</h1></li>
 <li>位运算的优先级，大致按下面排序<ul>
 <li>加减运算 &gt; 移位运算 &gt; 比较大小运算 &gt; 与运算 &gt; 异或运算 &gt; 或运算</li>
