@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="静静地Coding &amp;&amp; Thinking">
+<meta name="description" content="算法课123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657/*你的朋友提议玩一个游戏：将写有数字的n个纸片放入口袋中．你可以从口袋中抽取4次纸片，每次记下纸片上的数字后都将其放回口袋中如果这4个数字的和是m，就是你赢，否则就是你的朋友赢。你挑">
 <meta name="keywords" content="算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="二分抽签算法分析">
 <meta property="og:url" content="ctguljj.github.io/2019/04/05/二分抽签算法分析/index.html">
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
-<meta property="og:description" content="静静地Coding &amp;&amp; Thinking">
+<meta property="og:description" content="算法课123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657/*你的朋友提议玩一个游戏：将写有数字的n个纸片放入口袋中．你可以从口袋中抽取4次纸片，每次记下纸片上的数字后都将其放回口袋中如果这4个数字的和是m，就是你赢，否则就是你的朋友赢。你挑">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-05T08:48:54.968Z">
+<meta property="og:updated_time" content="2019-04-08T10:26:21.573Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二分抽签算法分析">
-<meta name="twitter:description" content="静静地Coding &amp;&amp; Thinking">
+<meta name="twitter:description" content="算法课123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657/*你的朋友提议玩一个游戏：将写有数字的n个纸片放入口袋中．你可以从口袋中抽取4次纸片，每次记下纸片上的数字后都将其放回口袋中如果这4个数字的和是m，就是你赢，否则就是你的朋友赢。你挑">
 
 
 
@@ -359,12 +359,56 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-05T16:48:54+08:00">
-                2019-04-05
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-08T18:26:21+08:00">
+                2019-04-08
               </time>
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/二分法/" itemprop="url" rel="index">
+                    <span itemprop="name">二分法</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/二分法/题解/" itemprop="url" rel="index">
+                    <span itemprop="name">题解</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 		  <span class="post-time">
 					&nbsp; | &nbsp;
@@ -372,7 +416,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">0(字)</span> 
+					<span class="post-count">393(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -430,7 +474,8 @@
       
 
       
-        
+        <h1 id="算法课"><a href="#算法课" class="headerlink" title="算法课"></a>算法课</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*你的朋友提议玩一个游戏：将写有数字的n个纸片放入口袋中．你可以从口袋中抽取4次纸片，每次记下纸片上的数字后都将其放回口袋中如果这4个数字的和是m，就是你赢，否则就是你的朋友赢。你挑战了好几回，结果一次也没赢过，于是怒而撕破口袋，取出所有纸片，检查自己是否真的有赢的可能性。请你编写一个程序，判断当纸片上所写的数字是k1，k2，…，kn时，是否存在抽取4次和为m的方案。如果存在，输出彻；否则，输出NO.</span></span><br><span class="line"><span class="comment">限制条件:   1≤n ≤ 50;   1 ≤ m ≤ 10^8;   1 ≤ Ki ≤ 10^8</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">输入样例： 3 10 1 3 5             (格式-n,m, k1,k2,..kn)</span></span><br><span class="line"><span class="comment">输出样例：YES</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">输入样例：3 9 1 3 5 </span></span><br><span class="line"><span class="comment">输出样例：NO</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m, i, j;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> kk[<span class="number">1000000</span>];<span class="comment">//开大点防止爆掉        </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">bs</span><span class="params">(<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> left = <span class="number">0</span>, right = n*n<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">while</span>(left &lt; right)&#123;</span><br><span class="line">        <span class="keyword">int</span> k = left+(right-left)/<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(kk[k] == b)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>( m &gt;kk[k])</span><br><span class="line">            left = k+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            right = k;</span><br><span class="line">                </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">int</span> a[n];</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> ( i=<span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        <span class="keyword">for</span>  ( j=<span class="number">0</span>; j &lt; n; j++)</span><br><span class="line">            kk[i*n + j] = a[i]+a[j];<span class="comment">//枚举组合</span></span><br><span class="line">    sort(kk, kk+n*n); </span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        <span class="keyword">for</span>(j = <span class="number">0</span>; j &lt; n; j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>( bs(m-a[i]-a[j]) )&#123;</span><br><span class="line">                    <span class="built_in">cout</span> &lt;&lt; <span class="string">"YES"</span>;</span><br><span class="line">                    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; </span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"NO"</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -572,8 +617,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -601,7 +655,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">59</span>
+                  <span class="site-state-item-count">60</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -643,6 +697,22 @@ var jiathis_config={
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#算法课"><span class="nav-number">1.</span> <span class="nav-text">算法课</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -677,7 +747,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">33.4k</span>
+    <span title="Site words total count">33.8k</span>
   
 </div>
 
