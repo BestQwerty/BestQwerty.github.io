@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[数学期望]]></title>
+    <url>%2F2019%2F04%2F09%2F%E6%95%B0%E5%AD%A6%E6%9C%9F%E6%9C%9B%2F</url>
+    <content type="text"><![CDATA[数学期望]]></content>
+      <categories>
+        <category>数学</category>
+        <category>数学期望</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[砝码组合]]></title>
     <url>%2F2019%2F04%2F08%2F%E7%A0%9D%E7%A0%81%E7%BB%84%E5%90%88%2F</url>
     <content type="text"></content>
@@ -27,6 +39,18 @@
       </categories>
       <tags>
         <tag>c++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[快速幂]]></title>
+    <url>%2F2019%2F04%2F06%2F%E5%BF%AB%E9%80%9F%E5%B9%82%2F</url>
+    <content type="text"><![CDATA[快速幂 直接看吧]]></content>
+      <categories>
+        <category>算法</category>
+        <category>快速幂</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
