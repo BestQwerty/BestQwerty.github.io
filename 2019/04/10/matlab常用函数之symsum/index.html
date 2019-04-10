@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="matlab,">
 
 
 
@@ -81,17 +81,21 @@
 
 
 
-<meta name="description" content="静静地Coding &amp;&amp; Thinking">
+<meta name="description" content="数学期望问题  原地址  symsum symsum文档 调用格式: F = symsum(f,k,a,b) returns the sum of the series with terms that expression f specifies, which depend on symbolic variable k. The value of k ranges from a to b. If">
+<meta name="keywords" content="matlab">
 <meta property="og:type" content="article">
 <meta property="og:title" content="matlab常用函数之symsum">
 <meta property="og:url" content="ctguljj.github.io/2019/04/10/matlab常用函数之symsum/index.html">
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
-<meta property="og:description" content="静静地Coding &amp;&amp; Thinking">
+<meta property="og:description" content="数学期望问题  原地址  symsum symsum文档 调用格式: F = symsum(f,k,a,b) returns the sum of the series with terms that expression f specifies, which depend on symbolic variable k. The value of k ranges from a to b. If">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-10T12:04:39.157Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab之数学期望问题2.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab之数学期望问题.png">
+<meta property="og:updated_time" content="2019-04-10T12:38:29.968Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab常用函数之symsum">
-<meta name="twitter:description" content="静静地Coding &amp;&amp; Thinking">
+<meta name="twitter:description" content="数学期望问题  原地址  symsum symsum文档 调用格式: F = symsum(f,k,a,b) returns the sum of the series with terms that expression f specifies, which depend on symbolic variable k. The value of k ranges from a to b. If">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab之数学期望问题2.png">
 
 
 
@@ -133,8 +137,8 @@
 
 <script>
     (function(){
-        if(''){
-            if (prompt('天道让我们在此相遇') !== ''){
+        if('ljj123456'){
+            if (prompt('天道让我们在此相遇') !== 'ljj123456'){
                 alert('天机不可泄漏！');
                 history.back();
             }
@@ -358,12 +362,56 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-10T20:04:39+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-10T20:38:29+08:00">
                 2019-04-10
               </time>
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/matlab/" itemprop="url" rel="index">
+                    <span itemprop="name">matlab</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/matlab/函数/" itemprop="url" rel="index">
+                    <span itemprop="name">函数</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/matlab/函数/symsum/" itemprop="url" rel="index">
+                    <span itemprop="name">symsum</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 		  <span class="post-time">
 					&nbsp; | &nbsp;
@@ -371,7 +419,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">0(字)</span> 
+					<span class="post-count">186(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -429,7 +477,23 @@
       
 
       
-        
+        <h1 id="数学期望问题"><a href="#数学期望问题" class="headerlink" title="数学期望问题"></a>数学期望问题</h1><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab之数学期望问题2.png" alt=""><br><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab之数学期望问题.png" alt=""></p>
+<ul>
+<li><a href="http://www.doc88.com/p-6671800827880.html" target="_blank" rel="noopener">原地址</a></li>
+</ul>
+<h1 id="symsum"><a href="#symsum" class="headerlink" title="symsum"></a>symsum</h1><ul>
+<li><a href="https://ww2.mathworks.cn/help/symbolic/symsum.html" target="_blank" rel="noopener">symsum文档</a></li>
+<li>调用格式:<ul>
+<li><code>F = symsum(f,k,a,b)</code> returns the sum of the series with terms that expression f specifies, which depend on symbolic variable k. The value of k ranges from a to b. If you do not specify the variable, symsum uses the variable that symvar determines. If f is a constant, then the default variable is x.<ul>
+<li>返回表达式f指定的一系列项的和，这些项依赖于符号变量k。k的值范围从a到b。如果不指定变量，symsum将使用symvar确定的变量。如果f是常数，那么默认变量是x。</li>
+</ul>
+</li>
+<li><code>F = symsum(f,k)</code></li>
+</ul>
+</li>
+<li>栗子:  <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">syms k x</span><br><span class="line"> S1 = symsum(k^<span class="number">2</span>, k, <span class="number">0</span>, <span class="number">10</span>)</span><br><span class="line">S2 = symsum(<span class="number">1</span>/k^<span class="number">2</span>, k, <span class="number">1</span>, Inf)</span><br><span class="line"> S3 = symsum(x^k/<span class="built_in">factorial</span>(k), k, <span class="number">0</span>, Inf)<span class="comment">%分母为阶乘</span></span><br><span class="line"> <span class="comment">%answer</span></span><br><span class="line"> S1 =</span><br><span class="line"> <span class="number">385</span></span><br><span class="line"> S2 =</span><br><span class="line"> <span class="built_in">pi</span>^<span class="number">2</span>/<span class="number">6</span></span><br><span class="line"> S3 =</span><br><span class="line"> <span class="built_in">exp</span>(x)</span><br></pre></td></tr></table></figure></li>
+</ul>
+
       
     </div>
     
@@ -450,6 +514,12 @@
 	
 	  </div>
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/matlab/" rel="tag"># matlab</a>
+          
+        </div>
       
 	  
 		  <footer class="post-footer">
@@ -561,8 +631,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -590,7 +669,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">63</span>
+                  <span class="site-state-item-count">64</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -632,6 +711,22 @@ var jiathis_config={
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数学期望问题"><span class="nav-number">1.</span> <span class="nav-text">数学期望问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#symsum"><span class="nav-number">2.</span> <span class="nav-text">symsum</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -666,7 +761,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">33.9k</span>
+    <span title="Site words total count">34.1k</span>
   
 </div>
 
