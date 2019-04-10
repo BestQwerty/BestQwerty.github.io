@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-04-10T11:39:27.757Z</updated>
+  <updated>2019-04-10T12:04:39.157Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -15,6 +15,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>matlab常用函数之symsum</title>
+    <link href="ctguljj.github.io/2019/04/10/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bsymsum/"/>
+    <id>ctguljj.github.io/2019/04/10/matlab常用函数之symsum/</id>
+    <published>2019-04-10T12:04:39.000Z</published>
+    <updated>2019-04-10T12:04:39.157Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>matlab常用函数之solve</title>
+    <link href="ctguljj.github.io/2019/04/10/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bsolve/"/>
+    <id>ctguljj.github.io/2019/04/10/matlab常用函数之solve/</id>
+    <published>2019-04-10T11:47:30.000Z</published>
+    <updated>2019-04-10T11:55:49.642Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="solve"><a href="#solve" class="headerlink" title="solve"></a>solve</h1><div class="note info"><p>Character vector inputs have been removed. Instead, use syms to declare variables and replace inputs such as solve(‘2<em>x == 1’,’x’) with solve(2</em>x == 1,x).</p></div><ul><li><p>调用格式:</p><ul><li><code>S = solve(eqn,var)</code>solves the equation eqn for the variable var. If you do not specify var, the symvar function determines the variable to solve for. For example, <code>solve(x + 1 == 2, x)</code> solves the equation x + 1 = 2 for x.</li><li><code>S = solve(eqn,var,Name,Value)</code></li><li><code>Y = solve(eqns,vars)</code></li><li><code>Y = solve(eqns,vars,Name,Value)</code></li><li><code>[y1,...,yN] = solve(eqns,vars)</code></li><li><code>[y1,...,yN] = solve(eqns,vars,Name,Value)</code></li><li><code>[y1,...,yN,parameters,conditions] = solve(eqns,vars,&#39;ReturnConditions&#39;,true)</code></li></ul></li><li><p>栗子:</p>  <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%Use the == operator to specify the equation sin(x) == 1 and solve it.</span></span><br><span class="line">syms x</span><br><span class="line">eqn = <span class="built_in">sin</span>(x) == <span class="number">1</span>;</span><br><span class="line">solx = solve(eqn,x)</span><br><span class="line"><span class="comment">%answer:solx = pi/2</span></span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;solve&quot;&gt;&lt;a href=&quot;#solve&quot; class=&quot;headerlink&quot; title=&quot;solve&quot;&gt;&lt;/a&gt;solve&lt;/h1&gt;&lt;div class=&quot;note info&quot;&gt;&lt;p&gt;Character vector inputs have been r
+      
+    
+    </summary>
+    
+      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+    
+      <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
+    
+      <category term="solve" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/solve/"/>
+    
+    
+      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+    
+  </entry>
   
   <entry>
     <title>数学期望</title>
@@ -500,49 +543,6 @@
     
     
       <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据结构栈</title>
-    <link href="ctguljj.github.io/2019/03/30/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A0%88/"/>
-    <id>ctguljj.github.io/2019/03/30/数据结构栈/</id>
-    <published>2019-03-30T06:29:43.000Z</published>
-    <updated>2019-03-30T06:29:43.375Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>c++stackk</title>
-    <link href="ctguljj.github.io/2019/03/30/c-stackk/"/>
-    <id>ctguljj.github.io/2019/03/30/c-stackk/</id>
-    <published>2019-03-30T06:28:36.000Z</published>
-    <updated>2019-03-30T06:34:27.696Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><ul><li>出栈，如例：<code>s.pop();</code>注意，出栈操作只是删除栈顶元素，并不返回该元素</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;基本操作&quot;&gt;&lt;a href=&quot;#基本操作&quot; class=&quot;headerlink&quot; title=&quot;基本操作&quot;&gt;&lt;/a&gt;基本操作&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;出栈，如例：&lt;code&gt;s.pop();&lt;/code&gt;注意，出栈操作只是删除栈顶元素，并不返回该元素&lt;/li&gt;
-
-      
-    
-    </summary>
-    
-      <category term="stl" scheme="ctguljj.github.io/categories/stl/"/>
-    
-      <category term="stack" scheme="ctguljj.github.io/categories/stl/stack/"/>
-    
-    
-      <category term="stl" scheme="ctguljj.github.io/tags/stl/"/>
     
   </entry>
   

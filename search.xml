@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[matlab常用函数之symsum]]></title>
+    <url>%2F2019%2F04%2F10%2Fmatlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bsymsum%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[matlab常用函数之solve]]></title>
+    <url>%2F2019%2F04%2F10%2Fmatlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bsolve%2F</url>
+    <content type="text"><![CDATA[solveCharacter vector inputs have been removed. Instead, use syms to declare variables and replace inputs such as solve(‘2x == 1’,’x’) with solve(2x == 1,x). 调用格式: S = solve(eqn,var)solves the equation eqn for the variable var. If you do not specify var, the symvar function determines the variable to solve for. For example, solve(x + 1 == 2, x) solves the equation x + 1 = 2 for x. S = solve(eqn,var,Name,Value) Y = solve(eqns,vars) Y = solve(eqns,vars,Name,Value) [y1,...,yN] = solve(eqns,vars) [y1,...,yN] = solve(eqns,vars,Name,Value) [y1,...,yN,parameters,conditions] = solve(eqns,vars,&#39;ReturnConditions&#39;,true) 栗子: 12345%Use the == operator to specify the equation sin(x) == 1 and solve it.syms xeqn = sin(x) == 1;solx = solve(eqn,x)%answer:solx = pi/2]]></content>
+      <categories>
+        <category>matlab</category>
+        <category>函数</category>
+        <category>solve</category>
+      </categories>
+      <tags>
+        <tag>matlab</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[数学期望]]></title>
     <url>%2F2019%2F04%2F09%2F%E6%95%B0%E5%AD%A6%E6%9C%9F%E6%9C%9B%2F</url>
     <content type="text"><![CDATA[数学期望]]></content>
