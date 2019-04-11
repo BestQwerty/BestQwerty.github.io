@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-04-11T09:00:14.604Z</updated>
+  <updated>2019-04-11T09:37:10.349Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>matlab常用函数之pdist</title>
+    <link href="ctguljj.github.io/2019/04/11/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bpdist/"/>
+    <id>ctguljj.github.io/2019/04/11/matlab常用函数之pdist/</id>
+    <published>2019-04-11T09:05:16.000Z</published>
+    <updated>2019-04-11T09:37:10.349Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="pdist"><a href="#pdist" class="headerlink" title="pdist"></a>pdist</h1><ul><li><a href="https://ww2.mathworks.cn/help/stats/pdist.html" target="_blank" rel="noopener">文档</a></li><li>调用格式:<ul><li><code>D = pdist(X)</code>returns the Euclidean distance between pairs of observations in X.<ul><li>返回函数中的观测对之间的欧几里得距离</li></ul></li><li><code>D = pdist(X,Distance)</code> returns the distance by using the method specified by Distance. </li><li><code>D = pdist(X,Distance,DistParameter)</code> returns the distance by using the method specified by Distance and DistParameter. You can specify DistParameter only when Distance is ‘seuclidean’, ‘minkowski’, or ‘mahalanobis’.</li><li>Distance — Distance metric<ul><li>Distance metric, specified as a character vector, string scalar, or function handle, as described in the following table.</li></ul></li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      😝
+    
+    </summary>
+    
+      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+    
+      <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
+    
+      <category term="pdist" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/pdist/"/>
+    
+    
+      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+    
+  </entry>
   
   <entry>
     <title>matlab常用函数之isprime</title>
@@ -521,35 +547,6 @@
       <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
     
       <category term="diag" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/diag/"/>
-    
-    
-      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>matlab实用命令</title>
-    <link href="ctguljj.github.io/2019/03/31/matlab%E5%AE%9E%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>ctguljj.github.io/2019/03/31/matlab实用命令/</id>
-    <published>2019-03-31T07:33:32.000Z</published>
-    <updated>2019-03-31T07:39:07.229Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li>在命令行敲入 <code>dbstop if error</code><br>如果运行出现错误，matlab会自动停在出错的那行，并且保存所有相关变量。再也不用设断点了有没有！！！<ul><li>若要取消，用<code>dbclear if error</code></li><li>现在版本在断点选项里自带</li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ul&gt;
-&lt;li&gt;在命令行敲入 &lt;code&gt;dbstop if error&lt;/code&gt;&lt;br&gt;如果运行出现错误，matlab会自动停在出错的那行，并且保存所有相关变量。再也不用设断点了有没有！！！&lt;ul&gt;
-&lt;li&gt;若要取消，用&lt;code&gt;dbclear if error&lt;/co
-      
-    
-    </summary>
-    
-      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
-    
-      <category term="实用命令" scheme="ctguljj.github.io/categories/matlab/%E5%AE%9E%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     
     
       <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>

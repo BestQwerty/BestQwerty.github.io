@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[matlab常用函数之pdist]]></title>
+    <url>%2F2019%2F04%2F11%2Fmatlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bpdist%2F</url>
+    <content type="text"><![CDATA[pdist 文档 调用格式: D = pdist(X)returns the Euclidean distance between pairs of observations in X. 返回函数中的观测对之间的欧几里得距离 D = pdist(X,Distance) returns the distance by using the method specified by Distance. D = pdist(X,Distance,DistParameter) returns the distance by using the method specified by Distance and DistParameter. You can specify DistParameter only when Distance is ‘seuclidean’, ‘minkowski’, or ‘mahalanobis’. Distance — Distance metric Distance metric, specified as a character vector, string scalar, or function handle, as described in the following table.]]></content>
+      <categories>
+        <category>matlab</category>
+        <category>函数</category>
+        <category>pdist</category>
+      </categories>
+      <tags>
+        <tag>matlab</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[matlab常用函数之isprime]]></title>
     <url>%2F2019%2F04%2F11%2Fmatlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bisprime%2F</url>
     <content type="text"><![CDATA[isprime 文档 调用格式: TF = isprime(X) 返回与 X 大小相同的逻辑数组。如果 X(i) 为质数，则 TF(i) 的值为 true。否则，值为 false。 栗子:1234tf = isprime([2 3 0 6 10])tf = 1x5 logical array 1 1 0 0 0%2 和 3 是质数，但 0、6 和 10 不是。]]></content>
