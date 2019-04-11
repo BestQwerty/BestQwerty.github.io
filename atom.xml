@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-04-11T14:37:00.612Z</updated>
+  <updated>2019-04-11T15:12:08.997Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>matlab常用函数之xlim及其相关函数</title>
+    <link href="ctguljj.github.io/2019/04/11/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bxlim%E5%8F%8A%E5%85%B6%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0/"/>
+    <id>ctguljj.github.io/2019/04/11/matlab常用函数之xlim及其相关函数/</id>
+    <published>2019-04-11T14:50:31.000Z</published>
+    <updated>2019-04-11T15:12:08.997Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="xlim"><a href="#xlim" class="headerlink" title="xlim"></a>xlim</h1><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/xlim.html" target="_blank" rel="noopener">文档</a></li><li><a href="http://www.ece.northwestern.edu/local-apps/matlabhelp/techdoc/ref/ylim.html" target="_blank" rel="noopener">相关网站</a></li><li>含义:(x limit)设置或查询 x 坐标轴范围</li><li>调用格式:y有多种，暂时写一种<ul><li><code>xlim([xmin xmax])</code>sets the axis limits in the current axes to the specified values.<ul><li>将当前轴中的轴限制设置为指定的值。</li></ul></li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      😋
+    
+    </summary>
+    
+      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+    
+      <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
+    
+      <category term="xlim,ylim,zlim" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/xlim-ylim-zlim/"/>
+    
+    
+      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+    
+  </entry>
   
   <entry>
     <title>matlab常用函数之pdist与squareform</title>
@@ -468,34 +494,6 @@
   </entry>
   
   <entry>
-    <title>typora</title>
-    <link href="ctguljj.github.io/2019/04/03/typora/"/>
-    <id>ctguljj.github.io/2019/04/03/typora/</id>
-    <published>2019-04-03T02:00:00.000Z</published>
-    <updated>2019-04-03T04:00:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="typora简介"><a href="#typora简介" class="headerlink" title="typora简介"></a>typora简介</h1><ul><li><p>无论是Word中带有加粗等格式的文字，还是Excel中的表格，一旦黏贴到Typora中，都会被自动转化为对应的Markdown格式，所以你再也不用担心每次重新设置格式的麻烦了——Markdown最麻烦的表格也可以在Excel中做完再贴入生成了。</p></li><li><p><strong>专注模式</strong>，也就是除了正在编辑的那行文字，文章上下其余的内容全部变成灰色，不吸引你的视线，不干扰你的思维。</p><ul><li><strong>与专注模式搭配的话，当然还是全屏模式(F11)</strong>最好啦　qwq</li></ul></li><li><p><strong>打字机模式（Typewriter Mode）</strong>:开启这种模式后，Typora 的光标所在行会始终保持在屏幕中间，这样你码字时眼睛可以一直正对着屏幕中间</p></li></ul><h2 id="打开-关闭源代码模式"><a href="#打开-关闭源代码模式" class="headerlink" title="打开/关闭源代码模式"></a>打开/关闭源代码模式</h2><ul><li><blockquote><p>typora默认界面是实时预览的模式,而这也是与其他Markdown软件较大的区别.切换成源代码模式可以更方便地修改内容</p></blockquote><ul><li>方法1:点击左下角的<code>&lt;/&gt;</code>(启用/关闭源代码模式)</li><li>方法2:Ctrl+/</li></ul></li></ul><h1 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h1><ul><li>无序列表：输入-之后输入空格</li><li>有序列表：输入数字+“.”之后输入空格</li><li>任务列表：-[空格]空格 文字</li><li>标题：ctrl+数字</li><li>表格：ctrl+t</li><li>生成目录：[TOC]按回车</li><li>选中一整行：ctrl+l</li><li>选中单词：ctrl+d</li><li>选中相同格式的文字：ctrl+e</li><li>跳转到文章开头：ctrl+home</li><li>跳转到文章结尾：ctrl+end</li><li>搜索：ctrl+f</li><li>替换：ctrl+h</li><li>引用：输入&gt;之后输入空格</li><li>代码块：ctrl+alt+f</li><li>加粗：ctrl+b</li><li>倾斜：ctrl+i</li><li>下划线：ctrl+u</li><li>删除线：alt+shift+5</li><li>插入图片：直接拖动到指定位置即可或者ctrl+shift+i</li><li>插入链接：ctrl+k</li></ul><p>   ​        </p><p>参考文献：<a href="https://www.jianshu.com/p/602f6ecf48fd" target="_blank" rel="noopener">typora</a></p><p><a href="http://wwwbuild.net/seekingbeta_earl/358745.html" target="_blank" rel="noopener">typora2</a></p><p><a href="https://blog.csdn.net/it_guang/article/details/53456026" target="_blank" rel="noopener">typora快捷键</a></p><p><a href="https://blog.csdn.net/lzykevin/article/details/83276555" target="_blank" rel="noopener">typora界面入门</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;typora简介&quot;&gt;&lt;a href=&quot;#typora简介&quot; class=&quot;headerlink&quot; title=&quot;typora简介&quot;&gt;&lt;/a&gt;typora简介&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;无论是Word中带有加粗等格式的文字，还是Excel中的表格，一旦黏贴到T
-      
-    
-    </summary>
-    
-      <category term="markdown编辑器" scheme="ctguljj.github.io/categories/markdown%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    
-      <category term="typora" scheme="ctguljj.github.io/categories/markdown%E7%BC%96%E8%BE%91%E5%99%A8/typora/"/>
-    
-    
-      <category term="markdown编辑器" scheme="ctguljj.github.io/tags/markdown%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
     <title>markdownpad2使用技巧</title>
     <link href="ctguljj.github.io/2019/04/03/markdownpad2%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
     <id>ctguljj.github.io/2019/04/03/markdownpad2使用技巧/</id>
@@ -524,32 +522,30 @@
   </entry>
   
   <entry>
-    <title>对matlab中diag函数的补充</title>
-    <link href="ctguljj.github.io/2019/03/31/%E5%AF%B9matlab%E4%B8%ADdiag%E5%87%BD%E6%95%B0%E7%9A%84%E8%A1%A5%E5%85%85/"/>
-    <id>ctguljj.github.io/2019/03/31/对matlab中diag函数的补充/</id>
-    <published>2019-03-31T13:43:27.000Z</published>
-    <updated>2019-03-31T13:51:03.314Z</updated>
+    <title>typora</title>
+    <link href="ctguljj.github.io/2019/04/03/typora/"/>
+    <id>ctguljj.github.io/2019/04/03/typora/</id>
+    <published>2019-04-03T02:00:00.000Z</published>
+    <updated>2019-04-03T04:00:36.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="diag函数的补充"><a href="#diag函数的补充" class="headerlink" title="diag函数的补充"></a>diag函数的补充</h1><ul><li>A是矩阵，那么diag(A)得到的是主对角线上的元素构成的列向量，如果A是行列向量，那么得到的是矩阵（A为对角线元素，其他是0）</li><li><code>X = diag(v,k)</code><br>其中v是一个含有n个元素的向量，该调用格式可以构造一个n+abs(k)阶的方阵X。并把v作为方阵X的第k条对角线（k大于0，表示主对角线上方的第k条对角线，k小于0表示主对角线下侧的第k条对角线，k等于0表示主对线）。</li></ul><ul><li><code>X = diag(v)</code><br>等价于<code>X = diag(v,0)</code></li><li><code>v = diag(X,k)</code><br>以向量形式返回矩阵X中第k条对角线上的元素。</li><li><p><code>v = diag(X)</code><br>等价于<code>v = diag(X, 0)</code></p></li><li><p><code>D = diag(v)</code></p></li><li><code>D = diag(v,k)</code> 如果v为向量，那么当k&gt;0时，D就是v为主对角线以下第k条对角线构成的矩阵，其它元素均为0</li><li><code>x = diag(A)</code> </li><li><code>x = diag(A,k)</code>如果A为矩阵，那么当k&gt;0时，x就是矩阵A主对角线上第k条对角线上的元素构成的列向量 </li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="typora简介"><a href="#typora简介" class="headerlink" title="typora简介"></a>typora简介</h1><ul><li><p>无论是Word中带有加粗等格式的文字，还是Excel中的表格，一旦黏贴到Typora中，都会被自动转化为对应的Markdown格式，所以你再也不用担心每次重新设置格式的麻烦了——Markdown最麻烦的表格也可以在Excel中做完再贴入生成了。</p></li><li><p><strong>专注模式</strong>，也就是除了正在编辑的那行文字，文章上下其余的内容全部变成灰色，不吸引你的视线，不干扰你的思维。</p><ul><li><strong>与专注模式搭配的话，当然还是全屏模式(F11)</strong>最好啦　qwq</li></ul></li><li><p><strong>打字机模式（Typewriter Mode）</strong>:开启这种模式后，Typora 的光标所在行会始终保持在屏幕中间，这样你码字时眼睛可以一直正对着屏幕中间</p></li></ul><h2 id="打开-关闭源代码模式"><a href="#打开-关闭源代码模式" class="headerlink" title="打开/关闭源代码模式"></a>打开/关闭源代码模式</h2><ul><li><blockquote><p>typora默认界面是实时预览的模式,而这也是与其他Markdown软件较大的区别.切换成源代码模式可以更方便地修改内容</p></blockquote><ul><li>方法1:点击左下角的<code>&lt;/&gt;</code>(启用/关闭源代码模式)</li><li>方法2:Ctrl+/</li></ul></li></ul><h1 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h1><ul><li>无序列表：输入-之后输入空格</li><li>有序列表：输入数字+“.”之后输入空格</li><li>任务列表：-[空格]空格 文字</li><li>标题：ctrl+数字</li><li>表格：ctrl+t</li><li>生成目录：[TOC]按回车</li><li>选中一整行：ctrl+l</li><li>选中单词：ctrl+d</li><li>选中相同格式的文字：ctrl+e</li><li>跳转到文章开头：ctrl+home</li><li>跳转到文章结尾：ctrl+end</li><li>搜索：ctrl+f</li><li>替换：ctrl+h</li><li>引用：输入&gt;之后输入空格</li><li>代码块：ctrl+alt+f</li><li>加粗：ctrl+b</li><li>倾斜：ctrl+i</li><li>下划线：ctrl+u</li><li>删除线：alt+shift+5</li><li>插入图片：直接拖动到指定位置即可或者ctrl+shift+i</li><li>插入链接：ctrl+k</li></ul><p>   ​        </p><p>参考文献：<a href="https://www.jianshu.com/p/602f6ecf48fd" target="_blank" rel="noopener">typora</a></p><p><a href="http://wwwbuild.net/seekingbeta_earl/358745.html" target="_blank" rel="noopener">typora2</a></p><p><a href="https://blog.csdn.net/it_guang/article/details/53456026" target="_blank" rel="noopener">typora快捷键</a></p><p><a href="https://blog.csdn.net/lzykevin/article/details/83276555" target="_blank" rel="noopener">typora界面入门</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;diag函数的补充&quot;&gt;&lt;a href=&quot;#diag函数的补充&quot; class=&quot;headerlink&quot; title=&quot;diag函数的补充&quot;&gt;&lt;/a&gt;diag函数的补充&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;A是矩阵，那么diag(A)得到的是主对角线上的元素构成的列向量，如果A
+        &lt;h1 id=&quot;typora简介&quot;&gt;&lt;a href=&quot;#typora简介&quot; class=&quot;headerlink&quot; title=&quot;typora简介&quot;&gt;&lt;/a&gt;typora简介&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;无论是Word中带有加粗等格式的文字，还是Excel中的表格，一旦黏贴到T
       
     
     </summary>
     
-      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+      <category term="markdown编辑器" scheme="ctguljj.github.io/categories/markdown%E7%BC%96%E8%BE%91%E5%99%A8/"/>
     
-      <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
-    
-      <category term="diag" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/diag/"/>
+      <category term="typora" scheme="ctguljj.github.io/categories/markdown%E7%BC%96%E8%BE%91%E5%99%A8/typora/"/>
     
     
-      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+      <category term="markdown编辑器" scheme="ctguljj.github.io/tags/markdown%E7%BC%96%E8%BE%91%E5%99%A8/"/>
     
   </entry>
   
