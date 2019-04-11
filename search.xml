@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[matlab常用函数之pdist]]></title>
-    <url>%2F2019%2F04%2F11%2Fmatlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bpdist%2F</url>
+    <title><![CDATA[matlab常用函数之pdist与squareform]]></title>
+    <url>%2F2019%2F04%2F11%2Fmatlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bpdist%E5%92%8Csquareform%2F</url>
     <content type="text"><![CDATA[pdist 文档 调用格式: D = pdist(X)returns the Euclidean distance between pairs of observations in X. 返回函数中的观测对之间的欧几里得距离 D = pdist(X,Distance) returns the distance by using the method specified by Distance. D = pdist(X,Distance,DistParameter) returns the distance by using the method specified by Distance and DistParameter. You can specify DistParameter only when Distance is ‘seuclidean’, ‘minkowski’, or ‘mahalanobis’. Distance — Distance metric Distance metric, specified as a character vector, string scalar, or function handle, as described in the following table.]]></content>
       <categories>
         <category>matlab</category>
@@ -202,24 +202,24 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[markdownpad2使用技巧]]></title>
-    <url>%2F2019%2F04%2F03%2Fmarkdownpad2%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%2F</url>
-    <content type="text"><![CDATA[markdownpad2常用快捷键 Ctrl + I ： 斜体 Ctrl + B ： 粗体 Ctrl + G ： 图片 Ctrl + Q ： 引用 Ctrl + 1 ： 标题 1 Ctrl + 2 ： 标题 2 Ctrl + 3 ： 标题 3 Ctrl + K ： 代码块 Ctrl + L ： 超链接 Ctrl + T ： 时间戳 Ctrl + U ： 无序列表 Ctrl + R ： 水平标尺 F4 ： 启用水平布局 F5 ： 启用实时预览 F6 ： 在浏览器中预览 Ctrl + Shift + O ： 有序列表 ​]]></content>
-      <categories>
-        <category>markdown编辑器</category>
-        <category>markdownpad2</category>
-      </categories>
-      <tags>
-        <tag>markdown编辑器</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[typora]]></title>
     <url>%2F2019%2F04%2F03%2Ftypora%2F</url>
     <content type="text"><![CDATA[typora简介 无论是Word中带有加粗等格式的文字，还是Excel中的表格，一旦黏贴到Typora中，都会被自动转化为对应的Markdown格式，所以你再也不用担心每次重新设置格式的麻烦了——Markdown最麻烦的表格也可以在Excel中做完再贴入生成了。 专注模式，也就是除了正在编辑的那行文字，文章上下其余的内容全部变成灰色，不吸引你的视线，不干扰你的思维。 与专注模式搭配的话，当然还是全屏模式(F11)最好啦 qwq 打字机模式（Typewriter Mode）:开启这种模式后，Typora 的光标所在行会始终保持在屏幕中间，这样你码字时眼睛可以一直正对着屏幕中间 打开/关闭源代码模式 typora默认界面是实时预览的模式,而这也是与其他Markdown软件较大的区别.切换成源代码模式可以更方便地修改内容 方法1:点击左下角的&lt;/&gt;(启用/关闭源代码模式) 方法2:Ctrl+/ 快捷键 无序列表：输入-之后输入空格 有序列表：输入数字+“.”之后输入空格 任务列表：-[空格]空格 文字 标题：ctrl+数字 表格：ctrl+t 生成目录：[TOC]按回车 选中一整行：ctrl+l 选中单词：ctrl+d 选中相同格式的文字：ctrl+e 跳转到文章开头：ctrl+home 跳转到文章结尾：ctrl+end 搜索：ctrl+f 替换：ctrl+h 引用：输入&gt;之后输入空格 代码块：ctrl+alt+f 加粗：ctrl+b 倾斜：ctrl+i 下划线：ctrl+u 删除线：alt+shift+5 插入图片：直接拖动到指定位置即可或者ctrl+shift+i 插入链接：ctrl+k ​ 参考文献：typora typora2 typora快捷键 typora界面入门]]></content>
       <categories>
         <category>markdown编辑器</category>
         <category>typora</category>
+      </categories>
+      <tags>
+        <tag>markdown编辑器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[markdownpad2使用技巧]]></title>
+    <url>%2F2019%2F04%2F03%2Fmarkdownpad2%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%2F</url>
+    <content type="text"><![CDATA[markdownpad2常用快捷键 Ctrl + I ： 斜体 Ctrl + B ： 粗体 Ctrl + G ： 图片 Ctrl + Q ： 引用 Ctrl + 1 ： 标题 1 Ctrl + 2 ： 标题 2 Ctrl + 3 ： 标题 3 Ctrl + K ： 代码块 Ctrl + L ： 超链接 Ctrl + T ： 时间戳 Ctrl + U ： 无序列表 Ctrl + R ： 水平标尺 F4 ： 启用水平布局 F5 ： 启用实时预览 F6 ： 在浏览器中预览 Ctrl + Shift + O ： 有序列表 ​]]></content>
+      <categories>
+        <category>markdown编辑器</category>
+        <category>markdownpad2</category>
       </categories>
       <tags>
         <tag>markdown编辑器</tag>
