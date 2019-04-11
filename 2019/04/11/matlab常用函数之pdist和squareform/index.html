@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="😝">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-11T09:50:27.532Z">
+<meta property="og:updated_time" content="2019-04-11T10:08:01.819Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab常用函数之pdist与squareform">
 <meta name="twitter:description" content="😝">
@@ -359,7 +359,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-11T17:50:27+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-11T18:08:01+08:00">
                 2019-04-11
               </time>
             
@@ -416,7 +416,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">102(字)</span> 
+					<span class="post-count">363(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -490,6 +490,15 @@
 <li>Distance — Distance metric<ul>
 <li>Distance metric, specified as a character vector, string scalar, or function handle, as described in the following table.</li>
 </ul>
+</li>
+</ul>
+</li>
+<li><p>栗子:Compute the Euclidean distance between pairs of observations, and convert the distance vector to a matrix using squareform.</p>
+<ul>
+<li><p>计算观测对之间的欧氏距离，并用squareform将距离矢量转换为矩阵。<br><code>`</code>matlab<br>rng(‘default’) % For reproducibility<br>X = rand(3,2);<br>%生成矩阵坐标，第一列为横坐标，第二列为纵坐标<br>D = pdist(X)<br>%answer<br>D = 1×3</p>
+<p>0.2954    1.0670    0.9448<br>%<strong>The pairwise distances are arranged in the order (2,1), (3,1), (3,2)</strong>. You can easily locate the distance between observations i and j by using squareform.<br>%注意上面说明是3*2矩阵计算欧几里德距离的顺序，第二行与第一行计算欧几里得距离，然后是第3行于第一行计算欧几里得距离，最后是第3行与第2行的欧几里德距离<br>Z = squareform(D)<br>Z = 3×3</p>
+<pre><code>0    0.2954    1.0670
+</code></pre><p>0.2954         0    0.9448<br>1.0670    0.9448         0<br>%squareform returns a symmetric matrix where Z(i,j) corresponds to the pairwise distance between observations i and j. For example, you can find the distance between observations 2 and 3.<br>%squareform返回一个对称矩阵，其中Z(i,j)对应于观察i和j之间的成对距离。</p>
 </li>
 </ul>
 </li>
@@ -762,7 +771,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">34.9k</span>
+    <span title="Site words total count">35.2k</span>
   
 </div>
 

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-04-11T09:50:27.532Z</updated>
+  <updated>2019-04-11T10:08:01.819Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="ctguljj.github.io/2019/04/11/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bpdist%E5%92%8Csquareform/"/>
     <id>ctguljj.github.io/2019/04/11/matlab常用函数之pdist和squareform/</id>
     <published>2019-04-11T09:05:16.000Z</published>
-    <updated>2019-04-11T09:50:27.532Z</updated>
+    <updated>2019-04-11T10:08:01.819Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="pdist"><a href="#pdist" class="headerlink" title="pdist"></a>pdist</h1><ul><li><a href="https://ww2.mathworks.cn/help/stats/pdist.html" target="_blank" rel="noopener">文档</a></li><li>调用格式:<ul><li><code>D = pdist(X)</code>returns the Euclidean distance between pairs of observations in X.<ul><li>返回函数中的观测对之间的欧几里得距离</li></ul></li><li><code>D = pdist(X,Distance)</code> returns the distance by using the method specified by Distance. </li><li><code>D = pdist(X,Distance,DistParameter)</code> returns the distance by using the method specified by Distance and DistParameter. You can specify DistParameter only when Distance is ‘seuclidean’, ‘minkowski’, or ‘mahalanobis’.</li><li>Distance — Distance metric<ul><li>Distance metric, specified as a character vector, string scalar, or function handle, as described in the following table.</li></ul></li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="pdist"><a href="#pdist" class="headerlink" title="pdist"></a>pdist</h1><ul><li><a href="https://ww2.mathworks.cn/help/stats/pdist.html" target="_blank" rel="noopener">文档</a></li><li>调用格式:<ul><li><code>D = pdist(X)</code>returns the Euclidean distance between pairs of observations in X.<ul><li>返回函数中的观测对之间的欧几里得距离</li></ul></li><li><code>D = pdist(X,Distance)</code> returns the distance by using the method specified by Distance. </li><li><code>D = pdist(X,Distance,DistParameter)</code> returns the distance by using the method specified by Distance and DistParameter. You can specify DistParameter only when Distance is ‘seuclidean’, ‘minkowski’, or ‘mahalanobis’.</li><li>Distance — Distance metric<ul><li>Distance metric, specified as a character vector, string scalar, or function handle, as described in the following table.</li></ul></li></ul></li><li><p>栗子:Compute the Euclidean distance between pairs of observations, and convert the distance vector to a matrix using squareform.</p><ul><li><p>计算观测对之间的欧氏距离，并用squareform将距离矢量转换为矩阵。<br><code>`</code>matlab<br>rng(‘default’) % For reproducibility<br>X = rand(3,2);<br>%生成矩阵坐标，第一列为横坐标，第二列为纵坐标<br>D = pdist(X)<br>%answer<br>D = 1×3</p><p>0.2954    1.0670    0.9448<br>%<strong>The pairwise distances are arranged in the order (2,1), (3,1), (3,2)</strong>. You can easily locate the distance between observations i and j by using squareform.<br>%注意上面说明是3*2矩阵计算欧几里德距离的顺序，第二行与第一行计算欧几里得距离，然后是第3行于第一行计算欧几里得距离，最后是第3行与第2行的欧几里德距离<br>Z = squareform(D)<br>Z = 3×3</p><pre><code>0    0.2954    1.0670</code></pre><p>0.2954         0    0.9448<br>1.0670    0.9448         0<br>%squareform returns a symmetric matrix where Z(i,j) corresponds to the pairwise distance between observations i and j. For example, you can find the distance between observations 2 and 3.<br>%squareform返回一个对称矩阵，其中Z(i,j)对应于观察i和j之间的成对距离。</p></li></ul></li></ul>]]></content>
     
     <summary type="html">
     
