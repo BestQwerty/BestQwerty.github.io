@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-04-11T08:29:23.692Z</updated>
+  <updated>2019-04-11T09:00:14.604Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>matlab常用函数之isprime</title>
+    <link href="ctguljj.github.io/2019/04/11/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bisprime/"/>
+    <id>ctguljj.github.io/2019/04/11/matlab常用函数之isprime/</id>
+    <published>2019-04-11T08:56:33.000Z</published>
+    <updated>2019-04-11T09:00:14.604Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="isprime"><a href="#isprime" class="headerlink" title="isprime"></a>isprime</h1><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/isprime.html" target="_blank" rel="noopener">文档</a></li><li>调用格式:<ul><li><code>TF = isprime(X)</code> 返回与 X 大小相同的逻辑数组。如果 X(i) 为质数，则 TF(i) 的值为 true。否则，值为 false。</li></ul></li><li>栗子:<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tf = <span class="built_in">isprime</span>([<span class="number">2</span> <span class="number">3</span> <span class="number">0</span> <span class="number">6</span> <span class="number">10</span>])</span><br><span class="line">tf = <span class="number">1</span>x5 logical array</span><br><span class="line">   <span class="number">1</span>   <span class="number">1</span>   <span class="number">0</span>   <span class="number">0</span>   <span class="number">0</span></span><br><span class="line"><span class="comment">%2 和 3 是质数，但 0、6 和 10 不是。</span></span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      😆
+    
+    </summary>
+    
+      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+    
+      <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
+    
+      <category term="isprime" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/isprime/"/>
+    
+    
+      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>matlab常用函数之primes</title>
+    <link href="ctguljj.github.io/2019/04/11/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bprimes/"/>
+    <id>ctguljj.github.io/2019/04/11/matlab常用函数之primes/</id>
+    <published>2019-04-11T08:49:49.000Z</published>
+    <updated>2019-04-11T08:55:49.921Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="primes"><a href="#primes" class="headerlink" title="primes"></a>primes</h1><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/primes.html" target="_blank" rel="noopener">文档</a></li><li>调用格式:<ul><li><code>p = primes(n)</code>返回包含所有小于或等于 n 的质数的行向量。p 与 n 具有相同的数据类型。</li></ul></li><li>栗子:<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p = <span class="built_in">primes</span>(<span class="number">25</span>)</span><br><span class="line">p = <span class="number">1</span>×<span class="number">9</span></span><br><span class="line">     <span class="number">2</span>     <span class="number">3</span>     <span class="number">5</span>     <span class="number">7</span>    <span class="number">11</span>    <span class="number">13</span>    <span class="number">17</span>    <span class="number">19</span>    <span class="number">23</span></span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      😘
+    
+    </summary>
+    
+      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+    
+      <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
+    
+      <category term="primes" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/primes/"/>
+    
+    
+      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+    
+  </entry>
   
   <entry>
     <title>matlab常用函数之symsum</title>
@@ -390,34 +442,6 @@
   </entry>
   
   <entry>
-    <title>typora</title>
-    <link href="ctguljj.github.io/2019/04/03/typora/"/>
-    <id>ctguljj.github.io/2019/04/03/typora/</id>
-    <published>2019-04-03T02:00:00.000Z</published>
-    <updated>2019-04-03T04:00:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="typora简介"><a href="#typora简介" class="headerlink" title="typora简介"></a>typora简介</h1><ul><li><p>无论是Word中带有加粗等格式的文字，还是Excel中的表格，一旦黏贴到Typora中，都会被自动转化为对应的Markdown格式，所以你再也不用担心每次重新设置格式的麻烦了——Markdown最麻烦的表格也可以在Excel中做完再贴入生成了。</p></li><li><p><strong>专注模式</strong>，也就是除了正在编辑的那行文字，文章上下其余的内容全部变成灰色，不吸引你的视线，不干扰你的思维。</p><ul><li><strong>与专注模式搭配的话，当然还是全屏模式(F11)</strong>最好啦　qwq</li></ul></li><li><p><strong>打字机模式（Typewriter Mode）</strong>:开启这种模式后，Typora 的光标所在行会始终保持在屏幕中间，这样你码字时眼睛可以一直正对着屏幕中间</p></li></ul><h2 id="打开-关闭源代码模式"><a href="#打开-关闭源代码模式" class="headerlink" title="打开/关闭源代码模式"></a>打开/关闭源代码模式</h2><ul><li><blockquote><p>typora默认界面是实时预览的模式,而这也是与其他Markdown软件较大的区别.切换成源代码模式可以更方便地修改内容</p></blockquote><ul><li>方法1:点击左下角的<code>&lt;/&gt;</code>(启用/关闭源代码模式)</li><li>方法2:Ctrl+/</li></ul></li></ul><h1 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h1><ul><li>无序列表：输入-之后输入空格</li><li>有序列表：输入数字+“.”之后输入空格</li><li>任务列表：-[空格]空格 文字</li><li>标题：ctrl+数字</li><li>表格：ctrl+t</li><li>生成目录：[TOC]按回车</li><li>选中一整行：ctrl+l</li><li>选中单词：ctrl+d</li><li>选中相同格式的文字：ctrl+e</li><li>跳转到文章开头：ctrl+home</li><li>跳转到文章结尾：ctrl+end</li><li>搜索：ctrl+f</li><li>替换：ctrl+h</li><li>引用：输入&gt;之后输入空格</li><li>代码块：ctrl+alt+f</li><li>加粗：ctrl+b</li><li>倾斜：ctrl+i</li><li>下划线：ctrl+u</li><li>删除线：alt+shift+5</li><li>插入图片：直接拖动到指定位置即可或者ctrl+shift+i</li><li>插入链接：ctrl+k</li></ul><p>   ​        </p><p>参考文献：<a href="https://www.jianshu.com/p/602f6ecf48fd" target="_blank" rel="noopener">typora</a></p><p><a href="http://wwwbuild.net/seekingbeta_earl/358745.html" target="_blank" rel="noopener">typora2</a></p><p><a href="https://blog.csdn.net/it_guang/article/details/53456026" target="_blank" rel="noopener">typora快捷键</a></p><p><a href="https://blog.csdn.net/lzykevin/article/details/83276555" target="_blank" rel="noopener">typora界面入门</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;typora简介&quot;&gt;&lt;a href=&quot;#typora简介&quot; class=&quot;headerlink&quot; title=&quot;typora简介&quot;&gt;&lt;/a&gt;typora简介&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;无论是Word中带有加粗等格式的文字，还是Excel中的表格，一旦黏贴到T
-      
-    
-    </summary>
-    
-      <category term="markdown编辑器" scheme="ctguljj.github.io/categories/markdown%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    
-      <category term="typora" scheme="ctguljj.github.io/categories/markdown%E7%BC%96%E8%BE%91%E5%99%A8/typora/"/>
-    
-    
-      <category term="markdown编辑器" scheme="ctguljj.github.io/tags/markdown%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
     <title>markdownpad2使用技巧</title>
     <link href="ctguljj.github.io/2019/04/03/markdownpad2%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
     <id>ctguljj.github.io/2019/04/03/markdownpad2使用技巧/</id>
@@ -439,6 +463,34 @@
       <category term="markdown编辑器" scheme="ctguljj.github.io/categories/markdown%E7%BC%96%E8%BE%91%E5%99%A8/"/>
     
       <category term="markdownpad2" scheme="ctguljj.github.io/categories/markdown%E7%BC%96%E8%BE%91%E5%99%A8/markdownpad2/"/>
+    
+    
+      <category term="markdown编辑器" scheme="ctguljj.github.io/tags/markdown%E7%BC%96%E8%BE%91%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>typora</title>
+    <link href="ctguljj.github.io/2019/04/03/typora/"/>
+    <id>ctguljj.github.io/2019/04/03/typora/</id>
+    <published>2019-04-03T02:00:00.000Z</published>
+    <updated>2019-04-03T04:00:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="typora简介"><a href="#typora简介" class="headerlink" title="typora简介"></a>typora简介</h1><ul><li><p>无论是Word中带有加粗等格式的文字，还是Excel中的表格，一旦黏贴到Typora中，都会被自动转化为对应的Markdown格式，所以你再也不用担心每次重新设置格式的麻烦了——Markdown最麻烦的表格也可以在Excel中做完再贴入生成了。</p></li><li><p><strong>专注模式</strong>，也就是除了正在编辑的那行文字，文章上下其余的内容全部变成灰色，不吸引你的视线，不干扰你的思维。</p><ul><li><strong>与专注模式搭配的话，当然还是全屏模式(F11)</strong>最好啦　qwq</li></ul></li><li><p><strong>打字机模式（Typewriter Mode）</strong>:开启这种模式后，Typora 的光标所在行会始终保持在屏幕中间，这样你码字时眼睛可以一直正对着屏幕中间</p></li></ul><h2 id="打开-关闭源代码模式"><a href="#打开-关闭源代码模式" class="headerlink" title="打开/关闭源代码模式"></a>打开/关闭源代码模式</h2><ul><li><blockquote><p>typora默认界面是实时预览的模式,而这也是与其他Markdown软件较大的区别.切换成源代码模式可以更方便地修改内容</p></blockquote><ul><li>方法1:点击左下角的<code>&lt;/&gt;</code>(启用/关闭源代码模式)</li><li>方法2:Ctrl+/</li></ul></li></ul><h1 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h1><ul><li>无序列表：输入-之后输入空格</li><li>有序列表：输入数字+“.”之后输入空格</li><li>任务列表：-[空格]空格 文字</li><li>标题：ctrl+数字</li><li>表格：ctrl+t</li><li>生成目录：[TOC]按回车</li><li>选中一整行：ctrl+l</li><li>选中单词：ctrl+d</li><li>选中相同格式的文字：ctrl+e</li><li>跳转到文章开头：ctrl+home</li><li>跳转到文章结尾：ctrl+end</li><li>搜索：ctrl+f</li><li>替换：ctrl+h</li><li>引用：输入&gt;之后输入空格</li><li>代码块：ctrl+alt+f</li><li>加粗：ctrl+b</li><li>倾斜：ctrl+i</li><li>下划线：ctrl+u</li><li>删除线：alt+shift+5</li><li>插入图片：直接拖动到指定位置即可或者ctrl+shift+i</li><li>插入链接：ctrl+k</li></ul><p>   ​        </p><p>参考文献：<a href="https://www.jianshu.com/p/602f6ecf48fd" target="_blank" rel="noopener">typora</a></p><p><a href="http://wwwbuild.net/seekingbeta_earl/358745.html" target="_blank" rel="noopener">typora2</a></p><p><a href="https://blog.csdn.net/it_guang/article/details/53456026" target="_blank" rel="noopener">typora快捷键</a></p><p><a href="https://blog.csdn.net/lzykevin/article/details/83276555" target="_blank" rel="noopener">typora界面入门</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;typora简介&quot;&gt;&lt;a href=&quot;#typora简介&quot; class=&quot;headerlink&quot; title=&quot;typora简介&quot;&gt;&lt;/a&gt;typora简介&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;无论是Word中带有加粗等格式的文字，还是Excel中的表格，一旦黏贴到T
+      
+    
+    </summary>
+    
+      <category term="markdown编辑器" scheme="ctguljj.github.io/categories/markdown%E7%BC%96%E8%BE%91%E5%99%A8/"/>
+    
+      <category term="typora" scheme="ctguljj.github.io/categories/markdown%E7%BC%96%E8%BE%91%E5%99%A8/typora/"/>
     
     
       <category term="markdown编辑器" scheme="ctguljj.github.io/tags/markdown%E7%BC%96%E8%BE%91%E5%99%A8/"/>
@@ -498,55 +550,6 @@
       <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
     
       <category term="实用命令" scheme="ctguljj.github.io/categories/matlab/%E5%AE%9E%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    
-    
-      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>第五周周总结</title>
-    <link href="ctguljj.github.io/2019/03/30/%E7%AC%AC%E4%BA%94%E5%91%A8%E5%91%A8%E6%80%BB%E7%BB%93/"/>
-    <id>ctguljj.github.io/2019/03/30/第五周周总结/</id>
-    <published>2019-03-30T11:58:26.000Z</published>
-    <updated>2019-03-30T12:12:31.069Z</updated>
-    
-    <summary type="html">
-    
-      something about myself
-    
-    </summary>
-    
-      <category term="五日三省吾身" scheme="ctguljj.github.io/categories/%E4%BA%94%E6%97%A5%E4%B8%89%E7%9C%81%E5%90%BE%E8%BA%AB/"/>
-    
-      <category term="周总结" scheme="ctguljj.github.io/categories/%E4%BA%94%E6%97%A5%E4%B8%89%E7%9C%81%E5%90%BE%E8%BA%AB/%E5%91%A8%E6%80%BB%E7%BB%93/"/>
-    
-    
-      <category term="吾日三省吾身" scheme="ctguljj.github.io/tags/%E5%90%BE%E6%97%A5%E4%B8%89%E7%9C%81%E5%90%BE%E8%BA%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>matlab代码练习</title>
-    <link href="ctguljj.github.io/2019/03/30/matlab%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0/"/>
-    <id>ctguljj.github.io/2019/03/30/matlab代码练习/</id>
-    <published>2019-03-30T07:22:54.000Z</published>
-    <updated>2019-04-11T08:31:40.507Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="S"><a href="#S" class="headerlink" title="S"></a>S</h1><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlabtimu.jpg" alt=""><br><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlabtimudaan.jpg" alt=""></p><ul><li><p>随机生成三个点，判断这三点是否能构成一个三角形若能构成三角形则输出其面积。</p><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">clc;clear;</span><br><span class="line">a=<span class="built_in">rand</span>(<span class="number">3</span>,<span class="number">2</span>);</span><br><span class="line">d=squareform(pdist(a));</span><br><span class="line">f=@(a,b,c)<span class="built_in">sqrt</span>((a+b+c)/<span class="number">2</span>*((a+b+c)/<span class="number">2</span>-a)*((a+b+c)/<span class="number">2</span>-b)*((a+b+c)/<span class="number">2</span>-c));</span><br><span class="line">s=f(d(<span class="number">1</span>,<span class="number">2</span>),d(<span class="number">1</span>,<span class="number">3</span>),d(<span class="number">2</span>,<span class="number">3</span>));</span><br><span class="line"><span class="keyword">if</span> s==<span class="number">0</span></span><br><span class="line">    fprintf(<span class="string">'这三个点不构成一个三角形'</span>)</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    fprintf(<span class="string">'这三个点构成三角形的面积为：s=%d\n'</span>,s)</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></li><li><p>输入绳子的长度n，将该绳子分成三段，每段的长度为正整数，输出由该三段绳子组成的三角形个数。</p><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%暴力法 不推荐</span></span><br><span class="line">clc;clear;</span><br><span class="line">n=input(<span class="string">'the length of string is '</span>);</span><br><span class="line">num=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> i1=<span class="number">1</span>:n<span class="number">-2</span> <span class="comment">%三个边长的穷举</span></span><br><span class="line">    <span class="keyword">for</span> i2=i1:n<span class="number">-1</span>-i1</span><br><span class="line">        i3=n-i1-i2;</span><br><span class="line">        <span class="keyword">if</span> i1+i2&gt;i3 &amp;&amp; i1+i3&gt;i2 &amp;&amp; i2+i3&gt;i1 &amp;&amp; i3&gt;=i2</span><br><span class="line">            num=num+<span class="number">1</span>;<span class="comment">%计数加一</span></span><br><span class="line">fprintf(<span class="string">'the num is %d %d %d\n'</span>,i1,i2,i3);</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">fprintf(<span class="string">'长度为 %d 的绳子分成三段可以组成 %d 个三角形\n'</span>,n,num);</span><br></pre></td></tr></table></figure></li><li><p>一个不透明的袋子中放了黑白各一球（除了颜色，其他均相同）。随机从中取出一球，如果取到黑球，则将此球放入袋中，摇匀，继续取，直到取出白球才结束。问：取到白球所需次数的数学期望</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">%方法一</span><br><span class="line">clc;clear;</span><br><span class="line">t=solve(&apos;1*( 1/2)+( 1+ t )*( 1/2)-t&apos;);</span><br><span class="line">t</span><br><span class="line"></span><br><span class="line">%二</span><br><span class="line">%函数</span><br><span class="line">clc,clear;</span><br><span class="line">syms k;</span><br><span class="line">symsum(k*(1/2)^k,k,1,inf)</span><br><span class="line"></span><br><span class="line">%三</span><br><span class="line">clc,clear;</span><br><span class="line">rand(&apos;state&apos;,sum(100*clock))</span><br><span class="line">a = 0;</span><br><span class="line">for i = 1:inf</span><br><span class="line">    j = randi(3);</span><br><span class="line">    if j == 2 &amp;&amp; i &gt; 20 </span><br><span class="line">%p避免偶然性，实验次数要多一点，所以i&gt;20</span><br><span class="line">%因为取出的白球1/2概率太大，实验次数无法达到那么多</span><br><span class="line">%所以将20次前的取出的白球与黑球，都当作白球处理，后面正常处理</span><br><span class="line">        break;</span><br><span class="line">    end</span><br><span class="line">    a = a+1;</span><br><span class="line">end</span><br><span class="line">t = 0;</span><br><span class="line">for k = 1:i</span><br><span class="line">    t = (1/2)^(k)*k+t;</span><br><span class="line">end</span><br><span class="line">t</span><br></pre></td></tr></table></figure></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;S&quot;&gt;&lt;a href=&quot;#S&quot; class=&quot;headerlink&quot; title=&quot;S&quot;&gt;&lt;/a&gt;S&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/mast
-      
-    
-    </summary>
-    
-      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
-    
-      <category term="代码练习" scheme="ctguljj.github.io/categories/matlab/%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0/"/>
     
     
       <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
