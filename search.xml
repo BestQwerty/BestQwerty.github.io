@@ -113,7 +113,7 @@
   <entry>
     <title><![CDATA[matlab常用函数之mean]]></title>
     <url>%2F2019%2F04%2F04%2Fmatlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bmean%2F</url>
-    <content type="text"><![CDATA[mean(数组的均值) 调用格式: M = mean(A)返回 A 沿大小不等于 1 的第一个数组维度的元素的均值。 如果 A 是向量，则mean(A)返回元素均值。 如果 A 为矩阵，那么 mean(A) 返回包含每列均值的行向量。 如果 A 是多维数组，则 mean(A) 沿大小不等于 1 的第一个数组维度计算，并将这些元素视为向量。此维度会变为 1，而所有其他维度的大小保持不变。 M = mean(A,&#39;all&#39;)计算 A 的所有元素的均值。 M = mean(A,dim)返回维度 dim 上的均值。例如，如果 A 为矩阵，则 mean(A,2) 是包含每一行均值的列向量。 M = mean(A,vecdim)计算向量 vecdim 所指定的维度上的均值。例如，如果 A 是矩阵，则 mean(A,[1 2])是 A 中所有元素的均值，因为矩阵的每个元素都包含在由维度 1 和 2 定义的数组切片中。 M = mean(___,outtype)使用前面语法中的任何输入参数返回指定的数据类型的均值。outtype 可以是 ‘default’、’double’ 或 ‘native’。 M = mean(___,nanflag)指定在上述任意语法的计算中包括还是忽略 NaN 值。mean(A,&#39;includenan&#39;) 会在计算中包括所有 NaN 值，而 mean(A,&#39;omitnan&#39;) 则忽略这些值。]]></content>
+    <content type="text"><![CDATA[mean(数组的均值) 文档 调用格式: M = mean(A)返回 A 沿大小不等于 1 的第一个数组维度的元素的均值。 如果 A 是向量，则mean(A)返回元素均值。 如果 A 为矩阵，那么 mean(A) 返回包含每列均值的行向量。 如果 A 是多维数组，则 mean(A) 沿大小不等于 1 的第一个数组维度计算，并将这些元素视为向量。此维度会变为 1，而所有其他维度的大小保持不变。 M = mean(A,&#39;all&#39;)计算 A 的所有元素的均值。 M = mean(A,dim)返回维度 dim 上的均值。例如，如果 A 为矩阵，则 mean(A,2) 是包含每一行均值的列向量。 M = mean(A,vecdim)计算向量 vecdim 所指定的维度上的均值。例如，如果 A 是矩阵，则 mean(A,[1 2])是 A 中所有元素的均值，因为矩阵的每个元素都包含在由维度 1 和 2 定义的数组切片中。 M = mean(___,outtype)使用前面语法中的任何输入参数返回指定的数据类型的均值。outtype 可以是 ‘default’、’double’ 或 ‘native’。 M = mean(___,nanflag)指定在上述任意语法的计算中包括还是忽略 NaN 值。mean(A,&#39;includenan&#39;) 会在计算中包括所有 NaN 值，而 mean(A,&#39;omitnan&#39;) 则忽略这些值。 栗子:12345678910 %创建一个矩阵并计算每列的均值A = [0 1 1; 2 3 2; 1 3 2; 4 2 2]%A = 4×3 0 1 1 2 3 2 1 3 2 4 2 2M = mean(A)%M = 1×3 1.7500 2.2500 1.7500]]></content>
       <categories>
         <category>matlab</category>
         <category>函数</category>
