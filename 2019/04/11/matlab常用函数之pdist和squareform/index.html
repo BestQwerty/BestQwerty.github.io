@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="😝">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-11T10:08:01.819Z">
+<meta property="og:updated_time" content="2019-04-11T14:37:00.612Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab常用函数之pdist与squareform">
 <meta name="twitter:description" content="😝">
@@ -359,7 +359,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-11T18:08:01+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-11T22:37:00+08:00">
                 2019-04-11
               </time>
             
@@ -416,7 +416,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">363(字)</span> 
+					<span class="post-count">527(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -482,23 +482,21 @@
 <li><a href="https://ww2.mathworks.cn/help/stats/pdist.html" target="_blank" rel="noopener">文档</a></li>
 <li>调用格式:<ul>
 <li><code>D = pdist(X)</code>returns the Euclidean distance between pairs of observations in X.<ul>
+<li>一个矩阵A的大小为M<em>N，那么B=pdist(A)得到的矩阵B的大小为1行M</em>(M-1)/2列，表示的意义是M行数据，每两行计算一下欧式距离<code>pdist(x,distance)</code>,distance也可以用来表示其他距离，默认的是欧式距离。</li>
 <li>返回函数中的观测对之间的欧几里得距离</li>
 </ul>
 </li>
 <li><code>D = pdist(X,Distance)</code> returns the distance by using the method specified by Distance. </li>
 <li><code>D = pdist(X,Distance,DistParameter)</code> returns the distance by using the method specified by Distance and DistParameter. You can specify DistParameter only when Distance is ‘seuclidean’, ‘minkowski’, or ‘mahalanobis’.</li>
+</ul>
+</li>
 <li>Distance — Distance metric<ul>
 <li>Distance metric, specified as a character vector, string scalar, or function handle, as described in the following table.</li>
+<li>metric’取值如下： ‘euclidean’：欧氏距离（默认）；</li>
 </ul>
 </li>
-</ul>
-</li>
-<li><p>栗子:Compute the Euclidean distance between pairs of observations, and convert the distance vector to a matrix using squareform.</p>
-<ul>
-<li><p>计算观测对之间的欧氏距离，并用squareform将距离矢量转换为矩阵。<br><code>`</code>matlab<br>rng(‘default’) % For reproducibility<br>X = rand(3,2);<br>%生成矩阵坐标，第一列为横坐标，第二列为纵坐标<br>D = pdist(X)<br>%answer<br>D = 1×3</p>
-<p>0.2954    1.0670    0.9448<br>%<strong>The pairwise distances are arranged in the order (2,1), (3,1), (3,2)</strong>. You can easily locate the distance between observations i and j by using squareform.<br>%注意上面说明是3*2矩阵计算欧几里德距离的顺序，第二行与第一行计算欧几里得距离，然后是第3行于第一行计算欧几里得距离，最后是第3行与第2行的欧几里德距离<br>Z = squareform(D)<br>Z = 3×3</p>
-<pre><code>0    0.2954    1.0670
-</code></pre><p>0.2954         0    0.9448<br>1.0670    0.9448         0<br>%squareform returns a symmetric matrix where Z(i,j) corresponds to the pairwise distance between observations i and j. For example, you can find the distance between observations 2 and 3.<br>%squareform返回一个对称矩阵，其中Z(i,j)对应于观察i和j之间的成对距离。</p>
+<li>栗子:Compute the Euclidean distance between pairs of observations, and convert the distance vector to a matrix using squareform.<ul>
+<li>计算观测对之间的欧氏距离，并用squareform将距离矢量转换为矩阵。<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">rng(<span class="string">'default'</span>) <span class="comment">% For reproducibility</span></span><br><span class="line">X = <span class="built_in">rand</span>(<span class="number">3</span>,<span class="number">2</span>);</span><br><span class="line"><span class="comment">%生成矩阵坐标，第一列为横坐标，第二列为纵坐标</span></span><br><span class="line">D = pdist(X)</span><br><span class="line"><span class="comment">%answer</span></span><br><span class="line">D = <span class="number">1</span>×<span class="number">3</span></span><br><span class="line"></span><br><span class="line">    <span class="number">0.2954</span>    <span class="number">1.0670</span>    <span class="number">0.9448</span></span><br><span class="line"><span class="comment">%**The pairwise distances are arranged in the order (2,1), (3,1), (3,2)**. **You can easily locate the distance between observations i and j by using squareform.**</span></span><br><span class="line"><span class="comment">%**如果a是3*2矩阵，那么pdist函数计算欧几里德距离的顺序是第二行与第一行计算欧几里得距离，然后是第3行于第一行计算欧几里得距离，最后是第3行与第2行的欧几里德距离**</span></span><br><span class="line"><span class="comment">% 如果`b = squareform(pdist(a))`，那么`b(i,j)`就是矩阵a第i行与第j行之间的欧几里得距离</span></span><br><span class="line">Z = squareform(D)</span><br><span class="line">Z = <span class="number">3</span>×<span class="number">3</span></span><br><span class="line"></span><br><span class="line">         <span class="number">0</span>    <span class="number">0.2954</span>    <span class="number">1.0670</span></span><br><span class="line">    <span class="number">0.2954</span>         <span class="number">0</span>    <span class="number">0.9448</span></span><br><span class="line">    <span class="number">1.0670</span>    <span class="number">0.9448</span>         <span class="number">0</span></span><br><span class="line"><span class="comment">%squareform returns a symmetric matrix **where Z(i,j) corresponds to the pairwise distance between observations i and j**. For example,** you can find the distance between observations 2 and 3.**</span></span><br><span class="line"><span class="comment">%squareform返回一个对称矩阵，**其中Z(i,j)对应于观察i和j之间的成对距离。**</span></span><br><span class="line">Z(<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line"><span class="built_in">ans</span> = <span class="number">0.9448</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">%验证pdist函数计算行顺序</span></span><br><span class="line">clc,clear;</span><br><span class="line">a = [<span class="number">0</span> <span class="number">0</span></span><br><span class="line">    <span class="number">3</span> <span class="number">4</span></span><br><span class="line">    <span class="number">5</span> <span class="number">6</span>];</span><br><span class="line">b = pdist(a);</span><br><span class="line">d = <span class="built_in">sqrt</span>(<span class="number">3</span>^<span class="number">2</span>+<span class="number">4</span>^<span class="number">2</span>)</span><br><span class="line">e = <span class="built_in">sqrt</span>(<span class="number">5</span>^<span class="number">2</span>+<span class="number">6</span>^<span class="number">2</span>)</span><br><span class="line">g = <span class="built_in">sqrt</span>(<span class="number">2</span>^<span class="number">2</span>+<span class="number">2</span>^<span class="number">2</span>)</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -771,7 +769,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">35.2k</span>
+    <span title="Site words total count">35.3k</span>
   
 </div>
 
