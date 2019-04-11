@@ -91,7 +91,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlabtimu.jpg">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlabtimudaan.jpg">
-<meta property="og:updated_time" content="2019-04-10T13:29:05.460Z">
+<meta property="og:updated_time" content="2019-04-11T08:31:40.507Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab代码练习">
 <meta name="twitter:description" content="S  随机生成三个点，判断这三点是否能构成一个三角形若能构成三角形则输出其面积。 12345678910clc;clear;a=rand(3,2);d=squareform(pdist(a));f=@(a,b,c)sqrt((a+b+c)/2*((a+b+c)/2-a)*((a+b+c)/2-b)*((a+b+c)/2-c));s=f(d(1,2),d(1,3),d(2,3));if s==0">
@@ -362,8 +362,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-10T21:29:05+08:00">
-                2019-04-10
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-11T16:31:40+08:00">
+                2019-04-11
               </time>
             
           </span>
@@ -408,7 +408,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">372(字)</span> 
+					<span class="post-count">488(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -475,7 +475,7 @@
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%暴力法 不推荐</span></span><br><span class="line">clc;clear;</span><br><span class="line">n=input(<span class="string">'the length of string is '</span>);</span><br><span class="line">num=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> i1=<span class="number">1</span>:n<span class="number">-2</span> <span class="comment">%三个边长的穷举</span></span><br><span class="line">    		<span class="keyword">for</span> i2=i1:n<span class="number">-1</span>-i1</span><br><span class="line">        		i3=n-i1-i2;</span><br><span class="line">        		<span class="keyword">if</span> i1+i2&gt;i3 &amp;&amp; i1+i3&gt;i2 &amp;&amp; i2+i3&gt;i1 &amp;&amp; i3&gt;=i2</span><br><span class="line">            		num=num+<span class="number">1</span>;<span class="comment">%计数加一</span></span><br><span class="line">fprintf(<span class="string">'the num is %d %d %d\n'</span>,i1,i2,i3);</span><br><span class="line">        		<span class="keyword">end</span></span><br><span class="line">    		<span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">fprintf(<span class="string">'长度为 %d 的绳子分成三段可以组成 %d 个三角形\n'</span>,n,num);</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>一个不透明的袋子中放了黑白各一球（除了颜色，其他均相同）。随机从中取出一球，如果取到黑球，则将此球放入袋中，摇匀，继续取，直到取出白球才结束。问：取到白球所需次数的数学期望</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">%方法一</span><br><span class="line">clc;clear;</span><br><span class="line">t=solve(&apos;1*( 1/2)+( 1+ t )*( 1/2)-t&apos;);</span><br><span class="line">t</span><br><span class="line"></span><br><span class="line">%二</span><br><span class="line">%函数</span><br><span class="line">clc,clear;</span><br><span class="line">syms k;</span><br><span class="line">symsum(k*(1/2)^k,k,1,inf)</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">%方法一</span><br><span class="line">clc;clear;</span><br><span class="line">t=solve(&apos;1*( 1/2)+( 1+ t )*( 1/2)-t&apos;);</span><br><span class="line">t</span><br><span class="line"></span><br><span class="line">%二</span><br><span class="line">%函数</span><br><span class="line">clc,clear;</span><br><span class="line">syms k;</span><br><span class="line">symsum(k*(1/2)^k,k,1,inf)</span><br><span class="line"></span><br><span class="line">%三</span><br><span class="line">clc,clear;</span><br><span class="line">rand(&apos;state&apos;,sum(100*clock))</span><br><span class="line">a = 0;</span><br><span class="line">for i = 1:inf</span><br><span class="line">    j = randi(3);</span><br><span class="line">    if j == 2 &amp;&amp; i &gt; 20 </span><br><span class="line">%p避免偶然性，实验次数要多一点，所以i&gt;20</span><br><span class="line">%因为取出的白球1/2概率太大，实验次数无法达到那么多</span><br><span class="line">%所以将20次前的取出的白球与黑球，都当作白球处理，后面正常处理</span><br><span class="line">        break;</span><br><span class="line">    end</span><br><span class="line">    a = a+1;</span><br><span class="line">end</span><br><span class="line">t = 0;</span><br><span class="line">for k = 1:i</span><br><span class="line">    t = (1/2)^(k)*k+t;</span><br><span class="line">end</span><br><span class="line">t</span><br></pre></td></tr></table></figure></li>
 </ul>
 
       
@@ -749,7 +749,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">34.5k</span>
+    <span title="Site words total count">34.6k</span>
   
 </div>
 
