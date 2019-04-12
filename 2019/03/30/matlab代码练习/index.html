@@ -91,7 +91,8 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlabtimu.jpg">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlabtimudaan.jpg">
-<meta property="og:updated_time" content="2019-04-12T12:48:33.687Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab画图题目1.png">
+<meta property="og:updated_time" content="2019-04-12T13:27:22.160Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab代码练习">
 <meta name="twitter:description" content="😏">
@@ -362,7 +363,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-12T20:48:33+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-12T21:27:22+08:00">
                 2019-04-12
               </time>
             
@@ -408,7 +409,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">625(字)</span> 
+					<span class="post-count">820(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -488,7 +489,10 @@
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">clc,clear;</span><br><span class="line">a = input(<span class="string">'a = '</span>);</span><br><span class="line">b = num2str(a);</span><br><span class="line">c = <span class="built_in">length</span>(b);</span><br><span class="line">d = [];</span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">1</span>:c</span><br><span class="line">   d(<span class="built_in">i</span>) = str2num(b(<span class="built_in">i</span>));</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="built_in">sort</span>(d)<span class="comment">%该题没考虑首位为0情况，注意，出题人也没设置</span></span><br><span class="line"><span class="built_in">sort</span>(d, <span class="string">'descend'</span>)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>求100以内素数的和</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">clc;clear;</span><br><span class="line">a=<span class="built_in">primes</span>(<span class="number">100</span>);</span><br><span class="line">sum(a)</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">clc;clear;</span><br><span class="line">a=<span class="built_in">primes</span>(<span class="number">100</span>);</span><br><span class="line">sum(a)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab画图题目1.png" alt=""></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%法一</span></span><br><span class="line">clc; clear all</span><br><span class="line">x=<span class="number">-3</span>:<span class="number">0.01</span>:<span class="number">4</span>;</span><br><span class="line">y=<span class="built_in">sqrt</span>(<span class="number">1</span>-(x).^<span class="number">2</span>).*(x&gt;=<span class="number">-1</span>&amp;x&lt;<span class="number">0</span>)+<span class="number">2.</span>^(x).*(x&gt;=<span class="number">0</span>&amp;x&lt;<span class="number">2</span>)+(x+<span class="number">1</span>).*(x&gt;=<span class="number">-3</span>&amp;x&lt;<span class="number">-1</span>)+<span class="number">4</span>*(x&gt;=<span class="number">2</span>); </span><br><span class="line"><span class="comment">%注意括号!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!特别是对x的括号！</span></span><br><span class="line"><span class="comment">%按我的理解，因为x的范围构成了一个矩阵(很多个横坐标)，所以对于图里面第二个函数与第三个函数，是点乘，因为要算出每一个横坐标的纵坐标，所以</span></span><br><span class="line">用点乘使得每个元素运算，如果去掉会报错</span><br><span class="line"><span class="built_in">plot</span>(x,y)</span><br><span class="line"></span><br><span class="line"><span class="comment">%法二</span></span><br><span class="line">clc,clear;</span><br><span class="line">y1 = <span class="number">4</span>*<span class="built_in">ones</span>(<span class="number">1</span>,<span class="number">21</span>);</span><br><span class="line">x1 = <span class="number">2</span>:<span class="number">0.1</span>:<span class="number">4</span>;</span><br><span class="line"><span class="built_in">plot</span>(x1,y1)</span><br><span class="line"><span class="built_in">hold</span> on</span><br><span class="line"><span class="comment">%que</span></span><br><span class="line">x2 = <span class="number">0</span>:<span class="number">0.01</span>:<span class="number">2</span>;</span><br><span class="line">y2 = <span class="number">2.</span>^(x2);</span><br><span class="line"></span><br><span class="line"><span class="built_in">plot</span>(x2, y2)</span><br><span class="line"><span class="built_in">hold</span> on</span><br><span class="line">x3 = <span class="number">-1</span>:<span class="number">0.001</span>:<span class="number">0</span>;</span><br><span class="line">y3 = <span class="built_in">sqrt</span>(<span class="number">1</span>-(x3).^<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">plot</span>(x3,y3)</span><br><span class="line"><span class="built_in">hold</span> on</span><br><span class="line">x4 = <span class="number">-3</span>:<span class="number">0.001</span>:<span class="number">-1</span>;</span><br><span class="line">y4 = x4+<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">plot</span>(x4,y4)</span><br></pre></td></tr></table></figure></li>
 </ul>
 
       
@@ -762,7 +766,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">35.8k</span>
+    <span title="Site words total count">36k</span>
   
 </div>
 
