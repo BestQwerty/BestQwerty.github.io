@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-04-13T03:13:40.158Z</updated>
+  <updated>2019-04-13T04:01:11.802Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>matlab矩阵操作补充</title>
+    <link href="ctguljj.github.io/2019/04/13/matlab%E7%9F%A9%E9%98%B5%E6%93%8D%E4%BD%9C%E8%A1%A5%E5%85%85/"/>
+    <id>ctguljj.github.io/2019/04/13/matlab矩阵操作补充/</id>
+    <published>2019-04-13T04:01:11.000Z</published>
+    <updated>2019-04-13T04:01:11.802Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>maltab常用函数之isempty</title>
@@ -462,9 +476,9 @@
     <link href="ctguljj.github.io/2019/04/03/matlab%E5%87%BD%E6%95%B0%E4%B9%8Brand/"/>
     <id>ctguljj.github.io/2019/04/03/matlab函数之rand/</id>
     <published>2019-04-03T13:42:32.000Z</published>
-    <updated>2019-04-03T14:34:07.868Z</updated>
+    <updated>2019-04-13T05:42:04.449Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="rand"><a href="#rand" class="headerlink" title="rand"></a>rand</h1><ul><li>matlab中通过rand函数产生的是介于0到1(不包括1)之间的伪随机数 </li><li><code>X = rand</code>范围(0,1).</li><li><code>X = rand(n)</code>表示产生一个n×n的随机矩阵，n必须是整数,否则会报错。</li><li><code>X = rand(sz1,...,szN)</code></li><li><code>X = rand(sz)</code></li><li><code>X = rand(___,typename)</code></li><li><code>X = rand(___,&#39;like&#39;,p)</code></li><li>可以与取整函数搭配使用</li><li>为了使每次执行rand函数时产生和之前不相同的一组伪随机数，通常需要初始化随机数种子。方法很多， 常见的一种是在写m文件时，在程序的开头写：<code>rand(&#39;state&#39;,sum(100*clock))</code> 定义一个随时间变化的初值。</li></ul><h1 id="randi"><a href="#randi" class="headerlink" title="randi"></a>randi</h1><ul><li>randi函数产生均匀分布的伪随机整数(Uniformly distributed pseudorandom integers)</li><li><code>X = randi(imax)</code>返回一个介于1到imax的伪随机整数</li><li><code>X = randi(imax,n)</code>返回一个在[1,imax]范围内的n*n的伪随机整数矩阵</li><li><code>X = randi(imax,sz1,...,szN)</code></li><li><code>X = randi(imax,sz)</code></li><li><code>X = randi(imax,classname)</code></li><li><code>X = randi(imax,n,classname)</code></li><li><code>X = randi(imax,sz1,...,szN,classname)</code></li><li><code>X = randi(imax,sz,classname)</code></li><li><code>X = randi(imax,&#39;like&#39;,p)</code></li><li><code>X = randi(imax,n,&#39;like&#39;,p)</code></li><li><code>X = randi(imax,sz1,...,szN,&#39;like&#39;,p)</code></li><li><code>X = randi(imax,sz,&#39;like&#39;,p)</code></li><li><code>X = randi([imin,imax],___)</code></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="rand"><a href="#rand" class="headerlink" title="rand"></a>rand</h1><ul><li>matlab中通过rand函数产生的是介于0到1(不包括1)之间的伪随机数 </li><li><code>X = rand</code>范围(0,1).</li><li><code>X = rand(n)</code>表示产生一个n×n的随机矩阵，n必须是整数,否则会报错。</li><li><code>X = rand(sz1,...,szN)</code></li><li><code>X = rand(sz)</code></li><li><code>X = rand(___,typename)</code></li><li><code>X = rand(___,&#39;like&#39;,p)</code></li><li>可以与取整函数搭配使用</li><li>为了使每次执行rand函数时产生和之前不相同的一组伪随机数，通常需要初始化随机数种子。方法很多， 常见的一种是在写m文件时，在程序的开头写：<code>rand(&#39;state&#39;,sum(100*clock))</code> 定义一个随时间变化的初值。</li></ul><h1 id="randi"><a href="#randi" class="headerlink" title="randi"></a>randi</h1><ul><li>randi函数产生均匀分布的伪随机整数(Uniformly distributed pseudorandom integers)</li><li><code>X = randi(imax)</code>返回一个介于1到imax的伪随机整数，闭区间[1,imax].</li><li><code>X = randi(imax,n)</code>返回一个在[1,imax]范围内的n*n的伪随机整数矩阵</li><li><code>X = randi(imax,sz1,...,szN)</code></li><li><code>X = randi(imax,sz)</code></li><li><code>X = randi(imax,classname)</code></li><li><code>X = randi(imax,n,classname)</code></li><li><code>X = randi(imax,sz1,...,szN,classname)</code></li><li><code>X = randi(imax,sz,classname)</code></li><li><code>X = randi(imax,&#39;like&#39;,p)</code></li><li><code>X = randi(imax,n,&#39;like&#39;,p)</code></li><li><code>X = randi(imax,sz1,...,szN,&#39;like&#39;,p)</code></li><li><code>X = randi(imax,sz,&#39;like&#39;,p)</code></li><li><code>X = randi([imin,imax],___)</code></li></ul>]]></content>
     
     <summary type="html">
     
@@ -516,34 +530,6 @@
     
     
       <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>markdownpad2使用技巧</title>
-    <link href="ctguljj.github.io/2019/04/03/markdownpad2%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
-    <id>ctguljj.github.io/2019/04/03/markdownpad2使用技巧/</id>
-    <published>2019-04-03T02:00:00.000Z</published>
-    <updated>2019-04-03T04:01:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="markdownpad2常用快捷键"><a href="#markdownpad2常用快捷键" class="headerlink" title="markdownpad2常用快捷键"></a>markdownpad2常用快捷键</h1><ul><li>Ctrl + I ： 斜体</li><li>Ctrl + B ： 粗体</li><li>Ctrl + G ： 图片</li><li>Ctrl + Q ： 引用</li><li>Ctrl + 1 ： 标题 1</li><li>Ctrl + 2 ： 标题 2</li><li>Ctrl + 3 ： 标题 3</li><li>Ctrl + K ： 代码块</li><li>Ctrl + L ： 超链接</li><li>Ctrl + T ： 时间戳</li><li>Ctrl + U ： 无序列表</li><li>Ctrl + R ： 水平标尺</li><li>F4 ： 启用水平布局</li><li>F5 ： 启用实时预览</li><li>F6 ： 在浏览器中预览</li><li>Ctrl + Shift + O ： 有序列表</li></ul><p>​                           </p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;markdownpad2常用快捷键&quot;&gt;&lt;a href=&quot;#markdownpad2常用快捷键&quot; class=&quot;headerlink&quot; title=&quot;markdownpad2常用快捷键&quot;&gt;&lt;/a&gt;markdownpad2常用快捷键&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;Ctrl
-      
-    
-    </summary>
-    
-      <category term="markdown编辑器" scheme="ctguljj.github.io/categories/markdown%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    
-      <category term="markdownpad2" scheme="ctguljj.github.io/categories/markdown%E7%BC%96%E8%BE%91%E5%99%A8/markdownpad2/"/>
-    
-    
-      <category term="markdown编辑器" scheme="ctguljj.github.io/tags/markdown%E7%BC%96%E8%BE%91%E5%99%A8/"/>
     
   </entry>
   
