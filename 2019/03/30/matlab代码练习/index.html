@@ -91,8 +91,9 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlabtimu.jpg">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlabtimudaan.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab代码练习图片1.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab画图题目1.png">
-<meta property="og:updated_time" content="2019-04-13T12:35:54.207Z">
+<meta property="og:updated_time" content="2019-04-13T12:48:01.926Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab代码练习">
 <meta name="twitter:description" content="😏">
@@ -363,7 +364,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-13T20:35:54+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-13T20:48:01+08:00">
                 2019-04-13
               </time>
             
@@ -409,7 +410,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">1.3k(字)</span> 
+					<span class="post-count">1.5k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -473,7 +474,11 @@
       
         <h1 id="S"><a href="#S" class="headerlink" title="S"></a>S</h1><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlabtimu.jpg" alt=""><br><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlabtimudaan.jpg" alt=""></p>
 <ul>
-<li></li>
+<li><p>确定函数y1=3*x+4与函数y2=x^2的交点,并将点绘制到区间[-5,5]中</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%法一</span></span><br><span class="line">clc,clear;</span><br><span class="line">close all;</span><br><span class="line">x = <span class="number">-5</span>:<span class="number">0.01</span>:<span class="number">5</span>;</span><br><span class="line">y1 = <span class="number">3</span>*x+<span class="number">4</span>;</span><br><span class="line">y2 = x.^<span class="number">2</span>;</span><br><span class="line"><span class="built_in">plot</span>(x,y1,x,y2,<span class="string">'g'</span>)</span><br><span class="line"><span class="built_in">hold</span> on</span><br><span class="line">t=<span class="built_in">find</span>(<span class="built_in">abs</span>(y2-y1)&lt;<span class="number">0.01</span>);</span><br><span class="line">a = [];</span><br><span class="line">a(<span class="number">1</span>) = <span class="number">3</span>*x(t(<span class="number">1</span>))+<span class="number">4</span>;</span><br><span class="line">a(<span class="number">2</span>) = <span class="number">3</span>*x(t(<span class="number">2</span>))+<span class="number">4</span>;</span><br><span class="line"><span class="built_in">plot</span>(x(t),a,<span class="string">'ro'</span>)</span><br><span class="line">x(t) <span class="comment">%输出后可知为行向量</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%法二</span></span><br><span class="line">clc,clear;</span><br><span class="line">close all;</span><br><span class="line">x = <span class="number">-5</span>:<span class="number">0.01</span>:<span class="number">5</span>;</span><br><span class="line">y1 = <span class="number">3</span>*x+<span class="number">4</span>;</span><br><span class="line">y2 = x.^<span class="number">2</span>;</span><br><span class="line">t=<span class="built_in">find</span>(<span class="built_in">abs</span>(y2-y1)&lt;<span class="number">0.01</span>); <span class="comment">%t是包含两个下标索引的行向量</span></span><br><span class="line"><span class="comment">%交点横坐标是x(t(1))与x(t(2))</span></span><br><span class="line"><span class="comment">%x(t)就是包含2个横坐标的行向量</span></span><br><span class="line"><span class="comment">%plot画图注意维度一致</span></span><br><span class="line">a = [];</span><br><span class="line">a(<span class="number">1</span>) = <span class="number">3</span>*x(t(<span class="number">1</span>))+<span class="number">4</span>;</span><br><span class="line">a(<span class="number">2</span>) = <span class="number">3</span>*x(t(<span class="number">2</span>))+<span class="number">4</span>;</span><br><span class="line"><span class="built_in">plot</span>(x(t),a,<span class="string">'ro'</span>,x,y1,x,y2,<span class="string">'g'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>两种方法图像是一样的<img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab代码练习图片1.png" alt=""></p>
+</li>
 </ul>
 <ul>
 <li><p>随机生成三个点，判断这三点是否能构成一个三角形若能构成三角形则输出其面积。</p>
@@ -781,7 +786,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">38.4k</span>
+    <span title="Site words total count">38.6k</span>
   
 </div>
 
