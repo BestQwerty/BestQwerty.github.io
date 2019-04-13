@@ -97,7 +97,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab矩阵双下标索引.jpg">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab下标索引2.jpg">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab中常用函数.png">
-<meta property="og:updated_time" content="2019-04-13T11:11:30.597Z">
+<meta property="og:updated_time" content="2019-04-13T11:30:25.529Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab矩阵以及常用函数">
 <meta name="twitter:description" content="函数调用 调用函数文件的一般格式为 [输出参数表]=函数名(输入参数表)  调用函数时应注意： 当调用一个函数时，输入和输出参数的顺序应与函数定义时的一致，其数目可以 按少于函数文件中所规定的输入和输出参数调用函数，但不能使用多于函数文件所规定的 输入和输出参数数目。如果输入和输出参数数目多于或少于函数文件所允许的数目，则调 用时自动返回错误信息。 当函数有一个以上输出参数时，输出参数包含在方括号">
@@ -368,7 +368,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-13T19:11:30+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-13T19:30:25+08:00">
                 2019-04-13
               </time>
             
@@ -560,7 +560,7 @@
 <li><p>栗子:</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">clc,clear;</span><br><span class="line">close all;</span><br><span class="line">a = [<span class="number">1</span> <span class="number">2</span></span><br><span class="line">    <span class="number">3</span> <span class="number">4</span></span><br><span class="line">    <span class="number">5</span> <span class="number">6</span>];</span><br><span class="line">a([<span class="number">1</span> <span class="number">2</span>],[<span class="number">1</span> <span class="number">2</span>]) <span class="comment">%双下标索引</span></span><br><span class="line">a([<span class="number">1</span> <span class="number">2</span>])</span><br><span class="line">a([<span class="number">1</span> <span class="number">3</span>; <span class="number">2</span> <span class="number">4</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">%answer</span></span><br><span class="line"><span class="comment">%第一行与第二行和第一列与第二列相交的元素</span></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">2</span></span><br><span class="line">     <span class="number">3</span>     <span class="number">4</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">3</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">5</span></span><br><span class="line">     <span class="number">3</span>     <span class="number">2</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p><code>a(:)</code>代表提取a矩阵所有的元素，原理是排序法则(列优先)。</p>
+<li><p><code>a(:)</code>代表提取a矩阵<strong>所有的元素</strong>，原理是排序法则(列优先)。</p>
 <ul>
 <li><code>a( : , : )</code>也是提取a矩阵所有的元素，与原矩阵相同</li>
 </ul>
@@ -997,7 +997,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">38.1k</span>
+    <span title="Site words total count">38.4k</span>
   
 </div>
 

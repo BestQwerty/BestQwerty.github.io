@@ -81,20 +81,20 @@
 
 
 
-<meta name="description" content="前言 在求线性规划题目时，可以将函数图像相交的点求出来，作为横坐标端点即先求后画.其它题目有时可以先求后解，算一个别样的技巧吧  绘图基础 可以直接在图形窗口上修改图形 如果当前不存在图形窗口，MATLAB 的绘图函数会自动 建立一个新的图形窗口；如果已存在一个图形窗口，MATLAB 的绘图函数就会在这个窗口 中进行绘图操作；如果已存在多个图形窗口，MATLAB 的绘图函数就会在当前窗口中进行 绘">
+<meta name="description" content="前言 在求线性规划题目时，可以将函数图像相交的点求出来，作为横坐标端点即先求后画.其它题目有时可以先求后解，算一个别样的技巧吧 最好加一个close all;  绘图基础 可以直接在图形窗口上修改图形 如果当前不存在图形窗口，MATLAB 的绘图函数会自动 建立一个新的图形窗口；如果已存在一个图形窗口，MATLAB 的绘图函数就会在这个窗口 中进行绘图操作；如果已存在多个图形窗口，MATLAB 的">
 <meta name="keywords" content="matlab">
 <meta property="og:type" content="article">
 <meta property="og:title" content="matlab绘图">
 <meta property="og:url" content="ctguljj.github.io/2019/03/28/matlab绘图/index.html">
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
-<meta property="og:description" content="前言 在求线性规划题目时，可以将函数图像相交的点求出来，作为横坐标端点即先求后画.其它题目有时可以先求后解，算一个别样的技巧吧  绘图基础 可以直接在图形窗口上修改图形 如果当前不存在图形窗口，MATLAB 的绘图函数会自动 建立一个新的图形窗口；如果已存在一个图形窗口，MATLAB 的绘图函数就会在这个窗口 中进行绘图操作；如果已存在多个图形窗口，MATLAB 的绘图函数就会在当前窗口中进行 绘">
+<meta property="og:description" content="前言 在求线性规划题目时，可以将函数图像相交的点求出来，作为横坐标端点即先求后画.其它题目有时可以先求后解，算一个别样的技巧吧 最好加一个close all;  绘图基础 可以直接在图形窗口上修改图形 如果当前不存在图形窗口，MATLAB 的绘图函数会自动 建立一个新的图形窗口；如果已存在一个图形窗口，MATLAB 的绘图函数就会在这个窗口 中进行绘图操作；如果已存在多个图形窗口，MATLAB 的">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab绘图例题1.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/plot绘图.png">
-<meta property="og:updated_time" content="2019-04-13T02:20:30.380Z">
+<meta property="og:updated_time" content="2019-04-13T11:37:11.991Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab绘图">
-<meta name="twitter:description" content="前言 在求线性规划题目时，可以将函数图像相交的点求出来，作为横坐标端点即先求后画.其它题目有时可以先求后解，算一个别样的技巧吧  绘图基础 可以直接在图形窗口上修改图形 如果当前不存在图形窗口，MATLAB 的绘图函数会自动 建立一个新的图形窗口；如果已存在一个图形窗口，MATLAB 的绘图函数就会在这个窗口 中进行绘图操作；如果已存在多个图形窗口，MATLAB 的绘图函数就会在当前窗口中进行 绘">
+<meta name="twitter:description" content="前言 在求线性规划题目时，可以将函数图像相交的点求出来，作为横坐标端点即先求后画.其它题目有时可以先求后解，算一个别样的技巧吧 最好加一个close all;  绘图基础 可以直接在图形窗口上修改图形 如果当前不存在图形窗口，MATLAB 的绘图函数会自动 建立一个新的图形窗口；如果已存在一个图形窗口，MATLAB 的绘图函数就会在这个窗口 中进行绘图操作；如果已存在多个图形窗口，MATLAB 的">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab绘图例题1.png">
 
 
@@ -362,7 +362,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-13T10:20:30+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-13T19:37:11+08:00">
                 2019-04-13
               </time>
             
@@ -468,6 +468,7 @@
       
         <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><ul>
 <li>在求线性规划题目时，可以将函数图像相交的点求出来，作为横坐标端点即先求后画.其它题目有时可以先求后解，算一个别样的技巧吧</li>
+<li>最好加一个<code>close all;</code></li>
 </ul>
 <h1 id="绘图基础"><a href="#绘图基础" class="headerlink" title="绘图基础"></a>绘图基础</h1><ul>
 <li>可以直接在图形窗口上修改图形</li>
@@ -532,7 +533,7 @@
 </ul>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">		</span><br><span class="line">字母        颜色          标点           线型</span><br><span class="line">    y            黄色             ·              点线</span><br><span class="line">    m           粉红            ○             圈线</span><br><span class="line">    c            亮蓝            ×             ×线</span><br><span class="line">    r             大红           ＋             ＋字线  </span><br><span class="line">    g            绿色           －              实线</span><br><span class="line">    b            蓝色           *               星形线</span><br><span class="line">    w           白色            ：             虚线</span><br><span class="line">    k            黑色         －·  (--)        点划线</span><br><span class="line"></span><br><span class="line">    v                 下三角</span><br><span class="line">        ^                  上三角</span><br><span class="line">        &lt;                  左三角</span><br><span class="line">      &gt;                  右三角</span><br><span class="line">       square           正方形</span><br><span class="line">       diamond        菱形</span><br><span class="line">       pentagram     五角星</span><br><span class="line">       hexagram      六角星</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">		</span><br><span class="line">字母        颜色          标点           线型</span><br><span class="line">    y            黄色             :             点线</span><br><span class="line">    m           粉红            ○             圈线</span><br><span class="line">    c            亮蓝            ×             ×线</span><br><span class="line">    r             大红           ＋             ＋字线  </span><br><span class="line">    g            绿色           -              实线</span><br><span class="line">    b            蓝色           *               星形线</span><br><span class="line">    w           白色            --             虚线</span><br><span class="line">    k            黑色         -.        点划线</span><br><span class="line"> 							</span><br><span class="line"></span><br><span class="line">    v                 下三角</span><br><span class="line">        ^                  上三角</span><br><span class="line">        &lt;                  左三角</span><br><span class="line">      &gt;                  右三角</span><br><span class="line">       square           正方形</span><br><span class="line">       diamond        菱形</span><br><span class="line">       pentagram     五角星</span><br><span class="line">       hexagram      六角星</span><br></pre></td></tr></table></figure>
 <p>例题<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">t=<span class="number">0</span>:<span class="built_in">pi</span>/<span class="number">100</span>:<span class="number">2</span>*<span class="built_in">pi</span>;</span><br><span class="line">y=<span class="built_in">sin</span>(t);</span><br><span class="line">y1=<span class="built_in">sin</span>(t+<span class="number">0.25</span>);</span><br><span class="line">y2=<span class="built_in">sin</span>(t+<span class="number">0.5</span>);</span><br><span class="line">y3=<span class="built_in">cos</span>(t);</span><br><span class="line">y4=<span class="built_in">cos</span>(t+<span class="number">0.25</span>);</span><br><span class="line">y5=<span class="built_in">cos</span>(t+<span class="number">0.5</span>);</span><br><span class="line"><span class="built_in">plot</span>(t,[y',y1',y2',y3',y4',y5'])</span><br></pre></td></tr></table></figure></p>
 <ul>
 <li><p><code>plot(X,Y,’S’)</code>命令</p>
@@ -871,7 +872,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">38.1k</span>
+    <span title="Site words total count">38.4k</span>
   
 </div>
 
