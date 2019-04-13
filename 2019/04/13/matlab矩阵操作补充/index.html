@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="matlab,">
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="静静地Coding &amp;&amp; Thinking">
+<meta name="description" content="🤗">
+<meta name="keywords" content="matlab">
 <meta property="og:type" content="article">
 <meta property="og:title" content="matlab矩阵操作补充">
 <meta property="og:url" content="ctguljj.github.io/2019/04/13/matlab矩阵操作补充/index.html">
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
-<meta property="og:description" content="静静地Coding &amp;&amp; Thinking">
+<meta property="og:description" content="🤗">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-13T04:01:11.802Z">
+<meta property="og:updated_time" content="2019-04-13T06:00:39.876Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab矩阵操作补充">
-<meta name="twitter:description" content="静静地Coding &amp;&amp; Thinking">
+<meta name="twitter:description" content="🤗">
 
 
 
@@ -358,12 +359,56 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-13T12:01:11+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-13T14:00:39+08:00">
                 2019-04-13
               </time>
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/matlab/" itemprop="url" rel="index">
+                    <span itemprop="name">matlab</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/matlab/矩阵/" itemprop="url" rel="index">
+                    <span itemprop="name">矩阵</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/matlab/矩阵/基础/" itemprop="url" rel="index">
+                    <span itemprop="name">基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 		  <span class="post-time">
 					&nbsp; | &nbsp;
@@ -371,7 +416,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">0(字)</span> 
+					<span class="post-count">108(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -415,6 +460,10 @@
           
 
           
+              <div class="post-description">
+                  🤗
+              </div>
+          
 
         </div>
       </header>
@@ -429,7 +478,15 @@
       
 
       
-        
+        <h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><ul>
+<li><p>删除例题2中第1、3、5、7行以及第3、8列。</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">clc;clear;</span><br><span class="line">a=<span class="built_in">ones</span>(<span class="number">10</span>);  </span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span>=<span class="number">2</span>:<span class="number">10</span>    </span><br><span class="line">     a(<span class="built_in">i</span>,:)=<span class="built_in">i</span>; </span><br><span class="line"> <span class="keyword">end</span></span><br><span class="line"> a( <span class="number">1</span>:<span class="number">2</span>:<span class="number">7</span> , :)  = [ ];</span><br><span class="line"> a( : , [<span class="number">3</span> <span class="number">8</span>] ) = [ ]; <span class="comment">%体会[]与：的运用</span></span><br><span class="line"> a</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>矩阵与某数字相加</strong>，所有元素全部加上这个数字，构成新矩阵。数字相减也是一样</p>
+</li>
+<li><strong>数字与矩阵相乘</strong>，也是所有元素全部乘以这个数字，构成新矩阵。除法也是</li>
+</ul>
+
       
     </div>
     
@@ -450,6 +507,12 @@
 	
 	  </div>
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/matlab/" rel="tag"># matlab</a>
+          
+        </div>
       
 	  
 		  <footer class="post-footer">
@@ -481,6 +544,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/13/matlab常用函数之sum/" rel="prev" title="matlab常用函数之sum">
+                matlab常用函数之sum <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -561,8 +628,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -579,7 +655,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">79</span>
+                  <span class="site-state-item-count">80</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -590,7 +666,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">69</span>
+                  <span class="site-state-item-count">72</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -632,6 +708,22 @@ var jiathis_config={
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵"><span class="nav-number">1.</span> <span class="nav-text">矩阵</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -666,7 +758,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">37.1k</span>
+    <span title="Site words total count">37.6k</span>
   
 </div>
 

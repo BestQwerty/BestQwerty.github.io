@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-04-13T04:01:11.802Z</updated>
+  <updated>2019-04-13T06:13:53.239Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -17,16 +17,54 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>matlab常用函数之sum</title>
+    <link href="ctguljj.github.io/2019/04/13/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bsum/"/>
+    <id>ctguljj.github.io/2019/04/13/matlab常用函数之sum/</id>
+    <published>2019-04-13T06:08:55.000Z</published>
+    <updated>2019-04-13T06:13:53.239Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="sum"><a href="#sum" class="headerlink" title="sum"></a>sum</h1><ul><li>其实<code>sum(a)</code>默认的是<code>sum(a,1)</code>,还有<code>sum(a,2)</code>。<ul><li><code>sum(a,1)</code>把矩阵的每一列分别加起来形成新的行矩阵。</li><li><code>sum(a,2)</code>把矩阵的每一行分别加起来形成新的列矩阵。</li></ul></li><li>提示：矩阵a是行矩阵时，<code>sum(a)</code>不再是<code>sum(a,1)</code>,而转换为了<code>sum(a,2)</code>。</li><li>求一个矩阵所有元素<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">clc,clear;</span><br><span class="line">close all;</span><br><span class="line">a = [<span class="number">1</span> <span class="number">2</span> </span><br><span class="line">    <span class="number">3</span> <span class="number">4</span></span><br><span class="line">    <span class="number">5</span> <span class="number">6</span>];</span><br><span class="line">sum(a)</span><br><span class="line">sum(sum(a))</span><br><span class="line">sum(a(:))</span><br><span class="line">sum(a(:, :)) <span class="comment">%a(:, :)与原矩阵相同</span></span><br><span class="line"><span class="comment">%answer</span></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">     <span class="number">9</span>    <span class="number">12</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">    <span class="number">21</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">    <span class="number">21</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">     <span class="number">9</span>    <span class="number">12</span></span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      😃
+    
+    </summary>
+    
+      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+    
+      <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
+    
+      <category term="sum" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/sum/"/>
+    
+    
+      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+    
+  </entry>
+  
+  <entry>
     <title>matlab矩阵操作补充</title>
     <link href="ctguljj.github.io/2019/04/13/matlab%E7%9F%A9%E9%98%B5%E6%93%8D%E4%BD%9C%E8%A1%A5%E5%85%85/"/>
     <id>ctguljj.github.io/2019/04/13/matlab矩阵操作补充/</id>
     <published>2019-04-13T04:01:11.000Z</published>
-    <updated>2019-04-13T04:01:11.802Z</updated>
+    <updated>2019-04-13T06:00:39.876Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><ul><li><p>删除例题2中第1、3、5、7行以及第3、8列。</p><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">clc;clear;</span><br><span class="line">a=<span class="built_in">ones</span>(<span class="number">10</span>);  </span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span>=<span class="number">2</span>:<span class="number">10</span>    </span><br><span class="line">     a(<span class="built_in">i</span>,:)=<span class="built_in">i</span>; </span><br><span class="line"> <span class="keyword">end</span></span><br><span class="line"> a( <span class="number">1</span>:<span class="number">2</span>:<span class="number">7</span> , :)  = [ ];</span><br><span class="line"> a( : , [<span class="number">3</span> <span class="number">8</span>] ) = [ ]; <span class="comment">%体会[]与：的运用</span></span><br><span class="line"> a</span><br></pre></td></tr></table></figure></li><li><p><strong>矩阵与某数字相加</strong>，所有元素全部加上这个数字，构成新矩阵。数字相减也是一样</p></li><li><strong>数字与矩阵相乘</strong>，也是所有元素全部乘以这个数字，构成新矩阵。除法也是</li></ul>]]></content>
     
     <summary type="html">
     
+      🤗
+    
     </summary>
     
+      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+    
+      <category term="矩阵" scheme="ctguljj.github.io/categories/matlab/%E7%9F%A9%E9%98%B5/"/>
+    
+      <category term="基础" scheme="ctguljj.github.io/categories/matlab/%E7%9F%A9%E9%98%B5/%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
     
   </entry>
   
@@ -419,9 +457,9 @@
     <link href="ctguljj.github.io/2019/04/04/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bmean/"/>
     <id>ctguljj.github.io/2019/04/04/matlab常用函数之mean/</id>
     <published>2019-04-04T13:18:25.000Z</published>
-    <updated>2019-04-11T08:41:46.238Z</updated>
+    <updated>2019-04-13T06:18:09.563Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="mean-数组的均值"><a href="#mean-数组的均值" class="headerlink" title="mean(数组的均值)"></a>mean(数组的均值)</h1><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/mean.html" target="_blank" rel="noopener">文档</a></li><li>调用格式:<ul><li><code>M = mean(A)</code>返回 A 沿大小不等于 1 的第一个数组维度的元素的均值。<ul><li>如果 A 是向量，则<code>mean(A)</code>返回元素均值。</li><li>如果 A 为矩阵，那么 <code>mean(A)</code> <strong>返回包含每列均值的行向量。</strong></li><li>如果 A 是多维数组，则 <code>mean(A)</code> 沿大小不等于 1 的第一个数组维度计算，并将这些元素视为向量。此维度会变为 1，而所有其他维度的大小保持不变。</li></ul></li><li><code>M = mean(A,&#39;all&#39;)</code>计算 A 的所有元素的均值。</li><li><code>M = mean(A,dim)</code>返回维度 dim 上的均值。例如，如果 A 为矩阵，则 <code>mean(A,2)</code> 是包含每一行均值的列向量。</li><li><code>M = mean(A,vecdim)</code>计算向量 vecdim 所指定的维度上的均值。例如，如果 A 是矩阵，则 <code>mean(A,[1 2])</code>是 A 中所有元素的均值，因为矩阵的每个元素都包含在由维度 1 和 2 定义的数组切片中。</li><li><code>M = mean(___,outtype)</code>使用前面语法中的任何输入参数返回指定的数据类型的均值。outtype 可以是 ‘default’、’double’ 或 ‘native’。</li><li><code>M = mean(___,nanflag)</code>指定在上述任意语法的计算中包括还是忽略 NaN 值。<code>mean(A,&#39;includenan&#39;)</code> 会在计算中包括所有 NaN 值，而 <code>mean(A,&#39;omitnan&#39;)</code> 则忽略这些值。</li></ul></li><li>栗子:<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">%创建一个矩阵并计算每列的均值</span></span><br><span class="line">A = [<span class="number">0</span> <span class="number">1</span> <span class="number">1</span>; <span class="number">2</span> <span class="number">3</span> <span class="number">2</span>; <span class="number">1</span> <span class="number">3</span> <span class="number">2</span>; <span class="number">4</span> <span class="number">2</span> <span class="number">2</span>]</span><br><span class="line"><span class="comment">%A = 4×3</span></span><br><span class="line">    <span class="number">0</span>     <span class="number">1</span>     <span class="number">1</span></span><br><span class="line">    <span class="number">2</span>     <span class="number">3</span>     <span class="number">2</span></span><br><span class="line">    <span class="number">1</span>     <span class="number">3</span>     <span class="number">2</span></span><br><span class="line">    <span class="number">4</span>     <span class="number">2</span>     <span class="number">2</span></span><br><span class="line">M = <span class="built_in">mean</span>(A)</span><br><span class="line"><span class="comment">%M = 1×3</span></span><br><span class="line">    <span class="number">1.7500</span>    <span class="number">2.2500</span>    <span class="number">1.7500</span></span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="mean-数组的均值"><a href="#mean-数组的均值" class="headerlink" title="mean(数组的均值)"></a>mean(数组的均值)</h1><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/mean.html" target="_blank" rel="noopener">文档</a></li><li><p>调用格式:</p><ul><li><p><code>M = mean(A)</code>返回 A 沿大小不等于 1 的第一个数组维度的元素的均值。</p><ul><li>如果 A 是向量，则<code>mean(A)</code>返回元素均值。</li><li>如果 A 为矩阵，那么 <code>mean(A)</code> <strong>返回包含每列均值的行向量。</strong></li><li>如果 A 是多维数组，则 <code>mean(A)</code> 沿大小不等于 1 的第一个数组维度计算，并将这些元素视为向量。此维度会变为 1，而所有其他维度的大小保持不变。</li><li><code>mean(a)</code>默认的是<code>mean(a,1)</code>。</li><li>矩阵a是行矩阵时，<code>mean(a)</code>不再是<code>mean(a,1)</code>,而转换为了<code>mean(a,2)</code>。</li><li>要求总平均值，可以：<code>mean( a(:) )</code>,下面还有几种方法</li></ul></li><li><p><code>M = mean(A,&#39;all&#39;)</code>计算 A 的所有元素的均值。</p></li><li><code>M = mean(A,dim)</code>返回维度 dim 上的均值。例如，如果 A 为矩阵，则 <code>mean(A,2)</code> 是包含每一行均值的列向量。</li><li><code>M = mean(A,vecdim)</code>计算向量 vecdim 所指定的维度上的均值。例如，如果 A 是矩阵，则 <code>mean(A,[1 2])</code>是 <strong>A 中所有元素的均值</strong>，因为<strong>矩阵的每个元素都包含在由维度 1 和 2 定义的数组切片中</strong>。</li><li><code>M = mean(___,outtype)</code>使用前面语法中的任何输入参数返回指定的数据类型的均值。outtype 可以是 ‘default’、’double’ 或 ‘native’。</li><li><code>M = mean(___,nanflag)</code>指定在上述任意语法的计算中包括还是忽略 NaN 值。<code>mean(A,&#39;includenan&#39;)</code> 会在计算中包括所有 NaN 值，而 <code>mean(A,&#39;omitnan&#39;)</code> 则忽略这些值。</li></ul></li><li>栗子:<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">%创建一个矩阵并计算每列的均值</span></span><br><span class="line">A = [<span class="number">0</span> <span class="number">1</span> <span class="number">1</span>; <span class="number">2</span> <span class="number">3</span> <span class="number">2</span>; <span class="number">1</span> <span class="number">3</span> <span class="number">2</span>; <span class="number">4</span> <span class="number">2</span> <span class="number">2</span>]</span><br><span class="line"><span class="comment">%A = 4×3</span></span><br><span class="line">    <span class="number">0</span>     <span class="number">1</span>     <span class="number">1</span></span><br><span class="line">    <span class="number">2</span>     <span class="number">3</span>     <span class="number">2</span></span><br><span class="line">    <span class="number">1</span>     <span class="number">3</span>     <span class="number">2</span></span><br><span class="line">    <span class="number">4</span>     <span class="number">2</span>     <span class="number">2</span></span><br><span class="line">M = <span class="built_in">mean</span>(A)</span><br><span class="line"><span class="comment">%M = 1×3</span></span><br><span class="line">    <span class="number">1.7500</span>    <span class="number">2.2500</span>    <span class="number">1.7500</span></span><br></pre></td></tr></table></figure></li></ul>]]></content>
     
     <summary type="html">
     
@@ -496,37 +534,6 @@
       <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
     
       <category term="rand及其相关函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/rand%E5%8F%8A%E5%85%B6%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0/"/>
-    
-    
-      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>matlab常用函数之num2str与str2num</title>
-    <link href="ctguljj.github.io/2019/04/03/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bnum2str%E4%B8%8Estr2num/"/>
-    <id>ctguljj.github.io/2019/04/03/matlab常用函数之num2str与str2num/</id>
-    <published>2019-04-03T12:08:27.000Z</published>
-    <updated>2019-04-03T12:24:47.622Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="num2str"><a href="#num2str" class="headerlink" title="num2str"></a>num2str</h1><ul><li>调用格式:<ul><li><code>s = num2str(A)</code></li><li><code>s = num2str(A,precision)</code>precision: Maximum number of significant digits.把数组A转换成字符串形式表示，precision表示精度， 比如precision为3表示保留最多3位有效数字</li><li><code>s = num2str(A,formatSpec)</code> formatspec: Format of output fields.按format指定格式进行格式化转换，通常’%11.4g’是默认的。</li></ul></li></ul><h1 id="str2num"><a href="#str2num" class="headerlink" title="str2num"></a>str2num</h1><ul><li>调用格式:<ul><li><code>x = str2num(&#39;str&#39;)</code>str是一个ASCII字符串表示的数值， 这种调用格式把字符串转换成数值。str也可以是一个字符串矩阵， 这种情况下， 字符串矩阵被转换成一个数值矩阵。</li><li><code>[x, status] = str2num(&#39;str&#39;)</code>附加的返回值status用于获取转换状态， status等于逻辑1表示转换成功， 等于0表示转换失败。<ul><li>例题：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"> str2num(&apos;2 4 6 8&apos;)              % Separate with spaces.</span><br><span class="line"> ans =</span><br><span class="line">       2     4     6     8</span><br><span class="line"></span><br><span class="line"> str2num(&apos;2,4,6,8&apos;)              % Separate with commas.</span><br><span class="line"> ans =</span><br><span class="line">      2     4     6     8</span><br><span class="line"></span><br><span class="line">  str2num(&apos;[2 4 6 8]&apos;)            % Enclose in brackets.</span><br><span class="line"> ans =</span><br><span class="line">      2     4     6     8 </span><br><span class="line">str2num(&apos;2; 4; 6; 8&apos;)</span><br><span class="line">ans =</span><br><span class="line">    2</span><br><span class="line">    4</span><br><span class="line">    6</span><br><span class="line">    8</span><br><span class="line">And now a 2-by-2 matrix:</span><br><span class="line"></span><br><span class="line">str2num(&apos;2 4; 6 8&apos;)</span><br><span class="line">ans =</span><br><span class="line">    2     4</span><br><span class="line">    6     8</span><br></pre></td></tr></table></figure></li></ul></li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;num2str&quot;&gt;&lt;a href=&quot;#num2str&quot; class=&quot;headerlink&quot; title=&quot;num2str&quot;&gt;&lt;/a&gt;num2str&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;调用格式:&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;s = num2str(A)&lt;/code&gt;&lt;/l
-      
-    
-    </summary>
-    
-      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
-    
-      <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
-    
-      <category term="str2num与num2str" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/str2num%E4%B8%8Enum2str/"/>
     
     
       <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>

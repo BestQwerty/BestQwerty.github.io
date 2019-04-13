@@ -97,7 +97,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab矩阵双下标索引.jpg">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab下标索引2.jpg">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab中常用函数.png">
-<meta property="og:updated_time" content="2019-04-13T03:59:00.130Z">
+<meta property="og:updated_time" content="2019-04-13T06:17:17.422Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab矩阵以及常用函数">
 <meta name="twitter:description" content="函数调用 调用函数文件的一般格式为 [输出参数表]=函数名(输入参数表)  调用函数时应注意： 当调用一个函数时，输入和输出参数的顺序应与函数定义时的一致，其数目可以 按少于函数文件中所规定的输入和输出参数调用函数，但不能使用多于函数文件所规定的 输入和输出参数数目。如果输入和输出参数数目多于或少于函数文件所允许的数目，则调 用时自动返回错误信息。 当函数有一个以上输出参数时，输出参数包含在方括号">
@@ -368,7 +368,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-13T11:59:00+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-13T14:17:17+08:00">
                 2019-04-13
               </time>
             
@@ -414,7 +414,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">4.2k(字)</span> 
+					<span class="post-count">4.4k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -512,6 +512,15 @@
 </li>
 </ul>
 <h1 id="矩阵除法"><a href="#矩阵除法" class="headerlink" title="矩阵除法"></a>矩阵除法</h1><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab矩阵除法.png" alt=""><br><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab解方程.jpg" alt=""></p>
+<ul>
+<li>解线性方程组时，我们需要用到矩阵的除法。<ul>
+<li>a为系数矩阵，b为结果矩阵，x为解集矩阵。</li>
+<li>当遇到A*X=B时，两边左除A，X=A\B。</li>
+<li>当遇到X*A=B时，两边右除A，X=B/A。</li>
+</ul>
+</li>
+<li>如果我们需要矩阵A与B对应元素相除，依旧点除。</li>
+</ul>
 <h1 id="矩阵旋转"><a href="#矩阵旋转" class="headerlink" title="矩阵旋转"></a>矩阵旋转</h1><p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab矩阵旋转.png" alt=""></p>
 <ul>
 <li>对于函数rot90顺时针旋转90度，可以<code>rot90(a,3);</code>或者<code>rot90(a,-1);</code></li>
@@ -548,7 +557,13 @@
 <li><p>如果我要把第1、3个元素放入第一行，第2、4个元素放入第二行，可以<code>a( [ 1 3;2 4 ] )</code>。</p>
 </li>
 <li><code>a( [1,2,3] )</code>逗号,空格都用来分隔</li>
-<li>栗子:<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">clc,clear;</span><br><span class="line">close all;</span><br><span class="line">a = [<span class="number">1</span> <span class="number">2</span></span><br><span class="line">    <span class="number">3</span> <span class="number">4</span></span><br><span class="line">    <span class="number">5</span> <span class="number">6</span>];</span><br><span class="line">a([<span class="number">1</span> <span class="number">2</span>],[<span class="number">1</span> <span class="number">2</span>]) <span class="comment">%双下标索引</span></span><br><span class="line">a([<span class="number">1</span> <span class="number">2</span>])</span><br><span class="line">a([<span class="number">1</span> <span class="number">3</span>; <span class="number">2</span> <span class="number">4</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">%answer</span></span><br><span class="line"><span class="comment">%第一行与第二行和第一列与第二列相交的元素</span></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">2</span></span><br><span class="line">     <span class="number">3</span>     <span class="number">4</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">3</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">5</span></span><br><span class="line">     <span class="number">3</span>     <span class="number">2</span></span><br></pre></td></tr></table></figure>
+<li><p>栗子:</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">clc,clear;</span><br><span class="line">close all;</span><br><span class="line">a = [<span class="number">1</span> <span class="number">2</span></span><br><span class="line">    <span class="number">3</span> <span class="number">4</span></span><br><span class="line">    <span class="number">5</span> <span class="number">6</span>];</span><br><span class="line">a([<span class="number">1</span> <span class="number">2</span>],[<span class="number">1</span> <span class="number">2</span>]) <span class="comment">%双下标索引</span></span><br><span class="line">a([<span class="number">1</span> <span class="number">2</span>])</span><br><span class="line">a([<span class="number">1</span> <span class="number">3</span>; <span class="number">2</span> <span class="number">4</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">%answer</span></span><br><span class="line"><span class="comment">%第一行与第二行和第一列与第二列相交的元素</span></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">2</span></span><br><span class="line">     <span class="number">3</span>     <span class="number">4</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">3</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">5</span></span><br><span class="line">     <span class="number">3</span>     <span class="number">2</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>a(:)</code>代表提取a矩阵所有的元素，原理是排序法则(列优先)。</p>
+<ul>
+<li><code>a( : , : )</code>也是提取a矩阵所有的元素，与原矩阵相同</li>
+</ul>
 </li>
 </ul>
 <h2 id="双下标索引"><a href="#双下标索引" class="headerlink" title="双下标索引"></a>双下标索引</h2><ul>
@@ -627,22 +642,12 @@
 </ul>
 </li>
 <li><div class="note danger"><p>注意如果a = 123,此时sort(a)没有作用，因为a是一个数，一个变量，不是集合！！排不了。就像对15这个数一样，sort是对2个及其以上元素排序</p></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </li>
+<li><p><code>sort(a,1)</code>把矩阵的每一列分别从小到大排成新的矩阵。</p>
+</li>
+<li><code>sort(a,2)</code>把矩阵的每一行分别从小到大排成新的矩阵。</li>
+<li><code>sort(a)</code>默认的是<code>sort(a,1)</code>。</li>
+<li>矩阵a是行矩阵时，<code>sort(a)</code>不再是<code>sort(a,1)</code>,而转换为了<code>sort(a,2)</code>。</li>
 </ul>
 <h2 id="MATLAB判断一个数是否整数"><a href="#MATLAB判断一个数是否整数" class="headerlink" title="MATLAB判断一个数是否整数"></a>MATLAB判断一个数是否整数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">if x==fix(x)</span><br><span class="line">% x为整数</span><br><span class="line">%fix（x)为取整</span><br><span class="line"> end</span><br></pre></td></tr></table></figure>
 <h2 id="mod函数"><a href="#mod函数" class="headerlink" title="mod函数"></a>mod函数</h2><ul>
@@ -864,7 +869,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">79</span>
+                  <span class="site-state-item-count">80</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -875,7 +880,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">69</span>
+                  <span class="site-state-item-count">72</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -967,7 +972,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">37.1k</span>
+    <span title="Site words total count">37.6k</span>
   
 </div>
 

@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="😄">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-11T08:41:46.238Z">
+<meta property="og:updated_time" content="2019-04-13T06:18:09.563Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab常用函数之mean">
 <meta name="twitter:description" content="😄">
@@ -359,8 +359,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-11T16:41:46+08:00">
-                2019-04-11
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-13T14:18:09+08:00">
+                2019-04-13
               </time>
             
           </span>
@@ -416,7 +416,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">405(字)</span> 
+					<span class="post-count">456(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -480,16 +480,22 @@
       
         <h1 id="mean-数组的均值"><a href="#mean-数组的均值" class="headerlink" title="mean(数组的均值)"></a>mean(数组的均值)</h1><ul>
 <li><a href="https://ww2.mathworks.cn/help/matlab/ref/mean.html" target="_blank" rel="noopener">文档</a></li>
-<li>调用格式:<ul>
-<li><code>M = mean(A)</code>返回 A 沿大小不等于 1 的第一个数组维度的元素的均值。<ul>
+<li><p>调用格式:</p>
+<ul>
+<li><p><code>M = mean(A)</code>返回 A 沿大小不等于 1 的第一个数组维度的元素的均值。</p>
+<ul>
 <li>如果 A 是向量，则<code>mean(A)</code>返回元素均值。</li>
 <li>如果 A 为矩阵，那么 <code>mean(A)</code> <strong>返回包含每列均值的行向量。</strong></li>
 <li>如果 A 是多维数组，则 <code>mean(A)</code> 沿大小不等于 1 的第一个数组维度计算，并将这些元素视为向量。此维度会变为 1，而所有其他维度的大小保持不变。</li>
+<li><code>mean(a)</code>默认的是<code>mean(a,1)</code>。</li>
+<li>矩阵a是行矩阵时，<code>mean(a)</code>不再是<code>mean(a,1)</code>,而转换为了<code>mean(a,2)</code>。</li>
+<li>要求总平均值，可以：<code>mean( a(:) )</code>,下面还有几种方法</li>
 </ul>
 </li>
-<li><code>M = mean(A,&#39;all&#39;)</code>计算 A 的所有元素的均值。</li>
+<li><p><code>M = mean(A,&#39;all&#39;)</code>计算 A 的所有元素的均值。</p>
+</li>
 <li><code>M = mean(A,dim)</code>返回维度 dim 上的均值。例如，如果 A 为矩阵，则 <code>mean(A,2)</code> 是包含每一行均值的列向量。</li>
-<li><code>M = mean(A,vecdim)</code>计算向量 vecdim 所指定的维度上的均值。例如，如果 A 是矩阵，则 <code>mean(A,[1 2])</code>是 A 中所有元素的均值，因为矩阵的每个元素都包含在由维度 1 和 2 定义的数组切片中。</li>
+<li><code>M = mean(A,vecdim)</code>计算向量 vecdim 所指定的维度上的均值。例如，如果 A 是矩阵，则 <code>mean(A,[1 2])</code>是 <strong>A 中所有元素的均值</strong>，因为<strong>矩阵的每个元素都包含在由维度 1 和 2 定义的数组切片中</strong>。</li>
 <li><code>M = mean(___,outtype)</code>使用前面语法中的任何输入参数返回指定的数据类型的均值。outtype 可以是 ‘default’、’double’ 或 ‘native’。</li>
 <li><code>M = mean(___,nanflag)</code>指定在上述任意语法的计算中包括还是忽略 NaN 值。<code>mean(A,&#39;includenan&#39;)</code> 会在计算中包括所有 NaN 值，而 <code>mean(A,&#39;omitnan&#39;)</code> 则忽略这些值。</li>
 </ul>
@@ -665,7 +671,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">79</span>
+                  <span class="site-state-item-count">80</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -676,7 +682,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">69</span>
+                  <span class="site-state-item-count">72</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -768,7 +774,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">37.1k</span>
+    <span title="Site words total count">37.6k</span>
   
 </div>
 
