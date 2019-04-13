@@ -91,7 +91,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab绘图例题1.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/plot绘图.png">
-<meta property="og:updated_time" content="2019-04-13T11:37:11.991Z">
+<meta property="og:updated_time" content="2019-04-13T12:35:16.964Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab绘图">
 <meta name="twitter:description" content="前言 在求线性规划题目时，可以将函数图像相交的点求出来，作为横坐标端点即先求后画.其它题目有时可以先求后解，算一个别样的技巧吧 最好加一个close all;  绘图基础 可以直接在图形窗口上修改图形 如果当前不存在图形窗口，MATLAB 的绘图函数会自动 建立一个新的图形窗口；如果已存在一个图形窗口，MATLAB 的绘图函数就会在这个窗口 中进行绘图操作；如果已存在多个图形窗口，MATLAB 的">
@@ -362,7 +362,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-13T19:37:11+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-13T20:35:16+08:00">
                 2019-04-13
               </time>
             
@@ -476,6 +476,7 @@
 <li>matlab绘图是将<strong>图形每一个点标出后连接而成</strong>，因为横坐标间隔值不一定相同，所以2个图形相交y值不一定相等，<strong>找交点</strong><code>s=find(abs(y1-y2)&lt;0.01))</code>其中0.01设置具体看横坐标间隔值大小，否侧可能找不到<ul>
 <li>plot函数维度必须相同，因为图形是将点连接起来，所以x与y个数维度必须相同</li>
 <li>plot函数可以<strong>标点</strong>！<strong>画点</strong>(因为画图是画点再连接起来)</li>
+<li>注意s是横坐标x的下标，而且是向量(多个交点，多个下标)</li>
 </ul>
 </li>
 <li>注意：<ul>
