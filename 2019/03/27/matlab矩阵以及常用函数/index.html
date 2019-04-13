@@ -95,7 +95,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/reshape.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/size.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab中常用函数.png">
-<meta property="og:updated_time" content="2019-04-13T02:46:31.179Z">
+<meta property="og:updated_time" content="2019-04-13T03:52:09.466Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab矩阵以及常用函数">
 <meta name="twitter:description" content="函数调用 调用函数文件的一般格式为 [输出参数表]=函数名(输入参数表)  调用函数时应注意： 当调用一个函数时，输入和输出参数的顺序应与函数定义时的一致，其数目可以 按少于函数文件中所规定的输入和输出参数调用函数，但不能使用多于函数文件所规定的 输入和输出参数数目。如果输入和输出参数数目多于或少于函数文件所允许的数目，则调 用时自动返回错误信息。 当函数有一个以上输出参数时，输出参数包含在方括号">
@@ -366,7 +366,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-13T10:46:31+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-13T11:52:09+08:00">
                 2019-04-13
               </time>
             
@@ -412,7 +412,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">3.9k(字)</span> 
+					<span class="post-count">4.2k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -530,6 +530,24 @@
 <li>删除A的第i1~i2行，构成新矩阵:<code>A(i1:i2，：)=[ ]</code></li>
 <li>删除A的第j1~j2列，构成新矩阵:<code>A(：， j1:j2)=[ ]</code></li>
 <li>将矩阵A和B拼接成新矩阵：<code>[A  B]；%行连接[A；B]%列连接</code></li>
+</ul>
+<h2 id="按照matlab中列优先提取"><a href="#按照matlab中列优先提取" class="headerlink" title="按照matlab中列优先提取"></a>按照matlab中列优先提取</h2><ul>
+<li>形如<code>a(k)</code>的都是单下标索引，按照列优先原则</li>
+<li><p>想提取出a的2、5两个元素，并放入新矩阵中，可以使用<code>a( [ 2 5 ] )</code>,</p>
+<ul>
+<li>2和5必须用[ ]括起来,否则像<code>a(2 5)</code>计算机是读不出来的。</li>
+</ul>
+</li>
+<li><p>同理，提取<code>a( [ 1 3 5 ] )</code>是提取第1、3、5个矩阵并放入同一行，此时也可以使用<code>a(1:2:5)</code>，因为冒号存在，没有[ ]计算机也知道它的意思。</p>
+</li>
+<li><p>如果我要把第1、3个元素放入第一行，第2、4个元素放入第二行，可以<code>a( [ 1 3;2 4 ] )</code>。</p>
+</li>
+<li><code>a( [1,2,3] )</code>逗号,空格都用来分隔</li>
+<li>栗子:<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">clc,clear;</span><br><span class="line">close all;</span><br><span class="line">a = [<span class="number">1</span> <span class="number">2</span></span><br><span class="line">    <span class="number">3</span> <span class="number">4</span></span><br><span class="line">    <span class="number">5</span> <span class="number">6</span>];</span><br><span class="line">a([<span class="number">1</span> <span class="number">2</span>],[<span class="number">1</span> <span class="number">2</span>]) <span class="comment">%双下标索引</span></span><br><span class="line">a([<span class="number">1</span> <span class="number">2</span>])</span><br><span class="line">a([<span class="number">1</span> <span class="number">3</span>; <span class="number">2</span> <span class="number">4</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">%answer</span></span><br><span class="line"><span class="comment">%第一行与第二行和第一列与第二列相交的元素</span></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">2</span></span><br><span class="line">     <span class="number">3</span>     <span class="number">4</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">3</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">5</span></span><br><span class="line">     <span class="number">3</span>     <span class="number">2</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="双下标索引"><a href="#双下标索引" class="headerlink" title="双下标索引"></a>双下标索引</h2><ul>
+<li>若a是已知的矩阵，<code>a( [ 1 3 ] , [ 2 4 ] )</code>的意思是：把a第1、3行和第2、4行相交的元素，放入新矩阵中。并且位置和原来保持一致。</li>
 </ul>
 <h2 id="矩阵乘法"><a href="#矩阵乘法" class="headerlink" title="矩阵乘法"></a>矩阵乘法</h2><ul>
 <li>matlab 中.<em>和</em>有什么区别简单的说:<ul>
@@ -903,7 +921,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#函数调用"><span class="nav-number">1.</span> <span class="nav-text">函数调用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵"><span class="nav-number">2.</span> <span class="nav-text">矩阵</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵除法"><span class="nav-number">3.</span> <span class="nav-text">矩阵除法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵旋转"><span class="nav-number">4.</span> <span class="nav-text">矩阵旋转</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#reshape函数"><span class="nav-number">5.</span> <span class="nav-text">reshape函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#size函数"><span class="nav-number">6.</span> <span class="nav-text">size函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵元素的操作"><span class="nav-number">7.</span> <span class="nav-text">矩阵元素的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#矩阵乘法"><span class="nav-number">7.1.</span> <span class="nav-text">矩阵乘法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">8.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#diag"><span class="nav-number">8.1.</span> <span class="nav-text">diag</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#max"><span class="nav-number">8.2.</span> <span class="nav-text">max</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#matlab中的sort函数"><span class="nav-number">8.3.</span> <span class="nav-text">matlab中的sort函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MATLAB判断一个数是否整数"><span class="nav-number">8.4.</span> <span class="nav-text">MATLAB判断一个数是否整数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mod函数"><span class="nav-number">8.5.</span> <span class="nav-text">mod函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常用函数"><span class="nav-number">9.</span> <span class="nav-text">常用函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#匿名函数"><span class="nav-number">10.</span> <span class="nav-text">匿名函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自定义函数"><span class="nav-number">11.</span> <span class="nav-text">自定义函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数取值"><span class="nav-number">12.</span> <span class="nav-text">函数取值</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#find函数"><span class="nav-number">13.</span> <span class="nav-text">find函数</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#函数调用"><span class="nav-number">1.</span> <span class="nav-text">函数调用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵"><span class="nav-number">2.</span> <span class="nav-text">矩阵</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵除法"><span class="nav-number">3.</span> <span class="nav-text">矩阵除法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵旋转"><span class="nav-number">4.</span> <span class="nav-text">矩阵旋转</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#reshape函数"><span class="nav-number">5.</span> <span class="nav-text">reshape函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#size函数"><span class="nav-number">6.</span> <span class="nav-text">size函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵元素的操作"><span class="nav-number">7.</span> <span class="nav-text">矩阵元素的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#按照matlab中列优先提取"><span class="nav-number">7.1.</span> <span class="nav-text">按照matlab中列优先提取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#双下标索引"><span class="nav-number">7.2.</span> <span class="nav-text">双下标索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#矩阵乘法"><span class="nav-number">7.3.</span> <span class="nav-text">矩阵乘法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">8.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#diag"><span class="nav-number">8.1.</span> <span class="nav-text">diag</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#max"><span class="nav-number">8.2.</span> <span class="nav-text">max</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#matlab中的sort函数"><span class="nav-number">8.3.</span> <span class="nav-text">matlab中的sort函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MATLAB判断一个数是否整数"><span class="nav-number">8.4.</span> <span class="nav-text">MATLAB判断一个数是否整数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mod函数"><span class="nav-number">8.5.</span> <span class="nav-text">mod函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常用函数"><span class="nav-number">9.</span> <span class="nav-text">常用函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#匿名函数"><span class="nav-number">10.</span> <span class="nav-text">匿名函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自定义函数"><span class="nav-number">11.</span> <span class="nav-text">自定义函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数取值"><span class="nav-number">12.</span> <span class="nav-text">函数取值</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#find函数"><span class="nav-number">13.</span> <span class="nav-text">find函数</span></a></li></ol></div>
             
 
           </div>
@@ -944,7 +962,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">36.8k</span>
+    <span title="Site words total count">37.1k</span>
   
 </div>
 
