@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="运算符的优先级 运算符的优先级 AND 和 OR 运算符的优先级 MATLAB 始终将 &amp;amp; 运算符的优先级指定为高于 | 运算符。尽管 MATLAB 通常按从左到右的顺序计算表达式，但表达式 a|b&amp;amp;c 按 a|(b&amp;amp;c) 形式计算。对于包含 &amp;amp; 和 | 组合的语句，比较好的做法是使用括号显式指定期望的语句优先级。该优先级规则同样适用于 &amp;amp;&amp;amp; 和 |">
+<meta name="description" content="运算符 Error:Matlab ||和&amp;amp;&amp;amp;运算符的操作数必须能够转换为逻辑标量值 解决:||和&amp;amp;&amp;amp;为值运算， |与&amp;amp;为向量运算，改为|与&amp;amp;     &amp;amp;&amp;amp;和||被称为&amp;amp;和|的short circuit形式， A&amp;amp;B （1）首先判断A的逻辑值，然后判断B的值，然后进行逻辑与的计算。 （2）A和B可以为矩阵（e.g. A=">
 <meta name="keywords" content="matlab">
 <meta property="og:type" content="article">
 <meta property="og:title" content="matlab运算符">
 <meta property="og:url" content="ctguljj.github.io/2019/04/14/matlab运算符/index.html">
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
-<meta property="og:description" content="运算符的优先级 运算符的优先级 AND 和 OR 运算符的优先级 MATLAB 始终将 &amp;amp; 运算符的优先级指定为高于 | 运算符。尽管 MATLAB 通常按从左到右的顺序计算表达式，但表达式 a|b&amp;amp;c 按 a|(b&amp;amp;c) 形式计算。对于包含 &amp;amp; 和 | 组合的语句，比较好的做法是使用括号显式指定期望的语句优先级。该优先级规则同样适用于 &amp;amp;&amp;amp; 和 |">
+<meta property="og:description" content="运算符 Error:Matlab ||和&amp;amp;&amp;amp;运算符的操作数必须能够转换为逻辑标量值 解决:||和&amp;amp;&amp;amp;为值运算， |与&amp;amp;为向量运算，改为|与&amp;amp;     &amp;amp;&amp;amp;和||被称为&amp;amp;和|的short circuit形式， A&amp;amp;B （1）首先判断A的逻辑值，然后判断B的值，然后进行逻辑与的计算。 （2）A和B可以为矩阵（e.g. A=">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-14T13:24:01.227Z">
+<meta property="og:updated_time" content="2019-04-14T13:59:54.384Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab运算符">
-<meta name="twitter:description" content="运算符的优先级 运算符的优先级 AND 和 OR 运算符的优先级 MATLAB 始终将 &amp;amp; 运算符的优先级指定为高于 | 运算符。尽管 MATLAB 通常按从左到右的顺序计算表达式，但表达式 a|b&amp;amp;c 按 a|(b&amp;amp;c) 形式计算。对于包含 &amp;amp; 和 | 组合的语句，比较好的做法是使用括号显式指定期望的语句优先级。该优先级规则同样适用于 &amp;amp;&amp;amp; 和 |">
+<meta name="twitter:description" content="运算符 Error:Matlab ||和&amp;amp;&amp;amp;运算符的操作数必须能够转换为逻辑标量值 解决:||和&amp;amp;&amp;amp;为值运算， |与&amp;amp;为向量运算，改为|与&amp;amp;     &amp;amp;&amp;amp;和||被称为&amp;amp;和|的short circuit形式， A&amp;amp;B （1）首先判断A的逻辑值，然后判断B的值，然后进行逻辑与的计算。 （2）A和B可以为矩阵（e.g. A=">
 
 
 
@@ -359,7 +359,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-14T21:24:01+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-14T21:59:54+08:00">
                 2019-04-14
               </time>
             
@@ -416,7 +416,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">130(字)</span> 
+					<span class="post-count">437(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -474,12 +474,40 @@
       
 
       
-        <h1 id="运算符的优先级"><a href="#运算符的优先级" class="headerlink" title="运算符的优先级"></a>运算符的优先级</h1><ul>
+        <h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><ul>
+<li>Error:Matlab ||和&amp;&amp;运算符的操作数必须能够转换为逻辑标量值<ul>
+<li>解决:||和&amp;&amp;为值运算， |与&amp;为向量运算，改为|与&amp;</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>&amp;&amp;和||被称为&amp;和|的short circuit形式，<ul>
+<li>A&amp;B<ul>
+<li>（1）首先判断A的逻辑值，然后判断B的值，然后进行逻辑与的计算。</li>
+<li>（2）A和B可以为矩阵（e.g. A=[1 0],B=[0 0]）。</li>
+</ul>
+</li>
+<li>A&amp;&amp;B<ul>
+<li>（1）首先判断A的逻辑值，如果A的值为假，就可以判断整个表达式的值为假，就不需要再判断B的值。</li>
+<li>（2）A和B不能是矩阵，只能是标量。</li>
+</ul>
+</li>
+<li>“|”与“||”同理。</li>
+<li>A&amp;&amp;B 首先判断A的逻辑值，如果A的值为假，就可以判断整个表达式的值为假，就不需要再判断B的值。这种用法非常有用，如果A是一个计算量较小的函数，B是一个计算量较大的函数，那么首先判断A对减少计算量是有好处的。另外这也可以防止类似被0除的错误</li>
+</ul>
+</li>
+</ul>
+<h2 id="运算符的优先级"><a href="#运算符的优先级" class="headerlink" title="运算符的优先级"></a>运算符的优先级</h2><ul>
 <li><a href="https://ww2.mathworks.cn/help/matlab/matlab_prog/operator-precedence.html" target="_blank" rel="noopener">运算符的优先级</a></li>
 <li>AND 和 OR 运算符的优先级<ul>
 <li>MATLAB <strong>始终将 &amp; 运算符的优先级指定为高于 | 运算符</strong>。尽管 MATLAB 通常按从左到右的顺序计算表达式，但表达式 a|b&amp;c 按 a|(b&amp;c) 形式计算。对于包含 &amp; 和 | 组合的语句，比较好的做法是使用括号显式指定期望的语句优先级。<br>该优先级规则同样适用于 &amp;&amp; 和 || 运算符。</li>
 </ul>
 </li>
+</ul>
+<h1 id="转载"><a href="#转载" class="headerlink" title="转载"></a>转载</h1><ul>
+<li><a href="https://blog.csdn.net/treasuresss/article/details/39370253" target="_blank" rel="noopener">matlab中&amp;&amp;和&amp;的区别</a>_</li>
+<li><a href="https://ww2.mathworks.cn/help/matlab/ref/logicaloperatorsshortcircuit.html" target="_blank" rel="noopener">逻辑运算符：短路 &amp;&amp; ||</a></li>
+<li><a href="https://ww2.mathworks.cn/help/matlab/ref/and.html" target="_blank" rel="noopener">and, &amp;(计算逻辑 AND)</a></li>
 </ul>
 
       
@@ -657,7 +685,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">74</span>
+                  <span class="site-state-item-count">75</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -708,7 +736,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#运算符的优先级"><span class="nav-number">1.</span> <span class="nav-text">运算符的优先级</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#运算符"><span class="nav-number">1.</span> <span class="nav-text">运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#运算符的优先级"><span class="nav-number">1.1.</span> <span class="nav-text">运算符的优先级</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#转载"><span class="nav-number">2.</span> <span class="nav-text">转载</span></a></li></ol></div>
             
 
           </div>
@@ -749,7 +777,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">42.8k</span>
+    <span title="Site words total count">43.4k</span>
   
 </div>
 

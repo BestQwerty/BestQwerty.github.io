@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-04-14T13:24:01.227Z</updated>
+  <updated>2019-04-14T13:59:54.384Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -21,16 +21,17 @@
     <link href="ctguljj.github.io/2019/04/14/matlab%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
     <id>ctguljj.github.io/2019/04/14/matlab运算符/</id>
     <published>2019-04-14T13:21:12.000Z</published>
-    <updated>2019-04-14T13:24:01.227Z</updated>
+    <updated>2019-04-14T13:59:54.384Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="运算符的优先级"><a href="#运算符的优先级" class="headerlink" title="运算符的优先级"></a>运算符的优先级</h1><ul><li><a href="https://ww2.mathworks.cn/help/matlab/matlab_prog/operator-precedence.html" target="_blank" rel="noopener">运算符的优先级</a></li><li>AND 和 OR 运算符的优先级<ul><li>MATLAB <strong>始终将 &amp; 运算符的优先级指定为高于 | 运算符</strong>。尽管 MATLAB 通常按从左到右的顺序计算表达式，但表达式 a|b&amp;c 按 a|(b&amp;c) 形式计算。对于包含 &amp; 和 | 组合的语句，比较好的做法是使用括号显式指定期望的语句优先级。<br>该优先级规则同样适用于 &amp;&amp; 和 || 运算符。</li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><ul><li>Error:Matlab ||和&amp;&amp;运算符的操作数必须能够转换为逻辑标量值<ul><li>解决:||和&amp;&amp;为值运算， |与&amp;为向量运算，改为|与&amp;</li></ul></li></ul><ul><li>&amp;&amp;和||被称为&amp;和|的short circuit形式，<ul><li>A&amp;B<ul><li>（1）首先判断A的逻辑值，然后判断B的值，然后进行逻辑与的计算。</li><li>（2）A和B可以为矩阵（e.g. A=[1 0],B=[0 0]）。</li></ul></li><li>A&amp;&amp;B<ul><li>（1）首先判断A的逻辑值，如果A的值为假，就可以判断整个表达式的值为假，就不需要再判断B的值。</li><li>（2）A和B不能是矩阵，只能是标量。</li></ul></li><li>“|”与“||”同理。</li><li>A&amp;&amp;B 首先判断A的逻辑值，如果A的值为假，就可以判断整个表达式的值为假，就不需要再判断B的值。这种用法非常有用，如果A是一个计算量较小的函数，B是一个计算量较大的函数，那么首先判断A对减少计算量是有好处的。另外这也可以防止类似被0除的错误</li></ul></li></ul><h2 id="运算符的优先级"><a href="#运算符的优先级" class="headerlink" title="运算符的优先级"></a>运算符的优先级</h2><ul><li><a href="https://ww2.mathworks.cn/help/matlab/matlab_prog/operator-precedence.html" target="_blank" rel="noopener">运算符的优先级</a></li><li>AND 和 OR 运算符的优先级<ul><li>MATLAB <strong>始终将 &amp; 运算符的优先级指定为高于 | 运算符</strong>。尽管 MATLAB 通常按从左到右的顺序计算表达式，但表达式 a|b&amp;c 按 a|(b&amp;c) 形式计算。对于包含 &amp; 和 | 组合的语句，比较好的做法是使用括号显式指定期望的语句优先级。<br>该优先级规则同样适用于 &amp;&amp; 和 || 运算符。</li></ul></li></ul><h1 id="转载"><a href="#转载" class="headerlink" title="转载"></a>转载</h1><ul><li><a href="https://blog.csdn.net/treasuresss/article/details/39370253" target="_blank" rel="noopener">matlab中&amp;&amp;和&amp;的区别</a>_</li><li><a href="https://ww2.mathworks.cn/help/matlab/ref/logicaloperatorsshortcircuit.html" target="_blank" rel="noopener">逻辑运算符：短路 &amp;&amp; ||</a></li><li><a href="https://ww2.mathworks.cn/help/matlab/ref/and.html" target="_blank" rel="noopener">and, &amp;(计算逻辑 AND)</a></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;运算符的优先级&quot;&gt;&lt;a href=&quot;#运算符的优先级&quot; class=&quot;headerlink&quot; title=&quot;运算符的优先级&quot;&gt;&lt;/a&gt;运算符的优先级&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://ww2.mathworks.cn/help/matla
+        &lt;h1 id=&quot;运算符&quot;&gt;&lt;a href=&quot;#运算符&quot; class=&quot;headerlink&quot; title=&quot;运算符&quot;&gt;&lt;/a&gt;运算符&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Error:Matlab ||和&amp;amp;&amp;amp;运算符的操作数必须能够转换为逻辑标量值&lt;ul&gt;
+&lt;li&gt;解决:||和
       
     
     </summary>
@@ -51,12 +52,28 @@
     <link href="ctguljj.github.io/2019/04/14/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bunique/"/>
     <id>ctguljj.github.io/2019/04/14/matlab常用函数之unique/</id>
     <published>2019-04-14T06:55:31.000Z</published>
-    <updated>2019-04-14T06:55:31.980Z</updated>
+    <updated>2019-04-14T13:40:37.051Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="unique"><a href="#unique" class="headerlink" title="unique"></a>unique</h1><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/unique.html#bs_6vpd-1-setOrder" target="_blank" rel="noopener">unique</a></li><li><p><code>C = unique(A)</code> 返回与 A 中相同的数据，但是不包含重复项。<strong>C 已排序</strong>。</p><ul><li>如果 A 是表或时间表，则 unique 按排序顺序返回 A 中的唯一行。对于时间表，当确定行是否唯一时，unique 会考虑行时间和行值，并按行时间对输出时间表 C 排序。</li></ul></li><li><p><code>C = unique(A,setOrder)</code> 以特定顺序返回 A 的唯一值。setOrder 可以是 ‘sorted’（默认值）或 ‘stable’。</p></li><li>setOrder - 顺序标志<ul><li>顺序标志以 ‘sorted’ 或 ‘stable’ 指定，指示 C 中值（或行）的顺序。</li><li>‘sorted’ 按排定的顺序返回 C 中的值（或行）。例如：<code>C = unique([5 5 3 4],&#39;sorted&#39;)</code> 返回 <code>C = [3 4 5]</code>。</li><li>‘stable’ 按与 A 中相同的顺序返回 C 中的值（或行）。例如：<code>C = unique([5 5 3 4],&#39;stable&#39;)</code>返回 <code>C = [5 3 4]</code>。</li></ul></li></ul><ul><li><code>C = unique(A,occurrence)</code> 指定遇到重复值时应返回哪个索引。occurrence 可以是 ‘first’（默认值）或 ‘last’。</li><li>occurrence - 出现次数标志  ‘first’ （默认） | ‘last’<ul><li>出现次数标志，指定为 ‘first’ 或 ‘last’，指示在 A 中发现重复值时，ia 是包含第一个索引还是最后一个索引。 </li><li>‘last’<br>如果 A 中有重复的值（或行），则 ia 包含最后一次出现重复值的索引</li><li>‘first’<br>如果 A 中有重复的值（或行），则 ia 包含第一次出现重复值的索引</li></ul></li></ul>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;h1 id=&quot;unique&quot;&gt;&lt;a href=&quot;#unique&quot; class=&quot;headerlink&quot; title=&quot;unique&quot;&gt;&lt;/a&gt;unique&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://ww2.mathworks.cn/help/matlab/re
+      
+    
     </summary>
     
+      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+    
+      <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
+    
+      <category term="unique" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/unique/"/>
+    
+    
+      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
     
   </entry>
   

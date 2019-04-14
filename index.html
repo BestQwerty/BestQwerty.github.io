@@ -360,7 +360,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-14T21:24:01+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-14T21:59:54+08:00">
                 2019-04-14
               </time>
             
@@ -461,10 +461,16 @@
       
         
           
-          运算符的优先级
-运算符的优先级
-AND 和 OR 运算符的优先级
-MATLAB 始终将 &amp; 运算符的优先级指定为高于 | 运算符。尽管 MATLAB 通常按从左到右的顺序计算表达式，但表达式 a|b&amp;c 按 a|(b&amp;c) 形式计算。对于包含 &amp; 和 | 组合的语句，
+          运算符
+Error:Matlab ||和&amp;&amp;运算符的操作数必须能够转换为逻辑标量值
+解决:||和&amp;&amp;为值运算， |与&amp;为向量运算，改为|与&amp;
+
+
+
+
+&amp;&amp;和||被称为&amp;和|的short circuit形式，
+A&amp;B
+（1
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -568,12 +574,56 @@ MATLAB 始终将 &amp; 运算符的优先级指定为高于 | 运算符。尽管
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-14T14:55:31+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-14T21:40:37+08:00">
                 2019-04-14
               </time>
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/matlab/" itemprop="url" rel="index">
+                    <span itemprop="name">matlab</span>
+                  </a>
+                </span>
+
+                
+                
+                  >
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/matlab/函数/" itemprop="url" rel="index">
+                    <span itemprop="name">函数</span>
+                  </a>
+                </span>
+
+                
+                
+                  >
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/matlab/函数/unique/" itemprop="url" rel="index">
+                    <span itemprop="name">unique</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -625,8 +675,15 @@ MATLAB 始终将 &amp; 运算符的优先级指定为高于 | 运算符。尽管
       
         
           
-          
-          
+          unique
+unique
+C = unique(A) 返回与 A 中相同的数据，但是不包含重复项。C 已排序。
+
+如果 A 是表或时间表，则 unique 按排序顺序返回 A 中的唯一行。对于时间表，当确定行是否唯一时，unique 会考虑行时间和行值，并按行时间对输出时间表 C 排序。
+
+
+C 
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/04/14/matlab常用函数之unique/#more" rel="contents">
@@ -2356,7 +2413,7 @@ MATLAB 始终将 &amp; 运算符的优先级指定为高于 | 运算符。尽管
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">74</span>
+                  <span class="site-state-item-count">75</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2432,7 +2489,7 @@ MATLAB 始终将 &amp; 运算符的优先级指定为高于 | 运算符。尽管
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">42.8k</span>
+    <span title="Site words total count">43.4k</span>
   
 </div>
 

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="matlab,">
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="静静地Coding &amp;&amp; Thinking">
+<meta name="description" content="unique unique C = unique(A) 返回与 A 中相同的数据，但是不包含重复项。C 已排序。  如果 A 是表或时间表，则 unique 按排序顺序返回 A 中的唯一行。对于时间表，当确定行是否唯一时，unique 会考虑行时间和行值，并按行时间对输出时间表 C 排序。   C = unique(A,setOrder) 以特定顺序返回 A 的唯一值。setOrder 可以是 ‘">
+<meta name="keywords" content="matlab">
 <meta property="og:type" content="article">
 <meta property="og:title" content="matlab常用函数之unique">
 <meta property="og:url" content="ctguljj.github.io/2019/04/14/matlab常用函数之unique/index.html">
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
-<meta property="og:description" content="静静地Coding &amp;&amp; Thinking">
+<meta property="og:description" content="unique unique C = unique(A) 返回与 A 中相同的数据，但是不包含重复项。C 已排序。  如果 A 是表或时间表，则 unique 按排序顺序返回 A 中的唯一行。对于时间表，当确定行是否唯一时，unique 会考虑行时间和行值，并按行时间对输出时间表 C 排序。   C = unique(A,setOrder) 以特定顺序返回 A 的唯一值。setOrder 可以是 ‘">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-14T06:55:31.980Z">
+<meta property="og:updated_time" content="2019-04-14T13:40:37.051Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab常用函数之unique">
-<meta name="twitter:description" content="静静地Coding &amp;&amp; Thinking">
+<meta name="twitter:description" content="unique unique C = unique(A) 返回与 A 中相同的数据，但是不包含重复项。C 已排序。  如果 A 是表或时间表，则 unique 按排序顺序返回 A 中的唯一行。对于时间表，当确定行是否唯一时，unique 会考虑行时间和行值，并按行时间对输出时间表 C 排序。   C = unique(A,setOrder) 以特定顺序返回 A 的唯一值。setOrder 可以是 ‘">
 
 
 
@@ -358,12 +359,56 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-14T14:55:31+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-14T21:40:37+08:00">
                 2019-04-14
               </time>
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/matlab/" itemprop="url" rel="index">
+                    <span itemprop="name">matlab</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/matlab/函数/" itemprop="url" rel="index">
+                    <span itemprop="name">函数</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/matlab/函数/unique/" itemprop="url" rel="index">
+                    <span itemprop="name">unique</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 		  <span class="post-time">
 					&nbsp; | &nbsp;
@@ -371,7 +416,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">0(字)</span> 
+					<span class="post-count">342(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -429,7 +474,32 @@
       
 
       
-        
+        <h1 id="unique"><a href="#unique" class="headerlink" title="unique"></a>unique</h1><ul>
+<li><a href="https://ww2.mathworks.cn/help/matlab/ref/unique.html#bs_6vpd-1-setOrder" target="_blank" rel="noopener">unique</a></li>
+<li><p><code>C = unique(A)</code> 返回与 A 中相同的数据，但是不包含重复项。<strong>C 已排序</strong>。</p>
+<ul>
+<li>如果 A 是表或时间表，则 unique 按排序顺序返回 A 中的唯一行。对于时间表，当确定行是否唯一时，unique 会考虑行时间和行值，并按行时间对输出时间表 C 排序。</li>
+</ul>
+</li>
+<li><p><code>C = unique(A,setOrder)</code> 以特定顺序返回 A 的唯一值。setOrder 可以是 ‘sorted’（默认值）或 ‘stable’。</p>
+</li>
+<li>setOrder - 顺序标志<ul>
+<li>顺序标志以 ‘sorted’ 或 ‘stable’ 指定，指示 C 中值（或行）的顺序。</li>
+<li>‘sorted’ 按排定的顺序返回 C 中的值（或行）。例如：<code>C = unique([5 5 3 4],&#39;sorted&#39;)</code> 返回 <code>C = [3 4 5]</code>。</li>
+<li>‘stable’ 按与 A 中相同的顺序返回 C 中的值（或行）。例如：<code>C = unique([5 5 3 4],&#39;stable&#39;)</code>返回 <code>C = [5 3 4]</code>。</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><code>C = unique(A,occurrence)</code> 指定遇到重复值时应返回哪个索引。occurrence 可以是 ‘first’（默认值）或 ‘last’。</li>
+<li>occurrence - 出现次数标志  ‘first’ （默认） | ‘last’<ul>
+<li>出现次数标志，指定为 ‘first’ 或 ‘last’，指示在 A 中发现重复值时，ia 是包含第一个索引还是最后一个索引。 </li>
+<li>‘last’<br>如果 A 中有重复的值（或行），则 ia 包含最后一次出现重复值的索引</li>
+<li>‘first’<br>如果 A 中有重复的值（或行），则 ia 包含第一次出现重复值的索引</li>
+</ul>
+</li>
+</ul>
+
       
     </div>
     
@@ -450,6 +520,12 @@
 	
 	  </div>
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/matlab/" rel="tag"># matlab</a>
+          
+        </div>
       
 	  
 		  <footer class="post-footer">
@@ -565,8 +641,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -594,7 +679,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">74</span>
+                  <span class="site-state-item-count">75</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -636,6 +721,22 @@ var jiathis_config={
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#unique"><span class="nav-number">1.</span> <span class="nav-text">unique</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -670,7 +771,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">42.8k</span>
+    <span title="Site words total count">43.4k</span>
   
 </div>
 
