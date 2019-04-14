@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-04-14T06:55:31.980Z</updated>
+  <updated>2019-04-14T13:24:01.227Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>matlab运算符</title>
+    <link href="ctguljj.github.io/2019/04/14/matlab%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+    <id>ctguljj.github.io/2019/04/14/matlab运算符/</id>
+    <published>2019-04-14T13:21:12.000Z</published>
+    <updated>2019-04-14T13:24:01.227Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="运算符的优先级"><a href="#运算符的优先级" class="headerlink" title="运算符的优先级"></a>运算符的优先级</h1><ul><li><a href="https://ww2.mathworks.cn/help/matlab/matlab_prog/operator-precedence.html" target="_blank" rel="noopener">运算符的优先级</a></li><li>AND 和 OR 运算符的优先级<ul><li>MATLAB <strong>始终将 &amp; 运算符的优先级指定为高于 | 运算符</strong>。尽管 MATLAB 通常按从左到右的顺序计算表达式，但表达式 a|b&amp;c 按 a|(b&amp;c) 形式计算。对于包含 &amp; 和 | 组合的语句，比较好的做法是使用括号显式指定期望的语句优先级。<br>该优先级规则同样适用于 &amp;&amp; 和 || 运算符。</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;运算符的优先级&quot;&gt;&lt;a href=&quot;#运算符的优先级&quot; class=&quot;headerlink&quot; title=&quot;运算符的优先级&quot;&gt;&lt;/a&gt;运算符的优先级&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://ww2.mathworks.cn/help/matla
+      
+    
+    </summary>
+    
+      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+    
+      <category term="基础" scheme="ctguljj.github.io/categories/matlab/%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="运算符" scheme="ctguljj.github.io/categories/matlab/%E5%9F%BA%E7%A1%80/%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+    
+    
+      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+    
+  </entry>
   
   <entry>
     <title>matlab常用函数之unique</title>
@@ -486,37 +516,6 @@
       <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
     
       <category term="mean" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/mean/"/>
-    
-    
-      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>matlab常用函数之rem</title>
-    <link href="ctguljj.github.io/2019/04/04/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Brem/"/>
-    <id>ctguljj.github.io/2019/04/04/matlab常用函数之rem/</id>
-    <published>2019-04-04T01:12:04.000Z</published>
-    <updated>2019-04-04T12:44:32.806Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="rem"><a href="#rem" class="headerlink" title="rem"></a>rem</h1><ul><li>调用格式:<code>r = rem(a,b)</code></li><li><code>r = rem(a,b)</code>返回a除以b后的余数，其中a为被除数，b为除数。这个操作在概念上等于<code>r = a - b.*fix(a./b)</code>，它使用与mod函数不同的舍入。rem函数遵循<code>rem(a,0)</code>为NaN的约定。</li><li><p>例题:</p><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">1</span>:<span class="number">5</span>;</span><br><span class="line">b = <span class="number">3</span>;</span><br><span class="line">r = <span class="built_in">rem</span>(a,b)</span><br><span class="line">r =</span><br><span class="line"> <span class="number">1</span>     <span class="number">2</span>     <span class="number">0</span>     <span class="number">1</span>     <span class="number">2</span></span><br></pre></td></tr></table></figure></li><li><p><code>rem(a,b)</code>finds the remainder after division. If b &lt;&gt; 0, then <code>rem(a,b) = a - fix(a/b)*b</code>. If b = 0 or b = Inf or b = -Inf, then rem returns NaN.<br>The rem function does not support complex numbers: all values must be real numbers.<br>To find the remainder after division of polynomials, use quorem.</p></li><li>当正数与负数取余时，当得到的余数结果的符号希望跟除数(x)一样，用<code>rem()</code>函数；当得到的余数结果的符号希望跟被除数(y)一样，用<code>mod()</code>函数</li><li><code>mod(x,y)</code>与y同号，<code>rem(x,y)</code>与x同号</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;rem&quot;&gt;&lt;a href=&quot;#rem&quot; class=&quot;headerlink&quot; title=&quot;rem&quot;&gt;&lt;/a&gt;rem&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;调用格式:&lt;code&gt;r = rem(a,b)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;r = rem(a,b)&lt;/
-      
-    
-    </summary>
-    
-      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
-    
-      <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
-    
-      <category term="rem" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/rem/"/>
     
     
       <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>

@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[matlab运算符]]></title>
+    <url>%2F2019%2F04%2F14%2Fmatlab%E8%BF%90%E7%AE%97%E7%AC%A6%2F</url>
+    <content type="text"><![CDATA[运算符的优先级 运算符的优先级 AND 和 OR 运算符的优先级 MATLAB 始终将 &amp; 运算符的优先级指定为高于 | 运算符。尽管 MATLAB 通常按从左到右的顺序计算表达式，但表达式 a|b&amp;c 按 a|(b&amp;c) 形式计算。对于包含 &amp; 和 | 组合的语句，比较好的做法是使用括号显式指定期望的语句优先级。该优先级规则同样适用于 &amp;&amp; 和 || 运算符。]]></content>
+      <categories>
+        <category>matlab</category>
+        <category>基础</category>
+        <category>运算符</category>
+      </categories>
+      <tags>
+        <tag>matlab</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[matlab常用函数之unique]]></title>
     <url>%2F2019%2F04%2F14%2Fmatlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bunique%2F</url>
     <content type="text"></content>
@@ -259,24 +272,24 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[typora]]></title>
-    <url>%2F2019%2F04%2F03%2Ftypora%2F</url>
-    <content type="text"><![CDATA[typora简介 无论是Word中带有加粗等格式的文字，还是Excel中的表格，一旦黏贴到Typora中，都会被自动转化为对应的Markdown格式，所以你再也不用担心每次重新设置格式的麻烦了——Markdown最麻烦的表格也可以在Excel中做完再贴入生成了。 专注模式，也就是除了正在编辑的那行文字，文章上下其余的内容全部变成灰色，不吸引你的视线，不干扰你的思维。 与专注模式搭配的话，当然还是全屏模式(F11)最好啦 qwq 打字机模式（Typewriter Mode）:开启这种模式后，Typora 的光标所在行会始终保持在屏幕中间，这样你码字时眼睛可以一直正对着屏幕中间 打开/关闭源代码模式 typora默认界面是实时预览的模式,而这也是与其他Markdown软件较大的区别.切换成源代码模式可以更方便地修改内容 方法1:点击左下角的&lt;/&gt;(启用/关闭源代码模式) 方法2:Ctrl+/ 快捷键 无序列表：输入-之后输入空格 有序列表：输入数字+“.”之后输入空格 任务列表：-[空格]空格 文字 标题：ctrl+数字 表格：ctrl+t 生成目录：[TOC]按回车 选中一整行：ctrl+l 选中单词：ctrl+d 选中相同格式的文字：ctrl+e 跳转到文章开头：ctrl+home 跳转到文章结尾：ctrl+end 搜索：ctrl+f 替换：ctrl+h 引用：输入&gt;之后输入空格 代码块：ctrl+alt+f 加粗：ctrl+b 倾斜：ctrl+i 下划线：ctrl+u 删除线：alt+shift+5 插入图片：直接拖动到指定位置即可或者ctrl+shift+i 插入链接：ctrl+k ​ 参考文献：typora typora2 typora快捷键 typora界面入门]]></content>
-      <categories>
-        <category>markdown编辑器</category>
-        <category>typora</category>
-      </categories>
-      <tags>
-        <tag>markdown编辑器</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[markdownpad2使用技巧]]></title>
     <url>%2F2019%2F04%2F03%2Fmarkdownpad2%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%2F</url>
     <content type="text"><![CDATA[markdownpad2常用快捷键 Ctrl + I ： 斜体 Ctrl + B ： 粗体 Ctrl + G ： 图片 Ctrl + Q ： 引用 Ctrl + 1 ： 标题 1 Ctrl + 2 ： 标题 2 Ctrl + 3 ： 标题 3 Ctrl + K ： 代码块 Ctrl + L ： 超链接 Ctrl + T ： 时间戳 Ctrl + U ： 无序列表 Ctrl + R ： 水平标尺 F4 ： 启用水平布局 F5 ： 启用实时预览 F6 ： 在浏览器中预览 Ctrl + Shift + O ： 有序列表 ​]]></content>
       <categories>
         <category>markdown编辑器</category>
         <category>markdownpad2</category>
+      </categories>
+      <tags>
+        <tag>markdown编辑器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[typora]]></title>
+    <url>%2F2019%2F04%2F03%2Ftypora%2F</url>
+    <content type="text"><![CDATA[typora简介 无论是Word中带有加粗等格式的文字，还是Excel中的表格，一旦黏贴到Typora中，都会被自动转化为对应的Markdown格式，所以你再也不用担心每次重新设置格式的麻烦了——Markdown最麻烦的表格也可以在Excel中做完再贴入生成了。 专注模式，也就是除了正在编辑的那行文字，文章上下其余的内容全部变成灰色，不吸引你的视线，不干扰你的思维。 与专注模式搭配的话，当然还是全屏模式(F11)最好啦 qwq 打字机模式（Typewriter Mode）:开启这种模式后，Typora 的光标所在行会始终保持在屏幕中间，这样你码字时眼睛可以一直正对着屏幕中间 打开/关闭源代码模式 typora默认界面是实时预览的模式,而这也是与其他Markdown软件较大的区别.切换成源代码模式可以更方便地修改内容 方法1:点击左下角的&lt;/&gt;(启用/关闭源代码模式) 方法2:Ctrl+/ 快捷键 无序列表：输入-之后输入空格 有序列表：输入数字+“.”之后输入空格 任务列表：-[空格]空格 文字 标题：ctrl+数字 表格：ctrl+t 生成目录：[TOC]按回车 选中一整行：ctrl+l 选中单词：ctrl+d 选中相同格式的文字：ctrl+e 跳转到文章开头：ctrl+home 跳转到文章结尾：ctrl+end 搜索：ctrl+f 替换：ctrl+h 引用：输入&gt;之后输入空格 代码块：ctrl+alt+f 加粗：ctrl+b 倾斜：ctrl+i 下划线：ctrl+u 删除线：alt+shift+5 插入图片：直接拖动到指定位置即可或者ctrl+shift+i 插入链接：ctrl+k ​ 参考文献：typora typora2 typora快捷键 typora界面入门]]></content>
+      <categories>
+        <category>markdown编辑器</category>
+        <category>typora</category>
       </categories>
       <tags>
         <tag>markdown编辑器</tag>
@@ -454,6 +467,7 @@
     <content type="text"><![CDATA[matlab语句 MATLAB语句的一般形式为：变量 = 表达式说明： 1.若变量和“=”省略，则名为ans的变量自动建立； 2.如果你输入了一个语句并以回车结束，则在工作区中显示计算的结果； 3.如果语句以分号“；”结束，MATLAB只进行计算，不显示计算的结果； 4.如果一个变大时太长，可以用续行号 … 将其延续到下一行。此外，一行中可以写几个语句，他们之间要用逗号或分号分开。 matlabz中变量 对于变量，MATLAB不需要任何类型的说明或维数语句。当输入一个新变量名时MATLAB自动建立面变量并为其分配内存空间。 MATLAB有几个特殊的量 1.Pi圆周率π 2.Eps最小浮点数 3.Inf正无穷大，特指1/0 4.NaN不定值，特指0/0 5.i，j虚数单位 6.自然对数 MATLAB中变量的命名规则是： 变量名必须是不含空格的单个词； 变量名区分大小写； 变量名最多不超过19个字符； 变量名必须以字母打头，之后可以是 任意字母、数字或下划线，变量名中，不允许使用标点符号. matalab中Π默认为3.1416（应该） 数据显示默认为四位，但只是matlab对数据的显示方式，其实不管显示的有效位数是多少，都不影响实际的计算结果，也不会有多大的累计误差。有效位数是4或8位，其计算结果的误差是一样的。 matlab运算符 A*B A与B相乘 A.*B A与B相应元素相乘（A、B为同纬度的矩阵） A/B A与B相除（A、B为数值或矩阵） 注意跟c/c++中不同，matlab中除法后可为小数，不一定就是整数 A./B A与B相应元素相除（A、B为同纬度的矩阵 A^BA的B次幂（A、B为数值） A.^BA的每个元素的B次幂（A、B为同纬度的矩阵） 幂方在矩阵之间只能点乘。 符号 分号 ; 表示分隔不想显示计算结果的各语句；矩阵行与行的分隔符 续行号 … 长命令行需分行时连接下行用 逗号 ， 表示分隔欲显示计算结果的各语句；变量分隔符；矩阵一行中各元素间的分隔符 matlab中用~代替！matlab输入 函数： a=input(‘please input a number：’); b=input(‘请输入一个字符串:’,’s’); c=input(‘请输入一个矩阵:’); 赋值：a=3;A=4;(变量赋予数值) ` a=A;(变量赋予变量)` ` a=‘a’;(变量赋予字符串)` ` a=zeros(m,n);a=ones(m,n);(变量赋予矩阵)` matlab输出 不加分号：a=3 a=b a=‘a’ a=zeros(m,n) 函数1：fprintf()` fprintf(fid,format,A)` fid：输出的位置，如果缺省，则输出在命令窗口 format：输出内容的类型（类型包括：%d:整数 %e:实数 %s:字符串 %f:浮点数） A：输入内容的变量名 fprintf(&#39;&#39;)是必须写的，真正输出的语句在单引号中间。 屏幕输出简单的方法是直接写出欲输出的变量或数组名，后面不加分号。此外，可 以采用 disp 语句，其调用格式为 disp(x)。 函数二：disp() disp(‘A’); disp(‘numstr(12)’) ;%%numstr()是将其他类型的变量转化成字符串的形式 disp(zeros(m,n)); 12345678 clc,clear;result = 0;for i=3:2:101 result = result + i;enddisp(result) MATLAB的每条命令后，若为逗号或无标点符号， 则显示命令的结果；若命令后为分号，则禁止显示结果. “%” 后面所有文字为注释. “…”表示续行. mat文件 mat文件是matlab的数据存储的标准格式。mat文件是标准的二进制文件,还可以ASCII码形式保存和加载，在MATLAB中打开显示类似于单行EXCEL表格。 MATLAB是解释型语言，就是说MATLAB命令行中敲入的命令在当前MATLAB进程中被解释运行。但是，每次执行一个任务时敲入长长的命令序列是很烦人的。有两种方法可以使MATLAB的力量得到扩展——脚本和函数。这两种方法都用像emacs一样的文本编辑器中编写的m文件（因为扩展名是.m所以这样命名，m文件还称点m文件）。m文件的好处在于它可以保存命令，还可以轻易地修改命令而无需重新敲入整个命令行。 所谓mat文件，就是由matlab语言编写的可在matlab语言环境下运行的程序源代码文件。Matlab语言的m文件可分为命令式和函数式两种形式。M文件可在matlab程序编辑器里编写，也可在其他文本编辑器中编写，并以”.m”为拓展名保存。 循环for循环 for 循环允许一组命令以固定的和预定的次数重复。for 循环的一般形式是 123for 循环控制变量=表达式 1:表达式 2:表达式 3 语句 end 表达式 1 的值为循环控制变量的初值；表达式 2 的值为步长，每执行循环体一次，循 环控制变量的值将增加步长大小。步长可以为负值，当步长为 1 时，表达式 2 可省略；表 达式 3 为循环控制变量的终值，当循环控制变量的值大于终值时循环结束。在 for 循环中， 循环体内不能出现对循环控制变量的重新设置，否则将会出错；for 循环允许嵌套使用。 initval:endvalincrements the index variable from initval to endval by 1, and repeats execution of program statements until index is greater than endval. 条件相当于c/c++中的i&lt;=endval 使用 for 循环语句值得注意的是 for循环不能用循环内重新给循环变量赋值来终止 12345678 x=0;for n=1:4 x =x+1 n=5;end - for 循环的循环变量= [表达式 1:表达式 2:表达式 3]，其实为一行向量，例如： `[1:2:10]=[ 0 2 4 6 8 10]`，它还可以是数组，其更一般的形式为 `for 循环控制变量 = 数组表达式 语句 end ` - 【例 6.5】 用 for 循环求行向量[-2,5,3,6,-2]各元素之和。 1234567891011121314151617181920 a=[-2,5,3,6,-2]; s=0;k=0;for n=a n %显示每一次循环变量的值 k=k+1; %记录循环次数 s=s+n; %计算行向量 a 各元素之和 end k,s %显示总的循环次数和计算结果运行结果为 n = -2 n = 5 n = 3 n = 6 n = -2 k = 5 s = 10 可以看出，总循环次数为 5，第 i 次循环时循环变量的值为 a(i)，计算结果为行向量 a 各元素之和。 - 当有一个等效的数组方法来解给定的问题时，应避免用 for 循环。 - 【例 6.9】 比较下面两段程序的执行情况。 1234567891011 (a) for n=1:10 x(n)=sin(n*pi/10); end x (b) n=1:10; x=sin(n*pi/10) 两段程序的运行结果相同，均为 x = 0.3090 0.5878 0.8090 0.9511 1.0000 0.9511 0.8090 0.5878 0.3090 0.0000 但后者执行更快，更直观、简便。 为了得到更快的速度，在 for 循环(while 循环)被执行之前，应预先分配数组。如例 6.9(a)，在 for 循环内每执行一次命令，变量 x 的大小增加 1，迫使 MATLAB 每进行一次循 环都要花费时间对 x 分配更多的内存。为了省去这个步骤，可以在例 6.9(a)程序的首行加入：x=zeros(1,10); %为 x 分配内存单元 while循环 其一般形式为 123456789101112131415161718192021222324252627282930313233 while 关系表达式 语句 end ``` - 注意：for 循环的循环变量为 m1× m 2×…× m n 维数组，循环次数在一开始就由数组确定为 m2×…× m n，所以在循环体内并不能通过改变循环控制变量的值终止循环；而 while 循环是先执行循环体内的语句，再判断循环的条件是否成立，在循环体内可以通过 改变循环控制变量的值终止循环。# 判断- try 语句 - try 语句是 MATLAB 特有的语句，其一般结构是 ``` try 语句 1 catch 语句 2 end``` - elseif与else if不同，前者嵌套if语句时不用end，后者要与else if对应的end- elseif:不需要end结束- else if:需要end结束- if, elseif, else if expression statements elseif expression statements else statements end `]]></content>
       <categories>
         <category>matlab</category>
+        <category>基础</category>
         <category>基本操作</category>
       </categories>
       <tags>
