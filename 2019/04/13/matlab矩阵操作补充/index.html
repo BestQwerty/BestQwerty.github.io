@@ -89,10 +89,12 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="😏">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-14T13:15:30.218Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab大小兼容的输入.png">
+<meta property="og:updated_time" content="2019-04-14T13:19:22.522Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab矩阵操作补充">
 <meta name="twitter:description" content="😏">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab大小兼容的输入.png">
 
 
 
@@ -359,7 +361,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-14T21:15:30+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-14T21:19:22+08:00">
                 2019-04-14
               </time>
             
@@ -416,7 +418,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">3.1k(字)</span> 
+					<span class="post-count">3.2k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -525,10 +527,18 @@
 </li>
 </ul>
 <h2 id="大小兼容的输入"><a href="#大小兼容的输入" class="headerlink" title="大小兼容的输入"></a>大小兼容的输入</h2><h3 id="二维输入"><a href="#二维输入" class="headerlink" title="二维输入"></a>二维输入</h3><ul>
-<li>以下是一些具有兼容大小的标量、向量和矩阵的组合：</li>
+<li>以下是一些具有兼容大小的标量、向量和矩阵的组合：<br><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab大小兼容的输入.png" alt=""></li>
 </ul>
 <h3 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h3><ul>
 <li>略</li>
+</ul>
+<h3 id="空数组"><a href="#空数组" class="headerlink" title="空数组"></a>空数组</h3><ul>
+<li>对于空数组或维度大小为零的数组，规则是相同的。不等于 1 的维度大小确定输出的大小。这意味着，<strong>大小为零的维度必须与另一个数组中大小为 1 或 0 的维度进行配对，并且输出的维度大小为 0。</strong><ul>
+<li>A: 1-by-0     </li>
+<li>B: 3-by-1</li>
+<li>Result: 3-by-0</li>
+</ul>
+</li>
 </ul>
 <h2 id="attention"><a href="#attention" class="headerlink" title="attention"></a>attention</h2><ul>
 <li>要简化向量-矩阵运算，请对维函数（例如 sum、mean、min 以及其他）使用隐式扩展。</li>
@@ -845,7 +855,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵"><span class="nav-number">1.</span> <span class="nav-text">矩阵</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建、串联和扩展矩阵"><span class="nav-number">2.</span> <span class="nav-text">创建、串联和扩展矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#串联矩阵"><span class="nav-number">2.1.</span> <span class="nav-text">串联矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#扩展矩阵"><span class="nav-number">2.2.</span> <span class="nav-text">扩展矩阵</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本运算的兼容数组大小"><span class="nav-number">3.</span> <span class="nav-text">基本运算的兼容数组大小</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#大小不兼容的输入"><span class="nav-number">3.1.</span> <span class="nav-text">大小不兼容的输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#大小兼容的输入"><span class="nav-number">3.2.</span> <span class="nav-text">大小兼容的输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#二维输入"><span class="nav-number">3.2.1.</span> <span class="nav-text">二维输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多维数组"><span class="nav-number">3.2.2.</span> <span class="nav-text">多维数组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#attention"><span class="nav-number">3.3.</span> <span class="nav-text">attention</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用关系运算符进行数组比较"><span class="nav-number">4.</span> <span class="nav-text">使用关系运算符进行数组比较</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组比较"><span class="nav-number">4.1.</span> <span class="nav-text">数组比较</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数值数组"><span class="nav-number">4.1.1.</span> <span class="nav-text">数值数组</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组索引"><span class="nav-number">5.</span> <span class="nav-text">数组索引</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用逻辑值进行索引"><span class="nav-number">5.1.</span> <span class="nav-text">使用逻辑值进行索引</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查找符合条件的数组元素"><span class="nav-number">6.</span> <span class="nav-text">查找符合条件的数组元素</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#应用单个条件"><span class="nav-number">6.1.</span> <span class="nav-text">应用单个条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用多个条件"><span class="nav-number">6.2.</span> <span class="nav-text">应用多个条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#替换符合条件的值"><span class="nav-number">6.3.</span> <span class="nav-text">替换符合条件的值</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组与矩阵运算"><span class="nav-number">7.</span> <span class="nav-text">数组与矩阵运算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组运算"><span class="nav-number">7.1.</span> <span class="nav-text">数组运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#矩阵运算"><span class="nav-number">7.2.</span> <span class="nav-text">矩阵运算</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵"><span class="nav-number">1.</span> <span class="nav-text">矩阵</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建、串联和扩展矩阵"><span class="nav-number">2.</span> <span class="nav-text">创建、串联和扩展矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#串联矩阵"><span class="nav-number">2.1.</span> <span class="nav-text">串联矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#扩展矩阵"><span class="nav-number">2.2.</span> <span class="nav-text">扩展矩阵</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本运算的兼容数组大小"><span class="nav-number">3.</span> <span class="nav-text">基本运算的兼容数组大小</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#大小不兼容的输入"><span class="nav-number">3.1.</span> <span class="nav-text">大小不兼容的输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#大小兼容的输入"><span class="nav-number">3.2.</span> <span class="nav-text">大小兼容的输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#二维输入"><span class="nav-number">3.2.1.</span> <span class="nav-text">二维输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多维数组"><span class="nav-number">3.2.2.</span> <span class="nav-text">多维数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#空数组"><span class="nav-number">3.2.3.</span> <span class="nav-text">空数组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#attention"><span class="nav-number">3.3.</span> <span class="nav-text">attention</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用关系运算符进行数组比较"><span class="nav-number">4.</span> <span class="nav-text">使用关系运算符进行数组比较</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组比较"><span class="nav-number">4.1.</span> <span class="nav-text">数组比较</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数值数组"><span class="nav-number">4.1.1.</span> <span class="nav-text">数值数组</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组索引"><span class="nav-number">5.</span> <span class="nav-text">数组索引</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用逻辑值进行索引"><span class="nav-number">5.1.</span> <span class="nav-text">使用逻辑值进行索引</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查找符合条件的数组元素"><span class="nav-number">6.</span> <span class="nav-text">查找符合条件的数组元素</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#应用单个条件"><span class="nav-number">6.1.</span> <span class="nav-text">应用单个条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用多个条件"><span class="nav-number">6.2.</span> <span class="nav-text">应用多个条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#替换符合条件的值"><span class="nav-number">6.3.</span> <span class="nav-text">替换符合条件的值</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组与矩阵运算"><span class="nav-number">7.</span> <span class="nav-text">数组与矩阵运算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组运算"><span class="nav-number">7.1.</span> <span class="nav-text">数组运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#矩阵运算"><span class="nav-number">7.2.</span> <span class="nav-text">矩阵运算</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -886,7 +896,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">42.5k</span>
+    <span title="Site words total count">42.6k</span>
   
 </div>
 
