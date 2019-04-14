@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="matlab语句 MATLAB语句的一般形式为：变量 = 表达式说明： 1.若变量和“=”省略，则名为ans的变量自动建立； 2.如果你输入了一个语句并以回车结束，则在工作区中显示计算的结果； 3.如果语句以分号“；”结束，MATLAB只进行计算，不显示计算的结果； 4.如果一个变大时太长，可以用续行号 … 将其延续到下一行。此外，一行中可以写几个语句，他们之间要用逗号或分号分开。    matl">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-13T05:57:29.106Z">
+<meta property="og:updated_time" content="2019-04-13T14:32:16.840Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab基本操作">
 <meta name="twitter:description" content="matlab语句 MATLAB语句的一般形式为：变量 = 表达式说明： 1.若变量和“=”省略，则名为ans的变量自动建立； 2.如果你输入了一个语句并以回车结束，则在工作区中显示计算的结果； 3.如果语句以分号“；”结束，MATLAB只进行计算，不显示计算的结果； 4.如果一个变大时太长，可以用续行号 … 将其延续到下一行。此外，一行中可以写几个语句，他们之间要用逗号或分号分开。    matl">
@@ -359,7 +359,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-13T13:57:29+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-13T22:32:16+08:00">
                 2019-04-13
               </time>
             
@@ -556,11 +556,11 @@
 <li>所谓mat文件，就是由matlab语言编写的可在matlab语言环境下运行的程序源代码文件。Matlab语言的m文件可分为命令式和函数式两种形式。M文件可在matlab程序编辑器里编写，也可在其他文本编辑器中编写，并以”.m”为拓展名保存。</li>
 </ul>
 <h1 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h1><h2 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h2><ul>
-<li>for 循环允许一组命令以固定的和预定的次数重复。for 循环的一般形式是 </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">for 循环控制变量=表达式 1:表达式 2:表达式 3 </span><br><span class="line">	 语句             </span><br><span class="line"> end</span><br></pre></td></tr></table></figure>
-<pre><code>- 表达式 1 的值为循环控制变量的初值；表达式 2 的值为步长，每执行循环体一次，循 环控制变量的值将增加步长大小。步长可以为负值，当步长为 1 时，表达式 2 可省略；表 达式 3 为循环控制变量的终值，当循环控制变量的值大于终值时循环结束。在 for 循环中， 循环体内不能出现对循环控制变量的重新设置，否则将会出错；for 循环允许嵌套使用。 
-</code></pre><ul>
+<li><p>for 循环允许一组命令以固定的和预定的次数重复。for 循环的一般形式是 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for 循环控制变量=表达式 1:表达式 2:表达式 3</span><br><span class="line">	语句             </span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>表达式 1 的值为循环控制变量的初值；表达式 2 的值为步长，每执行循环体一次，循 环控制变量的值将增加步长大小。步长可以为负值，当步长为 1 时，表达式 2 可省略；表 达式 3 为循环控制变量的终值，当循环控制变量的值大于终值时循环结束。在 for 循环中， 循环体内不能出现对循环控制变量的重新设置，否则将会出错；for 循环允许嵌套使用。 </p>
+</li>
 <li><p><code>initval:endval</code>increments the index variable from initval to endval by 1, and repeats execution of program statements until index is greater than endval.</p>
 </li>
 <li><p>条件相当于c/c++中的i&lt;=endval</p>
@@ -587,21 +587,14 @@
 <h2 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h2><ul>
 <li>其一般形式为 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">                 while 关系表达式</span><br><span class="line">                       语句      </span><br><span class="line">            	  end </span><br><span class="line">```		</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- 注意：for 循环的循环变量为 m1× m 2×…× m n 维数组，循环次数在一开始就由数组确定为 m2×…× m n，所以在循环体内并不能通过改变循环控制变量的值终止循环；而 while 循环是先执行循环体内的语句，再判断循环的条件是否成立，在循环体内可以通过 改变循环控制变量的值终止循环。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 判断</span><br><span class="line">- try 语句 </span><br><span class="line">	- try 语句是 MATLAB 特有的语句，其一般结构是</span><br></pre></td></tr></table></figure>
-<pre><code>        try 
-        语句 1
-          catch 
-        语句 2 
-         end
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- elseif与else if不同，前者嵌套if语句时不用end，后者要与else if</span><br><span class="line">对应的end</span><br><span class="line"></span><br><span class="line">- elseif:不需要end结束</span><br><span class="line">- else if:需要end结束</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- if, elseif, else</span><br></pre></td></tr></table></figure>
-
-    if expression
-        statements
-    elseif expression
-        statements
-    else
-        statements
-    end
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">                 while 关系表达式</span><br><span class="line">                       语句      </span><br><span class="line">            	  end </span><br><span class="line">```		</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- 注意：for 循环的循环变量为 m1× m 2×…× m n 维数组，循环次数在一开始就由数组确定为 m2×…× m n，所以在循环体内并不能通过改变循环控制变量的值终止循环；而 while 循环是先执行循环体内的语句，再判断循环的条件是否成立，在循环体内可以通过 改变循环控制变量的值终止循环。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 判断</span><br><span class="line">- try 语句 </span><br><span class="line">	- try 语句是 MATLAB 特有的语句，其一般结构是 </span><br><span class="line">```	</span><br><span class="line">	try </span><br><span class="line">		语句 1</span><br><span class="line">	catch </span><br><span class="line">		语句 2 </span><br><span class="line">	 end</span><br><span class="line">```				</span><br><span class="line"></span><br><span class="line">- elseif与else if不同，前者嵌套if语句时不用end，后者要与else if</span><br><span class="line">对应的end</span><br><span class="line"></span><br><span class="line">- elseif:不需要end结束</span><br><span class="line">- else if:需要end结束</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- if, elseif, else</span><br></pre></td></tr></table></figure>
+<pre><code>if expression
+    statements
+elseif expression
+    statements
+else
+    statements
+end
 </code></pre><p><code>`</code></p>
 
       
@@ -772,7 +765,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">80</span>
+                  <span class="site-state-item-count">81</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -875,7 +868,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">38.8k</span>
+    <span title="Site words total count">41.6k</span>
   
 </div>
 
