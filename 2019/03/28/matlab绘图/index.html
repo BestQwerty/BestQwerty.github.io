@@ -95,13 +95,14 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab函数legend4.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab函数legend2.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab函数legend3.png">
-<meta property="og:image" content="/28/matlab绘图/">
-<meta property="og:image" content="/28/matlab绘图/">
-<meta property="og:image" content="/28/matlab绘图/">
-<meta property="og:image" content="/28/matlab绘图/">
-<meta property="og:image" content="/28/matlab绘图/">
-<meta property="og:image" content="/28/matlab绘图/">
-<meta property="og:updated_time" content="2019-04-17T13:18:10.381Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab函数xlabel1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab函数xlabel2.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab函数xlabel3.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab函数text1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab函数text2.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab函数text3.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab函数text4.png">
+<meta property="og:updated_time" content="2019-04-17T13:21:14.649Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab绘图">
 <meta name="twitter:description" content="前言 在求线性规划题目时，可以将函数图像相交的点求出来，作为横坐标端点即先求后画.其它题目有时可以先求后解，算一个别样的技巧吧 最好加一个close all; 线图 图形对象属性  绘图基础 可以直接在图形窗口上修改图形 如果当前不存在图形窗口，MATLAB 的绘图函数会自动 建立一个新的图形窗口；如果已存在一个图形窗口，MATLAB 的绘图函数就会在这个窗口 中进行绘图操作；如果已存在多个图形窗">
@@ -372,7 +373,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-17T21:18:10+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-17T21:21:14+08:00">
                 2019-04-17
               </time>
             
@@ -679,7 +680,7 @@
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">plot</span>((<span class="number">1</span>:<span class="number">10</span>).^<span class="number">2</span>)</span><br><span class="line">xlabel(&#123;<span class="string">'Population'</span>,<span class="string">'(in thousands)'</span>&#125;)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p><img src="/28/matlab绘图/" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab函数xlabel1.png" alt=""></p>
 <ul>
 <li>在 x 轴标签中包括变量值<ul>
 <li>添加带有文本和变量值的标签。使用 num2str 函数在标签中包含变量值。 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">plot</span>((<span class="number">1</span>:<span class="number">10</span>).^<span class="number">2</span>)  </span><br><span class="line">year = <span class="number">2014</span>;</span><br><span class="line">xlabel([<span class="string">'Population for Year '</span>,num2str(year)])</span><br></pre></td></tr></table></figure>
@@ -687,7 +688,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="/28/matlab绘图/" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab函数xlabel2.png" alt=""></p>
 <ul>
 <li><p>在轴标签中包括上标和下标，更改 x 轴标签字体大小和颜色</p>
 <ul>
@@ -701,7 +702,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="/28/matlab绘图/" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab函数xlabel3.png" alt=""></p>
 <h1 id="text"><a href="#text" class="headerlink" title="text"></a>text</h1><ul>
 <li><a href="https://ww2.mathworks.cn/help/matlab/ref/text.html" target="_blank" rel="noopener">text 向数据点添加文本说明</a></li>
 <li>调用格式:<ul>
@@ -719,12 +720,12 @@
 </ul>
 </li>
 </ul>
-<p><img src="/28/matlab绘图/" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab函数text1.png" alt=""></p>
 <ul>
 <li>通过将 str 指定为元胞数组，向每个点添加不同文本。 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="built_in">linspace</span>(<span class="number">-5</span>,<span class="number">5</span>);</span><br><span class="line">y = x.^<span class="number">3</span><span class="number">-12</span>*x;</span><br><span class="line"><span class="built_in">plot</span>(x,y)</span><br><span class="line"></span><br><span class="line">xt = [<span class="number">-2</span> <span class="number">2</span>];</span><br><span class="line">yt = [<span class="number">16</span> <span class="number">-16</span>];</span><br><span class="line">str = &#123;<span class="string">'local max'</span>,<span class="string">'local min'</span>&#125;;</span><br><span class="line">text(xt,yt,str)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p><img src="/28/matlab绘图/" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab函数text2.png" alt=""></p>
 <ul>
 <li>显示多行文本<ul>
 <li>创建一个线图，并向坐标区添加一个文本说明。通过将 str 指定为元胞数组显示多行文本。<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">plot</span>(<span class="number">1</span>:<span class="number">10</span>)</span><br><span class="line">str = &#123;<span class="string">'A simple plot'</span>,<span class="string">'from 1 to 10'</span>&#125;;</span><br><span class="line">text(<span class="number">2</span>,<span class="number">7</span>,str)</span><br></pre></td></tr></table></figure>
@@ -732,11 +733,12 @@
 </ul>
 </li>
 </ul>
-<p><img src="/28/matlab绘图/" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab函数text3.png" alt=""></p>
 <ul>
 <li>创建一个线图，并向坐标区添加两个文本说明。在向坐标区添加多个文本说明时，通过指定嵌套元胞数组显示多行文本。<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">plot</span>(<span class="number">1</span>:<span class="number">10</span>)</span><br><span class="line">str = &#123;&#123;<span class="string">'A simple plot'</span>,<span class="string">'from 1 to 10'</span>&#125;,<span class="string">'y = x'</span>&#125;;</span><br><span class="line">text([<span class="number">2</span> <span class="number">8</span>],[<span class="number">7</span> <span class="number">7</span>],str)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<p><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab函数text4.png" alt=""></p>
 
       
     </div>
