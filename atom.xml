@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-04-17T12:03:48.050Z</updated>
+  <updated>2019-04-17T12:31:06.509Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>matlab绘图补充</title>
+    <link href="ctguljj.github.io/2019/04/17/matlab%E7%BB%98%E5%9B%BE%E8%A1%A5%E5%85%85/"/>
+    <id>ctguljj.github.io/2019/04/17/matlab绘图补充/</id>
+    <published>2019-04-17T12:25:40.000Z</published>
+    <updated>2019-04-17T12:31:06.509Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="set"><a href="#set" class="headerlink" title="set"></a>set</h2><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/set.html" target="_blank" rel="noopener">设置图形对象属性(set)</a></li><li>调用格式:<ul><li><code>set(H,Name,Value)</code>为 H 标识的对象指定其 Name 属性的值。使用时须用单引号将属性名引起来，例如，<code>set(H,&#39;Color&#39;,&#39;red&#39;)</code>。如果 H 是对象的向量，则 set 会为所有对象设置属性。如果 H 为空（即 []），set 不执行任何操作，但不返回错误或警告。</li><li><code>set(H,NameArray,ValueArray)</code></li><li><code>set(H,S)</code></li><li><code>s = set(H)</code></li><li><code>values = set(H,Name)</code></li></ul></li><li>栗子:<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%绘制一个线条并以 p 的形式返回图形线条对象。将行的 Color 属性设置为 'red'。</span></span><br><span class="line">p = <span class="built_in">plot</span>(<span class="number">1</span>:<span class="number">10</span>);</span><br><span class="line">set(p,<span class="string">'Color'</span>,<span class="string">'red'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">%使用随机数据创建一个包含四个线条的图形，并将这四个线条返回至 P。将所有线条的 Color 属性设置为 'red'。</span></span><br><span class="line">P = <span class="built_in">plot</span>(<span class="built_in">rand</span>(<span class="number">4</span>));</span><br><span class="line">set(P,<span class="string">'Color'</span>,<span class="string">'red'</span>)</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      😛
+    
+    </summary>
+    
+      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+    
+      <category term="绘图" scheme="ctguljj.github.io/categories/matlab/%E7%BB%98%E5%9B%BE/"/>
+    
+    
+      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+    
+  </entry>
   
   <entry>
     <title>matlab函数之line</title>
@@ -502,35 +526,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>二分抽签算法分析</title>
-    <link href="ctguljj.github.io/2019/04/05/%E4%BA%8C%E5%88%86%E6%8A%BD%E7%AD%BE%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/"/>
-    <id>ctguljj.github.io/2019/04/05/二分抽签算法分析/</id>
-    <published>2019-04-05T08:41:59.000Z</published>
-    <updated>2019-04-08T10:26:21.573Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="算法课"><a href="#算法课" class="headerlink" title="算法课"></a>算法课</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*你的朋友提议玩一个游戏：将写有数字的n个纸片放入口袋中．你可以从口袋中抽取4次纸片，每次记下纸片上的数字后都将其放回口袋中如果这4个数字的和是m，就是你赢，否则就是你的朋友赢。你挑战了好几回，结果一次也没赢过，于是怒而撕破口袋，取出所有纸片，检查自己是否真的有赢的可能性。请你编写一个程序，判断当纸片上所写的数字是k1，k2，…，kn时，是否存在抽取4次和为m的方案。如果存在，输出彻；否则，输出NO.</span></span><br><span class="line"><span class="comment">限制条件:   1≤n ≤ 50;   1 ≤ m ≤ 10^8;   1 ≤ Ki ≤ 10^8</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">输入样例： 3 10 1 3 5             (格式-n,m, k1,k2,..kn)</span></span><br><span class="line"><span class="comment">输出样例：YES</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">输入样例：3 9 1 3 5 </span></span><br><span class="line"><span class="comment">输出样例：NO</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m, i, j;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> kk[<span class="number">1000000</span>];<span class="comment">//开大点防止爆掉        </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">bs</span><span class="params">(<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> left = <span class="number">0</span>, right = n*n<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">while</span>(left &lt; right)&#123;</span><br><span class="line">        <span class="keyword">int</span> k = left+(right-left)/<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(kk[k] == b)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>( m &gt;kk[k])</span><br><span class="line">            left = k+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            right = k;</span><br><span class="line">                </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">int</span> a[n];</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> ( i=<span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        <span class="keyword">for</span>  ( j=<span class="number">0</span>; j &lt; n; j++)</span><br><span class="line">            kk[i*n + j] = a[i]+a[j];<span class="comment">//枚举组合</span></span><br><span class="line">    sort(kk, kk+n*n); </span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        <span class="keyword">for</span>(j = <span class="number">0</span>; j &lt; n; j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>( bs(m-a[i]-a[j]) )&#123;</span><br><span class="line">                    <span class="built_in">cout</span> &lt;&lt; <span class="string">"YES"</span>;</span><br><span class="line">                    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; </span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"NO"</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;算法课&quot;&gt;&lt;a href=&quot;#算法课&quot; class=&quot;headerlink&quot; title=&quot;算法课&quot;&gt;&lt;/a&gt;算法课&lt;/h1&gt;&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;spa
-      
-    
-    </summary>
-    
-      <category term="算法" scheme="ctguljj.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-      <category term="二分法" scheme="ctguljj.github.io/categories/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
-    
-      <category term="题解" scheme="ctguljj.github.io/categories/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%88%86%E6%B3%95/%E9%A2%98%E8%A7%A3/"/>
-    
-    
-      <category term="算法" scheme="ctguljj.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
