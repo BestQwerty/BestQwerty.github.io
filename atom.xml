@@ -151,7 +151,7 @@
     <link href="ctguljj.github.io/2019/04/11/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bxlim%E5%8F%8A%E5%85%B6%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0/"/>
     <id>ctguljj.github.io/2019/04/11/matlab常用函数之xlim及其相关函数/</id>
     <published>2019-04-11T14:50:31.000Z</published>
-    <updated>2019-04-11T15:12:08.997Z</updated>
+    <updated>2019-04-17T11:23:44.283Z</updated>
     
     <content type="html"><![CDATA[<h1 id="xlim"><a href="#xlim" class="headerlink" title="xlim"></a>xlim</h1><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/xlim.html" target="_blank" rel="noopener">文档</a></li><li><a href="http://www.ece.northwestern.edu/local-apps/matlabhelp/techdoc/ref/ylim.html" target="_blank" rel="noopener">相关网站</a></li><li>含义:(x limit)设置或查询 x 坐标轴范围</li><li>调用格式:y有多种，暂时写一种<ul><li><code>xlim([xmin xmax])</code>sets the axis limits in the current axes to the specified values.<ul><li>将当前轴中的轴限制设置为指定的值。</li></ul></li></ul></li></ul>]]></content>
     
@@ -165,7 +165,9 @@
     
       <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
     
-      <category term="xlim,ylim,zlim" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/xlim-ylim-zlim/"/>
+      <category term="绘图" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/%E7%BB%98%E5%9B%BE/"/>
+    
+      <category term="xlim,ylim,zlim" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/%E7%BB%98%E5%9B%BE/xlim-ylim-zlim/"/>
     
     
       <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
