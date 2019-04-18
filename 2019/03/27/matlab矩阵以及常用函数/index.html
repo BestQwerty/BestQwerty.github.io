@@ -97,7 +97,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab矩阵双下标索引.jpg">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab下标索引2.jpg">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab中常用函数.png">
-<meta property="og:updated_time" content="2019-04-18T05:45:56.669Z">
+<meta property="og:updated_time" content="2019-04-18T09:18:05.595Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab矩阵以及常用函数">
 <meta name="twitter:description" content="函数调用 调用函数文件的一般格式为 [输出参数表]=函数名(输入参数表)  调用函数时应注意： 当调用一个函数时，输入和输出参数的顺序应与函数定义时的一致，其数目可以 按少于函数文件中所规定的输入和输出参数调用函数，但不能使用多于函数文件所规定的 输入和输出参数数目。如果输入和输出参数数目多于或少于函数文件所允许的数目，则调 用时自动返回错误信息。 当函数有一个以上输出参数时，输出参数包含在方括号">
@@ -368,7 +368,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-18T13:45:56+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-18T17:18:05+08:00">
                 2019-04-18
               </time>
             
@@ -700,7 +700,7 @@
 <li><img src="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/matlab中常用函数.png" alt=""></li>
 </ul>
 <h1 id="find函数"><a href="#find函数" class="headerlink" title="find函数"></a>find函数</h1><ul>
-<li>注意matlab中find函数<strong>返回的是位置索引</strong></li>
+<li>注意matlab中find函数<strong>返回的是位置索引（向量，长度大于等于2说明重复出现）</strong></li>
 <li>find()函数的基本功能是<strong>返回向量或者矩阵中不为0的元素x</strong>的<strong>位置索引。(从1开始)</strong><code>a = find(X)</code><ul>
 <li>返回前N个非零元素的位置<code>find(A,X)</code>与<code>ind = find(X, k, &#39;first&#39;)</code></li>
 <li>返回最后x个非零值的位置<code>find(A,x,,&#39;last&#39;)</code></li>
@@ -722,8 +722,8 @@
 <li><code>[row,col,v] = find(___)</code>还返回包含 X 的非零元素的<strong>向量 v</strong>。（也就是返回你想找的值，如果不加表达式，条件默认是非零）</li>
 </ul>
 </li>
-<li>row - 行下标，以向量的形式返回</li>
-<li>col - 列下标，以向量的形式返回，如果 X 是多维数组且 N &gt; 2，则 col 是 X 的 N-1 尾部维度的线性索引。这会保留关系 <code>X(row(i),col(i)) == v(i)</code>。</li>
+<li>row - 行下标，<strong>以向量的形式返回</strong></li>
+<li>col - 列下标，<strong>以向量的形式返回</strong>，如果 X 是多维数组且 N &gt; 2，则 col 是 X 的 N-1 尾部维度的线性索引。这会保留关系 <code>X(row(i),col(i)) == v(i)</code>。</li>
 <li>find函数以列优先查找</li>
 <li>假设要查找一个向量中小于 0 的所有元素但没有找到。<strong>find 函数将返回一个空的索引向量，表示未找到任何小于 0 的元素</strong>。 </li>
 </ul>
@@ -923,7 +923,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">84</span>
+                  <span class="site-state-item-count">86</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -934,7 +934,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">76</span>
+                  <span class="site-state-item-count">77</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1026,7 +1026,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">45.9k</span>
+    <span title="Site words total count">47.1k</span>
   
 </div>
 

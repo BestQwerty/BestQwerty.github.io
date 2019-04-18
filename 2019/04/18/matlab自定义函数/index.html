@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="🧐">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-18T06:00:33.999Z">
+<meta property="og:updated_time" content="2019-04-18T08:28:25.606Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab自定义函数">
 <meta name="twitter:description" content="🧐">
@@ -359,7 +359,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-18T14:00:33+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-18T16:28:25+08:00">
                 2019-04-18
               </time>
             
@@ -416,7 +416,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">560(字)</span> 
+					<span class="post-count">676(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -479,16 +479,21 @@
 
       
         <ul>
-<li><a href="https://ww2.mathworks.cn/help/matlab/ref/function.html" target="_blank" rel="noopener">function 声明函数名称、输入和输出</a></li>
 <li><a href="https://ww2.mathworks.cn/help/matlab/functions.html" target="_blank" rel="noopener">函数</a></li>
-<li><a href="https://ww2.mathworks.cn/help/matlab/matlab_prog/local-functions-in-scripts.html" target="_blank" rel="noopener">向脚本中添加函数</a></li>
-<li><a href="https://ww2.mathworks.cn/help/matlab/matlab_prog/create-functions-in-files.html" target="_blank" rel="noopener">在文件中创建函数</a></li>
+<li><a href="https://ww2.mathworks.cn/help/matlab/matlab_prog/local-functions-in-scripts.html" target="_blank" rel="noopener">向脚本中添加函数</a><ul>
+<li>R2016b 或更高版本支持脚本中的函数。</li>
+</ul>
+</li>
+<li><a href="https://ww2.mathworks.cn/help/matlab/matlab_prog/base-and-function-workspaces.html" target="_blank" rel="noopener">基础和函数工作区</a></li>
+<li><a href="https://ww2.mathworks.cn/help/matlab/matlab_prog/function-precedence-order.html" target="_blank" rel="noopener">函数优先顺序</a></li>
+<li><a href="https://ww2.mathworks.cn/help/matlab/matlab_prog/types-of-functions.html" target="_blank" rel="noopener">函数类型</a></li>
 </ul>
 <h1 id="function"><a href="#function" class="headerlink" title="function"></a>function</h1><ul>
+<li><a href="https://ww2.mathworks.cn/help/matlab/ref/function.html" target="_blank" rel="noopener">function 声明函数名称、输入和输出</a></li>
 <li><code>function [y1,...,yN] = myfun(x1,...,xM)</code> 声明名为 myfun 的函数，该函数接受输入 x1,…,xM 并返回输出 y1,…,yN。此声明语句必须是函数的第一个可执行代码行。有效的函数名称以字母字符开头，并且可以包含字母、数字或下划线。<ul>
 <li>可以将函数保存在以下位置：<ul>
-<li>只包含函数定义的函数文件中。文件的名称应与文件中其函数的名称一致。</li>
-<li>包含命令和函数定义的脚本文件中。函数必须位于该文件的末尾。脚本文件不能与文件中的函数具有相同的名称。<strong>R2016b 或更高版本才可以在脚本中直接写直接用函数</strong>。</li>
+<li><strong>只包含函数定义的函数文件中。文件的名称应与文件中其函数的名称一致</strong>。</li>
+<li>包含命令和函数定义的脚本文件中。<strong>函数必须位于该文件的末尾</strong>。脚本文件不能与文件中的函数具有相同的名称。<strong>R2016b 或更高版本才可以在脚本中直接写直接用函数</strong>。</li>
 </ul>
 </li>
 </ul>
@@ -499,6 +504,10 @@
 <li>该函数是脚本文件内的局部函数。</li>
 </ul>
 </li>
+</ul>
+<h1 id="在文件中创建函数"><a href="#在文件中创建函数" class="headerlink" title="在文件中创建函数"></a>在文件中创建函数</h1><ul>
+<li><a href="https://ww2.mathworks.cn/help/matlab/matlab_prog/create-functions-in-files.html" target="_blank" rel="noopener">在文件中创建函数</a></li>
+<li>程序文件可以包含多个函数。<strong>如果文件仅包含函数定义，则第一个函数是主函数，也是 MATLAB 与文件名关联的函数</strong>。<strong>主函数或脚本代码后面的函数称为局部函数。局部函数只能在文件内使用</strong>。</li>
 </ul>
 <h1 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h1><ul>
 <li>格式：函数句柄变量=@（匿名函数输入参数）匿名函数表达式<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">EG:</span><br><span class="line">f1=@(x,y)x^<span class="number">2</span>+y^<span class="number">2</span>;</span><br><span class="line">f1(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line">	<span class="number">25</span></span><br></pre></td></tr></table></figure>
@@ -562,6 +571,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/18/matlab代码练习二/" rel="prev" title="matlab代码练习二">
+                matlab代码练习二 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -669,7 +682,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">84</span>
+                  <span class="site-state-item-count">86</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -680,7 +693,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">76</span>
+                  <span class="site-state-item-count">77</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -731,7 +744,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#function"><span class="nav-number">1.</span> <span class="nav-text">function</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#匿名函数"><span class="nav-number">2.</span> <span class="nav-text">匿名函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自定义函数"><span class="nav-number">3.</span> <span class="nav-text">自定义函数</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#function"><span class="nav-number">1.</span> <span class="nav-text">function</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在文件中创建函数"><span class="nav-number">2.</span> <span class="nav-text">在文件中创建函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#匿名函数"><span class="nav-number">3.</span> <span class="nav-text">匿名函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自定义函数"><span class="nav-number">4.</span> <span class="nav-text">自定义函数</span></a></li></ol></div>
             
 
           </div>
@@ -772,7 +785,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">45.9k</span>
+    <span title="Site words total count">47.1k</span>
   
 </div>
 
