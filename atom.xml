@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-04-17T12:31:06.509Z</updated>
+  <updated>2019-04-18T06:00:33.999Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -17,13 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>matlab自定义函数</title>
+    <link href="ctguljj.github.io/2019/04/18/matlab%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0/"/>
+    <id>ctguljj.github.io/2019/04/18/matlab自定义函数/</id>
+    <published>2019-04-18T05:42:52.000Z</published>
+    <updated>2019-04-18T06:00:33.999Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/function.html" target="_blank" rel="noopener">function 声明函数名称、输入和输出</a></li><li><a href="https://ww2.mathworks.cn/help/matlab/functions.html" target="_blank" rel="noopener">函数</a></li><li><a href="https://ww2.mathworks.cn/help/matlab/matlab_prog/local-functions-in-scripts.html" target="_blank" rel="noopener">向脚本中添加函数</a></li><li><a href="https://ww2.mathworks.cn/help/matlab/matlab_prog/create-functions-in-files.html" target="_blank" rel="noopener">在文件中创建函数</a></li></ul><h1 id="function"><a href="#function" class="headerlink" title="function"></a>function</h1><ul><li><code>function [y1,...,yN] = myfun(x1,...,xM)</code> 声明名为 myfun 的函数，该函数接受输入 x1,…,xM 并返回输出 y1,…,yN。此声明语句必须是函数的第一个可执行代码行。有效的函数名称以字母字符开头，并且可以包含字母、数字或下划线。<ul><li>可以将函数保存在以下位置：<ul><li>只包含函数定义的函数文件中。文件的名称应与文件中其函数的名称一致。</li><li>包含命令和函数定义的脚本文件中。函数必须位于该文件的末尾。脚本文件不能与文件中的函数具有相同的名称。<strong>R2016b 或更高版本才可以在脚本中直接写直接用函数</strong>。</li></ul></li></ul></li><li>文件可以包含多个局部函数或嵌套函数。为提高可读性，可使用 end 关键字来表示文件中每个函数的末尾。以下情况下需要 end 关键字：<ul><li>文件中有任意函数包含嵌套函数。</li><li>该函数是函数文件中的局部函数，并且文件中有局部函数使用 end 关键字。</li><li>该函数是脚本文件内的局部函数。</li></ul></li></ul><h1 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h1><ul><li>格式：函数句柄变量=@（匿名函数输入参数）匿名函数表达式<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">EG:</span><br><span class="line">f1=@(x,y)x^<span class="number">2</span>+y^<span class="number">2</span>;</span><br><span class="line">f1(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"><span class="number">25</span></span><br></pre></td></tr></table></figure></li></ul><h1 id="自定义函数"><a href="#自定义函数" class="headerlink" title="自定义函数"></a>自定义函数</h1><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">一：</span><br><span class="line"><span class="function"><span class="keyword">function</span> 输出形参表=函数名（输入形参表）</span></span><br><span class="line">注释（对这个函数的解释说明）</span><br><span class="line">函数体语句</span><br><span class="line">End</span><br><span class="line"></span><br><span class="line">EG:圆的周长和面积</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[s,c]</span>=<span class="title">circle</span><span class="params">(r)</span></span></span><br><span class="line"><span class="comment">%求圆的周长和面积</span></span><br><span class="line">c=<span class="number">2</span>*<span class="built_in">pi</span>*r;</span><br><span class="line">s=<span class="built_in">pi</span>*r^<span class="number">2</span>;</span><br><span class="line">End</span><br><span class="line"></span><br><span class="line">[s,c]=circle(<span class="number">3</span>)<span class="comment">%保存好函数文件，在命令行窗口或另一个脚本里调用</span></span><br><span class="line"></span><br><span class="line">二:</span><br><span class="line"><span class="function"><span class="keyword">function</span> 函数名</span></span><br><span class="line">注释（对这个函数的解释说明）</span><br><span class="line">函数体语句</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">EG:最强代号</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">CTGUMCM</span></span></span><br><span class="line">axis off;   <span class="comment">%关闭坐标轴</span></span><br><span class="line"><span class="comment">%Menubar是菜单条 none就是不显示图上方的菜单条</span></span><br><span class="line">set(gcf,<span class="string">'menubar'</span>,<span class="string">'none'</span>,<span class="string">'toolbar'</span>,<span class="string">'none'</span>,<span class="string">'unit'</span>, <span class="string">'normalized'</span>, <span class="string">'position'</span>, [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>]);</span><br><span class="line"><span class="keyword">for</span> k=<span class="number">1</span>:<span class="number">377</span></span><br><span class="line">h=text(<span class="built_in">rand</span>, <span class="built_in">rand</span>, ...</span><br><span class="line">     [<span class="string">'\fontsize&#123;'</span>,num2str(unifrnd(<span class="number">5</span>,<span class="number">77</span>)),<span class="string">'&#125; CTGU MCM'</span>],...</span><br><span class="line">        <span class="string">'color'</span>,<span class="built_in">rand</span>(<span class="number">1</span>,<span class="number">3</span>),<span class="string">'Rotation'</span>,<span class="number">360</span>*<span class="built_in">rand</span>);</span><br><span class="line">     pause(<span class="number">0.2</span>);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      🧐
+    
+    </summary>
+    
+      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+    
+      <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
+    
+      <category term="自定义函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0/"/>
+    
+    
+      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+    
+  </entry>
+  
+  <entry>
     <title>matlab绘图补充</title>
     <link href="ctguljj.github.io/2019/04/17/matlab%E7%BB%98%E5%9B%BE%E8%A1%A5%E5%85%85/"/>
     <id>ctguljj.github.io/2019/04/17/matlab绘图补充/</id>
     <published>2019-04-17T12:25:40.000Z</published>
-    <updated>2019-04-17T12:31:06.509Z</updated>
+    <updated>2019-04-17T13:23:04.692Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="set"><a href="#set" class="headerlink" title="set"></a>set</h2><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/set.html" target="_blank" rel="noopener">设置图形对象属性(set)</a></li><li>调用格式:<ul><li><code>set(H,Name,Value)</code>为 H 标识的对象指定其 Name 属性的值。使用时须用单引号将属性名引起来，例如，<code>set(H,&#39;Color&#39;,&#39;red&#39;)</code>。如果 H 是对象的向量，则 set 会为所有对象设置属性。如果 H 为空（即 []），set 不执行任何操作，但不返回错误或警告。</li><li><code>set(H,NameArray,ValueArray)</code></li><li><code>set(H,S)</code></li><li><code>s = set(H)</code></li><li><code>values = set(H,Name)</code></li></ul></li><li>栗子:<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%绘制一个线条并以 p 的形式返回图形线条对象。将行的 Color 属性设置为 'red'。</span></span><br><span class="line">p = <span class="built_in">plot</span>(<span class="number">1</span>:<span class="number">10</span>);</span><br><span class="line">set(p,<span class="string">'Color'</span>,<span class="string">'red'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">%使用随机数据创建一个包含四个线条的图形，并将这四个线条返回至 P。将所有线条的 Color 属性设置为 'red'。</span></span><br><span class="line">P = <span class="built_in">plot</span>(<span class="built_in">rand</span>(<span class="number">4</span>));</span><br><span class="line">set(P,<span class="string">'Color'</span>,<span class="string">'red'</span>)</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="set"><a href="#set" class="headerlink" title="set"></a>set</h2><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/set.html" target="_blank" rel="noopener">设置图形对象属性(set)</a></li><li>调用格式:<ul><li><code>set(H,Name,Value)</code>为 H 标识的对象指定其 Name 属性的值。使用时须用单引号将属性名引起来，例如，<code>set(H,&#39;Color&#39;,&#39;red&#39;)</code>。如果 H 是对象的向量，则 set 会为所有对象设置属性。如果 H 为空（即 []），set 不执行任何操作，但不返回错误或警告。</li><li><code>set(H,NameArray,ValueArray)</code></li><li><code>set(H,S)</code></li><li><code>s = set(H)</code></li><li><code>values = set(H,Name)</code></li></ul></li><li>栗子:<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%绘制一个线条并以 p 的形式返回图形线条对象。将行的 Color 属性设置为 'red'。</span></span><br><span class="line">p = <span class="built_in">plot</span>(<span class="number">1</span>:<span class="number">10</span>);</span><br><span class="line">set(p,<span class="string">'Color'</span>,<span class="string">'red'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">%使用随机数据创建一个包含四个线条的图形，并将这四个线条返回至 P。将所有线条的 Color 属性设置为 'red'。</span></span><br><span class="line">P = <span class="built_in">plot</span>(<span class="built_in">rand</span>(<span class="number">4</span>));</span><br><span class="line">set(P,<span class="string">'Color'</span>,<span class="string">'red'</span>)</span><br></pre></td></tr></table></figure></li></ul><h2 id="rectangle"><a href="#rectangle" class="headerlink" title="rectangle"></a>rectangle</h2><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/rectangle.html" target="_blank" rel="noopener">rectangle 创建带有尖角或圆角的矩形</a></li><li><a href="https://ww2.mathworks.cn/help/matlab/ref/matlab.graphics.primitive.rectangle-properties.html" target="_blank" rel="noopener">Rectangle 属性</a></li></ul>]]></content>
     
     <summary type="html">
     
@@ -512,20 +538,6 @@
     
     
       <category term="算法" scheme="ctguljj.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算几何初步</title>
-    <link href="ctguljj.github.io/2019/04/05/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95%E5%88%9D%E6%AD%A5/"/>
-    <id>ctguljj.github.io/2019/04/05/计算几何初步/</id>
-    <published>2019-04-05T09:52:58.000Z</published>
-    <updated>2019-04-05T09:52:58.930Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
     
   </entry>
   
