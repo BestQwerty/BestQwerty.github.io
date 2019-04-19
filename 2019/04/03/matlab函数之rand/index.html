@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="rand matlab中通过rand函数产生的是介于0到1(不包括1)之间的伪随机数  X = rand范围(0,1). X = rand(n)表示产生一个n×n的随机矩阵，n必须是整数,否则会报错。 X = rand(sz1,...,szN) X = rand(sz) X = rand(___,typename) X = rand(___,&amp;#39;like&amp;#39;,p) 可以与取整函数搭配使">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-13T05:42:04.449Z">
+<meta property="og:updated_time" content="2019-04-19T05:37:52.666Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab函数之rand及其相关函数">
 <meta name="twitter:description" content="rand matlab中通过rand函数产生的是介于0到1(不包括1)之间的伪随机数  X = rand范围(0,1). X = rand(n)表示产生一个n×n的随机矩阵，n必须是整数,否则会报错。 X = rand(sz1,...,szN) X = rand(sz) X = rand(___,typename) X = rand(___,&amp;#39;like&amp;#39;,p) 可以与取整函数搭配使">
@@ -359,8 +359,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-13T13:42:04+08:00">
-                2019-04-13
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-19T13:37:52+08:00">
+                2019-04-19
               </time>
             
           </span>
@@ -416,7 +416,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">300(字)</span> 
+					<span class="post-count">388(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -486,6 +486,8 @@
 <li>为了使每次执行rand函数时产生和之前不相同的一组伪随机数，通常需要初始化随机数种子。方法很多， 常见的一种是在写m文件时，在程序的开头写：<code>rand(&#39;state&#39;,sum(100*clock))</code> 定义一个随时间变化的初值。</li>
 </ul>
 <h1 id="randi"><a href="#randi" class="headerlink" title="randi"></a>randi</h1><ul>
+<li><a href="https://ww2.mathworks.cn/help/matlab/ref/randi.html" target="_blank" rel="noopener">randi 均匀分布的伪随机整数</a></li>
+<li><a href="https://ww2.mathworks.cn/help/parallel-computing/randi.html" target="_blank" rel="noopener">最新英文文档(推荐)</a></li>
 <li>randi函数产生均匀分布的伪随机整数(Uniformly distributed pseudorandom integers)</li>
 <li><code>X = randi(imax)</code>返回一个介于1到imax的伪随机整数，闭区间[1,imax].</li>
 <li><code>X = randi(imax,n)</code>返回一个在[1,imax]范围内的n*n的伪随机整数矩阵</li>
@@ -499,7 +501,11 @@
 <li><code>X = randi(imax,n,&#39;like&#39;,p)</code></li>
 <li><code>X = randi(imax,sz1,...,szN,&#39;like&#39;,p)</code></li>
 <li><code>X = randi(imax,sz,&#39;like&#39;,p)</code></li>
-<li><code>X = randi([imin,imax],___)</code></li>
+<li><p><code>X = randi([imin,imax],___)</code></p>
+</li>
+<li><p>指定生成区间<code>randi([1,4])</code>，生成[1,4]的随机整数</p>
+</li>
+<li>栗子:<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%生成一个由样本区间 [-5,5] 中均匀分布的随机整数组成的 10×1 列向量。 </span></span><br><span class="line">r = randi([<span class="number">-5</span>,<span class="number">5</span>],<span class="number">10</span>,<span class="number">1</span>)</span><br><span class="line">r = <span class="number">10</span>×<span class="number">1</span></span><br><span class="line">     <span class="number">3</span></span><br><span class="line">     <span class="number">4</span></span><br><span class="line">    <span class="number">-4</span></span><br><span class="line">     <span class="number">5</span></span><br><span class="line">     <span class="number">1</span></span><br><span class="line">    <span class="number">-4</span></span><br><span class="line">    <span class="number">-2</span></span><br><span class="line">     <span class="number">1</span></span><br><span class="line">     <span class="number">5</span></span><br><span class="line">     <span class="number">5</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 
       
@@ -773,7 +779,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">47.1k</span>
+    <span title="Site words total count">47.2k</span>
   
 </div>
 
