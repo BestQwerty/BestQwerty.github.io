@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[git]]></title>
+    <url>%2F2019%2F04%2F20%2Fgit%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[hexo博客网页访问量与访客计数问题]]></title>
     <url>%2F2019%2F04%2F20%2Fhexo%E5%8D%9A%E5%AE%A2%E7%BD%91%E9%A1%B5%E8%AE%BF%E9%97%AE%E9%87%8F%E4%B8%8E%E8%AE%BF%E5%AE%A2%E8%AE%A1%E6%95%B0%E9%97%AE%E9%A2%98%2F</url>
     <content type="text"><![CDATA[访问量解决 busuanzi域名改了⛷🏂1&lt;script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"&gt;&lt;/script&gt;]]></content>

@@ -1877,7 +1877,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3000ff;
+  background: #01d5e8;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3134,4 +3134,7 @@ span#inline-purple {
   vertical-align: baseline;
   border-radius: 0;
   background-color: #9954bb;
+}
+img.img-topic {
+  width: 100%;
 }
