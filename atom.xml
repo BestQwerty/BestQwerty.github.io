@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-04-20T11:47:58.635Z</updated>
+  <updated>2019-04-20T12:34:34.643Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo博客网页访问量与访客计数问题</title>
+    <link href="ctguljj.github.io/2019/04/20/hexo%E5%8D%9A%E5%AE%A2%E7%BD%91%E9%A1%B5%E8%AE%BF%E9%97%AE%E9%87%8F%E4%B8%8E%E8%AE%BF%E5%AE%A2%E8%AE%A1%E6%95%B0%E9%97%AE%E9%A2%98/"/>
+    <id>ctguljj.github.io/2019/04/20/hexo博客网页访问量与访客计数问题/</id>
+    <published>2019-04-20T12:25:30.000Z</published>
+    <updated>2019-04-20T12:34:34.643Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="访问量解决"><a href="#访问量解决" class="headerlink" title="访问量解决"></a>访问量解决</h1><ul><li>busuanzi域名改了⛷🏂<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      ⛹
+    
+    </summary>
+    
+      <category term="blog" scheme="ctguljj.github.io/categories/blog/"/>
+    
+      <category term="博客优化" scheme="ctguljj.github.io/categories/blog/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
+    
+    
+      <category term="blog" scheme="ctguljj.github.io/tags/blog/"/>
+    
+  </entry>
   
   <entry>
     <title>数学题题解</title>
@@ -494,35 +518,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>递归与迭代</title>
-    <link href="ctguljj.github.io/2019/04/06/%E9%80%92%E5%BD%92%E4%B8%8E%E8%BF%AD%E4%BB%A3/"/>
-    <id>ctguljj.github.io/2019/04/06/递归与迭代/</id>
-    <published>2019-04-06T11:20:16.000Z</published>
-    <updated>2019-04-06T12:06:41.788Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="递归与迭代"><a href="#递归与迭代" class="headerlink" title="递归与迭代"></a>递归与迭代</h1><ul><li>递归中一定有迭代,但是迭代中不一定有递归,大部分可以相互转换。</li><li>能用迭代的不用递归,递归调用函数,浪费空间,并且递归太深容易造成堆栈的溢出./<em>相对</em>/</li><li>迭代是从远到近，不断逼近answer<ul><li>利用变量的原值推算出变量的一个新值，迭代就是A不停的调用B.</li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;递归与迭代&quot;&gt;&lt;a href=&quot;#递归与迭代&quot; class=&quot;headerlink&quot; title=&quot;递归与迭代&quot;&gt;&lt;/a&gt;递归与迭代&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;递归中一定有迭代,但是迭代中不一定有递归,大部分可以相互转换。&lt;/li&gt;
-&lt;li&gt;能用迭代的不用递归,递
-      
-    
-    </summary>
-    
-      <category term="c++" scheme="ctguljj.github.io/categories/c/"/>
-    
-      <category term="递归与迭代" scheme="ctguljj.github.io/categories/c/%E9%80%92%E5%BD%92%E4%B8%8E%E8%BF%AD%E4%BB%A3/"/>
-    
-    
-      <category term="c++" scheme="ctguljj.github.io/tags/c/"/>
     
   </entry>
   
