@@ -4,6 +4,12 @@
     <title><![CDATA[git]]></title>
     <url>%2F2019%2F04%2F20%2Fgit%2F</url>
     <content type="text"></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[hexo博客网页访问量与访客计数问题]]></title>
