@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="算法,">
+  <meta name="keywords" content="题解,">
 
 
 
@@ -82,14 +82,14 @@
 
 
 <meta name="description" content="ac.nowcoder题目 题目描述:立华奏在学习初中数学的时候遇到了这样一道大水题： “设箱子内有 n 个球，其中给 m 个球打上标记，设一次摸球摸到每一个球的概率均等，求一次摸球摸到打标记的球的概率” “emmm…语言入门题” 但是她改了一下询问方式：设最终的答案为 p ,请输出 p 小数点后 K1 到 K2 位的所有数字（若不足则用 0 补齐） 输入描述:第一行一个整数 T,表示有 T 组数">
-<meta name="keywords" content="算法">
+<meta name="keywords" content="题解">
 <meta property="og:type" content="article">
 <meta property="og:title" content="快速幂题解">
 <meta property="og:url" content="ctguljj.github.io/2019/04/06/快速幂题解/index.html">
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="ac.nowcoder题目 题目描述:立华奏在学习初中数学的时候遇到了这样一道大水题： “设箱子内有 n 个球，其中给 m 个球打上标记，设一次摸球摸到每一个球的概率均等，求一次摸球摸到打标记的球的概率” “emmm…语言入门题” 但是她改了一下询问方式：设最终的答案为 p ,请输出 p 小数点后 K1 到 K2 位的所有数字（若不足则用 0 补齐） 输入描述:第一行一个整数 T,表示有 T 组数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-06T13:44:45.296Z">
+<meta property="og:updated_time" content="2019-04-20T11:13:37.756Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="快速幂题解">
 <meta name="twitter:description" content="ac.nowcoder题目 题目描述:立华奏在学习初中数学的时候遇到了这样一道大水题： “设箱子内有 n 个球，其中给 m 个球打上标记，设一次摸球摸到每一个球的概率均等，求一次摸球摸到打标记的球的概率” “emmm…语言入门题” 但是她改了一下询问方式：设最终的答案为 p ,请输出 p 小数点后 K1 到 K2 位的所有数字（若不足则用 0 补齐） 输入描述:第一行一个整数 T,表示有 T 组数">
@@ -359,8 +359,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-06T21:44:45+08:00">
-                2019-04-06
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-20T19:13:37+08:00">
+                2019-04-20
               </time>
             
           </span>
@@ -378,29 +378,7 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/" itemprop="url" rel="index">
-                    <span itemprop="name">算法</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/快速幂/" itemprop="url" rel="index">
-                    <span itemprop="name">快速幂</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/快速幂/题解/" itemprop="url" rel="index">
+                  <a href="/categories/题解/" itemprop="url" rel="index">
                     <span itemprop="name">题解</span>
                   </a>
                 </span>
@@ -416,7 +394,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">307(字)</span> 
+					<span class="post-count">527(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -483,7 +461,7 @@
 <li>输出描述:输出 T 行，每行输出 K2−K1+1个数，表示答案。注意同行的数字中间不需要用空格隔开。</li>
 </ul>
 <h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><ul>
-<li>不用从头开始模拟，只需要从 K1 位开始模拟就可以了。 直接通过快速幂+取模算出第 K1位的数字。然后我们发现 K2−K1≤10的5次方，所以暴力枚举除法过程就可以。 时间复杂度 O(n)</li>
+<li>不用从头开始模拟，只需要从 K1 位开始模拟就可以了。 直接通过快速幂+取模算出第 K1位的数字。然后我们发现 K2−K1≤10的5次方，所以暴力枚举除法过程就可以。 时间复杂度 O(n)<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Re register</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LL long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> U unsigned</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FOR(i,a,b) for(Re int i = a;i &lt;= b;++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ROF(i,a,b) for(Re int i = a;i &gt;= b;--i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> CLR(i,a) memset(i,a,sizeof(i))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> BR printf(<span class="meta-string">"--------------------\n"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> DEBUG(x) std::cerr &lt;&lt; #x &lt;&lt; <span class="meta-string">'='</span> &lt;&lt; x &lt;&lt; std::endl</span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">inline</span> LL <span class="title">qpow</span><span class="params">(LL a,LL b,LL p)</span></span>&#123;</span><br><span class="line">    LL res = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(;b;b&gt;&gt;=<span class="number">1</span>,a=a*a%p)</span><br><span class="line">        <span class="keyword">if</span>(b&amp;<span class="number">1</span>) res = res * a % p;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> T;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;T);</span><br><span class="line">    <span class="keyword">while</span>(T--)&#123;</span><br><span class="line">        LL a,b,k1,k2;</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b &gt;&gt; k1 &gt;&gt; k2;</span><br><span class="line">        LL ans = ((a % b) % b * qpow(<span class="number">10</span>, k1 - <span class="number">1</span>, b)) % b;</span><br><span class="line">        <span class="keyword">for</span>(LL i = k1;i &lt;= k2;i++,ans = ans % b) &#123;</span><br><span class="line">            ans *= <span class="number">10</span>;</span><br><span class="line">            <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; ans / b;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 
       
@@ -509,7 +487,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/算法/" rel="tag"># 算法</a>
+            <a href="/tags/题解/" rel="tag"># 题解</a>
           
         </div>
       
@@ -654,7 +632,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">86</span>
+                  <span class="site-state-item-count">87</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -676,7 +654,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -757,7 +735,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">47.2k</span>
+    <span title="Site words total count">48.2k</span>
   
 </div>
 
