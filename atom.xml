@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-04-21T03:33:58.642Z</updated>
+  <updated>2019-04-21T07:58:25.223Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="ctguljj.github.io/2019/04/20/git/"/>
     <id>ctguljj.github.io/2019/04/20/git/</id>
     <published>2019-04-20T13:14:02.000Z</published>
-    <updated>2019-04-21T03:33:58.642Z</updated>
+    <updated>2019-04-21T07:58:25.223Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><ul><li>pwd命令用于显示当前目录。<ul><li>如果使用Windows系统，为了避免遇到各种莫名其妙的问题，请确保目录名（包括父目录）不包含中文。 </li></ul></li></ul><h1 id="GitHub实用指南"><a href="#GitHub实用指南" class="headerlink" title="GitHub实用指南"></a>GitHub实用指南</h1><ul><li>在GitHub上，可以任意Fork开源仓库；</li><li>自己拥有Fork后的仓库的读写权限；</li><li>可以推送pull request给官方仓库来贡献代码。</li><li>Github账户注册和新建项目，项目必须要遵守格式：账户名.github.io，不然接下来会有很多麻烦。并且需要勾选Initialize this repository with a README</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><ul><li>pwd命令用于显示当前目录。</li><li><p>如果使用Windows系统，为了避免遇到各种莫名其妙的问题，请确保目录名(包括父目录)不包含中文。 </p></li><li><p>通过<code>git init</code>命令把目录变成Git可以管理的仓库：</p></li><li><p>添加文件到Git仓库，分两步：</p><ul><li>使用命令<code>git add &lt; file &gt;</code>，注意，可反复多次使用，添加多个文件；</li><li>使用命令<code>git commit -m &lt; message &gt;</code>，完成。</li></ul></li><li><code>git status</code>查看工作区状态</li><li><code>git diff</code>查看difference(修改的内容)</li><li><code>cat &lt; file &gt;</code>查看文件内容</li><li>HEAD指向的版本是当前版本，<code>HEAD^</code>表示上一个版本，<code>HEAD^^</code>前一个的上个版本,<code>HEAD~n</code>前第n个版本</li><li><code>git log</code>可以查看提交历史</li><li><code>git reflog</code>可以查看命令历史，查看commit_id(版本号)</li><li><p><code>git reset --hard &lt; commid id&gt;</code>回到该版本号的版本</p><ul><li><code>git reset --hard HEAD^</code>回到上一版本</li><li>版本号没必要写全，前几位就可以了，Git会自动去找。当然也不能只写前一两位，因为Git可能会找到多个版本号，就无法确定是哪一个了。</li></ul></li><li><p>工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。</p><ul><li>Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。</li><li>对于任何一个文件，在 Git 内都只有三种状态：已提交（committed），已修改（modified）和已暂存(staged),git 管理项目时，文件流转的三个工作区域：Git 的工作目录，暂存区域，以及本地仓库</li></ul></li><li><code>git diff</code> 比较的是工作区文件与暂存区文件的区别（上次<code>git add</code> 的内容）<ul><li><code>git diff --cached</code> 比较的是暂存区的文件与仓库分支里（上次<code>git commit</code> 后的内容）的区别</li><li><code>git add</code> 的潜台词就是把目标文件快照放入暂存区域，也就是 add file into staged area</li></ul></li></ul><h1 id="GitHub实用指南"><a href="#GitHub实用指南" class="headerlink" title="GitHub实用指南"></a>GitHub实用指南</h1><ul><li>在GitHub上，可以任意Fork开源仓库；</li><li>自己拥有Fork后的仓库的读写权限；</li><li>可以推送pull request给官方仓库来贡献代码。</li><li>Github账户注册和新建项目，项目必须要遵守格式：账户名.github.io，不然接下来会有很多麻烦。并且需要勾选Initialize this repository with a README（仅限博客）</li></ul><h2 id="GitHub-Pages"><a href="#GitHub-Pages" class="headerlink" title="GitHub Pages"></a>GitHub Pages</h2><ul><li>GitHub Pages is a static site hosting service designed to host your personal, organization, or project pages directly from a GitHub repository.</li></ul>]]></content>
     
     <summary type="html">
     
