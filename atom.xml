@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-04-20T13:28:35.053Z</updated>
+  <updated>2019-04-21T03:33:58.642Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -21,9 +21,13 @@
     <link href="ctguljj.github.io/2019/04/20/git/"/>
     <id>ctguljj.github.io/2019/04/20/git/</id>
     <published>2019-04-20T13:14:02.000Z</published>
-    <updated>2019-04-20T13:28:35.053Z</updated>
+    <updated>2019-04-21T03:33:58.642Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><ul><li>pwd命令用于显示当前目录。<ul><li>如果使用Windows系统，为了避免遇到各种莫名其妙的问题，请确保目录名（包括父目录）不包含中文。 </li></ul></li></ul><h1 id="GitHub实用指南"><a href="#GitHub实用指南" class="headerlink" title="GitHub实用指南"></a>GitHub实用指南</h1><ul><li>在GitHub上，可以任意Fork开源仓库；</li><li>自己拥有Fork后的仓库的读写权限；</li><li>可以推送pull request给官方仓库来贡献代码。</li><li>Github账户注册和新建项目，项目必须要遵守格式：账户名.github.io，不然接下来会有很多麻烦。并且需要勾选Initialize this repository with a README</li></ul>]]></content>
     
     <summary type="html">
+    
+      🎈
     
     </summary>
     

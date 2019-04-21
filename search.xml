@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[git]]></title>
     <url>%2F2019%2F04%2F20%2Fgit%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[git pwd命令用于显示当前目录。 如果使用Windows系统，为了避免遇到各种莫名其妙的问题，请确保目录名（包括父目录）不包含中文。 GitHub实用指南 在GitHub上，可以任意Fork开源仓库； 自己拥有Fork后的仓库的读写权限； 可以推送pull request给官方仓库来贡献代码。 Github账户注册和新建项目，项目必须要遵守格式：账户名.github.io，不然接下来会有很多麻烦。并且需要勾选Initialize this repository with a README]]></content>
       <categories>
         <category>git</category>
       </categories>
