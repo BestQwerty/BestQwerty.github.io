@@ -252,11 +252,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[砝码组合]]></title>
-    <url>%2F2019%2F04%2F08%2F%E7%A0%9D%E7%A0%81%E7%BB%84%E5%90%88%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
     <title><![CDATA[递归与迭代]]></title>
     <url>%2F2019%2F04%2F06%2F%E9%80%92%E5%BD%92%E4%B8%8E%E8%BF%AD%E4%BB%A3%2F</url>
     <content type="text"><![CDATA[递归与迭代 递归中一定有迭代,但是迭代中不一定有递归,大部分可以相互转换。 能用迭代的不用递归,递归调用函数,浪费空间,并且递归太深容易造成堆栈的溢出./相对/ 迭代是从远到近，不断逼近answer 利用变量的原值推算出变量的一个新值，迭代就是A不停的调用B.]]></content>
@@ -500,16 +495,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[栈代码练习]]></title>
-    <url>%2F2019%2F03%2F25%2F%E6%A0%88%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
-    <title><![CDATA[链表c练习]]></title>
-    <url>%2F2019%2F03%2F25%2F%E9%93%BE%E8%A1%A8c%E7%BB%83%E4%B9%A0%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
     <title><![CDATA[hexo特殊字符]]></title>
     <url>%2F2019%2F03%2F22%2Fhexo%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%2F</url>
     <content type="text"><![CDATA[因为特殊字符，报了一下错误1234FATAL Something&apos;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.htmlTemplate render error: (unknown path) [Line 5, Column 29] 从宇宙大爆发开始找错误，不过还好没浪费多少时间.记忆深刻，写个blog冷静一下 特殊字符 hexo特殊字符尽量减少使用，可能在转义时发生错误！如： 2个大括号连在一起！！！！！！！！！！！！！或者中括号！！]]></content>
@@ -533,11 +518,6 @@
       <tags>
         <tag>c++</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[bfs的神奇]]></title>
-    <url>%2F2019%2F03%2F20%2Fbfs%E7%9A%84%E7%A5%9E%E5%A5%87%2F</url>
-    <content type="text"></content>
   </entry>
   <entry>
     <title><![CDATA[dfs的奥妙]]></title>
@@ -584,7 +564,7 @@
   <entry>
     <title><![CDATA[数学秘密]]></title>
     <url>%2F2019%2F03%2F15%2F%E6%95%B0%E5%AD%A6%E7%A7%98%E5%AF%86%2F</url>
-    <content type="text"><![CDATA[最大公约数 在解有关最大公约数、最小公倍数的问题时，常用到以下结论 - （1）如果两个自然数是互质数，那么它们的最大公约数是1，最小公倍数是这两个数的乘积。 例如8和9，它们是互质数，所以（8，9）=1，[8，9]=72。 - （2）如果两个自然数中，较大数是较小数的倍数，那么较小数就是这两个数的最大公约数，较大数就是这两个数的最小公倍数。 例如18与3，18÷3=6，所以（18，3）=3，[18，3]=18。 - （3）两个整数分别除以它们的最大公约数，所得的商是互质数。 例如8和14分别除以它们的最大公约数2，所得的商分别为4和7，那么4和7是互质数。 - （4）两个自然数的最大公约数与它们的最小公倍数的乘积等于这两个数的乘积。 例如12和16，（12，16）=4，[12，16]=48，有4×48=12×16，即（12，16）× [12，16]=12×16。 - （5）GCD(a,b) is the smallest positive linear combination of a and b. a与b的最大公约数是最小的a与b的正线性组合,即对于方程xa+yb=c来说,若x,a,y,b都为整数,那么c的最小正根为gcd(a,b).]]></content>
+    <content type="text"><![CDATA[最大公约数 在解有关最大公约数、最小公倍数的问题时，常用到以下结论 如果两个自然数是互质数，那么它们的最大公约数是1，最小公倍数是这两个数的乘积。 例如8和9，它们是互质数，所以（8，9）=1，[8，9]=72。 2）如果两个自然数中，较大数是较小数的倍数，那么较小数就是这两个数的最大公约数，较大数就是这两个数的最小公倍数。 例如18与3，18÷3=6，所以（18，3）=3，[18，3]=18。 （3）两个整数分别除以它们的最大公约数，所得的商是互质数。 例如8和14分别除以它们的最大公约数2，所得的商分别为4和7，那么4和7是互质数。 （4）两个自然数的最大公约数与它们的最小公倍数的乘积等于这两个数的乘积。 例如12和16，（12，16）=4，[12，16]=48，有4×48=12×16，即（12，16）× [12，16]=12×16。 （5）GCD(a,b) is the smallest positive linear combination of a and b. a与b的最大公约数是最小的a与b的正线性组合,即对于方程xa+yb=c来说,若x,a,y,b都为整数,那么c的最小正根为gcd(a,b).]]></content>
       <categories>
         <category>数学基础知识</category>
       </categories>
@@ -915,11 +895,6 @@
       <tags>
         <tag>c++</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[算法核心思想：倍增]]></title>
-    <url>%2F2019%2F03%2F03%2F%E7%AE%97%E6%B3%95%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3%EF%BC%9A%E5%80%8D%E5%A2%9E%2F</url>
-    <content type="text"></content>
   </entry>
   <entry>
     <title><![CDATA[数据类型问题]]></title>
