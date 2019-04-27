@@ -43,6 +43,26 @@
   </entry>
   
   <entry>
+    <title>matlab实现dfs/bfs</title>
+    <link href="ctguljj.github.io/2019/04/27/matlab%E5%AE%9E%E7%8E%B0dfs-bfs/"/>
+    <id>ctguljj.github.io/2019/04/27/matlab实现dfs-bfs/</id>
+    <published>2019-04-27T13:16:03.000Z</published>
+    <updated>2019-04-27T15:02:31.887Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="dfs与bfs"><a href="#dfs与bfs" class="headerlink" title="dfs与bfs"></a>dfs与bfs</h1><ul><li><a href="https://blog.csdn.net/newcloudtech/article/details/8679439" target="_blank" rel="noopener">Matlab 深度优先搜索求解迷宫问题</a></li><li><a href="https://blog.csdn.net/newcloudtech/article/details/8679461" target="_blank" rel="noopener">Matlab 广度优先搜索求解迷宫问题</a></li><li><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">clc,clear;</span><br><span class="line"><span class="comment">%a = kron(eye (2),[-1 1] )</span></span><br><span class="line"><span class="comment">%a(:,1)</span></span><br><span class="line"><span class="comment">%maze = [0 2 5 5 1</span></span><br><span class="line">       <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">5</span> <span class="number">1</span></span><br><span class="line">        <span class="number">0</span> <span class="number">1</span> <span class="number">3</span> <span class="number">5</span> <span class="number">1</span></span><br><span class="line">        <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">%ismember(maze(1,1),[1,2,5] )</span></span><br><span class="line"><span class="comment">%maze = [1 2 3 4 5</span></span><br><span class="line">       <span class="number">2</span> <span class="number">23</span> <span class="number">3</span> <span class="number">1</span> <span class="number">5</span>];</span><br><span class="line"><span class="comment">%ismember(maze,[1:3])</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 定义四个方向</span></span><br><span class="line"><span class="comment">%directions = kron(eye(2),[-1,1]);</span></span><br><span class="line"><span class="comment">% 路径个数</span></span><br><span class="line"><span class="comment">%sol = 0;</span></span><br><span class="line"><span class="comment">% [I,J] = find(maze == 2);</span></span><br><span class="line"><span class="comment">% 找到起点</span></span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      😋
+    
+    </summary>
+    
+      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>git</title>
     <link href="ctguljj.github.io/2019/04/20/git/"/>
     <id>ctguljj.github.io/2019/04/20/git/</id>
@@ -492,35 +512,6 @@
       <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
     
       <category term="symsum" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/symsum/"/>
-    
-    
-      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>matlab常用函数之solve</title>
-    <link href="ctguljj.github.io/2019/04/10/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bsolve/"/>
-    <id>ctguljj.github.io/2019/04/10/matlab常用函数之solve/</id>
-    <published>2019-04-10T11:47:30.000Z</published>
-    <updated>2019-04-10T11:55:49.642Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="solve"><a href="#solve" class="headerlink" title="solve"></a>solve</h1><div class="note info"><p>Character vector inputs have been removed. Instead, use syms to declare variables and replace inputs such as solve(‘2<em>x == 1’,’x’) with solve(2</em>x == 1,x).</p></div><ul><li><p>调用格式:</p><ul><li><code>S = solve(eqn,var)</code>solves the equation eqn for the variable var. If you do not specify var, the symvar function determines the variable to solve for. For example, <code>solve(x + 1 == 2, x)</code> solves the equation x + 1 = 2 for x.</li><li><code>S = solve(eqn,var,Name,Value)</code></li><li><code>Y = solve(eqns,vars)</code></li><li><code>Y = solve(eqns,vars,Name,Value)</code></li><li><code>[y1,...,yN] = solve(eqns,vars)</code></li><li><code>[y1,...,yN] = solve(eqns,vars,Name,Value)</code></li><li><code>[y1,...,yN,parameters,conditions] = solve(eqns,vars,&#39;ReturnConditions&#39;,true)</code></li></ul></li><li><p>栗子:</p>  <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%Use the == operator to specify the equation sin(x) == 1 and solve it.</span></span><br><span class="line">syms x</span><br><span class="line">eqn = <span class="built_in">sin</span>(x) == <span class="number">1</span>;</span><br><span class="line">solx = solve(eqn,x)</span><br><span class="line"><span class="comment">%answer:solx = pi/2</span></span><br></pre></td></tr></table></figure></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;solve&quot;&gt;&lt;a href=&quot;#solve&quot; class=&quot;headerlink&quot; title=&quot;solve&quot;&gt;&lt;/a&gt;solve&lt;/h1&gt;&lt;div class=&quot;note info&quot;&gt;&lt;p&gt;Character vector inputs have been r
-      
-    
-    </summary>
-    
-      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
-    
-      <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
-    
-      <category term="solve" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/solve/"/>
     
     
       <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
