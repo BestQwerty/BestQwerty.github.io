@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="rand matlab中通过rand函数产生的是介于0到1(不包括1)之间的伪随机数  X = rand范围(0,1). X = rand(n)表示产生一个n×n的随机矩阵，n必须是整数,否则会报错。 X = rand(sz1,...,szN) X = rand(sz) X = rand(___,typename) X = rand(___,&amp;#39;like&amp;#39;,p) 可以与取整函数搭配使">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-19T05:37:52.666Z">
+<meta property="og:updated_time" content="2019-04-27T14:38:39.516Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab函数之rand及其相关函数">
 <meta name="twitter:description" content="rand matlab中通过rand函数产生的是介于0到1(不包括1)之间的伪随机数  X = rand范围(0,1). X = rand(n)表示产生一个n×n的随机矩阵，n必须是整数,否则会报错。 X = rand(sz1,...,szN) X = rand(sz) X = rand(___,typename) X = rand(___,&amp;#39;like&amp;#39;,p) 可以与取整函数搭配使">
@@ -359,8 +359,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-19T13:37:52+08:00">
-                2019-04-19
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-27T22:38:39+08:00">
+                2019-04-27
               </time>
             
           </span>
@@ -416,7 +416,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">388(字)</span> 
+					<span class="post-count">588(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -505,9 +505,18 @@
 </li>
 <li><p>指定生成区间<code>randi([1,4])</code>，生成[1,4]的随机整数</p>
 </li>
-<li>栗子:<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%生成一个由样本区间 [-5,5] 中均匀分布的随机整数组成的 10×1 列向量。 </span></span><br><span class="line">r = randi([<span class="number">-5</span>,<span class="number">5</span>],<span class="number">10</span>,<span class="number">1</span>)</span><br><span class="line">r = <span class="number">10</span>×<span class="number">1</span></span><br><span class="line">     <span class="number">3</span></span><br><span class="line">     <span class="number">4</span></span><br><span class="line">    <span class="number">-4</span></span><br><span class="line">     <span class="number">5</span></span><br><span class="line">     <span class="number">1</span></span><br><span class="line">    <span class="number">-4</span></span><br><span class="line">    <span class="number">-2</span></span><br><span class="line">     <span class="number">1</span></span><br><span class="line">     <span class="number">5</span></span><br><span class="line">     <span class="number">5</span></span><br></pre></td></tr></table></figure></li>
+<li>栗子:<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%生成一个由样本区间 [-5,5] 中均匀分布的随机整数组成的 10×1 列向量。 </span></span><br><span class="line">r = randi([<span class="number">-5</span>,<span class="number">5</span>],<span class="number">10</span>,<span class="number">1</span>)</span><br><span class="line">r = <span class="number">10</span>×<span class="number">1</span></span><br><span class="line">     <span class="number">3</span></span><br><span class="line">     <span class="number">4</span></span><br><span class="line">    <span class="number">-4</span></span><br><span class="line">     <span class="number">5</span></span><br><span class="line">     <span class="number">1</span></span><br><span class="line">    <span class="number">-4</span></span><br><span class="line">    <span class="number">-2</span></span><br><span class="line">     <span class="number">1</span></span><br><span class="line">     <span class="number">5</span></span><br><span class="line">     <span class="number">5</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-
+<h1 id="randperm"><a href="#randperm" class="headerlink" title="randperm"></a>randperm</h1><ul>
+<li><a href="https://ww2.mathworks.cn/help/matlab/ref/randperm.html" target="_blank" rel="noopener">randperm</a></li>
+<li>语法:<ul>
+<li><code>p = randperm(n)</code>返回行向量，其中包含从 1 到 n（包括二者）之间的整数随机置换。</li>
+<li><code>p = randperm(n,k)</code>返回行向量，其中包含在 1 到 n（包括二者）之间随机选择的 k 个唯一整数。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">randperm(<span class="number">6</span>)</span><br><span class="line">可能是向量</span><br><span class="line">[<span class="number">3</span>  <span class="number">2</span>  <span class="number">6</span>  <span class="number">4</span>  <span class="number">1</span>  <span class="number">5</span>]</span><br><span class="line">也可能是从 <span class="number">1</span> 到 <span class="number">6</span> 的整数的其他一些置换，具体取决于随机数生成器的状态。对 randperm 连续调用两次通常会返回两个不同的向量：</span><br><span class="line">randperm(<span class="number">6</span>)</span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line">     <span class="number">5</span>     <span class="number">2</span>     <span class="number">6</span>     <span class="number">4</span>     <span class="number">1</span>     <span class="number">3</span></span><br><span class="line"></span><br><span class="line">randperm(<span class="number">6</span>)</span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line">     <span class="number">4</span>     <span class="number">1</span>     <span class="number">6</span>     <span class="number">2</span>     <span class="number">3</span>     <span class="number">5</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> randperm(<span class="number">6</span>,<span class="number">3</span>)</span><br><span class="line">可能是向量</span><br><span class="line">[<span class="number">4</span> <span class="number">2</span> <span class="number">5</span>]</span><br><span class="line">也可能是从 <span class="number">1</span> 到 <span class="number">6</span>（包括二者）的任何三个整数的其他一些置换，具体取决于随机数生成器的状态。</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -676,7 +685,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">84</span>
+                  <span class="site-state-item-count">85</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -738,7 +747,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#rand"><span class="nav-number">1.</span> <span class="nav-text">rand</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#randi"><span class="nav-number">2.</span> <span class="nav-text">randi</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#rand"><span class="nav-number">1.</span> <span class="nav-text">rand</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#randi"><span class="nav-number">2.</span> <span class="nav-text">randi</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#randperm"><span class="nav-number">3.</span> <span class="nav-text">randperm</span></a></li></ol></div>
             
 
           </div>
@@ -780,7 +789,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">51.5k</span>
+    <span title="Site words total count">51.9k</span>
   
 </div>
 
