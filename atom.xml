@@ -5,9 +5,9 @@
   <subtitle>书青春 - 话人生 | Coding - Thinking - Acting</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="ctguljj.github.io/"/>
+  <link href="BestQwerty.github.io/"/>
   <updated>2019-04-28T05:18:11.567Z</updated>
-  <id>ctguljj.github.io/</id>
+  <id>BestQwerty.github.io/</id>
   
   <author>
     <name>LjJiaJun</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>matlab常用函数汇总</title>
-    <link href="ctguljj.github.io/2019/04/27/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E6%B1%87%E6%80%BB/"/>
-    <id>ctguljj.github.io/2019/04/27/matlab常用函数汇总/</id>
+    <link href="BestQwerty.github.io/2019/04/27/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E6%B1%87%E6%80%BB/"/>
+    <id>BestQwerty.github.io/2019/04/27/matlab常用函数汇总/</id>
     <published>2019-04-27T13:17:18.000Z</published>
     <updated>2019-04-28T05:18:11.567Z</updated>
     
@@ -31,21 +31,21 @@
     
     </summary>
     
-      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/categories/matlab/"/>
     
-      <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
+      <category term="函数" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
     
-      <category term="汇总" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/%E6%B1%87%E6%80%BB/"/>
+      <category term="汇总" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/%E6%B1%87%E6%80%BB/"/>
     
     
-      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
     
   </entry>
   
   <entry>
     <title>matlab实现dfs/bfs</title>
-    <link href="ctguljj.github.io/2019/04/27/matlab%E5%AE%9E%E7%8E%B0dfs-bfs/"/>
-    <id>ctguljj.github.io/2019/04/27/matlab实现dfs-bfs/</id>
+    <link href="BestQwerty.github.io/2019/04/27/matlab%E5%AE%9E%E7%8E%B0dfs-bfs/"/>
+    <id>BestQwerty.github.io/2019/04/27/matlab实现dfs-bfs/</id>
     <published>2019-04-27T13:16:03.000Z</published>
     <updated>2019-04-27T15:02:31.887Z</updated>
     
@@ -57,15 +57,15 @@
     
     </summary>
     
-      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/categories/matlab/"/>
     
     
   </entry>
   
   <entry>
     <title>git</title>
-    <link href="ctguljj.github.io/2019/04/20/git/"/>
-    <id>ctguljj.github.io/2019/04/20/git/</id>
+    <link href="BestQwerty.github.io/2019/04/20/git/"/>
+    <id>BestQwerty.github.io/2019/04/20/git/</id>
     <published>2019-04-20T13:14:02.000Z</published>
     <updated>2019-04-21T13:15:09.254Z</updated>
     
@@ -77,17 +77,17 @@
     
     </summary>
     
-      <category term="git" scheme="ctguljj.github.io/categories/git/"/>
+      <category term="git" scheme="BestQwerty.github.io/categories/git/"/>
     
     
-      <category term="git" scheme="ctguljj.github.io/tags/git/"/>
+      <category term="git" scheme="BestQwerty.github.io/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>hexo博客网页访问量与访客计数问题</title>
-    <link href="ctguljj.github.io/2019/04/20/hexo%E5%8D%9A%E5%AE%A2%E7%BD%91%E9%A1%B5%E8%AE%BF%E9%97%AE%E9%87%8F%E4%B8%8E%E8%AE%BF%E5%AE%A2%E8%AE%A1%E6%95%B0%E9%97%AE%E9%A2%98/"/>
-    <id>ctguljj.github.io/2019/04/20/hexo博客网页访问量与访客计数问题/</id>
+    <link href="BestQwerty.github.io/2019/04/20/hexo%E5%8D%9A%E5%AE%A2%E7%BD%91%E9%A1%B5%E8%AE%BF%E9%97%AE%E9%87%8F%E4%B8%8E%E8%AE%BF%E5%AE%A2%E8%AE%A1%E6%95%B0%E9%97%AE%E9%A2%98/"/>
+    <id>BestQwerty.github.io/2019/04/20/hexo博客网页访问量与访客计数问题/</id>
     <published>2019-04-20T12:25:30.000Z</published>
     <updated>2019-04-20T12:34:34.643Z</updated>
     
@@ -99,19 +99,19 @@
     
     </summary>
     
-      <category term="blog" scheme="ctguljj.github.io/categories/blog/"/>
+      <category term="blog" scheme="BestQwerty.github.io/categories/blog/"/>
     
-      <category term="博客优化" scheme="ctguljj.github.io/categories/blog/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
+      <category term="博客优化" scheme="BestQwerty.github.io/categories/blog/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
     
     
-      <category term="blog" scheme="ctguljj.github.io/tags/blog/"/>
+      <category term="blog" scheme="BestQwerty.github.io/tags/blog/"/>
     
   </entry>
   
   <entry>
     <title>数学题题解</title>
-    <link href="ctguljj.github.io/2019/04/20/%E6%95%B0%E5%AD%A6%E9%A2%98%E9%A2%98%E8%A7%A3/"/>
-    <id>ctguljj.github.io/2019/04/20/数学题题解/</id>
+    <link href="BestQwerty.github.io/2019/04/20/%E6%95%B0%E5%AD%A6%E9%A2%98%E9%A2%98%E8%A7%A3/"/>
+    <id>BestQwerty.github.io/2019/04/20/数学题题解/</id>
     <published>2019-04-20T11:09:02.000Z</published>
     <updated>2019-04-20T11:47:58.635Z</updated>
     
@@ -124,14 +124,14 @@
     </summary>
     
     
-      <category term="题解" scheme="ctguljj.github.io/tags/%E9%A2%98%E8%A7%A3/"/>
+      <category term="题解" scheme="BestQwerty.github.io/tags/%E9%A2%98%E8%A7%A3/"/>
     
   </entry>
   
   <entry>
     <title>matlab函数之vpa</title>
-    <link href="ctguljj.github.io/2019/04/18/matlab%E5%87%BD%E6%95%B0%E4%B9%8Bvpa/"/>
-    <id>ctguljj.github.io/2019/04/18/matlab函数之vpa/</id>
+    <link href="BestQwerty.github.io/2019/04/18/matlab%E5%87%BD%E6%95%B0%E4%B9%8Bvpa/"/>
+    <id>BestQwerty.github.io/2019/04/18/matlab函数之vpa/</id>
     <published>2019-04-18T09:29:14.000Z</published>
     <updated>2019-04-19T08:06:03.677Z</updated>
     
@@ -143,21 +143,21 @@
     
     </summary>
     
-      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/categories/matlab/"/>
     
-      <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
+      <category term="函数" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
     
-      <category term="vpa" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/vpa/"/>
+      <category term="vpa" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/vpa/"/>
     
     
-      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
     
   </entry>
   
   <entry>
     <title>matlab代码练习二</title>
-    <link href="ctguljj.github.io/2019/04/18/matlab%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0%E4%BA%8C/"/>
-    <id>ctguljj.github.io/2019/04/18/matlab代码练习二/</id>
+    <link href="BestQwerty.github.io/2019/04/18/matlab%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0%E4%BA%8C/"/>
+    <id>BestQwerty.github.io/2019/04/18/matlab代码练习二/</id>
     <published>2019-04-18T08:38:31.000Z</published>
     <updated>2019-04-27T12:46:49.486Z</updated>
     
@@ -169,19 +169,19 @@
     
     </summary>
     
-      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/categories/matlab/"/>
     
-      <category term="代码练习" scheme="ctguljj.github.io/categories/matlab/%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0/"/>
+      <category term="代码练习" scheme="BestQwerty.github.io/categories/matlab/%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0/"/>
     
     
-      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
     
   </entry>
   
   <entry>
     <title>matlab自定义函数</title>
-    <link href="ctguljj.github.io/2019/04/18/matlab%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0/"/>
-    <id>ctguljj.github.io/2019/04/18/matlab自定义函数/</id>
+    <link href="BestQwerty.github.io/2019/04/18/matlab%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0/"/>
+    <id>BestQwerty.github.io/2019/04/18/matlab自定义函数/</id>
     <published>2019-04-18T05:42:52.000Z</published>
     <updated>2019-04-27T14:36:29.285Z</updated>
     
@@ -193,21 +193,21 @@
     
     </summary>
     
-      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/categories/matlab/"/>
     
-      <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
+      <category term="函数" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
     
-      <category term="自定义函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0/"/>
+      <category term="自定义函数" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0/"/>
     
     
-      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
     
   </entry>
   
   <entry>
     <title>matlab绘图补充</title>
-    <link href="ctguljj.github.io/2019/04/17/matlab%E7%BB%98%E5%9B%BE%E8%A1%A5%E5%85%85/"/>
-    <id>ctguljj.github.io/2019/04/17/matlab绘图补充/</id>
+    <link href="BestQwerty.github.io/2019/04/17/matlab%E7%BB%98%E5%9B%BE%E8%A1%A5%E5%85%85/"/>
+    <id>BestQwerty.github.io/2019/04/17/matlab绘图补充/</id>
     <published>2019-04-17T12:25:40.000Z</published>
     <updated>2019-04-17T13:23:04.692Z</updated>
     
@@ -219,19 +219,19 @@
     
     </summary>
     
-      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/categories/matlab/"/>
     
-      <category term="绘图" scheme="ctguljj.github.io/categories/matlab/%E7%BB%98%E5%9B%BE/"/>
+      <category term="绘图" scheme="BestQwerty.github.io/categories/matlab/%E7%BB%98%E5%9B%BE/"/>
     
     
-      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
     
   </entry>
   
   <entry>
     <title>matlab函数之line</title>
-    <link href="ctguljj.github.io/2019/04/17/matlab%E5%87%BD%E6%95%B0%E4%B9%8Bline/"/>
-    <id>ctguljj.github.io/2019/04/17/matlab函数之line/</id>
+    <link href="BestQwerty.github.io/2019/04/17/matlab%E5%87%BD%E6%95%B0%E4%B9%8Bline/"/>
+    <id>BestQwerty.github.io/2019/04/17/matlab函数之line/</id>
     <published>2019-04-17T12:02:22.000Z</published>
     <updated>2019-04-17T12:03:48.050Z</updated>
     
@@ -243,23 +243,23 @@
     
     </summary>
     
-      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/categories/matlab/"/>
     
-      <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
+      <category term="函数" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
     
-      <category term="绘图" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/%E7%BB%98%E5%9B%BE/"/>
+      <category term="绘图" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/%E7%BB%98%E5%9B%BE/"/>
     
-      <category term="line" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/%E7%BB%98%E5%9B%BE/line/"/>
+      <category term="line" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/%E7%BB%98%E5%9B%BE/line/"/>
     
     
-      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
     
   </entry>
   
   <entry>
     <title>matlab运算符</title>
-    <link href="ctguljj.github.io/2019/04/14/matlab%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
-    <id>ctguljj.github.io/2019/04/14/matlab运算符/</id>
+    <link href="BestQwerty.github.io/2019/04/14/matlab%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+    <id>BestQwerty.github.io/2019/04/14/matlab运算符/</id>
     <published>2019-04-14T13:21:12.000Z</published>
     <updated>2019-04-27T12:47:34.299Z</updated>
     
@@ -271,21 +271,21 @@
     
     </summary>
     
-      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/categories/matlab/"/>
     
-      <category term="基础" scheme="ctguljj.github.io/categories/matlab/%E5%9F%BA%E7%A1%80/"/>
+      <category term="基础" scheme="BestQwerty.github.io/categories/matlab/%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="运算符" scheme="ctguljj.github.io/categories/matlab/%E5%9F%BA%E7%A1%80/%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+      <category term="运算符" scheme="BestQwerty.github.io/categories/matlab/%E5%9F%BA%E7%A1%80/%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
     
     
-      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
     
   </entry>
   
   <entry>
     <title>matlab常用函数之unique</title>
-    <link href="ctguljj.github.io/2019/04/14/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bunique/"/>
-    <id>ctguljj.github.io/2019/04/14/matlab常用函数之unique/</id>
+    <link href="BestQwerty.github.io/2019/04/14/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bunique/"/>
+    <id>BestQwerty.github.io/2019/04/14/matlab常用函数之unique/</id>
     <published>2019-04-14T06:55:31.000Z</published>
     <updated>2019-04-27T12:48:07.407Z</updated>
     
@@ -297,21 +297,21 @@
     
     </summary>
     
-      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/categories/matlab/"/>
     
-      <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
+      <category term="函数" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
     
-      <category term="unique" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/unique/"/>
+      <category term="unique" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/unique/"/>
     
     
-      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
     
   </entry>
   
   <entry>
     <title>matlab常用函数之sum</title>
-    <link href="ctguljj.github.io/2019/04/13/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bsum/"/>
-    <id>ctguljj.github.io/2019/04/13/matlab常用函数之sum/</id>
+    <link href="BestQwerty.github.io/2019/04/13/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bsum/"/>
+    <id>BestQwerty.github.io/2019/04/13/matlab常用函数之sum/</id>
     <published>2019-04-13T06:08:55.000Z</published>
     <updated>2019-04-13T06:13:53.239Z</updated>
     
@@ -323,21 +323,21 @@
     
     </summary>
     
-      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/categories/matlab/"/>
     
-      <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
+      <category term="函数" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
     
-      <category term="sum" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/sum/"/>
+      <category term="sum" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/sum/"/>
     
     
-      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
     
   </entry>
   
   <entry>
     <title>matlab矩阵操作补充</title>
-    <link href="ctguljj.github.io/2019/04/13/matlab%E7%9F%A9%E9%98%B5%E6%93%8D%E4%BD%9C%E8%A1%A5%E5%85%85/"/>
-    <id>ctguljj.github.io/2019/04/13/matlab矩阵操作补充/</id>
+    <link href="BestQwerty.github.io/2019/04/13/matlab%E7%9F%A9%E9%98%B5%E6%93%8D%E4%BD%9C%E8%A1%A5%E5%85%85/"/>
+    <id>BestQwerty.github.io/2019/04/13/matlab矩阵操作补充/</id>
     <published>2019-04-13T04:01:11.000Z</published>
     <updated>2019-04-14T13:19:22.522Z</updated>
     
@@ -349,21 +349,21 @@
     
     </summary>
     
-      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/categories/matlab/"/>
     
-      <category term="矩阵" scheme="ctguljj.github.io/categories/matlab/%E7%9F%A9%E9%98%B5/"/>
+      <category term="矩阵" scheme="BestQwerty.github.io/categories/matlab/%E7%9F%A9%E9%98%B5/"/>
     
-      <category term="基础" scheme="ctguljj.github.io/categories/matlab/%E7%9F%A9%E9%98%B5/%E5%9F%BA%E7%A1%80/"/>
+      <category term="基础" scheme="BestQwerty.github.io/categories/matlab/%E7%9F%A9%E9%98%B5/%E5%9F%BA%E7%A1%80/"/>
     
     
-      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
     
   </entry>
   
   <entry>
     <title>maltab常用函数之isempty</title>
-    <link href="ctguljj.github.io/2019/04/13/maltab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bisempty/"/>
-    <id>ctguljj.github.io/2019/04/13/maltab常用函数之isempty/</id>
+    <link href="BestQwerty.github.io/2019/04/13/maltab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bisempty/"/>
+    <id>BestQwerty.github.io/2019/04/13/maltab常用函数之isempty/</id>
     <published>2019-04-13T03:11:58.000Z</published>
     <updated>2019-04-14T08:40:43.627Z</updated>
     
@@ -375,21 +375,21 @@
     
     </summary>
     
-      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/categories/matlab/"/>
     
-      <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
+      <category term="函数" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
     
-      <category term="isempty" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/isempty/"/>
+      <category term="isempty" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/isempty/"/>
     
     
-      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
     
   </entry>
   
   <entry>
     <title>matlab常用函数之xlim及其相关函数</title>
-    <link href="ctguljj.github.io/2019/04/11/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bxlim%E5%8F%8A%E5%85%B6%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0/"/>
-    <id>ctguljj.github.io/2019/04/11/matlab常用函数之xlim及其相关函数/</id>
+    <link href="BestQwerty.github.io/2019/04/11/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bxlim%E5%8F%8A%E5%85%B6%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0/"/>
+    <id>BestQwerty.github.io/2019/04/11/matlab常用函数之xlim及其相关函数/</id>
     <published>2019-04-11T14:50:31.000Z</published>
     <updated>2019-04-17T11:23:44.283Z</updated>
     
@@ -401,23 +401,23 @@
     
     </summary>
     
-      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/categories/matlab/"/>
     
-      <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
+      <category term="函数" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
     
-      <category term="绘图" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/%E7%BB%98%E5%9B%BE/"/>
+      <category term="绘图" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/%E7%BB%98%E5%9B%BE/"/>
     
-      <category term="xlim,ylim,zlim" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/%E7%BB%98%E5%9B%BE/xlim-ylim-zlim/"/>
+      <category term="xlim,ylim,zlim" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/%E7%BB%98%E5%9B%BE/xlim-ylim-zlim/"/>
     
     
-      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
     
   </entry>
   
   <entry>
     <title>matlab常用函数之pdist与squareform</title>
-    <link href="ctguljj.github.io/2019/04/11/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bpdist%E5%92%8Csquareform/"/>
-    <id>ctguljj.github.io/2019/04/11/matlab常用函数之pdist和squareform/</id>
+    <link href="BestQwerty.github.io/2019/04/11/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bpdist%E5%92%8Csquareform/"/>
+    <id>BestQwerty.github.io/2019/04/11/matlab常用函数之pdist和squareform/</id>
     <published>2019-04-11T09:05:16.000Z</published>
     <updated>2019-04-13T03:19:01.772Z</updated>
     
@@ -429,21 +429,21 @@
     
     </summary>
     
-      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/categories/matlab/"/>
     
-      <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
+      <category term="函数" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
     
-      <category term="pdist" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/pdist/"/>
+      <category term="pdist" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/pdist/"/>
     
     
-      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
     
   </entry>
   
   <entry>
     <title>matlab常用函数之isprime</title>
-    <link href="ctguljj.github.io/2019/04/11/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bisprime/"/>
-    <id>ctguljj.github.io/2019/04/11/matlab常用函数之isprime/</id>
+    <link href="BestQwerty.github.io/2019/04/11/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bisprime/"/>
+    <id>BestQwerty.github.io/2019/04/11/matlab常用函数之isprime/</id>
     <published>2019-04-11T08:56:33.000Z</published>
     <updated>2019-04-11T09:00:14.604Z</updated>
     
@@ -455,21 +455,21 @@
     
     </summary>
     
-      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/categories/matlab/"/>
     
-      <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
+      <category term="函数" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
     
-      <category term="isprime" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/isprime/"/>
+      <category term="isprime" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/isprime/"/>
     
     
-      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
     
   </entry>
   
   <entry>
     <title>matlab常用函数之primes</title>
-    <link href="ctguljj.github.io/2019/04/11/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bprimes/"/>
-    <id>ctguljj.github.io/2019/04/11/matlab常用函数之primes/</id>
+    <link href="BestQwerty.github.io/2019/04/11/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bprimes/"/>
+    <id>BestQwerty.github.io/2019/04/11/matlab常用函数之primes/</id>
     <published>2019-04-11T08:49:49.000Z</published>
     <updated>2019-04-11T08:55:49.921Z</updated>
     
@@ -481,21 +481,21 @@
     
     </summary>
     
-      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/categories/matlab/"/>
     
-      <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
+      <category term="函数" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
     
-      <category term="primes" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/primes/"/>
+      <category term="primes" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/primes/"/>
     
     
-      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
     
   </entry>
   
   <entry>
     <title>matlab常用函数之symsum</title>
-    <link href="ctguljj.github.io/2019/04/10/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bsymsum/"/>
-    <id>ctguljj.github.io/2019/04/10/matlab常用函数之symsum/</id>
+    <link href="BestQwerty.github.io/2019/04/10/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bsymsum/"/>
+    <id>BestQwerty.github.io/2019/04/10/matlab常用函数之symsum/</id>
     <published>2019-04-10T12:04:39.000Z</published>
     <updated>2019-04-11T08:29:23.692Z</updated>
     
@@ -507,14 +507,14 @@
     
     </summary>
     
-      <category term="matlab" scheme="ctguljj.github.io/categories/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/categories/matlab/"/>
     
-      <category term="函数" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
+      <category term="函数" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
     
-      <category term="symsum" scheme="ctguljj.github.io/categories/matlab/%E5%87%BD%E6%95%B0/symsum/"/>
+      <category term="symsum" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/symsum/"/>
     
     
-      <category term="matlab" scheme="ctguljj.github.io/tags/matlab/"/>
+      <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
     
   </entry>
   
