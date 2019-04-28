@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="ctguljj.github.io/"/>
-  <updated>2019-04-27T14:41:33.769Z</updated>
+  <updated>2019-04-28T05:18:11.567Z</updated>
   <id>ctguljj.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="ctguljj.github.io/2019/04/27/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E6%B1%87%E6%80%BB/"/>
     <id>ctguljj.github.io/2019/04/27/matlab常用函数汇总/</id>
     <published>2019-04-27T13:17:18.000Z</published>
-    <updated>2019-04-27T14:41:33.769Z</updated>
+    <updated>2019-04-28T05:18:11.567Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="kron"><a href="#kron" class="headerlink" title="kron"></a>kron</h1><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/kron.html" target="_blank" rel="noopener">Kronecker 张量积</a></li><li>语法:<ul><li><code>K = kron(A,B)</code> 返回矩阵 A 和 B 的 Kronecker 张量积。如果 A 是 m×n 矩阵，而 B 是 p×q 矩阵，则 <code>kron(A,B)</code>是通过获取 A 元素与矩阵 B 元素之间的所有可能积而形成的一个 m<em>p×n</em>q 矩阵。</li></ul></li><li>如果 A 是 m×n 矩阵，而 B 是 p×q 矩阵，则 A 和 B 的 Kronecker 张量积是通过将 B 乘以 A 的各元素形成的一个大型矩阵。</li></ul><h1 id="ismember"><a href="#ismember" class="headerlink" title="ismember"></a>ismember</h1><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/ismember.html" target="_blank" rel="noopener">ismember</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="kron"><a href="#kron" class="headerlink" title="kron"></a>kron</h1><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/kron.html" target="_blank" rel="noopener">Kronecker 张量积</a></li><li>语法:<ul><li><code>K = kron(A,B)</code> 返回矩阵 A 和 B 的 Kronecker 张量积。如果 A 是 m×n 矩阵，而 B 是 p×q 矩阵，则 <code>kron(A,B)</code>是通过获取 A 元素与矩阵 B 元素之间的所有可能积而形成的一个 m<em>p×n</em>q 矩阵。</li></ul></li><li>如果 A 是 m×n 矩阵，而 B 是 p×q 矩阵，则 A 和 B 的 Kronecker 张量积是通过将 B 乘以 A 的各元素形成的一个大型矩阵。</li></ul><h1 id="ismember"><a href="#ismember" class="headerlink" title="ismember"></a>ismember</h1><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/ismember.html" target="_blank" rel="noopener">ismember</a></li></ul><h1 id="intersect"><a href="#intersect" class="headerlink" title="intersect"></a>intersect</h1><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/intersect.html" target="_blank" rel="noopener">设置两个数组的交集</a></li></ul><h1 id="mat2str"><a href="#mat2str" class="headerlink" title="mat2str"></a>mat2str</h1><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/mat2str.html" target="_blank" rel="noopener">将矩阵转换为字符</a></li></ul>]]></content>
     
     <summary type="html">
     

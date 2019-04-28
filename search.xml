@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[matlab常用函数汇总]]></title>
     <url>%2F2019%2F04%2F27%2Fmatlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E6%B1%87%E6%80%BB%2F</url>
-    <content type="text"><![CDATA[kron Kronecker 张量积 语法: K = kron(A,B) 返回矩阵 A 和 B 的 Kronecker 张量积。如果 A 是 m×n 矩阵，而 B 是 p×q 矩阵，则 kron(A,B)是通过获取 A 元素与矩阵 B 元素之间的所有可能积而形成的一个 mp×nq 矩阵。 如果 A 是 m×n 矩阵，而 B 是 p×q 矩阵，则 A 和 B 的 Kronecker 张量积是通过将 B 乘以 A 的各元素形成的一个大型矩阵。 ismember ismember]]></content>
+    <content type="text"><![CDATA[kron Kronecker 张量积 语法: K = kron(A,B) 返回矩阵 A 和 B 的 Kronecker 张量积。如果 A 是 m×n 矩阵，而 B 是 p×q 矩阵，则 kron(A,B)是通过获取 A 元素与矩阵 B 元素之间的所有可能积而形成的一个 mp×nq 矩阵。 如果 A 是 m×n 矩阵，而 B 是 p×q 矩阵，则 A 和 B 的 Kronecker 张量积是通过将 B 乘以 A 的各元素形成的一个大型矩阵。 ismember ismember intersect 设置两个数组的交集 mat2str 将矩阵转换为字符]]></content>
       <categories>
         <category>matlab</category>
         <category>函数</category>
