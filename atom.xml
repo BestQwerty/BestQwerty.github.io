@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="BestQwerty.github.io/"/>
-  <updated>2019-04-29T14:11:19.847Z</updated>
+  <updated>2019-04-29T15:34:08.554Z</updated>
   <id>BestQwerty.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>edge扩展</title>
+    <link href="BestQwerty.github.io/2019/04/29/edge%E6%89%A9%E5%B1%95/"/>
+    <id>BestQwerty.github.io/2019/04/29/edge扩展/</id>
+    <published>2019-04-29T15:22:12.000Z</published>
+    <updated>2019-04-29T15:34:08.554Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="edge扩展"><a href="#edge扩展" class="headerlink" title="edge扩展"></a>edge扩展</h1><ul><li>油猴子tamperMonkey<ul><li><a href="https://tampermonkey.net/index.php?version=4.8.5847&amp;ext=gz80&amp;updated=true" target="_blank" rel="noopener">链接</a></li></ul></li><li>uBlock Origin 广告过滤“新牌”扩展</li><li>Video Downloader Professional:下载网页上的视频</li><li>欢迎来到 Greasy Fork，这里是一个提供用户脚本的网站。<ul><li><a href="https://greasyfork.org/zh-CN" target="_blank" rel="noopener">Greasy Fork</a></li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      🎨
+    
+    </summary>
+    
+      <category term="浏览器" scheme="BestQwerty.github.io/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+      <category term="edge" scheme="BestQwerty.github.io/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/edge/"/>
+    
+    
+      <category term="浏览器" scheme="BestQwerty.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo博客与GitHub进阶操作</title>
@@ -484,32 +508,6 @@
       <category term="函数" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
     
       <category term="isprime" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/isprime/"/>
-    
-    
-      <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>matlab常用函数之primes</title>
-    <link href="BestQwerty.github.io/2019/04/11/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bprimes/"/>
-    <id>BestQwerty.github.io/2019/04/11/matlab常用函数之primes/</id>
-    <published>2019-04-11T08:49:49.000Z</published>
-    <updated>2019-04-11T08:55:49.921Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="primes"><a href="#primes" class="headerlink" title="primes"></a>primes</h1><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/primes.html" target="_blank" rel="noopener">文档</a></li><li>调用格式:<ul><li><code>p = primes(n)</code>返回包含所有小于或等于 n 的质数的行向量。p 与 n 具有相同的数据类型。</li></ul></li><li>栗子:<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p = <span class="built_in">primes</span>(<span class="number">25</span>)</span><br><span class="line">p = <span class="number">1</span>×<span class="number">9</span></span><br><span class="line">     <span class="number">2</span>     <span class="number">3</span>     <span class="number">5</span>     <span class="number">7</span>    <span class="number">11</span>    <span class="number">13</span>    <span class="number">17</span>    <span class="number">19</span>    <span class="number">23</span></span><br></pre></td></tr></table></figure></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      😘
-    
-    </summary>
-    
-      <category term="matlab" scheme="BestQwerty.github.io/categories/matlab/"/>
-    
-      <category term="函数" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
-    
-      <category term="primes" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/primes/"/>
     
     
       <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
