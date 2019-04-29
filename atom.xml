@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="BestQwerty.github.io/"/>
-  <updated>2019-04-28T05:18:11.567Z</updated>
+  <updated>2019-04-29T13:55:07.342Z</updated>
   <id>BestQwerty.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo博客与GitHub进阶操作</title>
+    <link href="BestQwerty.github.io/2019/04/29/hexo%E5%8D%9A%E5%AE%A2%E4%B8%8EGitHub%E8%BF%9B%E9%98%B6%E6%93%8D%E4%BD%9C/"/>
+    <id>BestQwerty.github.io/2019/04/29/hexo博客与GitHub进阶操作/</id>
+    <published>2019-04-29T13:41:49.000Z</published>
+    <updated>2019-04-29T13:55:07.342Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="GitHub与hexo"><a href="#GitHub与hexo" class="headerlink" title="GitHub与hexo"></a>GitHub与hexo</h1><ul><li>GitHub改名后使用<code>hexo clean</code>命令清除之前的网页信息(改名后一些设置与图片丢失),再重新上传</li><li>GitHub上commit可以查看历史提交记录，修改记录与相应时间的仓库原状，可以clone/download历史版本</li><li><code>$ hexo clean</code><ul><li>清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      😏
+    
+    </summary>
+    
+      <category term="blog" scheme="BestQwerty.github.io/categories/blog/"/>
+    
+      <category term="捣鼓记" scheme="BestQwerty.github.io/categories/blog/%E6%8D%A3%E9%BC%93%E8%AE%B0/"/>
+    
+    
+      <category term="blog" scheme="BestQwerty.github.io/tags/blog/"/>
+    
+  </entry>
   
   <entry>
     <title>matlab常用函数汇总</title>
@@ -486,32 +510,6 @@
       <category term="函数" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
     
       <category term="primes" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/primes/"/>
-    
-    
-      <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>matlab常用函数之symsum</title>
-    <link href="BestQwerty.github.io/2019/04/10/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bsymsum/"/>
-    <id>BestQwerty.github.io/2019/04/10/matlab常用函数之symsum/</id>
-    <published>2019-04-10T12:04:39.000Z</published>
-    <updated>2019-04-28T09:30:31.480Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="数学期望问题"><a href="#数学期望问题" class="headerlink" title="数学期望问题"></a>数学期望问题</h1><p><img src="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/matlab之数学期望问题2.png" alt=""><br><img src="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/matlab之数学期望问题.png" alt=""></p><ul><li><a href="http://www.doc88.com/p-6671800827880.html" target="_blank" rel="noopener">原地址</a></li></ul><h1 id="symsum"><a href="#symsum" class="headerlink" title="symsum"></a>symsum</h1><ul><li><a href="https://ww2.mathworks.cn/help/symbolic/symsum.html" target="_blank" rel="noopener">symsum文档</a></li><li>调用格式:<ul><li><code>F = symsum(f,k,a,b)</code> returns the sum of the series with terms that expression f specifies, which depend on symbolic variable k. The value of k ranges from a to b. If you do not specify the variable, symsum uses the variable that symvar determines. If f is a constant, then the default variable is x.<ul><li>返回表达式f指定的一系列项的和，这些项依赖于符号变量k。k的值范围从a到b。如果不指定变量，symsum将使用symvar确定的变量。如果f是常数，那么默认变量是x。</li></ul></li><li><code>F = symsum(f,k)</code></li></ul></li><li>栗子:  <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">syms k x</span><br><span class="line"> S1 = symsum(k^<span class="number">2</span>, k, <span class="number">0</span>, <span class="number">10</span>)</span><br><span class="line">S2 = symsum(<span class="number">1</span>/k^<span class="number">2</span>, k, <span class="number">1</span>, Inf)</span><br><span class="line"> S3 = symsum(x^k/<span class="built_in">factorial</span>(k), k, <span class="number">0</span>, Inf)<span class="comment">%分母为阶乘</span></span><br><span class="line"> <span class="comment">%answer</span></span><br><span class="line"> S1 =</span><br><span class="line"> <span class="number">385</span></span><br><span class="line"> S2 =</span><br><span class="line"> <span class="built_in">pi</span>^<span class="number">2</span>/<span class="number">6</span></span><br><span class="line"> S3 =</span><br><span class="line"> <span class="built_in">exp</span>(x)</span><br></pre></td></tr></table></figure></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      嘻嘻
-    
-    </summary>
-    
-      <category term="matlab" scheme="BestQwerty.github.io/categories/matlab/"/>
-    
-      <category term="函数" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
-    
-      <category term="symsum" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/symsum/"/>
     
     
       <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
