@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[GitHub扩展]]></title>
+    <url>%2F2019%2F04%2F29%2FGitHub%E6%89%A9%E5%B1%95%2F</url>
+    <content type="text"><![CDATA[汇总 扩展 October 它在 GitHub 页面的左侧上方添加了一个按钮，点击后会展开一个菜单，显示当前项目的整个文件夹结构。你可以浏览或下载单个源文件]]></content>
+      <categories>
+        <category>GitHub</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[edge扩展]]></title>
     <url>%2F2019%2F04%2F29%2Fedge%E6%89%A9%E5%B1%95%2F</url>
     <content type="text"><![CDATA[edge扩展 油猴子tamperMonkey 链接 uBlock Origin 广告过滤“新牌”扩展 Video Downloader Professional:下载网页上的视频 欢迎来到 Greasy Fork，这里是一个提供用户脚本的网站。 Greasy Fork]]></content>

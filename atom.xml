@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="BestQwerty.github.io/"/>
-  <updated>2019-04-29T15:34:08.554Z</updated>
+  <updated>2019-04-29T15:37:01.135Z</updated>
   <id>BestQwerty.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GitHub扩展</title>
+    <link href="BestQwerty.github.io/2019/04/29/GitHub%E6%89%A9%E5%B1%95/"/>
+    <id>BestQwerty.github.io/2019/04/29/GitHub扩展/</id>
+    <published>2019-04-29T15:29:37.000Z</published>
+    <updated>2019-04-29T15:37:01.135Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><a href="https://zhuanlan.zhihu.com/p/55722104" target="_blank" rel="noopener">汇总</a></li></ul><h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><ul><li>October<ul><li>它在 GitHub 页面的左侧上方添加了一个按钮，点击后会展开一个菜单，显示当前项目的整个文件夹结构。你可以浏览或下载单个源文件</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      ❤
+    
+    </summary>
+    
+      <category term="GitHub" scheme="BestQwerty.github.io/categories/GitHub/"/>
+    
+    
+      <category term="Github" scheme="BestQwerty.github.io/tags/Github/"/>
+    
+  </entry>
   
   <entry>
     <title>edge扩展</title>
@@ -482,32 +504,6 @@
       <category term="函数" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
     
       <category term="pdist" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/pdist/"/>
-    
-    
-      <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>matlab常用函数之isprime</title>
-    <link href="BestQwerty.github.io/2019/04/11/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bisprime/"/>
-    <id>BestQwerty.github.io/2019/04/11/matlab常用函数之isprime/</id>
-    <published>2019-04-11T08:56:33.000Z</published>
-    <updated>2019-04-11T09:00:14.604Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="isprime"><a href="#isprime" class="headerlink" title="isprime"></a>isprime</h1><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/isprime.html" target="_blank" rel="noopener">文档</a></li><li>调用格式:<ul><li><code>TF = isprime(X)</code> 返回与 X 大小相同的逻辑数组。如果 X(i) 为质数，则 TF(i) 的值为 true。否则，值为 false。</li></ul></li><li>栗子:<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tf = <span class="built_in">isprime</span>([<span class="number">2</span> <span class="number">3</span> <span class="number">0</span> <span class="number">6</span> <span class="number">10</span>])</span><br><span class="line">tf = <span class="number">1</span>x5 logical array</span><br><span class="line">   <span class="number">1</span>   <span class="number">1</span>   <span class="number">0</span>   <span class="number">0</span>   <span class="number">0</span></span><br><span class="line"><span class="comment">%2 和 3 是质数，但 0、6 和 10 不是。</span></span><br></pre></td></tr></table></figure></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      😆
-    
-    </summary>
-    
-      <category term="matlab" scheme="BestQwerty.github.io/categories/matlab/"/>
-    
-      <category term="函数" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
-    
-      <category term="isprime" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/isprime/"/>
     
     
       <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
