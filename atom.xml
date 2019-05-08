@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="BestQwerty.github.io/"/>
-  <updated>2019-05-08T02:58:24.304Z</updated>
+  <updated>2019-05-08T03:23:07.107Z</updated>
   <id>BestQwerty.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>栈的运用之表达式转换</title>
+    <link href="BestQwerty.github.io/2019/05/08/%E6%A0%88%E7%9A%84%E8%BF%90%E7%94%A8%E4%B9%8B%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BD%AC%E6%8D%A2/"/>
+    <id>BestQwerty.github.io/2019/05/08/栈的运用之表达式转换/</id>
+    <published>2019-05-08T03:00:35.000Z</published>
+    <updated>2019-05-08T03:23:07.107Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="后缀表达式"><a href="#后缀表达式" class="headerlink" title="后缀表达式"></a>后缀表达式</h1><ul><li>后缀表达式又称逆波兰表达式，后缀记法</li><li>后缀表达式计算机求值<ul><li>与前缀表达式类似，只是顺序是从左至右：<ul><li>从左至右扫描表达式，遇到数字时，将数字压入堆栈，遇到运算符时，弹出栈顶的两个数，用运算符对它们做相应的计算（次顶元素 op 栈顶元素），并将结果入栈；重复上述过程直到表达式最右端，最后运算得出的值即为表达式的结果</li></ul></li></ul></li></ul><h1 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h1><ul><li><a href="https://www.cnblogs.com/chensongxian/p/7059802.html" target="_blank" rel="noopener">博客园</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      😋
+    
+    </summary>
+    
+      <category term="数据结构" scheme="BestQwerty.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="栈" scheme="BestQwerty.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%88/"/>
+    
+    
+      <category term="数据结构" scheme="BestQwerty.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
   
   <entry>
     <title>二叉树的创建与遍历</title>
@@ -472,34 +496,6 @@
       <category term="函数" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
     
       <category term="isempty" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/isempty/"/>
-    
-    
-      <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>matlab常用函数之xlim及其相关函数</title>
-    <link href="BestQwerty.github.io/2019/04/11/matlab%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E4%B9%8Bxlim%E5%8F%8A%E5%85%B6%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0/"/>
-    <id>BestQwerty.github.io/2019/04/11/matlab常用函数之xlim及其相关函数/</id>
-    <published>2019-04-11T14:50:31.000Z</published>
-    <updated>2019-04-17T11:23:44.283Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="xlim"><a href="#xlim" class="headerlink" title="xlim"></a>xlim</h1><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/xlim.html" target="_blank" rel="noopener">文档</a></li><li><a href="http://www.ece.northwestern.edu/local-apps/matlabhelp/techdoc/ref/ylim.html" target="_blank" rel="noopener">相关网站</a></li><li>含义:(x limit)设置或查询 x 坐标轴范围</li><li>调用格式:y有多种，暂时写一种<ul><li><code>xlim([xmin xmax])</code>sets the axis limits in the current axes to the specified values.<ul><li>将当前轴中的轴限制设置为指定的值。</li></ul></li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      😋
-    
-    </summary>
-    
-      <category term="matlab" scheme="BestQwerty.github.io/categories/matlab/"/>
-    
-      <category term="函数" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
-    
-      <category term="绘图" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/%E7%BB%98%E5%9B%BE/"/>
-    
-      <category term="xlim,ylim,zlim" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/%E7%BB%98%E5%9B%BE/xlim-ylim-zlim/"/>
     
     
       <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
