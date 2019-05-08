@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[二叉树的创建与遍历]]></title>
+    <url>%2F2019%2F05%2F08%2F%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%88%9B%E5%BB%BA%E4%B8%8E%E9%81%8D%E5%8E%86%2F</url>
+    <content type="text"><![CDATA[二叉树创建与遍历123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106#include&lt;bits/stdc++.h&gt; #define Dtype char using namespace std; typedef struct Node&#123; Dtype data; struct Node *LChild; struct Node *RChild; &#125;Bnode,* Btree; void visit(Bnode *root) &#123; if(root != NULL)&#123; cout &lt;&lt; root-&gt;data &lt;&lt; " "; &#125; &#125; void CreateBtree(Btree &amp;t) &#123; Dtype e; cin &gt;&gt; e; if(e == '#') t = NULL; else &#123; t = (Btree)malloc(sizeof(Bnode)); t-&gt;data = e; CreateBtree(t-&gt;LChild); CreateBtree(t-&gt;RChild); &#125; &#125; void Pre_visit(Btree t) //前序遍历 &#123; if(t) &#123; visit(t); Pre_visit(t-&gt;LChild); Pre_visit(t-&gt;RChild); &#125; &#125; void In_visit(Btree t) //中序遍历 &#123; if(t) &#123; In_visit(t-&gt;LChild); visit(t); In_visit(t-&gt;RChild); &#125; &#125; void Post_visit(Btree t) //后序遍历 &#123; if(t) &#123; Post_visit(t-&gt;LChild); Post_visit(t-&gt;RChild); visit(t); &#125; &#125; void print_leaf(Btree t) &#123; if(t) &#123; if(!t-&gt;LChild &amp;&amp; !t-&gt;RChild) cout &lt;&lt; t-&gt;data &lt;&lt; " "; print_leaf(t-&gt;LChild); print_leaf(t-&gt;RChild); &#125; &#125; int PostTreeDepth(Btree t) &#123; int h1,h2,max; if(t) &#123; h1 = PostTreeDepth(t-&gt;LChild); h2 = PostTreeDepth(t-&gt;RChild); max = h1 &gt; h2 ? h1 : h2; return max+1; &#125; else return 0; &#125; int main() &#123; Btree t; CreateBtree(t); cout &lt;&lt; "前序遍历二叉树" &lt;&lt; endl; Pre_visit(t); cout &lt;&lt; endl &lt;&lt; "中序序遍历二叉树" &lt;&lt; endl; In_visit(t); cout &lt;&lt; endl &lt;&lt; "后序遍历二叉树：" &lt;&lt; endl; Post_visit(t); cout &lt;&lt; endl &lt;&lt; "输出叶子节点：" &lt;&lt; endl; print_leaf(t); cout &lt;&lt; endl &lt;&lt; "输出树的深度：" &lt;&lt; endl; cout &lt;&lt; PostTreeDepth(t) &lt;&lt; endl; return 0; &#125; /* a b # d f # # g # # c # e # h # # */]]></content>
+      <categories>
+        <category>数据结构</category>
+        <category>二叉树</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[GitHub扩展]]></title>
     <url>%2F2019%2F04%2F29%2FGitHub%E6%89%A9%E5%B1%95%2F</url>
     <content type="text"><![CDATA[汇总 扩展 October 它在 GitHub 页面的左侧上方添加了一个按钮，点击后会展开一个菜单，显示当前项目的整个文件夹结构。你可以浏览或下载单个源文件]]></content>
