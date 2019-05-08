@@ -81,19 +81,19 @@
 
 
 
-<meta name="description" content="vector 在Vector容器中有以下几个关于大小的函数  - size() 返回容器的大小，目前存在的元素数 - empty() 判断容器是否为空 - max_size() 返回容器最大的可以存储的元素 - capacity() 返回容器当前能够容纳的元素数量  capacity 一般大于size的原因是为了避免 每次增加数据时都要重新分配内存，所以一般会 生成一个较大的空间，以便随后的数据插">
+<meta name="description" content="vector 在Vector容器中有以下几个关于大小的函数  size()返回容器的大小，目前存在的元素数 empty()判断容器是否为空 max_size()返回容器最大的可以存储的元素 capacity()返回容器当前能够容纳的元素数量capacity 一般大于size的原因是为了避免 每次增加数据时都要重新分配内存，所以一般会 生成一个较大的空间，以便随后的数据插入。    Vector的容">
 <meta name="keywords" content="stl">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于vector大小（size）和容量（capacity）">
 <meta property="og:url" content="BestQwerty.github.io/2019/03/08/关于vector大小（size）和容量（capacity）/index.html">
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
-<meta property="og:description" content="vector 在Vector容器中有以下几个关于大小的函数  - size() 返回容器的大小，目前存在的元素数 - empty() 判断容器是否为空 - max_size() 返回容器最大的可以存储的元素 - capacity() 返回容器当前能够容纳的元素数量  capacity 一般大于size的原因是为了避免 每次增加数据时都要重新分配内存，所以一般会 生成一个较大的空间，以便随后的数据插">
+<meta property="og:description" content="vector 在Vector容器中有以下几个关于大小的函数  size()返回容器的大小，目前存在的元素数 empty()判断容器是否为空 max_size()返回容器最大的可以存储的元素 capacity()返回容器当前能够容纳的元素数量capacity 一般大于size的原因是为了避免 每次增加数据时都要重新分配内存，所以一般会 生成一个较大的空间，以便随后的数据插入。    Vector的容">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/vector.jpg">
-<meta property="og:updated_time" content="2019-04-28T09:39:21.197Z">
+<meta property="og:updated_time" content="2019-05-08T01:49:31.535Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于vector大小（size）和容量（capacity）">
-<meta name="twitter:description" content="vector 在Vector容器中有以下几个关于大小的函数  - size() 返回容器的大小，目前存在的元素数 - empty() 判断容器是否为空 - max_size() 返回容器最大的可以存储的元素 - capacity() 返回容器当前能够容纳的元素数量  capacity 一般大于size的原因是为了避免 每次增加数据时都要重新分配内存，所以一般会 生成一个较大的空间，以便随后的数据插">
+<meta name="twitter:description" content="vector 在Vector容器中有以下几个关于大小的函数  size()返回容器的大小，目前存在的元素数 empty()判断容器是否为空 max_size()返回容器最大的可以存储的元素 capacity()返回容器当前能够容纳的元素数量capacity 一般大于size的原因是为了避免 每次增加数据时都要重新分配内存，所以一般会 生成一个较大的空间，以便随后的数据插入。    Vector的容">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/vector.jpg">
 
 
@@ -361,8 +361,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-28T17:39:21+08:00">
-                2019-04-28
+              <time title="更新于" itemprop="dateModified" datetime="2019-05-08T09:49:31+08:00">
+                2019-05-08
               </time>
             
           </span>
@@ -407,7 +407,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">747(字)</span> 
+					<span class="post-count">813(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -466,23 +466,25 @@
 
       
         <h1 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h1><ul>
-<li>在Vector容器中有以下几个关于大小的函数</li>
+<li><p>在Vector容器中有以下几个关于大小的函数</p>
+<ul>
+<li><code>size()</code><br>返回容器的大小，目前存在的元素数</li>
+<li><code>empty()</code><br>判断容器是否为空</li>
+<li><code>max_size()</code><br>返回容器最大的可以存储的元素</li>
+<li><code>capacity()</code><br>返回容器当前能够容纳的元素数量<div class="note success"><p>capacity 一般大于size的原因是为了避免 每次增加数据时都要重新分配内存，所以一般会 生成一个较大的空间，以便随后的数据插入。</p></div>
+</li>
 </ul>
-<pre><code>- size()
-返回容器的大小，目前存在的元素数
-- empty()
-判断容器是否为空
-- max_size()
-返回容器最大的可以存储的元素
-- capacity()
-返回容器当前能够容纳的元素数量
-</code></pre><ul>
-<li><div class="note success"><p>capacity 一般大于size的原因是为了避免 每次增加数据时都要重新分配内存，所以一般会 生成一个较大的空间，以便随后的数据插入。</p></div></li>
-<li>Vector的容量之所以重要，有以下两个原因：<pre><code>-  1. 容器的大小一旦超过capacity的大小，vector会重新配置内部的存储器，导致和vector元素相关的所有reference、pointers、iterator都会失效。
+</li>
+<li><p>Vector的容量之所以重要，有以下两个原因：</p>
+<pre><code>-  1. 容器的大小一旦超过capacity的大小，vector会重新配置内部的存储器，导致和vector元素相关的所有reference、pointers、iterator都会失效。
 - 2.内存的重新配置会很耗时间。
 </code></pre></li>
-<li>size 是当前 vector 容器真实占用的大小，也就是容器当前拥有多少个容器。<br>capacity 是指在发生 realloc 前能允许的最大元素数，即预分配的内存空间。</li>
-<li>在 STL 中，拥有 capacity 属性的容器只有 vector 和 string。      </li>
+<li>size <strong>是当前 vector 容器真实占用的大小</strong>，也就是容器当前拥有多少个容器。<ul>
+<li>因为是实时的大小，所以在对容器进行操作后size大小会变化，<strong>特别注意在循环用size作循环条件时，如果在循环语句中对容器进行了操作，那么size会不断发生变化</strong></li>
+</ul>
+</li>
+<li>capacity 是指在发生 realloc 前能允许的最大元素数，即预分配的内存空间。</li>
+<li>在 STL 中，拥有 capacity 属性的容器只有 vector 和 string</li>
 </ul>
 <h2 id="避免内存重新配置的方法"><a href="#避免内存重新配置的方法" class="headerlink" title="避免内存重新配置的方法"></a>避免内存重新配置的方法</h2><ul>
 <li>方法一：Reserve()保留适当容量<pre><code>在创建容器后，第一时间为容器分配足够大的空间，避免重新分配内存。
@@ -785,7 +787,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">53k</span>
+    <span title="Site words total count">53.1k</span>
   
 </div>
 
