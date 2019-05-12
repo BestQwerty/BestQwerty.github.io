@@ -90,7 +90,7 @@
 <meta property="og:description" content="注意，STL头文件没有扩展名.h STL中默认是采用小于号来排序的 stl很好的介绍（原链接）  c++手册   1.容器概论 容器，置物之所也。像桶可装水，碗可盛汤，C++的容器，可以存储对象。容器有多种，用来处理不同的元素操作诉求。按照元素存储到容器中以及访问方式的差异，容器分为顺序容器与关联容器。 顺序容器也称为序列式容器。序列式容器按元素插入的顺序存储元素，这些元素可以进行排序，但未必是">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/stl总结.png">
-<meta property="og:updated_time" content="2019-04-28T09:38:55.727Z">
+<meta property="og:updated_time" content="2019-05-12T14:57:45.440Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="stl介绍">
 <meta name="twitter:description" content="注意，STL头文件没有扩展名.h STL中默认是采用小于号来排序的 stl很好的介绍（原链接）  c++手册   1.容器概论 容器，置物之所也。像桶可装水，碗可盛汤，C++的容器，可以存储对象。容器有多种，用来处理不同的元素操作诉求。按照元素存储到容器中以及访问方式的差异，容器分为顺序容器与关联容器。 顺序容器也称为序列式容器。序列式容器按元素插入的顺序存储元素，这些元素可以进行排序，但未必是">
@@ -361,8 +361,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-28T17:38:55+08:00">
-                2019-04-28
+              <time title="更新于" itemprop="dateModified" datetime="2019-05-12T22:57:45+08:00">
+                2019-05-12
               </time>
             
           </span>
@@ -396,7 +396,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">1.3k(字)</span> 
+					<span class="post-count">1.4k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -535,6 +535,13 @@
 <li>insert(…)：插入一个或多个元素。该函数参数较复杂，此处省略。</li>
 </ul>
 </li>
+</ul>
+<ul>
+<li>size <strong>是当前容器真实占用的大小</strong>，也就是容器当前拥有多少个容器。<ul>
+<li>因为是实时的大小，所以在对容器进行操作后size大小会变化，<strong>特别注意在循环用size作循环条件时，如果在循环语句中对容器进行了操作，那么size会不断发生变化</strong></li>
+</ul>
+</li>
+<li>对容器进行读取，删除，弹出等操作时一定要先判空，如对<code>stack.top()</code>使用时必须先判空，否侧可能程序不会报错但无法运行</li>
 </ul>
 
       
@@ -809,7 +816,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">53.6k</span>
+    <span title="Site words total count">54.2k</span>
   
 </div>
 
