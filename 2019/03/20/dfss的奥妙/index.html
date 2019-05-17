@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="dfs模板 DFS的重要点在于状态回溯 判出口（终点、越界）-&amp;gt; 剪枝-&amp;gt;扩展-&amp;gt;标记-&amp;gt;递归-&amp;gt;还原  123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354void dfs()//参数用来表示状态  &amp;#123;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-17T15:41:07.763Z">
+<meta property="og:updated_time" content="2019-05-17T15:48:51.524Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="dfs的奥妙">
 <meta name="twitter:description" content="dfs模板 DFS的重要点在于状态回溯 判出口（终点、越界）-&amp;gt; 剪枝-&amp;gt;扩展-&amp;gt;标记-&amp;gt;递归-&amp;gt;还原  123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354void dfs()//参数用来表示状态  &amp;#123;">
@@ -359,7 +359,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-05-17T23:41:07+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-05-17T23:48:51+08:00">
                 2019-05-17
               </time>
             
@@ -405,7 +405,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">793(字)</span> 
+					<span class="post-count">1.3k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -480,7 +480,13 @@
      <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">		</span><br><span class="line">	<span class="keyword">int</span> <span class="built_in">map</span>[<span class="number">6</span>][<span class="number">6</span>];<span class="comment">//地图；</span></span><br><span class="line">	<span class="keyword">bool</span> temp[<span class="number">6</span>][<span class="number">6</span>];<span class="comment">//走过的标记；</span></span><br><span class="line">	<span class="keyword">int</span> dx[<span class="number">4</span>]=&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span>&#125;;<span class="comment">//打表；</span></span><br><span class="line">	<span class="keyword">int</span> dy[<span class="number">4</span>]=&#123;<span class="number">-1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>&#125;;<span class="comment">//打表；</span></span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">walk</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span><span class="comment">//定义walk；</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x==fx&amp;&amp;y==fy)<span class="comment">//fx表示结束x坐标，fy表示结束y坐标；</span></span><br><span class="line">    &#123;</span><br><span class="line">        total++;<span class="comment">//总数增加；</span></span><br><span class="line">        <span class="keyword">return</span>;<span class="comment">//返回，继续搜索；</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">3</span>;i++)<span class="comment">//0——3是左，右，下，上四个方向；</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(temp[x+dx[i]][y+dy[i]]==<span class="number">0</span>&amp;&amp;<span class="built_in">map</span>[x+dx[i]][y+dy[i]]==<span class="number">1</span>)<span class="comment">//判断没有走过和没有障碍；</span></span><br><span class="line">            &#123;</span><br><span class="line">                temp[x][y]=<span class="number">1</span>;<span class="comment">//走过的地方打上标记；</span></span><br><span class="line">                walk(x+dx[i],y+dy[i]);<span class="comment">//同i!!!!</span></span><br><span class="line">                temp[x][y]=<span class="number">0</span>;<span class="comment">//还原状态；</span></span><br><span class="line">            &#125;    </span><br><span class="line">        &#125; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 - 就在地图map数组上打标记（自己走过的路）比较简单，走过的路和障碍可能引起混淆
-</code></pre><h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><code>`</code>c++<br>18年秋第13周任务-地主分财产<br>时间限制：2秒 内存限制：128兆<br>55 次提交 1 次通过<br>题目描述<br> 一位老财主在临终之前想把自己的财产-一箱金条分给四个儿子，为了不引起兄弟之间的矛盾，他想把这箱金条平均分给四个儿子，但是麻烦的是，这箱金条有长有短(但是粗细一样且质地均匀)，现在他想知道这箱金条能不能均分成四份（不能将金条裁断），这对于他来说太难了。那么，你能解决这个问题吗？<br>输入<br>第一行输入一个整数m&lt;1000, 表示测试用例个数，以下的行是m个测试用例.<br>每个测试用例的第一个数是金条根数n(4 &lt;= n &lt;= 20)，表示金条的根数,接下来的n个整数p1,p2,…,pn，pi为每一根金条的长度,0 &lt;= pi &lt;= 10000。<br>输出<br>输出m行，每一行对应每个测试用例，如果这些金条能够均分，则输出”YES”,否则输出”NO”.<br>样例输入<br>2<br>6 2 3 5 5 1 4<br>5 12 30 40 20 50<br>样例输出<br>YES<br>NO</p>
+</code></pre><h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><ul>
+<li><p>典型题一：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">18</span>年秋第<span class="number">13</span>周任务-地主分财产</span><br><span class="line">时间限制：<span class="number">2</span>秒 内存限制：<span class="number">128</span>兆</span><br><span class="line"><span class="number">55</span> 次提交 <span class="number">1</span> 次通过</span><br><span class="line">题目描述</span><br><span class="line"> 一位老财主在临终之前想把自己的财产-一箱金条分给四个儿子，为了不引起兄弟之间的矛盾，他想把这箱金条平均分给四个儿子，但是麻烦的是，这箱金条有长有短(但是粗细一样且质地均匀)，现在他想知道这箱金条能不能均分成四份（不能将金条裁断），这对于他来说太难了。那么，你能解决这个问题吗？</span><br><span class="line">输入</span><br><span class="line">第一行输入一个整数m&lt;<span class="number">1000</span>, 表示测试用例个数，以下的行是m个测试用例.</span><br><span class="line">每个测试用例的第一个数是金条根数n(<span class="number">4</span> &lt;= n &lt;= <span class="number">20</span>)，表示金条的根数,接下来的n个整数p1,p2,...,pn，pi为每一根金条的长度,<span class="number">0</span> &lt;= pi &lt;= <span class="number">10000</span>。</span><br><span class="line">输出</span><br><span class="line">输出m行，每一行对应每个测试用例，如果这些金条能够均分，则输出<span class="string">"YES"</span>,否则输出<span class="string">"NO"</span>.</span><br><span class="line">样例输入</span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">6</span> <span class="number">2</span> <span class="number">3</span> <span class="number">5</span> <span class="number">5</span> <span class="number">1</span> <span class="number">4</span></span><br><span class="line"><span class="number">5</span> <span class="number">12</span> <span class="number">30</span> <span class="number">40</span> <span class="number">20</span> <span class="number">50</span></span><br><span class="line">样例输出</span><br><span class="line">YES</span><br><span class="line">NO</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>典型题二:<br><code>`</code>c++<br>18年秋第13周任务-交友大作战<br>时间限制：1秒 内存限制：128兆<br>14 次提交 7 次通过<br>题目描述<br>Crw出生在魔仙堡，里面住着很多善良美丽的小魔仙，同时也住着一些想破坏魔仙堡的黑魔仙，Crw很想和善良的小魔仙们交朋友，有一天他决定从家出发出门去看看，于是他偷偷从家里找到一份魔仙堡的地图。地图上标注了一些魔仙的禁地和一些城堡。而且会标注出哪些住的是善良的小魔仙，哪些住的是邪恶的黑魔仙。现在我们Crw每天会到一个城堡中做客并和住在城堡里的所有小魔仙成为朋友，并且下一天能够到相邻的城堡中做客，但是他不能走到黑魔仙的城堡。同时不能走进魔仙堡的禁地。我们知道Crw想和尽可能多的小魔仙成为朋友，那么你能帮他求出他最多能和多少个小魔仙成为朋友吗？<br>输入<br>输入数据有多行，每行输入两个整数n和m，分别代表魔仙堡的地图的长和宽。接下来输入的是一个m x n的矩阵代表魔仙堡的地图。其中‘@’代表Crw的家，数字‘1-9’代表该处城堡里住着对应数字的小魔仙，‘#’代表城堡里住着的是黑魔仙，‘<em>’代表该处是魔仙堡的禁地。最后用0 0结束输入。<br>输出<br>结果输出一个数字，代表Crw最多能交到朋友的数量。<br>样例输入<br>5 3<br>@12</em>3<br>456**<br>7#8#9<br>11 9<br>1#111111111<br>1#1#######1<br>1#1#11111#1<br>1#1#1###1#1<br>1#1#11@#1#1<br>1#1#####1#1<br>1#1111111#1<br>1#########1<br>11111111111<br>0 0<br>样例输出<br>33<br>58</p>
+</li>
+</ul>
 
       
     </div>
@@ -754,7 +760,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">55.2k</span>
+    <span title="Site words total count">55.7k</span>
   
 </div>
 
