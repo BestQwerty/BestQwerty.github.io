@@ -93,8 +93,9 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/%E9%87%91%E5%9D%97%E9%A2%98%E7%9B%AE2.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/%E5%B0%8F%E9%AD%94%E4%BB%991.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/%E5%B0%8F%E9%AD%94%E4%BB%992.png">
-<meta property="og:image" content="/20/dfs与bfs/">
-<meta property="og:updated_time" content="2019-05-17T16:02:35.971Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/dfs%E4%B8%8Ebfs%E8%AE%AD%E7%BB%831.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/dfs%E4%B8%8Ebfs%E8%AE%AD%E7%BB%832.png">
+<meta property="og:updated_time" content="2019-05-17T16:06:51.619Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="dfs与bfs">
 <meta name="twitter:description" content="dfs模板 DFS的重要点在于状态回溯 判出口（终点、越界）-&amp;gt; 剪枝-&amp;gt;扩展-&amp;gt;标记-&amp;gt;递归-&amp;gt;还原  123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354void dfs()//参数用来表示状态  &amp;#123;">
@@ -365,7 +366,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-05-18T00:02:35+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-05-18T00:06:51+08:00">
                 2019-05-18
               </time>
             
@@ -500,11 +501,12 @@
 <li>典序例题三:<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">第<span class="number">14</span>周任务-dfs&amp;bfs训练(一)</span><br><span class="line">时间限制：<span class="number">1</span>秒 内存限制：<span class="number">128</span>兆</span><br><span class="line"><span class="number">54</span> 次提交 <span class="number">8</span> 次通过</span><br><span class="line">题目描述</span><br><span class="line">没时间编故事了，直接做题吧！问题很简单，现在有两个数n和m，我们有三种操作<span class="number">-1</span>，+<span class="number">1</span>，*<span class="number">2</span>。问：最少需要操作多少次能把n变成m。（<span class="number">0</span>&lt;=n,m&lt;=<span class="number">1000000</span>）</span><br><span class="line">输入</span><br><span class="line">输入数据有多组，每行输入两个整数n和m</span><br><span class="line">输出</span><br><span class="line">每行输出一个数字代表最少操作次数</span><br><span class="line">样例输入</span><br><span class="line"><span class="number">5</span> <span class="number">17</span></span><br><span class="line">样例输出</span><br><span class="line"><span class="number">4</span></span><br><span class="line">题目分析：</span><br><span class="line">本题分析和思路参照我上周在群里发的周任务提示。通常我们在广搜中需要用到的队列，我们都用c++stl中现有的队列，并且需要引入头文件#include&lt;<span class="built_in">queue</span>&gt;</span><br><span class="line">定义方式如下：</span><br><span class="line"><span class="built_in">queue</span>&lt;datetype&gt; queue_name;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p><img src="/20/dfs与bfs/" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/dfs%E4%B8%8Ebfs%E8%AE%AD%E7%BB%831.png" alt=""></p>
 <ul>
 <li>四<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">第<span class="number">14</span>周任务-dfs&amp;bfs训练(二)</span><br><span class="line">时间限制：<span class="number">3</span>秒 内存限制：<span class="number">128</span>兆</span><br><span class="line"><span class="number">21</span> 次提交 <span class="number">7</span> 次通过</span><br><span class="line">题目描述</span><br><span class="line">我们来做一个经典问题：n皇后问题</span><br><span class="line">N皇后问题是指在一个N*N的棋盘上，放置N个皇后： </span><br><span class="line"><span class="number">1</span>、每行至多一个 </span><br><span class="line"><span class="number">2</span>、每列至多一个 </span><br><span class="line"><span class="number">3</span>、对角线方位上，不能有其他皇后</span><br><span class="line">问题是最多有多少种放置方案。</span><br><span class="line">输入</span><br><span class="line">每行输入一个正整数n，代表需要放置的皇后个数。</span><br><span class="line">输出</span><br><span class="line">每行输出一个整数，代表最大放置方案数</span><br><span class="line">样例输入</span><br><span class="line"><span class="number">8</span></span><br><span class="line">样例输出</span><br><span class="line"><span class="number">92</span></span><br><span class="line">题目分析：</span><br><span class="line">本题分析参照周任务提示，需要注意这里标记数组的用法，节约了遍历检查的时间开销。</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<p><img src="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/dfs%E4%B8%8Ebfs%E8%AE%AD%E7%BB%832.png" alt=""></p>
 
       
     </div>
