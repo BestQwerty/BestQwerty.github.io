@@ -89,12 +89,12 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="二分法(折半查找) 将所给关键词和指定有序集合中间数进行比较,如果比较相等则返回结果,如果不相等,则按照所给出的结果,将集合减半后继续查找 二分法是减治法的思想 二分法：(low+high)/2,如果故意卡数据即low与high很大的话,会越界.所以可以为(high - low)/2+low;  优化(先确定范围) 插值查找 这里的插值查找法,是对二分法的一种改进.此法和二分法一样对数据要求有序且">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="/04/二分法/">
-<meta property="og:updated_time" content="2019-05-18T07:35:32.437Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/%E5%88%86%E5%B7%A7%E5%85%8B%E5%8A%9B.png">
+<meta property="og:updated_time" content="2019-05-18T07:42:50.258Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二分法">
 <meta name="twitter:description" content="二分法(折半查找) 将所给关键词和指定有序集合中间数进行比较,如果比较相等则返回结果,如果不相等,则按照所给出的结果,将集合减半后继续查找 二分法是减治法的思想 二分法：(low+high)/2,如果故意卡数据即low与high很大的话,会越界.所以可以为(high - low)/2+low;  优化(先确定范围) 插值查找 这里的插值查找法,是对二分法的一种改进.此法和二分法一样对数据要求有序且">
-<meta name="twitter:image" content="/04/二分法/">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/%E5%88%86%E5%B7%A7%E5%85%8B%E5%8A%9B.png">
 
 
 
@@ -361,7 +361,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-05-18T15:35:32+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-05-18T15:42:50+08:00">
                 2019-05-18
               </time>
             
@@ -478,7 +478,7 @@
 <p>伪代码:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">int insertseek(int value,int map[])</span><br><span class="line"></span><br><span class="line">   int low,high,key;</span><br><span class="line"></span><br><span class="line"> low = 0; </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">high = n -1 ;</span><br><span class="line"></span><br><span class="line">while(low&lt;=high)</span><br><span class="line"></span><br><span class="line">key = low + ((value - low)/(high-low))*（high -low);</span><br><span class="line"></span><br><span class="line">if(key == value) return key;</span><br><span class="line"></span><br><span class="line">else if(key &lt; value) low = key;</span><br><span class="line"></span><br><span class="line">else  high = key;</span><br></pre></td></tr></table></figure>
 <h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">五：第<span class="number">12</span>周任务-分巧克力</span><br><span class="line">时间限制：<span class="number">1</span>秒 内存限制：<span class="number">128</span>兆</span><br><span class="line"><span class="number">48</span> 次提交 <span class="number">4</span> 次通过</span><br><span class="line">题目描述</span><br><span class="line">开学那天有n位计科的新生到ZXF做客。ZXF拿出了珍藏的巧克力招待学弟学妹们。ZXF一共有k块巧</span><br><span class="line">克力，其中第i块是Hi * Wi的方格组成的长方形。ZXF需要从这 k 块巧克力中切出n块巧克力分给新生们。为了</span><br><span class="line">公平起见，切出的巧克力需要满足：</span><br><span class="line"><span class="number">1.</span>形状是正方形，边长是整数</span><br><span class="line"><span class="number">2.</span>大小相同</span><br><span class="line">例：一块<span class="number">6</span>x5的巧克力可以切出<span class="number">6</span>块<span class="number">2</span>x2的巧克力或者<span class="number">2</span>块<span class="number">3</span>x3的巧克力。</span><br><span class="line">当然学弟学妹们都希望得到的巧克力尽可能大，你能帮ZXF计算出最大的边长是多少么？</span><br><span class="line">输入</span><br><span class="line">输入在第一行给出两个正整数k和n（<span class="number">0</span>&lt;=n，k&lt;=<span class="number">1000</span>）。</span><br><span class="line">以下k行每行包含两个整数Hi和Wi。(<span class="number">0</span> &lt;= Hi, Wi &lt;= <span class="number">1000000</span>) </span><br><span class="line">输入保证每位新生至少能获得一块<span class="number">1</span>x1的巧克力。</span><br><span class="line">输出</span><br><span class="line">输出切出的正方形巧克力最大可能的边长。</span><br><span class="line">样例输入</span><br><span class="line"><span class="number">2</span> <span class="number">10</span></span><br><span class="line"><span class="number">6</span> <span class="number">5</span></span><br><span class="line"><span class="number">5</span> <span class="number">6</span></span><br><span class="line">样例输出</span><br><span class="line"><span class="number">2</span></span><br><span class="line"></span><br><span class="line">标程：</span><br><span class="line">简单的二分搜索暂时可以模仿我这种模板来写，check函数单独分开来写会让代码的思路更加清晰。二分的主体基本不变，都是改变上下界往两边搜索。另外我代码中出现的头文件是一个万能头文件，基本包含了C/C++当中的我们写算法中需要用到的头文件。目前大部分oj都支持，但是也有部分oj和比赛不支持。（比赛慎用！）</span><br></pre></td></tr></table></figure>
-<p><img src="/04/二分法/" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/%E5%88%86%E5%B7%A7%E5%85%8B%E5%8A%9B.png" alt=""></p>
 
       
     </div>
