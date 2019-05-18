@@ -89,7 +89,10 @@
 <meta property="og:description" content="动态规划 典序例题:12345678910111213141516171819202122232425第15周任务-红鲤鱼和绿鲤鱼时间限制：1秒 内存限制：128兆7 次提交 2 次通过题目描述Polarbear（P.B.）有很多红鲤鱼和绿鲤鱼，它们在鱼缸排成一列，非常好看。P.B.可以任选一条鲤鱼把它染成红色或绿色，它的目标是在完成染色之后，让每条红色的鲤鱼R都比绿色的鲤鱼G离左侧更近（当然当所">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="/18/动态规划/">
-<meta property="og:updated_time" content="2019-05-18T07:05:09.843Z">
+<meta property="og:image" content="/18/动态规划/">
+<meta property="og:image" content="/18/动态规划/">
+<meta property="og:image" content="/18/动态规划/">
+<meta property="og:updated_time" content="2019-05-18T07:09:04.727Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="动态规划">
 <meta name="twitter:description" content="动态规划 典序例题:12345678910111213141516171819202122232425第15周任务-红鲤鱼和绿鲤鱼时间限制：1秒 内存限制：128兆7 次提交 2 次通过题目描述Polarbear（P.B.）有很多红鲤鱼和绿鲤鱼，它们在鱼缸排成一列，非常好看。P.B.可以任选一条鲤鱼把它染成红色或绿色，它的目标是在完成染色之后，让每条红色的鲤鱼R都比绿色的鲤鱼G离左侧更近（当然当所">
@@ -360,7 +363,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-05-18T15:05:09+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-05-18T15:09:04+08:00">
                 2019-05-18
               </time>
             
@@ -373,7 +376,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">564(字)</span> 
+					<span class="post-count">1.2k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -436,8 +439,15 @@
 </li>
 </ul>
 <p><img src="/18/动态规划/" alt=""></p>
+<h2 id="例题二"><a href="#例题二" class="headerlink" title="例题二:"></a>例题二:</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">第<span class="number">15</span>周任务<span class="number">-01</span>背包</span><br><span class="line">时间限制：<span class="number">1</span>秒 内存限制：<span class="number">128</span>兆</span><br><span class="line"><span class="number">26</span> 次提交 <span class="number">5</span> 次通过</span><br><span class="line">题目描述</span><br><span class="line">背包最大允许装载为C, 有n个物品要放进背包，每个物品的重量为w[<span class="number">1</span>],w[<span class="number">2</span>],...w[n],每个物品的价值为v[<span class="number">1</span>],v[<span class="number">2</span>],...v</span><br><span class="line">[n], 请选择物品装进背包，使得价值最大。C为整数。</span><br><span class="line">输入</span><br><span class="line">第一行为物体个数n,以及背包容量C；</span><br><span class="line">第二行为n个重量（实数），空格隔开</span><br><span class="line">第三行为n个价值（实数），空格隔开</span><br><span class="line">输出</span><br><span class="line">第一行为最大装载的总价值</span><br><span class="line">第二行为每个物品是否装载，<span class="number">1</span>表示装，<span class="number">0</span>表示不装，中间用空格隔开</span><br><span class="line">(测试数据能保证最优解唯一)</span><br><span class="line">样例输入</span><br><span class="line"><span class="number">5</span> <span class="number">10</span></span><br><span class="line"><span class="number">2</span> <span class="number">2</span> <span class="number">6</span> <span class="number">5</span> <span class="number">4</span></span><br><span class="line"><span class="number">6</span> <span class="number">3</span> <span class="number">5</span> <span class="number">4</span> <span class="number">6</span></span><br><span class="line">样例输出</span><br><span class="line"><span class="number">15</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span></span><br><span class="line"><span class="number">0</span><span class="number">-1</span>背包是动态规划问题非常经典的一个入门题，可以从多个方面来理解<span class="number">0</span><span class="number">-1</span>背包推导过程。这里我用递归到递推两种形式来给出<span class="number">0</span><span class="number">-1</span>背包问题解决方法。</span><br></pre></td></tr></table></figure>
 <ul>
-<li>例题二:<br><code>`</code>c++</li>
+<li>1、递归解法：<br>递归的方法较为直观，可以很直观的看出状态转移的思路。但是可能递归的中间过程比较难以想象。但是递归的思维方式比较简单，只需要抓住两点：递归终点和递归方程。终点就是在递归的边界情况的返回值，递归方程即从当前节点继续搜索子问题的最优解。注意结合这里递归方程理解dp中的状态转移方程。<br><img src="/18/动态规划/" alt=""><ul>
+<li>很明显这种方式无法记录我们最后选择了那些物品，而且在递归的过程中存在很多不必要的搜索，所以我们需要用到记忆化搜索来剪枝并且记录节点的选择。<br><img src="/18/动态规划/" alt=""></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>2、递推解法<br>递推的方法其实也就是我们用到的双重循环，实际上我们可以把循环递推看成递归的一个逆过程。递归是当前不知道当前最优解，一直往子问题搜索，直到递归到子问题的边界然后开始回退，依次求出路径中的最优解。而递推则是通过已知的最优解通过状态转移方程逐步递推下一步的最优解，和贪心思想相似，只不过这里的最优解是动态的可修改的。我看见大家都是写的二维数组，这里我提供一个一维数组的方法。<br><img src="/18/动态规划/" alt=""></li>
 </ul>
 
       
@@ -660,7 +670,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#动态规划"><span class="nav-number">1.</span> <span class="nav-text">动态规划</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#动态规划"><span class="nav-number">1.</span> <span class="nav-text">动态规划</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#例题二"><span class="nav-number">1.1.</span> <span class="nav-text">例题二:</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -702,7 +712,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">58k</span>
+    <span title="Site words total count">58.7k</span>
   
 </div>
 
