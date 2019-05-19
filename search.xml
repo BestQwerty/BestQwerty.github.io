@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[matlab文件的读取]]></title>
+    <url>%2F2019%2F05%2F19%2Fmatlab%E6%96%87%E4%BB%B6%E7%9A%84%E8%AF%BB%E5%8F%96%2F</url>
+    <content type="text"><![CDATA[数据的导入与导出 注意设置当前路径为文件所在路径 save save save XXX;是将当前文件中的全部变量存起来，得到一个名为XXX.mat的文件。 save filename 是命令形式的语法。命令形式需要的特殊字符较少。您无需键入括号或者将输入括在单引号或双引号内。使用空格（而不是逗号）分隔各个输入项。 123456789例如，要保存名为 test.mat 的文件，这些语句是等效的：save test.mat % command formsave('test.mat') % function form您可以包括先前语法中介绍的任何输入。例如，要保存名为 X 的变量：save test.mat X % command formsave('test.mat','X') % function form当有任何输入（例如 filename）为变量或字符串时，请不要使用命令格式。 load load load filename 是该语法的命令形式。命令形式需要的特殊字符较少。您无需键入括号或者将输入括在单引号或双引号内。使用空格（而不是逗号）分隔各个输入项。 12345678910例如，要加载名为 durer.mat 的文件，以下语句是等效的：load durer.mat % command formload('durer.mat') % function form您可以包括先前语法中介绍的任何输入。例如，要加载名为 X 的变量：load durer.mat X % command formload('durer.mat','X') % function form当有任何输入（例如 filename）为变量或字符串时，请不要使用命令格式。 text文件的读取与写入textread textread 读取文本文件中的数据；写入多个输出 语法: [A,B,C,...] = textread(filename,format) [A,B,C,...] = textread(filename,format,N) [...] = textread(...,param,value,...) 必须严格遵守用法不可出现data=textread(filename,format,N)的形式 其中括号里面变量的个数必须和format中定义的个数相同。 textread不用先fopen那个文件，适用于格式统一的txt文件的一次性大批量读取。textread读取某个文件后，下次再用textread读取这个文件时，还是会从文件头开始读取。 [A,B,C,…]=textread（filename，format，N） [A,B,C,…]：读取的数据 Filename：文件名 Format：读取格式 N：读取次数 其中 N 是大于零的整数。如果 N 小于零，textread 将读取整个文件。 如果每N行相同格式的数据，可采用[A,B,C,…] = textread （filename,format,N）的语法，读取N次。 读取大型文本文件、从文件中的特定点读取或将文件数据读取到元胞数组而非多个输出时，您可以首选使用 textscan 函数。 textscan 导入混合格式文本 textscan(fid, &#39;format&#39;, N, &#39;param&#39;, value); 其中，fid为文件句柄；format为读取格式；N表示用该格式读取N次数据；’param’, value（可选项）指定分隔符和值对。 注意：使用textscan之前，必须先用fopen打开要读入的文件；函数textread用法类似。12345fid = fopen('myfile.txt');C = textscan(fid, '%s%s%f%d%s');fclose(fid)；使用textscan函数读取文件，输出C为1*5的细胞数组，每个数组中存放每列的数据 优势： textscan更适合读入大文件； textscan可以从文件的任何位置开始读入，而textread 只能从文件开头开始读入； textscan也可以从上一次textscan结束的位置开始读入，而textread不能； textscan只返回一个数组（其实应该说是一个细胞矩阵），而textread要返回多个数组（嗯嗯）； textscan提供更多转换读入数据的选择； textscan提供给用户更多的配置参数。 textread不用先fopen那个文件，适用于格式统一的txt文件的一次性大批量读取。而使用textscan函数之前需要先用fopen函数打开要读取的文件并返回句柄fid textscan函数每次读完数据后，其对应的句柄fid都是指向接下来要读数据的地方，类似于C函数中的文件读取指针，这样更方便于读取文本时的精确控制。 extscan函数可以将多组数据读到一个元胞矩阵中，而textread函数只能将数据分别读取到不同的向量中。比如一个含有10行3列浮点数的文件，textscan函数可以将之读取到一个变量名A下 A=textscan(fid, &#39;%f%f%f&#39;), 而使用textread函数必须将之读入到三个变量名中 [A,B,C] = textread（filename,&#39;%f%f%f&#39;）。 xls文件的读取与写入xlsread xlsread 读取 Microsoft Excel 电子表格文件 语法： num = xlsread(filename) 读取名为 filename 的 Microsoft® Excel® 电子表格工作表中的第一张工作表，并在一个矩阵中返回数值数据。 num = xlsread(filename,sheet) 读取指定的工作表。 num = xlsread(filename,xlRange) 从工作簿的第一个工作表的指定范围内读取数据。使用 Excel 范围语法，例如 ‘A1:C3’。 [num,txt,raw]=xlsread(&#39;data1.xlsx&#39;,&#39;Sheet1&#39;,&#39;A1:H4&#39;) 数据返回num；文本返回txt；不处理直接作为元胞返回raw A=xlsread(filename,sheet,’range’) A：读取的数据 Filename：文件名 Sheet：读取的工作表 Range：读取范围 filename - 文件名 字符向量 | 字符串 文件名，指定为字符向量或字符串。 示例： ‘myFile.xlsx’ 或 “myFile.xlsx” xlswrite 写入 Microsoft Excel 电子表格文件 语法: xlswrite(filename,A) 将矩阵 A 写入 Microsoft® Excel® 电子表格工作簿 filename 中的第一张工作表，从单元格 A1 开始写入。 xlswrite(filename,A,sheet) 将数据写入指定的工作表。 xlswrite(filename,A,xlRange) 将数据写入工作簿的第一个工作表中由 `xlRange 指定的矩形区域内。使用 Excel 范围语法，例如 ‘A1:C3’。 xlswrite(filename,A,sheet,xlRange) 将数据写入指定的工作表和范围。 status = xlswrite(___) 使用先前语法中的任何输入参数返回写入操作的状态。当操作成功时，status 为 1。否则，status 为 0。 xlRange - 矩形范围 字符向量 | 字符串 矩形范围，指定为字符向量或字符串。 使用两个对角指定 xlRange，这两个对角用来定义要写入的区域。例如，’D2:H4’ 表示工作表上两个角落 D2 和 H4 之间的 3×5 矩形区域。xlRange 输入不区分大小写，并使用 Excel A1 引用样式（请参阅 Excel 帮助）。xlswrite 不能识别命名范围。 s=xlswrite(filename,data,sheet,range) s:是否写入成功 Filename：文件名-Data：被写入的数据 Sheet：写入的工作表 Range：写入的范围]]></content>
+      <categories>
+        <category>matlab</category>
+        <category>文件</category>
+      </categories>
+      <tags>
+        <tag>matlab</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[lingo]]></title>
+    <url>%2F2019%2F05%2F19%2Flingo%2F</url>
+    <content type="text"><![CDATA[lingo 变量默认大于0，若取负数，要另外说明 lingo模型以model:开头，end:结尾,对于简单的模型，可以省略12345678910111213model: sets: // 定义集合(数据)类型 ..... endsets data: //数据的初始化 .... enddata min/max... 约束条件end 集合 集合的属性就是由元素构成的矩阵 衍生集合 1links(wh, wa):c; //此时的衍生集合c相当于二维矩阵(数组) 目标函数与目标条件 @sum @for @FOR(WH(I): @SUM(VD(J): X(I, J)) &lt;=AI(I) );wh(i)是对集合wh的下标i进行循环，然后@sum内部的vd(j)是对集合vd的下标j进行循环，内外循环就是相当于二重for循环，外循环为i，内循环为j 变量定界函数 0-1规划中@bin限制为整数0或1]]></content>
+      <categories>
+        <category>lingo</category>
+      </categories>
+      <tags>
+        <tag>lingo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[数据结构]]></title>
     <url>%2F2019%2F05%2F18%2F%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%2F</url>
     <content type="text"><![CDATA[树 任一棵树中，结点总数=度数*该度数对应的结点数+1 子节点个数为n0即各个度对应的个数乘以度减一然后累加后加1123456789101112131415已知一棵度为m的树中：n1个度为1的结点，n2个度为2的结点，…，nm个度m的结点，问该树中共有多少个叶子结点？设该树的总结点数为n，则n=n0+n1+n2+…+nm又：n=分枝数+1=0xn0+1xn1+2xn2+…+mxnm由上述两式可得：n0=n2+2n3+…+(m-1)nm+1即 dn0 =( Σ n(i) * (i - 1)) + 1 ​ i=1 (其中，i ∈ Integer，d为树的度) 树中边和结点的关系为：结点数=边数+1 -&gt; 边数 = 结点数-1]]></content>
@@ -184,7 +207,7 @@
   <entry>
     <title><![CDATA[matlab绘图补充]]></title>
     <url>%2F2019%2F04%2F17%2Fmatlab%E7%BB%98%E5%9B%BE%E8%A1%A5%E5%85%85%2F</url>
-    <content type="text"><![CDATA[函数set 设置图形对象属性(set) 调用格式: set(H,Name,Value)为 H 标识的对象指定其 Name 属性的值。使用时须用单引号将属性名引起来，例如，set(H,&#39;Color&#39;,&#39;red&#39;)。如果 H 是对象的向量，则 set 会为所有对象设置属性。如果 H 为空（即 []），set 不执行任何操作，但不返回错误或警告。 set(H,NameArray,ValueArray) set(H,S) s = set(H) values = set(H,Name) 栗子:1234567%绘制一个线条并以 p 的形式返回图形线条对象。将行的 Color 属性设置为 'red'。p = plot(1:10);set(p,'Color','red')%使用随机数据创建一个包含四个线条的图形，并将这四个线条返回至 P。将所有线条的 Color 属性设置为 'red'。P = plot(rand(4));set(P,'Color','red') rectangle rectangle 创建带有尖角或圆角的矩形 Rectangle 属性]]></content>
+    <content type="text"><![CDATA[函数set 设置图形对象属性(set) 调用格式: set(H,Name,Value)为 H 标识的对象指定其 Name 属性的值。使用时须用单引号将属性名引起来，例如，set(H,&#39;Color&#39;,&#39;red&#39;)。如果 H 是对象的向量，则 set 会为所有对象设置属性。如果 H 为空（即 []），set 不执行任何操作，但不返回错误或警告。 set(H,NameArray,ValueArray) set(H,S) s = set(H) values = set(H,Name) 栗子:1234567%绘制一个线条并以 p 的形式返回图形线条对象。将行的 Color 属性设置为 'red'。p = plot(1:10);set(p,'Color','red')%使用随机数据创建一个包含四个线条的图形，并将这四个线条返回至 P。将所有线条的 Color 属性设置为 'red'。P = plot(rand(4));set(P,'Color','red') rectangle rectangle 创建带有尖角或圆角的矩形 Rectangle 属性 pie 逆时针画图 pie(X,explode) 将扇区从饼图偏移一定位置。explode 是一个由与 X 对应的零值和非零值组成的向量或矩阵。pie 函数仅将对应于 explode 中的非零元素的扇区偏移一定的位置。1234X = [1 3 0.5 2.5 2];pie(X)explode = [0 1 0 1 0]; %通过将对应的 explode 元素设置为 1 来偏移第二和第四块饼图扇区。pie(X,explode) pie(X,labels) 指定扇区的文本标签。X 必须是数值数据类型。标签数必须等于 X 中的元素数。 123X = 1:3;labels = &#123;'Taxes','Expenses','Profit'&#125;;pie(X,labels) 绘图多个饼图 创建两个数据向量并在各自的饼图中绘制和标记每一个向量。12345678910X = [0.2 0.4 0.4];labels = &#123;'Taxes','Expenses','Profit'&#125;;ax1 = subplot(1,2,1);pie(ax1,X,labels)title(ax1,'2012');Y = [0.24 0.46 0.3];ax2 = subplot(1,2,2);pie(ax2,Y,labels)title(ax2,'2013'); bar histexplode]]></content>
       <categories>
         <category>matlab</category>
         <category>绘图</category>

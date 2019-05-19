@@ -89,10 +89,14 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="😛">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-17T13:23:04.692Z">
+<meta property="og:image" content="https://ww2.mathworks.cn/help/matlab/ref/createpiechartexample_01_zh_CN.png">
+<meta property="og:image" content="https://ww2.mathworks.cn/help/matlab/ref/createpiechartexample_02_zh_CN.png">
+<meta property="og:image" content="https://ww2.mathworks.cn/help/matlab/ref/plotmultiplepiechartsexample_01_zh_CN.png">
+<meta property="og:updated_time" content="2019-05-19T12:14:21.034Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab绘图补充">
 <meta name="twitter:description" content="😛">
+<meta name="twitter:image" content="https://ww2.mathworks.cn/help/matlab/ref/createpiechartexample_01_zh_CN.png">
 
 
 
@@ -359,8 +363,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-17T21:23:04+08:00">
-                2019-04-17
+              <time title="更新于" itemprop="dateModified" datetime="2019-05-19T20:14:21+08:00">
+                2019-05-19
               </time>
             
           </span>
@@ -405,7 +409,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">227(字)</span> 
+					<span class="post-count">467(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -484,7 +488,29 @@
 <li><a href="https://ww2.mathworks.cn/help/matlab/ref/rectangle.html" target="_blank" rel="noopener">rectangle 创建带有尖角或圆角的矩形</a></li>
 <li><a href="https://ww2.mathworks.cn/help/matlab/ref/matlab.graphics.primitive.rectangle-properties.html" target="_blank" rel="noopener">Rectangle 属性</a></li>
 </ul>
-
+<h1 id="pie"><a href="#pie" class="headerlink" title="pie"></a>pie</h1><ul>
+<li><a href="https://ww2.mathworks.cn/help/matlab/ref/pie.html" target="_blank" rel="noopener"></a></li>
+<li>逆时针画图</li>
+<li><code>pie(X,explode)</code> 将扇区从饼图偏移一定位置。explode 是一个由与 X 对应的零值和非零值组成的向量或矩阵。pie 函数仅将对应于 explode 中的非零元素的扇区偏移一定的位置。<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">X = [<span class="number">1</span> <span class="number">3</span> <span class="number">0.5</span> <span class="number">2.5</span> <span class="number">2</span>];</span><br><span class="line">pie(X)</span><br><span class="line">explode = [<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span>]; <span class="comment">%通过将对应的 explode 元素设置为 1 来偏移第二和第四块饼图扇区。</span></span><br><span class="line">pie(X,explode)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="https://ww2.mathworks.cn/help/matlab/ref/createpiechartexample_01_zh_CN.png" alt=""><br><img src="https://ww2.mathworks.cn/help/matlab/ref/createpiechartexample_02_zh_CN.png" alt=""></p>
+<ul>
+<li><p><code>pie(X,labels)</code> 指定扇区的文本标签。X 必须是数值数据类型。标签数必须等于 X 中的元素数。</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">X = <span class="number">1</span>:<span class="number">3</span>;</span><br><span class="line">labels = &#123;<span class="string">'Taxes'</span>,<span class="string">'Expenses'</span>,<span class="string">'Profit'</span>&#125;;</span><br><span class="line">pie(X,labels)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>绘图多个饼图</p>
+<ul>
+<li>创建两个数据向量并在各自的饼图中绘制和标记每一个向量。<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">X = [<span class="number">0.2</span> <span class="number">0.4</span> <span class="number">0.4</span>];</span><br><span class="line">labels = &#123;<span class="string">'Taxes'</span>,<span class="string">'Expenses'</span>,<span class="string">'Profit'</span>&#125;;</span><br><span class="line">ax1 = subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>);</span><br><span class="line">pie(ax1,X,labels)</span><br><span class="line">title(ax1,<span class="string">'2012'</span>);</span><br><span class="line"></span><br><span class="line">Y = [<span class="number">0.24</span> <span class="number">0.46</span> <span class="number">0.3</span>];</span><br><span class="line">ax2 = subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>);</span><br><span class="line">pie(ax2,Y,labels)</span><br><span class="line">title(ax2,<span class="string">'2013'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://ww2.mathworks.cn/help/matlab/ref/plotmultiplepiechartsexample_01_zh_CN.png" alt=""></p>
+<h1 id="bar"><a href="#bar" class="headerlink" title="bar"></a>bar</h1><ul>
+<li></li>
+</ul>
+<h1 id="hist"><a href="#hist" class="headerlink" title="hist"></a>hist</h1><h1 id="explode"><a href="#explode" class="headerlink" title="explode"></a>explode</h1>
       
     </div>
     
@@ -653,7 +679,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">94</span>
+                  <span class="site-state-item-count">96</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -664,7 +690,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">86</span>
+                  <span class="site-state-item-count">88</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -675,7 +701,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -715,7 +741,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">1.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#set"><span class="nav-number">1.1.</span> <span class="nav-text">set</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rectangle"><span class="nav-number">1.2.</span> <span class="nav-text">rectangle</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">1.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#set"><span class="nav-number">1.1.</span> <span class="nav-text">set</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rectangle"><span class="nav-number">1.2.</span> <span class="nav-text">rectangle</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pie"><span class="nav-number">2.</span> <span class="nav-text">pie</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#bar"><span class="nav-number">3.</span> <span class="nav-text">bar</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hist"><span class="nav-number">4.</span> <span class="nav-text">hist</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#explode"><span class="nav-number">5.</span> <span class="nav-text">explode</span></a></li></ol></div>
             
 
           </div>
@@ -757,7 +783,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">59.8k</span>
+    <span title="Site words total count">61.9k</span>
   
 </div>
 

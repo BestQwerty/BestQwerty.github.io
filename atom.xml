@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="BestQwerty.github.io/"/>
-  <updated>2019-05-18T14:18:30.943Z</updated>
+  <updated>2019-05-19T12:02:30.402Z</updated>
   <id>BestQwerty.github.io/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>matlab文件的读取</title>
+    <link href="BestQwerty.github.io/2019/05/19/matlab%E6%96%87%E4%BB%B6%E7%9A%84%E8%AF%BB%E5%8F%96/"/>
+    <id>BestQwerty.github.io/2019/05/19/matlab文件的读取/</id>
+    <published>2019-05-19T06:11:52.000Z</published>
+    <updated>2019-05-19T12:02:30.402Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="数据的导入与导出"><a href="#数据的导入与导出" class="headerlink" title="数据的导入与导出"></a>数据的导入与导出</h1><ul><li>注意设置当前路径为文件所在路径</li></ul><h2 id="save"><a href="#save" class="headerlink" title="save"></a>save</h2><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/save.html#btox10b-1-version" target="_blank" rel="noopener">save</a></li><li><code>save  XXX;</code>是将当前文件中的全部变量存起来，得到一个名为XXX.mat的文件。</li><li><p><code>save filename</code> 是命令形式的语法。命令形式需要的特殊字符较少。您无需键入括号或者将输入括在单引号或双引号内。使用空格（而不是逗号）分隔各个输入项。</p><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">例如，要保存名为 test.mat 的文件，这些语句是等效的：</span><br><span class="line">save test.mat      <span class="comment">% command form</span></span><br><span class="line">save(<span class="string">'test.mat'</span>)   <span class="comment">% function form</span></span><br><span class="line"></span><br><span class="line">您可以包括先前语法中介绍的任何输入。例如，要保存名为 X 的变量：</span><br><span class="line">save test.mat X       <span class="comment">% command form</span></span><br><span class="line">save(<span class="string">'test.mat'</span>,<span class="string">'X'</span>)  <span class="comment">% function form</span></span><br><span class="line"></span><br><span class="line">当有任何输入（例如 filename）为变量或字符串时，请不要使用命令格式。</span><br></pre></td></tr></table></figure></li><li></li></ul><h2 id="load"><a href="#load" class="headerlink" title="load"></a>load</h2><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/load.html" target="_blank" rel="noopener">load</a></li><li><code>load filename</code> 是该语法的命令形式。命令形式需要的特殊字符较少。您无需键入括号或者将输入括在单引号或双引号内。使用空格（而不是逗号）分隔各个输入项。 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">例如，要加载名为 durer.mat 的文件，以下语句是等效的：</span><br><span class="line"></span><br><span class="line">load durer.mat      <span class="comment">% command form</span></span><br><span class="line">load(<span class="string">'durer.mat'</span>)   <span class="comment">% function form</span></span><br><span class="line"></span><br><span class="line">您可以包括先前语法中介绍的任何输入。例如，要加载名为 X 的变量：</span><br><span class="line">load durer.mat X       <span class="comment">% command form</span></span><br><span class="line">load(<span class="string">'durer.mat'</span>,<span class="string">'X'</span>)  <span class="comment">% function form</span></span><br><span class="line"></span><br><span class="line">当有任何输入（例如 filename）为变量或字符串时，请不要使用命令格式。</span><br></pre></td></tr></table></figure></li></ul><h1 id="text文件的读取与写入"><a href="#text文件的读取与写入" class="headerlink" title="text文件的读取与写入"></a>text文件的读取与写入</h1><h2 id="textread"><a href="#textread" class="headerlink" title="textread"></a>textread</h2><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/textread.html" target="_blank" rel="noopener">textread</a></li><li>读取文本文件中的数据；写入多个输出 </li><li>语法:<ul><li><code>[A,B,C,...] = textread(filename,format)</code></li><li><code>[A,B,C,...] = textread(filename,format,N)</code></li><li><code>[...] = textread(...,param,value,...)</code></li></ul></li><li>必须严格遵守用法不可出现<code>data=textread(filename,format,N)</code>的形式</li><li>其中括号里面变量的个数必须和format中定义的个数相同。 </li><li>textread不用先fopen那个文件，适用于格式统一的txt文件的一次性大批量读取。textread读取某个文件后，下次再用textread读取这个文件时，还是会从文件头开始读取。</li><li><code>[A,B,C,…]=textread（filename，format，N）</code><ul><li>[A,B,C,…]：读取的数据</li><li>Filename：文件名</li><li>Format：读取格式</li><li>N：读取次数 其中 N 是大于零的整数。如果 N 小于零，textread 将读取整个文件。</li></ul></li><li>如果每N行相同格式的数据，可采用<code>[A,B,C,…] = textread （filename,format,N）</code>的语法，读取N次。</li><li>读取大型文本文件、从文件中的特定点读取或将文件数据读取到元胞数组而非多个输出时，您可以首选使用 textscan 函数。</li></ul><h2 id="textscan"><a href="#textscan" class="headerlink" title="textscan"></a>textscan</h2><ul><li>导入混合格式文本</li><li><p><code>textscan(fid, &#39;format&#39;, N, &#39;param&#39;, value);</code></p><ul><li>其中，fid为文件句柄；format为读取格式；N表示用该格式读取N次数据；’param’, value（可选项）指定分隔符和值对。</li><li>注意：使用textscan之前，必须先用fopen打开要读入的文件；函数textread用法类似。<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fid = fopen(<span class="string">'myfile.txt'</span>);</span><br><span class="line"></span><br><span class="line">C = textscan(fid, <span class="string">'%s%s%f%d%s'</span>);</span><br><span class="line"></span><br><span class="line">fclose(fid)；使用textscan函数读取文件，输出C为<span class="number">1</span>*<span class="number">5</span>的细胞数组，每个数组中存放每列的数据</span><br></pre></td></tr></table></figure></li></ul></li><li><p>优势：</p><ul><li>textscan更适合读入大文件；</li><li>textscan可以从文件的任何位置开始读入，而textread 只能从文件开头开始读入；<ul><li>textscan也可以从上一次textscan结束的位置开始读入，而textread不能；</li><li>textscan只返回一个数组（其实应该说是一个细胞矩阵），而textread要返回多个数组（嗯嗯）；</li></ul></li><li>textscan提供更多转换读入数据的选择；<ul><li>textscan提供给用户更多的配置参数。</li></ul></li></ul></li><li>textread不用先fopen那个文件，适用于格式统一的txt文件的一次性大批量读取。而使用textscan函数之前需要先用fopen函数打开要读取的文件并返回句柄fid</li><li>textscan函数每次读完数据后，其对应的句柄fid都是指向接下来要读数据的地方，类似于C函数中的文件读取指针，这样更方便于读取文本时的精确控制。</li><li>extscan函数可以将多组数据读到一个元胞矩阵中，而textread函数只能将数据分别读取到不同的向量中。比如一个含有10行3列浮点数的文件，textscan函数可以将之读取到一个变量名A下 <code>A=textscan(fid, &#39;%f%f%f&#39;)</code>, 而使用textread函数必须将之读入到三个变量名中  <code>[A,B,C] = textread（filename,&#39;%f%f%f&#39;）</code>。</li></ul><h1 id="xls文件的读取与写入"><a href="#xls文件的读取与写入" class="headerlink" title="xls文件的读取与写入"></a>xls文件的读取与写入</h1><h2 id="xlsread"><a href="#xlsread" class="headerlink" title="xlsread"></a>xlsread</h2><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/xlsread.html" target="_blank" rel="noopener">xlsread</a></li><li>读取 Microsoft Excel 电子表格文件</li><li><p>语法：</p><ul><li><code>num = xlsread(filename)</code> 读取名为 filename 的 Microsoft® Excel® 电子表格工作表中的第一张工作表，并在一个矩阵中返回数值数据。</li><li><code>num = xlsread(filename,sheet)</code> 读取指定的工作表。</li><li><code>num = xlsread(filename,xlRange)</code> 从工作簿的第一个工作表的指定范围内读取数据。使用 Excel 范围语法，例如 ‘A1:C3’。  </li></ul></li><li><p><code>[num,txt,raw]=xlsread(&#39;data1.xlsx&#39;,&#39;Sheet1&#39;,&#39;A1:H4&#39;)</code></p><ul><li>数据返回num；文本返回txt；不处理直接作为元胞返回raw </li></ul></li><li><code>A=xlsread(filename,sheet,’range’)</code><ul><li>A：读取的数据</li><li>Filename：文件名</li><li>Sheet：读取的工作表</li><li>Range：读取范围</li></ul></li><li>filename - 文件名 字符向量 | 字符串<ul><li>文件名，指定为字符向量或字符串。</li><li>示例： ‘myFile.xlsx’ 或 “myFile.xlsx”</li></ul></li></ul><h2 id="xlswrite"><a href="#xlswrite" class="headerlink" title="xlswrite"></a>xlswrite</h2><ul><li>写入 Microsoft Excel 电子表格文件</li><li><p>语法:</p><ul><li><code>xlswrite(filename,A)</code> 将矩阵 A 写入 Microsoft® Excel® 电子表格工作簿 filename 中的第一张工作表，从单元格 A1 开始写入。</li><li><code>xlswrite(filename,A,sheet)</code> 将数据写入指定的工作表。</li><li><code>xlswrite(filename,A,xlRange)</code> 将数据写入工作簿的第一个工作表中由 `xlRange 指定的矩形区域内。使用 Excel 范围语法，例如 ‘A1:C3’。</li><li><p><code>xlswrite(filename,A,sheet,xlRange)</code> 将数据写入指定的工作表和范围。</p></li><li><p><code>status = xlswrite(___)</code> 使用先前语法中的任何输入参数返回写入操作的状态。当操作成功时，status 为 1。否则，status 为 0。</p></li></ul></li><li>xlRange - 矩形范围 字符向量 | 字符串<ul><li>矩形范围，指定为字符向量或字符串。</li><li>使用两个对角指定 xlRange，这两个对角用来定义要写入的区域。例如，’D2:H4’ 表示工作表上两个角落 D2 和 H4 之间的 3×5 矩形区域。xlRange 输入不区分大小写，并使用 Excel A1 引用样式（请参阅 Excel 帮助）。xlswrite 不能识别命名范围。</li></ul></li><li><code>s=xlswrite(filename,data,sheet,range)</code><ul><li>s:是否写入成功</li><li>Filename：文件名<br>-Data：被写入的数据</li><li>Sheet：写入的工作表</li><li>Range：写入的范围</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      😝
+    
+    </summary>
+    
+      <category term="matlab" scheme="BestQwerty.github.io/categories/matlab/"/>
+    
+      <category term="文件" scheme="BestQwerty.github.io/categories/matlab/%E6%96%87%E4%BB%B6/"/>
+    
+    
+      <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>lingo</title>
+    <link href="BestQwerty.github.io/2019/05/19/lingo/"/>
+    <id>BestQwerty.github.io/2019/05/19/lingo/</id>
+    <published>2019-05-19T05:58:44.000Z</published>
+    <updated>2019-05-19T07:25:15.140Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="lingo"><a href="#lingo" class="headerlink" title="lingo"></a>lingo</h1><ul><li>变量默认大于0，若取负数，要另外说明</li></ul><ul><li>lingo模型以<code>model:</code>开头，<code>end:</code>结尾,对于简单的模型，可以省略<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">model:</span><br><span class="line">    sets:  <span class="comment">// 定义集合(数据)类型</span></span><br><span class="line">        .....</span><br><span class="line">    endsets</span><br><span class="line"></span><br><span class="line">    data:  <span class="comment">//数据的初始化</span></span><br><span class="line">        ....</span><br><span class="line">    enddata</span><br><span class="line"></span><br><span class="line">    min/max...</span><br><span class="line"></span><br><span class="line">    约束条件</span><br><span class="line">end</span><br></pre></td></tr></table></figure></li></ul><h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><ul><li>集合的属性就是由元素构成的矩阵</li><li>衍生集合</li></ul><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">links(wh, wa):c;  <span class="comment">//此时的衍生集合c相当于二维矩阵(数组)</span></span><br></pre></td></tr></table></figure><h1 id="目标函数与目标条件"><a href="#目标函数与目标条件" class="headerlink" title="目标函数与目标条件"></a>目标函数与目标条件</h1><ul><li><code>@sum</code></li><li><code>@for</code></li><li><code>@FOR(WH(I): @SUM(VD(J): X(I, J)) &lt;=AI(I) );</code>wh(i)是对集合wh的下标i进行循环，然后@sum内部的vd(j)是对集合vd的下标j进行循环，内外循环就是相当于二重for循环，外循环为i，内循环为j</li></ul><h2 id="变量定界函数"><a href="#变量定界函数" class="headerlink" title="变量定界函数"></a>变量定界函数</h2><ul><li>0-1规划中<code>@bin</code>限制为整数0或1</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      😋
+    
+    </summary>
+    
+      <category term="lingo" scheme="BestQwerty.github.io/categories/lingo/"/>
+    
+    
+      <category term="lingo" scheme="BestQwerty.github.io/tags/lingo/"/>
+    
+  </entry>
   
   <entry>
     <title>数据结构</title>
@@ -413,9 +459,9 @@
     <link href="BestQwerty.github.io/2019/04/17/matlab%E7%BB%98%E5%9B%BE%E8%A1%A5%E5%85%85/"/>
     <id>BestQwerty.github.io/2019/04/17/matlab绘图补充/</id>
     <published>2019-04-17T12:25:40.000Z</published>
-    <updated>2019-04-17T13:23:04.692Z</updated>
+    <updated>2019-05-19T12:14:21.034Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="set"><a href="#set" class="headerlink" title="set"></a>set</h2><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/set.html" target="_blank" rel="noopener">设置图形对象属性(set)</a></li><li>调用格式:<ul><li><code>set(H,Name,Value)</code>为 H 标识的对象指定其 Name 属性的值。使用时须用单引号将属性名引起来，例如，<code>set(H,&#39;Color&#39;,&#39;red&#39;)</code>。如果 H 是对象的向量，则 set 会为所有对象设置属性。如果 H 为空（即 []），set 不执行任何操作，但不返回错误或警告。</li><li><code>set(H,NameArray,ValueArray)</code></li><li><code>set(H,S)</code></li><li><code>s = set(H)</code></li><li><code>values = set(H,Name)</code></li></ul></li><li>栗子:<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%绘制一个线条并以 p 的形式返回图形线条对象。将行的 Color 属性设置为 'red'。</span></span><br><span class="line">p = <span class="built_in">plot</span>(<span class="number">1</span>:<span class="number">10</span>);</span><br><span class="line">set(p,<span class="string">'Color'</span>,<span class="string">'red'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">%使用随机数据创建一个包含四个线条的图形，并将这四个线条返回至 P。将所有线条的 Color 属性设置为 'red'。</span></span><br><span class="line">P = <span class="built_in">plot</span>(<span class="built_in">rand</span>(<span class="number">4</span>));</span><br><span class="line">set(P,<span class="string">'Color'</span>,<span class="string">'red'</span>)</span><br></pre></td></tr></table></figure></li></ul><h2 id="rectangle"><a href="#rectangle" class="headerlink" title="rectangle"></a>rectangle</h2><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/rectangle.html" target="_blank" rel="noopener">rectangle 创建带有尖角或圆角的矩形</a></li><li><a href="https://ww2.mathworks.cn/help/matlab/ref/matlab.graphics.primitive.rectangle-properties.html" target="_blank" rel="noopener">Rectangle 属性</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="set"><a href="#set" class="headerlink" title="set"></a>set</h2><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/set.html" target="_blank" rel="noopener">设置图形对象属性(set)</a></li><li>调用格式:<ul><li><code>set(H,Name,Value)</code>为 H 标识的对象指定其 Name 属性的值。使用时须用单引号将属性名引起来，例如，<code>set(H,&#39;Color&#39;,&#39;red&#39;)</code>。如果 H 是对象的向量，则 set 会为所有对象设置属性。如果 H 为空（即 []），set 不执行任何操作，但不返回错误或警告。</li><li><code>set(H,NameArray,ValueArray)</code></li><li><code>set(H,S)</code></li><li><code>s = set(H)</code></li><li><code>values = set(H,Name)</code></li></ul></li><li>栗子:<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%绘制一个线条并以 p 的形式返回图形线条对象。将行的 Color 属性设置为 'red'。</span></span><br><span class="line">p = <span class="built_in">plot</span>(<span class="number">1</span>:<span class="number">10</span>);</span><br><span class="line">set(p,<span class="string">'Color'</span>,<span class="string">'red'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">%使用随机数据创建一个包含四个线条的图形，并将这四个线条返回至 P。将所有线条的 Color 属性设置为 'red'。</span></span><br><span class="line">P = <span class="built_in">plot</span>(<span class="built_in">rand</span>(<span class="number">4</span>));</span><br><span class="line">set(P,<span class="string">'Color'</span>,<span class="string">'red'</span>)</span><br></pre></td></tr></table></figure></li></ul><h2 id="rectangle"><a href="#rectangle" class="headerlink" title="rectangle"></a>rectangle</h2><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/rectangle.html" target="_blank" rel="noopener">rectangle 创建带有尖角或圆角的矩形</a></li><li><a href="https://ww2.mathworks.cn/help/matlab/ref/matlab.graphics.primitive.rectangle-properties.html" target="_blank" rel="noopener">Rectangle 属性</a></li></ul><h1 id="pie"><a href="#pie" class="headerlink" title="pie"></a>pie</h1><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/pie.html" target="_blank" rel="noopener"></a></li><li>逆时针画图</li><li><code>pie(X,explode)</code> 将扇区从饼图偏移一定位置。explode 是一个由与 X 对应的零值和非零值组成的向量或矩阵。pie 函数仅将对应于 explode 中的非零元素的扇区偏移一定的位置。<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">X = [<span class="number">1</span> <span class="number">3</span> <span class="number">0.5</span> <span class="number">2.5</span> <span class="number">2</span>];</span><br><span class="line">pie(X)</span><br><span class="line">explode = [<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span>]; <span class="comment">%通过将对应的 explode 元素设置为 1 来偏移第二和第四块饼图扇区。</span></span><br><span class="line">pie(X,explode)</span><br></pre></td></tr></table></figure></li></ul><p><img src="https://ww2.mathworks.cn/help/matlab/ref/createpiechartexample_01_zh_CN.png" alt=""><br><img src="https://ww2.mathworks.cn/help/matlab/ref/createpiechartexample_02_zh_CN.png" alt=""></p><ul><li><p><code>pie(X,labels)</code> 指定扇区的文本标签。X 必须是数值数据类型。标签数必须等于 X 中的元素数。</p><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">X = <span class="number">1</span>:<span class="number">3</span>;</span><br><span class="line">labels = &#123;<span class="string">'Taxes'</span>,<span class="string">'Expenses'</span>,<span class="string">'Profit'</span>&#125;;</span><br><span class="line">pie(X,labels)</span><br></pre></td></tr></table></figure></li><li><p>绘图多个饼图</p><ul><li>创建两个数据向量并在各自的饼图中绘制和标记每一个向量。<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">X = [<span class="number">0.2</span> <span class="number">0.4</span> <span class="number">0.4</span>];</span><br><span class="line">labels = &#123;<span class="string">'Taxes'</span>,<span class="string">'Expenses'</span>,<span class="string">'Profit'</span>&#125;;</span><br><span class="line">ax1 = subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>);</span><br><span class="line">pie(ax1,X,labels)</span><br><span class="line">title(ax1,<span class="string">'2012'</span>);</span><br><span class="line"></span><br><span class="line">Y = [<span class="number">0.24</span> <span class="number">0.46</span> <span class="number">0.3</span>];</span><br><span class="line">ax2 = subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>);</span><br><span class="line">pie(ax2,Y,labels)</span><br><span class="line">title(ax2,<span class="string">'2013'</span>);</span><br></pre></td></tr></table></figure></li></ul></li></ul><p><img src="https://ww2.mathworks.cn/help/matlab/ref/plotmultiplepiechartsexample_01_zh_CN.png" alt=""></p><h1 id="bar"><a href="#bar" class="headerlink" title="bar"></a>bar</h1><ul><li></li></ul><h1 id="hist"><a href="#hist" class="headerlink" title="hist"></a>hist</h1><h1 id="explode"><a href="#explode" class="headerlink" title="explode"></a>explode</h1>]]></content>
     
     <summary type="html">
     
@@ -426,60 +472,6 @@
       <category term="matlab" scheme="BestQwerty.github.io/categories/matlab/"/>
     
       <category term="绘图" scheme="BestQwerty.github.io/categories/matlab/%E7%BB%98%E5%9B%BE/"/>
-    
-    
-      <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>matlab函数之line</title>
-    <link href="BestQwerty.github.io/2019/04/17/matlab%E5%87%BD%E6%95%B0%E4%B9%8Bline/"/>
-    <id>BestQwerty.github.io/2019/04/17/matlab函数之line/</id>
-    <published>2019-04-17T12:02:22.000Z</published>
-    <updated>2019-04-17T12:03:48.050Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="line"><a href="#line" class="headerlink" title="line"></a>line</h1><ul><li><a href="https://ww2.mathworks.cn/help/matlab/ref/line.html" target="_blank" rel="noopener">line</a></li><li>调用格式:<ul><li><code>line(x,y)</code> 使用向量 x 和 y 中的数据在当前坐标区中绘制线条。如果 x 和 y 中有一个是矩阵或两者都是矩阵，则 line 将绘制多个线条。<strong>与 plot 函数不同，line 会向当前坐标区添加线条，而不删除其他图形对象或重置坐标区属性</strong>。 </li><li><code>line(x,y,z)</code> 在三维坐标中绘制线条。</li><li><code>line</code> 使用默认属性设置绘制一条从点 (0,0) 到 (1,1) 的线条(y = x,横纵坐标都是从0到1)。(就是直接输入line)</li><li><code>line(&#39;XData&#39;,x,&#39;YData&#39;,y)</code></li><li><code>line(&#39;XData&#39;,x,&#39;YData&#39;,y,&#39;ZData&#39;,z)</code></li><li><code>line(___,Name,Value)</code></li><li><code>line(ax,___)</code></li><li><code>pl = line(___)</code> </li></ul></li><li>栗子:<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%通过将 x 和 y 指定为矩阵来绘制两个线条。使用 line 绘制 y 的列对 x 的列的单独线条。</span></span><br><span class="line">x = <span class="built_in">linspace</span>(<span class="number">0</span>,<span class="number">10</span>)';</span><br><span class="line">y = [<span class="built_in">sin</span>(x) <span class="built_in">cos</span>(x)];</span><br><span class="line">line(x,y)</span><br><span class="line"></span><br><span class="line"><span class="comment">%通过指定 x、y 和 z 的值，在三维坐标中绘制线条。使用 view(3) 将坐标区更改为三维视图。</span></span><br><span class="line">t = <span class="built_in">linspace</span>(<span class="number">0</span>,<span class="number">10</span>*<span class="built_in">pi</span>,<span class="number">200</span>);</span><br><span class="line">x = <span class="built_in">sin</span>(t);</span><br><span class="line">y = <span class="built_in">cos</span>(t);</span><br><span class="line">z = t;</span><br><span class="line">line(x,y,z)</span><br><span class="line">view(<span class="number">3</span>)</span><br></pre></td></tr></table></figure></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      🙂
-    
-    </summary>
-    
-      <category term="matlab" scheme="BestQwerty.github.io/categories/matlab/"/>
-    
-      <category term="函数" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/"/>
-    
-      <category term="绘图" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/%E7%BB%98%E5%9B%BE/"/>
-    
-      <category term="line" scheme="BestQwerty.github.io/categories/matlab/%E5%87%BD%E6%95%B0/%E7%BB%98%E5%9B%BE/line/"/>
-    
-    
-      <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>matlab运算符</title>
-    <link href="BestQwerty.github.io/2019/04/14/matlab%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
-    <id>BestQwerty.github.io/2019/04/14/matlab运算符/</id>
-    <published>2019-04-14T13:21:12.000Z</published>
-    <updated>2019-04-27T12:47:34.299Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><ul><li>Error:Matlab ||和&amp;&amp;运算符的操作数必须能够转换为逻辑标量值<ul><li>解决:||和&amp;&amp;为值运算， |与&amp;为向量运算，改为|与&amp;</li></ul></li></ul><ul><li><p>&amp;&amp;和||被称为&amp;和|的short circuit形式，</p><ul><li>A&amp;B<ul><li>（1）首先判断A的逻辑值，然后判断B的值，然后进行逻辑与的计算。</li><li>（2）A和B可以为矩阵（e.g. A=[1 0],B=[0 0]）。</li></ul></li><li>A&amp;&amp;B<ul><li>（1）首先判断A的逻辑值，如果A的值为假，就可以判断整个表达式的值为假，就不需要再判断B的值。</li><li>（2）A和B不能是矩阵，只能是标量。</li></ul></li><li>“|”与“||”同理。</li><li>A&amp;&amp;B 首先判断A的逻辑值，如果A的值为假，就可以判断整个表达式的值为假，就不需要再判断B的值。这种用法非常有用，如果A是一个计算量较小的函数，B是一个计算量较大的函数，那么首先判断A对减少计算量是有好处的。另外这也可以防止类似被0除的错误</li></ul></li><li><p>中括号[]的一个用法是，用来接收多个返回值/结果(数值或矩阵)。</p></li></ul><h2 id="运算符的优先级"><a href="#运算符的优先级" class="headerlink" title="运算符的优先级"></a>运算符的优先级</h2><ul><li><a href="https://ww2.mathworks.cn/help/matlab/matlab_prog/operator-precedence.html" target="_blank" rel="noopener">运算符的优先级</a></li><li>AND 和 OR 运算符的优先级<ul><li>MATLAB <strong>始终将 &amp; 运算符的优先级指定为高于 | 运算符</strong>。尽管 MATLAB 通常按从左到右的顺序计算表达式，但表达式 a|b&amp;c 按 a|(b&amp;c) 形式计算。对于包含 &amp; 和 | 组合的语句，比较好的做法是使用括号显式指定期望的语句优先级。<br>该优先级规则同样适用于 &amp;&amp; 和 || 运算符。</li></ul></li></ul><h1 id="转载"><a href="#转载" class="headerlink" title="转载"></a>转载</h1><ul><li><a href="https://blog.csdn.net/treasuresss/article/details/39370253" target="_blank" rel="noopener">matlab中&amp;&amp;和&amp;的区别</a>_</li><li><a href="https://ww2.mathworks.cn/help/matlab/ref/logicaloperatorsshortcircuit.html" target="_blank" rel="noopener">逻辑运算符：短路 &amp;&amp; ||</a></li><li><a href="https://ww2.mathworks.cn/help/matlab/ref/and.html" target="_blank" rel="noopener">and, &amp;(计算逻辑 AND)</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      😐
-    
-    </summary>
-    
-      <category term="matlab" scheme="BestQwerty.github.io/categories/matlab/"/>
-    
-      <category term="基础" scheme="BestQwerty.github.io/categories/matlab/%E5%9F%BA%E7%A1%80/"/>
-    
-      <category term="运算符" scheme="BestQwerty.github.io/categories/matlab/%E5%9F%BA%E7%A1%80/%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
     
     
       <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
