@@ -92,7 +92,13 @@
 <meta property="og:image" content="https://ww2.mathworks.cn/help/matlab/ref/createpiechartexample_01_zh_CN.png">
 <meta property="og:image" content="https://ww2.mathworks.cn/help/matlab/ref/createpiechartexample_02_zh_CN.png">
 <meta property="og:image" content="https://ww2.mathworks.cn/help/matlab/ref/plotmultiplepiechartsexample_01_zh_CN.png">
-<meta property="og:updated_time" content="2019-05-19T12:14:21.034Z">
+<meta property="og:image" content="https://ww2.mathworks.cn/help/matlab/ref/singledataseriesexample_01_zh_CN.png">
+<meta property="og:image" content="https://ww2.mathworks.cn/help/matlab/ref/xaxisticklabelsexample_01_zh_CN.png">
+<meta property="og:image" content="https://ww2.mathworks.cn/help/matlab/ref/bargraphof2darrayexample_01_zh_CN.png">
+<meta property="og:image" content="https://ww2.mathworks.cn/help/matlab/ref/bargraphstylesexample_01_zh_CN.png">
+<meta property="og:image" content="https://ww2.mathworks.cn/help/matlab/ref/createhistogrambarplotwithvectorinputexample_01_zh_CN.png">
+<meta property="og:image" content="https://ww2.mathworks.cn/help/matlab/ref/createhistogrambarplotwithmatrixinputexample_01_zh_CN.png">
+<meta property="og:updated_time" content="2019-05-20T05:00:30.333Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab绘图补充">
 <meta name="twitter:description" content="😛">
@@ -363,8 +369,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-05-19T20:14:21+08:00">
-                2019-05-19
+              <time title="更新于" itemprop="dateModified" datetime="2019-05-20T13:00:30+08:00">
+                2019-05-20
               </time>
             
           </span>
@@ -409,7 +415,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">467(字)</span> 
+					<span class="post-count">1.4k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -489,12 +495,19 @@
 <li><a href="https://ww2.mathworks.cn/help/matlab/ref/matlab.graphics.primitive.rectangle-properties.html" target="_blank" rel="noopener">Rectangle 属性</a></li>
 </ul>
 <h1 id="pie"><a href="#pie" class="headerlink" title="pie"></a>pie</h1><ul>
-<li><a href="https://ww2.mathworks.cn/help/matlab/ref/pie.html" target="_blank" rel="noopener"></a></li>
+<li><a href="https://ww2.mathworks.cn/help/matlab/ref/pie.html" target="_blank" rel="noopener">pie</a></li>
 <li>逆时针画图</li>
 <li><code>pie(X,explode)</code> 将扇区从饼图偏移一定位置。explode 是一个由与 X 对应的零值和非零值组成的向量或矩阵。pie 函数仅将对应于 explode 中的非零元素的扇区偏移一定的位置。<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">X = [<span class="number">1</span> <span class="number">3</span> <span class="number">0.5</span> <span class="number">2.5</span> <span class="number">2</span>];</span><br><span class="line">pie(X)</span><br><span class="line">explode = [<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span>]; <span class="comment">%通过将对应的 explode 元素设置为 1 来偏移第二和第四块饼图扇区。</span></span><br><span class="line">pie(X,explode)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p><img src="https://ww2.mathworks.cn/help/matlab/ref/createpiechartexample_01_zh_CN.png" alt=""><br><img src="https://ww2.mathworks.cn/help/matlab/ref/createpiechartexample_02_zh_CN.png" alt=""></p>
+<ul>
+<li>explode - 偏移扇区 数值向量或矩阵 | 字符向量元胞数组 | 字符串数组<ul>
+<li>偏移扇区，指定为数值向量、矩阵、字符向量元胞数组或字符串数组。</li>
+<li>如果 X 为数值，则 explode 必须是逻辑向量或数值向量，或由对应于 X 的零或非零值组成的矩阵。一个真（非零）值从饼图中心将相应的扇区偏移一定位置，</li>
+</ul>
+</li>
+</ul>
 <ul>
 <li><p><code>pie(X,labels)</code> 指定扇区的文本标签。X 必须是数值数据类型。标签数必须等于 X 中的元素数。</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">X = <span class="number">1</span>:<span class="number">3</span>;</span><br><span class="line">labels = &#123;<span class="string">'Taxes'</span>,<span class="string">'Expenses'</span>,<span class="string">'Profit'</span>&#125;;</span><br><span class="line">pie(X,labels)</span><br></pre></td></tr></table></figure>
@@ -508,9 +521,84 @@
 </ul>
 <p><img src="https://ww2.mathworks.cn/help/matlab/ref/plotmultiplepiechartsexample_01_zh_CN.png" alt=""></p>
 <h1 id="bar"><a href="#bar" class="headerlink" title="bar"></a>bar</h1><ul>
-<li></li>
+<li><code>bar(y)</code> 创建一个条形图，y 中的每个元素对应一个条形。如果 y 是矩阵，则 bar 根据 y 中的行对条形分组。<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">y = [<span class="number">75</span> <span class="number">91</span> <span class="number">105</span> <span class="number">123.5</span> <span class="number">131</span> <span class="number">150</span> <span class="number">179</span> <span class="number">203</span> <span class="number">226</span> <span class="number">249</span> <span class="number">281.5</span>];</span><br><span class="line">bar(y)</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h1 id="hist"><a href="#hist" class="headerlink" title="hist"></a>hist</h1><h1 id="explode"><a href="#explode" class="headerlink" title="explode"></a>explode</h1>
+<p><img src="https://ww2.mathworks.cn/help/matlab/ref/singledataseriesexample_01_zh_CN.png" alt=""></p>
+<ul>
+<li><code>bar(x,y)</code> 在 x 指定的位置绘制条形。x就是坐标<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">1900</span>:<span class="number">10</span>:<span class="number">2000</span>;</span><br><span class="line">y = [<span class="number">75</span> <span class="number">91</span> <span class="number">105</span> <span class="number">123.5</span> <span class="number">131</span> <span class="number">150</span> <span class="number">179</span> <span class="number">203</span> <span class="number">226</span> <span class="number">249</span> <span class="number">281.5</span>];</span><br><span class="line">bar(x,y)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="https://ww2.mathworks.cn/help/matlab/ref/xaxisticklabelsexample_01_zh_CN.png" alt=""></p>
+<ul>
+<li>显示条形组<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">y = [<span class="number">2</span> <span class="number">2</span> <span class="number">3</span>; <span class="number">2</span> <span class="number">5</span> <span class="number">6</span>; <span class="number">2</span> <span class="number">8</span> <span class="number">9</span>; <span class="number">2</span> <span class="number">11</span> <span class="number">12</span>];</span><br><span class="line">bar(y)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="https://ww2.mathworks.cn/help/matlab/ref/bargraphof2darrayexample_01_zh_CN.png" alt=""></p>
+<ul>
+<li><code>bar(___,style)</code> 指定条形组的样式。例如，使用 ‘stacked’ 将每个组显示为一个多种颜色的条形</li>
+<li>style - 条形组样式<ul>
+<li>‘grouped’为 y 中的每一行显示一组。<ul>
+<li>如果 y 是一个 m×n 矩阵，bar 显示 m 组 n 个垂直条，其中，m 是 y 的行数，n 是列数。</li>
+<li>如果 y 是长度为 n 的向量，bar 会显示由 n 个条形构成的一个条形组。bar 函数将所有向量当作列向量处理。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>显示堆叠条形图<ul>
+<li>为矩阵中的每一行显示一个条形。每个条形的高度是行中各元素之和。<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">y = [<span class="number">2</span> <span class="number">2</span> <span class="number">3</span>; <span class="number">2</span> <span class="number">5</span> <span class="number">6</span>; <span class="number">2</span> <span class="number">8</span> <span class="number">9</span>; <span class="number">2</span> <span class="number">11</span> <span class="number">12</span>];</span><br><span class="line">bar(y,<span class="string">'stacked'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://ww2.mathworks.cn/help/matlab/ref/bargraphstylesexample_01_zh_CN.png" alt=""></p>
+<ul>
+<li><p>x - x 值 向量 | 矩阵</p>
+<ul>
+<li><p>x 值，指定为向量或矩阵。<strong>如果 x 和 y 均为向量，则它们的长度必须相同</strong>。如果 x 和 y 均为矩阵，则它们的大小必须相同。如果 x 为向量而 y 为矩阵，则 x 的长度必须等于 y 中的行数。</p>
+</li>
+<li><p>x 值不必按顺序排列，但它们不能包含重复值。如果 x 是矩阵，则它不能在各列中包含重复值。</p>
+</li>
+</ul>
+</li>
+<li>y- y 值 向量 | 矩阵 y 值，指定为向量或矩阵。<ul>
+<li>如果 y 为向量，则 bar 为每个元素绘制一个条形。bar 函数将所有向量当作列向量处理。</li>
+<li>如果 <strong>y 是矩阵</strong>，则 bar 根据 y 中的<strong>行对条形分组。</strong></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>画垂直柱状图图用的是 <code>bar()</code> 函数，画水平柱状图时用的是 <code>barh()</code> 函数。</li>
+</ul>
+<h1 id="hist"><a href="#hist" class="headerlink" title="hist"></a>hist</h1><ul>
+<li>直方图</li>
+<li><code>hist(x)</code>将向量x的元素平均分到十个等间隔的容器中，并且返回每个容器的元素个数。如果x是一个矩阵，hist指令逐列元素操作<ul>
+<li>其长度代表容器中数据的多少</li>
+<li>x轴是范围(bin)，y轴是频率(个数)</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">0</span> <span class="number">2</span> <span class="number">9</span> <span class="number">2</span> <span class="number">5</span> <span class="number">8</span> <span class="number">7</span> <span class="number">3</span> <span class="number">1</span> <span class="number">9</span> <span class="number">4</span> <span class="number">3</span> <span class="number">5</span> <span class="number">8</span> <span class="number">10</span> <span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">9</span> <span class="number">5</span> <span class="number">10</span>];</span><br><span class="line">hist(x)</span><br><span class="line"><span class="comment">%hist 将 x 中的值有序划分入介于向量中最小值和最大值间的 10 个等间距 bin 中，在本例中，最小值是 0，最大值是 10。</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://ww2.mathworks.cn/help/matlab/ref/createhistogrambarplotwithvectorinputexample_01_zh_CN.png" alt=""></p>
+<ul>
+<li>多列组成的直方图<ul>
+<li>生成由 1,000 个随机数组成的三列并绘制三列叠加的直方图。</li>
+<li>x 中的值将有序划分入介于最小值和最大值间的 10 个等间距 bin 中。hist 分别对 x 的各列排序、存储，并使用不同的颜色绘制每列。<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="built_in">randn</span>(<span class="number">1000</span>,<span class="number">3</span>); </span><br><span class="line">hist(x)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://ww2.mathworks.cn/help/matlab/ref/createhistogrambarplotwithmatrixinputexample_01_zh_CN.png" alt=""></p>
+<ul>
+<li>x - 输入数组    向量或矩阵   输入向量或矩阵。<ul>
+<li>如果 x 是向量，hist 创建一个直方图。</li>
+<li>如果 x 为矩阵，则 h<strong>ist 为每列创建一个单独的直方图并使用不同的颜色绘制直方图。</strong></li>
+</ul>
+</li>
+</ul>
+
       
     </div>
     
@@ -741,7 +829,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">1.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#set"><span class="nav-number">1.1.</span> <span class="nav-text">set</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rectangle"><span class="nav-number">1.2.</span> <span class="nav-text">rectangle</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pie"><span class="nav-number">2.</span> <span class="nav-text">pie</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#bar"><span class="nav-number">3.</span> <span class="nav-text">bar</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hist"><span class="nav-number">4.</span> <span class="nav-text">hist</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#explode"><span class="nav-number">5.</span> <span class="nav-text">explode</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">1.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#set"><span class="nav-number">1.1.</span> <span class="nav-text">set</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rectangle"><span class="nav-number">1.2.</span> <span class="nav-text">rectangle</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pie"><span class="nav-number">2.</span> <span class="nav-text">pie</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#bar"><span class="nav-number">3.</span> <span class="nav-text">bar</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hist"><span class="nav-number">4.</span> <span class="nav-text">hist</span></a></li></ol></div>
             
 
           </div>
@@ -783,7 +871,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">61.9k</span>
+    <span title="Site words total count">62.8k</span>
   
 </div>
 
