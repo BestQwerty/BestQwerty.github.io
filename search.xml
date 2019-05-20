@@ -15,7 +15,7 @@
   <entry>
     <title><![CDATA[lingo]]></title>
     <url>%2F2019%2F05%2F19%2Flingo%2F</url>
-    <content type="text"><![CDATA[lingo 变量默认大于0，若取负数，要另外说明 每个语句必须以分号“;”结束，每行可以有多个语句，语句可以跨行； 以“!”开头，以“;”结束的语句是注释语句； lingo模型以model:开头，end:结尾,对于简单的模型，可以省略 12345678910111213model: sets: //定义集合(数据)类型; ..... endsets data: //数据的初始化 .... enddata min/max... 约束条件end 集合 集合的属性就是由元素构成的矩阵 衍生集合 1links(wh, wa):c; //此时的衍生集合c相当于二维矩阵(数组) 目标函数与目标条件 @sum @for @FOR(WH(I): @SUM(VD(J): X(I, J)) &lt;=AI(I) );wh(i)是对集合wh的下标i进行循环，然后@sum内部的vd(j)是对集合vd的下标j进行循环，内外循环就是相当于二重for循环，外循环为i，内循环为j 变量定界函数 0-1规划中@bin限制为整数0或1]]></content>
+    <content type="text"><![CDATA[lingo 变量默认大于0，若取负数，要另外说明 每个语句必须以分号“;”结束，每行可以有多个语句，语句可以跨行； 以“!”开头，以“;”结束的语句是注释语句； lingo模型以model:开头，end:结尾,对于简单的模型，可以省略 12345678910111213model: sets: !定义集合(数据)类型; ..... endsets data: !数据的初始化; .... enddata min/max... 约束条件end 集合 集合的属性就是由元素构成的矩阵 衍生集合 1links(wh, wa):c; //此时的衍生集合c相当于二维矩阵(数组) 目标函数与目标条件 @sum @for @FOR(WH(I): @SUM(VD(J): X(I, J)) &lt;=AI(I) );wh(i)是对集合wh的下标i进行循环，然后@sum内部的vd(j)是对集合vd的下标j进行循环，内外循环就是相当于二重for循环，外循环为i，内循环为j 变量定界函数 0-1规划中@bin限制为整数0或1]]></content>
       <categories>
         <category>lingo</category>
       </categories>
