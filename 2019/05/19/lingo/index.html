@@ -89,10 +89,12 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="😋">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-21T02:55:02.623Z">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%EF%BC%881%EF%BC%89%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0%EF%BC%9A%5Cmin+~~+f%3D%5Csum_%7Bi%3D1%7D%5E3+%5Csum_%7Bj%3D1%7D%5E4+c_%7Bi+j%7D+x_%7Bi+j%7D">
+<meta property="og:updated_time" content="2019-05-21T06:29:59.387Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="lingo">
 <meta name="twitter:description" content="😋">
+<meta name="twitter:image" content="https://www.zhihu.com/equation?tex=%EF%BC%881%EF%BC%89%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0%EF%BC%9A%5Cmin+~~+f%3D%5Csum_%7Bi%3D1%7D%5E3+%5Csum_%7Bj%3D1%7D%5E4+c_%7Bi+j%7D+x_%7Bi+j%7D">
 
 
 
@@ -359,7 +361,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-05-21T10:55:02+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-05-21T14:29:59+08:00">
                 2019-05-21
               </time>
             
@@ -394,7 +396,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">585(字)</span> 
+					<span class="post-count">1.2k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -464,7 +466,10 @@
 <li>变量名称必须以字母(A-Z)开头，由字母、数字(0-9)和下划线“_”组成，长度不超过32个字符，不区分大小写；</li>
 <li>求目标函数的最大值和最小值分别用MAX= …或MIN= …来表示；</li>
 <li><p>lingo模型以<code>model:</code>开头，<code>end:</code>结尾,对于简单的模型，可以省略</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">model:</span><br><span class="line">    sets:  !定义集合(数据)类型;</span><br><span class="line">        .....</span><br><span class="line">    endsets</span><br><span class="line"></span><br><span class="line">    data:  !数据的初始化;</span><br><span class="line">        ....</span><br><span class="line">    enddata</span><br><span class="line"></span><br><span class="line">    min/max...</span><br><span class="line"></span><br><span class="line">    约束条件</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Lingo一般是把全部代码放在 model: ……. end 中间（就解决一个问题，省略也行），整个叫做模型段。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">model:</span><br><span class="line">    sets:  !定义集合(数据)类型;</span><br><span class="line">        .....</span><br><span class="line">    endsets</span><br><span class="line"></span><br><span class="line">    data:  !数据的初始化;</span><br><span class="line">        ....</span><br><span class="line">    enddata</span><br><span class="line"></span><br><span class="line">    min/max...</span><br><span class="line"></span><br><span class="line">    约束条件</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 </li>
 <li><p>集合段：sets: …… endsets ——用来声明和定义数组变量；</p>
 </li>
@@ -499,14 +504,35 @@
 <li>数据之间的逗号和空格可以替换</li>
 </ul>
 </li>
+<li><code>supplys /1 .. 3/: S;</code><ul>
+<li>声明一个长度为 3 的一维数组 supplys, 并用它定义一个这样的一维数组变量 S.</li>
+<li>先是数组名（随便起），再是用两个 / 夹在中间的是数组的下标范围，中间 .. 是省略表示法，接着用 : 定义数组变量 S。</li>
 </ul>
-<h1 id="目标函数与目标条件"><a href="#目标函数与目标条件" class="headerlink" title="目标函数与目标条件"></a>目标函数与目标条件</h1><ul>
-<li><code>@sum</code></li>
-<li><code>@for</code></li>
-<li><code>@FOR(WH(I): @SUM(VD(J): X(I, J)) &lt;=AI(I) );</code>wh(i)是对集合wh的下标i进行循环，然后@sum内部的vd(j)是对集合vd的下标j进行循环，内外循环就是相当于二重for循环，外循环为i，内循环为j</li>
+</li>
+<li><code>demands/1..4/: D;</code> 声明一个长度为 4 的一维数组 demands，并定义一个这样的一维数组变量 D。</li>
+<li><code>links(supplys, demands): c, x;</code> 声明一个  的二维数组 links，并用它定义两个这样的二维数组变量 c, x.<ul>
+<li>把两个一维数组放一起，起个名字叫 links，得到二维数组 links，第1个一维数组的维数就是二维数组的行数维度，第2个一维数组的维数就是二维数组的列数维度。</li>
+<li>注意：这里 links 不是Lingo关键字，可以随便起名。</li>
+</ul>
+</li>
+</ul>
+<h2 id="目标函数与目标条件"><a href="#目标函数与目标条件" class="headerlink" title="目标函数与目标条件"></a>目标函数与目标条件</h2><ul>
+<li><code>@sum</code>@SUM是LINGO提供的内部函数，其作用是对某个集合的所有成员，求指定表达式的和.<ul>
+<li><code>@SUM</code>有两个参数：集合名称和表达式,如<code>MIN = @SUM(LINKS(I, J): C(I, J)*X(I, J));</code><br><img src="https://www.zhihu.com/equation?tex=%EF%BC%881%EF%BC%89%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0%EF%BC%9A%5Cmin+~~+f%3D%5Csum_%7Bi%3D1%7D%5E3+%5Csum_%7Bj%3D1%7D%5E4+c_%7Bi+j%7D+x_%7Bi+j%7D" alt=""></li>
+<li>如果表达式中参与运算的属性属于同一个集合，则<code>@SUM</code>的索引可以省略. 即<code>MIN = @SUM(LINKS: C*X);</code></li>
+<li>目标函数是求最小，所以用 “min=”</li>
+<li>有 $\sum$，所以需要用到 <code>@sum()</code> 函数， 这是Lingo里的求和函数，首先得告诉它求和的范围， i 从1到3， j 从1到4，这不正好是前面声明的（对应的）二维数组 links 的大小吗，所以就用 <code>links(i, j)</code>来告诉（也只能用声明的数组来告诉），并用 i 表示行索引， j 表数列索引。</li>
+<li>然后，冒号，求和里面的表达式。</li>
+</ul>
+</li>
+<li><code>@for</code>是LINGO提供的内部函数，其作用是对某个集合的所有成员分别生成一个约束表达式.有两个参数：集合名和约束表达式<ul>
+<li><code>@FOR(WH(I): @SUM(VD(J): X(I, J)) &lt;= AI(I) );</code>wh(i)是对集合wh的下标i进行循环，然后@sum内部的vd(j)是对集合vd的下标j进行循环，内外循环就是相当于二重for循环，外循环为i，内循环为j</li>
+</ul>
+</li>
 </ul>
 <h2 id="变量定界函数"><a href="#变量定界函数" class="headerlink" title="变量定界函数"></a>变量定界函数</h2><ul>
 <li>0-1规划中<code>@bin</code>限制为整数0或1</li>
+<li>如果整数规划问题中的所有变量仅限于取0或1两个值，则称此问题为0-1整数规划，简称0-1规划，其变量为0-1变量.</li>
 </ul>
 
       
@@ -739,7 +765,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#lingo"><span class="nav-number">1.</span> <span class="nav-text">lingo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#集合"><span class="nav-number">1.1.</span> <span class="nav-text">集合</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目标函数与目标条件"><span class="nav-number">2.</span> <span class="nav-text">目标函数与目标条件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量定界函数"><span class="nav-number">2.1.</span> <span class="nav-text">变量定界函数</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#lingo"><span class="nav-number">1.</span> <span class="nav-text">lingo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#集合"><span class="nav-number">1.1.</span> <span class="nav-text">集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目标函数与目标条件"><span class="nav-number">1.2.</span> <span class="nav-text">目标函数与目标条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量定界函数"><span class="nav-number">1.3.</span> <span class="nav-text">变量定界函数</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -781,7 +807,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">63.6k</span>
+    <span title="Site words total count">64.2k</span>
   
 </div>
 
