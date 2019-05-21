@@ -104,7 +104,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E6%B1%82%E8%A7%A3%E6%8A%A5%E5%91%8A1.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E7%81%B5%E6%95%8F%E5%BA%A6%E5%88%86%E6%9E%90.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E7%81%B5%E6%95%8F%E5%BA%A6%E5%88%86%E6%9E%902.png">
-<meta property="og:updated_time" content="2019-05-21T07:33:21.187Z">
+<meta property="og:updated_time" content="2019-05-21T07:38:11.670Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="lingo">
 <meta name="twitter:description" content="😋">
@@ -375,7 +375,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-05-21T15:33:21+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-05-21T15:38:11+08:00">
                 2019-05-21
               </time>
             
@@ -410,7 +410,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">1.5k(字)</span> 
+					<span class="post-count">1.6k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -477,7 +477,7 @@
 <li>每个语句必须以分号“;”结束，每行可以有多个语句，语句可以跨行；</li>
 <li>可以给语句加上标号，例如<code>[OBJ]  MAX= …   ;</code></li>
 <li>以“!”开头，以“;”结束的语句是注释语句；</li>
-<li>变量名称必须以字母(A-Z)开头，由字母、数字(0-9)和下划线“_”组成，长度不超过32个字符，不区分大小写；</li>
+<li>变量名称必须以字母(A-Z)开头，由字母、数字(0-9)和下划线“_”组成，长度不超过32个字符，<strong>不区分大小写</strong>；</li>
 <li>求目标函数的最大值和最小值分别用MAX= …或MIN= …来表示；</li>
 <li><p>lingo模型以<code>model:</code>开头，<code>end:</code>结尾,对于简单的模型，可以省略</p>
 <ul>
@@ -573,7 +573,9 @@
 </ul>
 </li>
 </ul>
-<h1 id="lingo灵敏度分析"><a href="#lingo灵敏度分析" class="headerlink" title="lingo灵敏度分析"></a>lingo灵敏度分析</h1><p><img src="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E7%81%B5%E6%95%8F%E5%BA%A6%E5%88%86%E6%9E%90.png" alt=""><br><img src="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E7%81%B5%E6%95%8F%E5%BA%A6%E5%88%86%E6%9E%902.png" alt=""></p>
+<h1 id="lingo灵敏度分析"><a href="#lingo灵敏度分析" class="headerlink" title="lingo灵敏度分析"></a>lingo灵敏度分析</h1><ul>
+<li>灵敏性分析是在求解模型时作出的，因此在求解模型时灵敏性分析是激活状态，但是默认是不激活的。为了激活灵敏性分析，运行LINGO|Options…，选择General Solver Tab， 在Dual Computations列表框中，选择Prices and Ranges选项。<br><img src="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E7%81%B5%E6%95%8F%E5%BA%A6%E5%88%86%E6%9E%90.png" alt=""><br><img src="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E7%81%B5%E6%95%8F%E5%BA%A6%E5%88%86%E6%9E%902.png" alt=""></li>
+</ul>
 
       
     </div>
