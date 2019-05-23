@@ -84,14 +84,14 @@
 <meta name="description" content="😋">
 <meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据结构">
-<meta property="og:url" content="BestQwerty.github.io/2019/05/18/数据结构/index.html">
+<meta property="og:title" content="树">
+<meta property="og:url" content="BestQwerty.github.io/2019/05/18/树/index.html">
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="😋">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-18T14:18:30.943Z">
+<meta property="og:updated_time" content="2019-05-22T13:49:06.316Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据结构">
+<meta name="twitter:title" content="树">
 <meta name="twitter:description" content="😋">
 
 
@@ -122,7 +122,7 @@
 
 
 
-  <link rel="canonical" href="BestQwerty.github.io/2019/05/18/数据结构/">
+  <link rel="canonical" href="BestQwerty.github.io/2019/05/18/树/">
 
 
 
@@ -142,7 +142,7 @@
         }
     })();
 </script>
-  <title>数据结构 | LjJiaJun' Home</title>
+  <title>树 | LjJiaJun' Home</title>
   
 
 
@@ -314,7 +314,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="BestQwerty.github.io/2019/05/18/数据结构/">
+    <link itemprop="mainEntityOfPage" href="BestQwerty.github.io/2019/05/18/树/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LjJiaJun">
@@ -331,7 +331,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">数据结构</h1>
+          <h1 class="post-title" itemprop="name headline">树</h1>
         
 
         <div class="post-meta">
@@ -359,8 +359,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-05-18T22:18:30+08:00">
-                2019-05-18
+              <time title="更新于" itemprop="dateModified" datetime="2019-05-22T21:49:06+08:00">
+                2019-05-22
               </time>
             
           </span>
@@ -405,7 +405,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">173(字)</span> 
+					<span class="post-count">601(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -418,8 +418,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/05/18/数据结构/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/18/数据结构/" itemprop="commentCount"></span>
+                <a href="/2019/05/18/树/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/18/树/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -427,7 +427,7 @@
 
           
           
-             <span id="/2019/05/18/数据结构/" class="leancloud_visitors" data-flag-title="数据结构">
+             <span id="/2019/05/18/树/" class="leancloud_visitors" data-flag-title="树">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -477,6 +477,10 @@
 <li><p>树中边和结点的关系为：结点数=边数+1 -&gt; 边数 = 结点数-1</p>
 </li>
 </ul>
+<h2 id="哈夫曼树"><a href="#哈夫曼树" class="headerlink" title="哈夫曼树"></a>哈夫曼树</h2><ul>
+<li>创建哈夫曼树并输出所有度为2的结点权值的和(huffman tree没有度为1的结点，度为0为叶子结点)<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">huffman</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> data;</span><br><span class="line">	<span class="keyword">int</span> parent;</span><br><span class="line">	<span class="keyword">int</span> lchild;</span><br><span class="line">	<span class="keyword">int</span> rchild;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, i, a, b, sum;</span><br><span class="line"><span class="comment">//a,b是构造过程中的用于构造哈夫曼树的两个结点的下标，sum是计算所有度为2的结点的权值之和，n是叶子结点个数</span></span><br><span class="line">huffman huff[<span class="number">105</span>];</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">select</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="comment">//选出huff[1]到huff[i-1]中权值最小的且无父母结点的两个结点用以构造哈夫曼树</span></span><br><span class="line">	<span class="keyword">int</span> huffdata1 = INF, huffdata2 = INF;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= i<span class="number">-1</span>; j++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(huff[j].parent == <span class="number">0</span>)&#123;</span><br><span class="line">			<span class="keyword">if</span>(huff[j].data &lt; huffdata1)&#123;</span><br><span class="line">				<span class="keyword">if</span>(huff[j].data &lt; huffdata2)&#123;</span><br><span class="line">					<span class="keyword">switch</span>(huffdata2 &gt; huffdata1)&#123;</span><br><span class="line"> <span class="comment">//注意因为huff[j].data可能小于huffdata2，而huffdata1如果小于huffdata2，那么应该将huffdata2权值更新为huffdata1，因为每次要选出结点权值最小的两个结点</span></span><br><span class="line">						<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">							huffdata2 = huffdata1;</span><br><span class="line">							b = a;</span><br><span class="line">							huffdata1 = huff[j].data;</span><br><span class="line">							a = j;</span><br><span class="line">							<span class="keyword">break</span>;</span><br><span class="line">						<span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">							huffdata1 = huff[j].data;</span><br><span class="line">							a = j;</span><br><span class="line">							<span class="keyword">break</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(huff[j].data &lt; huffdata2)&#123;</span><br><span class="line">				huffdata2 = huff[j].data;</span><br><span class="line">				b = j;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">1</span>; i &lt;= n; i++)&#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; huff[i].data;</span><br><span class="line">		huff[i].lchild = huff[i].rchild = huff[i].parent = <span class="number">0</span>;</span><br><span class="line">	&#125;	</span><br><span class="line">	<span class="keyword">for</span>(i = n+<span class="number">1</span>; i &lt;= <span class="number">2</span>*n<span class="number">-1</span>; i++) huff[i] = &#123;<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>&#125;;</span><br><span class="line">	<span class="keyword">for</span>(i = n+<span class="number">1</span>; i &lt;= <span class="number">2</span>*n<span class="number">-1</span>; i++)&#123;</span><br><span class="line">		select(); </span><br><span class="line">		sum += huff[a].data + huff[b].data;	</span><br><span class="line">		huff[i].data = huff[a].data + huff[b].data;</span><br><span class="line">		huff[a].parent = huff[b].parent = i;</span><br><span class="line">		huff[i].lchild = a, huff[i].rchild = b;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; sum;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">模拟哈夫曼树构造过程:</span><br><span class="line"><span class="number">4</span> <span class="number">5</span> <span class="number">1</span> <span class="number">2</span> <span class="number">1</span> <span class="number">3</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">2</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span></span><br><span class="line"><span class="number">2</span> <span class="number">2</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span></span><br><span class="line"><span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">4</span> <span class="number">5</span></span><br><span class="line"><span class="number">4</span> <span class="number">4</span> <span class="number">5</span> <span class="number">5</span></span><br><span class="line"><span class="number">5</span> <span class="number">5</span> <span class="number">8</span></span><br><span class="line"><span class="number">8</span> <span class="number">10</span></span><br><span class="line"><span class="number">18</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
     </div>
@@ -509,9 +513,9 @@
 		  <footer class="post-footer">
     
         <div class="copyright" style="clear:both;">
-           <p><span>本文标题:</span><a href="/2019/05/18/数据结构/">数据结构</a></p>
+           <p><span>本文标题:</span><a href="/2019/05/18/树/">树</a></p>
            <p><span>文章作者:</span><a href="/" title="访问 LjJiaJun 的个人博客">LjJiaJun</a></p>
-           <p><span>原始链接:</span><a href="/2019/05/18/数据结构/" title="数据结构">BestQwerty.github.io/2019/05/18/数据结构/</a></p>
+           <p><span>原始链接:</span><a href="/2019/05/18/树/" title="树">BestQwerty.github.io/2019/05/18/树/</a></p>
            <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" title="Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)">Attribution-NonCommercial 4.0</a></p>
            <p><span>若转载，请留以上信息，谢谢合作</span></p>
         </div>
@@ -708,7 +712,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#树"><span class="nav-number">1.</span> <span class="nav-text">树</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#树"><span class="nav-number">1.</span> <span class="nav-text">树</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#哈夫曼树"><span class="nav-number">1.1.</span> <span class="nav-text">哈夫曼树</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -750,7 +754,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">65k</span>
+    <span title="Site words total count">65.5k</span>
   
 </div>
 
