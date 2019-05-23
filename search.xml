@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[matlab解方程]]></title>
     <url>%2F2019%2F05%2F23%2Fmatlab%E8%A7%A3%E6%96%B9%E7%A8%8B%2F</url>
-    <content type="text"><![CDATA[微分方程dsolve-]]></content>
+    <content type="text"><![CDATA[syms 创建符号变量(或数组)和方程 diff diff函数式用于求导数和差分的.微分方程 dsolve 与solve函数类似可以使用向量式输入 一阶微分方程$dÿ/dt=ty$ 1234syms y（t）ode = diff（y，t）== t * yode（t）= diff（y（t），t）== t * y（t）ySol（t）= dsolve（ode） 如果增加一个条件y(0) = 2 12cond = y(0) == 2;ySol(t) = dsolve(ode,cond) $(dy/dt+y)^2=1,y(0)=0.$ 1234syms y(t)ode = (diff(y,t)+y)^2 == 1;cond = y(0) == 0;ySol(t) = dsolve(ode,cond) $du/dt=3u+4v,dv/Sdt=−4u+3v.$ 123456789101112syms u(t) v(t)%Define the equations using == and represent differentiation using the diff function.ode1 = diff(u) == 3*u + 4*v;ode2 = diff(v) == -4*u + 3*v;odes = [ode1; ode2]%odes(t) = diff(u(t), t) == 3*u(t) + 4*v(t) diff(v(t), t) == 3*v(t) - 4*u(t)%Solve the system using the dsolve function which returns the solutions as elements of a structure.S = dsolve(odes) 参考 dsolve csdn]]></content>
       <categories>
         <category>matlab</category>
         <category>解方程</category>

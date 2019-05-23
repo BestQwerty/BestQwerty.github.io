@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="🤣">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-23T09:01:26.940Z">
+<meta property="og:updated_time" content="2019-05-23T09:40:53.621Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab解方程">
 <meta name="twitter:description" content="🤣">
@@ -359,7 +359,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-05-23T17:01:26+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-05-23T17:40:53+08:00">
                 2019-05-23
               </time>
             
@@ -405,7 +405,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">5(字)</span> 
+					<span class="post-count">210(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -467,7 +467,30 @@
       
 
       
-        <h1 id="微分方程"><a href="#微分方程" class="headerlink" title="微分方程"></a>微分方程</h1><h2 id="dsolve"><a href="#dsolve" class="headerlink" title="dsolve"></a>dsolve</h2><p>- </p>
+        <h1 id="syms"><a href="#syms" class="headerlink" title="syms"></a>syms</h1><ul>
+<li>创建符号变量(或数组)和方程</li>
+</ul>
+<h1 id="diff"><a href="#diff" class="headerlink" title="diff"></a>diff</h1><ul>
+<li>diff函数式用于求导数和差分的.<h1 id="微分方程"><a href="#微分方程" class="headerlink" title="微分方程"></a>微分方程</h1></li>
+</ul>
+<h2 id="dsolve"><a href="#dsolve" class="headerlink" title="dsolve"></a>dsolve</h2><ul>
+<li>与solve函数类似可以使用向量式输入</li>
+<li><p>一阶微分方程$dÿ/dt=ty$</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">syms y（t）</span><br><span class="line">ode = diff（y，t）== t * y</span><br><span class="line">ode（t）= diff（y（t），t）== t * y（t）</span><br><span class="line">ySol（t）= dsolve（ode）</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果增加一个条件y(0) = 2</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cond = y(<span class="number">0</span>) == <span class="number">2</span>;</span><br><span class="line">ySol(t) = dsolve(ode,cond)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>$(dy/dt+y)^2=1,y(0)=0.$</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">syms y(t)</span><br><span class="line">ode = (diff(y,t)+y)^<span class="number">2</span> == <span class="number">1</span>;</span><br><span class="line">cond = y(<span class="number">0</span>) == <span class="number">0</span>;</span><br><span class="line">ySol(t) = dsolve(ode,cond)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>$du/dt=3u+4v,dv/Sdt=−4u+3v.$</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">syms u(t) v(t)</span><br><span class="line"><span class="comment">%Define the equations using == and represent differentiation using the diff function.</span></span><br><span class="line"></span><br><span class="line">ode1 = diff(u) == <span class="number">3</span>*u + <span class="number">4</span>*v;</span><br><span class="line">ode2 = diff(v) == <span class="number">-4</span>*u + <span class="number">3</span>*v;</span><br><span class="line">odes = [ode1; ode2]</span><br><span class="line"><span class="comment">%odes(t) =</span></span><br><span class="line"> diff(u(t), t) == <span class="number">3</span>*u(t) + <span class="number">4</span>*v(t)</span><br><span class="line"> diff(v(t), t) == <span class="number">3</span>*v(t) - <span class="number">4</span>*u(t)</span><br><span class="line"><span class="comment">%Solve the system using the dsolve function which returns the solutions as elements of a structure.</span></span><br><span class="line"></span><br><span class="line">S = dsolve(odes)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li><a href="https://blog.csdn.net/lynn15600693998/article/details/86597068" target="_blank" rel="noopener">dsolve csdn</a></li>
+</ul>
 
       
     </div>
@@ -695,7 +718,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#微分方程"><span class="nav-number">1.</span> <span class="nav-text">微分方程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#dsolve"><span class="nav-number">1.1.</span> <span class="nav-text">dsolve</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#syms"><span class="nav-number">1.</span> <span class="nav-text">syms</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#diff"><span class="nav-number">2.</span> <span class="nav-text">diff</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#微分方程"><span class="nav-number">3.</span> <span class="nav-text">微分方程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#dsolve"><span class="nav-number">3.1.</span> <span class="nav-text">dsolve</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
@@ -737,7 +760,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">65.5k</span>
+    <span title="Site words total count">65.7k</span>
   
 </div>
 
