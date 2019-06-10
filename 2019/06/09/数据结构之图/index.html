@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="数据结构,">
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="静静地Coding &amp;&amp; Thinking">
+<meta name="description" content="🎈">
+<meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构之图">
 <meta property="og:url" content="BestQwerty.github.io/2019/06/09/数据结构之图/index.html">
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
-<meta property="og:description" content="静静地Coding &amp;&amp; Thinking">
+<meta property="og:description" content="🎈">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-09T13:20:46.963Z">
+<meta property="og:updated_time" content="2019-06-10T07:06:37.205Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构之图">
-<meta name="twitter:description" content="静静地Coding &amp;&amp; Thinking">
+<meta name="twitter:description" content="🎈">
 
 
 
@@ -358,12 +359,45 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-09T21:20:46+08:00">
-                2019-06-09
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-10T15:06:37+08:00">
+                2019-06-10
               </time>
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构/图/" itemprop="url" rel="index">
+                    <span itemprop="name">图</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 		  <span class="post-time">
 					&nbsp; | &nbsp;
@@ -371,7 +405,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">0(字)</span> 
+					<span class="post-count">363(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -415,6 +449,10 @@
           
 
           
+              <div class="post-description">
+                  🎈
+              </div>
+          
 
         </div>
       </header>
@@ -429,7 +467,18 @@
       
 
       
-        
+        <h1 id="图"><a href="#图" class="headerlink" title="图"></a>图</h1><ul>
+<li>图（Graph）通常表示为： G(V,E)。其中，G 表示一个图，V 是图 G 中顶点的集合，E 是图 G 中边的集合。<ul>
+<li>在图中，不允许没有顶点。若 V 是图的顶点的集合，那么，V 是非空<br>有穷集合。</li>
+<li>图的任意两个顶点之间都可能有关系，它们的关系用边来表示。边集可<br>以是空的。</li>
+</ul>
+</li>
+<li>无向边用小括号 “（）”表示，有向边用尖括号“&lt;&gt;”表示。</li>
+</ul>
+<h1 id="无向图"><a href="#无向图" class="headerlink" title="无向图"></a>无向图</h1><ul>
+<li>邻接矩阵存储结构<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span> VertexType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> EdgeType;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXVEX 100;     <span class="comment">// 最大顶点数</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INFINITY 65535;  </span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    VertexType vexs[MAXVEX];    <span class="comment">// 顶点表</span></span><br><span class="line">    EdgeType arc[MAXVEX][MAXVEX];   <span class="comment">// 邻接矩阵，可看作边表</span></span><br><span class="line">    <span class="keyword">int</span> numVertexes, numEdges;  <span class="comment">// 图中当前顶点数和边数</span></span><br><span class="line">&#125;MGraph;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CreateGraph</span><span class="params">(MGraph *G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i, j, k, w;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%s"</span>, <span class="string">"输入顶点数和边数:\n"</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d, %d"</span>, &amp;G-&gt;numVertexes, &amp;G-&gt;numEdges);     <span class="comment">// 输入顶点数和边数</span></span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; G-&gt;numVertexes; i++)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(&amp;G-&gt;vexs[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; G-&gt;numVertexes; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(j = <span class="number">0</span>; j &lt; G-&gt;numVertexes; j++)&#123;</span><br><span class="line">            G-&gt;arc[i][j] = INFINITY;    <span class="comment">// 邻接矩阵初始化</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(k = <span class="number">0</span>; k &lt; G-&gt;numEdges; k++)&#123;   <span class="comment">// 读入numEdges条边，建立邻接矩阵</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"输入边(vi,vj)上的下标i、下标j和权w:\n"</span>);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d, %d, %d"</span>, &amp;i, &amp;j, &amp;w);    <span class="comment">// 输入边（vi,vj）上的权w</span></span><br><span class="line">        G-&gt;arc[i][j] = w;</span><br><span class="line">        G-&gt;arc[j][i] = G-&gt;arc[i][j];    <span class="comment">// 因为是无向图，矩阵对称</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
       
     </div>
     
@@ -450,6 +499,12 @@
 	
 	  </div>
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
+          
+        </div>
       
 	  
 		  <footer class="post-footer">
@@ -561,8 +616,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -590,7 +654,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">90</span>
+                  <span class="site-state-item-count">91</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -632,6 +696,22 @@ var jiathis_config={
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#图"><span class="nav-number">1.</span> <span class="nav-text">图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#无向图"><span class="nav-number">2.</span> <span class="nav-text">无向图</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -667,7 +747,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">65.2k</span>
+    <span title="Site words total count">65.6k</span>
   
 </div>
 
