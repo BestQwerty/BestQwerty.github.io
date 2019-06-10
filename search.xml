@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[数据结构之图]]></title>
+    <url>%2F2019%2F06%2F09%2F%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E5%9B%BE%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[迪杰斯特拉算法]]></title>
+    <url>%2F2019%2F06%2F09%2F%E8%BF%AA%E6%9D%B0%E6%96%AF%E7%89%B9%E6%8B%89%E7%AE%97%E6%B3%95%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>算法</category>
+        <category>迪杰斯特拉算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[matlab主成分分析以及相关函数]]></title>
     <url>%2F2019%2F05%2F25%2Fmatlab%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%2F</url>
     <content type="text"><![CDATA[相关函数princomp-]]></content>
@@ -529,24 +546,24 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[markdownpad2使用技巧]]></title>
-    <url>%2F2019%2F04%2F03%2Fmarkdownpad2%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%2F</url>
-    <content type="text"><![CDATA[markdownpad2常用快捷键 Ctrl + I ： 斜体 Ctrl + B ： 粗体 Ctrl + G ： 图片 Ctrl + Q ： 引用 Ctrl + 1 ： 标题 1 Ctrl + 2 ： 标题 2 Ctrl + 3 ： 标题 3 Ctrl + K ： 代码块 Ctrl + L ： 超链接 Ctrl + T ： 时间戳 Ctrl + U ： 无序列表 Ctrl + R ： 水平标尺 F4 ： 启用水平布局 F5 ： 启用实时预览 F6 ： 在浏览器中预览 Ctrl + Shift + O ： 有序列表 ​]]></content>
-      <categories>
-        <category>markdown编辑器</category>
-        <category>markdownpad2</category>
-      </categories>
-      <tags>
-        <tag>markdown编辑器</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[typora]]></title>
     <url>%2F2019%2F04%2F03%2Ftypora%2F</url>
     <content type="text"><![CDATA[typora简介 无论是Word中带有加粗等格式的文字，还是Excel中的表格，一旦黏贴到Typora中，都会被自动转化为对应的Markdown格式，所以你再也不用担心每次重新设置格式的麻烦了——Markdown最麻烦的表格也可以在Excel中做完再贴入生成了。 专注模式，也就是除了正在编辑的那行文字，文章上下其余的内容全部变成灰色，不吸引你的视线，不干扰你的思维。 与专注模式搭配的话，当然还是全屏模式(F11)最好啦 qwq 打字机模式（Typewriter Mode）:开启这种模式后，Typora 的光标所在行会始终保持在屏幕中间，这样你码字时眼睛可以一直正对着屏幕中间 打开/关闭源代码模式 typora默认界面是实时预览的模式,而这也是与其他Markdown软件较大的区别.切换成源代码模式可以更方便地修改内容 方法1:点击左下角的&lt;/&gt;(启用/关闭源代码模式) 方法2:Ctrl+/ 快捷键 无序列表：输入-之后输入空格 有序列表：输入数字+“.”之后输入空格 任务列表：-[空格]空格 文字 标题：ctrl+数字 表格：ctrl+t 生成目录：[TOC]按回车 选中一整行：ctrl+l 选中单词：ctrl+d 选中相同格式的文字：ctrl+e 跳转到文章开头：ctrl+home 跳转到文章结尾：ctrl+end 搜索：ctrl+f 替换：ctrl+h 引用：输入&gt;之后输入空格 代码块：ctrl+alt+f 加粗：ctrl+b 倾斜：ctrl+i 下划线：ctrl+u 删除线：alt+shift+5 插入图片：直接拖动到指定位置即可或者ctrl+shift+i 插入链接：ctrl+k ​ 参考文献：typora typora2 typora快捷键 typora界面入门]]></content>
       <categories>
         <category>markdown编辑器</category>
         <category>typora</category>
+      </categories>
+      <tags>
+        <tag>markdown编辑器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[markdownpad2使用技巧]]></title>
+    <url>%2F2019%2F04%2F03%2Fmarkdownpad2%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%2F</url>
+    <content type="text"><![CDATA[markdownpad2常用快捷键 Ctrl + I ： 斜体 Ctrl + B ： 粗体 Ctrl + G ： 图片 Ctrl + Q ： 引用 Ctrl + 1 ： 标题 1 Ctrl + 2 ： 标题 2 Ctrl + 3 ： 标题 3 Ctrl + K ： 代码块 Ctrl + L ： 超链接 Ctrl + T ： 时间戳 Ctrl + U ： 无序列表 Ctrl + R ： 水平标尺 F4 ： 启用水平布局 F5 ： 启用实时预览 F6 ： 在浏览器中预览 Ctrl + Shift + O ： 有序列表 ​]]></content>
+      <categories>
+        <category>markdown编辑器</category>
+        <category>markdownpad2</category>
       </categories>
       <tags>
         <tag>markdown编辑器</tag>
@@ -1027,7 +1044,7 @@
   <entry>
     <title><![CDATA[二分法]]></title>
     <url>%2F2019%2F03%2F04%2F%E4%BA%8C%E5%88%86%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[二分法(折半查找) 将所给关键词和指定有序集合中间数进行比较,如果比较相等则返回结果,如果不相等,则按照所给出的结果,将集合减半后继续查找 二分法是减治法的思想 二分法：(low+high)/2,如果故意卡数据即low与high很大的话,会越界.所以可以为(high - low)/2+low; 优化(先确定范围) 插值查找 这里的插值查找法,是对二分法的一种改进.此法和二分法一样对数据要求有序且尽量分布均匀 对于二分法有: mid = (low + high)/2;不难得到 mid = low + 1/2*(high-low);试想,对于在字典中进行查找时,对于’you’或’and’来说,我们通常的处理方法肯定不是从中间开始进行查找,而是根据所给出的值,大致确定范围后再来进行查找.这里的大致范围是通过,所查找的value值在所查集合中所大概处于的位置,定位到后进行比较故有如下公式:key = low + ((value - a[low])/(a[high]-a[low]))*（high-low); 伪代码: 12345678910111213141516171819int insertseek(int value,int map[]) int low,high,key; low = 0; high = n -1 ;while(low&lt;=high)key = low + ((value - low)/(high-low))*（high -low);if(key == value) return key;else if(key &lt; value) low = key;else high = key; 例题1234567891011121314151617181920212223242526五：第12周任务-分巧克力时间限制：1秒 内存限制：128兆48 次提交 4 次通过题目描述开学那天有n位计科的新生到ZXF做客。ZXF拿出了珍藏的巧克力招待学弟学妹们。ZXF一共有k块巧克力，其中第i块是Hi * Wi的方格组成的长方形。ZXF需要从这 k 块巧克力中切出n块巧克力分给新生们。为了公平起见，切出的巧克力需要满足：1.形状是正方形，边长是整数2.大小相同例：一块6x5的巧克力可以切出6块2x2的巧克力或者2块3x3的巧克力。当然学弟学妹们都希望得到的巧克力尽可能大，你能帮ZXF计算出最大的边长是多少么？输入输入在第一行给出两个正整数k和n（0&lt;=n，k&lt;=1000）。以下k行每行包含两个整数Hi和Wi。(0 &lt;= Hi, Wi &lt;= 1000000) 输入保证每位新生至少能获得一块1x1的巧克力。输出输出切出的正方形巧克力最大可能的边长。样例输入2 106 55 6样例输出2标程：简单的二分搜索暂时可以模仿我这种模板来写，check函数单独分开来写会让代码的思路更加清晰。二分的主体基本不变，都是改变上下界往两边搜索。另外我代码中出现的头文件是一个万能头文件，基本包含了C/C++当中的我们写算法中需要用到的头文件。目前大部分oj都支持，但是也有部分oj和比赛不支持。（比赛慎用！）]]></content>
+    <content type="text"><![CDATA[原地址 luogu 二分法(折半查找) 将所给关键词和指定有序集合中间数进行比较,如果比较相等则返回结果,如果不相等,则按照所给出的结果,将集合减半后继续查找 二分法是减治法的思想 二分法：(low+high)/2,如果故意卡数据即low与high很大的话,会越界.所以可以为(high - low)/2+low; 有三种: 优化(先确定范围) 插值查找 这里的插值查找法,是对二分法的一种改进.此法和二分法一样对数据要求有序且尽量分布均匀 对于二分法有: mid = (low + high)/2;不难得到 mid = low + 1/2*(high-low);试想,对于在字典中进行查找时,对于’you’或’and’来说,我们通常的处理方法肯定不是从中间开始进行查找,而是根据所给出的值,大致确定范围后再来进行查找.这里的大致范围是通过,所查找的value值在所查集合中所大概处于的位置,定位到后进行比较故有如下公式:key = low + ((value - a[low])/(a[high]-a[low]))*（high-low); 伪代码: 123456789int insertseek(int value,int map[]) int low,high,key; low = 0; high = n -1 ; while(low&lt;=high) key = low + ((value - low)/(high-low))*（high -low); if(key == value) return key; else if(key &lt; value) low = key; else high = key; 例题1234567891011121314151617181920212223242526五：第12周任务-分巧克力时间限制：1秒 内存限制：128兆48 次提交 4 次通过题目描述开学那天有n位计科的新生到ZXF做客。ZXF拿出了珍藏的巧克力招待学弟学妹们。ZXF一共有k块巧克力，其中第i块是Hi * Wi的方格组成的长方形。ZXF需要从这 k 块巧克力中切出n块巧克力分给新生们。为了公平起见，切出的巧克力需要满足：1.形状是正方形，边长是整数2.大小相同例：一块6x5的巧克力可以切出6块2x2的巧克力或者2块3x3的巧克力。当然学弟学妹们都希望得到的巧克力尽可能大，你能帮ZXF计算出最大的边长是多少么？输入输入在第一行给出两个正整数k和n（0&lt;=n，k&lt;=1000）。以下k行每行包含两个整数Hi和Wi。(0 &lt;= Hi, Wi &lt;= 1000000) 输入保证每位新生至少能获得一块1x1的巧克力。输出输出切出的正方形巧克力最大可能的边长。样例输入2 106 55 6样例输出2标程：简单的二分搜索暂时可以模仿我这种模板来写，check函数单独分开来写会让代码的思路更加清晰。二分的主体基本不变，都是改变上下界往两边搜索。另外我代码中出现的头文件是一个万能头文件，基本包含了C/C++当中的我们写算法中需要用到的头文件。目前大部分oj都支持，但是也有部分oj和比赛不支持。（比赛慎用！）]]></content>
       <categories>
         <category>算法</category>
         <category>二分法</category>
