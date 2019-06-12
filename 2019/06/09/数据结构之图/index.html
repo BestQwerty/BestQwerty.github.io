@@ -92,7 +92,8 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E6%9C%89%E5%90%91%E5%9B%BE1.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/%E7%BD%91%E5%9B%BE1.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/%E7%BD%91%E5%9B%BE2.png">
-<meta property="og:updated_time" content="2019-06-12T13:18:36.756Z">
+<meta property="og:image" content="/09/数据结构之图/">
+<meta property="og:updated_time" content="2019-06-12T13:38:45.793Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构之图">
 <meta name="twitter:description" content="🎈">
@@ -363,7 +364,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-12T21:18:36+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-12T21:38:45+08:00">
                 2019-06-12
               </time>
             
@@ -409,7 +410,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">740(字)</span> 
+					<span class="post-count">745(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -490,7 +491,9 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CreateALGraph</span><span class="params">(GraphAdjList *G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i, j, k;</span><br><span class="line">    EdgeNode *e;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"输入顶点数和边数：\n"</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d, %d"</span>, &amp;G-&gt;numVertexes, &amp;G-&gt;numEdges);     <span class="comment">// 输入顶点数和边数 </span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; G-&gt;numVertexes; i++)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(&amp;G-&gt;adjList[i].data);     <span class="comment">// 输入顶点信息。</span></span><br><span class="line">        G-&gt;adjList[i].firstEdge = <span class="literal">NULL</span>;     <span class="comment">// 将边表置为空表。</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(k = <span class="number">0</span>; k &lt; G-&gt;numVertexes; i++)&#123;    <span class="comment">// 建立边表</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"输入边(Vi,Vj)上的顶点序号：\n"</span>);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d, %d"</span>, &amp;i, &amp;j);    <span class="comment">// 输入边(Vi,Vj)上的顶点序号</span></span><br><span class="line">        e = (EdgeNode *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(EdgeNode));       <span class="comment">// 申请内存空间，创建边表结点</span></span><br><span class="line">        e-&gt;adjvex = j;      <span class="comment">// 邻接序号为j</span></span><br><span class="line">        e-&gt;next = G-&gt;adjList[i].firstEdge;  <span class="comment">// 将e指针指向当前顶点指向的结点</span></span><br><span class="line">        G-&gt;adjList[i].firstEdge = e;    <span class="comment">// 将当前顶点的指针指向e</span></span><br><span class="line">        e = (EdgeNode *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(EdgeNode));   <span class="comment">// 申请内存空间，创建边表结点</span></span><br><span class="line">        e-&gt;adjvex = i;  <span class="comment">// 邻接序号为i</span></span><br><span class="line">        e-&gt;next = G-&gt;adjList[j].firstEdge;  <span class="comment">// 将e指针指向当前顶点指向的结点</span></span><br><span class="line">        G-&gt;adjList[j].firstEdge = e;    <span class="comment">// 将当前顶点的指针指向e</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h1 id="有向图"><a href="#有向图" class="headerlink" title="有向图"></a>有向图</h1><p>- </p>
+<h1 id="有向图"><a href="#有向图" class="headerlink" title="有向图"></a>有向图</h1><ul>
+<li>邻接表结构<br><img src="/09/数据结构之图/" alt=""></li>
+</ul>
 
       
     </div>
