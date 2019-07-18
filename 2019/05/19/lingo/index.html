@@ -107,7 +107,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E6%B1%82%E8%A7%A3%E6%8A%A5%E5%91%8A1.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E7%81%B5%E6%95%8F%E5%BA%A6%E5%88%86%E6%9E%90.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E7%81%B5%E6%95%8F%E5%BA%A6%E5%88%86%E6%9E%902.png">
-<meta property="og:updated_time" content="2019-07-18T11:58:32.424Z">
+<meta property="og:updated_time" content="2019-07-18T12:11:30.567Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="lingo">
 <meta name="twitter:description" content="😋">
@@ -378,7 +378,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-07-18T19:58:32+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-07-18T20:11:30+08:00">
                 2019-07-18
               </time>
             
@@ -505,7 +505,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">集合段：用于定义数组型性变量SETS: ……ENDSETS</span><br><span class="line">数据段：用于变量赋值与数据传递DATA: ……ENDDATA</span><br><span class="line">目标与约束段：用于列出目标与约束唯一一个没有段的开始和结束标记</span><br><span class="line">计算段：用于数据初始整理计算CALC: ……ENDCALC</span><br><span class="line">初始段：用于变量赋初值迭代寻优INIT: ……ENDINIT</span><br><span class="line">子模型段：用于表达子模型进行调用@SUBMODEL mymodel:可执行语句（约束+目标）ENDSUBMODEL</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>注意：用<code>[]</code>表示该部分内容可选,<code>[]</code>内部可以是符号加其它</p>
-<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2></li>
+</li>
+<li>lingo按列赋值，跟matlab一样<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2></li>
 <li>集合的属性就是由元素构成的矩阵</li>
 <li><ul>
 <li>集合定义部分(<strong>类比c++</strong>)<ul>
@@ -561,6 +562,7 @@
 </li>
 <li><p>集部分以关键字<code>sets:</code>开始，以<code>endsets</code>结束。一个模型可以没有集部分，<strong>或有一个简单的集部分，或有多个集部分</strong>。一个集部分可以放置于模型的任何地方，但是一个集及其属性在模型约束中<strong>被引用之前必须定义了它们。</strong></p>
 </li>
+<li>当显式罗列成员时，必须为每个成员输入一个不同的名字，<strong>中间用空格或逗号搁开，允许混合使用</strong></li>
 <li>当隐式罗列成员时，不必罗列出每个集成员。可采用如下语法：<br><code>setname/member1..memberN/[: attribute_list];</code><ul>
 <li>当用隐式罗列方式时，只需在集成员列表中输入首成员和末成员，<strong>而中间的成员由LINGO产生。</strong></li>
 </ul>
