@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="dev快捷键 在工具-&amp;gt;快捷键设置 中可以设置自己习惯使用的快捷键，下面给出几种常用的快捷键，均为系统默认的。 【Ctrl+w】查看变量 【Ctrl+.】注释 【Ctrl+M】取消注释 按下Ctrl+Shift+A，会看到DEV帮你整理好了代码。 Ctrl + shift + 方向键上或下会选中光标当前所在的行，然后将这个行进行上移或下移，移动操作不会覆盖上下相邻的行，只是将位置进行对调。（">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-06T08:43:17.080Z">
+<meta property="og:updated_time" content="2019-07-17T16:10:45.972Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dev的秘密">
 <meta name="twitter:description" content="dev快捷键 在工具-&amp;gt;快捷键设置 中可以设置自己习惯使用的快捷键，下面给出几种常用的快捷键，均为系统默认的。 【Ctrl+w】查看变量 【Ctrl+.】注释 【Ctrl+M】取消注释 按下Ctrl+Shift+A，会看到DEV帮你整理好了代码。 Ctrl + shift + 方向键上或下会选中光标当前所在的行，然后将这个行进行上移或下移，移动操作不会覆盖上下相邻的行，只是将位置进行对调。（">
@@ -359,8 +359,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-06T16:43:17+08:00">
-                2019-04-06
+              <time title="更新于" itemprop="dateModified" datetime="2019-07-18T00:10:45+08:00">
+                2019-07-18
               </time>
             
           </span>
@@ -394,7 +394,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">578(字)</span> 
+					<span class="post-count">799(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -487,6 +487,21 @@
 <h1 id="debug与release"><a href="#debug与release" class="headerlink" title="debug与release"></a>debug与release</h1><ul>
 <li>Debug 通常称为调试版本，它包含调试信息，并且不作任何优化，便于程序员调试程序。Release 称为发布版本，它往往是进行了各种优化，使得程序在代码大小和运行速度上都是最优的，以便用户很好地使用。</li>
 </ul>
+<h1 id="使用Dev-C-查看vector数组中的变量值"><a href="#使用Dev-C-查看vector数组中的变量值" class="headerlink" title="使用Dev-C++查看vector数组中的变量值"></a>使用Dev-C++查看vector数组中的变量值</h1><ul>
+<li>可以通过调试的时候添加查看：比如说有一个长度为3的vector v，如果想要查看<code>v[0]</code>的值，就在添加查看中写 <code>*(&amp;v[0])</code><ul>
+<li>好像先要在dev编译器里面引入c++11标准，-std=c++11</li>
+</ul>
+</li>
+<li>如果想要查看整个数组的值，就可以写<code>*(&amp;v[0])@3</code><ul>
+<li>@后面的数字表示想要查看的长度，这里vector的长度是3所以可以写3就能看到所有的值</li>
+</ul>
+</li>
+</ul>
+<h1 id="通过鼠标查看变量"><a href="#通过鼠标查看变量" class="headerlink" title="通过鼠标查看变量"></a>通过鼠标查看变量</h1><ul>
+<li>把鼠标划过代码中想查看的变量就可以在左边调试一栏中查询该变量的当前值。</li>
+<li>点击菜单栏中的工具[T]，选择环境选项[v]</li>
+<li>找到【浏览Debug变量】，选中【查看鼠标指向的变量】，然后点击下方的确定即可。</li>
+</ul>
 
       
     </div>
@@ -546,8 +561,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/12/c-输入输出-1/" rel="prev" title="c++输入输出">
-                c++输入输出 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/13/merge函数/" rel="prev" title="merge函数">
+                merge函数 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -656,7 +671,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">97</span>
+                  <span class="site-state-item-count">95</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -718,7 +733,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#dev快捷键"><span class="nav-number">1.</span> <span class="nav-text">dev快捷键</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码补全功能-智能提示"><span class="nav-number">2.</span> <span class="nav-text">代码补全功能(智能提示)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#wall"><span class="nav-number">3.</span> <span class="nav-text">-wall</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#debug与release"><span class="nav-number">4.</span> <span class="nav-text">debug与release</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#dev快捷键"><span class="nav-number">1.</span> <span class="nav-text">dev快捷键</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码补全功能-智能提示"><span class="nav-number">2.</span> <span class="nav-text">代码补全功能(智能提示)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#wall"><span class="nav-number">3.</span> <span class="nav-text">-wall</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#debug与release"><span class="nav-number">4.</span> <span class="nav-text">debug与release</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用Dev-C-查看vector数组中的变量值"><span class="nav-number">5.</span> <span class="nav-text">使用Dev-C++查看vector数组中的变量值</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#通过鼠标查看变量"><span class="nav-number">6.</span> <span class="nav-text">通过鼠标查看变量</span></a></li></ol></div>
             
 
           </div>
@@ -760,7 +775,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">66.9k</span>
+    <span title="Site words total count">68.2k</span>
   
 </div>
 

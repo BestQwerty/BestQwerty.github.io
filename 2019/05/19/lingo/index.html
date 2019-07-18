@@ -107,7 +107,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E6%B1%82%E8%A7%A3%E6%8A%A5%E5%91%8A1.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E7%81%B5%E6%95%8F%E5%BA%A6%E5%88%86%E6%9E%90.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E7%81%B5%E6%95%8F%E5%BA%A6%E5%88%86%E6%9E%902.png">
-<meta property="og:updated_time" content="2019-05-21T09:15:08.528Z">
+<meta property="og:updated_time" content="2019-07-18T11:58:32.424Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="lingo">
 <meta name="twitter:description" content="😋">
@@ -378,8 +378,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-05-21T17:15:08+08:00">
-                2019-05-21
+              <time title="更新于" itemprop="dateModified" datetime="2019-07-18T19:58:32+08:00">
+                2019-07-18
               </time>
             
           </span>
@@ -413,7 +413,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">2k(字)</span> 
+					<span class="post-count">2.8k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -501,18 +501,19 @@
 <li>注: 初始化段只对非线性模型起作用,在线性模型中不起任何 作用.</li>
 </ul>
 </li>
-<li>LINGO中建立的优化模型可以由六个部分组成，或称为六“段”。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">集合段：用于定义数组型性变量SETS: ……ENDSETS</span><br><span class="line">数据段：用于变量赋值与数据传递DATA: ……ENDDATA</span><br><span class="line">目标与约束段：用于列出目标与约束唯一一个没有段的开始和结束标记</span><br><span class="line">计算段：用于数据初始整理计算CALC: ……ENDCALC</span><br><span class="line">初始段：用于变量赋初值迭代寻优INIT: ……ENDINIT</span><br><span class="line">子模型段：用于表达子模型进行调用@SUBMODEL mymodel:可执行语句（约束+目标）ENDSUBMODEL</span><br></pre></td></tr></table></figure>
+<li><p>LINGO中建立的优化模型可以由六个部分组成，或称为六“段”。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">集合段：用于定义数组型性变量SETS: ……ENDSETS</span><br><span class="line">数据段：用于变量赋值与数据传递DATA: ……ENDDATA</span><br><span class="line">目标与约束段：用于列出目标与约束唯一一个没有段的开始和结束标记</span><br><span class="line">计算段：用于数据初始整理计算CALC: ……ENDCALC</span><br><span class="line">初始段：用于变量赋初值迭代寻优INIT: ……ENDINIT</span><br><span class="line">子模型段：用于表达子模型进行调用@SUBMODEL mymodel:可执行语句（约束+目标）ENDSUBMODEL</span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><ul>
+<li><p>注意：用<code>[]</code>表示该部分内容可选,<code>[]</code>内部可以是符号加其它</p>
+<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2></li>
 <li>集合的属性就是由元素构成的矩阵</li>
 <li><ul>
-<li>集合定义部分<ul>
-<li>集合是一组相关对象构成的组合</li>
-<li>集合分为初始(基本\原始)集合和衍生(派生)集合</li>
+<li>集合定义部分(<strong>类比c++</strong>)<ul>
+<li>集合是<strong>一组相关对象构成的组合</strong></li>
+<li>集合分为<strong>初始(基本\原始)集合和衍生(派生)集合</strong></li>
 <li>集合在使用之前需要预先给出定义,</li>
 <li>初始集合的定义三要素:<ul>
-<li>集合的名称, 集合的元素, 集合的属性(可视为与该集合有关的变量或常量).</li>
+<li>集合的名称（结构体名称或者为c++类）, 集合的元素（定义的变量）, 集合的属性(c++类中或者结构体中的成员属性).</li>
 </ul>
 </li>
 </ul>
@@ -523,6 +524,18 @@
 <li>衍生集合的定义四要素: <ul>
 <li>集合的名称,  对应的初始集合, 集合的元素(可以省略), 集合的属性(可以没有).</li>
 <li>如果集合的元素省略不写, 则默认衍生集合的元素取它所对应初始集合的所有可能组合.</li>
+</ul>
+</li>
+<li>定义一个原始集，用下面的语法：<code>setname[/member_list/][:attribute_list];</code><ul>
+<li>在attribute_ list可以指定一个或多个集成员的属性，属性之间必须用逗号隔开。</li>
+<li>Member_list是集<strong>成员列表</strong></li>
+</ul>
+</li>
+<li><p>可以把集、集成员和集属性同C语言中的结构体作个类比。如下图：</p>
+<ul>
+<li>集  ←→  结构体/类名</li>
+<li>集成员  ←→  结构体的域/对象</li>
+<li>集属性  ←→  结构体属性/类的成员</li>
 </ul>
 </li>
 <li><p>衍生集合</p>
@@ -540,10 +553,29 @@
 </ul>
 </li>
 <li><code>demands/1..4/: D;</code> 声明一个长度为 4 的一维数组 demands，并定义一个这样的一维数组变量 D。</li>
-<li><code>links(supplys, demands): c, x;</code> 声明一个  的二维数组 links，并用它定义两个这样的<strong>二维数组变量 c, x.</strong><ul>
+<li><p><code>links(supplys, demands): c, x;</code> 声明一个  的二维数组 links，并用它定义两个这样的<strong>二维数组变量 c, x.</strong></p>
+<ul>
 <li>把两个一维数组放一起，起个名字叫 links，得到二维数组 links，第1个一维数组的维数就是二维数组的行数维度，第2个一维数组的维数就是二维数组的列数维度。</li>
 <li>注意：这里 links 不是Lingo关键字，<strong>可以随便起名</strong>。</li>
 </ul>
+</li>
+<li><p>集部分以关键字<code>sets:</code>开始，以<code>endsets</code>结束。一个模型可以没有集部分，<strong>或有一个简单的集部分，或有多个集部分</strong>。一个集部分可以放置于模型的任何地方，但是一个集及其属性在模型约束中<strong>被引用之前必须定义了它们。</strong></p>
+</li>
+<li>当隐式罗列成员时，不必罗列出每个集成员。可采用如下语法：<br><code>setname/member1..memberN/[: attribute_list];</code><ul>
+<li>当用隐式罗列方式时，只需在集成员列表中输入首成员和末成员，<strong>而中间的成员由LINGO产生。</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="派生集"><a href="#派生集" class="headerlink" title="派生集"></a>派生集</h3><ul>
+<li>c++中的派生函数</li>
+<li>可用下面的语法定义一个派生集：<code>setname(parent_set_list)[/member_list/][:attribute_list];</code><ul>
+<li>setname是集的名字。parent_set_list是已定义的集的列表，多个时必须用逗号隔开。如果没有指定成员列表，那么LINGO会自动创建父集成员的所有组合作为派生集的成员。<strong>派生集的父集既可以是原始集，也可以是其它的派生集。</strong>(类似c++中派生函数)</li>
+</ul>
+</li>
+<li><p>一个派生集的成员列表有两种方式生成：①显式罗列；②设置成员资格过滤器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">sets:</span><br><span class="line">  !学生集：性别属性sex，1表示男性，0表示女性；年龄属性age.  ;</span><br><span class="line">  students/John,Jill,Rose,Mike/:sex,age;</span><br><span class="line">  !男学生和女学生的联系集：友好程度属性friend，[0，1]之间的数。 ;</span><br><span class="line">  linkmf(students,students)|sex(&amp;1) #eq# 1 #and# sex(&amp;2) #eq# 0: friend;</span><br><span class="line">  !男学生和女学生的友好程度大于0.5的集;</span><br><span class="line">  linkmf2(linkmf) | friend(&amp;1,&amp;2) #ge# 0.5 : x;</span><br><span class="line">endsets</span><br><span class="line">data:</span><br><span class="line">  sex,age = 1 16</span><br><span class="line">            0 14</span><br><span class="line">            0 17</span><br><span class="line">            0 13;</span><br><span class="line">  friend = 0.3 0.5 0.6;</span><br><span class="line">enddata</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用竖线（|）来标记一个成员资格过滤器的开始。 <code>&amp;1</code>可看作派生集<strong>的第1个原始父集的索引</strong>，它取遍该原始父集的所有成员；<code>&amp;2</code>可看作派生集的第2 个原始父集的索引，它取遍该原始父集的所有成员；<code>&amp;3</code>，<code>&amp;4</code>，……，以此类推。注意如果派生集B的父集是另外的派生集A，那么上面所说的原始父集是集A向前回溯到最终的原始集，其顺序保持不变，并且派生集A的过滤器对派生集B仍然有效。因此，派生集的索引个数是最终原始父集的个数，<strong>索引的取值是从原始父集到当前派生集所作限制的总和。</strong></p>
 </li>
 </ul>
 <h2 id="数据段补充"><a href="#数据段补充" class="headerlink" title="数据段补充"></a>数据段补充</h2><p><img src="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E6%95%B0%E6%8D%AE%E6%AE%B51.png" alt=""><br><img src="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E6%95%B0%E6%8D%AE%E6%AE%B52.png" alt=""><br><img src="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E6%95%B0%E6%8D%AE%E6%AE%B53.png" alt=""></p>
@@ -575,6 +607,9 @@
 </li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt=""><br><img src="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E8%BF%90%E7%AE%97%E7%AC%A62.png" alt=""></p>
+<ul>
+<li>用竖线（|）来标记一个<strong>成员资格过滤器的开始</strong></li>
+</ul>
 <h1 id="窗口"><a href="#窗口" class="headerlink" title="窗口"></a>窗口</h1><p><img src="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E7%AA%97%E5%8F%A31.png" alt=""><br><img src="https://pic2.zhimg.com/v2-33548066055be68506686830be26f431.jpg" alt=""></p>
 <h2 id="状态窗口"><a href="#状态窗口" class="headerlink" title="状态窗口"></a>状态窗口</h2><ul>
 <li>状态窗口(Solver Status)的详细的介绍如下：</li>
@@ -775,7 +810,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">97</span>
+                  <span class="site-state-item-count">95</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -837,7 +872,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#lingo"><span class="nav-number">1.</span> <span class="nav-text">lingo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#集合"><span class="nav-number">1.1.</span> <span class="nav-text">集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据段补充"><span class="nav-number">1.2.</span> <span class="nav-text">数据段补充</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目标函数与目标条件"><span class="nav-number">1.3.</span> <span class="nav-text">目标函数与目标条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-number">1.4.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运算符"><span class="nav-number">1.5.</span> <span class="nav-text">运算符</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#窗口"><span class="nav-number">2.</span> <span class="nav-text">窗口</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#状态窗口"><span class="nav-number">2.1.</span> <span class="nav-text">状态窗口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报告（Solve-Report）窗口"><span class="nav-number">2.2.</span> <span class="nav-text">报告（Solve Report）窗口</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lingo灵敏度分析"><span class="nav-number">3.</span> <span class="nav-text">lingo灵敏度分析</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#lingo"><span class="nav-number">1.</span> <span class="nav-text">lingo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#集合"><span class="nav-number">1.1.</span> <span class="nav-text">集合</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#派生集"><span class="nav-number">1.1.1.</span> <span class="nav-text">派生集</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据段补充"><span class="nav-number">1.2.</span> <span class="nav-text">数据段补充</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目标函数与目标条件"><span class="nav-number">1.3.</span> <span class="nav-text">目标函数与目标条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-number">1.4.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运算符"><span class="nav-number">1.5.</span> <span class="nav-text">运算符</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#窗口"><span class="nav-number">2.</span> <span class="nav-text">窗口</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#状态窗口"><span class="nav-number">2.1.</span> <span class="nav-text">状态窗口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报告（Solve-Report）窗口"><span class="nav-number">2.2.</span> <span class="nav-text">报告（Solve Report）窗口</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lingo灵敏度分析"><span class="nav-number">3.</span> <span class="nav-text">lingo灵敏度分析</span></a></li></ol></div>
             
 
           </div>
@@ -879,7 +914,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">66.9k</span>
+    <span title="Site words total count">68.2k</span>
   
 </div>
 

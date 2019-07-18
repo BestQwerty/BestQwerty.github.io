@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="续行符 宏定义只能在一行内完成 字符串多行书写有两种规则：在字符串换行处加一个反斜杠\，下一行前不能有空格或者Tab键；使用双引号。 代码中的“\”是 C 语言中的续行符语法，表示续行符的下一行与续行符所在的代码是同一行,因为宏定义关键字“#define”只是对当前行有效，所以使用续行符来连接 应用续行符的时候要注意，在“\”后面不能有任何字符(包括注释、空格)，只能直接回车。在要强制换行的地方输">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-12T10:41:45.187Z">
+<meta property="og:updated_time" content="2019-06-29T05:50:05.269Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="输入输出">
 <meta name="twitter:description" content="续行符 宏定义只能在一行内完成 字符串多行书写有两种规则：在字符串换行处加一个反斜杠\，下一行前不能有空格或者Tab键；使用双引号。 代码中的“\”是 C 语言中的续行符语法，表示续行符的下一行与续行符所在的代码是同一行,因为宏定义关键字“#define”只是对当前行有效，所以使用续行符来连接 应用续行符的时候要注意，在“\”后面不能有任何字符(包括注释、空格)，只能直接回车。在要强制换行的地方输">
@@ -359,8 +359,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-12T18:41:45+08:00">
-                2019-03-12
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-29T13:50:05+08:00">
+                2019-06-29
               </time>
             
           </span>
@@ -394,7 +394,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">1.4k(字)</span> 
+					<span class="post-count">2k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -477,13 +477,14 @@
 <pre><code>如果用户输入&quot;3 4&quot;，可以正确输入，返回2（正确输入了两个变量）；
 如果用户输入&quot;3,4&quot;，可以正确输入a，无法输入b，返回1（正确输入了一个变量）。 
 </code></pre></li>
-<li><p><span id="inline-blue"> 0，表示用户的输入不匹配，无法正确输入任何值。如上例，用户如果输入”,3 4”，返回0。</span></p>
+<li><p><span id="inline-blue"> 0，表示用户的输入不匹配，无法正确输入任何值。如上例，用户如果输入”,3 4”，返回0。如果它没有读取任何项目（当它期望一个数字而你键入的却是了一个非数字的字符或者字符串就会发生这种情况），scanf()返回值0。当它检测到“文件结尾”（end of file）时，它就返回EOF(EOF是文件stdio.h中定义的特殊值-1) </span></p>
 </li>
-<li><p>EOF，这是在stdio.h里面定义的常量（通常值为-1），表示输入流已经结束(scanf遇到格式不对返回EOF或结束时)(EOF == end of file)</p>
+<li><p>EOF，这是在stdio.h里面定义的常量（<strong>通常值为-1</strong>），表示输入流已经结束(scanf遇到格式不对返回EOF或结束时)(EOF == end of file)</p>
 </li>
-</ul>
-<ul>
-<li>printf的返回值是输出的字符数，例如，<code>printf(&quot;1234&quot;)</code>的返回值是4，而<code>printf(&quot;1234\n&quot;)</code>的返回值是5。不知道有木有这样写的习惯<code>while (~scanf(&quot;....&quot;))</code>。这里出现了~这个符号，这个是位运算取反的意思。因为<code>~(n)=-(n+1)</code>。所以这里scanf的返回值为-1时~(-1)=0才退出循环。这就是这样写的意思。</li>
+<li><p>~是按位取反,scanf的返回值是输入值的个数,如果没有输入值就是返回-1<br>,-1按位取反结果是0,while(~scanf(“%d”, &amp;n))就是当没有输入的时候退出循环</p>
+</li>
+<li><p>printf的返回值是输出的字符数，例如，<code>printf(&quot;1234&quot;)</code>的返回值是4，而<code>printf(&quot;1234\n&quot;)</code>的返回值是5。不知道有木有这样写的习惯<code>while (~scanf(&quot;....&quot;))</code>。这里出现了~这个符号，这个是位运算取反的意思。因为<code>~(n)=-(n+1)</code>。所以这里scanf的返回值为-1时~(-1)=0才退出循环。这就是这样写的意思。</p>
+</li>
 </ul>
 <h1 id="c-输入输出"><a href="#c-输入输出" class="headerlink" title="c++输入输出"></a>c++输入输出</h1><ul>
 <li>cout在输出很大的数时,会用科学计数法输出,若不想如此输出，可将原来输出数double类型与float类型改为int类型，或者如下.</li>
@@ -491,8 +492,43 @@
 <li><code>printf(&quot;%.0lf&quot;, a);</code></li>
 <li>当数字过大时可能数字有变化或丢失(自测)</li>
 <li>fixed后面还可以加格式控制符控制位数，setprecision(n)——设置输出浮点数的精度，配合fixed设定，指的是小数位数，设置setprecision(0)即指输出不带小数位的int值。</li>
-<li>还有其它方法！！！</li>
+<li><p>还有其它方法！！！</p>
+</li>
+<li><p><code>&gt;&gt;</code>运算符返回左边的流对象，也就是说 cin&gt;&gt;val 返回 cin，于是 while(cin&gt;&gt;val) 就等于是 while(cin)</p>
+</li>
 </ul>
+<h1 id="getline函数"><a href="#getline函数" class="headerlink" title="getline函数"></a>getline函数</h1><div class="note primary"><p>C++中有两个getline函数</p></div>
+
+<ul>
+<li><span id="inline-toc">1.</span>一个是在string头文件中，定义的是一个全局的函数,函数声明是<ul>
+<li><code>istream&amp; getline ( istream &amp;is , string &amp;str , char delim );</code><br><code>istream&amp; getline ( istream&amp; is, string&amp; str);</code><ul>
+<li>is 进行读入操作的输入流</li>
+<li>str 存储读入的内容</li>
+<li>delim 终结符</li>
+</ul>
+</li>
+<li>对于第一个函数delim是可以由用户自己定义的终结符；对于第二个函数delim默认为 ‘\n’（换行符）。</li>
+<li>在遇到终结符delim后，delim会被丢弃，不存入str中。在下次读入操作时，将在delim的下个字符开始读入。</li>
+<li>这个getline是个全局函数，而不是istream/iostream的成员函数getline。</li>
+</ul>
+</li>
+<li><span id="inline-toc">2.</span> 另一个则是istream的成员函数，函数声明是<ul>
+<li><code>istream&amp; getline (char* s, streamsize n )</code></li>
+<li><code>istream&amp; getline (char* s, streamsize n, char delim );</code></li>
+<li>注意这个getline是将读取的字符串存储在char数组中而不可以将该参数声明为string类型，因为C++编译器无法执行此默认转换。！</li>
+<li>输入过程中达到n个数或者提前遇到delim，或者文件结束，输入结束</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><div class="note default"><p>下面看看就行，待续</p></div>
+
+
+</li>
+</ul>
+<p>1、getline读取换行符 并且将换行符替换成’\0’，并且会丢弃换行符，对于getline函数，在函数遇到和结束定界符相等的字符时函数结束，同时函数抽出定界符，此种情况下该定界符既不被放回输入流，也不被放入要生成的字符串</p>
+<p>2、cin会把换行符留在输入队列中</p>
+<p>3、cin.getline读取换行符并替换成’\0’，并且不会主动丢弃换行符，会把它留在输入队列中</p>
 <h1 id="c-cout"><a href="#c-cout" class="headerlink" title="c++cout"></a>c++cout</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">cout</span>  &lt;&lt; <span class="string">"a  -  b   = "</span> &lt;&lt; stringSubString(a, b) &lt;&lt; <span class="built_in">endl</span></span><br><span class="line">           &lt;&lt; <span class="string">"a  *  b   = "</span> &lt;&lt; stringMultString(a, b) &lt;&lt; <span class="built_in">endl</span></span><br><span class="line">           &lt;&lt; <span class="string">"a  /  b   = "</span> &lt;&lt; stringDivString(a, b) &lt;&lt; <span class="built_in">endl</span></span><br><span class="line">           &lt;&lt; <span class="string">"a  %  b   = "</span> &lt;&lt; stringModString(a, b) &lt;&lt; <span class="built_in">endl</span></span><br><span class="line">           &lt;&lt; <span class="string">"gcd(a, b) = "</span> &lt;&lt; stringGcd(a, b) &lt;&lt; <span class="built_in">endl</span></span><br><span class="line">           &lt;&lt; <span class="string">"lcm(a, b) = "</span> &lt;&lt; stringLcm(a, b) &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
       
     </div>
@@ -662,7 +698,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">97</span>
+                  <span class="site-state-item-count">95</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -724,7 +760,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#续行符"><span class="nav-number">1.</span> <span class="nav-text">续行符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#输入输出"><span class="nav-number">2.</span> <span class="nav-text">输入输出</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#输入输出返回值"><span class="nav-number">3.</span> <span class="nav-text">输入输出返回值</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#c-输入输出"><span class="nav-number">4.</span> <span class="nav-text">c++输入输出</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#c-cout"><span class="nav-number">5.</span> <span class="nav-text">c++cout</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#续行符"><span class="nav-number">1.</span> <span class="nav-text">续行符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#输入输出"><span class="nav-number">2.</span> <span class="nav-text">输入输出</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#输入输出返回值"><span class="nav-number">3.</span> <span class="nav-text">输入输出返回值</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#c-输入输出"><span class="nav-number">4.</span> <span class="nav-text">c++输入输出</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#getline函数"><span class="nav-number">5.</span> <span class="nav-text">getline函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#c-cout"><span class="nav-number">6.</span> <span class="nav-text">c++cout</span></a></li></ol></div>
             
 
           </div>
@@ -766,7 +802,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">66.9k</span>
+    <span title="Site words total count">68.2k</span>
   
 </div>
 
