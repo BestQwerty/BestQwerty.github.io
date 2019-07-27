@@ -91,6 +91,8 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://pic2.zhimg.com/v2-af4f24f8f8922c6e8214ead6e68b253d_b.jpg">
 <meta property="og:image" content="https://pic4.zhimg.com/v2-f88bb50040359fcb5c1b731252799dc3.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E6%95%B0%E6%8D%AE%E6%AE%B54.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E9%9B%86%E5%90%88%E9%83%A8%E5%88%86.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E6%95%B0%E6%8D%AE%E6%AE%B51.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E6%95%B0%E6%8D%AE%E6%AE%B52.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E6%95%B0%E6%8D%AE%E6%AE%B53.png">
@@ -107,7 +109,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E6%B1%82%E8%A7%A3%E6%8A%A5%E5%91%8A1.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E7%81%B5%E6%95%8F%E5%BA%A6%E5%88%86%E6%9E%90.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E7%81%B5%E6%95%8F%E5%BA%A6%E5%88%86%E6%9E%902.png">
-<meta property="og:updated_time" content="2019-07-26T15:58:20.192Z">
+<meta property="og:updated_time" content="2019-07-27T14:34:15.930Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="lingo">
 <meta name="twitter:description" content="😋">
@@ -378,8 +380,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-07-26T23:58:20+08:00">
-                2019-07-26
+              <time title="更新于" itemprop="dateModified" datetime="2019-07-27T22:34:15+08:00">
+                2019-07-27
               </time>
             
           </span>
@@ -413,7 +415,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">2.9k(字)</span> 
+					<span class="post-count">3.3k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -496,7 +498,7 @@
 <li><p>集合段：sets: …… endsets ——用来声明和定义数组变量；</p>
 </li>
 <li>数据段：data: …… enddata ——用数据对变量赋值；<ul>
-<li><strong>lingo中数据部分不能使用分式，例如数据部分不能使用1/3</strong></li>
+<li><strong>lingo中数据部分不能使用分式，例如数据部分不能使用1/3</strong><br><img src="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E6%95%B0%E6%8D%AE%E6%AE%B54.png" alt=""></li>
 </ul>
 </li>
 <li>初始化段: 在数据段给变量赋值以后,该变量在整个程序运行阶段都是 常量,而不是决策变量. 如果想对决策变量赋一定初始值,希望该初始值作为寻找最 优解的起始值(变量本身不是常量),可以在程序中增加初始 段<ul>
@@ -510,25 +512,40 @@
 <li><p>注意：用<code>[]</code>表示该部分内容可选,<code>[]</code>内部可以是符号加其它</p>
 </li>
 <li>lingo中<strong>矩阵数据是按行存储的</strong>，matlab中数据是按列存储<ul>
-<li>lingo是按列赋值</li>
+<li>lingo<strong>集合是按列赋值</strong></li>
 </ul>
 </li>
 </ul>
-<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><ul>
-<li>集合的属性就是由元素构成的矩阵</li>
-<li><ul>
+<h2 id="实时数据处理"><a href="#实时数据处理" class="headerlink" title="实时数据处理"></a>实时数据处理</h2><ul>
+<li><p>在某些情况，对于模型中的某些数据并不是定值。譬如模型中有一个通货膨胀率的参数，我们想在2%至6%范围内，对不同的值求解模型，来观察模型的结果对通货膨胀的依赖有多么敏感。我们把这种情况称为实时数据处理（what if analysis）。<strong>LINGO有一个特征可方便地做到这件事。<br>在本该放数的地方输入一个问号（?）。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data:</span><br><span class="line">  interest_rate,inflation_rate = .085  ?;</span><br><span class="line">enddata</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>每一次求解模型时，<strong>LINGO都会提示为参数inflation_rate输入一个值。在WINDOWS操作系统下</strong>，将会接收到一个对话框.直接输入一个值再点击OK按钮，LINGO就会把输入的值指定给inflation_rate，然后继续求解模型。</p>
+<ul>
+<li>除了参数之外，也可以实时输入集的属性值(定义的变量或常量)，但不允许实时输入集成员名(集合成员列表)。</li>
+</ul>
+</li>
+</ul>
+<h2 id="数据部分的未知数值"><a href="#数据部分的未知数值" class="headerlink" title="数据部分的未知数值"></a>数据部分的未知数值</h2><ul>
+<li><p>有时只想为一个集的部分成员的某个属性指定值，而让<strong>其余成员的该属性保持未知</strong>，以便让LINGO去求出它们的最优值。在数据声明中<strong>输入两个相连的逗号</strong>表示该位置<strong>对应的集成员的属性值未知</strong>。两个逗号间可以有空格。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sets:</span><br><span class="line">  years/1..5/: capacity;</span><br><span class="line">endsets</span><br><span class="line">data:</span><br><span class="line">  capacity = ,34,20,,;</span><br><span class="line">enddata</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>属性capacity的第2个和第3个值分别为34和20，其余的未知。</p>
+</li>
+</ul>
+<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p><img src="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/lingo%E9%9B%86%E5%90%88%E9%83%A8%E5%88%86.png" alt=""></p>
+<ul>
 <li>集合定义部分(<strong>类比c++</strong>)<ul>
 <li>集合是<strong>一组相关对象构成的组合</strong></li>
 <li>集合分为<strong>初始(基本\原始)集合和衍生(派生)集合</strong></li>
 <li>集合在使用之前需要预先给出定义,</li>
 <li>初始集合的定义三要素:<ul>
-<li>集合的名称（结构体名称或者为c++类）, 集合的元素（定义的变量）, 集合的属性(c++类中或者结构体中的成员属性).</li>
+<li>集合的名称（<strong>结构体名称或者为c++类</strong>）, 集合的元素（也叫做成员列表，相当于c++类中的<strong>成员元素或者结构体中的成员</strong>）, 集合的属性(<strong>定义的变量或常量</strong>).</li>
 </ul>
 </li>
 </ul>
 </li>
-</ul>
-</li>
+<li>lingo中集合的属性不要按之前想法理解。。。。</li>
 <li>初始集合的定义格式: 集合的名称/集合的元素/:集合的属性;</li>
 <li>衍生集合的定义四要素: <ul>
 <li>集合的名称,  对应的初始集合, 集合的元素(可以省略), 集合的属性(可以没有).</li>
@@ -543,12 +560,12 @@
 <li><p>可以把集、集成员和集属性同C语言中的结构体作个类比。如下图：</p>
 <ul>
 <li>集  ←→  结构体/类名</li>
-<li>集成员  ←→  结构体的域/对象</li>
-<li>集属性  ←→  结构体属性/类的成员</li>
+<li>集成员  ←→  结构体的成员/类的成员</li>
+<li>集属性  ←→  定义的结构体/对象</li>
 </ul>
 </li>
 <li><p>衍生集合</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">links(wh, wa):c;  <span class="comment">//此时的衍生集合c相当于二维矩阵(数组)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">links(wh, wa):c;  </span><br><span class="line"><span class="comment">//此时的衍生集合c相当于二维矩阵(数组)，c++派生函数</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>数据初始化部分以“DATA:” 开始, 以ENDDATA结束，</p>
 <ul>
@@ -882,7 +899,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#lingo"><span class="nav-number">1.</span> <span class="nav-text">lingo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#集合"><span class="nav-number">1.1.</span> <span class="nav-text">集合</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#派生集"><span class="nav-number">1.1.1.</span> <span class="nav-text">派生集</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据段补充"><span class="nav-number">1.2.</span> <span class="nav-text">数据段补充</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目标函数与目标条件"><span class="nav-number">1.3.</span> <span class="nav-text">目标函数与目标条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-number">1.4.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运算符"><span class="nav-number">1.5.</span> <span class="nav-text">运算符</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#窗口"><span class="nav-number">2.</span> <span class="nav-text">窗口</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#状态窗口"><span class="nav-number">2.1.</span> <span class="nav-text">状态窗口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报告（Solve-Report）窗口"><span class="nav-number">2.2.</span> <span class="nav-text">报告（Solve Report）窗口</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lingo灵敏度分析"><span class="nav-number">3.</span> <span class="nav-text">lingo灵敏度分析</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#lingo"><span class="nav-number">1.</span> <span class="nav-text">lingo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#实时数据处理"><span class="nav-number">1.1.</span> <span class="nav-text">实时数据处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据部分的未知数值"><span class="nav-number">1.2.</span> <span class="nav-text">数据部分的未知数值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合"><span class="nav-number">1.3.</span> <span class="nav-text">集合</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#派生集"><span class="nav-number">1.3.1.</span> <span class="nav-text">派生集</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据段补充"><span class="nav-number">1.4.</span> <span class="nav-text">数据段补充</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目标函数与目标条件"><span class="nav-number">1.5.</span> <span class="nav-text">目标函数与目标条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-number">1.6.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运算符"><span class="nav-number">1.7.</span> <span class="nav-text">运算符</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#窗口"><span class="nav-number">2.</span> <span class="nav-text">窗口</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#状态窗口"><span class="nav-number">2.1.</span> <span class="nav-text">状态窗口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报告（Solve-Report）窗口"><span class="nav-number">2.2.</span> <span class="nav-text">报告（Solve Report）窗口</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lingo灵敏度分析"><span class="nav-number">3.</span> <span class="nav-text">lingo灵敏度分析</span></a></li></ol></div>
             
 
           </div>
@@ -924,7 +941,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">68.4k</span>
+    <span title="Site words total count">68.8k</span>
   
 </div>
 
