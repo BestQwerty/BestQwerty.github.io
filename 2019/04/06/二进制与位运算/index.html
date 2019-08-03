@@ -90,7 +90,7 @@
 <meta property="og:description" content="位运算与乘除法的换算 说明：（1）位运算符中除 ~ 外，均为二目运算符，即要求出侧各有一个运算量。（2）运算早只能是整型或字符型的数据，不能为实型数据。 使用位移运算可以提高因乘除运算带来的效率的问题，它的缺点是存在精度损失且不直观。 使用移位运算来避免乘法运算是一种常用技巧，不过乘数必须都是正整数，而且必须至少有一个是 2 的 n 次方，例如：2，4，8，16，32……移位运算的特点是速度快，而">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://raw.githubusercontent.com/ctguljj/ctguljj.github.io/master/images/异或运算.png">
-<meta property="og:updated_time" content="2019-04-06T13:20:12.736Z">
+<meta property="og:updated_time" content="2019-07-31T03:59:07.583Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二进制与位运算">
 <meta name="twitter:description" content="位运算与乘除法的换算 说明：（1）位运算符中除 ~ 外，均为二目运算符，即要求出侧各有一个运算量。（2）运算早只能是整型或字符型的数据，不能为实型数据。 使用位移运算可以提高因乘除运算带来的效率的问题，它的缺点是存在精度损失且不直观。 使用移位运算来避免乘法运算是一种常用技巧，不过乘数必须都是正整数，而且必须至少有一个是 2 的 n 次方，例如：2，4，8，16，32……移位运算的特点是速度快，而">
@@ -361,8 +361,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-06T21:20:12+08:00">
-                2019-04-06
+              <time title="更新于" itemprop="dateModified" datetime="2019-07-31T11:59:07+08:00">
+                2019-07-31
               </time>
             
           </span>
@@ -487,7 +487,13 @@
 <li>举个栗子：<code>10101(21) &amp; 11100(28) = 10100{20}</code></li>
 </ul>
 </li>
-<li>如果参加 &amp; 是负数（<code>-3 &amp; -5</code>），则以补码形式表示为二进制数。然后按位进行 与 运算。<h2 id="“-”-运算"><a href="#“-”-运算" class="headerlink" title="“|” 运算"></a>“|” 运算</h2></li>
+<li><p>如果参加 &amp; 是负数（<code>-3 &amp; -5</code>），则以补码形式表示为二进制数。然后按位进行 与 运算。</p>
+</li>
+<li><p><code>x &amp; (x - 1)</code><strong>用于消去x二进制最后一位的1</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">1100</span>            <span class="number">00</span>|<span class="number">0100</span>|<span class="number">1100</span></span><br><span class="line">x - <span class="number">1</span> = <span class="number">1011</span>        <span class="number">00</span>|<span class="number">0100</span>|<span class="number">1011</span></span><br><span class="line">x &amp; (x - <span class="number">1</span>) = <span class="number">1000</span>  <span class="number">00</span>|<span class="number">0100</span>|<span class="number">1000</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="“-”-运算"><a href="#“-”-运算" class="headerlink" title="“|” 运算"></a>“|” 运算</h2><ul>
 <li>即 “or” 运算，也是一种逻辑运算符，对于二进制运算来说，“|” 运算的意义是对于两个二进制数的每一位，除了00得0，其它都是1<ul>
 <li>举个栗子：<code>10101(21) | 11100(28) = 11101(29)</code></li>
 </ul>
@@ -808,7 +814,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">68.8k</span>
+    <span title="Site words total count">68.9k</span>
   
 </div>
 
