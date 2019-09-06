@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="常用函数 max, min, fill, memset, sort, swap  字符串函数 字符串比较函数strcmp因为原理是两个字符串一个个比较，所以可以比较字符是否相同！！！！！ 一般形式：strcmp(字符串1，字符串2) 返回值： 当s1&amp;lt;s2时，返回值&amp;lt;0 当s1=s2时，返回值=0 当s1&amp;gt;s2时，返回值&amp;gt;0     如果把序号按字符串存储，则会可以通过st">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-17T16:14:07.734Z">
+<meta property="og:updated_time" content="2019-09-06T13:54:04.073Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="c与c++常用函数">
 <meta name="twitter:description" content="常用函数 max, min, fill, memset, sort, swap  字符串函数 字符串比较函数strcmp因为原理是两个字符串一个个比较，所以可以比较字符是否相同！！！！！ 一般形式：strcmp(字符串1，字符串2) 返回值： 当s1&amp;lt;s2时，返回值&amp;lt;0 当s1=s2时，返回值=0 当s1&amp;gt;s2时，返回值&amp;gt;0     如果把序号按字符串存储，则会可以通过st">
@@ -359,8 +359,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-07-18T00:14:07+08:00">
-                2019-07-18
+              <time title="更新于" itemprop="dateModified" datetime="2019-09-06T21:54:04+08:00">
+                2019-09-06
               </time>
             
           </span>
@@ -405,7 +405,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">2.4k(字)</span> 
+					<span class="post-count">2.5k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -569,10 +569,10 @@
 <h2 id="atof函数"><a href="#atof函数" class="headerlink" title="atof函数"></a>atof函数</h2><ul>
 <li>定义函数 <code>double atof(const char *nptr);</code></li>
 <li>函数说明 atof()会扫描参数nptr字符串，跳过前面的空格字符，直到遇上数字或正负符号才开始做转换，而再遇到非数字或字符串结束时<code>(&#39;\0&#39;)</code>才结束转换，并将结果返回。参数nptr字符串可包含正负号、小数点或E(e)来表示指数部分，如123.456或123e-2。</li>
-<li>返回值 返回转换后的浮点型数。</li>
-<li>范例：</li>
+<li>返回值:函数返回转换后的双精度浮点数，如果没有执行有效的转换，则返回零（0.0）。</li>
+<li>范例：<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span>*a=<span class="string">"-100.23"</span>;</span><br><span class="line">	<span class="keyword">char</span>*b=<span class="string">"200e-2"</span>;</span><br><span class="line">	<span class="keyword">double</span> c;</span><br><span class="line">	c=atof(a)+atof(b);</span><br><span class="line">	<span class="built_in">printf</span>(“c=%<span class="number">.2</span>lf\n”,c);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span>*a=<span class="string">"-100.23"</span>;</span><br><span class="line">	<span class="keyword">char</span>*b=<span class="string">"200e-2"</span>;</span><br><span class="line">	doublec;</span><br><span class="line">	c=atof(a)+atof(b);</span><br><span class="line">	<span class="built_in">printf</span>(“c=%<span class="number">.2</span>lf\n”,c);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -845,7 +845,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">69k</span>
+    <span title="Site words total count">69.6k</span>
   
 </div>
 

@@ -411,9 +411,9 @@
     <link href="BestQwerty.github.io/2019/04/29/hexo%E5%8D%9A%E5%AE%A2%E4%B8%8EGitHub%E8%BF%9B%E9%98%B6%E6%93%8D%E4%BD%9C/"/>
     <id>BestQwerty.github.io/2019/04/29/hexo博客与GitHub进阶操作/</id>
     <published>2019-04-29T13:41:49.000Z</published>
-    <updated>2019-08-11T08:11:15.519Z</updated>
+    <updated>2019-08-11T08:13:35.362Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="GitHub与hexo"><a href="#GitHub与hexo" class="headerlink" title="GitHub与hexo"></a>GitHub与hexo</h1><ul><li>GitHub改名后使用<code>hexo clean</code>命令清除之前的网页信息(改名后一些设置与图片丢失),再重新上传</li><li>每次优化博客，新增了一些功能布局什么的，可以先用<code>hexo clean</code>确保可以立马实现</li><li>GitHub上commit可以查看历史提交记录，修改记录与相应时间的仓库原状，可以clone/download历史版本</li><li><code>$ hexo clean</code><ul><li>清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</li></ul></li><li>主题文件中avatar更改头像，favicon更改网页头像</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="GitHub与hexo"><a href="#GitHub与hexo" class="headerlink" title="GitHub与hexo"></a>GitHub与hexo</h1><ul><li>GitHub改名后使用<code>hexo clean</code>命令清除之前的网页信息(改名后一些设置与图片丢失),再重新上传</li><li>每次优化博客，新增了一些功能布局什么的，可以先用<code>hexo clean</code>确保可以立马实现(不然博客可能一时半会跟原来一样)</li><li>GitHub上commit可以查看历史提交记录，修改记录与相应时间的仓库原状，可以clone/download历史版本</li><li><code>$ hexo clean</code><ul><li>清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</li></ul></li><li>主题文件中avatar更改头像，favicon更改网页头像</li></ul><h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ul><li>swig与js</li></ul>]]></content>
     
     <summary type="html">
     
