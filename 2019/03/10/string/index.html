@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="string12345678string a, b;.....a = a + b;//将a+b前后连接，对于string来说有些符号重载定义// ‘ + ’暂且理解为前后连接，所以前后不同，结果不同//string作为容器，可以和字符串、字符相加，也可以和string相加//连接的话 s += a; 这个是把往后面连接，s = a + s;这是是把字符串a连接到s的前面//具体原因不知道//待续">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-07T11:25:30.573Z">
+<meta property="og:updated_time" content="2019-09-07T11:39:42.581Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="string">
 <meta name="twitter:description" content="string12345678string a, b;.....a = a + b;//将a+b前后连接，对于string来说有些符号重载定义// ‘ + ’暂且理解为前后连接，所以前后不同，结果不同//string作为容器，可以和字符串、字符相加，也可以和string相加//连接的话 s += a; 这个是把往后面连接，s = a + s;这是是把字符串a连接到s的前面//具体原因不知道//待续">
@@ -359,7 +359,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-09-07T19:25:30+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-09-07T19:39:42+08:00">
                 2019-09-07
               </time>
             
@@ -405,7 +405,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">1.4k(字)</span> 
+					<span class="post-count">1.8k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -465,6 +465,7 @@
       
         <h1 id="string"><a href="#string" class="headerlink" title="string"></a>string</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> a, b;</span><br><span class="line">.....</span><br><span class="line">a = a + b;<span class="comment">//将a+b前后连接，对于string来说有些符号重载定义</span></span><br><span class="line"><span class="comment">// ‘ + ’暂且理解为前后连接，所以前后不同，结果不同</span></span><br><span class="line"><span class="comment">//string作为容器，可以和字符串、字符相加，也可以和string相加</span></span><br><span class="line"><span class="comment">//连接的话 s += a; 这个是把往后面连接，s = a + s;这是是把字符串a连接到s的前面</span></span><br><span class="line"><span class="comment">//具体原因不知道</span></span><br><span class="line"><span class="comment">//待续</span></span><br></pre></td></tr></table></figure>
 <ul>
+<li>string是类，与c中字符串不一样</li>
 <li>string 的末尾没有<code>&#39;\0&#39;</code>字符，所以<code>length()</code>返回的是字符串的真实长度，而不是长度 +1。</li>
 <li>string 字符串的起始下标仍是从 0 开始。</li>
 <li>有了 string 类，我们可以使用+或+=运算符来直接拼接字符串，非常方便，再也不需要使用C语言中的 strcat()、strcpy()、malloc() 等函数来拼接字符串了，再也不用担心空间不够会溢出了。<ul>
@@ -475,15 +476,20 @@
 <li>std::string 不可以与null相比较，可以与” “比较，判空<code>a.empty()</code>函数，<code>a.length() == 0</code></li>
 </ul>
 </li>
-<li>使用C语言中的 <code>fopen()</code> 函数打开文件，必须将 string 字符串转换为C风格的字符串。</li>
+<li>使用C语言中的 <code>fopen()</code> 函数打开文件，必须将 string 字符串转换为C风格的字符串。<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><h3 id="用scanf"><a href="#用scanf" class="headerlink" title="用scanf"></a>用scanf</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> a;</span><br><span class="line">a.resize(<span class="number">100</span>); <span class="comment">//需要预先分配空间</span></span><br><span class="line"><span class="comment">//scanf是标准输入流，没有缓存区，需要预先分配空间，而cin是输入流，它使用了缓冲区。如果要使用scanf读入字符串，那就一定要事先为它申请足够的内存空间</span></span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%s"</span>, &amp;a[<span class="number">0</span>]);</span><br><span class="line"><span class="comment">// 输入数据中，超出指定个数的部分会被自动裁去。</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%s\n"</span>, a.c_str());</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 <h2 id="标题没想好"><a href="#标题没想好" class="headerlink" title="标题没想好"></a>标题没想好</h2><ul>
 <li><p>printf只能输出C语言内置的数据，而string不是内置的，只是一个扩展的类，这样肯定是链接错误的。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//printf输出string类型应如此操作！</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="built_in">string</span> s=<span class="string">"qqq"</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%s"</span>, s.c_str()); <span class="comment">//不推荐</span></span><br><span class="line"><span class="comment">//或者cout&lt;&lt;a；</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><code>c_str</code>该函数能够将 string 字符串转换为C风格的字符串，并返回该字符串的 const 指针（const char*）</p>
+<li><p><code>c_str</code>该函数能够将 string 字符串转换为C风格的字符串，并返回该字符串的 const 指针(const char*),可读不可改的指向字符数组的指针，不需要手动释放或删除这个指针</p>
 </li>
-<li>在C语言中只有char<em> 和 const char</em>，为了使用起来方便，string提供了三个函数满足其要求：<ul>
+<li><p>c_str()：生成一个const char*指针，指向以空字符终止的数组。这个数组的数据是临时的，当有一个改变这些数据的成员函数被调用后，其中的数据就会失效。因此要么现用先转换，要么把它的数据复制到用户自己可以管理的内存中。看下例：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">char</span>* c;</span><br><span class="line"><span class="built_in">string</span> s=<span class="string">"1234"</span>;</span><br><span class="line">c = s.c_str(); </span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;c&lt;&lt;<span class="built_in">endl</span>; <span class="comment">//输出：1234</span></span><br><span class="line">s=<span class="string">"abcd"</span>;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;c&lt;&lt;<span class="built_in">endl</span>; <span class="comment">//输出：abcd</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//const char* c; //①</span></span><br><span class="line"><span class="comment">//char* c;       //②</span></span><br><span class="line"><span class="comment">//char c[20]; </span></span><br><span class="line"><span class="keyword">char</span>* c=<span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">20</span>];</span><br><span class="line"><span class="built_in">string</span> s=<span class="string">"1234"</span>;</span><br><span class="line"><span class="comment">//c = s.c_str(); </span></span><br><span class="line"><span class="built_in">strcpy</span>(c,s.c_str());</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;c&lt;&lt;<span class="built_in">endl</span>; <span class="comment">//输出：1234</span></span><br><span class="line">s=<span class="string">"abcd"</span>;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;c&lt;&lt;<span class="built_in">endl</span>; <span class="comment">//输出：1234</span></span><br><span class="line"><span class="comment">//注意：不能再像上面一样①所示了，const还怎么向里面写入值啊；也不能②所示，使用了未初始化的局部变量“c”，运行会出错的 。</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在C语言中只有char<em> 和 const char</em>，为了使用起来方便，string提供了三个函数满足其要求：</p>
+<ul>
 <li><ol>
 <li><code>const charT* c_str()</code></li>
 </ol>
@@ -779,7 +785,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#string"><span class="nav-number">1.</span> <span class="nav-text">string</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题没想好"><span class="nav-number">1.1.</span> <span class="nav-text">标题没想好</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#std-to-string"><span class="nav-number">1.2.</span> <span class="nav-text">std::to_string()</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#string类型转换int类型"><span class="nav-number">2.</span> <span class="nav-text">string类型转换int类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">3.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#find函数"><span class="nav-number">3.1.</span> <span class="nav-text">find函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rfind-函数"><span class="nav-number">3.2.</span> <span class="nav-text">rfind() 函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#find-first-of-函数"><span class="nav-number">3.3.</span> <span class="nav-text">find_first_of() 函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#find-last-of"><span class="nav-number">3.4.</span> <span class="nav-text">find_last_of()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#find-first-not-of"><span class="nav-number">3.5.</span> <span class="nav-text">find_first_not_of()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#find-last-not-of"><span class="nav-number">3.6.</span> <span class="nav-text">find_last_not_of()</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#string"><span class="nav-number">1.</span> <span class="nav-text">string</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#输入"><span class="nav-number">1.1.</span> <span class="nav-text">输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用scanf"><span class="nav-number">1.1.1.</span> <span class="nav-text">用scanf</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标题没想好"><span class="nav-number">1.2.</span> <span class="nav-text">标题没想好</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#std-to-string"><span class="nav-number">1.3.</span> <span class="nav-text">std::to_string()</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#string类型转换int类型"><span class="nav-number">2.</span> <span class="nav-text">string类型转换int类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">3.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#find函数"><span class="nav-number">3.1.</span> <span class="nav-text">find函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rfind-函数"><span class="nav-number">3.2.</span> <span class="nav-text">rfind() 函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#find-first-of-函数"><span class="nav-number">3.3.</span> <span class="nav-text">find_first_of() 函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#find-last-of"><span class="nav-number">3.4.</span> <span class="nav-text">find_last_of()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#find-first-not-of"><span class="nav-number">3.5.</span> <span class="nav-text">find_first_not_of()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#find-last-not-of"><span class="nav-number">3.6.</span> <span class="nav-text">find_last_not_of()</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -821,7 +827,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">71k</span>
+    <span title="Site words total count">71.4k</span>
   
 </div>
 
