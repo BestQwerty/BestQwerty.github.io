@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="string12345678string a, b;.....a = a + b;//将a+b前后连接，对于string来说有些符号重载定义// ‘ + ’暂且理解为前后连接，所以前后不同，结果不同//string作为容器，可以和字符串、字符相加，也可以和string相加//连接的话 s += a; 这个是把往后面连接，s = a + s;这是是把字符串a连接到s的前面//具体原因不知道//待续">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-06T16:00:14.737Z">
+<meta property="og:updated_time" content="2019-09-07T11:25:30.573Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="string">
 <meta name="twitter:description" content="string12345678string a, b;.....a = a + b;//将a+b前后连接，对于string来说有些符号重载定义// ‘ + ’暂且理解为前后连接，所以前后不同，结果不同//string作为容器，可以和字符串、字符相加，也可以和string相加//连接的话 s += a; 这个是把往后面连接，s = a + s;这是是把字符串a连接到s的前面//具体原因不知道//待续">
@@ -359,7 +359,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-09-07T00:00:14+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-09-07T19:25:30+08:00">
                 2019-09-07
               </time>
             
@@ -405,7 +405,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">706(字)</span> 
+					<span class="post-count">1.4k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -471,13 +471,19 @@
 <li>用+来拼接字符串时，运算符的两边可以都是 string 字符串，也可以是一个 string 字符串和一个C风格的字符串，还可以是一个 string 字符串和一个字符数组，或者是一个 string 字符串和一个单独的字符。</li>
 </ul>
 </li>
+<li><code>string a;</code>变量 a 只是定义但没有初始化，编译器会将默认值赋给 a，默认值是” “，也即空字符串。<ul>
+<li>std::string 不可以与null相比较，可以与” “比较，判空<code>a.empty()</code>函数，<code>a.length() == 0</code></li>
 </ul>
-<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><ul>
+</li>
+<li>使用C语言中的 <code>fopen()</code> 函数打开文件，必须将 string 字符串转换为C风格的字符串。</li>
+</ul>
+<h2 id="标题没想好"><a href="#标题没想好" class="headerlink" title="标题没想好"></a>标题没想好</h2><ul>
 <li><p>printf只能输出C语言内置的数据，而string不是内置的，只是一个扩展的类，这样肯定是链接错误的。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//printf输出string类型应如此操作！</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="built_in">string</span> s=<span class="string">"qqq"</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%s"</span>, s.c_str()); <span class="comment">//不推荐</span></span><br><span class="line"><span class="comment">//或者cout&lt;&lt;a；</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>在C语言中只有char<em> 和 const char</em>，为了使用起来方便，string提供了三个函数满足其要求：</p>
-<ul>
+<li><p><code>c_str</code>该函数能够将 string 字符串转换为C风格的字符串，并返回该字符串的 const 指针（const char*）</p>
+</li>
+<li>在C语言中只有char<em> 和 const char</em>，为了使用起来方便，string提供了三个函数满足其要求：<ul>
 <li><ol>
 <li><code>const charT* c_str()</code></li>
 </ol>
@@ -502,12 +508,45 @@
 <li><p>string的<code>c_str()</code>函数是用来得到C语言风格的字符串，其返回的指针不能修改其空间。而且在下一次使用时重新调用获得新的指针。 </p>
 </li>
 <li>string的<code>data()</code>函数返回的字符串指针不会以’/0’结束，千万不可忽视。 </li>
-<li>一定要使用<code>strcpy()</code>函数 等来操作方法<code>c_str()</code>返回的指针。<code>c_str()</code>返回的是字符串的首地址,返回值类型是<code>const char *</code>的.如果要使用它并对其进行赋值操作,必须要使用strcpy函数.<code>c_str()</code>返回的是一个临时指针，不能对其进行操作。<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> c[<span class="number">20</span>];</span><br><span class="line"><span class="built_in">string</span> s=<span class="string">"1234"</span>;</span><br><span class="line"><span class="built_in">strcpy</span>(c,s.c_str());</span><br></pre></td></tr></table></figure>
+<li>一定要使用<code>strcpy()</code>函数 等来操作方法<code>c_str()</code>返回的指针。<code>c_str()</code><strong>返回的是字符串的首地址,返回值类型</strong>是<code>const char *</code>的.如果要使用它并对其进行赋值操作,必须要使用strcpy函数.<code>c_str()</code><strong>返回的是一个临时指针</strong>，不能对其进行操作。<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> c[<span class="number">20</span>];</span><br><span class="line"><span class="built_in">string</span> s=<span class="string">"1234"</span>;</span><br><span class="line"><span class="built_in">strcpy</span>(c,s.c_str());</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="std-to-string"><a href="#std-to-string" class="headerlink" title="std::to_string()"></a>std::to_string()</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">to_string</span> <span class="params">(<span class="keyword">int</span> val)</span></span>;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">to_string</span> <span class="params">(<span class="keyword">long</span> val)</span></span>;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">to_string</span> <span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> val)</span></span>;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">to_string</span> <span class="params">(<span class="keyword">unsigned</span> val)</span></span>;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">to_string</span> <span class="params">(<span class="keyword">unsigned</span> <span class="keyword">long</span> val)</span></span>;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">to_string</span> <span class="params">(<span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> val)</span></span>;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">to_string</span> <span class="params">(<span class="keyword">float</span> val)</span></span>;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">to_string</span> <span class="params">(<span class="keyword">double</span> val)</span></span>;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">to_string</span> <span class="params">(<span class="keyword">long</span> <span class="keyword">double</span> val)</span></span>;</span><br></pre></td></tr></table></figure>
 <ul>
 <li><code>to_string(1+2+4+7+14)</code></li>
+</ul>
+<h1 id="string类型转换int类型"><a href="#string类型转换int类型" class="headerlink" title="string类型转换int类型"></a>string类型转换int类型</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="built_in">string</span> str;</span><br><span class="line"><span class="keyword">int</span> i = atoi(str.c_str());</span><br><span class="line"></span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">string</span> str;</span><br><span class="line"><span class="keyword">int</span> i = <span class="built_in">std</span>::stoi(str);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>stoi,stol,stoll等函数，表面简写原意string to …</li>
+</ul>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="find函数"><a href="#find函数" class="headerlink" title="find函数"></a>find函数</h2><ul>
+<li>查找字符串a是否包含子串b,不是用<code>strA.find(strB) &gt; 0</code>而是<code>strA.find(strB) != string:npos</code><ul>
+<li>也最好不要用<code>strA.fine(strB) &lt; strA.length()</code>,因为查找失败返回string::npos，npos是-1或很大的值</li>
+</ul>
+</li>
+</ul>
+<h2 id="rfind-函数"><a href="#rfind-函数" class="headerlink" title="rfind() 函数"></a>rfind() 函数</h2><ul>
+<li><code>rfind()</code> 和 <code>find()</code> 很类似，同样是在字符串中查找子字符串，不同的是 <code>find()</code> 函数从第二个参数开始往后查找，而 <code>rfind()</code> 函数则反向查找，<code>rfind()</code>是从指定位置起反向查找，直到串首，失败返回string::npos。<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> s1 = <span class="string">"first second third"</span>;</span><br><span class="line">    <span class="built_in">string</span> s2 = <span class="string">"second"</span>;</span><br><span class="line">    <span class="keyword">int</span> index = s1.rfind(s2,<span class="number">6</span>);</span><br><span class="line">    <span class="keyword">if</span>(index &lt; s1.length())</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Found at index : "</span>&lt;&lt; index &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Not found"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="find-first-of-函数"><a href="#find-first-of-函数" class="headerlink" title="find_first_of() 函数"></a>find_first_of() 函数</h2><ul>
+<li>返回s2中任意字符 在s1 中第一次出现的下标位置</li>
+<li><code>find_first_of()</code>在源串中从位置pos起往后查找，只要在源串中遇到一个字符，该字符与目标串中<strong>任意一个字符相同</strong>，就停止查找，返回该字符在源串中的位置；若匹配失败，返回npos</li>
+<li><p>如果str1中含有str2中的任何字符，则就会查找成功，而find则不同</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> s1 = <span class="string">"first second second third"</span>;</span><br><span class="line">    <span class="built_in">string</span> s2 = <span class="string">"asecond"</span>;</span><br><span class="line">    <span class="keyword">int</span> index = s1.find_first_of(s2);</span><br><span class="line">    <span class="keyword">if</span>(index &lt; s1.length())</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Found at index : "</span>&lt;&lt; index &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Not found"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">运行结果：</span><br><span class="line">Found at index : <span class="number">3</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查找s 中flag 出现的所有位置。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">flag=<span class="string">"a"</span>;</span><br><span class="line">position=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> i=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span>( (position=s.find_first_of(flag,position) )!=<span class="built_in">string</span>::npos)</span><br><span class="line">&#123;</span><br><span class="line"> <span class="comment">//position=s.find_first_of(flag,position);</span></span><br><span class="line"> <span class="built_in">cout</span>&lt;&lt;<span class="string">"position  "</span>&lt;&lt;i&lt;&lt;<span class="string">" : "</span>&lt;&lt;position&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"> position++;</span><br><span class="line"> i++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="find-last-of"><a href="#find-last-of" class="headerlink" title="find_last_of()"></a>find_last_of()</h2><ul>
+<li>该函数与<code>find_first_of()</code>函数相似，只不过查找顺序是从指定位置向前，</li>
+</ul>
+<h2 id="find-first-not-of"><a href="#find-first-not-of" class="headerlink" title="find_first_not_of()"></a>find_first_not_of()</h2><ul>
+<li>在源串中从位置pos开始往后查找，只要在源串遇到一个字符，该字符与目标串中的任意一个字符都不相同，就停止查找，返回该字符在源串中的位置；若遍历完整个源串，都找不到满  足条件的字符，则返回npos。</li>
+</ul>
+<h2 id="find-last-not-of"><a href="#find-last-not-of" class="headerlink" title="find_last_not_of()"></a>find_last_not_of()</h2><ul>
+<li><code>find_last_not_of()</code>与<code>find_first_not_of()</code>相似，只不过查找顺序是从指定位置向前</li>
 </ul>
 
       
@@ -678,7 +717,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">96</span>
+                  <span class="site-state-item-count">95</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -689,7 +728,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">90</span>
+                  <span class="site-state-item-count">89</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -740,7 +779,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#string"><span class="nav-number">1.</span> <span class="nav-text">string</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#输出"><span class="nav-number">1.1.</span> <span class="nav-text">输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#std-to-string"><span class="nav-number">1.2.</span> <span class="nav-text">std::to_string()</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#string"><span class="nav-number">1.</span> <span class="nav-text">string</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题没想好"><span class="nav-number">1.1.</span> <span class="nav-text">标题没想好</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#std-to-string"><span class="nav-number">1.2.</span> <span class="nav-text">std::to_string()</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#string类型转换int类型"><span class="nav-number">2.</span> <span class="nav-text">string类型转换int类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">3.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#find函数"><span class="nav-number">3.1.</span> <span class="nav-text">find函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rfind-函数"><span class="nav-number">3.2.</span> <span class="nav-text">rfind() 函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#find-first-of-函数"><span class="nav-number">3.3.</span> <span class="nav-text">find_first_of() 函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#find-last-of"><span class="nav-number">3.4.</span> <span class="nav-text">find_last_of()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#find-first-not-of"><span class="nav-number">3.5.</span> <span class="nav-text">find_first_not_of()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#find-last-not-of"><span class="nav-number">3.6.</span> <span class="nav-text">find_last_not_of()</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -782,7 +821,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">69.6k</span>
+    <span title="Site words total count">71k</span>
   
 </div>
 
