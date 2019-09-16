@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="常用函数 max, min, fill, memset, sort, swap  字符串函数 字符串比较函数strcmp因为原理是两个字符串一个个比较，所以可以比较字符是否相同！！！！！ 一般形式：strcmp(字符串1，字符串2) 返回值： 当s1&amp;lt;s2时，返回值&amp;lt;0 当s1=s2时，返回值=0 当s1&amp;gt;s2时，返回值&amp;gt;0     如果把序号按字符串存储，则会可以通过st">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-07T09:42:47.948Z">
+<meta property="og:updated_time" content="2019-09-16T15:33:44.180Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="c与c++常用函数">
 <meta name="twitter:description" content="常用函数 max, min, fill, memset, sort, swap  字符串函数 字符串比较函数strcmp因为原理是两个字符串一个个比较，所以可以比较字符是否相同！！！！！ 一般形式：strcmp(字符串1，字符串2) 返回值： 当s1&amp;lt;s2时，返回值&amp;lt;0 当s1=s2时，返回值=0 当s1&amp;gt;s2时，返回值&amp;gt;0     如果把序号按字符串存储，则会可以通过st">
@@ -177,7 +177,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">书青春 - 话人生 | Coding - Thinking - Acting</p>
+        <p class="site-subtitle">我不会放弃的</p>
       
   </div>
 
@@ -359,8 +359,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-09-07T17:42:47+08:00">
-                2019-09-07
+              <time title="更新于" itemprop="dateModified" datetime="2019-09-16T23:33:44+08:00">
+                2019-09-16
               </time>
             
           </span>
@@ -405,7 +405,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">2.5k(字)</span> 
+					<span class="post-count">2.9k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -501,28 +501,28 @@
 <li>fill 和fill_n函数是C++ Primer第十二章泛型算法部分内容，并把它们称为生成和变异算法，也就是说<strong>这两个函数只能对输入范围内已存在的元素进行操作</strong>。如果试图对空容器进行fill_n操作，会导致严重的运行错误，所以在对元素进行写入操作时要检查目标的大小是否足以存储要写入的元素。</li>
 <li>fill的内部实现就是一个for循环</li>
 </ul>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt; <span class="class"><span class="keyword">class</span> <span class="title">ForwardIt</span>, <span class="title">class</span> <span class="title">T</span> &gt;</span></span><br><span class="line"><span class="class"><span class="title">void</span> <span class="title">fill</span>(<span class="title">ForwardIt</span> <span class="title">first</span>, <span class="title">ForwardIt</span> <span class="title">last</span>, <span class="title">const</span> <span class="title">T</span>&amp; <span class="title">value</span>)</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">for</span> (; first != last; ++first) &#123;</span><br><span class="line">        *first = value;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt; <span class="class"><span class="keyword">class</span> <span class="title">ForwardIt</span>, <span class="title">class</span> <span class="title">T</span> &gt;</span></span><br><span class="line"><span class="class"><span class="title">void</span> <span class="title">fill</span>(<span class="title">ForwardIt</span> <span class="title">first</span>, <span class="title">ForwardIt</span> <span class="title">last</span>, <span class="title">const</span> <span class="title">T</span>&amp; <span class="title">value</span>)</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">for</span> (; first != last; ++first) &#123;</span><br><span class="line">        *first = value;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="对二维数组"><a href="#对二维数组" class="headerlink" title="对二维数组"></a>对二维数组</h1><ul>
 <li>动态分配二维数组是指的new或者malloc申请内存<h2 id="memset函数"><a href="#memset函数" class="headerlink" title="memset函数"></a>memset函数</h2></li>
 <li>1.memeset函数只能对连续的内存空间初始化。两次用malloc函数或new在堆上分的内存可能会不连续，因此错误。</li>
-<li>2.如果是直接声明的多维数组如a[5][5]，其内存肯定是连续的，此时统一memset没问题(动态声明的二维数组不一定内存连续)</li>
-<li>memset函数的初始化只能对一维数组或者直接定义的而巍峨数组，对于动态分配的二维数组，对于每一行，是连续分配的； 然而对于各行之间，却不一定是连续分配的，容易出错 </li>
+<li><p>2.如果是直接声明的多维数组如<code>int a[5][5]</code>，其内存肯定是连续的，此时统一memset没问题(动态声明的二维数组不一定内存连续)</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> P[<span class="number">100</span>][<span class="number">100</span>];</span><br><span class="line"><span class="built_in">memset</span>(P, <span class="number">0</span>, <span class="keyword">sizeof</span>(P) ) ;</span><br><span class="line"><span class="comment">//这种直接定义的，可以memeset初始化</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>memset函数的初始化只能对一维数组或者直接定义的而巍峨数组，对于动态分配的二维数组，对于每一行，是连续分配的； 然而对于各行之间，却不一定是连续分配的，容易出错 </p>
+</li>
 </ul>
 <h2 id="fill函数-1"><a href="#fill函数-1" class="headerlink" title="fill函数"></a>fill函数</h2><ul>
-<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> mp[<span class="number">20</span>][<span class="number">20</span>];</span><br><span class="line"></span><br><span class="line">fill(mp[<span class="number">0</span>],mp[<span class="number">0</span>]+<span class="number">20</span>*<span class="number">20</span>,<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">20</span>;i++)</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;<span class="number">20</span>;j++)</span><br><span class="line"></span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;mp[i][j]&lt;&lt;<span class="string">" "</span>; </span><br><span class="line"></span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;	</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><strong>二维数组初始化(推荐)</strong><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> mp[<span class="number">20</span>][<span class="number">20</span>];</span><br><span class="line">fill(mp[<span class="number">0</span>], mp[<span class="number">0</span>]+<span class="number">20</span>*<span class="number">20</span>, <span class="number">5</span>);</span><br><span class="line"><span class="comment">//给二维数初始化</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">20</span>; i++)&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">20</span>; j++)</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; mp[i][j] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="与memset-函数的区别："><a href="#与memset-函数的区别：" class="headerlink" title="与memset()函数的区别："></a>与memset()函数的区别：</h2><ul>
-<li>memset的初始化速度比循环要快很多</li>
-<li><p>fill和for循环事件是一样的</p>
-<ul>
-<li>fill的源码就是for循环实现的</li>
+<li><strong>memset的初始化速度比循环要快很多</strong></li>
+<li>fill和for循环事件是一样的<ul>
+<li><strong>fill的源码就是for循环实现的</strong></li>
 </ul>
 </li>
-<li><p>两者都可以用来对数组填充，memset是对按照字节来填充的，所以一般用来填充char型数组，也经常用于填充int型的全0或全-1操作。</p>
-</li>
-<li><p>fill是按照单元来填充的，所以可以填充一个区间的任意值。</p>
-</li>
+<li>两者都可以用来对数组填充，memset是对按照字节来填充的，所以一般用来填充char型数组，也经常用于填充int型的全0或全-1操作。</li>
+<li>fill是按照单元来填充的，所以可以<strong>填充一个区间的任意值。</strong></li>
 </ul>
 <h1 id="fill-n函数"><a href="#fill-n函数" class="headerlink" title="fill_n函数"></a>fill_n函数</h1><ul>
 <li>在头文件<code>&lt;algorithm&gt;</code>里。</li>
@@ -530,19 +530,37 @@
 </ul>
 <h1 id="memset函数-1"><a href="#memset函数-1" class="headerlink" title="memset函数"></a>memset函数</h1><ul>
 <li>在头文件<code>&lt;cstring&gt;</code>里面</li>
-<li>Memset函数:可以本身就是为字符数组设计的源代码：unsigned int 有一个特性就是如果将其赋值或者当作字节来使用的话，编译器将会截取低八位作为一个字节使用。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">void *(memset)(void *s, int c, size_t n)</span><br><span class="line"></span><br><span class="line"> &#123;</span><br><span class="line"></span><br><span class="line">const unsigned char uc = c;</span><br><span class="line">unsigned char *su;</span><br><span class="line">for (su = s; 0 &lt; n; ++su, --n)</span><br><span class="line">    *su = uc;</span><br><span class="line">return (s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>源码说明对于数组参数是按照字符数组的形式进行赋值的。<br>也就是c的值每次赋值给一个字节，而不是4个字节，c的类型是int类型，4个字节，<br>但只会赋值最低位的一个字节的内容。</p>
-<ul>
+<li>memset的作用是在一段内存块中填充某个给定的值，它是对较大的结构体或数组进行清零操作的一种最快方法</li>
+<li><p>Memset函数:<strong>可以本身就是为字符数组设计的源代码</strong>：unsigned int 有一个特性就是如果将其赋值或者当作字节来使用的话，编译器将会截取低八位作为一个字节使用。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">void</span> *(<span class="built_in">memset</span>)(<span class="keyword">void</span> *s, <span class="keyword">int</span> c, <span class="keyword">size_t</span> n)&#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">unsigned</span> <span class="keyword">char</span> uc = c;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">char</span> *su;</span><br><span class="line">    <span class="keyword">for</span> (su = s; <span class="number">0</span> &lt; n; ++su, --n)</span><br><span class="line">        *su = uc;</span><br><span class="line">    <span class="keyword">return</span> (s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>源码说明对于数组参数是按照字符数组的形式进行赋值的。<br>也就是c的值每次赋值给一个字节，而不是4个字节，c的类型是int类型，4个字节，但只会赋值最低位的一个字节的内容。</p>
+</li>
 <li><p>对于非单字节数据类型只能初始化为0，而不能初始化成别的初值，因为对所有字节按任意顺序赋值0的结果都是0，而如果初始化为其他的值，就会一个字节一个字节的进行赋值，从而出现奇怪的结果。</p>
 </li>
-<li><p>对于变量：当结构体类型中包含指针时，在使用memset初始化时需要小心。<br><code>struct sample_strcut stTest;</code>用memset就非常方便：<code>memset(&amp;stTest,0,sizeof(struct sample_struct));</code><br>原因是memset初始化的时候是按字节一个一个填充的，int有四个字节，于是填充成0000 0001 0000 0001 0000 00001 0000 0001，这样得出数组中的每个元素的值就是16843009了。<br>赋值时0与\0效果一样。</p>
+<li><p>对于变量：当结构体类型中包含指针时，在使用memset初始化时需要小心。<br><code>struct sample_strcut stTest;</code>用memset就非常方便：<code>memset(&amp;stTest,0,sizeof(struct sample_struct));</code><br>原因是memset初始化的时候是按字节一个一个填充的，int有四个字节，于是填充成0000 0001 0000 0001 0000 00001 0000 0001，这样得出数组中的每个元素的值就是16843009了。赋值时0与\0效果一样。</p>
 </li>
-<li>可以用于清空数组内元素与赋,memset函数一般用来填充char型数组,也经常用于填充int型的全0或全-1.不可用其它值，除非高低字节相同.</li>
+<li><p>可以用于清空数组内元素与赋,<strong>memset函数一般用来填充char型数组</strong>,也经常用于填充int型的全0或全-1.不可用其它值，除非高低字节相同.<br>-</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INF 0x3f3f3f3f</span></span><br><span class="line"><span class="keyword">int</span> num[N];</span><br><span class="line"><span class="built_in">memset</span>(num, INF, <span class="keyword">sizeof</span>(num));</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>这样得到的数组里面的每一个元素数值都是INF<br>看一下INF的二进制表示：<br>00111111001111110011111100111111<br>可以看出低8位是00111111，<strong><em>也就是实际赋值时是用<br>00111111来填充一个int类型</em></strong>，结果正好也是<br>00111111001111110011111100111111<br>于是就成功用memset进行了赋值。</p>
+</li>
 </ul>
-<p>-<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">	</span><br><span class="line">#define INF 0x3f3f3f3f</span><br><span class="line">	</span><br><span class="line">int num[N];</span><br><span class="line">	</span><br><span class="line">memset(num, INF, sizeof(num));</span><br></pre></td></tr></table></figure></p>
-<p>这样得到的数组里面的每一个元素数值都是INF<br>看一下INF的二进制表示：<br>00111111001111110011111100111111<br>可以看出低8位是00111111，<strong><em>也就是实际赋值时是用<br>00111111来填充一个int类型</em></strong>，结果正好也是<br>00111111001111110011111100111111<br>于是就成功用memset进行了赋值。</p>
+<h2 id="初始化与赋值"><a href="#初始化与赋值" class="headerlink" title="初始化与赋值"></a>初始化与赋值</h2><ul>
+<li>memset()的深刻内涵：用来对一段内存空间全部设置为某个字符，一般用在对定义的字符串进行初始化<ul>
+<li>例如：<code>memset(a,&#39;\0&#39;,sizeof(a) );</code></li>
+</ul>
+</li>
+<li><p>对字符串数组</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> a[<span class="number">5</span>];</span><br><span class="line"><span class="built_in">memset</span>(a, <span class="string">'1'</span>, <span class="number">5</span>);</span><br><span class="line"><span class="comment">// 数组a 是字符型的，字符型占据内存大小是1Byte，而 memset 函数也是以字节为单位进行赋值的</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对bool型数组赋值：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">11</span>;</span><br><span class="line"><span class="keyword">bool</span> arr[N];</span><br><span class="line"><span class="built_in">memset</span>(&amp;arr, <span class="number">1</span>, <span class="keyword">sizeof</span>(<span class="keyword">bool</span>) * N);</span><br><span class="line"><span class="comment">//bool类型就是1或0.</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对结构体</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//有一个结构体Some x，可以这样清零：</span></span><br><span class="line"><span class="built_in">memset</span>(&amp;x, <span class="number">0</span>, <span class="keyword">sizeof</span>(Some));</span><br><span class="line"><span class="comment">//如果是一个结构体的数组Some x[10]，可以这样：</span></span><br><span class="line"><span class="built_in">memset</span>(x, <span class="number">0</span>, <span class="keyword">sizeof</span>(Some)*<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//memset可以方便的清空一个结构类型的变量或数组。如：</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sample_struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">char</span> csName[<span class="number">16</span>];</span><br><span class="line">	<span class="keyword">int</span> iSeq;</span><br><span class="line">	<span class="keyword">int</span> iType;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//对于变量</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sample_strcut</span> <span class="title">stTest</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//一般情况下，清空stTest的方法：</span></span><br><span class="line">stTest.csName[<span class="number">0</span>]=&#123;<span class="string">'\0'</span>&#125;;</span><br><span class="line">stTest.iSeq=<span class="number">0</span>;</span><br><span class="line">stTest.iType=<span class="number">0</span>;</span><br><span class="line"><span class="comment">//如果用memset的话非常方便：</span></span><br><span class="line"><span class="built_in">memset</span>(&amp;stTest, <span class="number">0</span>, <span class="keyword">sizeof</span>(struct sample_struct));</span><br><span class="line"></span><br><span class="line"><span class="comment">//如果是数组：</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sample_struct</span> <span class="title">TEST</span>[10];</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">memset</span>(TEST, <span class="number">0</span>, <span class="keyword">sizeof</span>(struct sample_struct)*<span class="number">10</span>）；</span><br><span class="line"><span class="comment">//另外：如果结构体中有数组的话还是需要对数组单独进行初始化处理的</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <h3 id="INF小知识"><a href="#INF小知识" class="headerlink" title="INF小知识"></a>INF小知识</h3><ul>
 <li>0x3f3f3f3f的十进制是1061109567，也就是10^9级别的（和0x7fffffff一个数量级），而一般场合下的数据都是小于10^9的，所以它可以作为无穷大使用而不致出现数据大于无穷大的情形。</li>
 <li><p>另一方面，由于一般的数据都不会大于10^9，所以当我们把无穷大加上一个数据时，它并不会溢出（这就满足了“无穷大加一个有穷的数依然是无穷大”），事实上0x3f3f3f3f+0x3f3f3f3f=2122219134，这非常大但却没有超过32-bit int的表示范围，所以0x3f3f3f3f还满足了我们“无穷大加无穷大还是无穷大”的需求。</p>
@@ -805,7 +823,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常用函数"><span class="nav-number">1.</span> <span class="nav-text">常用函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串函数"><span class="nav-number">2.</span> <span class="nav-text">字符串函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#strcpy函数"><span class="nav-number">2.1.</span> <span class="nav-text">strcpy函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tolower函数"><span class="nav-number">3.</span> <span class="nav-text">tolower函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fill函数"><span class="nav-number">4.</span> <span class="nav-text">fill函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#对二维数组"><span class="nav-number">5.</span> <span class="nav-text">对二维数组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#memset函数"><span class="nav-number">5.1.</span> <span class="nav-text">memset函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fill函数-1"><span class="nav-number">5.2.</span> <span class="nav-text">fill函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#与memset-函数的区别："><span class="nav-number">5.3.</span> <span class="nav-text">与memset()函数的区别：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fill-n函数"><span class="nav-number">6.</span> <span class="nav-text">fill_n函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#memset函数-1"><span class="nav-number">7.</span> <span class="nav-text">memset函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#INF小知识"><span class="nav-number">7.0.1.</span> <span class="nav-text">INF小知识</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#转换函数"><span class="nav-number">8.</span> <span class="nav-text">转换函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#atoi-函数"><span class="nav-number">8.1.</span> <span class="nav-text">atoi()函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#atol函数"><span class="nav-number">8.2.</span> <span class="nav-text">atol函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#与stoi区别"><span class="nav-number">8.2.1.</span> <span class="nav-text">与stoi区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#atof函数"><span class="nav-number">8.3.</span> <span class="nav-text">atof函数</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常用函数"><span class="nav-number">1.</span> <span class="nav-text">常用函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串函数"><span class="nav-number">2.</span> <span class="nav-text">字符串函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#strcpy函数"><span class="nav-number">2.1.</span> <span class="nav-text">strcpy函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tolower函数"><span class="nav-number">3.</span> <span class="nav-text">tolower函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fill函数"><span class="nav-number">4.</span> <span class="nav-text">fill函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#对二维数组"><span class="nav-number">5.</span> <span class="nav-text">对二维数组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#memset函数"><span class="nav-number">5.1.</span> <span class="nav-text">memset函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fill函数-1"><span class="nav-number">5.2.</span> <span class="nav-text">fill函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#与memset-函数的区别："><span class="nav-number">5.3.</span> <span class="nav-text">与memset()函数的区别：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fill-n函数"><span class="nav-number">6.</span> <span class="nav-text">fill_n函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#memset函数-1"><span class="nav-number">7.</span> <span class="nav-text">memset函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化与赋值"><span class="nav-number">7.1.</span> <span class="nav-text">初始化与赋值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#INF小知识"><span class="nav-number">7.1.1.</span> <span class="nav-text">INF小知识</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#转换函数"><span class="nav-number">8.</span> <span class="nav-text">转换函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#atoi-函数"><span class="nav-number">8.1.</span> <span class="nav-text">atoi()函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#atol函数"><span class="nav-number">8.2.</span> <span class="nav-text">atol函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#与stoi区别"><span class="nav-number">8.2.1.</span> <span class="nav-text">与stoi区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#atof函数"><span class="nav-number">8.3.</span> <span class="nav-text">atof函数</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -847,7 +865,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">71.7k</span>
+    <span title="Site words total count">72.1k</span>
   
 </div>
 
