@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="string12345678string a, b;.....a = a + b;//将a+b前后连接，对于string来说有些符号重载定义// ‘ + ’暂且理解为前后连接，所以前后不同，结果不同//string作为容器，可以和字符串、字符相加，也可以和string相加//连接的话 s += a; 这个是把往后面连接，s = a + s;这是是把字符串a连接到s的前面//具体原因不知道//待续">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-07T11:39:42.581Z">
+<meta property="og:updated_time" content="2019-09-08T08:41:35.430Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="string">
 <meta name="twitter:description" content="string12345678string a, b;.....a = a + b;//将a+b前后连接，对于string来说有些符号重载定义// ‘ + ’暂且理解为前后连接，所以前后不同，结果不同//string作为容器，可以和字符串、字符相加，也可以和string相加//连接的话 s += a; 这个是把往后面连接，s = a + s;这是是把字符串a连接到s的前面//具体原因不知道//待续">
@@ -359,8 +359,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-09-07T19:39:42+08:00">
-                2019-09-07
+              <time title="更新于" itemprop="dateModified" datetime="2019-09-08T16:41:35+08:00">
+                2019-09-08
               </time>
             
           </span>
@@ -465,7 +465,7 @@
       
         <h1 id="string"><a href="#string" class="headerlink" title="string"></a>string</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> a, b;</span><br><span class="line">.....</span><br><span class="line">a = a + b;<span class="comment">//将a+b前后连接，对于string来说有些符号重载定义</span></span><br><span class="line"><span class="comment">// ‘ + ’暂且理解为前后连接，所以前后不同，结果不同</span></span><br><span class="line"><span class="comment">//string作为容器，可以和字符串、字符相加，也可以和string相加</span></span><br><span class="line"><span class="comment">//连接的话 s += a; 这个是把往后面连接，s = a + s;这是是把字符串a连接到s的前面</span></span><br><span class="line"><span class="comment">//具体原因不知道</span></span><br><span class="line"><span class="comment">//待续</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li>string是类，与c中字符串不一样</li>
+<li>string是类，与c中字符串不一样,<code>string a =&quot;hello&quot;+&quot;world&quot;;</code>错误，因为两个字符串都不是string类</li>
 <li>string 的末尾没有<code>&#39;\0&#39;</code>字符，所以<code>length()</code>返回的是字符串的真实长度，而不是长度 +1。</li>
 <li>string 字符串的起始下标仍是从 0 开始。</li>
 <li>有了 string 类，我们可以使用+或+=运算符来直接拼接字符串，非常方便，再也不需要使用C语言中的 strcat()、strcpy()、malloc() 等函数来拼接字符串了，再也不用担心空间不够会溢出了。<ul>
@@ -827,7 +827,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">71.4k</span>
+    <span title="Site words total count">71.7k</span>
   
 </div>
 
