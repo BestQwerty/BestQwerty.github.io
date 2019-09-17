@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="常用函数 max, min, fill, memset, sort, swap  字符串函数 字符串比较函数strcmp因为原理是两个字符串一个个比较，所以可以比较字符是否相同！！！！！ 一般形式：strcmp(字符串1，字符串2) 返回值： 当s1&amp;lt;s2时，返回值&amp;lt;0 当s1=s2时，返回值=0 当s1&amp;gt;s2时，返回值&amp;gt;0     如果把序号按字符串存储，则会可以通过st">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-16T15:33:44.180Z">
+<meta property="og:updated_time" content="2019-09-17T05:38:41.712Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="c与c++常用函数">
 <meta name="twitter:description" content="常用函数 max, min, fill, memset, sort, swap  字符串函数 字符串比较函数strcmp因为原理是两个字符串一个个比较，所以可以比较字符是否相同！！！！！ 一般形式：strcmp(字符串1，字符串2) 返回值： 当s1&amp;lt;s2时，返回值&amp;lt;0 当s1=s2时，返回值=0 当s1&amp;gt;s2时，返回值&amp;gt;0     如果把序号按字符串存储，则会可以通过st">
@@ -359,8 +359,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-09-16T23:33:44+08:00">
-                2019-09-16
+              <time title="更新于" itemprop="dateModified" datetime="2019-09-17T13:38:41+08:00">
+                2019-09-17
               </time>
             
           </span>
@@ -405,7 +405,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">2.9k(字)</span> 
+					<span class="post-count">3k(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -590,7 +590,20 @@
 <li>定义函数 <code>double atof(const char *nptr);</code></li>
 <li>函数说明 atof()会扫描参数nptr字符串，跳过前面的空格字符，直到遇上数字或正负符号才开始做转换，而再遇到非数字或字符串结束时<code>(&#39;\0&#39;)</code>才结束转换，并将结果返回。参数nptr字符串可包含正负号、小数点或E(e)来表示指数部分，如123.456或123e-2。</li>
 <li>返回值:函数返回转换后的双精度浮点数，如果没有执行有效的转换，则返回零（0.0）。</li>
-<li>范例：<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span>*a=<span class="string">"-100.23"</span>;</span><br><span class="line">	<span class="keyword">char</span>*b=<span class="string">"200e-2"</span>;</span><br><span class="line">	<span class="keyword">double</span> c;</span><br><span class="line">	c=atof(a)+atof(b);</span><br><span class="line">	<span class="built_in">printf</span>(“c=%<span class="number">.2</span>lf\n”,c);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>范例：<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span>*a=<span class="string">"-100.23"</span>;</span><br><span class="line">	<span class="keyword">char</span>*b=<span class="string">"200e-2"</span>;</span><br><span class="line">	<span class="keyword">double</span> c;</span><br><span class="line">	c=atof(a)+atof(b);</span><br><span class="line">	<span class="built_in">printf</span>(“c=%<span class="number">.2</span>lf\n”,c);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="memcpy"><a href="#memcpy" class="headerlink" title="memcpy"></a>memcpy</h1><ul>
+<li><code>void *memcpy(void*dest, const void *src, size_t n);</code></li>
+<li><p>用来做内存拷贝，你可以拿它拷贝任何数据类型的对象，可以指定拷贝的数据长度：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>], b[<span class="number">50</span>];</span><br><span class="line"><span class="built_in">memcpy</span>(b, a, <span class="keyword">sizeof</span>(b) ); </span><br><span class="line"><span class="comment">//注意如用sizeof(a)，会造成b的内存地址溢出</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>说明</p>
+<ul>
+<li>source和destin所指内存区域不能重叠，函数返回指向destin的指针。</li>
+<li>与strcpy相比，memcpy并不是遇到’\0’就结束，而是一定会拷贝完n个字节。</li>
+</ul>
+</li>
 </ul>
 
       
@@ -761,7 +774,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">95</span>
+                  <span class="site-state-item-count">96</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -823,7 +836,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常用函数"><span class="nav-number">1.</span> <span class="nav-text">常用函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串函数"><span class="nav-number">2.</span> <span class="nav-text">字符串函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#strcpy函数"><span class="nav-number">2.1.</span> <span class="nav-text">strcpy函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tolower函数"><span class="nav-number">3.</span> <span class="nav-text">tolower函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fill函数"><span class="nav-number">4.</span> <span class="nav-text">fill函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#对二维数组"><span class="nav-number">5.</span> <span class="nav-text">对二维数组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#memset函数"><span class="nav-number">5.1.</span> <span class="nav-text">memset函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fill函数-1"><span class="nav-number">5.2.</span> <span class="nav-text">fill函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#与memset-函数的区别："><span class="nav-number">5.3.</span> <span class="nav-text">与memset()函数的区别：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fill-n函数"><span class="nav-number">6.</span> <span class="nav-text">fill_n函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#memset函数-1"><span class="nav-number">7.</span> <span class="nav-text">memset函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化与赋值"><span class="nav-number">7.1.</span> <span class="nav-text">初始化与赋值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#INF小知识"><span class="nav-number">7.1.1.</span> <span class="nav-text">INF小知识</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#转换函数"><span class="nav-number">8.</span> <span class="nav-text">转换函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#atoi-函数"><span class="nav-number">8.1.</span> <span class="nav-text">atoi()函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#atol函数"><span class="nav-number">8.2.</span> <span class="nav-text">atol函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#与stoi区别"><span class="nav-number">8.2.1.</span> <span class="nav-text">与stoi区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#atof函数"><span class="nav-number">8.3.</span> <span class="nav-text">atof函数</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常用函数"><span class="nav-number">1.</span> <span class="nav-text">常用函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串函数"><span class="nav-number">2.</span> <span class="nav-text">字符串函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#strcpy函数"><span class="nav-number">2.1.</span> <span class="nav-text">strcpy函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tolower函数"><span class="nav-number">3.</span> <span class="nav-text">tolower函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fill函数"><span class="nav-number">4.</span> <span class="nav-text">fill函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#对二维数组"><span class="nav-number">5.</span> <span class="nav-text">对二维数组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#memset函数"><span class="nav-number">5.1.</span> <span class="nav-text">memset函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fill函数-1"><span class="nav-number">5.2.</span> <span class="nav-text">fill函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#与memset-函数的区别："><span class="nav-number">5.3.</span> <span class="nav-text">与memset()函数的区别：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fill-n函数"><span class="nav-number">6.</span> <span class="nav-text">fill_n函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#memset函数-1"><span class="nav-number">7.</span> <span class="nav-text">memset函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化与赋值"><span class="nav-number">7.1.</span> <span class="nav-text">初始化与赋值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#INF小知识"><span class="nav-number">7.1.1.</span> <span class="nav-text">INF小知识</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#转换函数"><span class="nav-number">8.</span> <span class="nav-text">转换函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#atoi-函数"><span class="nav-number">8.1.</span> <span class="nav-text">atoi()函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#atol函数"><span class="nav-number">8.2.</span> <span class="nav-text">atol函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#与stoi区别"><span class="nav-number">8.2.1.</span> <span class="nav-text">与stoi区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#atof函数"><span class="nav-number">8.3.</span> <span class="nav-text">atof函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#memcpy"><span class="nav-number">9.</span> <span class="nav-text">memcpy</span></a></li></ol></div>
             
 
           </div>
@@ -865,7 +878,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">72.1k</span>
+    <span title="Site words total count">72.7k</span>
   
 </div>
 

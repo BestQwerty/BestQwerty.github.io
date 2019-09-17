@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="基础 二进制不能表示所有的小数，他只是选一个离需表示值的最近的一个数进行储存而已。 首先，在计算机中所有数据都是用一个一个的二进制位（0或1）存储的，单位称为：位（bit）；然后，每8位二进制数（比如01010001）代表一个字节(byte)大小，即1字节=8位；再然后，C语言每个数据类型都是有固定字节大小的，比如char类型是一个字节即8位，而int类型的大小与具体计算机cpu的机器字长有关，如">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-08T07:25:27.635Z">
+<meta property="og:updated_time" content="2019-09-17T15:03:11.302Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据类型">
 <meta name="twitter:description" content="基础 二进制不能表示所有的小数，他只是选一个离需表示值的最近的一个数进行储存而已。 首先，在计算机中所有数据都是用一个一个的二进制位（0或1）存储的，单位称为：位（bit）；然后，每8位二进制数（比如01010001）代表一个字节(byte)大小，即1字节=8位；再然后，C语言每个数据类型都是有固定字节大小的，比如char类型是一个字节即8位，而int类型的大小与具体计算机cpu的机器字长有关，如">
@@ -359,8 +359,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-09-08T15:25:27+08:00">
-                2019-09-08
+              <time title="更新于" itemprop="dateModified" datetime="2019-09-17T23:03:11+08:00">
+                2019-09-17
               </time>
             
           </span>
@@ -394,7 +394,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">732(字)</span> 
+					<span class="post-count">865(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -465,6 +465,15 @@
 <li><p>将char/signed char转换为int时，会对最高符号位1进行扩展，从而造成运算问题。所以,如果要处理的数据中存在字节值大于127的情况，使用unsigned char较为妥当。程序中若涉及位运算，也应该使用unsigned型变量。</p>
 </li>
 <li>c中规定除法相除必须是整数，但表达式存在自动转换，若两个数字都为int，将其中一个数字强制类型转换为浮点数，即可保留小数</li>
+</ul>
+<h1 id="数组范围"><a href="#数组范围" class="headerlink" title="数组范围"></a>数组范围</h1><ul>
+<li><p>函数内申请的变量，数组，是在栈（stack）中申请的一段连续的空间。栈的默认大小为2M或1M，开的比较小。</p>
+</li>
+<li><p>全局变量，全局数组，静态数组（static）则是开在全局区（静态区）（static）。大小为G单位，所以能够开的很大。</p>
+</li>
+<li>如<code>int num[900][900];</code></li>
+<li>计算公式：900<em> 900</em>sizeof(int)/1024 = 3164KB=3MB &gt; 2MB所以溢出</li>
+<li>而malloc、new出的空间，则是开在堆（heap）的一段不连续的空间。理论上则是硬盘大小。</li>
 </ul>
 
       
@@ -635,7 +644,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">95</span>
+                  <span class="site-state-item-count">96</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -697,7 +706,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基础"><span class="nav-number">1.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据类型"><span class="nav-number">2.</span> <span class="nav-text">数据类型</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基础"><span class="nav-number">1.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据类型"><span class="nav-number">2.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组范围"><span class="nav-number">3.</span> <span class="nav-text">数组范围</span></a></li></ol></div>
             
 
           </div>
@@ -739,7 +748,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">72.1k</span>
+    <span title="Site words total count">72.7k</span>
   
 </div>
 

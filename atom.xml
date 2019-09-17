@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="BestQwerty.github.io/"/>
-  <updated>2019-07-26T15:04:30.870Z</updated>
+  <updated>2019-09-17T14:21:27.382Z</updated>
   <id>BestQwerty.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>c/c++ 基础</title>
+    <link href="BestQwerty.github.io/2019/09/17/c-c-%E5%9F%BA%E7%A1%80/"/>
+    <id>BestQwerty.github.io/2019/09/17/c-c-基础/</id>
+    <published>2019-09-17T14:15:46.000Z</published>
+    <updated>2019-09-17T14:21:27.382Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h1><ul><li><code>for (int i = 0, len = strlen(s); i &lt; len; i++)</code>代替<code>for (int i = 0; i &lt; strlen(s); i++)</code></li></ul><h1 id="基本运算和函数"><a href="#基本运算和函数" class="headerlink" title="基本运算和函数"></a>基本运算和函数</h1><ul><li>在乘以2（或2的整数次幂）或除以2（或2的整数次幂）的时候尽量用位运算来替代。</li><li>尽量减少使用除法运算（可以适当转换为乘法，如条件判断时将<code>if (a == b / c)</code>替换为<code>if (a * c == b)</code>。除法运算需要更多的移位和转换操作，往往需要的时间是相应乘法的两倍）</li><li>多使用+=、-=、*=、/=等复合运算符，以加一为例，效率由高到低是(i++ 、 i += 1 、 i = i + 1)</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      🐱‍👤
+    
+    </summary>
+    
+    
+      <category term="c++" scheme="BestQwerty.github.io/tags/c/"/>
+    
+  </entry>
   
   <entry>
     <title>matlab GUI</title>
@@ -453,26 +473,6 @@
     
     
       <category term="matlab" scheme="BestQwerty.github.io/tags/matlab/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>matlab实现dfs/bfs</title>
-    <link href="BestQwerty.github.io/2019/04/27/matlab%E5%AE%9E%E7%8E%B0dfs-bfs/"/>
-    <id>BestQwerty.github.io/2019/04/27/matlab实现dfs-bfs/</id>
-    <published>2019-04-27T13:16:03.000Z</published>
-    <updated>2019-05-27T13:40:46.065Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="dfs与bfs"><a href="#dfs与bfs" class="headerlink" title="dfs与bfs"></a>dfs与bfs</h1><ul><li><a href="https://blog.csdn.net/newcloudtech/article/details/8679439" target="_blank" rel="noopener">Matlab 深度优先搜索求解迷宫问题</a></li><li><a href="https://blog.csdn.net/newcloudtech/article/details/8679461" target="_blank" rel="noopener">Matlab 广度优先搜索求解迷宫问题</a></li><li><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">clc,clear;</span><br><span class="line"><span class="comment">%a = kron(eye (2),[-1 1] )</span></span><br><span class="line"><span class="comment">%a(:,1)</span></span><br><span class="line"><span class="comment">%maze = [0 2 5 5 1</span></span><br><span class="line">       <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">5</span> <span class="number">1</span></span><br><span class="line">        <span class="number">0</span> <span class="number">1</span> <span class="number">3</span> <span class="number">5</span> <span class="number">1</span></span><br><span class="line">        <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">%ismember(maze(1,1),[1,2,5] )</span></span><br><span class="line"><span class="comment">%maze = [1 2 3 4 5</span></span><br><span class="line">       <span class="number">2</span> <span class="number">23</span> <span class="number">3</span> <span class="number">1</span> <span class="number">5</span>];</span><br><span class="line"><span class="comment">%ismember(maze,[1:3])</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 定义四个方向</span></span><br><span class="line"><span class="comment">%directions = kron(eye(2),[-1,1]);</span></span><br><span class="line"><span class="comment">% 路径个数</span></span><br><span class="line"><span class="comment">%sol = 0;</span></span><br><span class="line"><span class="comment">% [I,J] = find(maze == 2);</span></span><br><span class="line"><span class="comment">% 找到起点</span></span><br></pre></td></tr></table></figure></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      😋
-    
-    </summary>
-    
-      <category term="matlab" scheme="BestQwerty.github.io/categories/matlab/"/>
-    
     
   </entry>
   
