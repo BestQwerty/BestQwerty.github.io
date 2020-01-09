@@ -91,7 +91,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/数组.jpg">
 <meta property="og:image" content="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/数组2.jpg">
-<meta property="og:updated_time" content="2019-05-17T15:38:24.261Z">
+<meta property="og:updated_time" content="2019-12-30T13:34:14.481Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数组">
 <meta name="twitter:description" content="二维数组 二维数组的初始化分为两种，一种是顺序初始化，一种是按行初始化 所谓按顺序初始化就是先从左向右再由上而下地初始化，即第一行所有元素都初始化好以后再对第二行初始化。而按行初始化则是用一对大括号来表示每一行，跳过前一行没有初始化的元素，在行内从左向右地进行初始化。 int array1[3][2]={4,2,5,6}; 顺序初始化 int array2[3][2]={ {4,2},{5},{6">
@@ -362,8 +362,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-05-17T23:38:24+08:00">
-                2019-05-17
+              <time title="更新于" itemprop="dateModified" datetime="2019-12-30T21:34:14+08:00">
+                2019-12-30
               </time>
             
           </span>
@@ -419,7 +419,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">382(字)</span> 
+					<span class="post-count">703(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -489,7 +489,17 @@
 <li>在内存中，先将二维数组的第一行按顺序存储，接着就是第二行的数据，然后是第三行的数据……右图（图7.4）所示的就是一个二维数组在内存中的存储情况。 <img src="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/数组.jpg" alt=""></li>
 </ul>
 </li>
-<li>在某些情况下，不能使用二维数组，或者难以制造一个二维数组。二维数组在内存中的存储情况和一维数组是相同的，所以我们只好用一个一维数组来代替它了。一个二维数组元素<code>a[x][y]</code>在一维数组b中，是：<br> <code>a[x][y]=b[x*列数+y]</code><br><img src="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/数组2.jpg" alt=""></li>
+<li><p>在某些情况下，不能使用二维数组，或者难以制造一个二维数组。二维数组在内存中的存储情况和一维数组是相同的，所以我们只好用一个一维数组来代替它了。一个二维数组元素<code>a[x][y]</code>在一维数组b中，是：<br> <code>a[x][y]=b[x*列数+y]</code><br><img src="https://raw.githubusercontent.com/BestQwerty/BestQwerty.github.io/master/images/数组2.jpg" alt=""></p>
+</li>
+<li><p>(未检查)主函数中没有初始化的元素一般为随机值，那个如果有初始化列表的话，后面默认还是零吗，对于二维数组来应该是的，在局部函数中，只要数组（一维或二维）带有任何的（即使是不完全的）初始化列表，数组就不会再是处于脏数据的状态，而是把其他未初始化的位置全部初始化为0. 但是在全局变量或static静态变量时，就不管有没有初始化列表，全部默认初始化为0.</p>
+</li>
+</ul>
+<h1 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h1><ul>
+<li>静态数组<code>int array[100] = {0};</code>定义了数组array，并将数组元素全部初始化为0；</li>
+<li>静态数组<code>int array[100] = {1};</code>//定义了数组array，并将数组第一个元素初始化为1，后面99个元素初始化为0；</li>
+<li>静态数组<code>int array[100] = {4,5};</code>    定义数组array，并初始化前两个元素为4,5，后面剩余元素初始化为0；</li>
+<li>动态数组<code>int *p_array = new int[100];  delete []p_array;</code> 分配了长度为100的数组array，并全部初始化为0；</li>
+<li>动态数组<code>int *p_array = new int[100]{3,5};  delete []p_array;</code> 前两个元素初始化为3和5，后面的原始初始化为0</li>
 </ul>
 
       
@@ -722,7 +732,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#二维数组"><span class="nav-number">1.</span> <span class="nav-text">二维数组</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#二维数组"><span class="nav-number">1.</span> <span class="nav-text">二维数组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一维数组"><span class="nav-number">2.</span> <span class="nav-text">一维数组</span></a></li></ol></div>
             
 
           </div>
@@ -750,7 +760,7 @@ var jiathis_config={
     <footer id="footer" class="footer">
       <div class="footer-inner">
         
-<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -764,7 +774,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">72.7k</span>
+    <span title="Site words total count">73.4k</span>
   
 </div>
 

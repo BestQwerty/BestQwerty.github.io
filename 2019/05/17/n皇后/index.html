@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="LjJiaJun&#39; Home">
 <meta property="og:description" content="😋">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-17T15:35:15.208Z">
+<meta property="og:updated_time" content="2019-11-02T06:50:41.608Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="n皇后">
 <meta name="twitter:description" content="😋">
@@ -359,8 +359,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-05-17T23:35:15+08:00">
-                2019-05-17
+              <time title="更新于" itemprop="dateModified" datetime="2019-11-02T14:50:41+08:00">
+                2019-11-02
               </time>
             
           </span>
@@ -394,7 +394,7 @@
 						<i class="fa fa-calendar-o"></i>
 					</span>
 					<span class="post-meta-item-text">字数统计:</span>
-					<span class="post-count">265(字)</span> 
+					<span class="post-count">421(字)</span> 
 					</span>
 			<span id="busuanzi_container_page_pv">
 			&nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
@@ -457,6 +457,10 @@
 
       
         <h1 id="n皇后位运算版"><a href="#n皇后位运算版" class="headerlink" title="n皇后位运算版"></a>n皇后位运算版</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">long</span> sum=<span class="number">0</span>, upperlim=<span class="number">1</span>;     </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test</span><span class="params">(<span class="keyword">long</span> row, <span class="keyword">long</span> ld, <span class="keyword">long</span> rd)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (row!=upperlim) <span class="comment">//row表示为表示对应行的列是放置，放置了放1，没放置放0； </span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">long</span> pos = upperlim &amp; ~(row | ld | rd); <span class="comment">//可以放置的列的位置,对应位为0，</span></span><br><span class="line">		<span class="keyword">while</span> (pos)    <span class="comment">//pos为0 皇后没有地方可放，回溯； </span></span><br><span class="line">		&#123;</span><br><span class="line">		<span class="keyword">long</span> p=pos&amp;-pos;        <span class="comment">//取得可以放皇后的最右边的列，其余bit置0</span></span><br><span class="line">		pos-=p; <span class="comment">//将最后边的列置为0，为下一次选可放置的列做准备，后面并没有用</span></span><br><span class="line">		<span class="comment">//其用途用于循环判断以及求出下一个p  ----我的注释    </span></span><br><span class="line">		test(row+p, (ld+p)&lt;&lt;<span class="number">1</span>,(rd+p)&gt;&gt;<span class="number">1</span>);  <span class="comment">//row ,ld,rd的新的值记录用于排除下一行禁忌列；                            </span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span>   </span><br><span class="line">		sum++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n); </span><br><span class="line">	upperlim = (upperlim &lt;&lt; n) - <span class="number">1</span>;   <span class="comment">//移位减一，让可以放皇后的所有的行的存储列的位置置为1；      </span></span><br><span class="line">	test(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, sum);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="回溯法"><a href="#回溯法" class="headerlink" title="回溯法"></a>回溯法</h1><ul>
+<li>用数组c[row]表示第row行放置在第i列，check()函数检查是否满足条件，满足则放置下一行，否侧继续循环找到可放置的解或者回溯<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> total = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">int</span> c[<span class="number">17</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> cow)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; cow; i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(c[cow] == c[i]||<span class="built_in">abs</span>(c[cow] - c[i]) == cow - i)</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125; </span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">queen</span><span class="params">(<span class="keyword">int</span> cow)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(cow == n) total++;</span><br><span class="line">	<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">			c[cow] = i;</span><br><span class="line">			<span class="keyword">if</span>(check(cow))</span><br><span class="line">				queen(cow+<span class="number">1</span>);</span><br><span class="line">		&#125; </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	queen(<span class="number">0</span>);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; total;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
       
     </div>
     
@@ -687,7 +691,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#n皇后位运算版"><span class="nav-number">1.</span> <span class="nav-text">n皇后位运算版</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#n皇后位运算版"><span class="nav-number">1.</span> <span class="nav-text">n皇后位运算版</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#回溯法"><span class="nav-number">2.</span> <span class="nav-text">回溯法</span></a></li></ol></div>
             
 
           </div>
@@ -715,7 +719,7 @@ var jiathis_config={
     <footer id="footer" class="footer">
       <div class="footer-inner">
         
-<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -729,7 +733,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">72.7k</span>
+    <span title="Site words total count">73.4k</span>
   
 </div>
 
