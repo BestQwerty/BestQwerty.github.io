@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[python入门]]></title>
     <url>%2F2020%2F01%2F12%2Fpython%E5%85%A5%E9%97%A8%2F</url>
-    <content type="text"><![CDATA[基础 Python可以直接定义变量名字并进行赋值的，例如我们写出a = 4时，Python解释器干了两件事情： 在内存中创建了一个值为4的整型数据 在内存中创建了一个名为a的变量，并把它指向4 if _name_ == &quot;_main_&quot;:由于每个python模块（python文件）都包含内置的变量name，当运行模块被执行的时候，name等于文件名（包含了后缀.py）。如果import到其他模块中，则name等于模块名称（不包含后缀.py）。而“main”等于当前执行文件的名称（包含了后缀.py）。所以当模块被直接执行时，name == ‘main‘结果为真；而当模块被import到其他模块中时，name == ‘main‘结果为假，就是不调用对应的方法。 简而言之就是：name 是当前模块名，当模块被直接运行时模块名为 main 。当模块被直接运行时，代码将被运行，当模块被导入时，代码不被运行。让你写的脚本模块可以导入到别的模块中用 爬虫request库This browser does not support PDFs. Please download the PDF to view it: Download PDF]]></content>
+    <content type="text"><![CDATA[基础 Python可以直接定义变量名字并进行赋值的，例如我们写出a = 4时，Python解释器干了两件事情： 在内存中创建了一个值为4的整型数据 在内存中创建了一个名为a的变量，并把它指向4 if _name_ == &quot;_main_&quot;:由于每个python模块（python文件）都包含内置的变量name，当运行模块被执行的时候，name等于文件名（包含了后缀.py）。如果import到其他模块中，则name等于模块名称（不包含后缀.py）。而“main”等于当前执行文件的名称（包含了后缀.py）。所以当模块被直接执行时，name == ‘main‘结果为真；而当模块被import到其他模块中时，name == ‘main‘结果为假，就是不调用对应的方法。 简而言之就是：name 是当前模块名，当模块被直接运行时模块名为 main 。当模块被直接运行时，代码将被运行，当模块被导入时，代码不被运行。让你写的脚本模块可以导入到别的模块中用 爬虫 request库This browser does not support PDFs. Please download the PDF to view it: Download PDF]]></content>
       <categories>
         <category>python</category>
       </categories>
