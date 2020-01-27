@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[python入门]]></title>
     <url>%2F2020%2F01%2F12%2Fpython%E5%85%A5%E9%97%A8%2F</url>
-    <content type="text"><![CDATA[基础 Python可以直接定义变量名字并进行赋值的，例如我们写出a = 4时，Python解释器干了两件事情： 在内存中创建了一个值为4的整型数据 在内存中创建了一个名为a的变量，并把它指向4 if _name_ == &quot;_main_&quot;:由于每个python模块（python文件）都包含内置的变量name，当运行模块被执行的时候，name等于文件名（包含了后缀.py）。如果import到其他模块中，则name等于模块名称（不包含后缀.py）。而“main”等于当前执行文件的名称（包含了后缀.py）。所以当模块被直接执行时，name == ‘main‘结果为真；而当模块被import到其他模块中时，name == ‘main‘结果为假，就是不调用对应的方法。 简而言之就是：name 是当前模块名，当模块被直接运行时模块名为 main 。当模块被直接运行时，代码将被运行，当模块被导入时，代码不被运行。让你写的脚本模块可以导入到别的模块中用 爬虫 request库This browser does not support PDFs. Please download the PDF to view it: Download PDF]]></content>
+    <content type="text"><![CDATA[基础 Python可以直接定义变量名字并进行赋值的，例如我们写出a = 4时，Python解释器干了两件事情： 在内存中创建了一个值为4的整型数据 在内存中创建了一个名为a的变量，并把它指向4 if _name_ == &quot;_main_&quot;:由于每个python模块（python文件）都包含内置的变量name，当运行模块被执行的时候，name等于文件名（包含了后缀.py）。如果import到其他模块中，则name等于模块名称（不包含后缀.py）。而“main”等于当前执行文件的名称（包含了后缀.py）。所以当模块被直接执行时，name == ‘main‘结果为真；而当模块被import到其他模块中时，name == ‘main‘结果为假，就是不调用对应的方法。 简而言之就是：name 是当前模块名，当模块被直接运行时模块名为 main 。当模块被直接运行时，代码将被运行，当模块被导入时，代码不被运行。让你写的脚本模块可以导入到别的模块中用 爬虫request库This browser does not support PDFs. Please download the PDF to view it: Download PDF]]></content>
       <categories>
         <category>python</category>
       </categories>
@@ -207,7 +207,7 @@
   <entry>
     <title><![CDATA[hexo博客与GitHub进阶操作]]></title>
     <url>%2F2019%2F04%2F29%2Fhexo%E5%8D%9A%E5%AE%A2%E4%B8%8EGitHub%E8%BF%9B%E9%98%B6%E6%93%8D%E4%BD%9C%2F</url>
-    <content type="text"><![CDATA[GitHub与hexo GitHub改名后使用hexo clean命令清除之前的网页信息(改名后一些设置与图片丢失),再重新上传 每次优化博客，新增了一些功能布局什么的，可以先用hexo clean确保可以立马实现(不然博客可能一时半会跟原来一样) GitHub上commit可以查看历史提交记录，修改记录与相应时间的仓库原状，可以clone/download历史版本 $ hexo clean 清除缓存文件 (db.json) 和已生成的静态文件 (public)。在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。 主题文件中avatar更改头像，favicon更改网页头像 注意事项 swig与js]]></content>
+    <content type="text"><![CDATA[GitHub与hexo GitHub改名后使用hexo clean命令清除之前的网页信息(改名后一些设置与图片丢失),再重新上传 每次优化博客，新增了一些功能布局什么的，可以先用hexo clean确保可以立马实现(不然博客可能一时半会跟原来一样) GitHub上commit可以查看历史提交记录，修改记录与相应时间的仓库原状，可以clone/download历史版本 $ hexo clean 清除缓存文件 (db.json) 和已生成的静态文件 (public)。在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。 主题文件中avatar更改头像，favicon更改网页头像 注意事项 swig与js hexo-pdf123456789101112131415161. &#123;% pdf pyRequest库.pdf %&#125; 将pdf放在同名的文件夹下外部文章网页链接&#123;% pdf http://7xov2f.com1.z0.glb.clouddn.com/bash_freshman.pdf %&#125;2. 以下使用的是相对路径，放在了md文件同一文件夹&lt;object data="./pyRequest库.pdf" type="application/pdf" width="100%" height="877px"&gt; &lt;iframe src="./pyRequest库.pdf" width="100%" height="100%" style="border: none;"&gt; This browser does not support PDFs. Please download the PDF to view it: &lt;a href="./pyRequest库.pdf"&gt;Download PDF&lt;/a&gt; &lt;/iframe&gt; &lt;/object&gt;]]></content>
       <categories>
         <category>blog</category>
         <category>捣鼓记</category>
