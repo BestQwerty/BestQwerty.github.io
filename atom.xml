@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="BestQwerty.github.io/"/>
-  <updated>2020-01-27T09:27:42.850Z</updated>
+  <updated>2020-01-27T09:44:16.774Z</updated>
   <id>BestQwerty.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="BestQwerty.github.io/2020/01/12/python%E5%85%A5%E9%97%A8/"/>
     <id>BestQwerty.github.io/2020/01/12/python入门/</id>
     <published>2020-01-12T09:38:40.000Z</published>
-    <updated>2020-01-27T09:27:42.850Z</updated>
+    <updated>2020-01-27T09:44:16.774Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><ul><li>Python可以直接定义变量名字并进行赋值的，例如我们写出a = 4时，Python解释器干了两件事情：<ul><li>在内存中创建了一个值为4的整型数据</li><li>在内存中创建了一个名为a的变量，并把它指向4</li></ul></li><li><code>if _name_ == &quot;_main_&quot;:</code>由于每个python模块（python文件）都包含内置的变量<strong>name</strong>，当运行模块被执行的时候，<strong>name</strong>等于文件名（包含了后缀.py）。如果import到其他模块中，则<strong>name</strong>等于模块名称（不包含后缀.py）。而“<strong>main</strong>”等于当前执行文件的名称（包含了后缀.py）。所以当模块被直接执行时，<strong>name</strong> == ‘<strong>main</strong>‘结果为真；而当模块被import到其他模块中时，<strong>name</strong> == ‘<strong>main</strong>‘结果为假，就是不调用对应的方法。<ul><li>简而言之就是：<strong>name</strong> 是当前模块名，当模块被直接运行时模块名为 <strong>main</strong> 。当模块被直接运行时，代码将被运行，当模块被导入时，代码不被运行。让你写的脚本模块可以导入到别的模块中用</li></ul></li></ul><h1 id="爬虫"><a href="#爬虫" class="headerlink" title="爬虫"></a>爬虫</h1><h2 id="request库"><a href="#request库" class="headerlink" title="request库"></a>request库</h2><object data="./python入门/pyRequest库.pdf" type="application/pdf" width="100%" height="877px"><br><br><iframe src="./python入门/pyRequest库.pdf" width="100%" height="100%" style="border: none;"><br><br>This browser does not support PDFs. Please download the PDF to view it: <a href="./python入门/pyRequest库.pdf">Download PDF</a><br><br></iframe><br><br></object>]]></content>
+    <content type="html"><![CDATA[<h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><ul><li>Python可以直接定义变量名字并进行赋值的，例如我们写出a = 4时，Python解释器干了两件事情：<ul><li>在内存中创建了一个值为4的整型数据</li><li>在内存中创建了一个名为a的变量，并把它指向4</li></ul></li><li><code>if _name_ == &quot;_main_&quot;:</code>由于每个python模块（python文件）都包含内置的变量<strong>name</strong>，当运行模块被执行的时候，<strong>name</strong>等于文件名（包含了后缀.py）。如果import到其他模块中，则<strong>name</strong>等于模块名称（不包含后缀.py）。而“<strong>main</strong>”等于当前执行文件的名称（包含了后缀.py）。所以当模块被直接执行时，<strong>name</strong> == ‘<strong>main</strong>‘结果为真；而当模块被import到其他模块中时，<strong>name</strong> == ‘<strong>main</strong>‘结果为假，就是不调用对应的方法。<ul><li>简而言之就是：<strong>name</strong> 是当前模块名，当模块被直接运行时模块名为 <strong>main</strong> 。当模块被直接运行时，代码将被运行，当模块被导入时，代码不被运行。让你写的脚本模块可以导入到别的模块中用</li></ul></li></ul><h1 id="爬虫"><a href="#爬虫" class="headerlink" title="爬虫"></a>爬虫</h1><h2 id="request库"><a href="#request库" class="headerlink" title="request库"></a>request库</h2><object data="/pyRequest库.pdf" type="application/pdf" width="100%" height="877px"><br><br><iframe src="/pyRequest库.pdf" width="100%" height="100%" style="border: none;"><br><br>This browser does not support PDFs. Please download the PDF to view it: <a href="/pyRequest库.pdf">Download PDF</a><br><br></iframe><br><br></object>]]></content>
     
     <summary type="html">
     
